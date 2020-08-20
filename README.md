@@ -1,2 +1,2 @@
-# wiki
+# Wiki
 Wiki Lab
