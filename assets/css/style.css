@@ -311,10 +311,10 @@ a.btn-menu,
 .topo{
 	outline: none;
     position: fixed;
-    right: 2.8rem;
-    bottom: 2.8rem;
-    height: 5.4rem;
-    width: 5.4rem;
+    right: 1.75rem;
+    bottom: 1.75rem;
+    height: 3.375rem;
+    width: 3.375rem;
 	z-index: 9999;
 	text-indent: -9999rem;
     background: #100e17 url(../../assets/images/topo.png) no-repeat center center;
@@ -333,9 +333,9 @@ a.btn-menu,
 }
 @media screen and (max-width: 768px){
 	.topo{
-		right: .8rem;
-		bottom: .8rem;
-		height: 5rem;
-		width: 5rem;
+		right: .5rem;
+		bottom: .5rem;
+		height: 3.125rem;
+		width: 3.125rem;
 	}
 }
