@@ -1,0 +1,576 @@
+---
+title:  "Ubuntu - Wiki"
+permalink: /ubuntu/
+load_js: load_../assets_js
+---
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }}</title>
+    {% include head.html %}
+</head>
+<body id="topo" class="menu-responsivo">
+    {% include header.html %}
+    <p class="btn-container hidden-btn"><a href="#" class="toggle-menu btn-menu">Sumário</a></p>
+    <main class="conteudo-container">
+        <aside class="sidebar">
+            <menu class="menu">
+                <p class="hidden-btn"><a href="#" class="toggle-menu btn-menu">Fechar Sumário</a></p>
+                {% include menu-ubuntu.html %}
+            </menu>
+        </aside>
+        <article class="conteudo">
+            <h1>Imagem Ubuntu</h1>
+            <h2>Ubuntu 16.04 64bits LTS</h2>
+
+            <!--Conteudo instalacao-->
+            <h3>Instalação</h3>
+            <h4 id="particao">Partiçao SO&nbsp;<span class="installed">All lab</span></h4>
+            <p>Partição primária de 96GB(<b>exceto no lab3 e lab5, usar 100GB</b>).</p>
+            <h4 id="swap">Swap&nbsp;<span class="installed">All lab</span></h4>
+            <p>Partição de 4GB(<b>exceto no lab3 e lab5</b>).</p>
+            <h4 id="root">Usuário root&nbsp;<span class="installed">All lab</span></h4>
+            <p>Crie o usuário administrador <b>IFPR</b> com a senha disponível na <a href="https://goo.gl/A3129L">planilha</a>.</p>
+            <!--Fim conteudo instalacao-->
+
+            <!--Conteudo configuracoes-->
+            <h3>Configurações</h3>
+
+            <h4 id="padrao">Usuário padrão&nbsp;<span class="installed">All lab</span></h4>
+            <p>Crie o usuário padrão <b>Aluno</b> com a senha <b>aluno123</b> e configure o Ubuntu para iniciar automaticamente por essa conta.</p>
+            <p>Caso o login automático não funcione, altere o <code class="inline">/etc/lightdm/lightdm.conf</code>.</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    autologin-user=aluno
+                    autologin-user-timeout=0
+                    </code>
+                </pre>
+            </div>
+
+            <blockquote class="info">Tenho dois usuários em cada máquina, então, algumas configurações são necessários para ambos.</blockquote>
+
+            <h4 id="idioma">Atualização do idioma do sistema&nbsp;<span class="installed">All lab</span></h4>
+            <img src="../assets/images/pages/idioma.png" alt="Atualização de idioma do sistema">
+
+            <h4 id="atualizacao">Atualização do SO&nbsp;<span class="installed">All lab</span></h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get update
+                    sudo apt-get upgrade -y 
+                    sudo apt-get dist-upgrade -y
+                    </code>
+                </pre>
+            </div>
+            <h4 id="wallpaper">Definindo o papel de parede padrão IFPR&nbsp;<span class="installed">All lab</span></h4>
+            <p>Faça o <a href="https://drive.google.com/drive/folders/1mFNMKCBx6tvJaPfzSgax-0t9ZrwJIsPn?usp=sharing">download</a>.</p>
+            <h3>Automatizando</h3>
+            <p>Para isso, usaremos o <code class="inline">dconf</code>.</p>
+            <p>Crie o arquivo <code class="inline">user</code> em <code class="inline">/etc/dconf/profile</code> e adicione:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    #/etc/dconf/profile/user
+                    user-db:user
+                    system-db:tema
+                    </code>
+                </pre>                
+            </div>
+            <p>Crie o arquivo <code class="inline">00_tema_settings</code> em <code class="inline">/etc/dconf/db/tema.d</code> e adicione:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    #/etc/dconf/db/tema.d/00_tema_settings
+                    [org/gnome/desktop/background]
+                    picture-uri='file:///home/aluno/Imagens/home.jpg'
+                    </code>
+                </pre>                
+            </div>
+            <p>As configurações acima já resolvem a nossa vida, mas e se quisermos bloquear a troca do papel de parede?</p>
+            <p>Crie o arquivo <code class="inline">00_wallpaper</code> em <code class="inline">/etc/dconf/db/tema.d/locks</code> e adicione:</p>
+            <div class="highlight">
+                <pre>
+                <code>
+                #/etc/dconf/db/tema.d/locks/00_wallpaper
+                /org/gnome/desktop/background/picture-uri
+                </code>
+                </pre>
+            </div>
+            <p>Atualize o <code class="inline">dconf</code>:</p>
+            <div class="highlight">
+                <pre>
+                <code>
+                sudo dconf update
+                </code>
+                </pre>
+            </div>
+            <p>Para ver o resultado, reinicie!</p>
+            <p>Para mais detalhes sobre essa configuração, acesse o <a href="https://wiki.gnome.org/Projects/dconf/SystemAdministrators">Wiki do Gnome</a>.</p>
+
+            <h4 id="proxy">Configuração do Proxy&nbsp;<span class="installed">All lab</span></h4>
+            <img src="../assets/images/pages/proxy.png" alt="Configuração do Proxy">
+            <h5>Via linha de comando</h5>
+            <p>Crie o arquivo <code class="inline">proxy_var.sh</code> em <code class="inline">/etc/profile.d/</code> com o seguinte conteúdo:</p>
+            <div class="highlight">
+                <pre>
+                <code>
+                #all user
+                export all_proxy="socks://192.168.0.6:3128/"
+                export http_proxy="http://192.168.0.6:3128/"
+                export https_proxy="http://192.168.0.6:3128/"
+                export ftp_proxy="http://192.168.0.6:3128/"
+                export no_proxy="localhost,127.0.0.1"
+
+                #for curl
+                export ALL_PROXY="socks://192.168.0.6:3128/"
+                export HTTP_PROXY="http://192.168.0.6:3128/"
+                export HTTPS_PROXY="http://192.168.0.6:3128/"
+                export FTP_PROXY="http://192.168.0.6:3128/"
+                export NO_PROXY="localhost,127.0.0.1"
+                </code>
+                </pre>
+            </div>
+            <p>Para o <code class="inline">apt-get</code>, crie um arquivo <code class="inline">apt.conf</code> 
+            em <code class="inline">/etc/apt/apt.conf.d/</code>, como o seguinte código</p>
+            <div class="highlight">
+                <pre>
+                <code>
+                Acquire{
+                HTTP::proxy "http://192.168.0.6:3128";
+                HTTPS::proxy "http://19
+                FTP::proxy "http://192.168.0.6:3128";
+                }
+                </code>
+                </pre>
+            </div>
+            <p>Se necessário, reinicie!</p>
+
+            <h4 id="ipv6">Desativar IPv6</h4>
+            <p>Nos laboratórios de informática usamos apenas IPv4, dessa forma, desativamos o IPv6.</p>
+            <p>Modifique a linha <code class="inline">GRUB_CMDLINE_LINUX="locale=pt_BR"</code> em <code class="inline">/etc/default/grub</code> para:</p>
+            <div class="highlight">
+                <pre>
+                <code>
+                GRUB_CMDLINE_LINUX="locale=pt_BR ipv6.disable=1"
+                </code>
+                </pre>
+            </div>
+            <p> Atualize o Grub:</p>
+            <div class="highlight">
+                <pre>
+                <code>
+                sudo update-grub
+                </code>
+                </pre>
+            </div>
+            <p>Reinicie para testar!</p>
+            <h4 id="tela">Remoção de proteção e bloqueio de tela&nbsp;<span class="installed">All lab</span></h4>
+            <img src="../assets/images/pages/bloqueio.png" alt="Remoção de proteção de tela e bloqueio">
+
+            <h4 id="fontes">Repositório dos parceiros da Canonical&nbsp;<span class="installed">All lab</span></h4>
+            <img src="../assets/images/pages/canonical.png" alt="Ativando as fontes dos parceiros da Canonical">
+
+            <h4 id="historico">Limpando o histórico do Chrome e Firefox&nbsp;<span class="installed">All lab</span></h4>
+            <p>Isso é importante para dar aquela sensação de pc novo! ;)</p>
+            <h4 id="horas">Evitando problemas de horas com Dual Boot&nbsp;<span class="installed">All lab</span></h4>
+            <p>Se aplica ao Ubuntu acima de 15.04.</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo timedatectl set-local-rtc 1 --adjust-system-clock
+                    </code>
+                </pre>                
+            </div>
+            <h4 id="restricao">Restringindo o acesso a partições&nbsp;<span class="installed">All lab</span></h4>
+            <p>Isso evita o acesso desenfreado as partições do Windows.</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo nano /var/lib/polkit-1/localauthority/10-vendor.d/com.ubuntu.desktop.pkla
+                    </code>
+                </pre>                
+            </div>
+            <p>Na quarta linha do arquivo acima, altere <code class="inline">ResultActive=yes</code> para <code class="inline">ResultActive=auth_admin_keep</code>.</p>
+            <p>Isso permite que apenas o usuário autenticado tenha acesso a partições do Windows.</p>
+
+            <h4 id="cert">Certificado do pfSense para navegação&nbsp;<span class="installed">All lab</span></h4>
+            <p>Faça do <a href="https://drive.google.com/drive/folders/1Oc7tfxygvQ6s0IoTgY1sGfhsBtUEKnds?usp=sharing">download do certificado</a> e instale no Chrome e Firefox.</p>
+            <!--Fim conteudo configuracoes-->
+
+            <!--Conteudo aplicacoes-->
+            <h3>Aplicações</h3>
+            <h4 id="grub">Grub Customizer&nbsp;<span class="installed">All lab</span></h4>
+            <p>Configure o grub para que o pc sempre inicialize automaticamente pelo Windows.</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+                    sudo apt-get update
+                    sudo apt-get install grub-customizer
+                    </code>
+                </pre>                
+            </div>
+            <h4 id="unity-tool">Unity Tweak Tool&nbsp;<span class="installed">All lab</span></h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get install unity-tweak-tool
+                    </code>
+                </pre>                
+            </div>
+            <p>Serve para optimizar a interface do Ubuntu.</p>
+
+            <h4 id="7zip">7-zip&nbsp;<span class="installed">All lab</span></h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get install p7zip p7zip-full p7zip-rar lzma lzma-dev
+                    </code>
+                </pre>
+            </div>
+  
+
+            <h4 id="smb">Samba Cliente&nbsp;<span class="installed">All lab</span></h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get install smbclient
+                    </code>
+                </pre>
+            </div>
+  
+
+            <h4 id="flash">Flash Player&nbsp;<span class="installed">All lab</span></h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get install adobe-flashplugin browser-plugin-freshplayer-pepperflash
+                    </code>
+                </pre>
+            </div>
+  
+
+            <h4 id="chrome">Google Chrome&nbsp;<span class="installed">All lab</span></h4>
+            <p>Faça o download do <a href="https://www.google.com/chrome/">Google Chrome</a>.</p>
+
+            <h4 id="seahorse">Seahorse&nbsp;<span class="installed">All lab</span></h4>
+            <p>Serve para remover o incômodo pedido de senha do Google Chrome.</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get install seahorse
+                    </code>
+                </pre>
+            </div>
+  
+            <img src="../assets/images/pages/seahorse.png" alt="Configurando Seahorse">
+
+            <h4 id="vi">Vim&nbsp;<span class="installed">All lab</span></h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get install vim
+                    </code>
+                </pre>
+            </div>
+
+            <h4 id="java">Java JDK 8&nbsp;<span class="installed">All lab</span></h4>
+            <p>Faça o <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">download</a> do arquivo de instalação.</p>
+            <p>Crie a pasta de instalação:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo mkdir /usr/lib/jvm
+                    </code>
+                </pre>                
+            </div>
+  
+            <blockquote>
+                    Neste exemplo, instalei a versão jdk-8u191, faça as alterações necessárias em caso de uma versão diferente.
+            </blockquote>
+            <p>Extraindo os arquivos:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo tar zxvf jdk-8u191-linux-x64.tar.gz -C /usr/lib/jvm
+                    </code>
+                </pre>                
+            </div>
+  
+            <p>Criamos o link simbólico:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo ln -s /usr/lib/jvm/jdk1.8.0_191 /usr/lib/jvm/java-oracle
+                    </code>
+                </pre>
+            </div>
+  
+            <p>Crie o arquivo <code class="inline">java_var.sh</code> em <code class="inline">/etc/profile.d/</code> com o seguinte conteúdo:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    JAVA_HOME=/usr/lib/jvm/java-oracle
+                    PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
+                    
+                    export JRE_HOME
+                    export PATH
+                    </code>
+                </pre>                
+            </div>
+            <p>Reinicie!</p>
+            <p>Confira se está tudo ok:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    java -version
+                    javac -version
+                    </code>
+                </pre>                
+            </div>
+            <h4 id="netbeans">Netbeans&nbsp;<span class="installed">All lab</span></h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo add-apt-repository ppa:vajdics/netbeans-installer
+                    sudo apt update
+                    sudo apt install ne
+                    </code>
+                </pre>                
+            </div>
+            <h3>JasperReports Library</h3>
+            <p>Baixe o <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">JasperReports Library</a>. Crie a pasta <code class="inline">portable</code> em <code class="inline">/home/</code> para deixar a biblioteca de forma permanente, por último, adicione a biblioteca no Netbeans para o perfil do <b>Aluno</b>.</p>
+            <p>Não se esqueça das permissões:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo chmod -R 755 /home/portable
+                    </code>
+                </pre>
+            </div>
+  
+            <h4 id="adicionais">Ubuntu Restricted Extras&nbsp;<span class="installed">All lab</span></h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get install ubuntu-restricted-extras
+                    </code>
+                </pre>
+            </div>
+  
+
+            <h4 id="ssh">Open SSH Server&nbsp;<span class="installed">All lab</span></h4>
+            <p>Para usar o acesso remoto.</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get install openssh-server
+                    </code>
+                </pre>
+            </div>
+  
+
+            <h4 id="scratch">Scratch&nbsp;<span class="installed">All lab</span></h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get install scratch
+                    </code>
+                </pre>
+            </div>
+  
+
+            <h4 id="lamp">LAMP&nbsp;<span class="installed">All lab</span></h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get install lamp-server^
+                    sudo apt-get install phpmyadmin
+                    </code>
+                </pre>
+            </div>
+            <p>Caso o <b>MySQL esteja travavando</b> o desligamento ou reinicialização do Ubuntu, confira se a data/hora está no correta no setup!</p>
+            <p>Em último caso, altere o arquivo <code class="inline">/lib/systemd/system/mysql.service</code>, logo após <code class="inline">Description, adicione</code>:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    After=network.target time-sync.target
+                    Wants=time-sync.target
+                    </code>
+                </pre>
+            </div>
+            <p>Escrita de URL.</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo a2enmod rewrite
+                    </code>
+                </pre>                
+            </div>
+  
+            <p>A alteração abaixo e necessário para o WordPress, reflete nos links permanentes da plataforma.</p>
+            <p>Abra o arquivo <code class="inline">/etc/apache2/apache2.conf</code> e encontre o trecho abaixo:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    &lt;Directory /var/www/&gt;
+                    Options Indexes FollowSymLinks
+                    Al
+                    Require all granted
+                    &lt;/Directory&gt;
+                    </code>
+                </pre>                
+            </div>
+            <p>Altere para:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    &lt;Directory /var/www/&gt;
+                    Options Indexes FollowSymLinks
+                    A
+                    Require all granted
+                    &lt;/Directory&gt;
+                    </code>
+                </pre>
+            </div>
+
+            <p>Conceder permissão total para a pasta html.</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo chmod -R 777 /var/www/html
+                    </code>
+                </pre>
+            </div>
+
+            <p>Por fim, reinicie o Apache.</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo service apache2 restart
+                    </code>
+                </pre>                
+            </div>
+  
+            <h4 id="veyon">Veyon&nbsp;<span class="installed">All lab</span></h4>
+            <p>Mais informações, acesse a página do software <a href="https://veyon.io/">Veyon</a>.</p>
+            <p>Instalando dependências:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get install g++ make cmake qtbase5-dev qtbase5-dev-tools qttools5-dev qttools5-dev-tools \
+                    xorg-dev libxtst-dev libjpeg-dev zlib1g-dev libssl-dev libpam0g-dev \
+                    libprocps-dev liblzo2-dev libqca2-dev libqca-qt5-2-de
+                    libsasl2-dev
+                    </code>
+                </pre>
+            </div>
+            <p>Instalando o Veyon:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo add-apt-repository ppa:veyon/stable
+                    sudo apt-get update
+                    </code>
+                </pre>                
+            </div>
+            <p>Usando <code class="inline">veyon cli</code> para importar o arquivo de <b>configuração.json</b> e <b>chave pública</b>.</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    USER=aluno
+                    JSON=veyon-cliente.json
+                    CHAVE=professo
+                    TIPO=public
+        
+                    sudo veyon-cli config import /home/$USER/Downloads/Veyon/$JSON
+        
+                    sudo veyon-cli authkeys import professor/$TIPO /home/$USER/Downloads/Veyon/Chaves/$CHAVE
+                    </code>
+                </pre>                
+            </div>
+            <h4 id="vscode">VS Code&nbsp;<span class="installed">All lab</span></h4>
+            <p>Faça o download do <a href="https://code.visualstudio.com/">VS Code</a>.</p>
+
+
+            <h4 id="timefreeze">Time Freeze&nbsp;<span class="installed">All lab</span></h4>
+            <p>Na verdade isso é apenas um script para manter o sistema sempre com cara de novo, pelo menos o SO!</p>
+            <p>Primeiro crie um perfil ideal, com favoritos, papel de parede e etc. Com o perfil criado, siga os comandos abaixo:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo mkdir /home/resetuser
+                    sudo cp -R /home/aluno/* /home/resetuser
+                    sudo cp -R /home/aluno/.[a-zA-Z]*
+                    </code>
+                </pre>                
+            </div>
+            <p>Agora criamos um script para fazer o inverso no diretório <code class="inline">/sbin</code>, chamarei o script de <code class="inline">reset-user</code>, segue código completo:</p>
+
+            <div class="highlight">
+                <pre>
+                    <code>
+                    #!/bin/sh
+        
+                    rm
+        
+                    mkdir /home/aluno
+        
+                    cp -R /home/resetuser/* /home/aluno
+        
+                    cp -R /home/resetuser/.[a-zA-Z]* /home/aluno
+        
+                    chown -R aluno /home/aluno
+                    </code>
+                </pre>                
+            </div>
+            <p>Permissão de execução para o <code class="inline">reset-user</code> :</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo chmod +x /sbin/reset-user
+                    </code>
+                </pre>                
+            </div>
+  
+            <p>Agora criamos o serviço em <code class="inline">/etc/systemd/system/</code> para rodar o script, chamarei o serviço de <code class="inline">reset-user.service</code>, segue conteúdo completo do arquivo:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    [Unit]
+                    Description=Restore user Aluno
+                    Defaul
+                    Before=shutdown.target reboot.target halt.target
+        
+                    [Service]
+                    Type=oneshot
+                    ExecStart=/sbin/reset-user
+        
+                    [Install]
+                    WantedBy=halt.target reboot.target shutdown.target
+                    </code>
+                </pre>                
+            </div>
+            <p>O serviço acima será excutado ao reiniciar ou desligar o sistema.</p>
+            <p>Por último, ativamos o serviço.</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    #disable
+                    sudo systemctl enable reset-user.service
+           
+                    sudo systemctl disable reset-user.service
+                    </code>
+                </pre>                
+            </div>
+            <!--Fim conteudo aplicacoes-->
+        </article>
+    </main>
+    {% include footer.html %}
+</body>
+</html>

@@ -1,0 +1,139 @@
+---
+title:  "Veyon - Wiki"
+permalink: /veyon/
+load_js: load_assets_js
+---
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }}</title>
+    {% include head.html %}
+</head>
+<body id="topo" class="menu-responsivo">
+    {% include header.html %}
+    <p class="btn-container hidden-btn"><a href="#" class="toggle-menu btn-menu">Sumário</a></p>
+    <main class="conteudo-container">
+        <aside class="sidebar">
+            <menu class="menu">
+                <p class="hidden-btn"><a href="#" class="toggle-menu btn-menu">Fechar Sumário</a></p>
+                {% include menu-veyon.html %}
+            </menu>
+        </aside>
+        <article class="conteudo">
+            <h1>Scripts</h1>
+
+            <!--Conteudo Veyon-->
+            <h2>Veyon</h2>
+            <p>Através do <a href="https://veyon.io">Veyon</a> podemos executar programas ou scripts nos computadores clientes.</p>
+            <h3 id="executando">Executando comandos no cliente</h3>
+            <p>Usaremos muito o comando abaixo:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    cmd /k
+                    </code>
+                </pre>                
+            </div>
+            <p>Mais detalhes sobre <a href="https://ss64.com/nt/cmd.html">cmd /k</a>.</p>
+            <p>Exemplos:</p>
+            <p>Executando um <code class="inline">bat</code>:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    cmd /k "C:\Users\aluno\Desktop\software\tools.bat"
+                    </code>
+                </pre>
+            </div>
+            <p>Atualizando as GPOs nos pcs clientes:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    cmd /k "gpupdate /force"
+                    </code>
+                </pre>
+            </div>
+            <!--Fim conteudo Veyon-->
+
+            <!--Toolwiz Time Freeze-->
+            <h2>Toolwiz Time Freeze</h2>
+            <p>É o software responsável por congelar o Sistema Operacional Windows.</p>
+            <h3 id="desabilitar">Descongelando o SO</h3>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    cmd /k "C:\Program Files\Toolwiz Time Freeze 2017\ToolwizTimeFreeze.exe" /unfreeze /usepass=SENHA
+                    </code>
+                </pre>                 
+            </div>               
+            <h3 id="habilitando">Congelando o SO</h3>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    cmd /k "C:\Program Files\Toolwiz Time Freeze 2017\ToolwizTimeFreeze.exe" /freezealways /usepass=SENHA
+                    </code>
+                </pre>                
+            </div>
+            <h3 id="status">Checar o status</h3>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    cmd /k "C:\Program Files\Toolwiz Time Freeze 2017\ToolwizTimeFreeze.exe" /check /usepass=SENHA
+                    </code>
+                </pre>                
+            </div>
+            <!--Fim Toolwiz Time Freeze-->
+
+             <!--Atalhos de programas-->
+            <h2 id="atalhos">Testes</h2>
+            <p>Caminhos de programas para testes.</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    #AutoCAD2018
+                    "C:\Program Files\Autodesk\AutoCAD 2018\acad.exe"  /product ACAD /language "pt-BR"
+                    
+                    #DBDesigner4
+                    "C:\Program Files (x86)\fabFORCE\DBDesigner4.exe"
+                    
+                    #IReport
+                    "C:\Program Files (x86)\Jaspersoft\iReport-5.6.0\bin\ireport.exe"
+                    
+                    #Netbeans
+                    "C:\Program Files\NetBeans 8.2\bin\netbeans64.exe"
+                    
+                    #Firefox
+                    "C:\Program Files\Mozilla Firefox\firefox.exe"
+                    
+                    #Chrome
+                    "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
+                    
+                    #VirtualBox
+                    "C:\Program Files\Oracle\VirtualBox\VirtualBox.exe"
+                    
+                    #Scratch
+                    "C:\Program Files (x86)\Scratch 2\Scratch 2.exe"
+                    
+                    #VSCode
+                    "C:\Program Files\Microsoft VS Code\Code.exe"
+                    
+                    #Cisco Packet Tracer
+                    "C:\Program Files (x86)\Cisco Packet Tracer 6.2sv\bin\PacketTracer6.exe"
+                    
+                    #SketchUp
+                    "C:\Program Files\SketchUp\SketchUp 2016\SketchUp.exe"
+                    
+                    #LibreOffice
+                    "C:\Program Files\LibreOffice\program\soffice.exe"
+                    </code>
+                </pre>                             
+            </div>
+            <!--Fim atalhos de programas-->
+        </article>
+    </main>
+    {% include footer.html %}
+</body>
+</html>

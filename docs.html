@@ -1,0 +1,58 @@
+---
+title:  "Docs - Wiki"
+permalink: /docs/
+load_js: load_assets_js
+---
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }}</title>
+    {% include head.html %}
+</head>
+<body id="topo" class="menu-responsivo">
+    {% include header.html %}
+    <p class="btn-container show-btn"><a href="#" class="toggle-menu btn-menu">Sumário</a></p>
+    <main class="conteudo-container">
+        <aside class="sidebar">
+            <menu class="menu">
+                <p class="hidden-btn"><a href="#" class="toggle-menu btn-menu">Fechar Sumário</a></p>
+                {% include menu-docs.html %}
+            </menu>
+        </aside>
+        <article class="conteudo">
+            <!--DOC-->
+            <h1>Informações LAB</h1>
+            <h2 id="pro-win">Programas do Windows</h2>
+            <p><a href="../assets/docs/windows-public.pdf">Lista de programas disponibilizados</a> no Windows.</p>
+            
+            <h2 id="pro-ubu">Programas do Ubuntu</h2>
+            <p><a href="../assets/docs/ubuntu-public.pdf">Lista de programas disponibilizados</a> no Ubuntu.</p>
+
+            <h2 id="doc-lab">Documentação</h2>
+            <p><a href="../assets/docs/documentacao.pdf">Documentação completa</a> dos Laboratórios de Informática.</p>
+
+            <blockquote class="info">
+                Número de máquinas por laboratório e demais configurações do hardware estão disponíveis neste documento.
+            </blockquote>
+
+            <h2 id="regulamento">Regulamento</h2>
+            <p><a href="../assets/docs/regulamento.pdf">Regulamento de uso</a> dos Laboratórios de Informática.</p>
+            <blockquote class="info">
+                As recomendações e boas práticas de uso do ambiente estão disponíveis neste documento.
+            </blockquote>
+
+            <h2 id="chamados">Chamados - HelpDesk</h2>
+            <p>
+            <strong>Problemas</strong>(hardware ou software), instalação ou atualização de software, devem ser demandados através de chamados via <a href="https://helpdesk.ifpr.edu.br">HelpDesk</a>.
+            </p>
+            <p>Em caso de dúvidas, consulte o <a href="../assets/docs/helpdesk.pdf">manual de abertura de chamados</a>.</p>
+            <!--Fim DOC-->
+        </article>
+    </main>
+    {% include footer.html %}
+</body>
+</html>
