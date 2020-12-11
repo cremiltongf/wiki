@@ -181,28 +181,39 @@ a:hover{
     list-style: none;
 }
 .intro-ul{
-    padding-bottom: 12px;
+    margin-bottom: 1rem;
 }
 .intro-ul li{
-    padding: 2px 0 2px 10px;
+    padding-left: .625rem;
+    line-height: 1.2;
 }
-.menu a{
+.intro-ul a{
     text-decoration: none;
+    display: inline-block;
+    padding: .375rem;
 }
-.menu a:hover{
-    text-decoration: underline;
+.intro-ul a:hover{
+    background-color: #0695cf;
+    color: #fff;
+}
+.intro-ul a,
+.intro-ul a:hover{
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+	transition: all 0.25s ease-in-out;
 }
 @media (max-width: 768px){
     .menu{
         position: absolute;
         top: 0;
         left: 0;
-        max-width: 420px;
+        width: 100%;
         min-width: 290px;
         background-color: #1b202d;
         display: none;
         z-index: 1;
-        padding: 12px;
+        padding: .75rem;
     }
     .menu-responsivo.show-menu .menu{
         display: block;
@@ -210,29 +221,34 @@ a:hover{
 }
 
 /*
-    sumario
+    botao sumario
 */
 .btn-container{
     max-width: 990px;
     margin: 0 auto 0;
     padding: 10px;
 }
-a.btn-menu,
-.menu a.btn-menu{
+a.btn-menu{
     display: block;
-    padding: 10px;
-    background-color: #0695cf;
     color: #fff;
     text-decoration: none;
     font-size: 1.25rem;
 }
+.hidden-btn,
+.show-btn{
+    background-color: #0695cf;
+    display: none;
+    padding: 10px;
+    background-repeat: no-repeat;
+    background-position: top right;
+}
 .hidden-btn{
     margin: 10px 0;
-    display: none;
+    background-image: url("../../assets/images/close-icon.svg");
 }
 .show-btn{
     margin: 0 0 10px;
-    display: none;
+    background-image: url("../../assets/images/menu-icon.svg");
 }
 @media (max-width: 768px){
     .show-btn,
