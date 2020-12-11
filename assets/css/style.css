@@ -134,6 +134,43 @@ a:hover{
     }
 }
 
+/* 
+    404
+*/
+.conteudo-404{
+    max-width: 990px;
+    margin: 3rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.ilustracao-404{
+    flex: 2 1 500px;
+    padding: 10px;
+}
+.introducao-404{
+    flex: 1 1 250px;
+    padding: 10px;
+}
+.introducao-404 p{
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+.introducao-404 h1{
+    font-size: 3.052rem;
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+@media (max-width: 768px){
+    .conteudo-404{
+        margin: 1rem auto;
+    }
+    .ilustracao-404{
+        order: 2;
+    }
+}
+
 /*
     sidebar
 */
@@ -218,6 +255,7 @@ a.btn-menu,
 .conteudo-home h1,
 .conteudo h1{
     font-size: 3.052rem;
+    margin-bottom: 1rem;
 }
 .conteudo h2,
 .conteudo h3,
@@ -238,7 +276,7 @@ a.btn-menu,
 .conteudo h3,
 .conteudo h4{
     line-height: 1.2;
-    margin-bottom: 16px;
+    margin-bottom: 1rem;
     word-break: break-word;
 }
 .conteudo img{

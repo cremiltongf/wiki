@@ -9,15 +9,19 @@ permalink: /404.html
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
+    <title>{{ page.title }}</title>
     {% include head.html %}
 </head>
 <body class="menu-responsivo">
     {% include header.html %}
     <main class="conteudo-404">
-        <section class="introducao">
-            <h1>Ops, essa página não existe ou foi removida</h1>
-            <p>Lamento muito.</p>
+        <div class="ilustracao-404">
+            <img src="/assets/images/erro-404.svg" alt="Astronauta perdido no espaço">
+        </div>
+        <section class="introducao-404">
+            <h1>Ops, estamos perdidos!</h1>
+            <p>Alguém apagou este conteúdo ou ele se perdeu no vazio do espaço.</p>
+            <p>Volte para a <a href="https://wiki.cremilton.com">página inicial</a>.</p>
         </section>
     </main>
     {% include footer.html %}
