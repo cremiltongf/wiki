@@ -86,6 +86,11 @@ a:hover{
     display: block;
     padding: 10px;
 }
+@media (max-width: 492px){
+    .nav a{
+        padding: 6px 10px;
+    }
+}
 
 /*
     home layout
@@ -247,7 +252,7 @@ a.btn-menu{
     background-image: url("../../assets/images/close-icon.svg");
 }
 .show-btn{
-    margin: 0 0 10px;
+    margin: 0 10px 10px;
     background-image: url("../../assets/images/menu-icon.svg");
 }
 @media (max-width: 768px){
