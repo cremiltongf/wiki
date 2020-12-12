@@ -121,10 +121,10 @@ a:hover{
     padding: 10px;
 }
 .sidebar{
-    flex: 1 1 256px;
+    flex: 1 1 240px;
 }
 .conteudo{
-    flex: 2 1 512px;
+    flex: 2 1 320px;
 }
 @media (max-width: 768px){
     .conteudo-container{
