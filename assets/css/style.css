@@ -118,7 +118,7 @@ b{
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
 }
 .introducao,
 .ilustracao{
