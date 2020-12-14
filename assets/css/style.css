@@ -23,7 +23,7 @@ html{
 img{
     max-width: 100%;
     height: auto;
-	display: block;
+    display: block;
 }
 /*table*/
 table {
@@ -60,8 +60,15 @@ a:visited{
     color: #0695cf;
 }
 a:hover{
-    color: #ff9519;
+    color: #d78423;
     text-decoration: underline;
+}
+a:active{
+    color: #0695cf;
+}
+/*strong*/
+b{
+    color: #d78423;
 }
 
 /*
@@ -278,6 +285,12 @@ a.btn-menu{
 /*
     conteudo
 */
+.conteudo img {
+    opacity: 0.8;
+}
+.conteudo img:hover {
+    opacity: 1.0;
+}
 .conteudo blockquote,
 .conteudo-home p,
 .conteudo p{
@@ -324,7 +337,7 @@ a.btn-menu{
 .installed,
 .notinstalled{
     font-size: 0.8rem;
-	color: #444;
+	color: #272f42;
     border-radius: 4px;
     font-weight: 400;
     padding: .2rem;
@@ -340,9 +353,9 @@ a.btn-menu{
 }
 /*blockquote*/
 .info{
-    background: #1b202d;
+    background: rgba(6, 149, 207, .8);
     padding: 1.25rem;
-    color: #f5f5f5;
+    color: #fff;
     border-radius: .625rem;
 }
 /*bloco de codigo*/
@@ -362,6 +375,13 @@ a.btn-menu{
 .highlight code{
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     font-size: 1.25rem;
+}
+/*code inline*/
+.inline{
+	padding: .2rem .1rem;
+    color: #d78423;
+    background-color: #2d2d2d;
+    border: 1px solid #1b202d;
 }
 
 /* 
@@ -393,7 +413,7 @@ a.btn-menu{
     width: 3.375rem;
 	z-index: 9999;
 	text-indent: -9999rem;
-    background: #100e17 url(../../assets/images/topo.png) no-repeat center center;
+    background: url(../../assets/images/topo.png) no-repeat center center;
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
     -o-transition: all 0.25s ease-in-out;
@@ -401,7 +421,7 @@ a.btn-menu{
 	border-radius: 50%;
 }
 .topo:hover{
-	background-color: #333;
+	background-color: #1b202d;
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
     -o-transition: all 0.25s ease-in-out;
