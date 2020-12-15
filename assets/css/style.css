@@ -305,8 +305,7 @@ a.btn-menu{
 }
 .conteudo h2,
 .conteudo h3,
-.conteudo h4,
-.conteudo h5{
+.conteudo h4{
     margin-top: 1.563rem;
 }
 .conteudo h2{
@@ -318,14 +317,10 @@ a.btn-menu{
 .conteudo h4{
     font-size: 1.563rem;
 }
-.conteudo h5{
-    font-size: 1.25rem;
-}
 .conteudo h1,
 .conteudo h2,
 .conteudo h3,
-.conteudo h4,
-.conteudo h5{
+.conteudo h4{
     line-height: 1.2;
     margin-bottom: 1rem;
     word-break: break-word;
