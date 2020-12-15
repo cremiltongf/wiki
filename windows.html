@@ -25,12 +25,14 @@ load_js: load_assets_js
         </aside>
         <article class="conteudo">
             <h1>Imagem Windows</h1>
-            <h2>Professional ou 10 Pro - 64bits</h2>
 
             <!--Conteudo instalacao-->
-            <h3>Instalação</h3>
+            <h2>Instalação</h2>
+            <blockquote class="info">
+            As configurações se aplicam ao Windows Professional ou 10 Pro - 64bits.
+            </blockquote>
 
-            <h4 id="nome-grupo">Nome e grupo&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="nome-grupo">Nome e grupo&nbsp;<span class="installed">All lab</span></h3>
             <p>Altere o <b>Nome do Computador</b> e o <b>Grupo de trabalho</b> conforme o laboratório.</p>
             <div class="highlight">
                 <pre>
@@ -60,41 +62,41 @@ load_js: load_assets_js
                 </pre>                
             </div>
 
-            <h4 id="admin">Usuário administrador&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="admin">Usuário administrador&nbsp;<span class="installed">All lab</span></h3>
             <p>Após a instalação do SO, crie o usuário <b>administrador IFPR</b> com a senha disponível na <a href="https://goo.gl/A3129L">planilha</a>.</p>
             <!--Fim conteudo instalacao-->
 
             <!--Conteudo atualizacoes-->
-            <h3>Atualizações</h3>
-            <h4 id="sp1">Service Pack 1</h4>
+            <h2>Atualizações</h2>
+            <h3 id="sp1">Service Pack 1</h3>
             <p>Atualize o Windows 7 com o <a href="https://www.microsoft.com/pt-BR/download/details.aspx?id=5842">Service Pack 1.</a></p>
 
-            <h4 id="kb4507704">KB-4507704</h4>
+            <h3 id="kb4507704">KB-4507704</h3>
             <p>Patch que remove o horário de verão do Windows 7-x64.</p>
 
-            <h4 id="kb4505658">KB-4505658</h4>
+            <h3 id="kb4505658">KB-4505658</h3>
             <p>Patch que remove o horário de verão do Windows 10-x64, versão 1809.</p>
 
             <!--Fim conteudo atualizacoes-->
 
             <!--Conteudo configuracoes-->
-            <h3>Configurações</h3>
+            <h2>Configurações</h2>
 
-            <h4 id="energia">Energia&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="energia">Energia&nbsp;<span class="installed">All lab</span></h3>
             <p>Alterar as opções de energia para nunca bloquear a tela.</p>
             <img src="../assets/images/pages/energia.png" alt="Opções de energia">
 
-            <h4 id="wallpaper">Definindo o papel de parede padrão IFPR&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="wallpaper">Definindo o papel de parede padrão IFPR&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o <a href="https://drive.google.com/drive/folders/1mFNMKCBx6tvJaPfzSgax-0t9ZrwJIsPn?usp=sharing">download</a>.</p>
             <p>Nos laboratórios, o papel de parede é definido através de GPO.</p>
 
-            <h4 id="drivers">Atualizar os drivers&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="drivers">Atualizar os drivers&nbsp;<span class="installed">All lab</span></h3>
             <p>Use softwares como <a href="https://www.drivereasy.com/">EasyDriver</a> ou <a href="https://www.drivermax.com/download.htm">DriverMax</a> para facilitar a vida.</p>
             
-            <h4 id="navegador">Navegadores&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="navegador">Navegadores&nbsp;<span class="installed">All lab</span></h3>
             <p>Configure a página inicial com <b>umuarama.ifpr.edu.br</b>. Nos LABs do IFPR, a configuração é definida pela GPO.</p>
             
-            <h4 id="proxy">Configuração do proxy&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="proxy">Configuração do proxy&nbsp;<span class="installed">All lab</span></h3>
             <div class="highlight">
                 <pre>
                     <code>
@@ -105,52 +107,46 @@ load_js: load_assets_js
             <img src="../assets/images/pages/proxy.png" alt="Proxy">
             <p>Nos LABs do IFPR, a configuração é realizada através de GPO.</p>
             
-            <h4 id="gerenciador">Gerenciador de Tarefas&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="gerenciador">Gerenciador de Tarefas&nbsp;<span class="installed">All lab</span></h3>
             <p>Desative pelo <code class="inline">gpedit.msc</code>. Nos LABs do IFPR, a configuração é definida pela GPO.</p>
 
-            <h4 id="inicializacao">Otimize a inicialização&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="inicializacao">Otimize a inicialização&nbsp;<span class="installed">All lab</span></h3>
             <img src="../assets/images/pages/msconfig.png" alt="msconfig">
             
-            <h4 id="senhas">Senhas&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="senhas">Senhas&nbsp;<span class="installed">All lab</span></h3>
             <p>Coloque um <b>txt</b> na área de trabalho com as senhas se houver. Um exemplo é o login da máquina virtual Ubuntu.</p>
 
-            <h4 id="reparo">Reparo automático&nbsp;<span class="installed">All lab</span></h4>
-            <p>Desativando no Windows 7:</p>
+            <h3 id="reparo">Reparo automático&nbsp;<span class="installed">All lab</span></h3>
+
+            <p>Desativando:</p>
             <div class="highlight">
                 <pre>
                     <code>
+                    #windows7
                     bcdedit /set {default} bootstatuspolicy ignoreallfailures
-                    </code>
-                </pre>                
-            </div>
-            <p>Desativando no Windows 10:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
+
+                    #windows10
                     bcdedit /set recoveryenabled NO
                     </code>
-                </pre>
+                </pre>                
             </div>
-            <p>Ativando no Windows 7:</p>
+
+            <p>Ativando:</p>
             <div class="highlight">
                 <pre>
                     <code>
+                    #windows7
                     bcdedit /set {default} bootstatuspolicy displayallfailures
+
+                    #windows10
+                    bcdedit /set recoveryenabled YES
                     </code>
                 </pre>                
             </div>
-            <p>Ativando no Windows 10:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    bcdedit /set recoveryenabled YES
-                    </code>
-                </pre>                  
-            </div>              
 
             <p>Isso evita o reparo automático do SO em caso de perda de energia. O que pode quebrar o congelamento do SO.</p>
 
-            <h4 id="servicos">Serviços&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="servicos">Serviços&nbsp;<span class="installed">All lab</span></h3>
             <img src="../assets/images/pages/services.png" alt="Serviços">
             <p>Altere a inicialização dos serviços:</p>
             <table>
@@ -191,6 +187,7 @@ load_js: load_assets_js
                     <td>Desativado via GPO</td>
                 </tr>
             </table>
+
             <p>Desativando o Desfragmentador ou Otimizador de Discos pelo <code class="inline">cmd</code> no Windows 10:</p>
             <div class="highlight">
                 <pre>
@@ -201,6 +198,7 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
+
             <h3>Serviços via cmd</h3>
             <p>Exemplo de uso:</p>
             <div class="highlight">
@@ -211,14 +209,17 @@ load_js: load_assets_js
                     </code>
                 </pre>
             </div>              
-            <h4 id="pfsense">Certificado do pfSense&nbsp;<span class="installed">All lab</span></h4>
+
+            <h3 id="pfsense">Certificado do pfSense&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://drive.google.com/drive/folders/1Oc7tfxygvQ6s0IoTgY1sGfhsBtUEKnds?usp=sharing">certificado</a> e instale no Chrome e Firefox. Nos labs do IFPR, o download e a configuração é realizado através de GPO.</p>
 
-            <h4 id="var">Variáveis do Sistema&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="var">Variáveis do Sistema&nbsp;<span class="installed">All lab</span></h3>
             <blockquote class="info">
             Crie as variáveis para a última versão do Java JDK instalado. No meu caso, possuo duas instalações, o JDK7 por causa do IReport, e o JDK 8 para os programas que necessitam de uma versão mais recente.
             </blockquote>
-            <p>Acesse as <b>Propriedades do Sistema</b> para configurar as variáveis. Neste exemplo, estou configurando o <b>JDK 1.8.0_191</b>.</p>
+
+            <h4>Variáveis via Propriedades do Sistema</h4>
+            <p>Acesse as <b>Propriedades do Sistema</b> para configurar as variáveis. Neste exemplo, estou configurando o <b>JDK 1.8.0_191</b>:</p>
             <img src="../assets/images/pages/variavel-java.png" alt="Propriedades do Sistema">
             <div class="highlight">
                 <pre>
@@ -231,6 +232,7 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
+
             <p>A variável <code class="inline">Path</code> já existe no sistema, então apenas adicione o valor abaixo ao final:</p>
             <div class="highlight">
                 <pre>
@@ -249,7 +251,11 @@ load_js: load_assets_js
                     </code>
                 </pre>
             </div>
-            <h3>Variáveis via cmd</h3>
+
+            <h4>Variáveis via cmd</h4>
+            <blockquote class="info">
+                Precisa ser administrador.
+            </blockquote>
             <div class="highlight">
                 <pre>
                     <code>
@@ -258,29 +264,45 @@ load_js: load_assets_js
                     setx Path "%Path%;%JAVA_HOME%\bin" /m
                     </code>
                 </pre>                 
-            </div>               
-            <h3>Adicionais para Windows 10</h3>
-            <h4 id="xbox">Desativar Barra de jogos&nbsp;<span class="installed">All lab</span></h4>
+            </div>
+                       
+            <h2>Adicionais para Windows 10</h2>
+            <h3 id="xbox">Desativar Barra de jogos&nbsp;<span class="installed">All lab</span></h3>
             <img src="../assets/images/pages/barra-jogos.png" alt="Desativar barra de jogos">
 
-            <h4 id="reaplicativos">Remover aplicativos&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="reaplicativos">Remover aplicativos&nbsp;<span class="installed">All lab</span></h3>
             <p>Dicas, Microsoft Notícias, Xbox Live, Clima e Microsoft OneDrive.</p>
 
-            <h4 id="cortana">Desativar serviços da Cortana&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="cortana">Desativar serviços da Cortana&nbsp;<span class="installed">All lab</span></h3>
             <img src="../assets/images/pages/cortana.png" alt="Desativar Cortana">
             
-            <h4 id="inicializacaowin10">Inicialização&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="inicializacaowin10">Inicialização&nbsp;<span class="installed">All lab</span></h3>
             <p>No Windows 10, a configuração da inicialização de programas mudou de local, conforme imagem:</p>
             <img src="../assets/images/pages/inicializacao.png" alt="Inicializacao">
 
             <!--Fim conteudo configuracoes-->
 
-            <!--Conteudo aplicacoes-->
-            <h3>Aplicações</h3>
+            <!-- Clone -->
+            <h2>Clone Windows</h2>
 
-            <h4 id="zip">7-zip&nbsp;<span class="installed">All lab</span></h4>
+            <!--Conteudo clone-->
+            <h3 id="autocad">Ativar o AutoCAD</h3>
+            <p>Execute o <code class="inline">AutoCAD</code> (necessário internet) e siga os passos que aparecer na tela e, informe a <a href="https://docs.google.com/spreadsheets/d/1RaX8ubdo7RuoA8qhwZAWh6ZgoTQsC_E37R8E-21wkHQ/edit#gid=0">chave de ativação</a> caso solicitado.</p>
+            <p>Em caso de erro na ativação, remover a pasta <code class="inline">FLEXnet</code> que fica localizado em <code class="inline">C:\ProgramData</code> e, execute o programa novamente.</p>
+
+            <h3 id="dominio">Adicionar o pc no domínio</h3>
+            <p>Altere o <b>Nome do Computador</b> e o <b>Grupo de trabalho</b> conforme o <a href="#nome-grupo">laboratório</a>.</p>
+
+            <h3 id="timefreeze">Ativar o Toolwiz Time Freeze</h3>
+            <p>Por último, ative o Toolwiz Time Freeze.</p>
+            <!-- Fim clone-->
+
+            <!--Conteudo aplicacoes-->
+            <h2>Aplicações</h2>
+
+            <h3 id="zip">7-zip&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://www.7-zip.org/download.html">7-zip</a>.</p>
-            <h5>Silent Install</h5>
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -289,9 +311,10 @@ load_js: load_assets_js
                 </pre>                   
             </div>
             
-            <h4 id="air">Adobe Air&nbsp;<span class="installed">All lab</span></h4>
-            <p>Faça o download do <a href="https://get.adobe.com/br/air/">Adobe Air</a>.</p>
-            <h5>Silent Install</h5>
+            <h3 id="air">Adobe Air&nbsp;<span class="installed">All lab</span></h3>
+            <p>Faça o download do <a href="https://get.adobe.com/br/air/">Adobe Air</a>.</p>          
+
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -300,9 +323,10 @@ load_js: load_assets_js
                 </pre>                   
             </div>                
             
-            <h4 id="flash">Adobe Flash Player&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="flash">Adobe Flash Player&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://get.adobe.com/br/flashplayer/">Adobe Flash Player</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -311,9 +335,10 @@ load_js: load_assets_js
                 </pre>                 
             </div>                 
             
-            <h4 id="astah">Astah Community&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="astah">Astah Community&nbsp;<span class="installed">All lab</span></h3>
             <p>Oficialmente descontinuado. Faça o download da última versão do instalador disponibilizado na <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">pasta</a>. Esse programa requer a instalação do Java SDK.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code class="language-bash">
@@ -322,12 +347,13 @@ load_js: load_assets_js
                 </pre>                   
             </div>             
             
-            <h4 id="cad">AutoCAD 2018&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="cad">AutoCAD 2018&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://www.autodesk.com/education/free-software/autocad">AutoCAD 2018</a>.</p>
             
-            <h4 id="blender">Blender&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="blender">Blender&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do  <a href="https://www.blender.org/download/">Blender</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -335,7 +361,8 @@ load_js: load_assets_js
                     </code>
                 </pre>
             </div>
-            <h5>Diretório de Configuração</h5>
+
+            <h4>Diretório de Configuração</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -344,9 +371,10 @@ load_js: load_assets_js
                 </pre>                
             </div>                
 
-            <h4 id="bonjour">Bonjour&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="bonjour">Bonjour&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do  <a href="https://support.apple.com/kb/DL999?viewlocale=pt_BR&locale=en_US">Bonjour</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -355,15 +383,16 @@ load_js: load_assets_js
                 </pre>                
             </div>
             
-            <h4 id="brmodelo">BR Modelo&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="brmodelo">BR Modelo&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="http://www.sis4.com/brModelo/download.html">brModelo</a> e mova para <code class="inline">C:\Portable</code>, dentro da pasta <b>brModelo</b>.
             
-            <h4 id="bricx">BricxCC +(Driver NXT)&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="bricx">BricxCC +(Driver NXT)&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download dos arquivos disponibilizado na <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">pasta</a>, mova a pasta BricxCC para <b>C:\Portable</b> e instale o driver.
             
-            <h4 id="tracer">Cisco Packet Tracer&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="tracer">Cisco Packet Tracer&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://www.netacad.com/pt-br">Cisco Packet Tracer</a>. Os alunos precisam fazer <a href="https://www.netacad.com/pt-br">cadastro</a> para usar a última versão do simulador.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -371,7 +400,8 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
-            <h5>Silent Uninstall</h5>
+            
+            <h4>Silent Uninstall</h4>
             <div class="highlight">
                 <pre>
                     <code class="language-bash">
@@ -380,9 +410,10 @@ load_js: load_assets_js
                 </pre>                  
             </div>              
 
-            <h4 id="composer">Composer&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="composer">Composer&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://getcomposer.org/Composer-Setup.exe">Composer</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -390,7 +421,8 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
-            <h5>Setando proxy</h5>
+            
+            <h4>Setando proxy</h4>
             <p>Execute os comandos no <code class="inline">cmd</code>, necessário ser admin.</p>
             <div class="highlight">
                 <pre>
@@ -400,18 +432,21 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
-            <h4 id="dbdesigner">DBDesigner&nbsp;<span class="installed">All lab</span></h4>
+            
+            <h3 id="dbdesigner">DBDesigner&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="http://fabforce.eu/dbdesigner4/">DBDesigner</a>.</p>
             <p>Após a instalação, confira se a pasta de atalhos <b>fabFORCE</b> foi criado corretamente em <code class="inline">C:\ProgramData\Microsoft\Windows\Start Menu\Programs</code>.</p>
             
-            <h4 id="eclipse">Eclipse Java Mars&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="eclipse">Eclipse Java Mars&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Eclipse</a> e disponibilize em <b>C:\Portable</b>.
-            <h5>Plugins</h5>
+            
+            <h4>Plugins</h4>
             <p>Windows Builder e Swing já inclusa nessa versão.</p>
             
-            <h4 id="firefox">Firefox&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="firefox">Firefox&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://www.mozilla.org/pt-BR/firefox/all/">Firefox</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -419,7 +454,8 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
-            <h5>Silent Uninstall</h5>
+            
+            <h4>Silent Uninstall</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -429,9 +465,10 @@ load_js: load_assets_js
                 </pre>
             </div>
             
-            <h4 id="fluxovento">Fluxovento&nbsp;<span class="notinstalled">lab1</span><span class="notinstalled">lab2</span><span class="notinstalled">lab3</span><span class="notinstalled">lab4</span><span class="installed">lab5</span></h4>
+            <h3 id="fluxovento">Fluxovento&nbsp;<span class="notinstalled">lab1</span><span class="notinstalled">lab2</span><span class="notinstalled">lab3</span><span class="notinstalled">lab4</span><span class="installed">lab5</span></h3>
             <p>Faça o download do <a href="http://webserver2.tecgraf.puc-rio.br/etools/fluxovento/">Fluxovento</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -440,9 +477,10 @@ load_js: load_assets_js
                 </pre>                  
             </div>              
             
-            <h4 id="geogebra">Geogebra&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="geogebra">Geogebra&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://www.geogebra.org/download">Geogebra</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -451,9 +489,10 @@ load_js: load_assets_js
                 </pre>                  
             </div>
             
-            <h4 id="gimp">Gimp&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="gimp">Gimp&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://www.gimp.org/">Gimp</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -461,7 +500,8 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
-            <h5>Silent Uninstall</h5>
+
+            <h4>Silent Uninstall</h4>
             <div class="highlight">
                 <pre>
                     <code class="language-bash">
@@ -470,9 +510,10 @@ load_js: load_assets_js
                 </pre>                 
             </div>
             
-            <h4 id="git">Git&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="git">Git&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://git-scm.com/">Git</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code class="language-bash">
@@ -480,8 +521,9 @@ load_js: load_assets_js
                     </code> 
                 </pre>                
             </div>
-            <h5>Setando proxy</h5>
-            <p>Crie um <code class="inline">.gitconfig</code> no diretório do usuário <b>aluno</b><code class="inline">(C:\Users\aluno)</code> com o seguinte conteúdo:</p>                
+            
+            <h4>Setando proxy</h4>
+            <p>Crie um <code class="inline">.gitconfig</code> no diretório do usuário <b>aluno </b><code class="inline">C:\Users\aluno</code> com o seguinte conteúdo:</p>                
             <div class="highlight">
                 <pre>
                     <code class="language-bash">
@@ -491,9 +533,11 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
-            <h4 id="chrome">Google Chrome&nbsp;<span class="installed">All lab</span></h4>
+            
+            <h3 id="chrome">Google Chrome&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://www.google.com/intl/pt-BR/chrome/?standalone=1">Google Chrome</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -502,9 +546,10 @@ load_js: load_assets_js
                 </pre>                
             </div>
             
-            <h4 id="greenfoot">Greenfoot&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="greenfoot">Greenfoot&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://www.greenfoot.org/door">Greenfoot</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -512,9 +557,11 @@ load_js: load_assets_js
                     </code>
                 </pre>                   
             </div>              
-            <h4 id="idle">IDLE Python&nbsp;<span class="installed">All lab</span></h4>
+            
+            <h3 id="idle">IDLE Python&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://www.python.org/downloads/">IDLE Python</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code class="language-bash">
@@ -522,9 +569,11 @@ load_js: load_assets_js
                     </code>
                 </pre>                 
             </div>               
-            <h4 id="burn">IMG Burn&nbsp;<span class="installed">All lab</span></h4>
+            
+            <h3 id="burn">IMG Burn&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="http://www.imgburn.com/index.php?act=download">IMG Burn</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code class="language-bash">
@@ -533,9 +582,10 @@ load_js: load_assets_js
                 </pre>                 
             </div>               
             
-            <h4 id="inkscape">Inkscape&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="inkscape">Inkscape&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://inkscape.org/pt-br/">Inkscape</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -543,7 +593,8 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
-            <h5>Silent Uninstall</h5>
+            
+            <h4>Silent Uninstall</h4>
             <div class="highlight">
                 <pre>
                     <code class="language-bash">
@@ -552,9 +603,9 @@ load_js: load_assets_js
                 </pre>                 
             </div>               
             
-            <h4 id="ireport">IReport Designer&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="ireport">IReport Designer&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do  <a href="https://community.jaspersoft.com/project/ireport-designer">IReport</a>.</p>
-            <p>Indique o Java(Requer JDK7) manualmente alterando o arquivo <code class="inline">ireport.conf</code>, localizado em:</p>
+            <p>Indique o Java (Requer JDK7) manualmente alterando o arquivo <code class="inline">ireport.conf</code>, localizado em:</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -572,9 +623,10 @@ load_js: load_assets_js
             </div>
             <p>Altere a versão do JDK de acordo com a versão do 7 instalado.</p>
 
-            <h4 id="jdk7">Java JDK 7&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="jdk7">Java JDK 7&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">JDK 7</a>. Necessário para o IReport Designer.</p>
-            <p>Silent Install</p>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -582,7 +634,8 @@ load_js: load_assets_js
                     </code>
                 </pre>                  
             </div>              
-            <h5>Silent Uninstall</h5>
+
+            <h4>Silent Uninstall</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -597,24 +650,26 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
-            <h4 id="jdk8">Java JDK 8&nbsp;<span class="installed">All lab</span></h4>
+
+            <h3 id="jdk8">Java JDK 8&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">JDK 8</a>.</p>
 
-            <h4 id="lego">Lego Mindstorms Education EV3&nbsp;<span class="notinstalled">lab1</span><span class="notinstalled">lab2</span><span class="notinstalled">lab3</span><span class="installed">lab4</span><span class="notinstalled">lab5</span></h4>
+            <h3 id="lego">Lego Mindstorms Education EV3&nbsp;<span class="notinstalled">lab1</span><span class="notinstalled">lab2</span><span class="notinstalled">lab3</span><span class="installed">lab4</span><span class="notinstalled">lab5</span></h3>
             <p>Faça o download do <a href="https://www.lego.com/en-us/mindstorms/downloads/download-software">Lego Mindstorms Education EV3</a>.</p>
             
-            <h4 id="libre">LibreOffice&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="libre">LibreOffice&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://pt-br.libreoffice.org/baixe-ja/libreoffice-stable/">LibreOffice</a>.
             
-            <h4 id="vmterminal">Máquina Virtual Ubuntu - texto&nbsp;<span class="installed">All lab</span></h4>
-            <p>Os labs possuem o Ubuntu 16.04 64bits LTS configurado, somente em modo texto(terminal).</p>
+            <h3 id="vmterminal">Máquina Virtual Ubuntu - texto&nbsp;<span class="installed">All lab</span></h3>
+            <p>Os labs possuem o Ubuntu 16.04 64bits LTS configurado, somente em modo texto (terminal).</p>
             
-            <h4 id="vmwindows">Máquina Virtual Windows&nbsp;<span class="notinstalled">lab1</span><span class="installed">lab2</span><span class="notinstalled">lab3</span><span class="installed">lab4</span><span class="installed">lab5</span></h4>
+            <h3 id="vmwindows">Máquina Virtual Windows&nbsp;<span class="notinstalled">lab1</span><span class="installed">lab2</span><span class="notinstalled">lab3</span><span class="installed">lab4</span><span class="installed">lab5</span></h3>
             <p>Os labs possuem o Windows Professional 64bits configurado.</p>
 
-            <h4 id="miktex">MikTex&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="miktex">MikTex&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://miktex.org/download">MikTex</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -623,12 +678,13 @@ load_js: load_assets_js
                 </pre>                
             </div>
 
-            <h4 id="maker">Movie Maker&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="maker">Movie Maker&nbsp;<span class="installed">All lab</span></h3>
             <p>Oficialmente descontinuado. Faça o download da última versão do instalador disponibilizado na <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">pasta</a>.</p>
             
-            <h4 id="workbench">MySQL Workbench&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="workbench">MySQL Workbench&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://dev.mysql.com/downloads/windows/installer/8.0.html">MySQL Workbench</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code class="language-bash">
@@ -637,17 +693,19 @@ load_js: load_assets_js
                 </pre>                 
             </div>               
             
-            <h4 id="netbeans">NetBeans&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="netbeans">NetBeans&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://netbeans.org/downloads/">NetBeans</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code class="language-bash">
                     "netbeans-8.2-windows.exe" --silent
                     </code>
                 </pre>                
-            </div>                
-            <h5>Silent Uninstall</h5>
+            </div>
+
+            <h4>Silent Uninstall</h4>
             <div class="highlight">
                 <pre>
                     <code class="language-bash">
@@ -671,13 +729,15 @@ load_js: load_assets_js
                     </code>
                 </pre>
             </div>
-            <h5>JasperReports Library</h5>
+
+            <h4>JasperReports Library</h4>
             <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">JasperReports Library</a>. Estraia a biblioteca em <code class="inline">C:\Portable</code>.</p>
             <p>Adicione a biblioteca no NetBeans.</p>
 
-            <h4 id="netbeans">Node.js&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="netbeans">Node.js&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://nodejs.org/en/">Node.js</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -685,7 +745,8 @@ load_js: load_assets_js
                     </code>
                 </pre>                   
             </div>
-            <h5>Setando Proxy</h5>
+
+            <h4>Setando Proxy</h4>
             <p>Execute os comandos abaixo no <code class="inline">cmd</code>, não precisa ser <code class="inline">admin</code>.</p>
             <div class="highlight">
                 <pre>
@@ -696,9 +757,10 @@ load_js: load_assets_js
                 </pre>                  
             </div>              
             
-            <h4 id="notepad">Notepad++&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="notepad">Notepad++&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://notepad-plus-plus.org/">Notepad++</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -707,12 +769,13 @@ load_js: load_assets_js
                 </pre>                  
             </div>                   
             
-            <h4 id="ocs">OCS Iventory&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="ocs">OCS Iventory&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do instalador disponibilizado na <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">pasta</a>.</p>
             
-            <h4 id="virtualbox">Oracle VirtualBox&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="virtualbox">Oracle VirtualBox&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://www.virtualbox.org/wiki/Downloads">Oracle VirtualBox</a>.</p>
-            <h5>Silent Install</h5>            
+            
+            <h4>Silent Install</h4>            
             <div class="highlight">
                 <pre>
                     <code>
@@ -728,9 +791,10 @@ load_js: load_assets_js
             A código da licença muda conforme a versão do Pack!
             </blockquote>
 
-            <h4 class="#pandoc">Pandoc&nbsp;<span class="installed">All lab</span></h4>
+            <h3 class="#pandoc">Pandoc&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do  <a href="https://github.com/jgm/pandoc/releases/latest">Pandoc</a>.
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code class="language-bash">
@@ -738,8 +802,12 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
-            <h3>Testando Pandoc</h3>
+            
+            <h4>Testando Pandoc</h4>
             <p>Execute o comando abaixo no <code class="inline">cmd</code>.</p>
+            <blockquote class="info">
+            É necessário criar um arquivo com marcação em Markdown para o teste.
+            </blockquote>
             <div class="highlight">
                 <pre>
                     <code class="language-bash">
@@ -748,9 +816,10 @@ load_js: load_assets_js
                 </pre>                
             </div>                
 
-            <h4 id="pingendo">Pingendo&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="pingendo">Pingendo&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://pingendo.com/">Pingendo</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -758,7 +827,8 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
-            <h5>Silent Uninstall</h5>
+
+            <h4>Silent Uninstall</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -766,9 +836,11 @@ load_js: load_assets_js
                     </code>
                 </pre> 
             </div>         
-            <h4 id="portugol">Portugol Stúdio&nbsp;<span class="installed">All lab</span></h4>
+            
+            <h3 id="portugol">Portugol Stúdio&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="http://lite.acad.univali.br/portugol/">Portugol Stúdio</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -776,7 +848,8 @@ load_js: load_assets_js
                     </code>
                 </pre>   
             </div>                   
-            <h5>Silent Uninstall</h5>
+
+            <h4>Silent Uninstall</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -785,15 +858,16 @@ load_js: load_assets_js
                 </pre>                
             </div>
             
-            <h4 id="kerkythea">Programa Kerkythea&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="kerkythea">Programa Kerkythea&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://www.kerkythearender.net/instalacao">Programa Kerkythea</a>.</p>
 
-            <h4 id="r">R - Estatísticas e Gráficos&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="r">R - Estatísticas e Gráficos&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://cran.r-project.org/mirrors.html">R - Estatísticas e Gráficos</a>. Instale apenas a versão x64.</p>
 
-            <h4 id="scratch">Scratch&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="scratch">Scratch&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://scratch.mit.edu/download">Scratch</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -802,9 +876,10 @@ load_js: load_assets_js
                 </pre>    
             </div>                   
 
-            <h4 id="scketup">ScketchUp Make&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="scketchup">ScketchUp Make&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">ScketchUp Make</a>.</p>
-            <h5>Plugin</h5>
+            
+            <h4>Plugin</h4>
             <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">exportador para Sketchup</a>.</p>
             <p>Diretório de instalação\extração do plugin:</p>
             <div class="highlight">
@@ -815,9 +890,10 @@ load_js: load_assets_js
                 </pre>                
             </div>
             
-            <h4 id="sumatrapdf">SumatraPDF&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="sumatrapdf">SumatraPDF&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://www.sumatrapdfreader.org/free-pdf-reader.html">SumatraPDF</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -827,9 +903,11 @@ load_js: load_assets_js
                     </code>
                 </pre>                  
             </div>
-            <h4 id="texstudio">TeXstudio&nbsp;<span class="installed">All lab</span></h4>
+            
+            <h3 id="texstudio">TeXstudio&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://www.texstudio.org/">TeXstudio</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -838,7 +916,7 @@ load_js: load_assets_js
                 </pre>                  
             </div>
 
-            <h4 id="freeze">Toolwiz Time Freeze&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="freeze">Toolwiz Time Freeze&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do  <a href="http://www.toolwiz.com/lead/toolwiz_time_freeze.php">Toolwiz Time Freeze</a>.</p>
             <p>Desativar os seguintes serviços: <b>Desfragmentador ou Otimizador de Discos</b>, <b>Backup do Windows</b> e <a href="#reparo">Reparo automático</a>.</p>
             <p>No Windows 8/10, desative a inicialização rápida:</p>
@@ -850,9 +928,10 @@ load_js: load_assets_js
                 </pre>                                
             </div>
 
-            <h4 id="veyon">Veyon&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="veyon">Veyon&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://veyon.io/download/">Veyon</a> e instale como cliente.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -861,9 +940,9 @@ load_js: load_assets_js
                 </pre>                 
             </div>               
             
-            <h4 id="visualg">Visual G&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="visualg">Visual G&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="http://www.apoioinformatica.inf.br/produtos/visualg">Visual G</a>.</p>
-            <h5>Silent Install</h5>
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -872,9 +951,10 @@ load_js: load_assets_js
                 </pre>
             </div>
             
-            <h4 id="vscode">Visual Studio Code&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="vscode">Visual Studio Code&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://code.visualstudio.com/">Visual Studio Code</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -883,9 +963,10 @@ load_js: load_assets_js
                 </pre>
             </div>                
             
-            <h4 id="vlc">VLC Media Player&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="vlc">VLC Media Player&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://www.videolan.org/vlc/index.pt-BR.html">VLC Media Player</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -894,9 +975,10 @@ load_js: load_assets_js
                 </pre>
             </div>
 
-            <h4 id="xampp">XAMPP&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="xampp">XAMPP&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do  <a href="https://www.apachefriends.org/pt_br/index.html">XAMPP</a>.</p>
-            <h5>Silent Install</h5>
+            
+            <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>

@@ -25,24 +25,29 @@ load_js: load_../assets_js
         </aside>
         <article class="conteudo">
             <h1>Imagem Ubuntu</h1>
-            <h2>Ubuntu 16.04 64bits LTS</h2>
+            
+            <blockquote class="info">
+            As configurações se aplicam ao Ubuntu 16 64bits LTS.
+            </blockquote>
 
             <!--Conteudo instalacao-->
-            <h3>Instalação</h3>
-            <h4 id="particao">Partiçao SO&nbsp;<span class="installed">All lab</span></h4>
-            <p>Partição primária de 96GB(<b>exceto no lab3 e lab5, usar 100GB</b>).</p>
-            <h4 id="swap">Swap&nbsp;<span class="installed">All lab</span></h4>
-            <p>Partição de 4GB(<b>exceto no lab3 e lab5</b>).</p>
-            <h4 id="root">Usuário root&nbsp;<span class="installed">All lab</span></h4>
+            <h2>Instalação</h2>
+            <h3 id="particao">Partiçao SO&nbsp;<span class="installed">All lab</span></h3>
+            <p>Partição primária de 96GB (<b>exceto no lab3 e lab5, usar 100GB</b>).</p>
+            
+            <h3 id="swap">Swap&nbsp;<span class="installed">All lab</span></h3>
+            <p>Partição de 4GB (<b>exceto no lab3 e lab5</b>).</p>
+            
+            <h3 id="root">Usuário root&nbsp;<span class="installed">All lab</span></h3>
             <p>Crie o usuário administrador <b>IFPR</b> com a senha disponível na <a href="https://goo.gl/A3129L">planilha</a>.</p>
             <!--Fim conteudo instalacao-->
 
             <!--Conteudo configuracoes-->
-            <h3>Configurações</h3>
+            <h2>Configurações</h2>
 
             <blockquote class="info">Tenho dois usuários em cada máquina, então, algumas configurações são necessários para ambos.</blockquote>
 
-            <h4 id="padrao">Usuário padrão&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="padrao">Usuário padrão&nbsp;<span class="installed">All lab</span></h3>
             <p>Crie o usuário padrão <b>Aluno</b> com a senha <b>aluno123</b> e configure o Ubuntu para iniciar automaticamente por essa conta.</p>
             <p>Caso o login automático não funcione, altere o <code class="inline">/etc/lightdm/lightdm.conf</code>.</p>
             <div class="highlight">
@@ -54,10 +59,10 @@ load_js: load_../assets_js
                 </pre>
             </div>
 
-            <h4 id="idioma">Atualização do idioma do sistema&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="idioma">Atualização do idioma do sistema&nbsp;<span class="installed">All lab</span></h3>
             <img src="../assets/images/pages/idioma.png" alt="Atualização de idioma do sistema">
 
-            <h4 id="atualizacao">Atualização do SO&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="atualizacao">Atualização do SO&nbsp;<span class="installed">All lab</span></h3>
             <div class="highlight">
                 <pre>
                     <code>
@@ -67,9 +72,11 @@ load_js: load_../assets_js
                     </code>
                 </pre>
             </div>
-            <h4 id="wallpaper">Definindo o papel de parede padrão IFPR&nbsp;<span class="installed">All lab</span></h4>
+
+            <h3 id="wallpaper">Definindo o papel de parede padrão IFPR&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o <a href="https://drive.google.com/drive/folders/1mFNMKCBx6tvJaPfzSgax-0t9ZrwJIsPn?usp=sharing">download</a>.</p>
-            <h3>Automatizando</h3>
+
+            <h4>Automatizando</h4>
             <p>Para isso, usaremos o <code class="inline">dconf</code>.</p>
             <p>Crie o arquivo <code class="inline">user</code> em <code class="inline">/etc/dconf/profile</code> e adicione:</p>
             <div class="highlight">
@@ -109,12 +116,12 @@ load_js: load_../assets_js
                 </code>
                 </pre>
             </div>
-            <p>Para ver o resultado, reinicie!</p>
-            <p>Para mais detalhes sobre essa configuração, acesse o <a href="https://wiki.gnome.org/Projects/dconf/SystemAdministrators">Wiki do Gnome</a>.</p>
+            <p>Reinicie para ver o resultado e, para mais detalhes sobre essa configuração, acesse o <a href="https://wiki.gnome.org/Projects/dconf/SystemAdministrators">Wiki do Gnome</a>.</p>
 
-            <h4 id="proxy">Configuração do Proxy&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="proxy">Configuração do Proxy&nbsp;<span class="installed">All lab</span></h3>
             <img src="../assets/images/pages/proxy.png" alt="Configuração do Proxy">
-            <h5>Via linha de comando</h5>
+            
+            <h4>Via linha de comando</h4>
             <p>Crie o arquivo <code class="inline">proxy_var.sh</code> em <code class="inline">/etc/profile.d/</code> com o seguinte conteúdo:</p>
             <div class="highlight">
                 <pre>
@@ -148,9 +155,16 @@ load_js: load_../assets_js
                 </code>
                 </pre>
             </div>
-            <p>Se necessário, reinicie!</p>
+            <p>Para testar as variáveis de ambiente, execute no terminal:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                        source /etc/profile.d/proxy_var.sh
+                    </code>
+                </pre>
+            </div>
 
-            <h4 id="ipv6">Desativar IPv6</h4>
+            <h3 id="ipv6">Desativar IPv6</h3>
             <p>Nos laboratórios de informática usamos apenas IPv4, dessa forma, desativamos o IPv6.</p>
             <p>Modifique a linha <code class="inline">GRUB_CMDLINE_LINUX="locale=pt_BR"</code> em <code class="inline">/etc/default/grub</code> para:</p>
             <div class="highlight">
@@ -160,7 +174,7 @@ load_js: load_../assets_js
                 </code>
                 </pre>
             </div>
-            <p> Atualize o Grub:</p>
+            <p>Atualize o Grub:</p>
             <div class="highlight">
                 <pre>
                 <code>
@@ -169,15 +183,16 @@ load_js: load_../assets_js
                 </pre>
             </div>
             <p>Reinicie para testar!</p>
-            <h4 id="tela">Remoção de proteção e bloqueio de tela&nbsp;<span class="installed">All lab</span></h4>
+
+            <h3 id="tela">Remoção de proteção e bloqueio de tela&nbsp;<span class="installed">All lab</span></h3>
             <img src="../assets/images/pages/bloqueio.png" alt="Remoção de proteção de tela e bloqueio">
 
-            <h4 id="fontes">Repositório dos parceiros da Canonical&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="fontes">Repositório dos parceiros da Canonical&nbsp;<span class="installed">All lab</span></h3>
             <img src="../assets/images/pages/canonical.png" alt="Ativando as fontes dos parceiros da Canonical">
 
-            <h4 id="historico">Limpando o histórico do Chrome e Firefox&nbsp;<span class="installed">All lab</span></h4>
-            <p>Isso é importante para dar aquela sensação de pc novo! ;)</p>
-            <h4 id="horas">Evitando problemas de horas com Dual Boot&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="historico">Limpando o histórico do Chrome e Firefox&nbsp;<span class="installed">All lab</span></h3>
+
+            <h3 id="horas">Evitando problemas de horas com Dual Boot&nbsp;<span class="installed">All lab</span></h3>
             <p>Se aplica ao Ubuntu acima de 15.04.</p>
             <div class="highlight">
                 <pre>
@@ -186,7 +201,8 @@ load_js: load_../assets_js
                     </code>
                 </pre>                
             </div>
-            <h4 id="restricao">Restringindo o acesso a partições&nbsp;<span class="installed">All lab</span></h4>
+
+            <h3 id="restricao">Restringindo o acesso a partições&nbsp;<span class="installed">All lab</span></h3>
             <p>Isso evita o acesso desenfreado as partições do Windows.</p>
             <div class="highlight">
                 <pre>
@@ -198,13 +214,29 @@ load_js: load_../assets_js
             <p>Na quarta linha do arquivo acima, altere <code class="inline">ResultActive=yes</code> para <code class="inline">ResultActive=auth_admin_keep</code>.</p>
             <p>Isso permite que apenas o usuário autenticado tenha acesso a partições do Windows.</p>
 
-            <h4 id="cert">Certificado do pfSense para navegação&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="cert">Certificado do pfSense para navegação&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça do <a href="https://drive.google.com/drive/folders/1Oc7tfxygvQ6s0IoTgY1sGfhsBtUEKnds?usp=sharing">download do certificado</a> e instale no Chrome e Firefox.</p>
             <!--Fim conteudo configuracoes-->
 
+            <!-- Clone -->
+            <h2>Clone Ubuntu</h2>
+            <h3 id="hostname">Alterar hostname</h3>
+            <p>Altere o nome do computador em <code class="inline">/etc/hostname</code> e <code class="inline">/etc/hosts</code>:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo vi /etc/hostname
+                    sudo vi /etc/hosts
+                    </code>
+                </pre>
+            </div>
+
+            <p>A nomenclatura é o mesmo utilizado no <a href="https://wiki.cremilton.com/windows/#nome-grupo">Windows</a>, de acordo com o Laboratório.</p>
+            <!-- Fim clone -->
+
             <!--Conteudo aplicacoes-->
-            <h3>Aplicações</h3>
-            <h4 id="grub">Grub Customizer&nbsp;<span class="installed">All lab</span></h4>
+            <h2>Aplicações</h2>
+            <h3 id="grub">Grub Customizer&nbsp;<span class="installed">All lab</span></h3>
             <p>Configure o grub para que o pc sempre inicialize automaticamente pelo Windows.</p>
             <div class="highlight">
                 <pre>
@@ -215,7 +247,8 @@ load_js: load_../assets_js
                     </code>
                 </pre>                
             </div>
-            <h4 id="unity-tool">Unity Tweak Tool&nbsp;<span class="installed">All lab</span></h4>
+
+            <h3 id="unity-tool">Unity Tweak Tool&nbsp;<span class="installed">All lab</span></h3>
             <div class="highlight">
                 <pre>
                     <code>
@@ -225,7 +258,7 @@ load_js: load_../assets_js
             </div>
             <p>Serve para optimizar a interface do Ubuntu.</p>
 
-            <h4 id="7zip">7-zip&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="7zip">7-zip&nbsp;<span class="installed">All lab</span></h3>
             <div class="highlight">
                 <pre>
                     <code>
@@ -235,7 +268,7 @@ load_js: load_../assets_js
             </div>
   
 
-            <h4 id="smb">Samba Cliente&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="smb">Samba Cliente&nbsp;<span class="installed">All lab</span></h3>
             <div class="highlight">
                 <pre>
                     <code>
@@ -245,7 +278,7 @@ load_js: load_../assets_js
             </div>
   
 
-            <h4 id="flash">Flash Player&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="flash">Flash Player&nbsp;<span class="installed">All lab</span></h3>
             <div class="highlight">
                 <pre>
                     <code>
@@ -255,10 +288,10 @@ load_js: load_../assets_js
             </div>
   
 
-            <h4 id="chrome">Google Chrome&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="chrome">Google Chrome&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://www.google.com/chrome/">Google Chrome</a>.</p>
 
-            <h4 id="seahorse">Seahorse&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="seahorse">Seahorse&nbsp;<span class="installed">All lab</span></h3>
             <p>Serve para remover o incômodo pedido de senha do Google Chrome.</p>
             <div class="highlight">
                 <pre>
@@ -270,7 +303,7 @@ load_js: load_../assets_js
   
             <img src="../assets/images/pages/seahorse.png" alt="Configurando Seahorse">
 
-            <h4 id="vi">Vim&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="vi">Vim&nbsp;<span class="installed">All lab</span></h3>
             <div class="highlight">
                 <pre>
                     <code>
@@ -279,7 +312,7 @@ load_js: load_../assets_js
                 </pre>
             </div>
 
-            <h4 id="java">Java JDK 8&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="java">Java JDK 8&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">download</a> do arquivo de instalação.</p>
             <p>Crie a pasta de instalação:</p>
             <div class="highlight">
@@ -290,9 +323,10 @@ load_js: load_../assets_js
                 </pre>                
             </div>
   
-            <blockquote>
-                    Neste exemplo, instalei a versão jdk-8u191, faça as alterações necessárias em caso de uma versão diferente.
+            <blockquote class="info">
+            Neste exemplo, instalei a versão jdk-8u191, faça as alterações necessárias em caso de uma versão diferente.
             </blockquote>
+
             <p>Extraindo os arquivos:</p>
             <div class="highlight">
                 <pre>
@@ -323,8 +357,15 @@ load_js: load_../assets_js
                     </code>
                 </pre>                
             </div>
-            <p>Reinicie!</p>
-            <p>Confira se está tudo ok:</p>
+            <p>Rode o seguinte comando pra testar:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                        source /etc/profile.d/java_var.sh
+                    </code>
+                </pre>
+            </div>
+            <p>Após o comando, cheque a saídas das variáveis no terminal digitando no terminal:</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -333,7 +374,8 @@ load_js: load_../assets_js
                     </code>
                 </pre>                
             </div>
-            <h4 id="netbeans">Netbeans&nbsp;<span class="installed">All lab</span></h4>
+
+            <h3 id="netbeans">Netbeans&nbsp;<span class="installed">All lab</span></h3>
             <div class="highlight">
                 <pre>
                     <code>
@@ -343,7 +385,8 @@ load_js: load_../assets_js
                     </code>
                 </pre>                
             </div>
-            <h3>JasperReports Library</h3>
+
+            <h4>JasperReports Library</h4>
             <p>Baixe o <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">JasperReports Library</a>. Crie a pasta <code class="inline">portable</code> em <code class="inline">/home/</code> para deixar a biblioteca de forma permanente, por último, adicione a biblioteca no Netbeans para o perfil do <b>Aluno</b>.</p>
             <p>Não se esqueça das permissões:</p>
             <div class="highlight">
@@ -354,7 +397,7 @@ load_js: load_../assets_js
                 </pre>
             </div>
   
-            <h4 id="adicionais">Ubuntu Restricted Extras&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="adicionais">Ubuntu Restricted Extras&nbsp;<span class="installed">All lab</span></h3>
             <div class="highlight">
                 <pre>
                     <code>
@@ -364,7 +407,7 @@ load_js: load_../assets_js
             </div>
   
 
-            <h4 id="ssh">Open SSH Server&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="ssh">Open SSH Server&nbsp;<span class="installed">All lab</span></h3>
             <p>Para usar o acesso remoto.</p>
             <div class="highlight">
                 <pre>
@@ -375,7 +418,7 @@ load_js: load_../assets_js
             </div>
   
 
-            <h4 id="scratch">Scratch&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="scratch">Scratch&nbsp;<span class="installed">All lab</span></h3>
             <div class="highlight">
                 <pre>
                     <code>
@@ -385,7 +428,7 @@ load_js: load_../assets_js
             </div>
   
 
-            <h4 id="lamp">LAMP&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="lamp">LAMP&nbsp;<span class="installed">All lab</span></h3>
             <div class="highlight">
                 <pre>
                     <code>
@@ -457,7 +500,7 @@ load_js: load_../assets_js
                 </pre>                
             </div>
   
-            <h4 id="veyon">Veyon&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="veyon">Veyon&nbsp;<span class="installed">All lab</span></h3>
             <p>Mais informações, acesse a página do software <a href="https://veyon.io/">Veyon</a>.</p>
             <p>Instalando dependências:</p>
             <div class="highlight">
@@ -494,12 +537,12 @@ load_js: load_../assets_js
                     </code>
                 </pre>                
             </div>
-            <h4 id="vscode">VS Code&nbsp;<span class="installed">All lab</span></h4>
+            <h3 id="vscode">VS Code&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://code.visualstudio.com/">VS Code</a>.</p>
 
 
-            <h4 id="timefreeze">Time Freeze&nbsp;<span class="installed">All lab</span></h4>
-            <p>Na verdade isso é apenas um script para manter o sistema sempre com cara de novo, pelo menos o SO!</p>
+            <h3 id="timefreeze">Time Freeze&nbsp;<span class="installed">All lab</span></h3>
+            <p>Isso é um script para manter o sistema sempre intacto, pelo menos o SO.</p>
             <p>Primeiro crie um perfil ideal, com favoritos, papel de parede e etc. Com o perfil criado, siga os comandos abaixo:</p>
             <div class="highlight">
                 <pre>
@@ -508,7 +551,7 @@ load_js: load_../assets_js
                     sudo cp -R /home/aluno/* /home/resetuser
                     sudo cp -R /home/aluno/.[a-zA-Z]*
                     </code>
-                </pre>                
+                </pre>
             </div>
             <p>Agora criamos um script para fazer o inverso no diretório <code class="inline">/sbin</code>, chamarei o script de <code class="inline">reset-user</code>, segue código completo:</p>
 
@@ -529,6 +572,7 @@ load_js: load_../assets_js
                     </code>
                 </pre>                
             </div>
+
             <p>Permissão de execução para o <code class="inline">reset-user</code> :</p>
             <div class="highlight">
                 <pre>
