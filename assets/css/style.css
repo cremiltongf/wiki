@@ -285,12 +285,6 @@ a.btn-menu{
 /*
     conteudo
 */
-.conteudo img {
-    opacity: 0.8;
-}
-.conteudo img:hover {
-    opacity: 1.0;
-}
 .conteudo blockquote,
 .conteudo-home p,
 .conteudo p{
@@ -298,10 +292,17 @@ a.btn-menu{
     margin-bottom: 1rem;
     line-height: 1.6;
 }
+h1,
+h2,
+h3,
+h4{
+    font-family: 'Arvo', serif;
+}
 .conteudo-home h1,
 .conteudo h1{
     font-size: 3.052rem;
     margin-bottom: 1rem;
+    line-height: 1.2;
 }
 .conteudo h2,
 .conteudo h3,
@@ -317,16 +318,12 @@ a.btn-menu{
 .conteudo h4{
     font-size: 1.563rem;
 }
-.conteudo h1,
-.conteudo h2,
-.conteudo h3,
-.conteudo h4{
-    line-height: 1.2;
-    margin-bottom: 1rem;
-    word-break: break-word;
-}
-.conteudo img{
+.conteudo img {
+    opacity: 0.8;
     margin-bottom: 10px;
+}
+.conteudo img:hover {
+    opacity: 1.0;
 }
 /*label*/
 .installed,
