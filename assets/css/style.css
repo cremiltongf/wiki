@@ -144,9 +144,9 @@ b{
     flex: 1 1 310px;
 }
 .conteudo{
-    flex: 2 1 620px;
+    flex: 2 1 490px;
 }
-@media (max-width: 768px){
+@media (max-width: 800px){
     .conteudo-container{
         flex-direction: column;
     }
@@ -229,7 +229,7 @@ b{
     -o-transition: all 0.25s ease-in-out;
 	transition: all 0.25s ease-in-out;
 }
-@media (max-width: 768px){
+@media (max-width: 800px){
     .menu{
         position: absolute;
         top: 0;
@@ -276,7 +276,7 @@ a.btn-menu{
     margin: 0 10px 10px;
     background-image: url("../../assets/images/menu-icon.svg");
 }
-@media (max-width: 768px){
+@media (max-width: 800px){
     .show-btn,
     .hidden-btn{
         display: block;
