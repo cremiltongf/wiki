@@ -379,9 +379,9 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                    sudo add-apt-repository ppa:vajdics/netbeans-installer
-                    sudo apt update
-                    sudo apt install ne
+                        sudo add-apt-repository ppa:vajdics/netbeans-installer
+                        sudo apt update
+                        sudo apt install netbeans-installer
                     </code>
                 </pre>                
             </div>
@@ -463,7 +463,7 @@ load_js: load_assets_js
                     <code>
                     &lt;Directory /var/www/&gt;
                     Options Indexes FollowSymLinks
-                    Al
+                    AllowOverride None
                     Require all granted
                     &lt;/Directory&gt;
                     </code>
@@ -475,9 +475,8 @@ load_js: load_assets_js
                     <code>
                     &lt;Directory /var/www/&gt;
                     Options Indexes FollowSymLinks
-                    A
+                    AllowOverride All
                     Require all granted
-                    &lt;/Directory&gt;
                     </code>
                 </pre>
             </div>
@@ -506,10 +505,10 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                    sudo apt-get install g++ make cmake qtbase5-dev qtbase5-dev-tools qttools5-dev qttools5-dev-tools \
-                    xorg-dev libxtst-dev libjpeg-dev zlib1g-dev libssl-dev libpam0g-dev \
-                    libprocps-dev liblzo2-dev libqca2-dev libqca-qt5-2-de
-                    libsasl2-dev
+                        sudo apt-get install g++ make cmake qtbase5-dev qtbase5-dev-tools qttools5-dev qttools5-dev-tools \
+                        xorg-dev libxtst-dev libjpeg-dev zlib1g-dev libssl-dev libpam0g-dev \
+                        libprocps-dev liblzo2-dev libqca2-dev libqca-qt5-2-dev libldap2-dev \
+                        libsasl2-dev
                     </code>
                 </pre>
             </div>
@@ -605,10 +604,10 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                    #disable
-                    sudo systemctl enable reset-user.service
-           
-                    sudo systemctl disable reset-user.service
+                        #disable
+                        sudo systemctl enable reset-user.service
+                        #enable
+                        sudo systemctl disable reset-user.service
                     </code>
                 </pre>                
             </div>
