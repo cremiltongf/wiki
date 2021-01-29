@@ -298,12 +298,12 @@ h2,
 h3,
 h4{
     font-family: 'Arvo', serif;
+    line-height: 1;
+    margin-bottom: 1rem;
 }
 .conteudo-home h1,
 .conteudo h1{
     font-size: 3.052rem;
-    margin-bottom: 1rem;
-    line-height: 1.2;
 }
 .conteudo h2,
 .conteudo h3,
@@ -375,6 +375,7 @@ h4{
     color: #d78423;
     background-color: #2d2d2d;
     border: 1px solid #1b202d;
+    border-radius: .4rem;
 }
 
 /* 
