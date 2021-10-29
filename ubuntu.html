@@ -73,11 +73,11 @@ load_js: load_assets_js
                 </pre>
             </div>
 
-            <h3 id="wallpaper">Definindo o papel de parede padrão IFPR&nbsp;<span class="installed">All lab</span></h3>
+            <h3 id="wallpaper">Papel de parede padrão IFPR&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o <a href="https://drive.google.com/drive/folders/1mFNMKCBx6tvJaPfzSgax-0t9ZrwJIsPn?usp=sharing">download</a>.</p>
 
             <h4>Automatizando</h4>
-            <p>Para esse processo, usaremos o <code class="inline">dconf</code>, conforme orientação de configuraço abaixo:</p>
+            <p>Para esse processo, usaremos o <code class="inline">dconf</code>, conforme orientação abaixo.</p>
             <p>Crie o arquivo <code class="inline">user</code> em <code class="inline">/etc/dconf/profile</code> e adicione:</p>
             <div class="highlight">
                 <pre>
@@ -98,7 +98,7 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
-            <p>Para bloquear a troca do papel de parede, proseeguimos conforme orientações abaixo:</p>
+            <p>Para bloquear a troca do papel de parede, prosseguimos conforme instruções abaixo:</p>
             <p>Crie o arquivo <code class="inline">00_wallpaper</code> em <code class="inline">/etc/dconf/db/tema.d/locks</code> e adicione:</p>
             <div class="highlight">
                 <pre>
@@ -116,7 +116,7 @@ load_js: load_assets_js
                 </code>
                 </pre>
             </div>
-            <p>Reinicie para ver o resultado e, para mais detalhes sobre essa configuração, acesse o <a href="https://wiki.gnome.org/Projects/dconf/SystemAdministrators">Wiki do Gnome</a>.</p>
+            <p>Reinicie para ver o resultado e, para mais detalhes sobre essa configuração acesse o <a href="https://wiki.gnome.org/Projects/dconf/SystemAdministrators">Wiki do Gnome</a>.</p>
 
             <h3 id="proxy">Configuração do Proxy&nbsp;<span class="installed">All lab</span></h3>
             <img src="../assets/images/pages/ubuntu-proxy.png" alt="Configuração do Proxy">
@@ -170,7 +170,7 @@ load_js: load_assets_js
             <h3 id="fontes">Repositório dos parceiros da Canonical&nbsp;<span class="installed">All lab</span></h3>
             <img src="../assets/images/pages/canonical.png" alt="Ativando as fontes dos parceiros da Canonical">
 
-            <h3 id="historico">Limpando o histórico do Chrome e Firefox&nbsp;<span class="installed">All lab</span></h3>
+            <h3 id="historico">Histórico do Chrome e Firefox&nbsp;<span class="installed">All lab</span></h3>
             <p>Não é legal deixar históricos de downloads e etc.</p>
 
             <h3 id="horas">Evitando problemas de horas com Dual Boot&nbsp;<span class="installed">All lab</span></h3>
@@ -184,7 +184,7 @@ load_js: load_assets_js
             </div>
 
             <h3 id="restricao">Restringindo o acesso a partições&nbsp;<span class="installed">All lab</span></h3>
-            <p>Isso evita o acesso desenfreado as partições do Windows, o que pode gerar problemas.</p>
+            <p>Isso permite que apenas o usuário autenticado tenha acesso a partições do Windows.</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -193,27 +193,10 @@ load_js: load_assets_js
                 </pre>                
             </div>
             <p>Na quarta linha do arquivo acima, altere <code class="inline">ResultActive=yes</code> para <code class="inline">ResultActive=auth_admin_keep</code>.</p>
-            <p>Isso permite que apenas o usuário autenticado tenha acesso a partições do Windows.</p>
 
             <h3 id="cert">Certificado do pfSense para navegação&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça do <a href="https://drive.google.com/drive/folders/1Oc7tfxygvQ6s0IoTgY1sGfhsBtUEKnds?usp=sharing">download do certificado</a> e instale no Chrome e Firefox.</p>
             <!--Fim conteudo configuracoes-->
-
-            <!-- Clone -->
-            <h2>Clone Ubuntu</h2>
-            <h3 id="hostname">Alterar hostname</h3>
-            <p>Altere o nome do computador em <code class="inline">/etc/hostname</code> e <code class="inline">/etc/hosts</code>:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo vi /etc/hostname
-                    sudo vi /etc/hosts
-                    </code>
-                </pre>
-            </div>
-
-            <p>A nomenclatura é o mesmo utilizado no <a href="https://wiki.cremilton.com/windows/#nome-grupo">Windows</a>, de acordo com o Laboratório.</p>
-            <!-- Fim clone -->
 
             <!--Conteudo aplicacoes-->
             <h2>Aplicações</h2>
@@ -400,8 +383,8 @@ load_js: load_assets_js
                     </code>
                 </pre>
             </div>
-            <p>Caso o <b>MySQL esteja travavando</b> o desligamento ou reinicialização do Ubuntu, confira se a data/hora está no correta no setup!</p>
-            <p>Escrita de URL.</p>
+            <p>Caso o <b>MySQL esteja travavando o desligamento ou reinicialização</b> do Ubuntu, confira se a data/hora está no correta no setup!</p>
+            <p>Habilitando escrita de URL.</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -445,7 +428,7 @@ load_js: load_assets_js
             </div>
 
             <blockquote class="info">
-            Faça isso apenas em localhost e nuncam no ambiente de produção.
+            Faça isso apenas em localhost e nunca em ambiente de produção.
             </blockquote>
 
             <p>Por fim, reinicie o Apache.</p>
@@ -566,6 +549,22 @@ load_js: load_assets_js
                 </pre>                
             </div>
             <!--Fim conteudo aplicacoes-->
+
+            <!-- Clone -->
+            <h2>Clone Ubuntu</h2>
+            <h3 id="hostname">Alterar hostname</h3>
+            <p>Altere o nome do computador em <code class="inline">/etc/hostname</code> e <code class="inline">/etc/hosts</code>:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo vi /etc/hostname
+                    sudo vi /etc/hosts
+                    </code>
+                </pre>
+            </div>
+
+            <p>A nomenclatura é o mesmo utilizado no <a href="https://wiki.cremilton.com/windows/#nome-grupo">Windows</a>, de acordo com cada Laboratório.</p>
+            <!-- Fim clone -->            
         </article>
     </main>
     {% include footer.html %}
