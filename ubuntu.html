@@ -33,23 +33,23 @@ load_js: load_assets_js
             <!--Conteudo instalacao-->
             <h2>Instalação</h2>
             <h3 id="particao">Partiçao SO&nbsp;<span class="installed">All lab</span></h3>
-            <p>Partição primária de 96GB (<b>exceto no lab3 e lab5, usar 100GB</b>).</p>
+            <p>Partição recomendada de 38GB.</p>
             
             <h3 id="swap">Swap&nbsp;<span class="installed">All lab</span></h3>
-            <p>Partição de 4GB (<b>exceto no lab3 e lab5</b>).</p>
+            <p>Partição recomendada de 2GB.</p>
             
             <h3 id="root">Usuário root&nbsp;<span class="installed">All lab</span></h3>
-            <p>Crie o usuário administrador <b>IFPR</b> com a senha disponível na <a href="https://goo.gl/A3129L">planilha</a>.</p>
+            <p>Crie o usuário root <b>IFPR</b> com a senha disponível na <a href="https://goo.gl/A3129L">planilha</a>.</p>
             <!--Fim conteudo instalacao-->
 
             <!--Conteudo configuracoes-->
             <h2>Configurações</h2>
 
-            <blockquote class="info">Tenho dois usuários em cada máquina, então, algumas configurações são necessários para ambos.</blockquote>
+            <blockquote class="info">As configurações de ambiente se aplicam ao usuário Aluno.</blockquote>
 
-            <h3 id="padrao">Usuário padrão&nbsp;<span class="installed">All lab</span></h3>
-            <p>Crie o usuário padrão <b>Aluno</b> com a senha <b>aluno123</b> e configure o Ubuntu para iniciar automaticamente por essa conta.</p>
-            <p>Caso o login automático não funcione, altere o <code class="inline">/etc/lightdm/lightdm.conf</code>.</p>
+            <h3 id="padrao">Usuário do estudante&nbsp;<span class="installed">All lab</span></h3>
+            <p>Crie a conta de usuário <b>Aluno</b> com a senha <b>aluno123</b> e configure o Ubuntu para iniciar automaticamente por essa conta.</p>
+            <p>Caso o login automático não funcione, faça o manualmente editando <code class="inline">/etc/lightdm/lightdm.conf</code>.</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -77,7 +77,7 @@ load_js: load_assets_js
             <p>Faça o <a href="https://drive.google.com/drive/folders/1mFNMKCBx6tvJaPfzSgax-0t9ZrwJIsPn?usp=sharing">download</a>.</p>
 
             <h4>Automatizando</h4>
-            <p>Para isso, usaremos o <code class="inline">dconf</code>.</p>
+            <p>Para esse processo, usaremos o <code class="inline">dconf</code>, conforme orientação de configuraço abaixo:</p>
             <p>Crie o arquivo <code class="inline">user</code> em <code class="inline">/etc/dconf/profile</code> e adicione:</p>
             <div class="highlight">
                 <pre>
@@ -94,11 +94,11 @@ load_js: load_assets_js
                     <code>
                     #/etc/dconf/db/tema.d/00_tema_settings
                     [org/gnome/desktop/background]
-                    picture-uri='file:///home/aluno/Imagens/home.jpg'
+                    picture-uri='file:///home/aluno/Imagens/wallpaper.jpg'
                     </code>
                 </pre>                
             </div>
-            <p>As configurações acima já resolvem a nossa vida, mas e se quisermos bloquear a troca do papel de parede?</p>
+            <p>Para bloquear a troca do papel de parede, proseeguimos conforme orientações abaixo:</p>
             <p>Crie o arquivo <code class="inline">00_wallpaper</code> em <code class="inline">/etc/dconf/db/tema.d/locks</code> e adicione:</p>
             <div class="highlight">
                 <pre>
@@ -119,7 +119,7 @@ load_js: load_assets_js
             <p>Reinicie para ver o resultado e, para mais detalhes sobre essa configuração, acesse o <a href="https://wiki.gnome.org/Projects/dconf/SystemAdministrators">Wiki do Gnome</a>.</p>
 
             <h3 id="proxy">Configuração do Proxy&nbsp;<span class="installed">All lab</span></h3>
-            <img src="../assets/images/pages/proxy.png" alt="Configuração do Proxy">
+            <img src="../assets/images/pages/ubuntu-proxy.png" alt="Configuração do Proxy">
             
             <h4>Via linha de comando</h4>
             <p>Crie o arquivo <code class="inline">proxy_var.sh</code> em <code class="inline">/etc/profile.d/</code> com o seguinte conteúdo:</p>
@@ -164,26 +164,6 @@ load_js: load_assets_js
                 </pre>
             </div>
 
-            <h3 id="ipv6">Desativar IPv6</h3>
-            <p>Nos laboratórios de informática usamos apenas IPv4, dessa forma, desativamos o IPv6.</p>
-            <p>Modifique a linha <code class="inline">GRUB_CMDLINE_LINUX="locale=pt_BR"</code> em <code class="inline">/etc/default/grub</code> para:</p>
-            <div class="highlight">
-                <pre>
-                <code>
-                GRUB_CMDLINE_LINUX="locale=pt_BR ipv6.disable=1"
-                </code>
-                </pre>
-            </div>
-            <p>Atualize o Grub:</p>
-            <div class="highlight">
-                <pre>
-                <code>
-                sudo update-grub
-                </code>
-                </pre>
-            </div>
-            <p>Reinicie para testar!</p>
-
             <h3 id="tela">Remoção de proteção e bloqueio de tela&nbsp;<span class="installed">All lab</span></h3>
             <img src="../assets/images/pages/bloqueio.png" alt="Remoção de proteção de tela e bloqueio">
 
@@ -194,7 +174,7 @@ load_js: load_assets_js
             <p>Não é legal deixar históricos de downloads e etc.</p>
 
             <h3 id="horas">Evitando problemas de horas com Dual Boot&nbsp;<span class="installed">All lab</span></h3>
-            <p>Se aplica ao Ubuntu acima de 15.04.</p>
+            <p>Se aplica ao Ubuntu acima da versão 15.04.</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -204,11 +184,11 @@ load_js: load_assets_js
             </div>
 
             <h3 id="restricao">Restringindo o acesso a partições&nbsp;<span class="installed">All lab</span></h3>
-            <p>Isso evita o acesso desenfreado as partições do Windows.</p>
+            <p>Isso evita o acesso desenfreado as partições do Windows, o que pode gerar problemas.</p>
             <div class="highlight">
                 <pre>
                     <code>
-                    sudo nano /var/lib/polkit-1/localauthority/10-vendor.d/com.ubuntu.desktop.pkla
+                    sudo vi /var/lib/polkit-1/localauthority/10-vendor.d/com.ubuntu.desktop.pkla
                     </code>
                 </pre>                
             </div>
@@ -238,7 +218,7 @@ load_js: load_assets_js
             <!--Conteudo aplicacoes-->
             <h2>Aplicações</h2>
             <h3 id="grub">Grub Customizer&nbsp;<span class="installed">All lab</span></h3>
-            <p>Configure o grub para que o pc sempre inicialize automaticamente pelo Windows.</p>
+            <p>Configure o grub para que o computador sempre inicialize automaticamente pelo Windows.</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -377,26 +357,8 @@ load_js: load_assets_js
             </div>
 
             <h3 id="netbeans">Netbeans&nbsp;<span class="installed">All lab</span></h3>
-            <div class="highlight">
-                <pre>
-                    <code>
-                        sudo add-apt-repository ppa:vajdics/netbeans-installer
-                        sudo apt update
-                        sudo apt install netbeans-installer
-                    </code>
-                </pre>                
-            </div>
-
-            <h4>JasperReports Library</h4>
-            <p>Baixe o <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">JasperReports Library</a>. Crie a pasta <code class="inline">portable</code> em <code class="inline">/home/</code> para deixar a biblioteca de forma permanente, por último, adicione a biblioteca no Netbeans para o perfil do <b>Aluno</b>.</p>
-            <p>Não se esqueça das permissões:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo chmod -R 755 /home/portable
-                    </code>
-                </pre>
-            </div>
+            <p>Faça o download do <a href="https://netbeans.apache.org/download/index.html">Netbeans</a>. Atualmente usamos a versão 12.5.</p>
+            <p>Instale com a conta do aluno na pasta <code class="inline">/home/portable</code>. Não precisa ser root.</p>
   
             <h3 id="adicionais">Ubuntu Restricted Extras&nbsp;<span class="installed">All lab</span></h3>
             <div class="highlight">
@@ -439,15 +401,6 @@ load_js: load_assets_js
                 </pre>
             </div>
             <p>Caso o <b>MySQL esteja travavando</b> o desligamento ou reinicialização do Ubuntu, confira se a data/hora está no correta no setup!</p>
-            <p>Em último caso, altere o arquivo <code class="inline">/lib/systemd/system/mysql.service</code>, logo após <code class="inline">Description, adicione</code>:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    After=network.target time-sync.target
-                    Wants=time-sync.target
-                    </code>
-                </pre>
-            </div>
             <p>Escrita de URL.</p>
             <div class="highlight">
                 <pre>
@@ -457,7 +410,7 @@ load_js: load_assets_js
                 </pre>                
             </div>
   
-            <p>A alteração abaixo e necessário para o WordPress, reflete nos links permanentes da plataforma.</p>
+            <p>A alteração abaixo e necessário para o WordPress. A configuração reflete nos links permanentes.</p>
             <p>Abra o arquivo <code class="inline">/etc/apache2/apache2.conf</code> e encontre o trecho abaixo:</p>
             <div class="highlight">
                 <pre>
@@ -491,6 +444,10 @@ load_js: load_assets_js
                 </pre>
             </div>
 
+            <blockquote class="info">
+            Faça isso apenas em localhost e nuncam no ambiente de produção.
+            </blockquote>
+
             <p>Por fim, reinicie o Apache.</p>
             <div class="highlight">
                 <pre>
@@ -513,15 +470,12 @@ load_js: load_assets_js
                     </code>
                 </pre>
             </div>
-            <p>Instalando o Veyon:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo add-apt-repository ppa:veyon/stable
-                    sudo apt-get update
-                    </code>
-                </pre>                
-            </div>
+            <p>Faça o download e instalação da <a href="https://github.com/veyon/veyon/releases/download/v4.5.5/veyon_4.5.5-0-ubuntu-xenial_amd64.deb">versão (4.5.5)</a> para o Ubuntu 16.</p>
+            
+            <blockquote class="info">
+                As orientações abaixo se aplica para replicar as configurações em massa.
+            </blockquote>
+
             <p>Usando <code class="inline">veyon cli</code> para importar o arquivo de <b>configuração.json</b> e <b>chave pública</b>.</p>
             <div class="highlight">
                 <pre>
@@ -537,19 +491,19 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
+
             <h3 id="vscode">VS Code&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://code.visualstudio.com/">VS Code</a>.</p>
 
 
             <h3 id="timefreeze">Time Freeze&nbsp;<span class="installed">All lab</span></h3>
-            <p>Isso é um script para manter o sistema sempre intacto, pelo menos o SO.</p>
+            <p>Isso é um script para manter o ambiente do usuário aluno sempre impecável.</p>
             <p>Primeiro crie um perfil ideal, com favoritos, papel de parede e etc. Com o perfil criado, siga os comandos abaixo:</p>
             <div class="highlight">
                 <pre>
                     <code>
                     sudo mkdir /home/resetuser
-                    sudo cp -R /home/aluno/* /home/resetuser
-                    sudo cp -R /home/aluno/.[a-zA-Z]*
+                    sudo cp -R /home/aluno/. /home/resetuser
                     </code>
                 </pre>
             </div>
@@ -560,14 +514,12 @@ load_js: load_assets_js
                     <code>
                     #!/bin/sh
         
-                    rm
+                    rm -rf /home/aluno
         
                     mkdir /home/aluno
         
-                    cp -R /home/resetuser/* /home/aluno
-        
-                    cp -R /home/resetuser/.[a-zA-Z]* /home/aluno
-        
+                    cp -R /home/resetuser/. /home/aluno
+                
                     chown -R aluno /home/aluno
                     </code>
                 </pre>                
@@ -588,27 +540,28 @@ load_js: load_assets_js
                     <code>
                     [Unit]
                     Description=Restore user Aluno
-                    Defaul
+                    DefaultDependencies=no
                     Before=shutdown.target reboot.target halt.target
-        
+                    
                     [Service]
                     Type=oneshot
                     ExecStart=/sbin/reset-user
-        
+                    
                     [Install]
                     WantedBy=halt.target reboot.target shutdown.target
                     </code>
                 </pre>                
             </div>
             <p>O serviço acima será excutado ao reiniciar ou desligar o sistema.</p>
-            <p>Por último, ativamos o serviço.</p>
+            <p>Por último, precisamos ativar o serviço:</p>
             <div class="highlight">
                 <pre>
                     <code>
-                        #disable
-                        sudo systemctl enable reset-user.service
                         #enable
                         sudo systemctl disable reset-user.service
+                        
+                        #disable
+                        sudo systemctl enable reset-user.service
                     </code>
                 </pre>                
             </div>
