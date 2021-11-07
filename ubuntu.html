@@ -59,7 +59,7 @@ load_js: load_assets_js
                 </pre>
             </div>
 
-            <h3 id="idioma">Atualização do idioma do sistema&nbsp;<span class="installed">All lab</span></h3>
+            <h3 id="idioma">Idioma do sistema&nbsp;<span class="installed">All lab</span></h3>
             <img src="../assets/images/pages/idioma.png" alt="Atualização de idioma do sistema">
 
             <h3 id="atualizacao">Atualização do SO&nbsp;<span class="installed">All lab</span></h3>
@@ -118,10 +118,10 @@ load_js: load_assets_js
             </div>
             <p>Reinicie para ver o resultado e, para mais detalhes sobre essa configuração acesse o <a href="https://wiki.gnome.org/Projects/dconf/SystemAdministrators">Wiki do Gnome</a>.</p>
 
-            <h3 id="proxy">Configuração do Proxy&nbsp;<span class="installed">All lab</span></h3>
+            <h3 id="proxy">Configuração de Proxy&nbsp;<span class="installed">All lab</span></h3>
             <img src="../assets/images/pages/ubuntu-proxy.png" alt="Configuração do Proxy">
             
-            <h4>Via linha de comando</h4>
+            <h4>Pelo terminal</h4>
             <p>Crie o arquivo <code class="inline">proxy_var.sh</code> em <code class="inline">/etc/profile.d/</code> com o seguinte conteúdo:</p>
             <div class="highlight">
                 <pre>
@@ -147,11 +147,9 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                 <code>
-                Acquire{
-                HTTP::proxy "http://192.168.0.6:3128";
-                HTTPS::proxy "http://19
-                FTP::proxy "http://192.168.0.6:3128";
-                }
+                Acquire::http::proxy "http://192.168.0.6:3128/";
+                Acquire::https::proxy "https://192.168.0.6:3128/";
+                Acquire::ftp::proxy "ftp://192.168.0.6:3128/";
                 </code>
                 </pre>
             </div>
@@ -192,10 +190,7 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
-            <p>Na quarta linha do arquivo acima, altere <code class="inline">ResultActive=yes</code> para <code class="inline">ResultActive=auth_admin_keep</code>.</p>
-
-            <h3 id="cert">Certificado do pfSense para navegação&nbsp;<span class="installed">All lab</span></h3>
-            <p>Faça do <a href="https://drive.google.com/drive/folders/1Oc7tfxygvQ6s0IoTgY1sGfhsBtUEKnds?usp=sharing">download do certificado</a> e instale no Chrome e Firefox.</p>
+            <p>Na quarta linha do arquivo altere <code class="inline">ResultActive=yes</code> para <code class="inline">ResultActive=auth_admin_keep</code>.</p>
             <!--Fim conteudo configuracoes-->
 
             <!--Conteudo aplicacoes-->
@@ -321,7 +316,7 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
-            <p>Rode o seguinte comando pra testar:</p>
+            <p>Por último, carregue as configurações para testar.</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -329,7 +324,7 @@ load_js: load_assets_js
                     </code>
                 </pre>
             </div>
-            <p>Após o comando, cheque a saídas das variáveis no terminal digitando no terminal:</p>
+            <p>Verificando o retorno das configurações.</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -463,14 +458,14 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                    USER=aluno
-                    JSON=veyon-cliente.json
-                    CHAVE=professo
-                    TIPO=public
-        
-                    sudo veyon-cli config import /home/$USER/Downloads/Veyon/$JSON
-        
-                    sudo veyon-cli authkeys import professor/$TIPO /home/$USER/Downloads/Veyon/Chaves/$CHAVE
+                        USER=aluno
+                        JSON=veyon-cliente.json
+                        CHAVE=professor_public_key.pem
+                        TIPO=public
+                        
+                        sudo veyon-cli config import /home/$USER/Downloads/Veyon/$JSON
+                        
+                        sudo veyon-cli authkeys import professor/$TIPO /home/$USER/Downloads/Veyon/Chaves/$CHAVE
                     </code>
                 </pre>                
             </div>

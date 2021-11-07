@@ -296,27 +296,29 @@ h1,
 h2,
 h3,
 h4{
-    font-family: 'Arvo', serif;
     line-height: 1;
     margin-bottom: 1rem;
+    font-family: 'Arvo', serif;
 }
-.conteudo-home h1,
-.conteudo h1{
-    font-size: 3.052rem;
+h4{
+    font-family: 'Noto Sans', Georgia, sans-serif;
 }
-.conteudo h2,
-.conteudo h3,
-.conteudo h4{
+h1{
+    font-size: 3.052rem;/*48.83px*/
+}
+h2{
+    font-size: 2.441rem;/*39.06px*/
+}
+h3{
+    font-size: 1.953rem;/*31.25px*/
+}
+h4{
+    font-size: 1.563rem;/*25.00px*/
+}
+h2,
+h3,
+h4{
     margin-top: 1.563rem;
-}
-.conteudo h2{
-    font-size: 2.441rem;
-}
-.conteudo h3{
-    font-size: 1.953rem;
-}
-.conteudo h4{
-    font-size: 1.563rem;
 }
 .conteudo img {
     opacity: 0.8;
