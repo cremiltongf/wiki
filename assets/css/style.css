@@ -30,7 +30,7 @@ table {
     font-size: 1.25rem;
     border-collapse: collapse;
 	width: 100%;
-	margin-bottom: 1.5rem;
+	margin-bottom: 1rem;
     background-color: #1b202d;
 }
 td, th {
@@ -297,11 +297,8 @@ h2,
 h3,
 h4{
     line-height: 1;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     font-family: 'Arvo', serif;
-}
-h4{
-    font-family: 'Noto Sans', Georgia, sans-serif;
 }
 h1{
     font-size: 3.052rem;/*48.83px*/
@@ -318,11 +315,11 @@ h4{
 h2,
 h3,
 h4{
-    margin-top: 1.563rem;
+    margin-top: 2rem;
 }
 .conteudo img {
     opacity: 0.8;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 .conteudo img:hover {
     opacity: 1.0;
