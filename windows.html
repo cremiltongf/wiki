@@ -29,7 +29,7 @@ load_js: load_assets_js
             <!--Conteudo instalacao-->
             <h2>Instalação</h2>
             <blockquote class="info">
-            As configurações se aplicam ao Windows Professional ou 10 Pro - 64bits.
+            As configurações se aplicam ao Windows 7 Professional e Windows 10 Pro, ambos 64bits.
             </blockquote>
 
             <h3 id="nome-grupo">Nome e grupo&nbsp;<span class="installed">All lab</span></h3>
@@ -206,61 +206,18 @@ load_js: load_assets_js
 
             <h3 id="opcoespastas">Opções de pastas</h3>
             <img src="../assets/images/pages/opcoes-de-pastas.png" alt="Oções de pastas">
-
-            <h3 id="var">Variáveis do Sistema&nbsp;<span class="installed">All lab</span></h3>
-            <blockquote class="info">
-            Crie as variáveis para a última versão do Java JDK instalado. No meu caso, possuo duas instalações, o JDK7 por causa do IReport, e o JDK 8 para os programas que necessitam de uma versão mais recente.
-            </blockquote>
-
-            <h4>Variáveis via Propriedades do Sistema</h4>
-            <p>Acesse as <b>Propriedades do Sistema</b> para configurar as variáveis. Neste exemplo, estou configurando o <b>JDK 1.8.0_191</b>:</p>
-            <img src="../assets/images/pages/variavel-java.png" alt="Propriedades do Sistema">
-            <div class="highlight">
-                <pre>
-                    <code>
-                    JAVA_HOME
-                    C:\Program Files\Java\jdk1.8.0_191
-                    
-                    CLASSPATH
-                    .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\htmlconverter.jar;%JAVA_HOME%\jre\lib;%JAVA_HOME%\jre\lib\rt.jar
-                    </code>
-                </pre>                
-            </div>
-
-            <p>A variável <code class="inline">Path</code> já existe no sistema, então apenas adicione o valor abaixo ao final:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    Path
-                    ;%JAVA_HOME%\bin
-                    </code>
-                </pre>                
-            </div>
-            <p>No Windows 10:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    Path
-                    %JAVA_HOME%\bin
-                    </code>
-                </pre>
-            </div>
-
-            <h4>Variáveis via cmd</h4>
-            <blockquote class="info">
-                Precisa ser administrador.
-            </blockquote>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    setx JAVA_HOME "C:\Program Files\Java\jdk1.8.0_191" /m
-                    setx CLASSPATH "%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\htmlconverter.jar;%JAVA_HOME%\jre\lib;%JAVA_HOME%\jre\lib\rt.jar" /m
-                    setx Path "%Path%;%JAVA_HOME%\bin" /m
-                    </code>
-                </pre>                 
-            </div>
                        
             <h2>Para Windows 10</h2>
+            <h3 id="fastboot">Inicialização rápida</h3>
+            <p>Esse ajuste é necessário para garantir o desligamento completo do computador.</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    powercfg.exe /hibernate off
+                    </code>
+                </pre>                                
+            </div>            
+
             <h3 id="xbox">Desativar Barra de jogos&nbsp;<span class="installed">All lab</span></h3>
             <img src="../assets/images/pages/barra-jogos.png" alt="Desativar barra de jogos">
          
@@ -278,21 +235,6 @@ load_js: load_assets_js
             <img src="../assets/images/pages/pastas-iniciar.png" alt="Exibição de pastas do menu iniciar">
 
             <!--Fim conteudo configuracoes-->
-
-            <!-- Clone -->
-            <h2>Clone Windows</h2>
-
-            <!--Conteudo clone-->
-            <h3 id="autocad">Ativar o AutoCAD</h3>
-            <p>Execute o <code class="inline">AutoCAD</code> (necessário internet) e siga os passos que aparecer na tela e, informe a <a href="https://docs.google.com/spreadsheets/d/1RaX8ubdo7RuoA8qhwZAWh6ZgoTQsC_E37R8E-21wkHQ/edit#gid=0">chave de ativação</a> caso solicitado.</p>
-            <p>Em caso de erro na ativação, remover a pasta <code class="inline">FLEXnet</code> que fica localizado em <code class="inline">C:\ProgramData</code> e, execute o programa novamente.</p>
-
-            <h3 id="dominio">Adicionar o pc no domínio</h3>
-            <p>Altere o <b>Nome do Computador</b> e o <b>Grupo de trabalho</b> conforme o <a href="#nome-grupo">laboratório</a>.</p>
-
-            <h3 id="timefreeze">Ativar o Toolwiz Time Freeze</h3>
-            <p>Por último, ative o Toolwiz Time Freeze.</p>
-            <!-- Fim clone-->
 
             <!--Conteudo aplicacoes-->
             <h2>Aplicações</h2>
@@ -651,6 +593,60 @@ load_js: load_assets_js
             <h3 id="jdk8">Java JDK 8&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">JDK 8</a>.</p>
 
+            <h3 id="var">Variáveis de Java para o SO&nbsp;<span class="installed">All lab</span></h3>
+            <blockquote class="info">
+            Crie as variáveis para a última versão do Java JDK instalado. No meu caso, possuo duas instalações, o JDK7 por causa do IReport, e o JDK 8 para os programas que necessitam de uma versão mais recente.
+            </blockquote>
+
+            <h4>Variáveis via Propriedades do Sistema</h4>
+            <p>Acesse as <b>Propriedades do Sistema</b> para configurar as variáveis. Neste exemplo, estou configurando o <b>JDK 1.8.0_191</b>:</p>
+            <img src="../assets/images/pages/variavel-java.png" alt="Propriedades do Sistema">
+            <div class="highlight">
+                <pre>
+                    <code>
+                    JAVA_HOME
+                    C:\Program Files\Java\jdk1.8.0_191
+                    
+                    CLASSPATH
+                    .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\htmlconverter.jar;%JAVA_HOME%\jre\lib;%JAVA_HOME%\jre\lib\rt.jar
+                    </code>
+                </pre>                
+            </div>
+
+            <p>A variável <code class="inline">Path</code> já existe no sistema, então apenas adicione o valor abaixo.</p>
+            <p>Windows 7:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    Path
+                    ;%JAVA_HOME%\bin
+                    </code>
+                </pre>                
+            </div>
+            <p>Windows 10:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    Path
+                    %JAVA_HOME%\bin
+                    </code>
+                </pre>
+            </div>
+
+            <h4>Via cmd</h4>
+            <blockquote class="info">
+                Precisa ser administrador.
+            </blockquote>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    setx JAVA_HOME "C:\Program Files\Java\jdk1.8.0_191" /m
+                    setx CLASSPATH "%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\htmlconverter.jar;%JAVA_HOME%\jre\lib;%JAVA_HOME%\jre\lib\rt.jar" /m
+                    setx Path "%Path%;%JAVA_HOME%\bin" /m
+                    </code>
+                </pre>                 
+            </div>            
+
             <h3 id="lego">Lego Mindstorms Education EV3&nbsp;<span class="notinstalled">lab1</span><span class="notinstalled">lab2</span><span class="notinstalled">lab3</span><span class="installed">lab4</span><span class="notinstalled">lab5</span></h3>
             <p>Faça o download do <a href="https://www.lego.com/en-us/mindstorms/downloads/download-software">Lego Mindstorms Education EV3</a>.</p>
             
@@ -753,10 +749,7 @@ load_js: load_assets_js
                     </code>
                 </pre>                  
             </div>              
-            
-            <h3 id="notepad">Notepad++&nbsp;<span class="installed">All lab</span></h3>
-            <p>Faça o download do <a href="https://notepad-plus-plus.org/">Notepad++</a>.</p>
-            
+                        
             <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
@@ -862,6 +855,9 @@ load_js: load_assets_js
             <h3 id="r">R - Estatísticas e Gráficos&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://cran.r-project.org/mirrors.html">R - Estatísticas e Gráficos</a>. Instale apenas a versão x64.</p>
 
+            <h3 id="revit">Revit 2021&nbsp;<span class="installed">All lab</span></h3>
+            <p>Faça o download do <a href="https://www.autodesk.com/education/free-software/autocad">Revit 2021</a>.</p>
+
             <h3 id="scratch">Scratch&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://scratch.mit.edu/download">Scratch</a>.</p>
             
@@ -916,15 +912,7 @@ load_js: load_assets_js
 
             <h3 id="freeze">Toolwiz Time Freeze&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do  <a href="http://www.toolwiz.com/lead/toolwiz_time_freeze.php">Toolwiz Time Freeze</a>.</p>
-            <p>Desativar os seguintes serviços: <b>Desfragmentador ou Otimizador de Discos</b>, <b>Backup do Windows</b> e <a href="#reparo">Reparo automático</a>.</p>
-            <p>No Windows 8/10, desative a inicialização rápida:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    powercfg.exe /hibernate off
-                    </code>
-                </pre>                                
-            </div>
+            <p>Para o bom funcionamento do congelamento do SO, é necessário desativar os seguintes serviços: <b>Desfragmentador ou Otimizador de Discos/Unidades</b>, <b>Backup do Windows</b>, <a href="#reparo">Reparo automático</a> e <a href="#fastboot">Inicialização rápida</a> (Windows 10).</p>
 
             <h3 id="veyon">Veyon&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://veyon.io/download/">Veyon</a> e instale como cliente.</p>
@@ -986,6 +974,26 @@ load_js: load_assets_js
             </div>
 
             <!--Fim conteudo aplicacoes-->
+
+            <!-- Clone -->
+            <h2>Clone Windows</h2>
+
+            <!--Conteudo clone-->
+            <h3 id="dominio">Adicionar o pc no domínio</h3>
+            <p>Altere o <b>Nome do Computador</b> e o <b>Grupo de trabalho</b> conforme o <a href="#nome-grupo">laboratório</a>.</p>
+
+            <h3 id="atautocad">Ativar o AutoCAD</h3>           
+            <p>Execute o <code class="inline">AutoCAD</code> (necessário internet) e siga os passos que aparecer na tela e, informe a <a href="https://docs.google.com/spreadsheets/d/1RaX8ubdo7RuoA8qhwZAWh6ZgoTQsC_E37R8E-21wkHQ/edit#gid=0">chave de ativação</a> caso solicitado.</p>
+            <p>Em caso de erro na ativação, remover a pasta <code class="inline">FLEXnet</code> que fica localizado em <code class="inline">C:\ProgramData</code> e, execute o programa novamente.</p>
+
+            <h3 id="atrevit">Ativar o Revit</h3>
+            <p>Execute o <code class="inline">Revit</code> (necessário internet) e siga os passos que aparecer na tela e, informe a <a href="https://docs.google.com/spreadsheets/d/1RaX8ubdo7RuoA8qhwZAWh6ZgoTQsC_E37R8E-21wkHQ/edit#gid=0">chave de ativação</a> caso solicitado.</p>
+            <p>Em caso de erro na ativação, remover a pasta <code class="inline">FLEXnet</code> que fica localizado em <code class="inline">C:\ProgramData</code> e, execute o programa novamente.</p>            
+
+            <h3 id="timefreeze">Ativar o Toolwiz Time Freeze</h3>
+            <p>Por último, ative o Toolwiz Time Freeze.</p>
+            <!-- Fim clone-->
+
         </article>
     </main>
     {% include footer.html %}
