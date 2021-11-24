@@ -27,7 +27,7 @@ load_js: load_assets_js
             <h1>Imagem Ubuntu</h1>
             
             <blockquote class="info">
-            As configurações se aplicam ao Ubuntu 16 64bits LTS.
+            As configurações foram testados no Ubuntu 16.04 64bits LTS e Ubuntu 20.04 64bits LTS.
             </blockquote>
 
             <!--Conteudo instalacao-->
@@ -74,9 +74,13 @@ load_js: load_assets_js
             </div>
 
             <h3 id="wallpaper">Papel de parede padrão IFPR&nbsp;<span class="installed">All lab</span></h3>
-            <p>Faça o <a href="https://drive.google.com/drive/folders/1mFNMKCBx6tvJaPfzSgax-0t9ZrwJIsPn?usp=sharing">download</a>.</p>
+            <p>Faça o <a href="https://drive.google.com/drive/folders/1mFNMKCBx6tvJaPfzSgax-0t9ZrwJIsPn?usp=sharing">download do wallpaper</a>.</p>
 
-            <h4>Automatizando</h4>
+            <h4>Defininfo pelo terminal</h4>
+            <blockquote class="info">
+                Prefiro a configuração via dconf, pois o processo se atualização em massa fica bem mais simplificado.
+            </blockquote>
+
             <p>Para esse processo, usaremos o <code class="inline">dconf</code>, conforme orientação abaixo.</p>
             <p>Crie o arquivo <code class="inline">user</code> em <code class="inline">/etc/dconf/profile</code> e adicione:</p>
             <div class="highlight">
@@ -88,6 +92,7 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
+
             <p>Crie o arquivo <code class="inline">00_tema_settings</code> em <code class="inline">/etc/dconf/db/tema.d</code> e adicione:</p>
             <div class="highlight">
                 <pre>
@@ -116,7 +121,7 @@ load_js: load_assets_js
                 </code>
                 </pre>
             </div>
-            <p>Reinicie para ver o resultado e, para mais detalhes sobre essa configuração acesse o <a href="https://wiki.gnome.org/Projects/dconf/SystemAdministrators">Wiki do Gnome</a>.</p>
+            <p>Para mais detalhes sobre essa configuração acesse o <a href="https://wiki.gnome.org/Projects/dconf/SystemAdministrators">Wiki do Gnome</a>.</p>
 
             <h3 id="proxy">Configuração de Proxy&nbsp;<span class="installed">All lab</span></h3>
             <img src="../assets/images/pages/ubuntu-proxy.png" alt="Configuração do Proxy">
@@ -210,14 +215,18 @@ load_js: load_assets_js
             </div>
 
             <h3 id="unity-tool">Unity Tweak Tool&nbsp;<span class="installed">All lab</span></h3>
+            <p>Usamos essa ferramenta para remover animações da interface.</p>
             <div class="highlight">
                 <pre>
                     <code>
+                    #Ubuntu16
                     sudo apt-get install unity-tweak-tool
+
+                    #Ubuntu20
+                    sudo apt-get install gnome-tweak-tool
                     </code>
                 </pre>                
             </div>
-            <p>Serve para optimizar a interface do Ubuntu.</p>
 
             <h3 id="7zip">7-zip&nbsp;<span class="installed">All lab</span></h3>
             <div class="highlight">
@@ -297,7 +306,7 @@ load_js: load_assets_js
                 </pre>                
             </div>
   
-            <p>Criamos o link simbólico:</p>
+            <p>Criando o link simbólico:</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -326,7 +335,7 @@ load_js: load_assets_js
                     </code>
                 </pre>
             </div>
-            <p>Verificando o retorno das configurações.</p>
+            <p>Verificando o retorno das variáveis.</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -372,6 +381,7 @@ load_js: load_assets_js
   
 
             <h3 id="lamp">LAMP&nbsp;<span class="installed">All lab</span></h3>
+            <h4>Para o Ubuntu 16.04</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -380,7 +390,34 @@ load_js: load_assets_js
                     </code>
                 </pre>
             </div>
-            <p>Caso o <b>MySQL esteja travavando o desligamento ou reinicialização</b> do Ubuntu, confira se a data/hora está no correta no setup!</p>
+
+            <h4>Para o Ubuntu 20.04</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get install apache2
+                    sudo apt-get install mysql-server
+                    sudo apt install php libapache2-mod-php php-mysql
+                    </code>
+                </pre>
+            </div>
+
+            <p>Definindo uma senha:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                        #acesse o mysql
+                        sudo mysql
+                        
+                        #logado no mysql
+                        ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'SenhaAqui';
+                        flush privileges;
+                        exit
+                    </code>
+                </pre>
+            </div>
+
+            <h4>Demais configurações</h4>
             <p>Habilitando escrita de URL.</p>
             <div class="highlight">
                 <pre>
@@ -390,7 +427,7 @@ load_js: load_assets_js
                 </pre>                
             </div>
   
-            <p>A alteração abaixo e necessário para o WordPress. A configuração reflete nos links permanentes.</p>
+            <p>A alteração abaixo e necessário para o WordPress, pois a configuração reflete nos links permanentes.</p>
             <p>Abra o arquivo <code class="inline">/etc/apache2/apache2.conf</code> e encontre o trecho abaixo:</p>
             <div class="highlight">
                 <pre>
@@ -415,7 +452,7 @@ load_js: load_assets_js
                 </pre>
             </div>
 
-            <p>Conceder permissão total para a pasta html.</p>
+            <p>Permissão total para a pasta html.</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -425,17 +462,8 @@ load_js: load_assets_js
             </div>
 
             <blockquote class="info">
-            Faça isso apenas em localhost e nunca em ambiente de produção.
+            Não faça isso em ambiente de produção.
             </blockquote>
-
-            <p>Por fim, reinicie o Apache.</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo service apache2 restart
-                    </code>
-                </pre>                
-            </div>
   
             <h3 id="veyon">Veyon&nbsp;<span class="installed">All lab</span></h3>
             <p>Mais informações, acesse a página do software <a href="https://veyon.io/">Veyon</a>.</p>
@@ -443,17 +471,30 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                        sudo apt-get install g++ make cmake qtbase5-dev qtbase5-dev-tools qttools5-dev qttools5-dev-tools \
-                        xorg-dev libxtst-dev libjpeg-dev zlib1g-dev libssl-dev libpam0g-dev \
-                        libprocps-dev liblzo2-dev libqca2-dev libqca-qt5-2-dev libldap2-dev \
-                        libsasl2-dev
+                        sudo apt install g++ libc6-dev make cmake qtbase5-dev qtbase5-private-dev
+                        sudo apt install qtbase5-dev-tools qttools5-dev qttools5-dev-tools
+                        sudo apt install qtdeclarative5-dev qtquickcontrols2-5-dev libfakekey-dev
+                        sudo apt install xorg-dev libxtst-dev libjpeg-dev zlib1g-dev libssl-dev libpam0g-dev
+                        sudo apt install libprocps-dev liblzo2-dev libqca-qt5-2-dev libldap2-dev
+                        sudo apt install libsasl2-dev
                     </code>
                 </pre>
             </div>
-            <p>Faça o download e instalação da <a href="https://github.com/veyon/veyon/releases/download/v4.5.5/veyon_4.5.5-0-ubuntu-xenial_amd64.deb">versão (4.5.5)</a> para o Ubuntu 16.</p>
+
+            <p>Faça o download e instalação da <a href="https://github.com/veyon/veyon/releases/download/v4.5.5/veyon_4.5.5-0-ubuntu-xenial_amd64.deb">versão (4.5.5)</a> para o Ubuntu 16.04.</p>
+            
+            <p>Para o Ubuntu 20.04:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                        sudo apt install veyon-master
+                        sudo apt install veyon-configurator
+                    </code>
+                </pre>
+            </div>
             
             <blockquote class="info">
-                As orientações abaixo se aplica para replicar as configurações em massa.
+                As orientações abaixo se aplicam para configuração em massa.
             </blockquote>
 
             <p>Usando <code class="inline">veyon cli</code> para importar o arquivo de <b>configuração.json</b> e <b>chave pública</b>.</p>
@@ -537,10 +578,10 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                        #enable
+                        #para ativar
                         sudo systemctl disable reset-user.service
                         
-                        #disable
+                        #para desativar
                         sudo systemctl enable reset-user.service
                     </code>
                 </pre>                
