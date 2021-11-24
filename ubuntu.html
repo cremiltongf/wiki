@@ -142,6 +142,16 @@ load_js: load_assets_js
                 </code>
                 </pre>
             </div>
+            
+            <p>Para testar as variáveis de ambiente, execute no terminal:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                        source /etc/profile.d/proxy_var.sh
+                    </code>
+                </pre>
+            </div>
+
             <p>Para o <code class="inline">apt-get</code>, crie um arquivo <code class="inline">apt.conf</code> 
             em <code class="inline">/etc/apt/apt.conf.d/</code>, como o seguinte código</p>
             <div class="highlight">
@@ -151,14 +161,6 @@ load_js: load_assets_js
                 Acquire::https::proxy "https://192.168.0.6:3128/";
                 Acquire::ftp::proxy "ftp://192.168.0.6:3128/";
                 </code>
-                </pre>
-            </div>
-            <p>Para testar as variáveis de ambiente, execute no terminal:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                        source /etc/profile.d/proxy_var.sh
-                    </code>
                 </pre>
             </div>
 
