@@ -92,40 +92,7 @@ load_js: load_assets_js
                     </code>
                 </pre>
             </div>
-            <p>Após esses passos, todos os arquivos estarão visíveis novamente, prossiga com a exclusão das pastas/arquivos suspeitas(vírus) e pronto.</p>
 
-            <blockquote class="info">
-                Aqui não mencionei os nomes/arquivos infectados, pois varia bastante. A melhor recomendação e excluir os arquivos estranhos.
-                Esse método também funciona quando os arquivos apenas desaparecem(não tem atalhos), quando isso acontece, os arquivos
-                apenas são movidos para uma única pasta no próprio dispositivo infectado, bastando apenas reorganizar os arquivos
-                após os procedimentos.
-            </blockquote>
-
-            <h2 id="disco">Solução para Windows 8 ou 10 com disco em 100%</h2>
-            <p>Desative os seguintes serviços em <code class="inline">services.msc</code>:</p>
-            <p>Pare e desative o serviço <b>Superfetch</b>;<br>
-            Pare e desative o serviço <b>Windows Search</b>;<br>
-            Pare e desative o serviço de <b>Transferência Inteligente</b>. Ainda em propriedade desse serviço, na aba recuperação, na primeira/segunda/posteriores falhas, altere para não executar nenhuma ação e, em Zerar contagem após falhas, altere o valor para 0;<br>
-            Pare e desabilite o <b>Schedule do Windows</b>;<br>
-            </p>
-
-            <p>Verifique se o uso do disco normalizou, em caso de negativa, prossiga para a última etapa;</p>
-
-            <p>
-            Acesse o <code class="inline">regedit</code>, siga o caminho abaixo:
-            </p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    HKEY_LOCAL_MACHINE -> SYSTEM -> CurrentControlSet -> Services -> Schedule
-                    </code>
-                </pre>
-            </div>
-            <p>
-            Altere o valor do registro <b>Start</b> de <b>2</b> para <b>4</b>.<br>
-            Reinicie o computador.<br>
-            Com isto, todas as tarefas agendadas do Windows não serão executadas e o consumo normalmente volta ao normal.
-            </p>
             <h2 id="servicos">Desativando serviços via cmd</h2>
             <p>Alguns exemplos de uso:</p>
             <div class="highlight">
@@ -152,48 +119,7 @@ load_js: load_assets_js
                     </code>
                 </pre>
             </div>
-            <h2 id="fast-init">Desativar inicialização rápida no windows 10</h2>
-            <p>Pode ser realizado alterando o registro através do cmd:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    powercfg.exe /hibernate off
-                    </code>
-                </pre> 
-            </div>               
             <!--Fim conteudo windows-->
-
-            <!--Diskpart-->
-            <h2 id="diskpart">Removendo partições do Windows 10</h2>
-            <p>Execute os comandos abaixo como administrador:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    #acessa o servico
-                    diskpart
-        
-                    #Listando os discos
-                    list disk
-                    
-                    #selecionando o disco, onde N e o numero do disco
-                    select disk N
-                    
-                    #Listando particoes do disco
-                    list partition
-                    
-                    #Selecione a particao, onde X e o numero da particao
-                    select partition X
-                    
-                    #Removendo a particao selecionada
-                    delete partition override
-                    </code>
-                </pre>
-            </div>             
-            <p>Repita o processo para deletar outras partições.</p>
-            <blockquote class="info">
-            Seja cuidadoso ao usar os comandos de exclusão.
-            </blockquote>
-            <!--Fim Diskpart-->
 
             <!--Conteudo Ubuntu-->
             <h2>Ubuntu</h2>
