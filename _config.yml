@@ -29,7 +29,7 @@ twitter_username: cremiltongf
 github_username:  cremiltongf
 
 # Build settings
-theme: wiki
+theme: minima
 plugins:
   - jekyll-feed
 

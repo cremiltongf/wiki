@@ -5,3 +5,5 @@ _site
 vendor
 .bundle
 bin
+Gemfile
+Gemfile.lock
