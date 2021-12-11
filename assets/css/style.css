@@ -207,6 +207,7 @@ a.item-nav{
  */
 .menu{
     font-size: 1.25rem;
+    min-height: 100vh;
 }
 .menu ul{
     list-style: none;
@@ -226,12 +227,10 @@ a.item-nav{
 .intro-ul a:hover{
     background-color: #0695cf;
     color: #e1e1e1;
-}
-.intro-ul a,
-.intro-ul a:hover{
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-	transition: all 0.25s ease-in-out;
+    border-radius: .375rem;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
 }
 @media (max-width: 832px){
     .menu{
@@ -257,6 +256,7 @@ a.item-nav{
     max-width: 990px;
     margin: 0 auto 0;
     padding: 10px;
+    border-radius: .375rem;
 }
 a.btn-menu{
     display: block;
@@ -346,11 +346,15 @@ h4{
 .notinstalled{
 	background-color: #ff7979;
 }
+.installed,
+.notinstalled{
+    display: inline-block;
+}
 .info{
     background: #36425c;
     padding: 1.25rem;
     color: #e1e1e1;
-    border-radius: .625rem;
+    border-radius: .375rem;
     border: 1px solid #384560;
 }
 .highlight{
@@ -359,6 +363,7 @@ h4{
     padding: 0 10px;
     background-color: #2d2d2d;
     border: 1px solid #1b202d;
+    border-radius: .375rem;
 }
 .highlight pre{
     white-space: pre-line;
@@ -383,12 +388,13 @@ h4{
  */
 .footer{
     max-width: 990px;
-    margin: 2.5rem auto 0;
+    margin: 2.5rem auto 1rem;
     padding: 10px;
     display: flex;
-    height: 60px;
+    flex-wrap: wrap;
     justify-content: center;
     font-size: 1.25rem;
+    line-height: 1.4;
 }
 .footer ul{
     display: flex;
@@ -414,6 +420,14 @@ svg{
 }
 svg:hover{
     fill: #ff9519;
+}
+@media(max-width: 500px){
+    .copy{
+        text-align: center;
+    }
+    .footer p{
+        margin-bottom: 1rem;
+    }
 }
 
 /*
