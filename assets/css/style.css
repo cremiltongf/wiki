@@ -428,7 +428,8 @@ svg:hover{
 /*
  * top 
  */
-.topo{
+.btn-topo{
+    display: none;
 	outline: none;
     position: fixed;
     right: 1.75rem;
@@ -438,21 +439,16 @@ svg:hover{
 	z-index: 9;
 	text-indent: -9999rem;
     background: url(../../assets/images/topo.png) no-repeat center center;
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-	transition: all 0.25s ease-in-out;
-	border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
 }
-.topo:hover{
+.btn-topo:hover{
 	background-color: #1b202d;
-    -webkit-transition: all 0.25s ease-in-out;
-    -moz-transition: all 0.25s ease-in-out;
-    -o-transition: all 0.25s ease-in-out;
-	transition: all 0.25s ease-in-out;
 }
 @media(max-width: 768px){
-	.topo{
+	.btn-topo{
 		right: .5rem;
 		bottom: .5rem;
 		height: 3.125rem;

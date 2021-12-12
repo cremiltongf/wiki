@@ -1,4 +1,5 @@
 window.addEventListener('load', function(){
+    //sumario mobile
     var toogleMenu = document.querySelectorAll('.toggle-menu');
     var menuContainer    = document.querySelector('.menu-responsivo');
 
@@ -6,9 +7,8 @@ window.addEventListener('load', function(){
         toogleMenu[i].addEventListener('click', menuAction);
     }
 
-    // escape
     document.addEventListener('keyup', function(e){
-        if(e.keyCode == 27) {
+        if(e.key == 27){
             if(menuContainer.classList.contains('show-menu')){
                 menuAction();
             }
@@ -21,6 +21,17 @@ window.addEventListener('load', function(){
         }
         else {
             menuContainer.classList.add('show-menu');
+        }
+    }
+
+    //button top
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("btn-topo").style.display = "block";
+        } else {
+            document.getElementById("btn-topo").style.display = "none";
         }
     }
 });
