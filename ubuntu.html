@@ -202,26 +202,41 @@ load_js: load_assets_js
             <!--Conteudo aplicacoes-->
             <h2>Aplicações</h2>
             <h3 id="grub">Grub Customizer&nbsp;<span class="installed">All lab</span></h3>
-            <p>Configure o grub para que o computador sempre inicialize automaticamente pelo Windows.</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo add-apt-repository ppa:danielrichter2007/grub-customizer
-                    sudo apt-get update
-                    sudo apt-get install grub-customizer
-                    </code>
-                </pre>                
-            </div>
-
-            <h3 id="unity-tool">Unity Tweak Tool&nbsp;<span class="installed">All lab</span></h3>
-            <p>Usamos essa ferramenta para remover animações da interface.</p>
+            <p>Configure o grub para que o computador sempre inicialize pelo Windows.</p>
+            <h4>Para o Ubuntu 16.04 LTS</h4>
             <div class="highlight">
                 <pre>
                     <code>
                     #Ubuntu16
-                    sudo apt-get install unity-tweak-tool
+                    sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+                    sudo apt-get update
+                    sudo apt-get install grub-customizer
+                    </code>
+                </pre>         
+            </div>
+            <h4>Para o Ubuntu 20.04 LTS</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get install grub-customizer
+                    </code>
+                </pre>         
+            </div>
 
-                    #Ubuntu20
+            <h3 id="unity-tool">Tweak Tool&nbsp;<span class="installed">All lab</span></h3>
+            <p>Usamos essa ferramenta para remover animações da interface.</p>
+            <h4>Para Ubuntu 16.04 LTS</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get install unity-tweak-tool
+                    </code>
+                </pre>                
+            </div>
+            <h4>Para Ubuntu 20.04 LTS</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
                     sudo apt-get install gnome-tweak-tool
                     </code>
                 </pre>                
@@ -385,7 +400,6 @@ load_js: load_assets_js
                 <pre>
                     <code>
                     sudo apt-get install lamp-server^
-                    sudo apt-get install phpmyadmin
                     </code>
                 </pre>
             </div>
@@ -416,8 +430,16 @@ load_js: load_assets_js
                 </pre>
             </div>
 
-            <h4>Demais configurações</h4>
-            <p>Habilitando escrita de URL.</p>
+            <h4>PhpMyAdmin</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get install phpmyadmin
+                    </code>
+                </pre>
+            </div>
+
+            <h4>Habilitando escrita de URL</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -426,7 +448,7 @@ load_js: load_assets_js
                 </pre>                
             </div>
   
-            <p>A alteração abaixo e necessário para o WordPress, pois a configuração reflete nos links permanentes.</p>
+            <h4>Permitindo o acesso do host na LAN</h4>
             <p>Abra o arquivo <code class="inline">/etc/apache2/apache2.conf</code> e encontre o trecho abaixo:</p>
             <div class="highlight">
                 <pre>
@@ -451,7 +473,7 @@ load_js: load_assets_js
                 </pre>
             </div>
 
-            <p>Permissão total para a pasta html.</p>
+            <h4>Permissões para diretório de desenvolvimento</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -479,10 +501,11 @@ load_js: load_assets_js
                     </code>
                 </pre>
             </div>
-
-            <p>Faça o download e instalação da <a href="https://github.com/veyon/veyon/releases/download/v4.5.5/veyon_4.5.5-0-ubuntu-xenial_amd64.deb">versão (4.5.5)</a> para o Ubuntu 16.04.</p>
             
-            <p>Para o Ubuntu 20.04:</p>
+            <h4>Para o Ubuntu 16.04 LTS</h4>
+            <p>Faça o download e instalação do <a href="https://github.com/veyon/veyon/releases/download/v4.5.5/veyon_4.5.5-0-ubuntu-xenial_amd64.deb">Veyon (4.5.5)</a> para o Ubuntu 16.04.</p>
+            
+            <p>Para o Ubuntu 20.04 LTS</p>
             <div class="highlight">
                 <pre>
                     <code>
