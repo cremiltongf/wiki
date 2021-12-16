@@ -604,18 +604,25 @@ load_js: load_assets_js
                 </pre>                
             </div>
             <p>O serviço acima será excutado ao reiniciar ou desligar o sistema.</p>
-            <p>Por último, precisamos ativar o serviço:</p>
+
+            <h4>Ativando o serviço</h4>
             <div class="highlight">
                 <pre>
                     <code>
-                        #para ativar
-                        sudo systemctl disable reset-user.service
-                        
-                        #para desativar
                         sudo systemctl enable reset-user.service
                     </code>
                 </pre>                
             </div>
+
+            <h4>Desativando o serviço</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                        sudo systemctl disable reset-user.service
+                    </code>
+                </pre>                
+            </div>
+
             <!--Fim conteudo aplicacoes-->
 
             <!-- Clone -->
