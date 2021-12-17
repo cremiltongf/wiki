@@ -117,33 +117,43 @@ load_js: load_assets_js
 
             <h3 id="reparo">Reparo automático&nbsp;<span class="installed">All lab</span></h3>
 
-            <p>Desativando:</p>
+            <h4>Desativar no Windows 7</h4>
             <div class="highlight">
                 <pre>
                     <code>
-                    #windows7
                     bcdedit /set {default} bootstatuspolicy ignoreallfailures
+                    </code>
+                </pre>                
+            </div>
 
-                    #windows10
+            <h4>Desativar no Windows 10</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
                     bcdedit /set recoveryenabled NO
                     </code>
                 </pre>                
             </div>
 
-            <p>Ativando:</p>
+            <h4>Ativar no Windows 7</h4>
             <div class="highlight">
                 <pre>
                     <code>
-                    #windows7
                     bcdedit /set {default} bootstatuspolicy displayallfailures
+                    </code>
+                </pre>                
+            </div>
 
-                    #windows10
+            <h4>Ativar no Windows 10</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
                     bcdedit /set recoveryenabled YES
                     </code>
                 </pre>                
             </div>
 
-            <p>Isso evita o reparo automático do SO em caso de perda de energia. O que pode quebrar o SO.</p>
+            <blockquote class="info">Configuração para evitar o reparo automático do SO.</blockquote>
 
             <h3 id="servicos">Serviços&nbsp;<span class="installed">All lab</span></h3>
             <img src="../assets/images/pages/services.png" alt="Serviços">
@@ -187,18 +197,7 @@ load_js: load_assets_js
                 </tr>
             </table>
 
-            <p>Desativando o Desfragmentador ou Otimizador de Discos pelo <code class="inline">cmd</code> no Windows 10:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Dfrg\BootOptimizeFunction" /V Enable /T REG_SZ /D N /F
-                    REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Dfrg\BootOptimizeFunction" /V OptimizeComplete /T REG_SZ /D No /F
-                    REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\OptimalLayout" /V EnableAutoLayout /T REG_DWORD /D 0 /F
-                    </code>
-                </pre>                
-            </div>
-
-            <h3>Serviços via cmd</h3>
+            <h4>Gerenciando serviços pelo CMD</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -211,7 +210,7 @@ load_js: load_assets_js
             <h3 id="opcoespastas">Opções de pastas</h3>
             <img src="../assets/images/pages/opcoes-de-pastas.png" alt="Oções de pastas">
                        
-            <h2>Para Windows 10</h2>
+            <h2>Configurações para Windows 10</h2>
             <h3 id="fastboot">Inicialização rápida</h3>
             <p>Esse ajuste é necessário para garantir o desligamento completo do computador.</p>
             <div class="highlight">
@@ -270,15 +269,15 @@ load_js: load_assets_js
             <blockquote class="info">
                 O programa foi descontinuado pela Adobe.
             </blockquote>
-            <p>Faça o download do <a href="https://get.adobe.com/br/flashplayer/">Adobe Flash Player</a>.</p>
                         
             <h3 id="astah">Astah Community&nbsp;<span class="installed">All lab</span></h3>
-            <p>Oficialmente descontinuado. Faça o download da última versão do instalador disponibilizado na <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">pasta</a>. Esse programa requer a instalação do Java SDK.</p>
+            <p>O software foi descontinuado, mas usamos a última versão Community disponibilizado pela desenvolvedora.</p>
+            <p>Faça o download da última versão do instalador disponibilizado na <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">pasta</a>. Esse programa requer a instalação do Java SDK.</p>
             
             <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
-                    <code class="language-bash">
+                    <code>
                     "astah-community-7_2_0-1ff236-jre-64bit-setup.exe" /verysilent
                     </code>
                 </pre>                   
@@ -341,7 +340,7 @@ load_js: load_assets_js
             <h4>Silent Uninstall</h4>
             <div class="highlight">
                 <pre>
-                    <code class="language-bash">
+                    <code>
                     "C:\Program Files\Cisco Packet Tracer 7.1.1\unins000" /verysilent
                     </code>
                 </pre>                  
@@ -415,7 +414,8 @@ load_js: load_assets_js
             </div>              
             
             <h3 id="geogebra">Geogebra&nbsp;<span class="installed">All lab</span></h3>
-            <p>Faça o download do <a href="https://www.geogebra.org/download">Geogebra</a>.</p>
+            <p>Faça o download do <a href="https://drive.google.com/file/d/1Xk2OZZPSDc73htRjyqxuHVGqnPhjozKb/view?usp=sharing">Geogebra</a>.</p>
+            <p>Instale na pasta <code class="inline">C:\Portable</code>.</p>
             
             <h4>Silent Install</h4>
             <div class="highlight">
@@ -629,21 +629,7 @@ load_js: load_assets_js
                     %JAVA_HOME%\bin
                     </code>
                 </pre>
-            </div>
-
-            <h4>Via cmd</h4>
-            <blockquote class="info">
-                Precisa ser administrador.
-            </blockquote>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    setx JAVA_HOME "C:\Program Files\Java\jdk1.8.0_191" /m
-                    setx CLASSPATH "%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\htmlconverter.jar;%JAVA_HOME%\jre\lib;%JAVA_HOME%\jre\lib\rt.jar" /m
-                    setx Path "%Path%;%JAVA_HOME%\bin" /m
-                    </code>
-                </pre>                 
-            </div>            
+            </div>         
 
             <h3 id="lego">Lego Mindstorms Education EV3&nbsp;<span class="notinstalled">All lab</span></h3>
             <p>Faça o download do <a href="https://www.lego.com/en-us/mindstorms/downloads/download-software">Lego Mindstorms Education EV3</a>.</p>
@@ -678,7 +664,7 @@ load_js: load_assets_js
             <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
-                    <code class="language-bash">
+                    <code>
                     msiexec /i "mysql-installer-community-8.0.13.0.msi" /qb
                     </code>
                 </pre>                 
@@ -690,7 +676,7 @@ load_js: load_assets_js
             <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
-                    <code class="language-bash">
+                    <code>
                     "netbeans-8.2-windows.exe" --silent
                     </code>
                 </pre>                
@@ -699,7 +685,7 @@ load_js: load_assets_js
             <h4>Silent Uninstall</h4>
             <div class="highlight">
                 <pre>
-                    <code class="language-bash">
+                    <code>
                     "C:\Program Files\NetBeans 8.2\uninstall.exe"
                     </code>
                 </pre>                
@@ -786,7 +772,7 @@ load_js: load_assets_js
             <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
-                    <code class="language-bash">
+                    <code>
                     msiexec /i "pandoc-2.7.2-windows-x86_64.msi" /qb
                     </code>
                 </pre>                
@@ -799,7 +785,7 @@ load_js: load_assets_js
             </blockquote>
             <div class="highlight">
                 <pre>
-                    <code class="language-bash">
+                    <code>
                     pandoc exemplo.md -o exemplo.pdf
                     </code>
                 </pre>                
