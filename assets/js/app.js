@@ -29,9 +29,9 @@ window.addEventListener('load', function(){
 
     function scrollFunction() {
         if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            document.getElementById("btn-topo").style.display = "block";
+            document.getElementById("btn-topo").style.visibility = "visible";
         } else {
-            document.getElementById("btn-topo").style.display = "none";
+            document.getElementById("btn-topo").style.visibility = "hidden";
         }
     }
 });
