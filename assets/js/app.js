@@ -1,7 +1,7 @@
 window.addEventListener('load', function(){
     //sumario mobile
     var toogleMenu = document.querySelectorAll('.toggle-menu');
-    var menuContainer    = document.querySelector('.menu-responsivo');
+    var menuContainer    = document.querySelector('.menu-mobile');
 
     for (var i = 0; i < toogleMenu.length; i++){
         toogleMenu[i].addEventListener('click', menuAction);
@@ -25,13 +25,15 @@ window.addEventListener('load', function(){
     }
 
     //button top
-    window.onscroll = function() {scrollFunction()};
+    window.onscroll = function() { scrollFunction() };
 
     function scrollFunction() {
-        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-            document.getElementById("btn-topo").style.visibility = "visible";
+        if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
+            var element = document.getElementById("btn-topo");
+            element.classList.add("btn-topo-show");
         } else {
-            document.getElementById("btn-topo").style.visibility = "hidden";
+            var element = document.getElementById("btn-topo");
+            element.classList.remove("btn-topo-show");
         }
     }
 });
