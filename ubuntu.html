@@ -58,12 +58,50 @@ load_js: load_assets_js
             
             <h3 id="root">Usuário root&nbsp;<span class="installed">All lab</span></h3>
             <p>Crie o usuário root <b>IFPR</b> com a senha disponível na <a href="https://goo.gl/A3129L">planilha</a>.</p>
+
+            <h3 id="atualizacao">Atualização do SO&nbsp;<span class="installed">All lab</span></h3>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get update
+                    sudo apt-get upgrade -y 
+                    sudo apt-get dist-upgrade -y
+                    </code>
+                </pre>
+            </div>
+
+            <h3 id="fontes">Repositório dos parceiros da Canonical&nbsp;<span class="installed">All lab</span></h3>
+            <img src="../assets/images/pages/canonical.png" alt="Ativando as fontes dos parceiros da Canonical">
+
+            <h3 id="horas">Evitando problemas de horas com Dual Boot&nbsp;<span class="installed">All lab</span></h3>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo timedatectl set-local-rtc 1 --adjust-system-clock
+                    </code>
+                </pre>                
+            </div>
+
+            <h3 id="restricao">Restringindo o acesso a partições&nbsp;<span class="installed">All lab</span></h3>
+            <p>Isso permite que apenas o usuário autenticado tenha acesso a partições do Windows.</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo vi /var/lib/polkit-1/localauthority/10-vendor.d/com.ubuntu.desktop.pkla
+                    </code>
+                </pre>                
+            </div>
+            <p>Na quarta linha do arquivo altere <code class="inline">ResultActive=yes</code> para <code class="inline">ResultActive=auth_admin_keep</code>.</p>
+
             <!--Fim conteudo instalacao-->
 
             <!--Conteudo configuracoes-->
             <h2>Configurações</h2>
 
             <blockquote class="info">As configurações de ambiente se aplicam ao usuário Aluno.</blockquote>
+
+            <h3 id="tela">Remoção de proteção e bloqueio de tela&nbsp;<span class="installed">All lab</span></h3>
+            <img src="../assets/images/pages/bloqueio.png" alt="Remoção de proteção de tela e bloqueio">
 
             <h3 id="padrao">Usuário do estudante&nbsp;<span class="installed">All lab</span></h3>
             <p>Crie a conta de usuário <b>Aluno</b> com a senha <b>aluno123</b> e configure o Ubuntu para iniciar automaticamente por essa conta.</p>
@@ -73,17 +111,6 @@ load_js: load_assets_js
                     <code>
                     autologin-user=aluno
                     autologin-user-timeout=0
-                    </code>
-                </pre>
-            </div>
-
-            <h3 id="atualizacao">Atualização do SO&nbsp;<span class="installed">All lab</span></h3>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo apt-get update
-                    sudo apt-get upgrade -y 
-                    sudo apt-get dist-upgrade -y
                     </code>
                 </pre>
             </div>
@@ -126,6 +153,7 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
+
             <h4>Bloqueando a troca do papel de parede</h4>
             <p>Crie o arquivo <code class="inline">00_wallpaper</code> em <code class="inline">/etc/dconf/db/tema.d/locks</code> e adicione:</p>
             <div class="highlight">
@@ -136,6 +164,7 @@ load_js: load_assets_js
                 </code>
                 </pre>
             </div>
+
             <h4>Aplicando alterações</h4>
             <div class="highlight">
                 <pre>
@@ -145,6 +174,9 @@ load_js: load_assets_js
                 </pre>
             </div>
             <p>Para mais detalhes sobre essas configurações acesse o <a href="https://wiki.gnome.org/Projects/dconf/SystemAdministrators">Wiki do Gnome</a>.</p>
+
+            <h3 id="historico">Histórico do Chrome e Firefox&nbsp;<span class="installed">All lab</span></h3>
+            <p>Não é legal deixar históricos de downloads e etc.</p>
 
             <h3 id="proxy">Configuração de Proxy&nbsp;<span class="installed">All lab</span></h3>
             <img src="../assets/images/pages/ubuntu-proxy.png" alt="Configuração do Proxy">
@@ -192,34 +224,6 @@ load_js: load_assets_js
                 </pre>
             </div>
 
-            <h3 id="tela">Remoção de proteção e bloqueio de tela&nbsp;<span class="installed">All lab</span></h3>
-            <img src="../assets/images/pages/bloqueio.png" alt="Remoção de proteção de tela e bloqueio">
-
-            <h3 id="fontes">Repositório dos parceiros da Canonical&nbsp;<span class="installed">All lab</span></h3>
-            <img src="../assets/images/pages/canonical.png" alt="Ativando as fontes dos parceiros da Canonical">
-
-            <h3 id="historico">Histórico do Chrome e Firefox&nbsp;<span class="installed">All lab</span></h3>
-            <p>Não é legal deixar históricos de downloads e etc.</p>
-
-            <h3 id="horas">Evitando problemas de horas com Dual Boot&nbsp;<span class="installed">All lab</span></h3>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo timedatectl set-local-rtc 1 --adjust-system-clock
-                    </code>
-                </pre>                
-            </div>
-
-            <h3 id="restricao">Restringindo o acesso a partições&nbsp;<span class="installed">All lab</span></h3>
-            <p>Isso permite que apenas o usuário autenticado tenha acesso a partições do Windows.</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo vi /var/lib/polkit-1/localauthority/10-vendor.d/com.ubuntu.desktop.pkla
-                    </code>
-                </pre>                
-            </div>
-            <p>Na quarta linha do arquivo altere <code class="inline">ResultActive=yes</code> para <code class="inline">ResultActive=auth_admin_keep</code>.</p>
             <!--Fim conteudo configuracoes-->
 
             <!--Conteudo aplicacoes-->
