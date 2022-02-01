@@ -227,6 +227,18 @@ load_js: load_assets_js
 
             <!--Conteudo aplicacoes-->
             <h2>Aplicações</h2>
+            <h3 id="7zip">7-zip&nbsp;<span class="installed">All lab</span></h3>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get install p7zip p7zip-full p7zip-rar lzma lzma-dev
+                    </code>
+                </pre>
+            </div>
+
+            <h3 id="chrome">Google Chrome&nbsp;<span class="installed">All lab</span></h3>
+            <p>Faça o download do <a href="https://www.google.com/chrome/">Google Chrome</a>.</p>
+
             <h3 id="grub">Grub Customizer&nbsp;<span class="installed">All lab</span></h3>
             <p>Configure o grub para que o computador sempre inicialize pelo Windows.</p>
             <h4>Para o Ubuntu 16.04 LTS</h4>
@@ -246,68 +258,6 @@ load_js: load_assets_js
                     sudo apt-get install grub-customizer
                     </code>
                 </pre>         
-            </div>
-
-            <h3 id="unity-tool">Tweak Tool&nbsp;<span class="installed">All lab</span></h3>
-            <p>Usamos essa ferramenta para remover animações da interface.</p>
-            <h4>Para Ubuntu 16.04 LTS</h4>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo apt-get install unity-tweak-tool
-                    </code>
-                </pre>                
-            </div>
-            <h4>Para Ubuntu 20.04 LTS</h4>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo apt-get install gnome-tweak-tool
-                    </code>
-                </pre>                
-            </div>
-
-            <h3 id="7zip">7-zip&nbsp;<span class="installed">All lab</span></h3>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo apt-get install p7zip p7zip-full p7zip-rar lzma lzma-dev
-                    </code>
-                </pre>
-            </div>
-  
-
-            <h3 id="smb">Samba Cliente&nbsp;<span class="installed">All lab</span></h3>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo apt-get install smbclient
-                    </code>
-                </pre>
-            </div>  
-
-            <h3 id="chrome">Google Chrome&nbsp;<span class="installed">All lab</span></h3>
-            <p>Faça o download do <a href="https://www.google.com/chrome/">Google Chrome</a>.</p>
-
-            <h3 id="seahorse">Seahorse&nbsp;<span class="installed">All lab</span></h3>
-            <p>Serve para remover o incômodo pedido de senha do Google Chrome.</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo apt-get install seahorse
-                    </code>
-                </pre>
-            </div>
-  
-            <img src="../assets/images/pages/seahorse.png" alt="Configurando Seahorse">
-
-            <h3 id="vi">Vim&nbsp;<span class="installed">All lab</span></h3>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo apt-get install vim
-                    </code>
-                </pre>
             </div>
 
             <h3 id="java">Java JDK 8&nbsp;<span class="installed">All lab</span></h3>
@@ -371,42 +321,7 @@ load_js: load_assets_js
                     javac -version
                     </code>
                 </pre>                
-            </div>
-
-            <h3 id="netbeans">Netbeans&nbsp;<span class="installed">All lab</span></h3>
-            <p>Faça o download do <a href="https://netbeans.apache.org/download/index.html">Netbeans</a>. Atualmente usamos a versão 12.5.</p>
-            <p>Instale com a conta do aluno na pasta <code class="inline">/home/portable</code>. Não precisa ser root.</p>
-  
-            <h3 id="adicionais">Ubuntu Restricted Extras&nbsp;<span class="installed">All lab</span></h3>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo apt-get install ubuntu-restricted-extras
-                    </code>
-                </pre>
-            </div>
-  
-
-            <h3 id="ssh">Open SSH Server&nbsp;<span class="installed">All lab</span></h3>
-            <p>Para usar o acesso remoto.</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo apt-get install openssh-server
-                    </code>
-                </pre>
-            </div>
-  
-
-            <h3 id="scratch">Scratch&nbsp;<span class="installed">All lab</span></h3>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo apt-get install scratch
-                    </code>
-                </pre>
-            </div>
-  
+            </div>    
 
             <h3 id="lamp">LAMP&nbsp;<span class="installed">All lab</span></h3>
             <h4>Para o Ubuntu 16.04</h4>
@@ -440,15 +355,6 @@ load_js: load_assets_js
                         ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'SenhaAqui';
                         flush privileges;
                         exit
-                    </code>
-                </pre>
-            </div>
-
-            <h4>PhpMyAdmin</h4>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo apt-get install phpmyadmin
                     </code>
                 </pre>
             </div>
@@ -498,62 +404,50 @@ load_js: load_assets_js
 
             <blockquote class="info">
             Não faça isso em ambiente de produção.
-            </blockquote>
-  
-            <h3 id="veyon">Veyon&nbsp;<span class="installed">All lab</span></h3>
-            <p>Mais informações, acesse a página do software <a href="https://veyon.io/">Veyon</a>.</p>
-            <h4>Instalando dependências</h4>
+            </blockquote>            
+
+            <h3 id="netbeans">Netbeans&nbsp;<span class="installed">All lab</span></h3>
+            <p>Faça o download do <a href="https://netbeans.apache.org/download/index.html">Netbeans</a>. Atualmente usamos a versão 12.5.</p>
+            <p>Instale com a conta do aluno na pasta <code class="inline">/home/portable</code>. Não precisa ser root.</p>            
+
+            <h3 id="ssh">Open SSH Server&nbsp;<span class="installed">All lab</span></h3>
+            <p>Para usar o acesso remoto.</p>
             <div class="highlight">
                 <pre>
                     <code>
-                        sudo apt install g++ libc6-dev make cmake qtbase5-dev qtbase5-private-dev
-                        sudo apt install qtbase5-dev-tools qttools5-dev qttools5-dev-tools
-                        sudo apt install qtdeclarative5-dev qtquickcontrols2-5-dev libfakekey-dev
-                        sudo apt install xorg-dev libxtst-dev libjpeg-dev zlib1g-dev libssl-dev libpam0g-dev
-                        sudo apt install libprocps-dev liblzo2-dev libqca-qt5-2-dev libldap2-dev
-                        sudo apt install libsasl2-dev
+                    sudo apt-get install openssh-server
                     </code>
                 </pre>
             </div>
-            
-            <h4>Para o Ubuntu 16.04 LTS</h4>
-            <p>Faça o download e instalação do <a href="https://github.com/veyon/veyon/releases/download/v4.5.5/veyon_4.5.5-0-ubuntu-xenial_amd64.deb">Veyon (4.5.5)</a> para o Ubuntu 16.04.</p>
-            
-            <h4>Para o Ubuntu 20.04 LTS</h4>
+
+            <h3 id="phpadmin">PhpMyAdmin</h3>
             <div class="highlight">
                 <pre>
                     <code>
-                        sudo apt install veyon-service
-                        sudo apt install veyon-configurator
+                    sudo apt-get install phpmyadmin
                     </code>
                 </pre>
             </div>
-            
-            <blockquote class="info">
-                Para a primeira configuração, defina as configurações iniciais e as chaves de acesso.
-            </blockquote>
 
-            <p>É possível aplicar configuração em massa através do <code class="inline">veyon cli</code>. Por ele podemos importar o arquivo de <b>configuração.json</b> e <b>chave pública</b>.</p>
+            <h3 id="smb">Samba Cliente&nbsp;<span class="installed">All lab</span></h3>
             <div class="highlight">
                 <pre>
                     <code>
-                        USER=aluno
-                        JSON=veyon-cliente.json
-                        CHAVE=professor_public_key.pem
-                        TIPO=public
-                        
-                        sudo veyon-cli config import /home/$USER/Downloads/Veyon/$JSON
-                        
-                        sudo veyon-cli authkeys import professor/$TIPO /home/$USER/Downloads/Veyon/Chaves/$CHAVE
+                    sudo apt-get install smbclient
                     </code>
-                </pre>                
+                </pre>
             </div>
 
-            <h3 id="vscode">VS Code&nbsp;<span class="installed">All lab</span></h3>
-            <p>Faça o download do <a href="https://code.visualstudio.com/">VS Code</a>.</p>
+            <h3 id="scratch">Scratch&nbsp;<span class="installed">All lab</span></h3>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get install scratch
+                    </code>
+                </pre>
+            </div>
 
-
-            <h3 id="timefreeze">Time Freeze&nbsp;<span class="installed">All lab</span></h3>
+            <h3 id="timefreeze">Script Time Freeze&nbsp;<span class="installed">All lab</span></h3>
             <p>Isso é um script para manter o ambiente do usuário aluno sempre organizado.</p>
             <p>Primeiro crie um perfil ideal, com favoritos, papel de parede e etc. Com o perfil criado, siga os comandos abaixo:</p>
             <div class="highlight">
@@ -629,12 +523,119 @@ load_js: load_assets_js
                 </pre>                
             </div>
 
+            <h3 id="seahorse">Seahorse&nbsp;<span class="installed">All lab</span></h3>
+            <p>Serve para remover o incômodo pedido de senha do Google Chrome.</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get install seahorse
+                    </code>
+                </pre>
+            </div>
+            <img src="../assets/images/pages/seahorse.png" alt="Configurando Seahorse">
+
+            <h3 id="tweaktool">Tweak Tool&nbsp;<span class="installed">All lab</span></h3>
+            <p>Usamos essa ferramenta para remover animações da interface.</p>
+            <h4>Para Ubuntu 16.04 LTS</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get install unity-tweak-tool
+                    </code>
+                </pre>                
+            </div>
+            <h4>Para Ubuntu 20.04 LTS</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get install gnome-tweak-tool
+                    </code>
+                </pre>
+            </div>
+
+            <h3 id="adicionais">Ubuntu Restricted Extras&nbsp;<span class="installed">All lab</span></h3>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get install ubuntu-restricted-extras
+                    </code>
+                </pre>
+            </div>            
+
+            <h3 id="vim">Vim&nbsp;<span class="installed">All lab</span></h3>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get install vim
+                    </code>
+                </pre>
+            </div>
+  
+            <h3 id="veyon">Veyon&nbsp;<span class="installed">All lab</span></h3>
+            <p>Para mais informações, acesse a página do software <a href="https://veyon.io/">Veyon</a>.</p>
+            <h4>Instalando dependências</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                        sudo apt install g++ libc6-dev make cmake qtbase5-dev qtbase5-private-dev
+                        sudo apt install qtbase5-dev-tools qttools5-dev qttools5-dev-tools
+                        sudo apt install qtdeclarative5-dev qtquickcontrols2-5-dev libfakekey-dev
+                        sudo apt install xorg-dev libxtst-dev libjpeg-dev zlib1g-dev libssl-dev libpam0g-dev
+                        sudo apt install libprocps-dev liblzo2-dev libqca-qt5-2-dev libldap2-dev
+                        sudo apt install libsasl2-dev
+                    </code>
+                </pre>
+            </div>
+            
+            <h4>Para o Ubuntu 16.04 LTS</h4>
+            <p>Faça o download e instalação do <a href="https://github.com/veyon/veyon/releases/download/v4.5.5/veyon_4.5.5-0-ubuntu-xenial_amd64.deb">Veyon (4.5.5)</a> para o Ubuntu 16.04.</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo dpkg -i NomePacote
+                    </code>
+                </pre>
+            </div>
+            
+            <h4>Para o Ubuntu 20.04 LTS</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                        sudo apt install veyon-service
+                        sudo apt install veyon-configurator
+                    </code>
+                </pre>
+            </div>
+            
+            <blockquote class="info">
+                Para a primeira configuração, defina as configurações iniciais e as chaves de acesso.
+            </blockquote>
+
+            <p>É possível aplicar configuração em massa através do <code class="inline">veyon cli</code>. Por ele podemos importar o arquivo de <b>configuração.json</b> e <b>chave pública</b>.</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                        USER=aluno
+                        JSON=veyon-cliente.json
+                        CHAVE=professor_public_key.pem
+                        TIPO=public
+                        
+                        sudo veyon-cli config import /home/$USER/Downloads/Veyon/$JSON
+                        
+                        sudo veyon-cli authkeys import professor/$TIPO /home/$USER/Downloads/Veyon/Chaves/$CHAVE
+                    </code>
+                </pre>                
+            </div>
+
+            <h3 id="vscode">Vusual Studio Code&nbsp;<span class="installed">All lab</span></h3>
+            <p>Faça o download do <a href="https://code.visualstudio.com/">Visual Studio Code</a>.</p>
+
             <!--Fim conteudo aplicacoes-->
 
             <!-- Clone -->
             <h2>Clone Ubuntu</h2>
             <h3 id="hostname">Alterar hostname</h3>
-            <p>Altere o nome do computador em <code class="inline">/etc/hostname</code> e <code class="inline">/etc/hosts</code>:</p>
+            <p>Altere o nome do computador em <code class="inline">/etc/hostname</code> e <code class="inline">/etc/hosts</code>.</p>
             <div class="highlight">
                 <pre>
                     <code>
