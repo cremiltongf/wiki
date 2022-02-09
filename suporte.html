@@ -24,9 +24,12 @@ load_js: load_assets_js
             </menu>
         </aside>
         <article class="conteudo">
+            <h1 id="windows">Tutoriais de suporte</h1>
+
             <!--Conteudo windows-->
-            <h1 id="windows">Windows</h1>
-            <h2 id="usertemp">Usuário temporário</h2>
+            <h2 id="windows">Windows</h2>
+
+            <h3 id="usertemp">Usuário temporário</h3>
             <p>Com uma conta de Administrador, faça os procedimentos a seguir.</p>
             <p>1 - Abra o regedit e navegue até:</p>
             <div class="highlight">
@@ -62,11 +65,9 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
-            <p>6 - Depois desses passos, reinicie o Windows.</p>
-            <p>7 - Recrie a conta do usuário e copie os arquivos do usuário antigo para a nova conta.</p>
-            <p>Com isso, você tem a mesma conta de usuário funcionando sem problemas.</p>
+            <p>6 - Depois desses passos, reinicie o Windows e crie uma nova conta para usuário e copie os arquivos da pasta do usuário antigo para a nova.</p>
 
-            <h2 id="pen">Removendo vírus de Pen Drive</h2>
+            <h3 id="pen">Removendo vírus de Pen Drive</h3>
             <p>Abra o prompt de comandos do Windows com permissões de Administrador e acesse o Pen Drive digitando a letra da unidade e dois pontos como <code class="inline">f:</code> e tecle enter, e visualizará algo como:</p>
             <div class="highlight">
                 <pre>
@@ -93,29 +94,17 @@ load_js: load_assets_js
                 </pre>
             </div>
 
-            <h2 id="servicos">Desativando serviços via cmd</h2>
+            <h3 id="servicos">Gerenciando serviços em massa</h3>
             <p>Alguns exemplos de uso:</p>
             <div class="highlight">
                 <pre>
                     <code>
-                    auto: automático
+                    auto: Automatico
                     disabled: Desativado
-                    delayed-auto: Automático com atraso na inicialização
+                    delayed-auto: Automatico com atraso na inicializacao
         
-                    rem Windows Update = wuauserv
-                    sc config "wuauserv" start= disabled
-                    rem Google Update = gupdate
-                    sc config "gupdate" start= disabled
-                    rem Google Update = gupdatem
-                    sc config "gupdatem" start= disabled
-                    rem Google Chrome Elevation Service = GoogleChromeElevationService
-                    sc config "GoogleChromeElevationService" start= disabled
-                    rem Backup do Windows 10 = SDRSVC
-                    sc config "SDRSVC" start= disabled
                     rem OCS Iventory = OCS Inventory Service
                     sc config "OCS Inventory Service" start= delayed-auto
-                    rem Mozila Maintenance = MozillaMaintenance
-                    sc config "MozillaMaintenance" start= disabled
                     </code>
                 </pre>
             </div>
@@ -123,8 +112,10 @@ load_js: load_assets_js
 
             <!--Conteudo Ubuntu-->
             <h2>Ubuntu</h2>
+
             <h3 id="errordpkg">Sub-process /usr/bin/dpkg returned an error code (1)</h3>
-            <p>Ocorre quando tem interrupção na instalação de um programa. A solução abaixo é utilizado quando o erro e ocasionado pelo Java.</p>
+            <p>Ocorre quando há interrupção no processo de instalação de um pacote.</p>
+            <p>O solução abaixo se aplica ao Java.</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -134,21 +125,11 @@ load_js: load_assets_js
                 </pre>
             </div>
             <blockquote class="info">
-            O mesmo procedimento se aplica a outros pacotes, quando problema é o mesmo!
+            O mesmo procedimento se aplica a outros pacotes, quando problema é semelhante!
             </blockquote>
-            <h3 id="openusb">Abrindo dispositivo USB na VM</h3>
-            <p>Adicione o usuário ao grupo <code class="inline">vboxusers</code>.</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo usermod -a -G vboxusers NOMEUSUARIO
-                    </code>
-                </pre>
-            </div>
-            <p>Após executar o comando acima, reinicie.</p>
 
             <h3 id="boot-repair">Boot Repair</h3>
-            <p>Usamos para reparar o grub de forma fácil.</p>
+            <p>Usado para reparar o grub.</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -156,69 +137,18 @@ load_js: load_assets_js
                     sudo apt-get update
                     sudo apt-get install boot-repair
                     </code>
-                </pre>                
-            </div>
-            <p>Se após usar o Boot-repair o problema persistir, execute o comando abaixo no Windows 8/10, pelo cmd:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    bcdedit /set {bootmgr} path \EFI\ubuntu\shimx64.efi
-                    </code>
-                </pre>                
-            </div>
-            <p>Reinicie para testar!</p>
-            
-            <p>Caso seja apresentado o erro <code class="inline">Failed to open \EFI\BOOT\grubx64.efi...</code>, use um live cd para executar o comando abaixo:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    efibootmgr --create --label Ubuntu --disk /dev/sda1 --loader "\EFI\ubuntu\grubx64.efi"
-                    </code>
                 </pre>
-            </div>                
-            <p>Reinicie para testar!</p>
-            <!--Fim conteudo Ubuntu-->
-
-            <!--Conteudo data show-->
-            <h2>Data Show</h2>
-            <blockquote class="info">
-                Os passos abaixo se aplica ao data show MEC Urmet Daruma.
-            </blockquote>
-            <h3 id="lampada">A lâmpada não liga/funciona</h3>
-            <p>Com um clips de papel deformado, clique uma vez no orifício entre as palavras lamp e temp para que a lâmpada comece a projetar.</p>
-
-            <p>Altere ou confirme as configurações abaixo:</p>
-
-            <p>1 - Menu &gt; Avançado &gt; Modo de espera &gt; Ativar - reinicie;</p>
-
-            <p>2 - Menu &gt; Avançado &gt; USB Type &gt; LINK 21L;</p>
-
-            <p>3 - Desligue e ligue novamente.</p>
-
-            <p>Pronto.</p>
-            <!--Fim conteudo data show-->
-
-            <!--Conteudo rede-->
-            <h2>Rede</h2>
-            <h3 id="hostname">Descobrindo o hostname pelo IP</h3>
-            <p>No Ubuntu:</p>
-            <p>Tenha o <code>samba</code> instalado.</p>
+            </div>
+            <p>Se após o processo do Boot Repair o problema persistir, execute o comando abaixo no Windows 10:</p>
             <div class="highlight">
                 <pre>
                     <code>
-                    nmblookup -A IP_DESTINO
+                    bcdedit /set {bootmgr} path \EFI\ubuntu\grubx64.efi
                     </code>
                 </pre>
             </div>
-            <p>No Windows:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    nbtstat -a IP_DESTINO
-                    </code>
-                </pre>
-            </div>
-            <!--Fim conteudo rede-->                
+            <p>Reinicie!</p>
+            <!--Fim conteudo Ubuntu-->             
         </article>
     </main>
     {% include footer.html %}
