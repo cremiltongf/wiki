@@ -263,9 +263,12 @@ a.item-nav{
 }
 a.btn-menu{
     display: block;
-    color: #1b202d;
     text-decoration: none;
     font-size: 1.25rem;
+}
+a.btn-menu,
+.hidden-btn .btn-menu{
+    color: #1b202d;
 }
 .hidden-btn,
 .show-btn{
