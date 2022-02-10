@@ -32,24 +32,20 @@ load_js: load_assets_js
             <p>3 - Criar uma gpo com nome <code class="inline">adm_local</code>. Use o nome que achar conveniente;</p>
             <p>4 - O caminho da GPO é:</p>
             <img src="../assets/images/pages/adm_local.PNG" alt="ADM Local">
-            <p>5 - Com lado direito do mouse sobre a seguna coluna, adicione o grupo criado anteriormente;</p>
+            <p>5 - Na coluna adicione o grupo criado anteriormente;</p>
             <p>6 - Em propriedades, em "Este grupo é um membro de:" Clique em Adicionar... e 
             no campo Grupo preencha com "administradores".</p>
-            <p>Acesse uma máquina cliente do domínio, atualize as políticas(<code class="inline">gpupdate /force</code>) e faça o teste!</p>
+            <p>Atualize as regras para realizar os testes!</p>
             <blockquote class="info">
-            Lembrando que todo usuário que incluir neste grupo, terá poderes administrativos somente na máquina local,
-            não tendo acesso ao controlador de domínio com esse privilégio.
+            Lembrando que todo usuário que incluir neste grupo, terá poderes administrativos somente na máquina local.
             </blockquote>
 
             <h2 id="remoto">Acesso remoto</h2>
             <p>Configurando o acesso remoto:</p>
             <img src="../assets/images/pages/remoto.png" alt="Acesso remoto">
 
-            <h2 id="cert">Certificado</h2>
-            <p>Disponibilizando certificado para os computadores clientes:</p>
-            <img src="../assets/images/pages/certificado.png" alt="Certificado">
-
             <h2 id="login">Login automático</h2>
+            <blockquote class="info">Atualize as informações pertinentes com seu usuário.</blockquote>            
             <p>Login automático do Windows:</p>
             <img src="../assets/images/pages/login.png" alt="Login automático">
             <p>Detalhes de <code class="inline">AutoAdminLogon</code>:</p>
@@ -159,7 +155,7 @@ load_js: load_assets_js
             </div>
 
             <h2 id="server-ad">Servidor AD</h2>
-            <p>Caso o computador não esteja enxergando o servidor AD:</p>
+            <blockquote class="info">Caso o computador não esteja enxergando o servidor AD. Se aplica ao Windows 10.</blockquote>
             <img src="../assets/images/pages/acessar-ad.png" alt="Acessar AD">
             <p>Detalhes de <code class="inline">Nome do valor</code>:</p>
             <div class="highlight">
@@ -181,59 +177,27 @@ load_js: load_assets_js
             <!--Fim conteudo Geral-->          
 
             <!--Conteudo Navegadores-->
-            <h2 id="conf-chrome">Configuração do Google Chrome</h2>
-            <p>Baixe o <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Modelo Administrativo</a> e adicione ao seu Editor de Gerenciamento.</p>
+            <h2 id="conf-chrome">Configuração do Chrome</h2>
+            <p>Baixe os <a href="https://chromeenterprise.google/browser/download/#manage-policies-tab">Modelos Administrativos</a> e adicione ao seu Editor de Gerenciamento.</p>
             <p>Configuração do site da página inicial.</p>
             <img src="../assets/images/pages/conf-chrome.PNG" alt="Configuração do Google Chrome">
 
-            <h2 id="default-chrome">Google Chrome como navegador padrão</h2>
+            <h2 id="default-chrome">Chrome como navegador padrão</h2>
             <img src="../assets/images/pages/default-chrome.PNG" alt="Google Chrome como navegador padrão">
 
-            <h2 id="update-chrome">Desativar atualização do Google Chrome</h2>
-            <p>Crie um <code class="inline">BAT</code> para rodar na inicialização do sistema contendo:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    @echo off
-                    rem Google Update = gupdate
-                    sc config "gupdate" start= disabled
-                    rem Google Update = gupdatem
-                    sc config "gupdatem" start= disabled
-                    exit
-                    </code>
-                </pre>
-            </div>
-            <p>Caminho da regra:</p>
-            <img src="../assets/images/pages/update.PNG" alt="Atualização do Chrome">
+            <h2 id="update-chrome">Atualização automática do Chrome</h2>
 
             <h2 id="conf-firefox">Configuração do Firefox</h2>
-            <p>Baixe o <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Modelo Administrativo</a> e adicione ao seu Editor de Gerenciamento.</p>
+            <p>Baixe os <a href="https://github.com/mozilla/policy-templates">Modelos Administrativos</a> e adicione ao seu Editor de Gerenciamento.</p>
             <img src="../assets/images/pages/conf-firefox.PNG" alt="Página inicial do Firefox">
 
             <h2 id="default-firefox">Mensagem de navegador padrão</h2>
             <img src="../assets/images/pages/msg-firefox.png" alt="Pergunta de navedor padrão">
 
-            <h2 id="enable-roots">Enable Roots</h2>
-            <p>Essa regra habilita a leitura de certificado do pfSense.</p>
-            <p>Caminho da regra:</p>
-            <img src="../assets/images/pages/firefox-enable-roots.PNG" alt="Enable Roots">
-            <p>Baixe o arquivo.</p>
 
-            <h2 id="update-firefox">Atualização do Firefox</h2>
+            <h2 id="update-firefox">Atualização automática do Firefox</h2>
             <p>Desabilita a atualização do Firefox em segundo plano e automático.</p>
-            <p>Crie um <code class="inline">BAT</code> para rodar na inicialização do sistema contendo:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    @echo off
-                    rem Mozila Maintenance = MozillaMaintenance
-                    sc config "MozillaMaintenance" start= disabled
-                    exit
-                    </code>
-                </pre>
-            </div>
-            <p>Caminho da regra:</p>
-            <img src="../assets/images/pages/update.PNG" alt="Atualização do Firefox">
+
             <!--Fim conteudo Navegadores-->
         </article>
     </main>
