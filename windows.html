@@ -136,7 +136,7 @@ load_js: load_assets_js
             <img src="../assets/images/pages/msconfig.png" alt="msconfig">
             
             <h3 id="senhas">Senhas&nbsp;<span class="installed">All lab</span></h3>
-            <p>Coloque um <b>txt</b> na área de trabalho com as senhas se houver. Um exemplo é o login da máquina virtual Ubuntu.</p>
+            <p>Coloque um <b>txt</b> na área de trabalho com as senhas, caso necessário para as aplicações.</p>
 
             <h3 id="reparo">Reparo automático&nbsp;<span class="installed">All lab</span></h3>
 
@@ -361,7 +361,7 @@ load_js: load_assets_js
                         
             <h3 id="astah">Astah Community&nbsp;<span class="installed">All lab</span></h3>
             <p>O software foi descontinuado, mas usamos a última versão Community disponibilizado pela desenvolvedora.</p>
-            <p>Faça o download da última versão do instalador disponibilizado na <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">pasta</a>. Esse programa requer a instalação do Java SDK.</p>
+            <p>Faça o download do instalador disponibilizado na <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">pasta</a>. Esse programa requer a instalação do Java SDK.</p>
             
             <h4>Silent Install</h4>
             <div class="highlight">
@@ -445,13 +445,25 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                    "Composer-Setup.exe" /PROXY="http://192.168.0.6:3128" /VERYSILENT
+                    "Composer-Setup.exe" /VERYSILENT /SUPPRESSMSGBOXES /ALLUSERS /PHP="C:\xampp\php\php.exe"
                     </code>
-                </pre>                
+                </pre>
+            </div>
+
+            <h4>Silent Uninstall</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                        "%ProgramFiles(x86)%\ComposerSetup\unins000.exe" /VERYSILENT
+                        "%ProgramFiles%\ComposerSetup\unins000.exe" /VERYSILENT
+                        rd "%ProgramFiles(x86)%\ComposerSetup" /s /q
+                        rd "%ProgramFiles%\ComposerSetup" /s /q
+                    </code>
+                </pre>
             </div>
             
             <h4>Setando proxy</h4>
-            <p>Execute os comandos no <code class="inline">cmd</code>, necessário ser admin.</p>
+            <p>Execute os comandos no prompt como administrador.</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -463,7 +475,7 @@ load_js: load_assets_js
             
             <h3 id="dbdesigner">DBDesigner&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="http://fabforce.eu/dbdesigner4/">DBDesigner</a>.</p>
-            <p>Após a instalação, mova os atalhos do programa.</p>
+            <p>Após a instalação, mova os atalhos do programa para o diretório correto.</p>
             
             <h4>Origem</h4>
             <div class="highlight">
@@ -492,11 +504,22 @@ load_js: load_assets_js
             <h3 id="firefox">Firefox&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://www.mozilla.org/pt-BR/firefox/all/">Firefox</a>.</p>
             
+            <p>Se os serviços do navegador estiverem desativados, é necessário ativar antes de prosseguir com a atualização.</p>
+            <h4>Ativando os serviços</h4>
+            <div class="hightlight">
+                <pre>
+                    <code>
+                    rem Mozila Maintenance = MozillaMaintenance
+                    sc config "MozillaMaintenance" start= auto
+                    </code>
+                </pre>
+            </div>
+
             <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
-                    "Firefox Setup 67.0.4.exe" /s
+                    "Firefox Setup 97.0.exe" /s
                     </code>
                 </pre>                
             </div>
@@ -505,8 +528,8 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                    "C:\Program Files (x86)\Mozilla Firefox\uninstall\helper.exe" /S
-                    "C:\Program Files\Mozilla Firefox\uninstall\helper.exe" /S
+                    "%ProgramFiles(x86)%\Mozilla Firefox\uninstall\helper.exe" /S
+                    "%ProgramFiles%\Mozilla Firefox\uninstall\helper.exe" /S
                     </code>
                 </pre>
             </div>
@@ -564,9 +587,19 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                    "Git-2.19.2-64-bit.exe" /VERYSILENT /NORESTART /NOCANCEL /SP- /CLOSEAPPLICATIONS /RESTARTAPPLICATIONS /COMPONENTS="icons,ext\reg\shellhere,assoc,assoc_sh"
+                    "Git-2.35.1.2-64-bit.exe" /VERYSILENT /NORESTART /COMPONENTS="icons,icons\desktop,ext,ext\shellhere,ext\guihere,gitlfs,assoc,assoc_sh"
                     </code> 
                 </pre>                
+            </div>
+
+            <h4>Silent Uninstall</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    "%ProgramFiles(x86)%\Git\unins000.exe" /VERYSILENT /NORESTART
+                    "%ProgramFiles%\Git\unins000.exe" /VERYSILENT /NORESTART
+                    </code>
+                </pre>
             </div>
             
             <h4>Setando proxy</h4>
@@ -582,7 +615,21 @@ load_js: load_assets_js
             
             <h3 id="chrome">Google Chrome&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://www.google.com/intl/pt-BR/chrome/?standalone=1">Google Chrome</a>.</p>
-            
+            <p>Se os serviços do navegador estiverem desativados, é necessário ativar antes de prosseguir com a atualização.</p>
+            <h4>Ativando os serviços</h4>
+            <div class="hightlight">
+                <pre>
+                    <code>
+                    rem Google Update = gupdate
+                        sc config "gupdate" start= auto
+                    rem Google Update = gupdatem
+                        sc config "gupdatem" start= auto
+                    rem Google Chrome Elevation Service = GoogleChromeElevationService
+                        sc config "GoogleChromeElevationService" start= auto
+                    </code>
+                </pre>
+            </div>            
+
             <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
@@ -745,6 +792,23 @@ load_js: load_assets_js
             
             <h3 id="libre">LibreOffice&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://pt-br.libreoffice.org/baixe-ja/libreoffice-stable/">LibreOffice</a>.
+            <h4>Silent Install</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                        start /wait msiexec /i "%SOFTWARES%\LibreOffice_7.2.5_Win_x64.msi" /qn /norestart
+                    </code>
+                </pre>
+            </div>
+
+            <h4>Silent Uninstall</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    start /wait msiexec /x "%SOFTWARES%\LibreOffice_6.3.6.2_Win_x64.msi" /qn /norestart        
+                    </code>
+                </pre>
+            </div>
             
             <h3 id="vmubuntu">Máquina Virtual Ubuntu - texto&nbsp;<span class="installed">All lab</span></h3>
             <p>Os labs possuem o Ubuntu 16.04 64bits LTS configurado, somente em modo texto (terminal).</p>
@@ -786,7 +850,7 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                    "netbeans-8.2-windows.exe" --silent
+                    "Apache-NetBeans-12.5-bin-windows-x64.exe" --silent
                     </code>
                 </pre>                
             </div>
@@ -795,7 +859,9 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                    "C:\Program Files\NetBeans 8.2\uninstall.exe"
+                        "%ProgramFiles(x86)%\NetBeans 8.2\uninstall.exe" --silent
+                        "%ProgramFiles%\NetBeans 8.2\uninstall.exe" --silent
+                        rd "C:\Users\aluno\AppData\Roaming\NetBeans" /s /q
                     </code>
                 </pre>                
             </div>
@@ -875,6 +941,8 @@ load_js: load_assets_js
             </blockquote>
 
             <h3 class="#pandoc">Pandoc&nbsp;<span class="installed">All lab</span></h3>
+            <blockquote class="info">Em análise.</blockquote>
+
             <p>Faça o download do  <a href="https://github.com/jgm/pandoc/releases/latest">Pandoc</a>.
             <p>O pandoc depende de MikTex para funcionar.</p>
             
@@ -882,9 +950,26 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                    msiexec /i "pandoc-2.7.2-windows-x86_64.msi" /qb
+                        msiexec /i "pandoc-2.17.1.1-windows-x86_64.msi" /qb /norestart
                     </code>
                 </pre>                
+            </div>
+
+            <h4>Silent Uninstall</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    msiexec /x {6F5C994F-C2FF-4B0F-B015-C689BEC76FE7} /qn /norestart
+                    msiexec /x "%SOFTWARES%\pandoc-2.10-windows-x86_64.msi" /qn /norestart
+                    rd "%ProgramFiles%\Pandoc" /s /q
+                    rd "%ProgramFiles(x86)%\Pandoc" /s /q
+                    rd "C:\Users\kenobi\AppData\Local\Pandoc" /s /q
+                    rd "C:\Users\aluno\AppData\Local\Pandoc" /s /q
+                    rd "C:\Users\ifpr\AppData\Local\Pandoc" /s /q
+                    rd "C:\Users\administrator\AppData\Local\Pandoc" /s /q
+                    rd "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Pandoc" /s /q
+                    </code>
+                </pre>
             </div>
             
             <h4>Testando Pandoc</h4>
@@ -901,6 +986,7 @@ load_js: load_assets_js
             </div>                
 
             <h3 id="pingendo">Pingendo&nbsp;<span class="installed">All lab</span></h3>
+            <blockquote class="info">Em análise.</blockquote>
             <p>Faça o download do <a href="https://pingendo.com/">Pingendo</a>.</p>
             
             <h4>Silent Install</h4>
@@ -916,7 +1002,8 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                    "C:\Program Files (x86)\Pingendo\Uninstall.exe"
+                    "%ProgramFiles(x86)%\Pingendo\Uninstall.exe"
+                    "%ProgramFiles%\Pingendo\Uninstall.exe"
                     </code>
                 </pre> 
             </div>         
@@ -928,7 +1015,7 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                    "portugol-studio-2.6.9-windows.exe" --mode unattended
+                    "portugol-studio-2.7.5-windows.exe" --mode unattended
                     </code>
                 </pre>   
             </div>                   
@@ -937,7 +1024,7 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                    "C:\ProgramData\UNIVALI\Portugol Studio\desinstalar.exe" --mode unattended
+                    "%ProgramData%\UNIVALI\Portugol Studio\desinstalar.exe" --mode unattended
                     </code>
                 </pre>                
             </div>
@@ -992,6 +1079,8 @@ load_js: load_assets_js
             </div>
             
             <h3 id="texstudio">TeXstudio&nbsp;<span class="installed">All lab</span></h3>
+            <blockquote class="info">Em análise.</blockquote>
+
             <p>Faça o download do <a href="https://www.texstudio.org/">TeXstudio</a>.</p>
             
             <h4>Silent Install</h4>
@@ -1002,6 +1091,15 @@ load_js: load_assets_js
                     </code>
                 </pre>                  
             </div>
+            <h4>Silent Uninstall</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    "%ProgramFiles%\texstudio\uninstall.exe" /S
+                    "%ProgramFiles(x86)%\texstudio\uninstall.exe" /S
+                    </code>
+                </pre>
+            </div>
 
             <h3 id="freeze">Toolwiz Time Freeze&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do  <a href="http://www.toolwiz.com/lead/toolwiz_time_freeze.php">Toolwiz Time Freeze</a>.</p>
@@ -1011,14 +1109,33 @@ load_js: load_assets_js
             <p>Faça o download do <a href="https://veyon.io/download/">Veyon</a> e instale como cliente.</p>
             
             <h4>Silent Install</h4>
+            <p>Instalação para o cliente.</p>
             <div class="highlight">
                 <pre>
                     <code>
-                    "veyon-4.1.7.0-win64-setup.exe" /S /NoMaster
+                    "veyon-4.7.1.3-win64-setup.exe" /S /NoMaster /NoInterception
                     </code>
-                </pre>                 
-            </div>               
+                </pre>
+            </div>
+
+            <h4>Silent Uninstall</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    "%ProgramFiles%\Veyon\uninstall.exe" /S
+                    </code>
+                </pre>
+            </div>
             
+            <h4>Importar configuração</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    "%ProgramFiles%\Veyon\veyon-cli" config import %PASTAORIGEM%\veyon-cliente.json
+                    </code>
+                </pre>
+            </div>            
+
             <h3 id="visualg">Visual G&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="http://www.apoioinformatica.inf.br/produtos/visualg">Visual G</a>.</p>
             <h4>Silent Install</h4>
@@ -1031,16 +1148,26 @@ load_js: load_assets_js
             </div>
             
             <h3 id="vscode">Visual Studio Code&nbsp;<span class="installed">All lab</span></h3>
-            <p>Faça o download do <a href="https://code.visualstudio.com/">Visual Studio Code</a>.</p>
+            <p>Faça o download do <a href="https://code.visualstudio.com/">Visual Studio Code</a> na versão de sistema.</p>
             
             <h4>Silent Install</h4>
             <div class="highlight">
                 <pre>
                     <code>
-                    "VSCodeSetup-x64-1.28.1.exe" /VERYSILENT /MERGETASKS=!runcode
+                    "VSCodeSetup-x64-1.64.2.exe" /SILENT /NORESTART /MERGETASKS=!runcode
                     </code>
                 </pre>
-            </div>                
+            </div>
+
+            <h4>Silent Uninstall</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    "%ProgramFiles(x86)%\Microsoft VS Code\unins000.exe" /VERYSILENT /NORESTART
+                    "%ProgramFiles%\Microsoft VS Code\unins000.exe" /VERYSILENT /NORESTART
+                    </code>
+                </pre>
+            </div>
             
             <h3 id="vlc">VLC Media Player&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://www.videolan.org/vlc/index.pt-BR.html">VLC Media Player</a>.</p>
@@ -1061,10 +1188,30 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                    xampp-windows-x64-7.3.4-0-VC15-installer.exe --mode unattended
+                    "xampp-windows-x64-8.1.2-0-VS16-installer.exe" --mode unattended --installer-language pt_BR --launchapps 0 --disable-components xampp_filezilla,xampp_mercury,xampp_tomcat,xampp_perl,xampp_webalizer,xampp_sendmail
                     </code>
                 </pre>                
             </div>
+
+            <h4>Permissões para o diretório XAMPP</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    cacls "%SystemDrive%\xampp" /E /P Todos:F
+                    cacls "%SystemDrive%\xampp\xampp-control.ini" /E /P Todos:F
+                    </code>
+                </pre>
+            </div>
+
+            <h4>Silent Uninstall</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    "%SystemDrive%\xampp\uninstall.exe" --mode unattended
+                    rd "%SystemDrive%\xampp" /s /q
+                    </code>
+                </pre>
+            </div> 
 
             <!--Fim conteudo aplicacoes-->
 
@@ -1072,18 +1219,18 @@ load_js: load_assets_js
             <h2>Clone Windows</h2>
 
             <!--Conteudo clone-->
-            <h3 id="dominio">Adicionar o pc no domínio</h3>
+            <h3 id="dominio">Computador no domínio</h3>
             <p>Altere o <b>Nome do Computador</b> e o <b>Grupo de trabalho</b> conforme o <a href="#nome-grupo">laboratório</a>.</p>
 
-            <h3 id="atautocad">Ativar o AutoCAD</h3>           
+            <h3 id="atautocad">Ativar AutoCAD</h3>           
             <p>Execute o <code class="inline">AutoCAD</code> (necessário internet) e siga os passos que aparecer na tela e, informe a <a href="https://docs.google.com/spreadsheets/d/1RaX8ubdo7RuoA8qhwZAWh6ZgoTQsC_E37R8E-21wkHQ/edit#gid=0">chave de ativação</a> caso solicitado.</p>
             <p>Em caso de erro na ativação, remover a pasta <code class="inline">FLEXnet</code> que fica localizado em <code class="inline">C:\ProgramData</code> e, execute o programa novamente.</p>
 
-            <h3 id="atrevit">Ativar o Revit</h3>
+            <h3 id="atrevit">Ativar Revit</h3>
             <p>Execute o <code class="inline">Revit</code> (necessário internet) e siga os passos que aparecer na tela e, informe a <a href="https://docs.google.com/spreadsheets/d/1RaX8ubdo7RuoA8qhwZAWh6ZgoTQsC_E37R8E-21wkHQ/edit#gid=0">chave de ativação</a> caso solicitado.</p>
-            <p>Em caso de erro na ativação, remover a pasta <code class="inline">FLEXnet</code> que fica localizado em <code class="inline">C:\ProgramData</code> e, execute o programa novamente.</p>            
+            <p>Em caso de erro na ativação, remova a pasta <code class="inline">FLEXnet</code>, localizado em <code class="inline">C:\ProgramData</code>.</p>
 
-            <h3 id="timefreeze">Ativar o Toolwiz Time Freeze</h3>
+            <h3 id="timefreeze">Ativar Toolwiz Time Freeze</h3>
             <p>Por último, ative o Toolwiz Time Freeze.</p>
             <!-- Fim clone-->
 
