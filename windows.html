@@ -61,7 +61,7 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                    AD=192.168.0.11
+                    DNS=192.168.0.11
                     
                     Nome: lab1pc01
                     Grupo de Trabalho: ensino.umuarama.local
@@ -95,14 +95,13 @@ load_js: load_assets_js
 
             <h3 id="kb4505658">KB-4505658</h3>
             <p>Patch que remove o horário de verão do Windows 10-x64, versão 1809.</p>
-
             <!--Fim conteudo atualizacoes-->
 
             <!--Conteudo configuracoes-->
             <h2>Configurações</h2>
 
             <blockquote class="info">
-                Se o computador for novo, verifique se o armazenamento está no modo AHCI, habilite suporte a virtualização e caso esteja dando erro em algum boot, ajuste as configurações de Secure Boot.
+            Se o computador for novo, verifique se o armazenamento está no modo AHCI, habilite suporte a virtualização e caso esteja dando erro em algum boot, ajuste as configurações de Secure Boot.
             </blockquote>
 
             <h3 id="energia">Energia&nbsp;<span class="installed">All lab</span></h3>
@@ -110,16 +109,16 @@ load_js: load_assets_js
             <img src="../assets/images/pages/energia.png" alt="Opções de energia">
 
             <h3 id="wallpaper">Definindo o papel de parede padrão IFPR&nbsp;<span class="installed">All lab</span></h3>
-            <p>Faça o <a href="https://drive.google.com/drive/folders/1mFNMKCBx6tvJaPfzSgax-0t9ZrwJIsPn?usp=sharing">download</a>.</p>
+            <p>Baixe o modelo de <a href="https://drive.google.com/drive/folders/1mFNMKCBx6tvJaPfzSgax-0t9ZrwJIsPn?usp=sharing">papel de parede</a>.</p>
             <p>Nos laboratórios, o papel de parede é definido através de GPO.</p>
 
             <h3 id="drivers">Atualizar os drivers&nbsp;<span class="installed">All lab</span></h3>
-            <p>Use softwares como <a href="https://www.drivereasy.com/">EasyDriver</a> ou <a href="https://www.drivermax.com/download.htm">DriverMax</a> para facilitar a vida.</p>
+            <p>Use softwares como <a href="https://www.drivereasy.com/">EasyDriver</a> ou <a href="https://www.drivermax.com/download.htm">DriverMax</a> para realizar as atualizações.</p>
             
             <h3 id="navegador">Navegadores&nbsp;<span class="installed">All lab</span></h3>
-            <p>Configure a página inicial com <b>umuarama.ifpr.edu.br</b>. Nos LABs do IFPR, a configuração é definida pela GPO.</p>
+            <p>Configure a página inicial com <b>https://umuarama.ifpr.edu.br</b>. Nos LABs do IFPR, a configuração é definida pela GPO.</p>
             
-            <h3 id="proxy">Configuração do proxy&nbsp;<span class="installed">All lab</span></h3>
+            <h3 id="proxy">Configuração de proxy&nbsp;<span class="installed">All lab</span></h3>
             <div class="highlight">
                 <pre>
                     <code>
@@ -180,7 +179,6 @@ load_js: load_assets_js
             <blockquote class="info">Configuração para evitar o reparo automático do SO.</blockquote>
 
             <h3 id="servicos">Serviços&nbsp;<span class="installed">All lab</span></h3>
-            <img src="../assets/images/pages/services.png" alt="Serviços">
             <p>Altere a inicialização dos serviços:</p>
             <table>
                 <tr>
@@ -221,7 +219,7 @@ load_js: load_assets_js
                 </tr>
             </table>
 
-            <h4>Gerenciando serviços pelo CMD</h4>
+            <h4>Gerenciando serviços pelo prompt de comando</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -230,11 +228,81 @@ load_js: load_assets_js
                     </code>
                 </pre>
             </div>              
-
-            <h3 id="opcoespastas">Opções de pastas</h3>
-            <img src="../assets/images/pages/opcoes-de-pastas.png" alt="Oções de pastas">
                        
-            <h2>Configurações para Windows 10</h2>
+            <h2>Configurações do Windows 10</h2>
+
+            <h3 id="sistema">Sistema</h3>
+            <h4>Energia e suspensão</h4>
+                <ol>
+                    <li>Tela &rarr; Quando conectado, desligar após &rarr; <b>Nunca</b></li>
+                    <li>Suspender &rarr; Quando conectado, o computador será suspenso após &rarr; <b>Nunca</b></li>
+                    <li>Desempenho e Energia &rarr; Modo de energia &rarr; <b>Melhor Desempenho</b></li>
+                </ol>
+
+            <h3 id="tema">Personalização</h3>
+            <h4>Cores</h4>
+                <ol>
+                    <li>Efeitos de transparência &rarr; <b>Desativado</b></li>
+                </ol>
+            <h4>Tela de bloqueio</h4>
+                <ol>
+                    <li>Tela de Fundo &rarr; <b>Imagem</b></li>
+                    <li>Receba dados interessantes, dicas e muito mais... &rarr; <b>Desativado</b></li>
+                    <li>Mostrar a imagem da tela de fundo da tela de bloqueio do Windows... &rarr; <b>Ativado</b></li>
+                </ol>
+            <h4>Iniciar</h4>
+                <ol>
+                    <li>Mostrar lista de aplicativos no menu Iniciar &rarr; <b>Ativado</b></li>
+                    <li>Todas as outras opções &rarr; <b>Desativadas</b></li>
+                    <li>Escolher quais pastas são exibidas em Iniciar</li>
+                    <ol>
+                        <li>Configurações &rarr; <b>Ativado</b></li>
+                        <li>Pasta pessoal &rarr; <b>Ativado</b></li>
+                        <li>Todas as outras opções &rarr; <b>Desativadas</b></li>
+                    </ol>                
+                </ol>
+            <h4>Barra de Tarefas</h4>
+                <ol>
+                    <li>Bloquear a barra de Tarefas &rarr; <b>Ativado</b></li>
+                    <li>Substituir Prompt de Comando... &rarr; <b>Ativado</b></li>
+                    <li>Todas as outras opções &rarr; <b>Desativadas</b></li>
+                </ol>
+
+            <h3 id="recursos">Aplicativos e recursos</h3>
+            <h4>Inicialização</h4>
+                <ol>
+                    <li>Desativar inicializações <b>desnecessárias</b></li>
+                </ol>
+            <h3 id="jogos">Jogos</h3>
+            <h4>Xbox Game Bar</h4>
+                <ol>
+                    <li>Habilite a Xbox Game Bar... &rarr; <b>Desativado</b></li>
+                </ol>
+            <h4>Modo de Jogo</h4>
+                <ol>
+                    <li>Modo de Jogo &rarr; <b>Desativado</b></li>
+                </ol>
+
+            <h3 id="privacidade">Privacidade</h3>
+            <h4>Geral</h4>
+                <ol>
+                    <li><b>Tudo Desativado</b></li>
+                </ol>
+            <h4>Histórico de atividades</h4>
+                <ol>
+                    <li><b>Tudo Desativado</b></li>
+                </ol>
+            <h4>Aplicativos em segundo plano</h4>
+                <ol>
+                    <li>Permitir a execução de aplicativos em segundo plano &rarr; <b>Desativado</b></li>
+                </ol>
+
+            <h3 id="seguranca">Atualização e Segurança</h3>
+            <h4>Solução de problemas recomendada</h4>
+            <ol>
+                <li><b>Não executar nenhuma solução de problemas</b></li>
+            </ol>
+
             <h3 id="fastboot">Inicialização rápida</h3>
             <p>Esse ajuste é necessário para garantir o desligamento completo do computador.</p>
             <div class="highlight">
@@ -243,23 +311,20 @@ load_js: load_assets_js
                     powercfg.exe /hibernate off
                     </code>
                 </pre>                                
-            </div>            
+            </div>
+            
+            <h3>Propriedades do Sistema</h3>
+            <h4>Aba Avançado</h4>
+            <ol>
+                <li>Desempenho &rarr; Configurações &rarr; Efeitos Visuais &rarr; <b>Ajustar para obter um melhor Desempenho</b></li>
+            </ol>
 
-            <h3 id="xbox">Desativar Barra de jogos&nbsp;<span class="installed">All lab</span></h3>
-            <img src="../assets/images/pages/barra-jogos.png" alt="Desativar barra de jogos">
-         
+            <h3 id="opcoespastas">Opções de pastas</h3>
+            <img src="../assets/images/pages/opcoes-de-pastas.png" alt="Oções de pastas">
+      
             <h3 id="inicializacaowin10">Inicialização&nbsp;<span class="installed">All lab</span></h3>
-            <p>No Windows 10, a configuração da inicialização de programas mudou de local, conforme imagem:</p>
+            <p>Configuração para inicializar mais rápido.</p>
             <img src="../assets/images/pages/inicializacao.png" alt="Inicializacao">
-
-            <h3 id="segundoplano">Aplicativos de segundo plano</h3>
-            <img src="../assets/images/pages/segundoplano.png" alt="Aplicativos de segundo plano">
-
-            <h3 id="confiniciar">Configuração do menu iniciar</h3>
-            <img src="../assets/images/pages/conf-iniciar.png" alt="Configuração do menu iniciar">
-
-            <h3 id="pastasiniciar">Exibição de pastas do menu iniciar</h3>
-            <img src="../assets/images/pages/pastas-iniciar.png" alt="Exibição de pastas do menu iniciar">
 
             <!--Fim conteudo configuracoes-->
 
