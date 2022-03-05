@@ -57,32 +57,32 @@ load_js: load_assets_js
             </blockquote>
 
             <h3 id="dominio">Nome e grupo&nbsp;<span class="installed">All lab</span></h3>
-            <p>Altere o <b>Nome do Computador</b> e o <b>Grupo de trabalho</b> conforme o laboratório.</p>
+            <p>É necessário configurar o computador no domínio, conforme informações abaixo:</p>
             <div class="highlight">
                 <pre>
                     <code>
                     DNS=192.168.0.11
                     
-                    Nome: lab1pc01
-                    Grupo de Trabalho: ensino.umuarama.local
+                    NomePC: lab1pc01
+                    Domínio: ensino.umuarama.local
                     
-                    Nome: lab2pc01
-                    Grupo de Trabalho: ensino.umuarama.local
+                    NomePC: lab2pc01
+                    Domínio: ensino.umuarama.local
                     
-                    Nome: lab3pc01
-                    Grupo de Trabalho: ensino.umuarama.local
+                    NomePC: lab3pc01
+                    Domínio: ensino.umuarama.local
                     
-                    Nome: lab4pc01
-                    Grupo de Trabalho: ensino.umuarama.local
+                    NomePC: lab4pc01
+                    Domínio: ensino.umuarama.local
                     
                     Nome: lab5pc01
-                    Grupo de Trabalho: ensino.umuarama.local
+                    Domínio: ensino.umuarama.local
                     </code>
                 </pre>                
             </div>
 
             <h3 id="admin">Usuário administrador&nbsp;<span class="installed">All lab</span></h3>
-            <p>Após a instalação do SO, crie o usuário <b>administrador IFPR</b> com a senha disponível na <a href="https://goo.gl/A3129L">planilha</a>.</p>
+            <p>Após a instalação do SO, crie o usuário administrador <b>IFPR</b> e defina a senha padrão disponível <a href="https://goo.gl/A3129L">planilha</a>.</p>
             <!--Fim conteudo instalacao-->
 
             <!--Conteudo atualizacoes-->
@@ -186,8 +186,8 @@ load_js: load_assets_js
                     <th>Configuração</th>
                 </tr>
                 <tr>
-                    <td>Windows Defender</td>
-                    <td>Desativado via GPO</td>
+                    <td>Windows Defender ou Windows Defender Firewall</td>
+                    <td>Automático via GPO</td>
                 </tr>
                 <tr>
                     <td>Windows Update</td>
@@ -198,24 +198,12 @@ load_js: load_assets_js
                     <td>Desativado via GPO</td>
                 </tr>
                 <tr>
-                    <td>Desfragmentador ou Otimizador de Discos</td>
-                    <td>Desativado via GPO</td>
-                </tr>
-                <tr>
-                    <td>Serviço do Google Update (gupdate)</td>
-                    <td>Desativado via GPO</td>
-                </tr>
-                <tr>
-                    <td>Serviço do Google Update (gupdate)</td>
-                    <td>Desativado via GPO</td>
-                </tr>
-                <tr>
-                    <td>Serviço do Google Update (gupdatem)</td>
+                    <td>Desfragmentador ou Otimizador de Discos/Unidades</td>
                     <td>Desativado via GPO</td>
                 </tr>
                 <tr>
                     <td>OCS Iventory</td>
-                    <td>Atraso na inicialização - manualmente</td>
+                    <td>Defina como = Atraso na inicialização</td>
                 </tr>
             </table>
 
@@ -322,7 +310,12 @@ load_js: load_assets_js
             <h3 class="propriedades">Propriedades do Sistema</h3>
             <h4>Aba Avançado</h4>
             <ol>
-                <li>Desempenho &rarr; Configurações &rarr; Efeitos Visuais &rarr; <b>Ajustar para obter um melhor Desempenho</b></li>
+                <li>Desempenho &rarr; Configurações &rarr; Efeitos Visuais &rarr; <b>Personalizar</b></li>
+                <ol>
+                    <li>Mostrar sombras sob o ponteiro do mouse &rarr; Marcar caixa</li>
+                    <li>Usar sombras subjacentes para rótulos... &rarr; Marcar caixa</li>
+                    <li>Desmarcar todas as caixas de outras opções</li>
+                </ol>
             </ol>
 
             <h3 id="opcoespastas">Opções de pastas</h3>
@@ -554,17 +547,8 @@ load_js: load_assets_js
             
             <h3 id="geogebra">Geogebra&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://drive.google.com/file/d/1Xk2OZZPSDc73htRjyqxuHVGqnPhjozKb/view?usp=sharing">Geogebra</a>.</p>
-            <p>Instale na pasta <code class="inline">C:\Portable</code>.</p>
-            
-            <h4>Silent Install</h4>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    msiexec /i "GeoGebra-Windows-Installer-6-0-411-0.exe" ALLUSERS=2 /qn
-                    </code>
-                </pre>                  
-            </div>
-            
+            <p>Extraia os arquivos na pasta <code class="inline">C:\Portable</code>.</p>
+                        
             <h3 id="gimp">Gimp&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://www.gimp.org/">Gimp</a>.</p>
             
@@ -824,6 +808,9 @@ load_js: load_assets_js
             <p>Os labs possuem o Windows Professional 64bits configurado.</p>
 
             <h3 id="miktex">MikTex&nbsp;<span class="installed">All lab</span></h3>
+            
+            <blockquote class="info">Em análise.</blockquote>
+
             <p>Faça o download do <a href="https://miktex.org/download">MikTex</a>.</p>
             
             <h4>Silent Install</h4>
@@ -1121,7 +1108,7 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                    "veyon-4.7.1.3-win64-setup.exe" /S /NoMaster /NoInterception
+                    "veyon-4.7.1.3-win64-setup.exe" /S /NoMaster
                     </code>
                 </pre>
             </div>
@@ -1145,17 +1132,9 @@ load_js: load_assets_js
             </div>            
 
             <h3 id="visualg">Visual G&nbsp;<span class="installed">All lab</span></h3>
-            <p>Faça o download do <a href="http://www.apoioinformatica.inf.br/produtos/visualg">Visual G</a>.</p>
-            
-            <h4>Silent Install</h4>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    "visualg-setup.exe" /silent
-                    </code>
-                </pre>
-            </div>
-            
+            <p>Faça o download do <a href="https://visualg3.com.br/">Visual G</a>.</p>
+            <p>Extraia os arquivos para a pasta <b>C:\Portable</b> e crie um link para a Área de trabalho do aluno.</p>
+          
             <h3 id="vscode">Visual Studio Code&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://code.visualstudio.com/">Visual Studio Code</a> na versão de sistema.</p>
             
@@ -1229,7 +1208,7 @@ load_js: load_assets_js
 
             <!--Conteudo clone-->
             <h3 id="dominio">Computador no domínio</h3>
-            <p>Altere o <b>Nome do Computador</b> e o <b>Grupo de trabalho</b> conforme o <a href="#nome-grupo">laboratório</a>.</p>
+            <p>Adicione o Computador ao domínio conforme <a href="#nome-grupo">orientações</a>.</p>
 
             <h3 id="atautocad">Ativar AutoCAD</h3>           
             <p>Execute o <code class="inline">AutoCAD</code> (necessário internet) e siga os passos que aparecer na tela e, informe a <a href="https://docs.google.com/spreadsheets/d/1RaX8ubdo7RuoA8qhwZAWh6ZgoTQsC_E37R8E-21wkHQ/edit#gid=0">chave de ativação</a> caso solicitado.</p>
