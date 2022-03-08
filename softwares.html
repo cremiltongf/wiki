@@ -1,0 +1,153 @@
+---
+title:  "Softwares - Wiki"
+permalink: /softwares/
+load_js: load_assets_js
+---
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }}</title>
+    {% include head.html %}
+</head>
+<body id="topo" class="menu-mobile">
+    {% include header.html %}
+    <p class="btn-container show-btn"><a href="#" class="toggle-menu btn-menu">Sumário</a></p>
+    <main class="conteudo-container">
+        <aside class="sidebar">
+            <menu class="menu">
+                <p class="hidden-btn"><a href="#" class="toggle-menu btn-menu">Fechar Sumário</a></p>
+                {% include menu-softwares.html %}
+            </menu>
+        </aside>
+        <article class="conteudo">
+
+            <h1>Instalações de Programas</h1>
+
+            <h2 id="chrome">Chrome</h2>
+            
+            <h3>Silent install</h3>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sc config "gupdate" start= auto
+                    sc config "gupdatem" start= auto
+                    sc config "GoogleChromeElevationService" start= auto
+
+                    "ChromeStandaloneSetup64.exe" /silent /install
+                    IF %ERRORLEVEL% EQU 0 echo CHROME instalado com sucesso                    
+                    </code>
+                </pre>
+            </div>
+
+            <h3>Atalhos</h3>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    del "C:\Users\aluno\Desktop\Google Chrome.lnk"
+                    del "C:\Users\Public\Desktop\Google Chrome.lnk"               
+                    </code>
+                </pre>
+            </div>
+
+            <h2 id="composer">Composer</h2>
+
+            <h2 id="firefox">Firefox</h2>
+            
+            <h3>Silent install</h3>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    "Firefox Setup 97.0.exe" /s
+                    IF %ERRORLEVEL% EQU 0 echo FIREFOX instalado com sucesso
+                    </code>
+                </pre>
+            </div>
+
+            <h3>Silent uninstall</h3>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    "%ProgramFiles%\Mozilla Firefox\uninstall\helper.exe" /S
+                    </code>
+                </pre>
+            </div>
+
+            <h3>Atalhos</h3>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    del "C:\Users\aluno\Desktop\Firefox.lnk"
+                    del "C:\Users\Public\Desktop\Firefox.lnk"                    
+                    </code>
+                </pre>
+            </div>
+
+
+            <h2 id="fluxovento">Fluxovento</h2>
+            <h3>Silent install</h3>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    "fluxoventosetup.exe" /v/qn
+                    IF %ERRORLEVEL% EQU 0 echo FLUXOVENTO instalado com sucesso 
+                    </code>
+                </pre>
+            </div>
+
+            <h2 id="git">Git</h2>
+            <h3>Silent install</h3>
+            <div class="highlight">
+                <pre>
+                    <code>
+
+                    </code>
+                </pre>
+            </div>
+
+            <h3>Silent uninstall</h3>
+            <div class="highlight">
+                <pre>
+                    <code>
+
+                    </code>
+                </pre>
+            </div>
+
+            <h3>Configuração</h3>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    
+                    </code>
+                </pre>
+            </div>
+
+            <h2 id="java">Java JDK</h2>
+
+            <h2 id="libre">LibreOffice</h2>
+
+            <h2 id="netbeans">NetBeans</h2>
+
+            <h2 id="nodejs">NodeJS</h2>
+
+            <h2 id="git">Portugol</h2>
+
+            <h2 id="git">Veyon</h2>
+
+            <h2 id="git">Visual G</h2>
+
+            <h2 id="git">VLC media player</h2>
+
+            <h2 id="git">Visual Studio Code</h2>
+
+            <h2 id="xampp">XAMPP</h2>
+
+        </article>
+    </main>
+    {% include footer.html %}
+</body>
+</html>
