@@ -104,7 +104,7 @@ a.item-nav{
     display: block;
     padding: 0 1rem;
 }
-@media (max-width: 880px){
+@media (max-width: 884px){
     .header{
         justify-content: flex-start;
         margin-bottom: 0;
