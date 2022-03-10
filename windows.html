@@ -110,13 +110,13 @@ load_js: load_assets_js
 
             <h3 id="wallpaper">Definindo papel de parede padrão IFPR&nbsp;<span class="installed">All lab</span></h3>
             <p>Baixe o modelo de <a href="https://drive.google.com/drive/folders/1mFNMKCBx6tvJaPfzSgax-0t9ZrwJIsPn?usp=sharing">papel de parede</a>.</p>
-            <p>Nos laboratórios, o papel de parede é definido através de GPO.</p>
+            <p>Nos LABs o papel de parede é definida pela GPO.</p>
 
             <h3 id="drivers">Atualização de drivers&nbsp;<span class="installed">All lab</span></h3>
             <p>Use softwares como <a href="https://www.drivereasy.com/">EasyDriver</a> ou <a href="https://www.drivermax.com/download.htm">DriverMax</a> para realizar as atualizações.</p>
             
             <h3 id="navegador">Navegadores&nbsp;<span class="installed">All lab</span></h3>
-            <p>Configure a página inicial com <b>https://umuarama.ifpr.edu.br</b>. Nos LABs do IFPR, a configuração é definida pela GPO.</p>
+            <p>Deixe página inicial para abrir o portal de Umuarama: <b>https://umuarama.ifpr.edu.br</b>. Nos LABs a configuração é definida pela GPO.</p>
             
             <h3 id="proxy">Configuração de proxy&nbsp;<span class="installed">All lab</span></h3>
             <div class="highlight">
@@ -127,7 +127,7 @@ load_js: load_assets_js
                 </pre>
             </div>
             <img src="../assets/images/pages/proxy.png" alt="Proxy">
-            <p>Nos LABs do IFPR, a configuração é realizada através de GPO.</p>
+            <p>Nos LABs do IFPR, a configuração é definida pela GPO.</p>
             
             <h3 id="gerenciador">Gerenciador de Tarefas&nbsp;<span class="installed">All lab</span></h3>
             <p>Desative pelo <code class="inline">gpedit.msc</code>. Nos LABs do IFPR, a configuração é definida pela GPO.</p>
@@ -136,7 +136,7 @@ load_js: load_assets_js
             <img src="../assets/images/pages/msconfig.png" alt="msconfig">
             
             <h3 id="senhas">Senhas&nbsp;<span class="installed">All lab</span></h3>
-            <p>Coloque um <b>txt</b> na área de trabalho com as senhas, caso necessário para as aplicações.</p>
+            <p>Coloque um <b>txt</b> na área de trabalho com as senhas, caso alguma aplicação necessite.</p>
 
             <h3 id="reparo">Reparo automático&nbsp;<span class="installed">All lab</span></h3>
 
@@ -198,9 +198,13 @@ load_js: load_assets_js
                     <td>Desativado via GPO</td>
                 </tr>
                 <tr>
-                    <td>Desfragmentador ou Otimizador de Discos/Unidades</td>
+                    <td>Notícias e Interesses</td>
                     <td>Desativado via GPO</td>
                 </tr>
+                <tr>
+                    <td>Desfragmentador ou Otimizador de Discos/Unidades</td>
+                    <td>Desativado via GPO</td>
+                </tr>                
                 <tr>
                     <td>OCS Iventory</td>
                     <td>Defina como = Atraso na inicialização</td>
@@ -217,12 +221,12 @@ load_js: load_assets_js
                 </pre>
             </div>              
                        
-            <h2>Configurações do Windows 10</h2>
+            <h2>Mais configurações para o Windows 10</h2>
 
             <h3 id="sistema">Sistema</h3>
             <h4>Notificações e ações</h4>
                 <ol>
-                    <li><b>Desativar tudo</b></li>
+                    <li><b>Desativar</b> tudo</li>
                 </ol>
 
             <h4>Energia e suspensão</h4>
@@ -280,7 +284,6 @@ load_js: load_assets_js
             <h4>Geral</h4>
                 <ol>
                     <li>Permitir que o Windows controle a abertura de aplicativos... &rarr; <b>Ativado</b></li>
-                    <li>Mostrar-me o conteúdo sugerido no app Configurações... &rarr; <b>Ativado</b></li>
                     <li><b>Desativar</b> as demais opções</li>
                 </ol>
             <h4>Histórico de atividades</h4>
@@ -1210,7 +1213,7 @@ load_js: load_assets_js
 
             <!--Conteudo clone-->
             <h3 id="dominio">Computador no domínio</h3>
-            <p>Adicione o Computador ao domínio conforme <a href="#nome-grupo">orientações</a>.</p>
+            <p>Adicione o Computador ao domínio conforme <a href="#dominio">orientações</a>.</p>
 
             <h3 id="atautocad">Ativar AutoCAD</h3>           
             <p>Execute o <code class="inline">AutoCAD</code> (necessário internet) e siga os passos que aparecer na tela e, informe a <a href="https://docs.google.com/spreadsheets/d/1RaX8ubdo7RuoA8qhwZAWh6ZgoTQsC_E37R8E-21wkHQ/edit#gid=0">chave de ativação</a> caso solicitado.</p>
@@ -1221,7 +1224,7 @@ load_js: load_assets_js
             <p>Em caso de erro na ativação, remova a pasta <code class="inline">FLEXnet</code>, localizado em <code class="inline">C:\ProgramData</code>.</p>
 
             <h3 id="timefreeze">Habilitar Toolwiz Time Freeze</h3>
-            <p>Por último, ative o Toolwiz Time Freeze.</p>
+            <p>Por último, ative o <a href="https://wiki.cremilton.com/veyon/#desabilitar">Toolwiz Time Freeze</a>.</p>
             <!-- Fim clone-->
 
         </article>
