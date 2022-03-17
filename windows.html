@@ -63,6 +63,7 @@ load_js: load_assets_js
                     <code>
                     DNS=192.168.0.11
                     
+                    #SO perfil padrao
                     NomePC: lab1pc01
                     Domínio: ensino.umuarama.local
                     
@@ -75,7 +76,23 @@ load_js: load_assets_js
                     NomePC: lab4pc01
                     Domínio: ensino.umuarama.local
                     
-                    Nome: lab5pc01
+                    NomePC: lab5pc01
+                    Domínio: ensino.umuarama.local
+
+                    #SO perfil informatica
+                    NomePC: lab1pc01-info
+                    Domínio: ensino.umuarama.local
+                    
+                    NomePC: lab2pc01-info
+                    Domínio: ensino.umuarama.local
+                    
+                    NomePC: lab3pc01-info
+                    Domínio: ensino.umuarama.local
+                    
+                    NomePC: lab4pc01-info
+                    Domínio: ensino.umuarama.local
+                    
+                    NomePC: lab5pc01-info
                     Domínio: ensino.umuarama.local
                     </code>
                 </pre>                
@@ -84,18 +101,6 @@ load_js: load_assets_js
             <h3 id="admin">Usuário administrador&nbsp;<span class="installed">All lab</span></h3>
             <p>Após a instalação do SO, crie o usuário administrador <b>IFPR</b> e defina a senha padrão disponível <a href="https://goo.gl/A3129L">planilha</a>.</p>
             <!--Fim conteudo instalacao-->
-
-            <!--Conteudo atualizacoes-->
-            <h2>Atualizações</h2>
-            <h3 id="sp1">Service Pack 1</h3>
-            <p>Atualize o Windows 7 com o <a href="https://www.microsoft.com/pt-BR/download/details.aspx?id=5842">Service Pack 1.</a></p>
-
-            <h3 id="kb4507704">KB-4507704</h3>
-            <p>Patch que remove o horário de verão do Windows 7-x64.</p>
-
-            <h3 id="kb4505658">KB-4505658</h3>
-            <p>Patch que remove o horário de verão do Windows 10-x64, versão 1809.</p>
-            <!--Fim conteudo atualizacoes-->
 
             <!--Conteudo configuracoes-->
             <h2>Configurações</h2>
@@ -154,24 +159,6 @@ load_js: load_assets_js
                 <pre>
                     <code>
                     bcdedit /set recoveryenabled NO
-                    </code>
-                </pre>                
-            </div>
-
-            <h4>Ativar no Windows 7</h4>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    bcdedit /set {default} bootstatuspolicy displayallfailures
-                    </code>
-                </pre>                
-            </div>
-
-            <h4>Ativar no Windows 10</h4>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    bcdedit /set recoveryenabled YES
                     </code>
                 </pre>                
             </div>
@@ -296,12 +283,6 @@ load_js: load_assets_js
                     <li>Escolha quais aplicativos podem ser executados... &rarr; <b>Desativar tudo</b></li>
                 </ol>
 
-            <h3 id="seguranca">Atualização e Segurança</h3>
-            <h4>Solução de problemas recomendada</h4>
-            <ol>
-                <li><b>Não executar nenhuma solução de problemas</b></li>
-            </ol>
-
             <h3 id="fastboot">Fast Boot</h3>
             <p>Esse ajuste é necessário para garantir o desligamento completo do computador.</p>
             <div class="highlight">
@@ -326,10 +307,6 @@ load_js: load_assets_js
             <h3 id="opcoespastas">Opções de pastas</h3>
             <img src="../assets/images/pages/opcoes-de-pastas.png" alt="Oções de pastas">
       
-            <h3 id="startwin10">Inicialização&nbsp;<span class="installed">All lab</span></h3>
-            <p>Configuração para inicializar mais rápido.</p>
-            <img src="../assets/images/pages/inicializacao.png" alt="Inicializacao">
-
             <!--Fim conteudo configuracoes-->
 
             <!--Conteudo aplicacoes-->
@@ -357,12 +334,7 @@ load_js: load_assets_js
                     </code>
                 </pre>                   
             </div>                
-            
-            <h3 id="flash">Adobe Flash Player&nbsp;<span class="installed">All lab</span></h3>
-            <blockquote class="info">
-                O programa foi descontinuado pela Adobe.
-            </blockquote>
-                        
+                                  
             <h3 id="astah">Astah Community&nbsp;<span class="installed">All lab</span></h3>
             <p>O software foi descontinuado, mas usamos a última versão Community disponibilizado pela desenvolvedora.</p>
             <p>Faça o download do instalador disponibilizado na <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">pasta</a>. Esse programa requer a instalação do Java SDK.</p>
@@ -659,18 +631,6 @@ load_js: load_assets_js
                 </pre>                 
             </div>               
             
-            <h3 id="burn">IMG Burn&nbsp;<span class="installed">All lab</span></h3>
-            <p>Faça o download do <a href="http://www.imgburn.com/index.php?act=download">IMG Burn</a>.</p>
-            
-            <h4>Silent Install</h4>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    "Setup_ImgBurn_2.5.8.0.exe" /S
-                    </code>
-                </pre>                 
-            </div>               
-            
             <h3 id="inkscape">Inkscape&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="https://inkscape.org/pt-br/">Inkscape</a>.</p>
             
@@ -939,9 +899,6 @@ load_js: load_assets_js
             A código da licença muda conforme a versão do Pack!
             </blockquote>
 
-            <h3 class="#pandoc">Pandoc&nbsp;<span class="installed">All lab</span></h3>
-            <blockquote class="info">Em análise.</blockquote>
-
             <p>Faça o download do  <a href="https://github.com/jgm/pandoc/releases/latest">Pandoc</a>.
             <p>O pandoc depende de MikTex para funcionar.</p>
             
@@ -987,25 +944,6 @@ load_js: load_assets_js
             <h3 id="pingendo">Pingendo&nbsp;<span class="installed">All lab</span></h3>
             <blockquote class="info">Em análise.</blockquote>
             <p>Faça o download do <a href="https://pingendo.com/">Pingendo</a>.</p>
-            
-            <h4>Silent Install</h4>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    "Pingendo-Setup-4.1.17.exe" /S
-                    </code>
-                </pre>                
-            </div>
-
-            <h4>Silent Uninstall</h4>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    "%ProgramFiles(x86)%\Pingendo\Uninstall.exe"
-                    "%ProgramFiles%\Pingendo\Uninstall.exe"
-                    </code>
-                </pre> 
-            </div>         
             
             <h3 id="portugol">Portugol Stúdio&nbsp;<span class="installed">All lab</span></h3>
             <p>Faça o download do <a href="http://lite.acad.univali.br/portugol/">Portugol Stúdio</a>.</p>
@@ -1225,6 +1163,9 @@ load_js: load_assets_js
 
             <h3 id="timefreeze">Habilitar Toolwiz Time Freeze</h3>
             <p>Por último, ative o <a href="https://wiki.cremilton.com/veyon/#desabilitar">Toolwiz Time Freeze</a>.</p>
+
+            <h3 id="exec">Executar softwares</h3>
+            <p>Executar os softwares ao menos uma vez.</p>
             <!-- Fim clone-->
 
         </article>
