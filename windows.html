@@ -191,7 +191,15 @@ load_js: load_assets_js
                 <tr>
                     <td>Desfragmentador ou Otimizador de Discos/Unidades</td>
                     <td>Desativado via GPO</td>
-                </tr>                
+                </tr>
+                <tr>
+                    <td>SuperFetch ou SysMain</td>
+                    <td>Manual via GPO</td>
+                </tr>
+                <tr>
+                    <td>Windows Search</td>
+                    <td>Manual via GPO</td>
+                </tr>
                 <tr>
                     <td>OCS Iventory</td>
                     <td>Defina como = Atraso na inicialização</td>
@@ -336,8 +344,11 @@ load_js: load_assets_js
             </div>                
                                   
             <h3 id="astah">Astah Community&nbsp;<span class="yes">All lab</span></h3>
-            <p>O software foi descontinuado, mas usamos a última versão Community disponibilizado pela desenvolvedora.</p>
-            <p>Faça o download do instalador disponibilizado na <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">pasta</a>. Esse programa requer a instalação do Java SDK.</p>
+            <p>A versão community foi oficialmente descontinuado.</p>
+            <p>Faça o download da <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">última versão</a> disponibilizada.</p>
+            <blockquote class="info">
+                Esse programa depende do Java JRE.
+            </blockquote>
             
             <h4>Silent Install</h4>
             <div class="highlight">
@@ -654,7 +665,7 @@ load_js: load_assets_js
             
             <h3 id="ireport">IReport Designer&nbsp;<span class="yes">All lab</span></h3>
             <p>Faça o download do  <a href="https://community.jaspersoft.com/project/ireport-designer">IReport</a>.</p>
-            <p>Indique o Java (Requer JDK7) manualmente alterando o arquivo <code class="inline">ireport.conf</code>, localizado em:</p>
+            <p>Defina a versão do Java JDK para o programa, alterando o arquivo <code class="inline">ireport.conf</code>, localizado em:</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -662,7 +673,7 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
-            <p>Descomente a linha e adicione o caminho Java JDK:</p>
+            <p>Descomente a linha e faça as devidas alterações:</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -670,10 +681,12 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
-            <p>Altere a versão do JDK de acordo com a versão do 7 instalado.</p>
+            <blockquote class="">
+                Esse progrmama depende do Java JDK na versão 7.
+            </blockquote>
 
             <h3 id="jdk7">Java JDK 7&nbsp;<span class="yes">All lab</span></h3>
-            <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">JDK 7</a>. Necessário para o IReport Designer.</p>
+            <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Java JDK 7</a>.</p>
             
             <h4>Silent Install</h4>
             <div class="highlight">
@@ -701,7 +714,7 @@ load_js: load_assets_js
             </div>
 
             <h3 id="jdk8">Java JDK 8&nbsp;<span class="yes">All lab</span></h3>
-            <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">JDK 8</a>.</p>
+            <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Java JDK 8</a>.</p>
 
             <h3 id="var">Variáveis de Java para o SO&nbsp;<span class="yes">All lab</span></h3>
             <blockquote class="info">
