@@ -530,7 +530,7 @@ load_js: load_assets_js
                 </pre>
             </div>
             
-            <h3 id="fluxovento">Fluxovento&nbsp;<span class="no">lab1</span><span class="no">lab2</span><span class="no">lab3</span><span class="no">lab4</span><span class="yes">lab5</span></h3>
+            <h3 id="fluxovento">Fluxovento&nbsp;<span class="yes">All</span></h3>
             <p>Faça o download do <a href="http://webserver2.tecgraf.puc-rio.br/etools/fluxovento/">Fluxovento</a>.</p>
             
             <h4>Silent Install</h4>
@@ -917,16 +917,7 @@ load_js: load_assets_js
                     </code>
                 </pre>                  
             </div>              
-                        
-            <h4>Silent Install</h4>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    "npp.7.5.9.Installer.exe" /S
-                    </code>
-                </pre>                  
-            </div>                   
-            
+           
             <h3 id="ocs">OCS Iventory&nbsp;<span class="yes">All lab</span></h3>
             <p>Faça o download do instalador disponibilizado na <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">pasta</a>.</p>
             
@@ -948,48 +939,6 @@ load_js: load_assets_js
             <blockquote class="info">
             A código da licença muda conforme a versão do Pack!
             </blockquote>
-
-            <p>Faça o download do  <a href="https://github.com/jgm/pandoc/releases/latest">Pandoc</a>.
-            <p>O pandoc depende de MikTex para funcionar.</p>
-            
-            <h4>Silent Install</h4>
-            <div class="highlight">
-                <pre>
-                    <code>
-                        msiexec /i "pandoc-2.17.1.1-windows-x86_64.msi" /qb /norestart
-                    </code>
-                </pre>                
-            </div>
-
-            <h4>Silent Uninstall</h4>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    msiexec /x {6F5C994F-C2FF-4B0F-B015-C689BEC76FE7} /qn /norestart
-                    msiexec /x "%SOFTWARES%\pandoc-2.10-windows-x86_64.msi" /qn /norestart
-                    rd "%ProgramFiles%\Pandoc" /s /q
-                    rd "%ProgramFiles(x86)%\Pandoc" /s /q
-                    rd "C:\Users\kenobi\AppData\Local\Pandoc" /s /q
-                    rd "C:\Users\aluno\AppData\Local\Pandoc" /s /q
-                    rd "C:\Users\ifpr\AppData\Local\Pandoc" /s /q
-                    rd "C:\Users\administrator\AppData\Local\Pandoc" /s /q
-                    rd "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Pandoc" /s /q
-                    </code>
-                </pre>
-            </div>
-            
-            <h4>Testando Pandoc</h4>
-            <p>Execute o comando abaixo no <code class="inline">cmd</code>.</p>
-            <blockquote class="info">
-            É necessário criar um arquivo com marcação em Markdown para o teste.
-            </blockquote>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    pandoc exemplo.md -o exemplo.pdf
-                    </code>
-                </pre>                
-            </div>                
 
             <h3 id="pingendo">Pingendo&nbsp;<span class="yes">All lab</span></h3>
             <blockquote class="info">Em análise.</blockquote>
