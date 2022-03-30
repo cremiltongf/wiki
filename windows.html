@@ -491,15 +491,12 @@ load_js: load_assets_js
                     <code>
                     C:\ProgramData\Microsoft\Windows\Start Menu\Programs
                     </code>
-                </pre>                
+                </pre>
             </div>
 
             <h3 id="eclipse">Eclipse Java Mars&nbsp;<span class="yes">All lab</span></h3>
             <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Eclipse</a> e disponibilize em <b>C:\Portable</b>.
-            
-            <h4>Plugins</h4>
-            <p>Windows Builder e Swing já inclusa nessa versão.</p>
-            
+
             <h3 id="firefox">Firefox&nbsp;<span class="yes">All lab</span></h3>
             <p>Faça o download do <a href="https://www.mozilla.org/pt-BR/firefox/all/">Firefox</a>.</p>
             
@@ -693,12 +690,21 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
-            <blockquote class="">
-                Esse progrmama depende do Java JDK na versão 7.
+            <blockquote class="info">
+                Esse programa depende do Java JDK na versão 7.
             </blockquote>
 
             <h3 id="jre">Java JRE&nbsp;<span class="yes">All lab</span></h3>
             <p>Faça o download do <a href="https://www.java.com/pt-BR/download/manual.jsp">Java JRE</a>.</p>
+            
+            <h4>Silent Install</h4>
+            <div class="highlight">
+            <pre>
+                <code>
+                "jre-8u321-windows-x64.exe" /s AUTO_UPDATE=Disable
+                </code>
+            </pre>                
+            </div>
 
             <h3 id="jdk7">Java JDK 7&nbsp;<span class="yes">All lab</span></h3>
             <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Java JDK 7</a>.</p>
@@ -710,7 +716,7 @@ load_js: load_assets_js
                     "jdk-7u80-windows-x64.exe" /s
                     </code>
                 </pre>                  
-            </div>              
+            </div>
 
             <h4>Silent Uninstall</h4>
             <div class="highlight">
@@ -718,9 +724,6 @@ load_js: load_assets_js
                     <code>
                     Caminho registro-ID
                     64x - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
-                    32x - HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall
-                    
-                    ID DA INSTALACAO="26A24AE4-039D-4CA4-87B4-2F06417079FF"
                     
                     #remocao
                     start /wait msiexec /x {26A24AE4-039D-4CA4-87B4-2F06417079FF} /qn /norestart
@@ -728,25 +731,44 @@ load_js: load_assets_js
                 </pre>                
             </div>
 
-            <h3 id="jdk8">Java JDK 8&nbsp;<span class="yes">All lab</span></h3>
-            <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Java JDK 8</a>.</p>
+            <h3 id="jdk8">Java JDK 17&nbsp;<span class="yes">All lab</span></h3>
+            <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Java JDK 17</a>.</p>
+
+            <h4>Silent Install</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    start /wait msiexec /i "jdk-17_windows-x64_bin.msi" /qn /norestart
+                    </code>
+                </pre>
+            </div>
+
+            <h4>Silent Uninstall</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    Caminho registro-ID
+                    64x - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
+                    
+                    #remocao
+                    start /wait msiexec /x {26A24AE4-039D-4CA4-87B4-2F06417079FF} /qn /norestart
+                    </code>
+                </pre>                
+            </div>
 
             <h3 id="var">Variáveis de Java para o SO&nbsp;<span class="yes">All lab</span></h3>
             <blockquote class="info">
-            Crie as variáveis para a última versão do Java JDK instalado. No meu caso, possuo duas instalações, o JDK7 por causa do IReport, e o JDK 8 para os programas que necessitam de uma versão mais recente.
+            Crie as variáveis para a última versão do Java JDK instalado.
             </blockquote>
 
             <h4>Variáveis via Propriedades do Sistema</h4>
-            <p>Acesse as <b>Propriedades do Sistema</b> para configurar as variáveis. Neste exemplo, estou configurando o <b>JDK 1.8.0_191</b>:</p>
+            <p>Acesse as <b>Propriedades do Sistema</b> para configurar as variáveis. Neste exemplo, estou configurando o <b>JDK 17</b>:</p>
             <img src="../assets/images/pages/variavel-java.png" alt="Propriedades do Sistema">
             <div class="highlight">
                 <pre>
                     <code>
                     JAVA_HOME
-                    C:\Program Files\Java\jdk1.8.0_191
-                    
-                    CLASSPATH
-                    .;%JAVA_HOME%\lib;%JAVA_HOME%\lib\tools.jar;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\htmlconverter.jar;%JAVA_HOME%\jre\lib;%JAVA_HOME%\jre\lib\rt.jar
+                    C:\Program Files\Java\jdk-17.0.2
                     </code>
                 </pre>                
             </div>
