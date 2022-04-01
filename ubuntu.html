@@ -183,49 +183,41 @@ load_js: load_assets_js
             <p>Não é legal deixar históricos de downloads e etc.</p>
 
             <h3 id="proxy">Configuração de Proxy&nbsp;<span class="yes">All lab</span></h3>
+            <h4>Pela interface</h4>
             <img src="../assets/images/pages/ubuntu-proxy.png" alt="Configuração do Proxy">
             
             <h4>Pelo terminal</h4>
-            <p>Crie o arquivo <code class="inline">proxy_var.sh</code> em <code class="inline">/etc/profile.d/</code> com o seguinte conteúdo:</p>
+            <p>Adicione ao arquivo <code class="inline">/etc/environment</code> o seguinte conteúdo:</p>
             <div class="highlight">
-                <pre>
+            <pre>
                 <code>
-                #all user
-                export all_proxy="socks://192.168.0.6:3128/"
                 export http_proxy="http://192.168.0.6:3128/"
                 export https_proxy="http://192.168.0.6:3128/"
                 export ftp_proxy="http://192.168.0.6:3128/"
-                export no_proxy="localhost,127.0.0.1"
-
-                #for curl
-                export ALL_PROXY="socks://192.168.0.6:3128/"
-                export HTTP_PROXY="http://192.168.0.6:3128/"
-                export HTTPS_PROXY="http://192.168.0.6:3128/"
-                export FTP_PROXY="http://192.168.0.6:3128/"
-                export NO_PROXY="localhost,127.0.0.1"
+                export no_proxy="localhost,127.0.0.1,::1"
                 </code>
-                </pre>
+            </pre>
             </div>
             
-            <p>Para testar as variáveis de ambiente, execute no terminal:</p>
+            <p>Realize os testes:</p>
             <div class="highlight">
                 <pre>
                     <code>
-                        source /etc/profile.d/proxy_var.sh
+                        source /etc/environment
                     </code>
                 </pre>
             </div>
 
+            <h4>Para o APT</h4>
             <p>Para o <code class="inline">apt-get</code>, crie um arquivo <code class="inline">apt.conf</code> 
-            em <code class="inline">/etc/apt/apt.conf.d/</code>, como o seguinte código</p>
+            em <code class="inline">/etc/apt</code>, como o seguinte código</p>
             <div class="highlight">
-                <pre>
+            <pre>
                 <code>
                 Acquire::http::proxy "http://192.168.0.6:3128/";
                 Acquire::https::proxy "https://192.168.0.6:3128/";
-                Acquire::ftp::proxy "ftp://192.168.0.6:3128/";
                 </code>
-                </pre>
+            </pre>
             </div>
 
             <!--Fim conteudo configuracoes-->
