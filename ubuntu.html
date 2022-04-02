@@ -27,7 +27,7 @@ load_js: load_assets_js
             <h1>Imagem Ubuntu</h1>
             
             <blockquote class="info">
-            As configurações foram testados no Ubuntu 16.04 64bits LTS e Ubuntu 20.04 64bits LTS.
+            As configurações foram testados no Ubuntu 20.04 64bits LTS e Ubuntu 20.04 64bits LTS.
             </blockquote>
 
             <!--Conteudo instalacao-->
@@ -39,23 +39,15 @@ load_js: load_assets_js
                     <th>Capacidade</th>
                 </tr>
                 <tr>
-                    <td>Linux Ubuntu</td>
-                    <td>18GB</td>
-                </tr>
-                <tr>
-                    <td>Linux Ubuntu Swap</td>
-                    <td>2GB</td>
+                    <td>Linux</td>
+                    <td>80GB</td>
                 </tr>
                 <tr>
                     <td>Developer</td>
-                    <td>10GB</td>
+                    <td>20GB</td>
                 </tr>
                 <tr>
-                    <td>Windows Informática</td>
-                    <td>100GB</td>
-                </tr>
-                <tr>
-                    <td>Windows Default</td>
+                    <td>Windows</td>
                     <td>Restante da capacidade</td>
                 </tr>
             </table>
@@ -162,19 +154,19 @@ load_js: load_assets_js
             <p>Crie o arquivo <code class="inline">00_wallpaper</code> em <code class="inline">/etc/dconf/db/tema.d/locks</code> e adicione:</p>
             <div class="highlight">
                 <pre>
-                <code>
-                #/etc/dconf/db/tema.d/locks/00_wallpaper
-                /org/gnome/desktop/background/picture-uri
-                </code>
+                    <code>
+                    #/etc/dconf/db/tema.d/locks/00_wallpaper
+                    /org/gnome/desktop/background/picture-uri
+                    </code>
                 </pre>
             </div>
 
             <h4>Aplicando alterações</h4>
             <div class="highlight">
                 <pre>
-                <code>
-                sudo dconf update
-                </code>
+                    <code>
+                    sudo dconf update
+                    </code>
                 </pre>
             </div>
             <p>Para mais detalhes sobre essas configurações acesse o <a href="https://wiki.gnome.org/Projects/dconf/SystemAdministrators">Wiki do Gnome</a>.</p>
@@ -183,8 +175,6 @@ load_js: load_assets_js
             <p>Não é legal deixar históricos de downloads e etc.</p>
 
             <h3 id="proxy">Configuração de Proxy&nbsp;<span class="yes">All lab</span></h3>
-            <h4>Pela interface</h4>
-            <img src="../assets/images/pages/ubuntu-proxy.png" alt="Configuração do Proxy">
             
             <h4>Pelo terminal</h4>
             <p>Crie o arquivo <code class="inline">/etc/profile.d/proxy.sh</code> com seguinte conteúdo:</p>
@@ -225,8 +215,8 @@ load_js: load_assets_js
                 </pre>
             </div>
 
-            <h4>Somente para o APT</h4>
-            <p>Para o <code class="inline">apt-get</code>, crie um arquivo <code class="inline">/etc/apt/apt.conf.d/80proxy</code> 
+            <h4>Para o APT</h4>
+            <p>Para o <code class="inline">apt-get</code>, crie o arquivo <code class="inline">/etc/apt/apt.conf.d/80proxy</code> 
             com o seguinte conteúdo:</p>
             <div class="highlight">
             <pre>
@@ -287,56 +277,58 @@ load_js: load_assets_js
             </div>
   
             <blockquote class="info">
-            Neste exemplo, instalei a versão jdk-8u191, faça as alterações necessárias em caso de uma versão diferente.
+            Neste exemplo, instalei a versão jdk-17, faça as alterações necessárias em caso de uma versão diferente.
             </blockquote>
 
             <p>Extraindo os arquivos:</p>
             <div class="highlight">
                 <pre>
                     <code>
-                    sudo tar zxvf jdk-8u191-linux-x64.tar.gz -C /usr/lib/jvm
+                    sudo tar zxvf jdk-17_linux-x64_bin.tar.gz -C /usr/lib/jvm
                     </code>
                 </pre>                
             </div>
   
-            <p>Criando o link simbólico:</p>
+            <p>Link simbólico:</p>
             <div class="highlight">
                 <pre>
                     <code>
-                    sudo ln -s /usr/lib/jvm/jdk1.8.0_191 /usr/lib/jvm/java-oracle
+                    sudo ln -s /usr/lib/jvm/jdk-17.0.2 /usr/lib/jvm/java-oracle
                     </code>
                 </pre>
             </div>
   
-            <p>Crie o arquivo <code class="inline">java_var.sh</code> em <code class="inline">/etc/profile.d/</code> com o seguinte conteúdo:</p>
+            <p>Crie o arquivo <code class="inline">/etc/profile.d/java_var.sh</code> com o seguinte conteúdo:</p>
             <div class="highlight">
                 <pre>
                     <code>
                     JAVA_HOME=/usr/lib/jvm/java-oracle
                     PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
-                    
                     export JRE_HOME
                     export PATH
                     </code>
                 </pre>                
             </div>
-            <p>Por último, carregue as configurações para testar.</p>
+
+            <p>Permissão de execução:</p>
             <div class="highlight">
                 <pre>
                     <code>
-                        source /etc/profile.d/java_var.sh
+                    sudo chmod +x /etc/profile.d/java_var.sh
                     </code>
                 </pre>
             </div>
-            <p>Verificando o retorno das variáveis.</p>
+
+            <p>Para testar:</p>
             <div class="highlight">
                 <pre>
                     <code>
+                    source /etc/profile.d/java_var.sh
                     java -version
-                    javac -version
+                    javac -version    
                     </code>
-                </pre>                
-            </div>    
+                </pre>
+            </div>
 
             <h3 id="lamp">LAMP&nbsp;<span class="yes">All lab</span></h3>
             <h4>Para o Ubuntu 16.04</h4>
@@ -363,13 +355,12 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                        #acesse o mysql
-                        sudo mysql
-                        
-                        #logado no mysql
-                        ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'SenhaAqui';
-                        flush privileges;
-                        exit
+                    ###acesse o mysql
+                    sudo mysql
+                    ###logado no mysql
+                    ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'SenhaAqui';
+                    flush privileges;
+                    exit
                     </code>
                 </pre>
             </div>
@@ -396,6 +387,7 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
+
             <p>Altere para:</p>
             <div class="highlight">
                 <pre>
@@ -426,7 +418,6 @@ load_js: load_assets_js
             <p>Instale com a conta do aluno na pasta <code class="inline">/home/portable</code>. Não precisa ser root.</p>            
 
             <h3 id="ssh">Open SSH Server&nbsp;<span class="yes">All lab</span></h3>
-            <p>Para usar o acesso remoto.</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -464,7 +455,9 @@ load_js: load_assets_js
 
             <h3 id="timefreeze">Script Time Freeze&nbsp;<span class="yes">All lab</span></h3>
             <p>Isso é um script para manter o ambiente do usuário aluno sempre organizado.</p>
-            <p>Primeiro crie um perfil ideal, com favoritos, papel de parede e etc. Com o perfil criado, siga os comandos abaixo:</p>
+           
+            <p>Primeiro crie um perfil ideal, com favoritos, papel de parede e etc.</p>
+            <p>Com o perfil criado, vamos fazer um backup para recuperá-lo sempre que necessário:</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -473,25 +466,21 @@ load_js: load_assets_js
                     </code>
                 </pre>
             </div>
-            <p>Agora criamos um script para fazer o inverso no diretório <code class="inline">/sbin</code>, chamarei o script de <code class="inline">reset-user</code>, segue código completo:</p>
-
+            
+            <p>Agora criamos um script para fazer o inverso em <code class="inline">/sbin/reset-user</code>, com o seguinte conteúdo:</p>
             <div class="highlight">
                 <pre>
                     <code>
                     #!/bin/sh
-        
                     rm -rf /home/aluno
-        
                     mkdir /home/aluno
-        
                     cp -R /home/resetuser/. /home/aluno
-                
                     chown -R aluno /home/aluno
                     </code>
                 </pre>                
             </div>
 
-            <p>Permissão de execução para o <code class="inline">reset-user</code> :</p>
+            <p>Permissão de execução:</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -500,7 +489,7 @@ load_js: load_assets_js
                 </pre>                
             </div>
   
-            <p>Agora criamos o serviço em <code class="inline">/etc/systemd/system/</code> para rodar o script, chamarei o serviço de <code class="inline">reset-user.service</code>, segue conteúdo completo do arquivo:</p>
+            <p>Agora criamos o serviço em <code class="inline">/etc/systemd/system/reset-user.service</code> para rodar o script anterior:</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -518,22 +507,22 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
-            <p>O serviço acima será executado ao reiniciar ou desligar o sistema.</p>
+            <p>O serviço acima será executado ao reiniciar ou desligar o SO, restaurando o perfil padrão.</p>
 
-            <h4>Ativando o serviço</h4>
+            <h4>Ativando o serviço:</h4>
             <div class="highlight">
                 <pre>
                     <code>
-                        sudo systemctl enable reset-user.service
+                    sudo systemctl enable reset-user.service
                     </code>
                 </pre>                
             </div>
 
-            <h4>Desativando o serviço</h4>
+            <h4>Desativando o serviço:</h4>
             <div class="highlight">
                 <pre>
                     <code>
-                        sudo systemctl disable reset-user.service
+                    sudo systemctl disable reset-user.service
                     </code>
                 </pre>                
             </div>
@@ -591,7 +580,7 @@ load_js: load_assets_js
             </div>
   
             <h3 id="veyon">Veyon&nbsp;<span class="yes">All lab</span></h3>
-            <p>Para mais informações, acesse a página do software <a href="https://veyon.io/">Veyon</a>.</p>
+            <p>Para mais informações, acesse a página de ajuda do <a href="https://veyon.io/">Veyon</a>.</p>
             <h4>Instalando dependências</h4>
             <div class="highlight">
                 <pre>
@@ -620,14 +609,14 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                        sudo apt install veyon-service
-                        sudo apt install veyon-configurator
+                    sudo apt install veyon-service
+                    sudo apt install veyon-configurator
                     </code>
                 </pre>
             </div>
             
             <blockquote class="info">
-                Para a primeira configuração, defina as configurações iniciais e as chaves de acesso.
+            Para a primeira instalação, defina as configurações iniciais e carregue as chaves de acesso.
             </blockquote>
 
             <p>É possível aplicar configuração em massa através do <code class="inline">veyon cli</code>. Por ele podemos importar o arquivo de <b>configuração.json</b> e <b>chave pública</b>.</p>
