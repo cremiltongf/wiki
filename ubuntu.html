@@ -177,7 +177,7 @@ load_js: load_assets_js
             <h3 id="proxy">Configuração de Proxy&nbsp;<span class="yes">All lab</span></h3>
             
             <h4>Pelo terminal</h4>
-            <p>Crie o arquivo <code class="inline">/etc/profile.d/proxy.sh</code> com seguinte conteúdo:</p>
+            <p>Edite o arquivo <code class="inline">/etc/environment</code> e adicione o seguinte conteúdo:</p>
             <div class="highlight">
             <pre>
                 <code>
@@ -196,27 +196,8 @@ load_js: load_assets_js
             </pre>
             </div>
             
-            <p>Permissão de execução:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo chmod +x /etc/profile.d/proxy.sh
-                    </code>
-                </pre>
-            </div>
-
-            <p>Para testar:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    source /etc/profile.d/proxy.sh
-                    env | grep -i proxy
-                    </code>
-                </pre>
-            </div>
-
             <h4>Para o APT</h4>
-            <p>Para o <code class="inline">apt-get</code>, crie o arquivo <code class="inline">/etc/apt/apt.conf.d/80proxy</code> 
+            <p>Para o <code class="inline">apt-get</code>, crie o arquivo <code class="inline">/etc/apt/apt.conf.d/95proxy</code>
             com o seguinte conteúdo:</p>
             <div class="highlight">
             <pre>
