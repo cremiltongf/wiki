@@ -197,13 +197,13 @@ load_js: load_assets_js
             </div>
             
             <h4>Para o APT</h4>
-            <p>Para o <code class="inline">apt-get</code>, crie o arquivo <code class="inline">/etc/apt/apt.conf.d/95proxy</code>
+            <p>Para o <code class="inline">apt-get</code>, crie o arquivo <code class="inline">/etc/apt/apt.conf.d/80proxy</code>
             com o seguinte conteúdo:</p>
             <div class="highlight">
             <pre>
                 <code>
                 Acquire::http::proxy "http://192.168.0.6:3128/";
-                Acquire::https::proxy "https://192.168.0.6:3128/";
+                Acquire::https::proxy "http://192.168.0.6:3128/";
                 Acquire::ftp::proxy "ftp://192.168.0.6:3128/";
                 </code>
             </pre>
