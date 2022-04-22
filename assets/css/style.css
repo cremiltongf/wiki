@@ -418,7 +418,7 @@ h4{
     flex-wrap: wrap;
     list-style: none;
 }
-.footer a{
+.footer .icon{
     padding: 0 .375rem;
     text-decoration: none;
 }
