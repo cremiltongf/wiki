@@ -21,10 +21,9 @@
 title: Wiki - Laboratório de Informática
 email: cremilton@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Esse wiki orienta a criação de imagens com Windows e Ubuntu, além de recomendar alguns ajustes e correções para o Windows (7, 8, 10), 
-  e ajustes para os Sistemas Operacionais após a clonagem, entre outras dicas.
+  Esse wiki orienta a criação de imagens com Windows e Ubuntu, contém informações para ajustes e correções para o Windows, possui configuração padrão para os Sistemas Operacionais após a clonagem, e outras dicas.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://wiki.cremilton.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://labumuarama.com.br" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: cremiltongf
 github_username:  cremiltongf
 
