@@ -1,35 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-  <loc>https://wiki.cremilton.com/gpo/</loc>
-  <lastmod>2020-12-15T17:19:55+00:00</lastmod>
+  <loc>https://labumuarama.com.br/gpo/</loc>
+  <lastmod>2020-12-15</lastmod>
 </url>
 
 <url>
-  <loc>https://wiki.cremilton.com/suporte/</loc>
-  <lastmod>2020-12-15T17:19:55+00:00</lastmod>
+  <loc>https://labumuama.com.br/suporte/</loc>
+  <lastmod>2020-12-15</lastmod>
 </url>
 
 <url>
-  <loc>https://wiki.cremilton.com/ubuntu/</loc>
-  <lastmod>2020-12-15T17:19:55+00:00</lastmod>
+  <loc>https://labumuarama.com.br/ubuntu/</loc>
+  <lastmod>2020-12-15</lastmod>
 </url>
 
 <url>
-  <loc>https://wiki.cremilton.com/veyon/</loc>
-  <lastmod>2020-12-15T17:19:55+00:00</lastmod>
+  <loc>https://labumuarama.com.br/veyon/</loc>
+  <lastmod>2020-12-15</lastmod>
 </url>
 
 <url>
-  <loc>https://wiki.cremilton.com/windows/</loc>
-  <lastmod>2020-12-15T17:19:55+00:00</lastmod>
+  <loc>https://labumuarama.com.br/windows/</loc>
+  <lastmod>2020-12-15</lastmod>
 </url>
 
 </urlset>
