@@ -413,6 +413,9 @@ h4{
     font-size: 1.25rem;
     line-height: 1.4;
 }
+.autor:hover{
+    text-decoration: none;
+}
 .footer ul{
     display: flex;
     flex-wrap: wrap;
