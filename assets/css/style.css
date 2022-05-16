@@ -335,27 +335,6 @@ h4{
 .conteudo img:hover {
     opacity: 1.0;
 }
-.yes,
-.no{
-    font-size: 0.8rem;
-    font-weight: 400;
-	color: #272f42;
-    border-radius: 4px;
-    padding: .2rem;
-    margin: .10rem;
-    position: relative;
-    top: -.2rem;
-}
-.yes{
-	background-color: #2ecc71;
-}
-.no{
-	background-color: #ff7979;
-}
-.yes,
-.no{
-    display: inline-block;
-}
 .info{
     background: #36425c;
     padding: 1.25rem;
