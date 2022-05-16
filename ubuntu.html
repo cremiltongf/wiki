@@ -1,6 +1,6 @@
 ---
-title:  "Ubuntu - Wiki"
-permalink: /ubuntu/
+title:  "Linux - Wiki"
+permalink: /Linux/
 load_js: load_assets_js
 ---
 
@@ -20,14 +20,14 @@ load_js: load_assets_js
         <aside class="sidebar">
             <menu class="menu">
                 <p class="hidden-btn"><a href="#" class="toggle-menu btn-menu">Fechar Sumário</a></p>
-                {% include menu-ubuntu.html %}
+                {% include menu-Linux.html %}
             </menu>
         </aside>
         <article class="conteudo">
-            <h1>Imagem Ubuntu</h1>
+            <h1>Imagem Linux</h1>
             
             <blockquote class="info">
-            As configurações foram testados no Ubuntu 20.04 64bits LTS e Ubuntu 20.04 64bits LTS.
+            As configurações foram testados no Ubuntu 20.04 LTS e Zorin OS 64bits.
             </blockquote>
 
             <!--Conteudo instalacao-->
@@ -44,7 +44,7 @@ load_js: load_assets_js
                 </tr>
                 <tr>
                     <td>Developer</td>
-                    <td>20GB</td>
+                    <td>10GB</td>
                 </tr>
                 <tr>
                     <td>Windows</td>
@@ -54,6 +54,18 @@ load_js: load_assets_js
             
             <h3 id="root">Usuário root&nbsp;<span class="yes">All lab</span></h3>
             <p>Crie o usuário root <b>IFPR</b> com a senha disponível na <a href="https://goo.gl/A3129L">planilha</a>.</p>
+
+            <h3 id="estudante">Usuário estudante&nbsp;<span class="yes">All lab</span></h3>
+            <p>Crie a conta de usuário <b>Aluno</b> com a senha <b>aluno123</b> e configure o Linux para iniciar automaticamente por essa conta.</p>
+            <p>Caso o login automático não funcione, faça o manualmente editando <code class="inline">/etc/lightdm/lightdm.conf</code>.</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    autologin-user=aluno
+                    autologin-user-timeout=0
+                    </code>
+                </pre>
+            </div>
 
             <h3 id="atualizacao">Atualização do SO&nbsp;<span class="yes">All lab</span></h3>
             <div class="highlight">
@@ -83,7 +95,7 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                    sudo vi /var/lib/polkit-1/localauthority/10-vendor.d/com.ubuntu.desktop.pkla
+                    sudo vi /var/lib/polkit-1/localauthority/10-vendor.d/com.Linux.desktop.pkla
                     </code>
                 </pre>                
             </div>
@@ -98,18 +110,6 @@ load_js: load_assets_js
 
             <h3 id="tela">Remoção de proteção e bloqueio de tela&nbsp;<span class="yes">All lab</span></h3>
             <img src="../assets/images/pages/bloqueio.png" alt="Remoção de proteção de tela e bloqueio">
-
-            <h3 id="padrao">Usuário do estudante&nbsp;<span class="yes">All lab</span></h3>
-            <p>Crie a conta de usuário <b>Aluno</b> com a senha <b>aluno123</b> e configure o Ubuntu para iniciar automaticamente por essa conta.</p>
-            <p>Caso o login automático não funcione, faça o manualmente editando <code class="inline">/etc/lightdm/lightdm.conf</code>.</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    autologin-user=aluno
-                    autologin-user-timeout=0
-                    </code>
-                </pre>
-            </div>
 
             <h3 id="wallpaper">Papel de parede padrão IFPR&nbsp;<span class="yes">All lab</span></h3>
             <p>Faça o <a href="https://drive.google.com/drive/folders/1mFNMKCBx6tvJaPfzSgax-0t9ZrwJIsPn?usp=sharing">download do wallpaper</a>.</p>
@@ -227,7 +227,7 @@ load_js: load_assets_js
 
             <h3 id="grub">Grub Customizer&nbsp;<span class="yes">All lab</span></h3>
             <p>Configure o grub para que o computador sempre inicialize pelo Windows.</p>
-            <h4>Para o Ubuntu 16.04 LTS</h4>
+            <h4>Para o Linux 16.04 LTS</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -237,7 +237,7 @@ load_js: load_assets_js
                     </code>
                 </pre>         
             </div>
-            <h4>Para o Ubuntu 20.04 LTS</h4>
+            <h4>Para o Linux 20.04 LTS</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -312,7 +312,7 @@ load_js: load_assets_js
             </div>
 
             <h3 id="lamp">LAMP&nbsp;<span class="yes">All lab</span></h3>
-            <h4>Para o Ubuntu 16.04</h4>
+            <h4>Para o Linux 16.04</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -321,7 +321,7 @@ load_js: load_assets_js
                 </pre>
             </div>
 
-            <h4>Para o Ubuntu 20.04</h4>
+            <h4>Para o Linux 20.04</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -332,7 +332,7 @@ load_js: load_assets_js
                 </pre>
             </div>
 
-            <h4>Definindo senha para MySql no Ubuntu 20.04</h4>
+            <h4>Definindo senha para MySql no Linux 20.04</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -525,7 +525,7 @@ load_js: load_assets_js
 
             <h3 id="tweaktool">Tweak Tool&nbsp;<span class="yes">All lab</span></h3>
             <p>Usamos essa ferramenta para remover animações da interface.</p>
-            <h4>Para Ubuntu 16.04 LTS</h4>
+            <h4>Para Linux 16.04 LTS</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -533,7 +533,7 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
-            <h4>Para Ubuntu 20.04 LTS</h4>
+            <h4>Para Linux 20.04 LTS</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -542,11 +542,11 @@ load_js: load_assets_js
                 </pre>
             </div>
 
-            <h3 id="adicionais">Ubuntu Restricted Extras&nbsp;<span class="yes">All lab</span></h3>
+            <h3 id="adicionais">Linux Restricted Extras&nbsp;<span class="yes">All lab</span></h3>
             <div class="highlight">
                 <pre>
                     <code>
-                    sudo apt-get install ubuntu-restricted-extras
+                    sudo apt-get install Linux-restricted-extras
                     </code>
                 </pre>
             </div>            
@@ -576,8 +576,8 @@ load_js: load_assets_js
                 </pre>
             </div>
             
-            <h4>Para o Ubuntu 16.04 LTS</h4>
-            <p>Faça o download e instalação do <a href="https://github.com/veyon/veyon/releases/download/v4.5.5/veyon_4.5.5-0-ubuntu-xenial_amd64.deb">Veyon (4.5.5)</a> para o Ubuntu 16.04.</p>
+            <h4>Para o Linux 16.04 LTS</h4>
+            <p>Faça o download e instalação do <a href="https://github.com/veyon/veyon/releases/download/v4.5.5/veyon_4.5.5-0-Linux-xenial_amd64.deb">Veyon (4.5.5)</a> para o Linux 16.04.</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -586,7 +586,7 @@ load_js: load_assets_js
                 </pre>
             </div>
             
-            <h4>Para o Ubuntu 20.04 LTS</h4>
+            <h4>Para o Linux 20.04 LTS</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -622,7 +622,7 @@ load_js: load_assets_js
             <!--Fim conteudo aplicacoes-->
 
             <!-- Clone -->
-            <h2>Clone Ubuntu</h2>
+            <h2>Clone Linux</h2>
             <h3 id="hostname">Alterar hostname</h3>
             <p>Altere o nome do computador em <code class="inline">/etc/hostname</code> e <code class="inline">/etc/hosts</code>.</p>
             <div class="highlight">
