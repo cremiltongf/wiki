@@ -421,6 +421,31 @@ load_js: load_assets_js
                 </pre>
             </div>
 
+            <h3 id="bonjour">Bonjour</h3>
+            <blockquote class="info">
+                Instale esse programa apenas para o Windows 7 Professional.
+            </blockquote>
+            <p>Faça o download do <a href="https://developer.apple.com/bonjour/">Bonjour</a>.</p>
+            
+            <h4>Silent Install</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    msiexec /i "Bonjour64.msi" /qb
+                    </code>
+                </pre>
+            </div>
+
+            <h4>Resolve .local para Windows 10</h4>
+            <p>Para o Windows 10, ative o recurso mDNS:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                        reg add "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /v EnableMulticast /t REG_DWORD /d 1 /f
+                    </code>
+                </pre>
+            </div>
+
             <h4>Configuração</h4>
             <img src="../assets/images/pages/config-blender.png" alt="Imagem de configuração do Blender">
 
