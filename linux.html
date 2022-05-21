@@ -27,7 +27,7 @@ load_js: load_assets_js
             <h1>Imagem Linux</h1>
             
             <blockquote class="info">
-            As configurações foram testados no Ubuntu 20.04 LTS e Zorin OS 64bits.
+            As configurações se aplicam ao Ubuntu 20.04 LTS instalado no modo legado, usando MBR.
             </blockquote>
 
             <!--Conteudo instalacao-->
@@ -56,8 +56,8 @@ load_js: load_assets_js
             <p>Crie o usuário root <b>IFPR</b> com a senha disponível na <a href="https://goo.gl/A3129L">planilha</a>.</p>
 
             <h3 id="estudante">Usuário estudante</h3>
-            <p>Crie a conta de usuário <b>Aluno</b> com a senha <b>aluno123</b> e configure o Linux para iniciar automaticamente por essa conta.</p>
-            <p>Caso o login automático não funcione, faça o manualmente editando <code class="inline">/etc/lightdm/lightdm.conf</code>.</p>
+            <p>Crie a conta de usuário <b>Aluno</b> com a senha <b>aluno123</b> e defina para iniciar automaticamente por essa conta.</p>
+            <p>Caso o login automático não funcione, defina manualmente editando <code class="inline">/etc/lightdm/lightdm.conf</code>.</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -71,9 +71,7 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                    sudo apt-get update
-                    sudo apt-get upgrade -y 
-                    sudo apt-get dist-upgrade -y
+                    sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y
                     </code>
                 </pre>
             </div>
@@ -91,7 +89,7 @@ load_js: load_assets_js
             </div>
 
             <h3 id="restricao">Restringindo o acesso a partições</h3>
-            <p>Isso permite que apenas o usuário autenticado tenha acesso a partições do Windows.</p>
+            <p>Com essa configuração, apenas root pode montar as partições do Windows.</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -106,7 +104,7 @@ load_js: load_assets_js
             <!--Conteudo configuracoes-->
             <h2>Configurações</h2>
 
-            <blockquote class="info">As configurações de ambiente se aplicam ao usuário do Estudante.</blockquote>
+            <blockquote class="info">Se aplica a todos os usuários.</blockquote>
 
             <h3 id="tela">Remoção de proteção e bloqueio de tela</h3>
             <img src="../assets/images/pages/bloqueio.png" alt="Remoção de proteção de tela e bloqueio">
@@ -222,22 +220,76 @@ load_js: load_assets_js
                 </pre>
             </div>
 
+            <h3 id="netbeans">Apache Netbeans</h3>
+            <p>Faça o download do <a href="https://netbeans.apache.org/download/index.html">Netbeans</a>. Atualmente usamos a versão 12.5.</p>
+            <p>Instale com a conta do aluno na pasta <code class="inline">/home/portable</code>. Não precisa ser root.</p>            
+
             <h3 id="chrome">Chrome</h3>
             <p>Faça o download do <a href="https://www.google.com/intl/pt-BR/chrome/?standalone=1">Google Chrome</a>.</p>
 
-            <h3 id="grub">Grub Customizer</h3>
-            <p>Configure o grub para que o computador sempre inicialize pelo Windows.</p>
-            <h4>Para o Ubuntu 16.04 LTS</h4>
+            <h3 id="chrome">Docker</h3>
+            <h4>Definindo repositório</h4>
             <div class="highlight">
                 <pre>
                     <code>
-                    sudo add-apt-repository ppa:danielrichter2007/grub-customizer
-                    sudo apt-get update
-                    sudo apt-get install grub-customizer
+                        sudo apt-get install \
+                        ca-certificates \
+                        curl \
+                        gnupg \
+                        lsb-release
+
+                        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+                        echo \
+                        "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+                        $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
                     </code>
                 </pre>         
             </div>
-            <h4>Para o Ubuntu 20.04 LTS</h4>
+
+            <h4>Instalando Docker</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get update
+
+                    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+                    </code>
+                </pre>
+            </div>
+
+            <h4>Testando o Docker</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo docker run hello-world
+                    </code>
+                </pre>
+            </div>
+            
+            <p>Consulte o wiki oficial: <a href="https://docs.docker.com/engine/install/ubuntu/">Docker Engine on Ubuntu.</a></p>
+
+            <h3 id="flashback">Gnome Session Flashback</h3>
+            <div class="hightlight">
+                <pre>
+                    <code>
+                    sudo apt install gnome-session-flashback
+                    </code>
+                </pre>
+            </div>
+
+            <h3 id="tweak">Gnome Tweak Tool</h3>
+            <div class="hightlight">
+                <pre>
+                    <code>
+                    sudo apt install gnome-tweak-tool
+                    </code>
+                </pre>
+            </div>
+
+            <h3 id="grub">Grub Customizer</h3>
+            <p>Configure o grub para que o computador sempre inicialize pelo Windows.</p>
+            <h4>Instalando o Grub Customizer</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -257,10 +309,6 @@ load_js: load_assets_js
                 </pre>                
             </div>
   
-            <blockquote class="info">
-            Neste exemplo, instalei a versão jdk-17, faça as alterações necessárias em caso de uma versão diferente.
-            </blockquote>
-
             <p>Extraindo os arquivos:</p>
             <div class="highlight">
                 <pre>
@@ -312,16 +360,6 @@ load_js: load_assets_js
             </div>
 
             <h3 id="lamp">LAMP</h3>
-            <h4>Para o Ubuntu 16.04</h4>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo apt-get install lamp-server^
-                    </code>
-                </pre>
-            </div>
-
-            <h4>Para o Ubuntu 20.04</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -332,7 +370,7 @@ load_js: load_assets_js
                 </pre>
             </div>
 
-            <h4>Definindo senha para MySql no Ubuntu 20.04</h4>
+            <h4>Definindo senha para MySql</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -392,20 +430,16 @@ load_js: load_assets_js
 
             <blockquote class="info">
             Não faça isso em ambiente de produção.
-            </blockquote>            
+            </blockquote>
 
-            <h3 id="netbeans">Netbeans</h3>
-            <p>Faça o download do <a href="https://netbeans.apache.org/download/index.html">Netbeans</a>. Atualmente usamos a versão 12.5.</p>
-            <p>Instale com a conta do aluno na pasta <code class="inline">/home/portable</code>. Não precisa ser root.</p>            
-
-            <h3 id="ssh">Open SSH Server</h3>
+            <h3 id="ssh">OpenSSH Server</h3>
             <div class="highlight">
                 <pre>
                     <code>
                     sudo apt-get install openssh-server
                     </code>
                 </pre>
-            </div>
+            </div>            
 
             <h3 id="phpadmin">PhpMyAdmin</h3>
             <div class="highlight">
@@ -527,32 +561,22 @@ load_js: load_assets_js
             </div>
   
             <h3 id="veyon">Veyon</h3>
-            <p>Para mais informações, acesse a página de ajuda do <a href="https://veyon.io/">Veyon</a>.</p>
+            <p>Para mais informações, acesse a página do desenvolvimento <a href="https://veyon.io/">Veyon</a>.</p>
             <h4>Instalando dependências</h4>
             <div class="highlight">
                 <pre>
                     <code>
-                        sudo apt install g++ libc6-dev make cmake qtbase5-dev qtbase5-private-dev
-                        sudo apt install qtbase5-dev-tools qttools5-dev qttools5-dev-tools
-                        sudo apt install qtdeclarative5-dev qtquickcontrols2-5-dev libfakekey-dev
-                        sudo apt install xorg-dev libxtst-dev libjpeg-dev zlib1g-dev libssl-dev libpam0g-dev
-                        sudo apt install libprocps-dev liblzo2-dev libqca-qt5-2-dev libldap2-dev
-                        sudo apt install libsasl2-dev
+                        sudo apt install g++ libc6-dev make cmake qtbase5-dev qtbase5-private-dev \
+                        qtbase5-dev-tools qttools5-dev qttools5-dev-tools \
+                        qtdeclarative5-dev qtquickcontrols2-5-dev libfakekey-dev \
+                        xorg-dev libxtst-dev libjpeg-dev zlib1g-dev libssl-dev libpam0g-dev \
+                        libprocps-dev liblzo2-dev libqca-qt5-2-dev libldap2-dev \
+                        libsasl2-dev ninja-build
                     </code>
                 </pre>
             </div>
             
-            <h4>Para o Ubuntu 16.04 LTS</h4>
-            <p>Faça o download e instalação do <a href="https://github.com/veyon/veyon/releases/download/v4.5.5/veyon_4.5.5-0-Linux-xenial_amd64.deb">Veyon (4.5.5)</a> para o Linux 16.04.</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo dpkg -i NomePacote
-                    </code>
-                </pre>
-            </div>
-            
-            <h4>Para o Ubuntu 20.04 LTS</h4>
+            <h4>Instala Veyon Cliente</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -589,6 +613,9 @@ load_js: load_assets_js
 
             <!-- Clone -->
             <h2>Clone Linux</h2>
+            <blockquote class="info">
+            Para o processo de clonagem, desabilite FastBoot, Secure Boot e utilize o modo legado para o SO e PXE.
+            </blockquote>
             <h3 id="hostname">Alterar hostname</h3>
             <p>Altere o nome do computador em <code class="inline">/etc/hostname</code> e <code class="inline">/etc/hosts</code>.</p>
             <div class="highlight">
