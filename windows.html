@@ -49,10 +49,10 @@ load_js: load_assets_js
             </table>
 
             <blockquote class="info">
-            Instale o Windows sem UEFI, no modo legado para melhor compatibilidade com vários serviços e recursos.
+            Instale o Windows modo legado (sem UEFI) para melhor compatibilidade com vários serviços e recursos.
             </blockquote>
 
-            <h3 id="dominio">Nome e grupo&nbsp;<span class="yes">All lab</span></h3>
+            <h3 id="dominio">Nome e grupo</h3>
             <p>É necessário configurar o computador no domínio, conforme informações abaixo:</p>
             <div class="highlight">
                 <pre>
@@ -421,9 +421,21 @@ load_js: load_assets_js
                 </pre>
             </div>
 
+            <h4>Configuração</h4>
+            <img src="../assets/images/pages/config-blender.png" alt="Imagem de configuração do Blender">
+
+            <h4>Diretório de Configuração</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    "C:\Users\Aluno\AppData\Roaming\Blender Foundation\Blender"
+                    </code>
+                </pre>                
+            </div>
+
             <h3 id="bonjour">Bonjour</h3>
             <blockquote class="info">
-                Instale esse programa apenas para o Windows 7 Professional.
+                Instale apenas no Windows 7 Professional. Para o Windows 10, ative mDNS.
             </blockquote>
             <p>Faça o download do <a href="https://developer.apple.com/bonjour/">Bonjour</a>.</p>
             
@@ -445,18 +457,6 @@ load_js: load_assets_js
                     </code>
                 </pre>
             </div>
-
-            <h4>Configuração</h4>
-            <img src="../assets/images/pages/config-blender.png" alt="Imagem de configuração do Blender">
-
-            <h4>Diretório de Configuração</h4>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    "C:\Users\Aluno\AppData\Roaming\Blender Foundation\Blender"
-                    </code>
-                </pre>                
-            </div>                
 
             <h3 id="brmodelo">brModelo</h3>
             <p>Faça o download do <a href="http://www.sis4.com/brModelo/download.html">brModelo</a> e mova para <code class="inline">C:\Portable</code>, dentro da pasta <b>brModelo</b>.
@@ -804,7 +804,7 @@ load_js: load_assets_js
             </pre>                
             </div>
 
-            <h3 id="var">Variáveis de Java para o SO&nbsp;<span class="yes">All lab</span></h3>
+            <h3 id="var">Variáveis de Java para o SO</h3>
             <blockquote class="info">
             Crie as variáveis para a última versão do Java JDK instalado.
             </blockquote>
@@ -844,7 +844,7 @@ load_js: load_assets_js
             <h3 id="kerkythea">Kerkythea 2008</h3>
             <p>Faça o download do <a href="https://www.kerkythearender.net/instalacao">Kerkythea 2008</a>.</p>
 
-            <h3 id="libre">LibreOffice&nbsp;<span class="yes">All lab</span></h3>
+            <h3 id="libre">LibreOffice</h3>
             <p>Faça o download do <a href="https://pt-br.libreoffice.org/baixe-ja/libreoffice-stable/">LibreOffice</a>.
             
             <h4>Silent Install</h4>
@@ -871,7 +871,7 @@ load_js: load_assets_js
             <h3 id="vmwindows">Máquina Virtual Windows 7</h3>
             <p>VM do Windows 7 Professional, rodando no Oracle VirtualBox para práticas de SO.</p>
 
-            <h3 id="workbench">MySQL Workbench&nbsp;<span class="yes">All lab</span></h3>
+            <h3 id="workbench">MySQL Workbench</h3>
             <p>Faça o download do <a href="https://dev.mysql.com/downloads/windows/installer/8.0.html">MySQL Workbench</a>.</p>
             
             <h4>Silent Install</h4>
@@ -883,7 +883,7 @@ load_js: load_assets_js
                 </pre>                 
             </div>
 
-            <h3 id="nodejs">Node.js&nbsp;<span class="yes">All lab</span></h3>
+            <h3 id="nodejs">Node.js</h3>
             <p>Faça o download do <a href="https://nodejs.org/en/">Node.js</a>.</p>
             
             <h4>Silent Install</h4>
@@ -927,7 +927,7 @@ load_js: load_assets_js
 
             <blockquote class="info">A código da licença muda conforme a versão do instalador.</blockquote>
 
-            <h3 id="portugol">Portugol Stúdio&nbsp;<span class="yes">All lab</span></h3>
+            <h3 id="portugol">Portugol Stúdio</h3>
             <p>Faça o download do <a href="http://lite.acad.univali.br/portugol/">Portugol Stúdio</a>.</p>
             
             <h4>Silent Install</h4>
@@ -954,7 +954,7 @@ load_js: load_assets_js
             <h3 id="revit">Revit</h3>
             <p>Faça o download do <a href="https://www.autodesk.com/education/free-software/">Revit</a>.</p>
 
-            <h3 id="scratch">Scratch&nbsp;<span class="yes">All lab</span></h3>
+            <h3 id="scratch">Scratch</h3>
             <p>Faça o download do <a href="https://scratch.mit.edu/download">Scratch</a>.</p>
             
             <h4>Silent Install</h4>
@@ -1103,6 +1103,10 @@ load_js: load_assets_js
 
             <!-- Clone -->
             <h2>Clone Windows</h2>
+
+            <blockquote class="info">
+            Para o processo de clonagem, desabilite FastBoot, Secure Boot e utilize o modo legado para o SO e PXE.
+            </blockquote>
 
             <!--Conteudo clone-->
             <h3 id="dominio">Computador no domínio</h3>
