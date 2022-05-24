@@ -27,7 +27,7 @@ load_js: load_assets_js
             <h1>Imagem Windows</h1>
 
             <blockquote class="info">
-            Instale o Windows no modo legado (sem UEFI) para melhor compatibilidade com vários serviços e recursos.
+            Instale o Windows no modo UEFI.
             </blockquote>
 
             <!--Conteudo instalacao-->
@@ -103,7 +103,7 @@ load_js: load_assets_js
             <h2>Configurações</h2>
 
             <blockquote class="info">
-            Configure todos os computadores para usar armazenamento AHCI, habilite suporte a virtualização, desative Fast Boot/Secure Boot e ative o PXE no modo legado.
+            Configure todos os computadores para usar armazenamento no modo AHCI, habilite suporte a virtualização, desative Fast Boot/Secure Boot e ative o PXE no modo legado.
             </blockquote>
 
             <h3 id="energia">Opções de energia</h3>
@@ -992,8 +992,6 @@ load_js: load_assets_js
                 <pre>
                     <code>
                     "SumatraPDF-3.1.2-64-install.exe" /S
-                    #definindo-o como leitor padrao
-                    "C:\Program Files\SumatraPDF\SumatraPDF.exe" -register-for-pdf
                     </code>
                 </pre>                  
             </div>
@@ -1024,7 +1022,7 @@ load_js: load_assets_js
                 </pre>
             </div>
             
-            <h4>Importar configuração</h4>
+            <h4>Importando configurações</h4>
             <div class="highlight">
                 <pre>
                     <code>
@@ -1109,7 +1107,7 @@ load_js: load_assets_js
             <h2>Clone Windows</h2>
 
             <blockquote class="info">
-            Para o processo de clonagem, desabilite FastBoot, Secure Boot e utilize o modo legado para o SO e PXE.
+            Para o processo de clonagem, desabilite FastBoot/Secure Boot e utilize o PXE no modo legado.
             </blockquote>
 
             <!--Conteudo clone-->
@@ -1128,7 +1126,7 @@ load_js: load_assets_js
             <p>Por último, ative o <a href="https://wiki.cremilton.com/veyon/#desabilitar">Toolwiz Time Freeze</a>.</p>
 
             <h3 id="exec">Executar softwares</h3>
-            <p>Executar os softwares ao menos uma vez.</p>
+            <p>Executar os softwares ao menos uma vez para criar as configurações de ambiente, quando necessário.</p>
             <!-- Fim clone-->
 
         </article>

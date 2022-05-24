@@ -27,7 +27,7 @@ load_js: load_assets_js
             <h1>Imagem Linux</h1>
             
             <blockquote class="info">
-            Instale o Linux Ubuntu 20.04 LTS no modo legado (sem UEFI) para melhor compatibilidade com vários serviços e recursos.
+            Instale o Linux Ubuntu 20.04 LTS no modo UEFI.
             </blockquote>
 
             <!--Conteudo instalacao-->
@@ -109,7 +109,7 @@ load_js: load_assets_js
             <h2>Configurações</h2>
 
             <blockquote class="info">
-            Configure todos os computadores para usar armazenamento AHCI, habilite suporte a virtualização, desative Fast Boot/Secure Boot e ative o PXE no modo legado.
+            Configure todos os computadores para usar armazenamento no modo AHCI, habilite suporte a virtualização, desative Fast Boot/Secure Boot e ative o PXE no modo legado.
             </blockquote>
 
             <blockquote class="info">Se aplica a todos os usuários.</blockquote>
@@ -245,17 +245,17 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                        sudo apt-get install \
-                        ca-certificates \
-                        curl \
-                        gnupg \
-                        lsb-release
+                    sudo apt-get install \
+                    ca-certificates \
+                    curl \
+                    gnupg \
+                    lsb-release
 
-                        curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+                    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
 
-                        echo \
-                        "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-                        $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+                    echo \
+                    "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+                    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
                     </code>
                 </pre>         
             </div>
@@ -301,7 +301,7 @@ load_js: load_assets_js
             </div>
 
             <h3 id="grub">Grub Customizer</h3>
-            <p>Configure o grub para que o computador sempre inicialize pelo Windows.</p>
+            <p>Configure o grub para que o computador sempre inicialize automaticamente pelo Windows.</p>
             <h4>Instalando o Grub Customizer</h4>
             <div class="highlight">
                 <pre>
@@ -389,6 +389,7 @@ load_js: load_assets_js
                     <code>
                     ###acesse o mysql
                     sudo mysql
+
                     ###logado no mysql
                     ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'SenhaAqui';
                     flush privileges;
@@ -484,7 +485,7 @@ load_js: load_assets_js
             <h3 id="timefreeze">Script Time Freeze</h3>
             <p>Isso é um script para manter o ambiente do usuário aluno sempre organizado.</p>
            
-            <p>Primeiro crie um perfil ideal, com favoritos, papel de parede e etc.</p>
+            <p>Primeiro crie um perfil ideal, com papel de parede padrão, home dos navegadores e etc.</p>
             <p>Com o perfil criado, vamos fazer um backup para recuperá-lo sempre que necessário:</p>
             <div class="highlight">
                 <pre>
@@ -574,17 +575,17 @@ load_js: load_assets_js
             </div>
   
             <h3 id="veyon">Veyon</h3>
-            <p>Para mais informações, acesse a página do desenvolvimento <a href="https://veyon.io/">Veyon</a>.</p>
+            <p>Para mais informações, acesse a página de desenvolvimento do <a href="https://veyon.io/">Veyon</a>.</p>
             <h4>Instalando dependências</h4>
             <div class="highlight">
                 <pre>
                     <code>
-                        sudo apt install g++ libc6-dev make cmake qtbase5-dev qtbase5-private-dev \
-                        qtbase5-dev-tools qttools5-dev qttools5-dev-tools \
-                        qtdeclarative5-dev qtquickcontrols2-5-dev libfakekey-dev \
-                        xorg-dev libxtst-dev libjpeg-dev zlib1g-dev libssl-dev libpam0g-dev \
-                        libprocps-dev liblzo2-dev libqca-qt5-2-dev libldap2-dev \
-                        libsasl2-dev ninja-build
+                    sudo apt install g++ libc6-dev make cmake qtbase5-dev qtbase5-private-dev \
+                    qtbase5-dev-tools qttools5-dev qttools5-dev-tools \
+                    qtdeclarative5-dev qtquickcontrols2-5-dev libfakekey-dev \
+                    xorg-dev libxtst-dev libjpeg-dev zlib1g-dev libssl-dev libpam0g-dev \
+                    libprocps-dev liblzo2-dev libqca-qt5-2-dev libldap2-dev \
+                    libsasl2-dev ninja-build
                     </code>
                 </pre>
             </div>
@@ -628,7 +629,7 @@ load_js: load_assets_js
             <!-- Clone -->
             <h2>Clone Linux</h2>
             <blockquote class="info">
-            Para o processo de clonagem, desabilite FastBoot, Secure Boot e utilize o modo legado para o SO e PXE.
+            Para o processo de clonagem, desabilite FastBoot/Secure Boot e utilize o PXE no modo legado.
             </blockquote>
             <h3 id="hostname">Alterar hostname</h3>
             <p>Altere o nome do computador em <code class="inline">/etc/hostname</code> e <code class="inline">/etc/hosts</code>.</p>
