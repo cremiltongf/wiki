@@ -104,6 +104,9 @@ a.item-nav{
     display: block;
     padding: 0 1rem;
 }
+a.item-nav:hover{
+    color: #d78423;
+}
 @media (max-width: 884px){
     .header{
         justify-content: flex-start;
