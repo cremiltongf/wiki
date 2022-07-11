@@ -27,15 +27,28 @@ load_js: load_assets_js
             <!--Conteudo Geral-->
             <h1>Políticas para Active Directory</h1>
             <h2 id="adm-local">Administrator Local</h2>
-            <p>1 - Criar um grupo global;</p>
-            <p>2 - Adicionar usuários que serão administradores;</p>
-            <p>3 - Criar uma gpo com nome <code class="inline">adm_local</code>. Use o nome que achar conveniente;</p>
-            <p>4 - O caminho da GPO é:</p>
-            <img src="../assets/images/pages/adm_local.PNG" alt="ADM Local">
-            <p>5 - Na coluna adicione o grupo criado anteriormente;</p>
-            <p>6 - Em propriedades, em "Este grupo é um membro de:" Clique em Adicionar... e 
-            no campo grupo preencha com "administradores".</p>
-            <p>Atualize as regras para realizar os testes!</p>
+            <ol>
+                <li>
+                Criar um grupo global;
+                </li>
+                <li>
+                Adicionar usuários que serão administradores;
+                </li>
+                <li>
+                Criar uma gpo com nome <code class="inline">adm_local</code>. Use o nome que achar conveniente;
+                </li>
+                <li>
+                Caminho da GPO:
+                </li>
+                <img src="../assets/images/pages/adm_local.png" alt="ADM Local">
+                <li>
+                Na coluna adicione o grupo criado anteriormente;
+                </li>
+                <li>
+                Em propriedades, em "Este grupo é um membro de:" Clique em Adicionar... e no campo grupo preencha com "administradores".
+                </li>
+            </ol>
+
             <blockquote class="info">
             Lembrando que todo usuário que incluir neste grupo, terá poderes administrativos somente na máquina local.
             </blockquote>
