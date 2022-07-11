@@ -213,6 +213,74 @@ load_js: load_assets_js
 
             <!-- End Tema -->
 
+            <!-- Opcoes de Seguranca -->
+            <h2 id="tarefas">Gerenciador de Tarefas</h2>
+            <ol>
+                <li>
+                    Configuração do usuário &rarr; Modelos Administrativos &rarr; Sistema &rarr; Opções de Ctrl+Alt+Del 
+                    &rarr; Remover Gerenciador de tarefas &rarr; Habilitado
+                </li>
+            </ol>
+
+            <h2 id="bloqueio">Bloquear Computador</h2>
+            <ol>
+                <li>
+                    Configuração do usuário &rarr; Modelos Administrativos &rarr; Sistema &rarr; Opções de Ctrl+Alt+Del 
+                    &rarr; Remover Bloquear Computador &rarr; Habilitado
+                </li>
+            </ol>
+
+            <h2 id="logoff">Logoff</h2>
+            <ol>
+                <li>
+                    Configuração do usuário &rarr; Modelos Administrativos &rarr; Sistema &rarr; Opções de Ctrl+Alt+Del 
+                    &rarr; Remover Logoff &rarr; Habilitado
+                </li>
+            </ol>
+
+            <h2 id="services">Services via BAT</h2>
+
+            <h3>Local de configuração</h3>
+            <img src="assets/images/pages/script-de-servicos.png" alt="Tela de configuraçao do script">
+
+            <h3>Conteúdo do script</h3>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    @echo off
+
+                    rem HELP
+                    rem start= {auto(automatico) - demand(manual) - disabled(desativado) - delayed-auto(atraso-na-inicializacao)}
+                    rem END HELP
+
+                    rem Windows Update
+                        sc config "wuauserv" start= disabled
+
+                    rem Backup do Windows
+                        sc config "SDRSVC" start= disabled        
+
+                    rem Superfetch ou SysMain
+                        sc config "SysMain" start= disabled
+
+                    rem Windows Search
+                        sc config "WSearch" start= disabled
+
+                    rem Desfragmentador Otimizador de Unidades/Discos
+                        sc config "defragsvc" start= disabled
+
+                    rem Windows Defender ou Serviço Microsoft Defender Antivírus
+                        sc config "WinDefend" start= disabled
+
+                    rem OCS Iventory
+                            sc config "OCS Inventory Service" start= delayed-auto
+
+                    exit
+                    </code>
+                </pre>
+            </div>
+
+            <!-- End Opcoes de Seguranca -->
+
         </article>
     </main>
     {% include footer.html %}
