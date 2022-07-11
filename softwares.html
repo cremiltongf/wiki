@@ -103,7 +103,7 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-
+                    "Git-2.35.1.2-64-bit.exe" /VERYSILENT /NORESTART /COMPONENTS="icons,icons\desktop,ext,ext\shellhere,ext\guihere,gitlfs,assoc,assoc_sh"
                     </code>
                 </pre>
             </div>
@@ -112,7 +112,18 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
+                    "%ProgramFiles(x86)%\Git\unins000.exe" /VERYSILENT /NORESTART
+                    "%ProgramFiles%\Git\unins000.exe" /VERYSILENT /NORESTART                    
+                    </code>
+                </pre>
+            </div>
 
+            <h3>Setando Proxy</h3>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    git config --global http.proxy http://192.168.0.6:3128
+                    git config --global http.https://domain.com.sslVerify false                        
                     </code>
                 </pre>
             </div>
