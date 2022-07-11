@@ -181,7 +181,7 @@ load_js: load_assets_js
             <h2 id="passtime">Tempo de senha de computador</h2>
             <img src="assets/images/pages/relacao-confianca.png" alt="Tela de Configuração">
 
-            <blockquote clas="info">
+            <blockquote class="info">
             Essas regras garantem que o computador não perca a relação de confiança 
             em ambientes com alguma ferramenta de congelamento de SO.
             </blockquote>
@@ -193,6 +193,24 @@ load_js: load_assets_js
 
             <h2 id="script">Script Wallpaper</h2>
             <img src="assets/images/pages/script-wallpaper.png" alt="Tela de configurção de script de wallpaper">
+
+            <h3>Conteúdo do Script</h3>
+            <div class="highlight">
+                <pre>
+                    <code>
+                        @echo off
+
+                        if not exist "c:\temp\background.jpg" (
+                            del c:\temp\*.jpg
+                            mkdir c:\temp
+                            xcopy /y \\ensino.umuarama.local\sysvol\ensino.umuarama.local\scripts\wallpaper\background.jpg c:\temp
+                        )
+                        
+                        :exit                        
+                    </code>
+                </pre>
+            </div>
+
             <!-- End Tema -->
 
         </article>
