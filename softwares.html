@@ -128,16 +128,25 @@ load_js: load_assets_js
                 </pre>
             </div>
 
-            <h3>Configuração</h3>
+            <h2 id="java">Java JDK</h2>
+            <h3>Silent install</h3>
             <div class="highlight">
                 <pre>
                     <code>
-                    
+                    start /wait msiexec /i "%SOFTWARES%\jdk-17_windows-x64_bin.msi" /qn /norestart
                     </code>
                 </pre>
             </div>
 
-            <h2 id="java">Java JDK</h2>
+            <h3>Silent uninstall</h3>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    start /wait msiexec /x {64A3A4F4-B792-11D6-A78A-00B0D0180191} /qn /norestart
+                    rd "C:\Program Files\Java\jdk1.8.0_191" /s /q                    
+                    </code>
+                </pre>
+            </div>
 
             <h2 id="libre">LibreOffice</h2>
 
