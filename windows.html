@@ -693,7 +693,18 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                    "python-3.7.5-amd64.exe" /quiet InstallAllUsers=1 PrependPath=1 Include_test=0
+                    "python-3.10.6-amd64.exe" /quiet InstallAllUsers=1 PrependPath=1 Include_test=0 DefaultAllUsersTargetDir
+                    </code>
+                </pre>                 
+            </div>               
+
+            <h4>Silent Uninstall</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    start /wait msiexec /x {691AAAA1-FE86-4973-8DA2-6AA2B3327562} /qn /norestart
+                    
+                    "C:\Users\kenobi\AppData\Local\Package Cache\{20ae9c9d-53ff-44e7-973b-efb518e01971}\python-3.10.4-amd64.exe" /uninstall /quiet
                     </code>
                 </pre>                 
             </div>               
