@@ -75,7 +75,7 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                    sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y
+                    sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y
                     </code>
                 </pre>
             </div>
@@ -233,55 +233,6 @@ load_js: load_assets_js
                 </pre>
             </div>
 
-            <h3 id="netbeans">Apache Netbeans</h3>
-            <p>Faça o download do <a href="https://netbeans.apache.org/download/index.html">Netbeans 12.5</a>.</p>
-            <p>Instale com a conta do aluno na pasta <code class="inline">/home/portable</code>. Não precisa ser root.</p>            
-
-            <h3 id="chrome">Chrome</h3>
-            <p>Faça o download do <a href="https://www.google.com/intl/pt-BR/chrome/?standalone=1">Chrome</a>.</p>
-
-            <h3 id="chrome">Docker</h3>
-            <h4>Definindo repositório</h4>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo apt-get install \
-                    ca-certificates \
-                    curl \
-                    gnupg \
-                    lsb-release
-
-                    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-
-                    echo \
-                    "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
-                    $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-                    </code>
-                </pre>         
-            </div>
-
-            <h4>Instalando Docker</h4>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo apt-get update
-
-                    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
-                    </code>
-                </pre>
-            </div>
-
-            <h4>Testando o Docker</h4>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo docker run hello-world
-                    </code>
-                </pre>
-            </div>
-            
-            <p>Consulte o wiki oficial: <a href="https://docs.docker.com/engine/install/ubuntu/">Docker Engine on Ubuntu.</a></p>
-
             <h3 id="flashback">Gnome Session Flashback</h3>
             <div class="highlight">
                 <pre>
@@ -383,15 +334,6 @@ load_js: load_assets_js
                 </pre>
             </div>
 
-            <h3 id="libre">LibreOffice</h3>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo apt-get install libreoffice
-                    </code>
-                </pre>
-            </div>
-
             <h4>Definindo senha para MySql</h4>
             <div class="highlight">
                 <pre>
@@ -455,6 +397,15 @@ load_js: load_assets_js
             Não faça isso em ambiente de produção.
             </blockquote>
 
+            <h3 id="libre">LibreOffice</h3>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    sudo apt-get install libreoffice
+                    </code>
+                </pre>
+            </div>
+
             <h3 id="ssh">OpenSSH Server</h3>
             <div class="highlight">
                 <pre>
@@ -478,15 +429,6 @@ load_js: load_assets_js
                 <pre>
                     <code>
                     sudo apt-get install smbclient
-                    </code>
-                </pre>
-            </div>
-
-            <h3 id="scratch">Scratch</h3>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo apt-get install scratch
                     </code>
                 </pre>
             </div>
@@ -630,7 +572,7 @@ load_js: load_assets_js
                 </pre>                
             </div>
 
-            <h3 id="vscode">Vusual Studio Code</h3>
+            <h3 id="vscode">Visual Studio Code</h3>
             <p>Faça o download do <a href="https://code.visualstudio.com/">Visual Studio Code</a>.</p>
 
             <!--Fim conteudo aplicacoes-->
