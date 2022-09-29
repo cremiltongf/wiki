@@ -40,7 +40,7 @@ load_js: load_assets_js
                 </tr>
                 <tr>
                     <td>Nuvem01</td>
-                    <td>10GB</td>
+                    <td>Mínimo de 10GB</td>
                 </tr>
                 <tr>
                     <td>Windows</td>
@@ -52,8 +52,8 @@ load_js: load_assets_js
             Caso o equipamento possua unidades extras de armazenamento, utilize todo espaço da unidade para partição nuvem01 e/ou nuvem02.
             </blockquote>
 
-            <h3 id="dominio">Nome e grupo</h3>
-            <p>É necessário configurar o computador no domínio, conforme informações abaixo:</p>
+            <h3 id="dominio">Nome e Grupo</h3>
+            <p>Incluir computador no domínio usando informações abaixo:</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -80,8 +80,8 @@ load_js: load_assets_js
             <h3 id="admin">Usuário administrador</h3>
             <p>Após a instalação do SO, crie o usuário administrador <b>IFPR</b> e defina a senha padrão disponível <a href="https://goo.gl/A3129L">planilha</a>.</p>
 
-            <h3 id="estudante">Usuário estudante</h3>
-            <p>Crie um usuário para o estudante, chamado <b>aluno</b> e defina a senha padrão:</p>
+            <h3 id="estudante">Usuário aluno</h3>
+            <p>Crie o usuário para o estudante chamado <b>aluno</b> e defina a senha padrão:</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -99,7 +99,7 @@ load_js: load_assets_js
             <h2>Configurações</h2>
 
             <blockquote class="info">
-            Configure todos os computadores para usar armazenamento no modo AHCI, habilite suporte a virtualização, desative Fast Boot/Secure Boot e ative o PXE no modo legado.
+            Utilize armazenamento no modo AHCI, habilite suporte a virtualização, desative Fast Boot/Secure Boot e ative o PXE no modo legado.
             </blockquote>
 
             <h3 id="energia">Opções de energia</h3>
@@ -130,7 +130,7 @@ load_js: load_assets_js
             <h3 id="gerenciador">Gerenciador de Tarefas</h3>
             <p>Desative pelo <code class="inline">gpedit.msc</code>. Nos LABs do IFPR, a configuração é definida pelo Active Directory.</p>
 
-            <h3 id="startwin7">Otimize a inicialização</h3>
+            <h3 id="startwin">Otimize a inicialização</h3>
             <img src="../assets/images/pages/msconfig.png" alt="msconfig">
             
             <h3 id="senhas">Senhas</h3>
@@ -384,16 +384,12 @@ load_js: load_assets_js
                     </code>
                 </pre>
             </div>
-
-            <h4>JasperReports Library</h4>
-            <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">JasperReports Library</a>. Extraia a biblioteca em <code class="inline">C:\Portable</code>.</p>
-            <p>Adicione a biblioteca ao NetBeans.</p>            
-                                  
+                                 
             <h3 id="astah">Astah Community</h3>
             <p>A versão community foi oficialmente descontinuado.</p>
             <p>Faça o download da <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">última versão</a> disponibilizada.</p>
             
-            <blockquote class="info">Esse programa depende do Java JRE.</blockquote>
+            <blockquote class="info">Esse programa precisa do Java JRE.</blockquote>
             
             <h4>Silent Install</h4>
             <div class="highlight">
@@ -431,9 +427,9 @@ load_js: load_assets_js
                 </pre>                
             </div>
 
-            <h3 id="bonjour">Bonjour</h3>
+            <h3 id="localdns">Bonjour ou mDNS</h3>
             <blockquote class="info">
-                Instale apenas no Windows 7 Professional. Para o Windows 10, ative mDNS.
+            Instale apenas em Windows 7 Professional. Para o Windows 10, ative mDNS.
             </blockquote>
             <p>Faça o download do <a href="https://developer.apple.com/bonjour/">Bonjour</a>.</p>
             
@@ -456,11 +452,14 @@ load_js: load_assets_js
                 </pre>
             </div>
 
+            <h3 id="bricx">BricxCC +(Driver NXT)</h3>
+            <p>Faça o download dos arquivos disponibilizado na <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">pasta</a>, mova a pasta BricxCC para <b>C:\Portable</b> e instale o driver.            
+
             <h3 id="brmodelo">brModelo</h3>
             <p>Faça o download do <a href="http://www.sis4.com/brModelo/download.html">brModelo</a> e mova para <code class="inline">C:\Portable</code>, dentro da pasta <b>brModelo</b>.
-            
-            <h3 id="bricx">BricxCC +(Driver NXT)</h3>
-            <p>Faça o download dos arquivos disponibilizado na <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">pasta</a>, mova a pasta BricxCC para <b>C:\Portable</b> e instale o driver.
+
+            <h3 id="chem">ChemSketch</h3>
+            <p>Faça o download do <a href="https://www.acdlabs.com/resources/free-chemistry-software-apps/chemsketch-freeware/">ChemSketch</a>.
 
             <h3 id="chrome">Chrome</h3>
             <p>Faça o download do <a href="https://www.google.com/intl/pt-BR/chrome/?standalone=1">Chrome</a>.</p>
@@ -511,6 +510,7 @@ load_js: load_assets_js
             </div>              
 
             <h3 id="composer">Composer</h3>
+            <blockquote class="info">Inslate o XAMPP antes do Composer.</blockquote>
             <p>Faça o download do <a href="https://getcomposer.org/Composer-Setup.exe">Composer</a>.</p>
             
             <h4>Silent Install</h4>
@@ -614,6 +614,10 @@ load_js: load_assets_js
                     </code>
                 </pre>                  
             </div>              
+
+            <h3 id="ftool">Ftool</h3>
+            <p>Faça o download do <a href="https://drive.google.com/file/d/1Xk2OZZPSDc73htRjyqxuHVGqnPhjozKb/view?usp=sharing">Ftool</a>.</p>
+            <p>disponibilize o arquivo em <code class="inline">C:\Portable\Ftool</code> e adicione um atalho na área de trabalho do aluno.</p>
             
             <h3 id="geogebra">Geogebra</h3>
             <p>Faça o download do <a href="https://drive.google.com/file/d/1Xk2OZZPSDc73htRjyqxuHVGqnPhjozKb/view?usp=sharing">Geogebra</a>.</p>
@@ -740,6 +744,9 @@ load_js: load_assets_js
                 </pre>                
             </div>
 
+            <h3 id="jaspersoft">Jaspersoft Studio</h3>
+            <p>Faça o download do  <a href="https://community.jaspersoft.com/project/jasperreports-library">JasperReports Library</a>.</p>            
+
             <h3 id="jdk17">Java JDK 17</h3>
             <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Java JDK 17</a>.</p>
 
@@ -777,7 +784,7 @@ load_js: load_assets_js
             </pre>                
             </div>
 
-            <h3 id="var">Variáveis de ambiente de Java</h3>
+            <h3 id="javavar">Java - Variáveis de ambiente</h3>
             <blockquote class="info">
             Crie as variáveis para a última versão do Java JDK instalado.
             </blockquote>
@@ -837,12 +844,6 @@ load_js: load_assets_js
                     </code>
                 </pre>
             </div>
-            
-            <h3 id="vmubuntu">Máquina Virtual Ubuntu</h3>
-            <p>VM do Ubuntu 16.04 64bits LTS, rodando no Oracle VirtualBox para práticas de SO.</p>
-            
-            <h3 id="vmwindows">Máquina Virtual Windows 7</h3>
-            <p>VM do Windows 7 Professional, rodando no Oracle VirtualBox para práticas de SO.</p>
 
             <h3 id="workbench">MySQL Workbench</h3>
             <p>Faça o download do <a href="https://dev.mysql.com/downloads/windows/installer/8.0.html">MySQL Workbench</a>.</p>
@@ -877,14 +878,17 @@ load_js: load_assets_js
                     npm config set https-proxy http://192.168.0.6:3128
                     </code>
                 </pre>                  
-            </div>              
+            </div>
             
             <h3 id="ocs">OCS Iventory Agent</h3>
-            <p>Faça o download do instalador disponibilizado na <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">pasta</a>.</p>            
+            <p>Faça o download do instalador disponibilizado na <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">pasta</a>.</p>
 
-            <h3 id="virtualbox">Oracle VirtualBox</h3>
+            <h3 id="vmubuntu">Oracle VM Ubuntu</h3>
+            <p>VM do Ubuntu 20.04.3 64bits LTS, rodando no Oracle VM VirtualBox.</p>
+
+            <h3 id="virtualbox">Oracle VM VirtualBox +(Extension Pack)</h3>
             <p>Faça o download do <a href="https://www.virtualbox.org/wiki/Downloads">Oracle VirtualBox</a>.</p>
-            
+
             <h4>Silent Install</h4>            
             <div class="highlight">
                 <pre>
@@ -897,9 +901,8 @@ load_js: load_assets_js
                     </code>
                 </pre>                
             </div>
-
-            <blockquote class="info">A código da licença muda conforme a versão do instalador.</blockquote>
-
+            <blockquote class="info">A código da licença muda conforme a versão do instalador.</blockquote>            
+            
             <h3 id="portugol">Portugol Stúdio</h3>
             <p>Faça o download do <a href="http://lite.acad.univali.br/portugol/">Portugol Stúdio</a>.</p>
             
@@ -966,6 +969,9 @@ load_js: load_assets_js
             <p>Faça o download do  <a href="http://www.toolwiz.com/lead/toolwiz_time_freeze.php">Toolwiz Time Freeze</a>.</p>
             <p>Para o bom funcionamento desse programa, é necessário desativar os seguintes serviços: <b>Desfragmentador ou Otimizador de Discos/Unidades</b>, <b>Backup do Windows</b>, <a href="#reparo">Reparo automático</a>, Windows Update e <a href="#fastboot">Inicialização rápida</a> (Windows 10).</p>
 
+            <h3 id="ultimaker">Ultimaker Cura</h3>
+            <p>Faça o download do <a href="https://ultimaker.com/software/ultimaker-cura">Ultimaker Cura</a>.</p>
+
             <h3 id="veyon">Veyon</h3>
             <p>Faça o download do <a href="https://veyon.io/download/">Veyon</a> e instale como cliente.</p>
             
@@ -997,12 +1003,12 @@ load_js: load_assets_js
                 </pre>
             </div>            
 
+            <h3 id="vscode">Visual Studio Code</h3>
+            <p>Faça o download do <a href="https://code.visualstudio.com/">Visual Studio Code</a> na versão de sistema.</p>
+
             <h3 id="visualg">VisuAlG</h3>
             <p>Faça o download do <a href="https://visualg3.com.br/">Visual G</a>.</p>
             <p>Extraia os arquivos para a pasta <b>C:\Portable</b> e crie um link para a Área de trabalho do aluno.</p>
-          
-            <h3 id="vscode">Visual Studio Code</h3>
-            <p>Faça o download do <a href="https://code.visualstudio.com/">Visual Studio Code</a> na versão de sistema.</p>
             
             <h4>Silent Install</h4>
             <div class="highlight">
@@ -1051,7 +1057,6 @@ load_js: load_assets_js
             <div class="highlight">
                 <pre>
                     <code>
-                    cacls "%SystemDrive%\xampp" /E /P Todos:F
                     cacls "%SystemDrive%\xampp\xampp-control.ini" /E /P Todos:F
                     </code>
                 </pre>
