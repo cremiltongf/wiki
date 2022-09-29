@@ -401,7 +401,7 @@ load_js: load_assets_js
             </div>             
             
             <h3 id="autocad">AutoCAD</h3>
-            <p>Faça o download do <a href="https://www.autodesk.com/education/free-software/">AutoCAD 2021</a>.</p>
+            <p>Faça o download do <a href="https://www.autodesk.com/education/free-software/">AutoCAD</a>.</p>
             
             <h3 id="blender">Blender</h3>
             <p>Faça o download do  <a href="https://www.blender.org/download/">Blender</a>.</p>
@@ -453,7 +453,7 @@ load_js: load_assets_js
             </div>
 
             <h3 id="bricx">BricxCC +(Driver NXT)</h3>
-            <p>Faça o download dos arquivos disponibilizado na <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">pasta</a>, mova a pasta BricxCC para <b>C:\Portable</b> e instale o driver.            
+            <p>Faça o download dos arquivos disponibilizado na <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">pasta</a>, mova a pasta BricxCC para <code class="inline">C:\Portable</code> e instale o driver.
 
             <h3 id="brmodelo">brModelo</h3>
             <p>Faça o download do <a href="http://www.sis4.com/brModelo/download.html">brModelo</a> e mova para <code class="inline">C:\Portable</code>, dentro da pasta <b>brModelo</b>.
@@ -568,7 +568,7 @@ load_js: load_assets_js
             </div>
 
             <h3 id="eclipse">Eclipse</h3>
-            <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Eclipse</a> e disponibilize em <b>C:\Portable</b>.
+            <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Eclipse</a> e disponibilize em <code class="inline">C:\Portable</code>.
 
             <h3 id="firefox">Firefox</h3>
             <p>Faça o download do <a href="https://www.mozilla.org/pt-BR/firefox/all/">Firefox</a>.</p>
@@ -940,7 +940,7 @@ load_js: load_assets_js
             </div>                   
 
             <h3 id="scketchup">ScketchUp Make 2016</h3>
-            <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">ScketchUp Make 2017</a>.</p>
+            <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">ScketchUp Make 2016</a>.</p>
             
             <h4>Plugin</h4>
             <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">exportador para Sketchup</a>.</p>
@@ -973,7 +973,7 @@ load_js: load_assets_js
             <p>Faça o download do <a href="https://ultimaker.com/software/ultimaker-cura">Ultimaker Cura</a>.</p>
 
             <h3 id="veyon">Veyon</h3>
-            <p>Faça o download do <a href="https://veyon.io/download/">Veyon</a> e instale como cliente.</p>
+            <p>Faça o download do <a href="https://veyon.io/download/">Veyon</a>.</p>
             
             <h4>Silent Install</h4>
             <p>Instalação para o cliente.</p>
@@ -1008,7 +1008,7 @@ load_js: load_assets_js
 
             <h3 id="visualg">VisuAlG</h3>
             <p>Faça o download do <a href="https://visualg3.com.br/">Visual G</a>.</p>
-            <p>Extraia os arquivos para a pasta <b>C:\Portable</b> e crie um link para a Área de trabalho do aluno.</p>
+            <p>Extraia os arquivos para a pasta <code class="inline">C:\Portable</code> e crie um link para a Área de trabalho do aluno.</p>
             
             <h4>Silent Install</h4>
             <div class="highlight">
@@ -1053,15 +1053,6 @@ load_js: load_assets_js
                 </pre>                
             </div>
 
-            <h4>Permissões para o diretório XAMPP</h4>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    cacls "%SystemDrive%\xampp\xampp-control.ini" /E /P Todos:F
-                    </code>
-                </pre>
-            </div>
-
             <h4>Silent Uninstall</h4>
             <div class="highlight">
                 <pre>
@@ -1071,6 +1062,15 @@ load_js: load_assets_js
                     </code>
                 </pre>
             </div> 
+
+            <h4>Permissões para iniciar e encerrar os serviços XAMPP</h4>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    cacls "%SystemDrive%\xampp\xampp-control.ini" /E /P Todos:F
+                    </code>
+                </pre>
+            </div>
 
             <!--Fim conteudo aplicacoes-->
 
@@ -1085,7 +1085,7 @@ load_js: load_assets_js
             <h3 id="dominio">Computador no domínio</h3>
             <p>Adicione o Computador ao domínio conforme <a href="#dominio">orientações</a>.</p>
 
-            <h3 id="atautocad">Ativar AutoCAD</h3>           
+            <h3 id="atautocad">Ativar AutoCAD</h3>
             <p>Execute o <code class="inline">AutoCAD</code> (necessário internet) e siga os passos que aparecer na tela e, informe a <a href="https://docs.google.com/spreadsheets/d/1RaX8ubdo7RuoA8qhwZAWh6ZgoTQsC_E37R8E-21wkHQ/edit#gid=0">chave de ativação</a> caso solicitado.</p>
             <p>Em caso de erro na ativação, remover a pasta <code class="inline">FLEXnet</code> que fica localizado em <code class="inline">C:\ProgramData</code> e, execute o programa novamente.</p>
 
