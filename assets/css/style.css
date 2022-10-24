@@ -27,7 +27,7 @@ table {
     background-color: #1b202d;
 }
 td, th {
-    border: 2px solid #1b202d;
+    border: 1px solid #4a5773;
 	padding: .8rem;
 	text-align: left;
 }
@@ -343,14 +343,14 @@ h4{
     padding: 1.25rem;
     color: #e1e1e1;
     border-radius: .375rem;
-    border: 1px solid #384560;
+    border: 1px solid #4a5773;
 }
 .highlight{
     color: #d78423;
     margin: 0 0 1rem;
     padding: 0 10px;
     background-color: #2d2d2d;
-    border: 1px solid #1b202d;
+    border: 1px solid #4a5773;
     border-radius: .375rem;
 }
 .highlight pre{
@@ -367,7 +367,7 @@ h4{
 	padding: .2rem .1rem;
     color: #d78423;
     background-color: #2d2d2d;
-    border: 1px solid #1b202d;
+    border: 1px solid #4a5773;
     border-radius: .4rem;
 }
 .conteudo ol{
