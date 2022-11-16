@@ -82,7 +82,7 @@ b{
 .header{
     max-width: 990px;
     margin: 0 auto 2.5rem;
-    padding: 1rem;
+    padding: 1.2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -129,7 +129,7 @@ a.item-nav:hover{
  *  home layout
  */
  main{
-    padding: 1rem;
+    padding: 1.2rem;
  }
 .conteudo-home{
     max-width: 990px;
