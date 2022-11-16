@@ -309,10 +309,15 @@ a.btn-menu,
  */
 .conteudo blockquote,
 .conteudo-home p,
+.conteudo-home ul,
 .conteudo p{
     font-size: 1.25rem;
     margin-bottom: 1rem;
     line-height: 1.5;
+}
+.conteudo-home ul{
+    line-height: 1.6;
+    margin-left: 1.4rem;
 }
 h1,
 h2,
