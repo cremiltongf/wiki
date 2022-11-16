@@ -49,13 +49,16 @@ main a:link,
 footer a:link{
     color: #0695cf;
     text-decoration: none;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+	transition: all 0.4s ease;
 }
 header a:visited,
 main a:visited,
 footer a:visited{
     color: #0695cf;
 }
-header a:hover
+header a:hover,
 main a:hover,
 footer a:hover{
     color: #d78423;
@@ -105,6 +108,7 @@ a.item-nav{
     padding: 0 1rem;
 }
 a.item-nav:hover{
+    text-decoration: none;
     color: #d78423;
 }
 @media (max-width: 884px){
@@ -229,8 +233,12 @@ a.item-nav:hover{
     text-decoration: none;
     display: inline-block;
     padding: .375rem .375rem .5rem;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+	transition: all 0.4s ease;
 }
 .intro-ul a:hover{
+    text-decoration: none;
     background-color: #0695cf;
     color: #e1e1e1;
     border-radius: .375rem;
@@ -409,6 +417,9 @@ h4{
 }
 .footer svg{
     vertical-align: middle;
+    -webkit-transition: all 0.5s 0s ease;
+    -moz-transition: all 0.5s 0s ease;
+    transition: all 0.5s 0s ease;
 }
 .footer svg:hover{
     -webkit-transition: all 0.5s 0s ease;
@@ -439,8 +450,8 @@ svg:hover{
     display: block;
     visibility: hidden;
     position: fixed;
-    right: .5rem;
-    bottom: .5rem;
+    right: .8rem;
+    bottom: .8rem;
     height: 3.125rem;
     width: 3.125rem;
 	z-index: 9;
@@ -455,4 +466,7 @@ svg:hover{
 .btn-topo-show{
     visibility: visible;
     opacity: 1;
+    -webkit-transition: .6s;
+    -moz-transition: .6s;
+	transition: .6s;
 }
