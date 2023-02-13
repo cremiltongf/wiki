@@ -310,12 +310,14 @@ a.btn-menu,
 .conteudo blockquote,
 .conteudo-home p,
 .conteudo-home ul,
+.conteudo ul,
 .conteudo p{
     font-size: 1.25rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
-.conteudo-home ul{
-    margin-left: 1.4rem;
+.conteudo-home ul,
+.conteudo ul{
+    margin-left: 3.2rem;
 }
 h1,
 h2,
