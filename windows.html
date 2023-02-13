@@ -26,7 +26,10 @@ load_js: load_assets_js
         <article class="conteudo">
             <h1>Criação de Imagem</h1>
 
-            <h2 id="configsetup">Setup</h2>
+            <!-- Start Instalação -->
+
+            <h2>Setup</h2>
+            <h3 id="configsetup">Configurações</h3>
             <ul>
                 <li>Armazenamento no modo AHCI;</li>
                 <li>Habilitar a virtualização;</li>
@@ -35,13 +38,15 @@ load_js: load_assets_js
                 <li>Ativar PXE no modo Legacy.</li>
             </ul>
 
-            <blockquote class="info">
-            Sempre que possível, instale o Windows no modo UEFI e desative o IPv6.
-            </blockquote>
+            <h2>Instalação</h2>
+            <h3 id="uefi">Modo UEFI</h3>
+            <p>Instalar o Windows no modo UEFI, sempre que possível.</p>
 
-            <!--Conteudo instalacao-->
-            <h2>Instalação do Windows</h2>
+            <h3 id="admin">Usuário administrador</h3>
+            <p>Após a instalação do SO, crie o usuário administrador <b>IFPR</b> e defina a senha padrão disponível <a href="https://docs.google.com/spreadsheets/d/1iJvoeV2McgPpoJndl9O5W5mLaZII2okWczT2cPZBV1o/edit?usp=sharing">planilha</a>.</p>            
+
             <h3 id="particao">Partições do SO</h3>
+            <p>Definir partições do computador, conforme tabela abaixo:</p>
             <table>
                 <tr>
                     <th>Descrição</th>
@@ -61,35 +66,45 @@ load_js: load_assets_js
             Caso o equipamento possua unidades extras de armazenamento, utilize todo espaço da unidade para partição nuvem01 e/ou nuvem02.
             </blockquote>
 
+            <h3 id="windowsupdate">Windows Update</h3>
+            <p>Após a instalação do SO, instalar todas as atualizações do Windows.</p>
+
+            <h3 id="drivers">Atualização de drivers</h3>
+            <p>Use softwares como <a href="https://www.drivereasy.com/">EasyDriver</a>, <a href="https://www.iobit.com/pt/driver-booster.php">Driver Booster</a> ou <a href="https://www.drivermax.com/download.htm">DriverMax</a> para realizar as atualizações.</p>
+
+            <!-- End Instalação -->
+
+            <!-- Start Configuração Inicial -->
+
+            <h2>Configuração inicial</h2>
+
             <h3 id="nome">Nome e Grupo</h3>
-            <p>Incluir computador no domínio usando informações abaixo:</p>
+            <p>Incluir o computador no domínio, conforme informações abaixo:</p>
             <div class="highlight">
                 <pre>
-                    <code>
-                    DNS=192.168.0.11
-                    
+                    <code>                 
                     NomePC: lab1m01
-                    Domínio: ensino.umuarama
+                    Domínio: ensino.umuarama.local
                     
                     NomePC: lab2m01
-                    Domínio: ensino.umuarama
+                    Domínio: ensino.umuarama.local
                     
                     NomePC: lab3m01
-                    Domínio: ensino.umuarama
+                    Domínio: ensino.umuarama.local
                     
                     NomePC: lab4m01
-                    Domínio: ensino.umuarama
+                    Domínio: ensino.umuarama.local
                     
                     NomePC: lab5m01
-                    Domínio: ensino.umuarama
+                    Domínio: ensino.umuarama.local
                     </code>
                 </pre>                
             </div>
 
-            <h3 id="admin">Usuário administrador</h3>
-            <p>Após a instalação do SO, crie o usuário administrador <b>IFPR</b> e defina a senha padrão disponível <a href="https://docs.google.com/spreadsheets/d/1iJvoeV2McgPpoJndl9O5W5mLaZII2okWczT2cPZBV1o/edit?usp=sharing">planilha</a>.</p>
-
-            <h3 id="estudante">Usuário aluno</h3>
+            <h3 id="estudante">Usuário Aluno</h3>        
+            <blockquote class="info">
+                Usuário e senha definida pelo Active Directory.
+            </blockquote>
             <p>Crie o usuário para o estudante chamado <b>aluno</b> e defina a senha padrão:</p>
             <div class="highlight">
                 <pre>
@@ -99,33 +114,17 @@ load_js: load_assets_js
                     </code>
                 </pre>
             </div>
-            <blockquote class="info">
-                Nos LABs do IFPR, o usuário é criado pelo Active Directory.
-            </blockquote>
-            <!--Fim conteudo instalacao-->
-
-            <!--Conteudo configuracoes-->
-            <h2>Configurações</h2>
-
-            <blockquote class="info">
-            Utilize armazenamento no modo AHCI, habilite suporte a virtualização, desative Fast Boot/Secure Boot e ative o PXE no modo legado.
-            </blockquote>
-
-            <h3 id="energia">Opções de energia</h3>
-            <p>Alterar as opções de energia para nunca bloquear a tela.</p>
-            <img src="../assets/images/pages/energia.png" alt="Opções de energia">
 
             <h3 id="wallpaper">Papel de parede padrão IFPR</h3>
+            <blockquote class="info">
+                Configuração definida pelo Active Directory.
+            </blockquote>
             <p>Baixe o <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">papel de parede</a>.</p>
-            <p>Nos LABs do IFPR o papel de parede é definida pelo Active Directory.</p>
-
-            <h3 id="historico">Histórico do Chrome e Firefox</h3>
-            <p>Não é legal deixar históricos de downloads e etc.</p>
-
-            <h3 id="drivers">Atualização de drivers</h3>
-            <p>Use softwares como <a href="https://www.drivereasy.com/">EasyDriver</a> ou <a href="https://www.drivermax.com/download.htm">DriverMax</a> para realizar as atualizações.</p>
           
             <h3 id="proxy">Configuração de proxy</h3>
+            <blockquote class="info">
+                Configuração definida pelo Active Directory.
+            </blockquote>
             <div class="highlight">
                 <pre>
                     <code>
@@ -134,18 +133,20 @@ load_js: load_assets_js
                 </pre>
             </div>
             <img src="../assets/images/pages/proxy.png" alt="Proxy">
-            <p>Nos LABs do IFPR, a configuração é definida pelo Active Directory.</p>
             
             <h3 id="gerenciador">Gerenciador de Tarefas</h3>
-            <p>Desative pelo <code class="inline">gpedit.msc</code>. Nos LABs do IFPR, a configuração é definida pelo Active Directory.</p>
-
-            <h3 id="startwin">Otimize a inicialização</h3>
-            <img src="../assets/images/pages/msconfig.png" alt="msconfig">
+            <blockquote class="info">
+            Configuração definida pelo Active Directory.
+            </blockquote>
+            <p>Desative pelo <code class="inline">gpedit.msc</code>.</p>
             
             <h3 id="senhas">Senhas</h3>
             <p>Coloque um <b>txt</b> na área de trabalho com as senhas, caso alguma aplicação necessite.</p>
 
             <h3 id="reparo">Reparo automático</h3>
+            <blockquote class="info">
+                Ajuste necessário para evitar o reparo automático do SO e quebrar o Windows.
+            </blockquote>
 
             <h4>Desativar no Windows 7</h4>
             <div class="highlight">
@@ -165,7 +166,12 @@ load_js: load_assets_js
                 </pre>                
             </div>
 
-            <blockquote class="info">Configuração para evitar o reparo automático do SO.</blockquote>
+            <h3 id="energia">Opções de energia</h3>
+            <blockquote class="info">
+            Realize o ajuste para o usuário Aluno.
+            </blockquote>
+            <p>Alterar as opções de energia para nunca bloquear a tela.</p>
+            <img src="../assets/images/pages/energia.png" alt="Opções de energia">
 
             <h3 id="servicos">Serviços</h3>
             <p>Altere a inicialização dos serviços:</p>
@@ -207,8 +213,6 @@ load_js: load_assets_js
                     <td>Defina como = Atraso na inicialização</td>
                 </tr>
             </table>
-            <p>Desative o Desfragmentador para todas as unidades do computador.</p>
-            <img src="../assets/images/pages/desfragmentador.jpg" alt="Desfragmentador">
 
             <h4>Gerenciando serviços pelo prompt de comando</h4>
             <div class="highlight">
@@ -218,7 +222,11 @@ load_js: load_assets_js
                     sc config "wuauserv" start= disabled
                     </code>
                 </pre>
-            </div>              
+            </div>
+
+            <h3 id="defrag">Otimização agendada</h3>
+            <p>Desative a desfragmentação agendada para todas as unidades do computador.</p>
+            <img src="../assets/images/pages/desfragmentador.jpg" alt="Desfragmentador">
                        
             <h2>Configurações do Windows 10</h2>
 
@@ -292,7 +300,7 @@ load_js: load_assets_js
                 </ol>
 
             <h3 id="fastboot">Fast Boot</h3>
-            <p>Esse ajuste é necessário para garantir o desligamento completo do computador. Desligue também via BIOs.</p>
+            <p>Esse ajuste é necessário para garantir o desligamento completo do computador.</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -322,13 +330,13 @@ load_js: load_assets_js
             <h4>Privacidade</h4>
             <p>Desabilite os serviços de coleta de dados usando o <a href="https://www.oo-software.com/en/shutup10">O&O ShutUp10++</a>.</p>
       
-            <!--Fim conteudo configuracoes-->
+            <!-- End Configuração Inicial -->
 
-            <!--Conteudo aplicacoes-->
+            <!-- Start Aplicacoes -->
             <h2>Aplicações</h2>
 
             <blockquote class="info">
-            Execute os softwares ao menos uma vez na conta do aluno, para que seja criado as configurações de ambiente para o perfil.
+            Execute os softwares ao menos uma vez na conta do usuário Aluno, para que seja criado as configurações de ambiente para o perfil.
             </blockquote>            
 
             <h3 id="zip">7-zip</h3>
@@ -976,7 +984,6 @@ load_js: load_assets_js
             
             <h3 id="freeze">Toolwiz Time Freeze</h3>
             <p>Faça o download do  <a href="http://www.toolwiz.com/lead/toolwiz_time_freeze.php">Toolwiz Time Freeze</a>.</p>
-            <p>Para o bom funcionamento desse programa, é necessário desativar os seguintes serviços: <b>Desfragmentador ou Otimizador de Discos/Unidades</b>, <b>Backup do Windows</b>, <a href="#reparo">Reparo automático</a>, Windows Update e <a href="#fastboot">Inicialização rápida</a> (Windows 10).</p>
 
             <h3 id="ultimaker">Ultimaker Cura</h3>
             <p>Faça o download do <a href="https://ultimaker.com/software/ultimaker-cura">Ultimaker Cura</a>.</p>
@@ -1086,16 +1093,28 @@ load_js: load_assets_js
                 </pre>
             </div>
 
-            <!--Fim conteudo aplicacoes-->
+            <!-- End Aplicacoes -->
 
-            <!-- Clone -->
+
+            <!-- Start Configuração final -->
+
+            <h2>Configuração Final</h2>
+            
+            <h3 id="historico">Histórico de Navegação</h3>
+            <p>Remover histórico do Edge, Chrome, Firefox e Internet Explorer.</p>
+
+            <h3 id="startwin">Otimize a Inicialização</h3>
+            <img src="../assets/images/pages/msconfig.png" alt="msconfig">
+
+            <p>Acesse através do <code class="inline">msconfig</code></p>
+
+            <!-- End Configuração final -->
+
+
+            <!-- Start Clone -->
+
             <h2>Clone Windows</h2>
 
-            <blockquote class="info">
-            Para o processo de clonagem, desabilite FastBoot/Secure Boot e utilize o PXE no modo legado.
-            </blockquote>
-
-            <!--Conteudo clone-->
             <h3 id="dominio">Computador no domínio</h3>
             <p>Adicione o computador ao domínio conforme <a href="#nome">orientações</a> para cada laboratório.</p>
 
@@ -1108,7 +1127,6 @@ load_js: load_assets_js
                 </pre>
             </div>
 
-
             <h3 id="atautocad">Ativar AutoCAD</h3>
             <p>Execute o <code class="inline">AutoCAD</code> (necessário internet) e siga os passos que aparecer na tela e, informe a <a href="https://docs.google.com/spreadsheets/d/1RaX8ubdo7RuoA8qhwZAWh6ZgoTQsC_E37R8E-21wkHQ/edit#gid=0">chave de ativação</a> caso solicitado.</p>
             <p>Em caso de erro na ativação, remover a pasta <code class="inline">FLEXnet</code> que fica localizado em <code class="inline">C:\ProgramData</code> e, execute o programa novamente.</p>
@@ -1120,7 +1138,7 @@ load_js: load_assets_js
             <h3 id="timefreeze">Habilitar Toolwiz Time Freeze</h3>
             <p>Por último, ative o <a href="https://labumuarama.com.br/veyon/#habilitando">Toolwiz Time Freeze</a>.</p>
 
-            <!-- Fim clone-->
+            <!-- End Clone-->
 
         </article>
     </main>
