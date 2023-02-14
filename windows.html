@@ -32,7 +32,7 @@ load_js: load_assets_js
             <h3 id="configsetup">Configurações</h3>
             <ul>
                 <li>Armazenamento no modo AHCI;</li>
-                <li>Habilitar a virtualização;</li>
+                <li>Habilitar virtualização;</li>
                 <li>Desativar Fast Boot;</li>
                 <li>Desativar Secure Boot;</li>
                 <li>Ativar PXE no modo Legacy.</li>
@@ -43,7 +43,7 @@ load_js: load_assets_js
             <p>Instalar o Windows no modo UEFI, sempre que possível.</p>
 
             <h3 id="admin">Usuário administrador</h3>
-            <p>Após a instalação do SO, crie o usuário administrador <b>IFPR</b> e defina a senha padrão disponível <a href="https://docs.google.com/spreadsheets/d/1iJvoeV2McgPpoJndl9O5W5mLaZII2okWczT2cPZBV1o/edit?usp=sharing">planilha</a>.</p>            
+            <p>Após a instalação do SO, crie o usuário administrador <b>IFPR</b> e defina a senha padrão disponível na <a href="https://docs.google.com/spreadsheets/d/1iJvoeV2McgPpoJndl9O5W5mLaZII2okWczT2cPZBV1o/edit?usp=sharing">planilha</a>.</p>            
 
             <h3 id="ipv6">IPv6</h3>
             <p>Desativar IPv6.</p>
@@ -73,7 +73,7 @@ load_js: load_assets_js
             <p>Após a instalação do SO, instalar todas as atualizações do Windows.</p>
 
             <h3 id="drivers">Atualização de drivers</h3>
-            <p>Use softwares como <a href="https://www.drivereasy.com/">EasyDriver</a>, <a href="https://www.iobit.com/pt/driver-booster.php">Driver Booster</a> ou <a href="https://www.drivermax.com/download.htm">DriverMax</a> para realizar as atualizações.</p>
+            <p>Use softwares como <a href="https://www.drivereasy.com/">EasyDriver</a>, <a href="https://www.iobit.com/pt/driver-booster.php">Driver Booster</a> ou <a href="https://www.drivermax.com/download.htm">DriverMax</a> para realizar essa tarefa.</p>
 
             <!-- End Instalação -->
 
@@ -148,7 +148,7 @@ load_js: load_assets_js
 
             <h3 id="reparo">Reparo automático</h3>
             <blockquote class="info">
-                Ajuste necessário para evitar o reparo automático do SO e quebrar o Windows.
+                Ajuste necessário para evitar o reparo automático do SO, o que pode "quebrar" o Windows.
             </blockquote>
 
             <h4>Desativar no Windows 7</h4>
@@ -177,10 +177,13 @@ load_js: load_assets_js
             <img src="../assets/images/pages/energia.png" alt="Opções de energia">
 
             <h3 id="servicos">Serviços</h3>
-            <p>Altere a inicialização dos serviços:</p>
+            <blockquote class="info">
+            Configurações definidas pelo Active Directory.
+            </blockquote>
+
             <table>
                 <tr>
-                    <th>Nome</th>
+                    <th>Serviço</th>
                     <th>Configuração</th>
                 </tr>
                 <tr>
@@ -228,7 +231,7 @@ load_js: load_assets_js
             </div>
 
             <h3 id="defrag">Otimização agendada</h3>
-            <p>Desative a desfragmentação agendada para todas as unidades do computador.</p>
+            <p>Desativar a desfragmentação agendada para todas as unidades do computador.</p>
             <img src="../assets/images/pages/desfragmentador.jpg" alt="Desfragmentador">
                        
             <h2>Configurações do Windows 10</h2>
@@ -303,7 +306,9 @@ load_js: load_assets_js
                 </ol>
 
             <h3 id="fastboot">Fast Boot</h3>
-            <p>Esse ajuste é necessário para garantir o desligamento completo do computador.</p>
+            <blockquote class="info">
+            Ajuste necessário para o desligamento completo do SO.
+            </blockquote>
             <div class="highlight">
                 <pre>
                     <code>
@@ -339,7 +344,7 @@ load_js: load_assets_js
             <h2>Aplicações</h2>
 
             <blockquote class="info">
-            Execute os softwares ao menos uma vez na conta do usuário Aluno, para que seja criado as configurações de ambiente para o perfil.
+            Execute os softwares ao menos uma vez na conta do usuário Aluno, para que seja criado as configurações de ambiente para este perfil.
             </blockquote>            
 
             <h3 id="zip">7-zip</h3>
@@ -359,9 +364,9 @@ load_js: load_assets_js
             <blockquote class="info">Executar o programa no perfil do aluno, para terminar de adicionar os recursos extras.</blockquote>
 
             <h3 id="netbeans">Apache NetBeans</h3>
-            <p>Faça o download do <a href="https://netbeans.org/downloads/">NetBeans</a>.</p>
-
             <blockquote class="info">Esse programa precisa do Java JDK.</blockquote>
+
+            <p>Faça o download do <a href="https://netbeans.org/downloads/">NetBeans</a>.</p>
             
             <h4>Silent Install</h4>
             <div class="highlight">
@@ -372,7 +377,7 @@ load_js: load_assets_js
                 </pre>                
             </div>
             <p>Baixe o <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">state.xml</a></p>
-            <blockquote class="info">Necessário gerar um novo state.xml a cada nova versão do NetBeans que será instalado.</blockquote>
+            <blockquote class="info">Necessário gerar um state.xml para cada versão do NetBeans.</blockquote>
 
             <h4>Silent Uninstall</h4>
             <div class="highlight">
@@ -404,10 +409,12 @@ load_js: load_assets_js
             </div>
                                  
             <h3 id="astah">Astah Community</h3>
+            <blockquote class="info">
+            Esse programa precisa do Java JRE.
+            </blockquote>
+
             <p>A versão community foi oficialmente descontinuado.</p>
             <p>Faça o download da <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">última versão</a> disponibilizada.</p>
-            
-            <blockquote class="info">Esse programa precisa do Java JRE.</blockquote>
             
             <h4>Silent Install</h4>
             <div class="highlight">
@@ -447,7 +454,7 @@ load_js: load_assets_js
 
             <h3 id="localdns">Bonjour ou mDNS</h3>
             <blockquote class="info">
-            Instale apenas em Windows 7 Professional. Para o Windows 10, ative mDNS.
+            Instale apenas no Windows 7 Professional. Para o Windows 10, ative mDNS.
             </blockquote>
             <p>Faça o download do <a href="https://developer.apple.com/bonjour/">Bonjour</a>.</p>
             
@@ -480,8 +487,10 @@ load_js: load_assets_js
             <p>Faça o download do <a href="https://www.acdlabs.com/resources/free-chemistry-software-apps/chemsketch-freeware/">ChemSketch</a>.
 
             <h3 id="chrome">Chrome</h3>
+            <blockquote class="info">
+                Se os serviços do navegador estiverem desativados, ative antes de prosseguir com a atualização.
+            </blockquote>
             <p>Faça o download do <a href="https://www.google.com/intl/pt-BR/chrome/?standalone=1">Chrome</a>.</p>
-            <blockquote class="info">Se os serviços do navegador estiverem desativados, é necessário ativar antes de prosseguir com a atualização.</blockquote>
 
             <h4>Ativando os serviços</h4>
             <div class="highlight">
@@ -507,7 +516,9 @@ load_js: load_assets_js
             </div>                
 
             <h3 id="tracer">Cisco Packet Tracer</h3>
-            <p>Faça o download do <a href="https://www.netacad.com/pt-br">Cisco Packet Tracer</a>. É necessário que os alunos façam o <a href="https://www.netacad.com/pt-br">cadastro</a> para usar o simulador.</p>
+            <blockquote class="info">É necessário que os alunos façam <a href="https://www.netacad.com/pt-br">cadastro</a> para usar o simulador.</blockquote>
+
+            <p>Faça o download do <a href="https://www.netacad.com/pt-br">Cisco Packet Tracer</a>.</p>
             
             <h4>Silent Install</h4>
             <div class="highlight">
@@ -528,7 +539,7 @@ load_js: load_assets_js
             </div>              
 
             <h3 id="composer">Composer</h3>
-            <blockquote class="info">Instale o XAMPP antes do Composer.</blockquote>
+            <blockquote class="info">Esse programa precisa do XAMPP.</blockquote>
             <p>Faça o download do <a href="https://getcomposer.org/Composer-Setup.exe">Composer</a>.</p>
             
             <h4>Silent Install</h4>
@@ -592,9 +603,9 @@ load_js: load_assets_js
             <p>Faça o download do <a href="https://www.eclipse.org/downloads/packages/">Eclipse</a> e disponibilize em <code class="inline">C:\Portable</code>.
 
             <h3 id="firefox">Firefox</h3>
+            <blockquote class="info">Se os serviços do navegador estiverem desativados, ative antes de prosseguir com a atualização.</blockquote>
             <p>Faça o download do <a href="https://www.mozilla.org/pt-BR/firefox/all/">Firefox</a>.</p>
             
-            <blockquote class="info">Se os serviços do navegador estiverem desativados, é necessário ativar antes de prosseguir com a atualização.</blockquote>
             <h4>Ativando os serviços</h4>
             <div class="highlight">
                 <pre>
@@ -667,8 +678,6 @@ load_js: load_assets_js
             
             <h3 id="git">Git</h3>
             <p>Faça o download do <a href="https://git-scm.com/">Git</a>.</p>
-
-            <blockquote class="info">Instale o Visual Studio Code primeiro, para ficar de editor padrçao do Git.</blockquote>
             
             <h4>Silent Install</h4>
             <div class="highlight">
