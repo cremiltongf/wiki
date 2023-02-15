@@ -43,7 +43,7 @@ load_js: load_assets_js
             <p>Instalar o Windows no modo UEFI, sempre que possível.</p>
 
             <h3 id="admin">Usuário administrador</h3>
-            <p>Após a instalação do SO, crie o usuário administrador <b>IFPR</b> e defina a senha padrão disponível na <a href="https://docs.google.com/spreadsheets/d/1iJvoeV2McgPpoJndl9O5W5mLaZII2okWczT2cPZBV1o/edit?usp=sharing">planilha</a>.</p>            
+            <p>Criar usuário administrador <b>IFPR</b> e definir senha padrão disponível na <a href="https://docs.google.com/spreadsheets/d/1iJvoeV2McgPpoJndl9O5W5mLaZII2okWczT2cPZBV1o/edit?usp=sharing">planilha</a>.</p>
 
             <h3 id="ipv6">IPv6</h3>
             <p>Desativar IPv6.</p>
@@ -70,7 +70,7 @@ load_js: load_assets_js
             </blockquote>
 
             <h3 id="windowsupdate">Windows Update</h3>
-            <p>Após a instalação do SO, instalar todas as atualizações do Windows.</p>
+            <p>Instalar todas as atualizações do Windows.</p>
 
             <h3 id="drivers">Atualização de drivers</h3>
             <p>Use softwares como <a href="https://www.drivereasy.com/">EasyDriver</a>, <a href="https://www.iobit.com/pt/driver-booster.php">Driver Booster</a> ou <a href="https://www.drivermax.com/download.htm">DriverMax</a> para realizar essa tarefa.</p>
@@ -1118,7 +1118,7 @@ load_js: load_assets_js
             <h3 id="startwin">Otimize a Inicialização</h3>
             <img src="../assets/images/pages/msconfig.png" alt="msconfig">
 
-            <p>Acesse através do <code class="inline">msconfig</code></p>
+            <p>Acesse através do <code class="inline">msconfig</code>.</p>
 
             <!-- End Configuração final -->
 
@@ -1128,9 +1128,10 @@ load_js: load_assets_js
             <h2>Clone Windows</h2>
 
             <h3 id="dominio">Computador no domínio</h3>
-            <p>Adicione o computador ao domínio conforme <a href="#nome">orientações</a> para cada laboratório.</p>
+            <p>Adicione o computador no domínio conforme <a href="#nome">orientações</a> para cada laboratório.</p>
 
             <h3 id="gpos">Atualizar as GPOs</h3>
+            <p>Atualize as GPOs para que todas as diretivas sejam atualizadas e aplicadas.</p>
             <div class="highlight">
                 <pre>
                     <code>
@@ -1141,13 +1142,14 @@ load_js: load_assets_js
 
             <h3 id="atautocad">Ativar AutoCAD</h3>
             <p>Execute o <code class="inline">AutoCAD</code> (necessário internet) e siga os passos que aparecer na tela e, informe a <a href="https://docs.google.com/spreadsheets/d/1RaX8ubdo7RuoA8qhwZAWh6ZgoTQsC_E37R8E-21wkHQ/edit#gid=0">chave de ativação</a> caso solicitado.</p>
-            <p>Em caso de erro na ativação, remover a pasta <code class="inline">FLEXnet</code> que fica localizado em <code class="inline">C:\ProgramData</code> e, execute o programa novamente.</p>
-
+            
             <h3 id="atrevit">Ativar Revit</h3>
             <p>Execute o <code class="inline">Revit</code> (necessário internet) e siga os passos que aparecer na tela e, informe a <a href="https://docs.google.com/spreadsheets/d/1RaX8ubdo7RuoA8qhwZAWh6ZgoTQsC_E37R8E-21wkHQ/edit#gid=0">chave de ativação</a> caso solicitado.</p>
-            <p>Em caso de erro na ativação, remova a pasta <code class="inline">FLEXnet</code>, localizado em <code class="inline">C:\ProgramData</code>.</p>
-
+            
             <h3 id="timefreeze">Habilitar Toolwiz Time Freeze</h3>
+            <blockquote class="info">
+            Após todas as configurações, reinicia a máquinas antes de ativar o congelamento.
+            </blockquote>
             <p>Por último, ative o <a href="https://labumuarama.com.br/veyon/#habilitando">Toolwiz Time Freeze</a>.</p>
 
             <!-- End Clone-->
