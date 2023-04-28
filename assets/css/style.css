@@ -53,6 +53,9 @@ footer a:link{
     -moz-transition: all 0.4s ease;
 	transition: all 0.4s ease;
 }
+.conteudo a:link{
+    text-decoration: underline;
+}
 header a:visited,
 main a:visited,
 footer a:visited{
@@ -62,7 +65,6 @@ header a:hover,
 main a:hover,
 footer a:hover{
     color: #d78423;
-    text-decoration: underline;
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
 	transition: all 0.4s ease;
@@ -73,7 +75,7 @@ footer a:active{
     color: #0695cf;
 }
 b{
-    color: #d78423;
+    color: #0695cf;
 }
 
 /* 
@@ -325,6 +327,7 @@ h3,
 h4{
     line-height: 1;
     margin-bottom: 1rem;
+    padding-bottom: .2rem;
     font-weight: 700;
 }
 h1{
@@ -335,6 +338,16 @@ h2{
 }
 h3{
     font-size: 1.875rem;/*30*/
+}
+h3,
+h4{
+    color: transparent;
+    -webkit-background: linear-gradient(90deg, rgba(255,149,25,1) 0%, rgba(6,149,207,1) 70%);
+    -moz-background: linear-gradient(90deg, rgba(255,149,25,1) 0%, rgba(6,149,207,1) 70%);
+    background: linear-gradient(90deg, rgba(255,149,25,1) 0%, rgba(6,149,207,1) 70%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
 }
 h4{
     font-size: 1.25rem;/*20*/
@@ -359,7 +372,7 @@ h4{
     border: 1px solid #4a5773;
 }
 .highlight{
-    color: #d78423;
+    color: #6CA426;
     margin: 0 0 1rem;
     padding: 0 10px;
     background-color: #2d2d2d;
