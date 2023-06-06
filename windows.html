@@ -75,6 +75,59 @@ load_js: load_assets_js
             <h3 id="drivers">Atualização de drivers</h3>
             <p>Use softwares como <a href="https://www.drivereasy.com/">EasyDriver</a>, <a href="https://www.iobit.com/pt/driver-booster.php">Driver Booster</a> ou <a href="https://www.drivermax.com/download.htm">DriverMax</a> para realizar essa tarefa.</p>
 
+            <h3 id="otimizacao">Otimização via software</h3>
+
+            <h4>Aplicativos e recursos</h4>
+            <p>Remova todos os aplicativos desnecessários utilizando <a href="https://www.oo-software.com/en/ooappbuster">O&O AppBuster</a>.</p>
+
+            <h3 id="fastboot">Fast Boot</h3>
+            <blockquote class="info">
+            Ajuste necessário para o desligamento completo do SO.
+            </blockquote>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    powercfg.exe /hibernate off
+                    </code>
+                </pre>                                
+            </div>
+            
+            <h3 id="propriedades">Propriedades do Sistema</h3>
+
+            <h4>Aba Proteção do Sistema</h4>
+            <ol>
+                <li>Configurar &rarr; <b>Desativar a proteção do sistema</b></li>
+            </ol>      
+
+            <h3 id="reparo">Reparo automático</h3>
+            <blockquote class="info">
+                Ajuste necessário para evitar o reparo automático do SO, o que pode "quebrar" o Windows.
+            </blockquote>
+
+            <h4>Desativar no Windows 7</h4>
+            <p>Execute o comando abaixo pelo <code class="inline">prompt</code> como admin:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    bcdedit /set {default} bootstatuspolicy ignoreallfailures
+                    </code>
+                </pre>                
+            </div>
+
+            <h4>Desativar no Windows 10</h4>
+            <p>Execute o comando abaixo pelo <code class="inline">prompt</code> como admin:</p>
+            <div class="highlight">
+                <pre>
+                    <code>
+                    bcdedit /set recoveryenabled NO
+                    </code>
+                </pre>                
+            </div>            
+            
+            <h3 id="defrag">Otimização agendada</h3>
+            <p>Desativar a desfragmentação agendada para todas as unidades do computador.</p>
+            <img src="../assets/images/pages/desfragmentador.jpg" alt="Desfragmentador">            
+
             <!-- End Instalação -->
 
             <!-- Start Configuração Inicial -->
@@ -123,12 +176,6 @@ load_js: load_assets_js
                 Configuração definida para o perfil do aluno pelo Active Directory.
             </blockquote>
             <p>Baixe o <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">papel de parede</a>.</p>
-          
-            <h3 id="screenlock">Papel da tela de bloqueio</h3>
-            <blockquote class="info">
-                Faça a configuração para o perfil do aluno.
-            </blockquote>
-            <p>Baixe o <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">papel da tela de bloqueio</a>.</p>
 
             <h3 id="proxy">Configuração de proxy</h3>
             <blockquote class="info">
@@ -151,31 +198,6 @@ load_js: load_assets_js
             
             <h3 id="senhas">Senhas</h3>
             <p>Coloque um <b>txt</b> na área de trabalho com as senhas, caso alguma aplicação necessite.</p>
-
-            <h3 id="reparo">Reparo automático</h3>
-            <blockquote class="info">
-                Ajuste necessário para evitar o reparo automático do SO, o que pode "quebrar" o Windows.
-            </blockquote>
-
-            <h4>Desativar no Windows 7</h4>
-            <p>Execute o comando abaixo pelo <code class="inline">prompt</code> como admin:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    bcdedit /set {default} bootstatuspolicy ignoreallfailures
-                    </code>
-                </pre>                
-            </div>
-
-            <h4>Desativar no Windows 10</h4>
-            <p>Execute o comando abaixo pelo <code class="inline">prompt</code> como admin:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    bcdedit /set recoveryenabled NO
-                    </code>
-                </pre>                
-            </div>
 
             <h3 id="energia">Opções de energia</h3>
             <blockquote class="info">
@@ -237,10 +259,6 @@ load_js: load_assets_js
                     </code>
                 </pre>
             </div>
-
-            <h3 id="defrag">Otimização agendada</h3>
-            <p>Desativar a desfragmentação agendada para todas as unidades do computador.</p>
-            <img src="../assets/images/pages/desfragmentador.jpg" alt="Desfragmentador">
                        
             <h2>Configurações do Windows 10</h2>
 
@@ -265,6 +283,7 @@ load_js: load_assets_js
             <h4>Tela de bloqueio</h4>
                 <ol>
                     <li>Tela de Fundo &rarr; <b>Imagem</b></li>
+                    <li>Baixe o <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">papel da tela de bloqueio</a> para a pasta imagem.</li>
                     <li>Receba dados interessantes... &rarr; <b>Desativado</b></li>
                 </ol>
             <h4>Iniciar</h4>
@@ -308,36 +327,12 @@ load_js: load_assets_js
                     <li>Permitir a execução de aplicativos em segundo plano &rarr; <b>Desativado</b></li>
                 </ol>
 
-            <h3 id="fastboot">Fast Boot</h3>
-            <blockquote class="info">
-            Ajuste necessário para o desligamento completo do SO.
-            </blockquote>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    powercfg.exe /hibernate off
-                    </code>
-                </pre>                                
-            </div>
-            
-            <h3 id="propriedades">Propriedades do Sistema</h3>
-
-            <h4>Aba Proteção do Sistema</h4>
-            <ol>
-                <li>Configurar &rarr; <b>Desativar a proteção do sistema</b></li>
-            </ol>
-
             <h3 id="opcoespastas">Opções de pastas</h3>
             <img src="../assets/images/pages/opcoes-de-pastas.png" alt="Oções de pastas">
 
             <h3 id="edge">Configurações do Edge</h3>
             <p>Configurar a página inicial do navegador Edge.</p>
             <img src="../assets/images/pages/configedge.png" alt="Configuração do navegador Edge">
-
-            <h3 id="otimizacao">Otimização via software</h3>
-
-            <h4>Aplicativos e recursos</h4>
-            <p>Remova todos os aplicativos desnecessários utilizando <a href="https://www.oo-software.com/en/ooappbuster">O&O AppBuster</a>.</p>
       
             <!-- End Configuração Inicial -->
 
