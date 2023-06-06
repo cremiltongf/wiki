@@ -45,6 +45,10 @@ load_js: load_assets_js
             <h3 id="admin">Usuário administrador</h3>
             <p>Criar usuário administrador <b>IFPR</b> e definir senha padrão disponível na <a href="https://docs.google.com/spreadsheets/d/1iJvoeV2McgPpoJndl9O5W5mLaZII2okWczT2cPZBV1o/edit?usp=sharing">planilha</a>.</p>
 
+            <blockquote class="info">
+            Realize as configurações com a conta de administrador local, antes de ingressar ao domínio.
+            </blockquote>
+
             <h3 id="ipv6">IPv6</h3>
             <p>Desativar IPv6.</p>
 
@@ -82,7 +86,7 @@ load_js: load_assets_js
 
             <h3 id="fastboot">Fast Boot</h3>
             <blockquote class="info">
-            Ajuste necessário para o desligamento completo do SO.
+            Ajuste necessário para o desligamento completo do SO. Aplicável ao Windows 10.
             </blockquote>
             <div class="highlight">
                 <pre>
@@ -157,6 +161,10 @@ load_js: load_assets_js
                 </pre>                
             </div>
 
+            <blockquote class="info">
+            Realize as configurações com a conta do aluno, após ingressar ao domínio.
+            </blockquote>            
+
             <h3 id="estudante">Usuário Aluno</h3>        
             <blockquote class="info">
                 Usuário e senha definida pelo Active Directory.
@@ -194,15 +202,12 @@ load_js: load_assets_js
             <blockquote class="info">
             Configuração definida pelo Active Directory.
             </blockquote>
-            <p>Desative pelo <code class="inline">gpedit.msc</code>.</p>
+            <p>Desative pelo <code class="inline">gpedit.msc</code>, quando a regra for local.</p>
             
             <h3 id="senhas">Senhas</h3>
             <p>Coloque um <b>txt</b> na área de trabalho com as senhas, caso alguma aplicação necessite.</p>
 
             <h3 id="energia">Opções de energia</h3>
-            <blockquote class="info">
-            Realize o ajuste para o usuário Aluno.
-            </blockquote>
             <p>Alterar as opções de energia para nunca bloquear a tela.</p>
             <img src="../assets/images/pages/energia.png" alt="Opções de energia">
 
