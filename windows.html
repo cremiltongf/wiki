@@ -36,6 +36,7 @@ load_js: load_assets_js
                 <li>Desativar Fast Boot;</li>
                 <li>Desativar Secure Boot;</li>
                 <li>Ativar PXE no modo Legacy.</li>
+                <li>Ativar Wake On LAN (WOL).</li>
             </ul>
 
             <h2>Instalação</h2>
@@ -52,6 +53,17 @@ load_js: load_assets_js
             <h3 id="ipv6">IPv6</h3>
             <p>Desativar IPv6.</p>
 
+            <h3 id="wol">Configuração de driver para ativação WOL</h3>
+            <ol>
+                <li>Abra o Gerenciador de Dispositivos</li>
+                <li>Acesse Adaptadores de rede e abra a categoria.</li>
+                <li>Clique com o botão direito no LAN Controller e selecione Propriedades.</li>
+                <li>Abra a guia Gerenciamento de energia.</li>
+                <li>Marque as caixas: Permitir que este dispositivo acorde o computador, só permita que um pacote mágico acorde o computador.</li>
+                <li>Agora, abra a guia Avançado e escolha Energy Efficient Ethernet &rarr; Defina essa opção como Desativado.</li>
+                <li>Clique em OK e feche o Gerenciador de dispositivos.</li>
+            </ol>
+            
             <h3 id="particao">Partições do SO</h3>
             <p>Definir partições do computador, conforme tabela abaixo:</p>
             <table>
