@@ -5,6 +5,12 @@
 // scss-docs-start import-stack
 // Configuration
 @import "functions";
+
+// Default variable overrides
+$blue: #0066CC;
+$orange: #FF6611;
+
+
 @import "variables";
 @import "variables-dark";
 @import "maps";
