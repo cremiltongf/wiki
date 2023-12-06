@@ -2,6 +2,11 @@ img{
     max-width: 100%;
     display: block;
 }
+.sidebar-ul a{
+    display: block;
+    text-decoration: none;
+    padding: 4px 6px 4px 12px;
+}
 
 /* layout */
 .maxwidth{
