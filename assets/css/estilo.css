@@ -27,7 +27,7 @@ img{
     .sidebar{
         position: sticky;
         top: 88px;
-        height: calc(100vh - 100px);
+        height: calc(100vh - 116px);
         overflow-y: scroll;
     }
 }
