@@ -1,6 +1,11 @@
+img{
+    max-width: 100%;
+    display: block;
+}
+
 /* layout */
-.max-width{
-    max-width: 1320px;
+.maxwidth{
+    max-width: 1296px;
 }
 
 /* header */
