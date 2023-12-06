@@ -37,3 +37,20 @@ window.addEventListener('load', function(){
         }
     }
 });
+
+// show and hidden sidebar menu in mobile
+window.addEventListener("load", menuSidebar);
+function menuSidebar(){
+    let hiddenOverflow = document.querySelector("body");
+    let togglerSidebar = document.querySelectorAll(".sidebar-toggler");
+    let containerSidebar = document.querySelector(".sidebar-container");
+
+    for (var i = 0; i < togglerSidebar.length; i++){
+        togglerSidebar[i].addEventListener('click', actionSidebar);
+    }
+
+    function actionSidebar(){
+        containerSidebar.classList.toggle("sidebar-show");
+        hiddenOverflow.classList.toggle("hidden-scroll");
+    }
+}
