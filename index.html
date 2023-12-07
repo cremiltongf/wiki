@@ -1,50 +1,30 @@
-
-<h1>Em atualização</h1>
-
-
-
-
-
-
-
-
-<!-- ---
+---
 title:  "Wiki - Laboratório de Informática"
 ---
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ page.title }}</title>
-    {% include head.html %}
-</head>
-<body>
-    {% include header.html %}
-    <main class="conteudo-home">
-        <section class="introducao">
-            <h1>Wiki Lab</h1>
-            <p>
-            Este wiki orienta a criação de imagem com Windows (7 e 10), além de conter informações sobre:
-            </p>
-            <ul>
-                <li>Configuração do Sistema Operacional Windows;</li>
-                <li>Instalação e Configuaração de Softwares;</li>
-                <li>Configuração após a clonagem;</li>
-                <li>Uso de ferramentas; e</li>
-                <li>Dicas de suporte.</li>
-            </ul>
-            <p>
-            Este material está em constante atualização.
-            </p>
-            <p>Tem alguma crítica ou sugestão? Escreva um e-mail para <a href="mailto:cremilton@outlook.com">cremilton@outlook.com</a>.</p>
-        </section>
-        <div class="ilustracao">
-            <img src="assets/images/nuvem.svg" alt="Ilustração de servidores">
-        </div>
-    </main>
-    {% include footer.html %}
-</body>
-</html> -->
+{% include header.html %}
+
+<div class="container col-xxl-8 px-4 py-5 mt-5 mb-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="{{ site.baseurl }}/assets/images/nuvem.svg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Wiki Lab</h1>
+        <p class="lead">Este wiki orienta a criação de imagem com Windows 7 e 10 para Laboratório de Informática. Também possui alguns tutoriais de ajuda para suporte para Windows e Ubuntu.</p>
+        <p>Alguns roteiros:</p>
+        <ul>
+            <li class="mb-2">Configuração do Sistema Operacional Windows;</li>
+            <li class="mb-2">Instalação e Configuaração de Softwares;</li>
+            <li class="mb-2">Configuração após a clonagem;</li>
+            <li class="mb-2">Uso de ferramentas; e</li>
+            <li class="mb-2">Dicas de suporte.</li>
+        </ul>
+        <p>
+            Este material está em constante atualização. Tem alguma dúvida? Escreva para <a href="mailto:cremilton@outlook.com">cremilton@outlook.com</a>.
+        </p>
+      </div>
+    </div>
+</div>
+
+{% include footer.html %}
