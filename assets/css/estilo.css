@@ -39,7 +39,7 @@
     .sidebar{
         position: sticky;
         top: 88px;
-        height: calc(100vh - 164px);
+        height: calc(100vh - 100px);
         overflow-y: scroll;
     }
 }
