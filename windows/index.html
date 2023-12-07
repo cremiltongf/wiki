@@ -1,0 +1,256 @@
+---
+title:  "Windows - Wiki"
+permalink: /windows/
+---
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }}</title>
+
+    <!-- favicon -->
+    <link rel="icon" sizes="16x16" href="{{ site.baseurl }}/assets/images/icon-16.png">
+    <link rel="icon" sizes="32x32" href="{{ site.baseurl }}/assets/images/icon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/images/icon-180.png">
+
+    <!-- style -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/estilo.css">
+
+    <!--Open Graph Protocol-->
+    <meta property="fb:app_id" content="261341871382612"/> 
+    <meta property="og:title" content="Wiki - Laboratórios de Informática"/>
+    <meta property="og:description" content="Esse wiki orienta a criação de imagens com Windows e Ubuntu, contém informações para ajustes e correções para o Windows, possui configuração padrão para os Sistemas Operacionais após a clonagem, e outras dicas."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://wiki.cremilton.com"/>
+    <meta property="og:site_name" content="Wiki Lab"/>
+    <meta property="og:image" content="{{ site.baseurl }}/assets/images/logo.svg"/>
+    <meta property="og:image:width" content="480">
+    <meta property="og:image:height" content="218">
+    <!--Open Graph Protocol-->
+
+    <!--Google Search Console verification-->
+    <meta name="google-site-verification" content="xh_nj4biLO3DsOkYCAnTRheF2nQT68eX1sTW5zmMWms" />
+</head>
+<body>
+
+<header class="navbar navbar-expand-lg bg-dark fixed-top shadow" data-bs-theme="dark">
+    <div class="container-fluid maxwidth">
+
+        <button class="d-lg-none sidebar-button navbar-toggler sidebar-toggler" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="{{ site.url }}">
+            <svg width="296" height="108" viewBox="0 0 296 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="svg-letters" d="M163.51 85L146.95 31L144.79 23.71H154.87L171.79 79.51L167.02 78.79L181.6 23.71H192.13L175.39 85H163.51ZM124.27 85L107.53 23.71H118.06L132.64 78.79L127.87 79.51L144.79 23.71H154.87L152.71 31L136.15 85H124.27ZM210.907 85H200.467V23.71H210.907V85ZM224.637 85V23.71H235.077V85H224.637ZM259.107 85L231.297 55.12V53.77L259.557 23.71H272.607L241.377 56.83L242.097 51.97L272.967 85H259.107ZM288.163 85H277.723V23.71H288.163V85Z" fill="#464655"/>
+                <path d="M90 34.62V73.37C90 77.36 89.09 81.14 87.45 84.51L73.13 70.19V34.62C73.13 29.79 69.21 25.87 64.38 25.87H28.81L14.49 11.55C17.86 9.92 21.64 9 25.63 9H64.38C78.51 9 90 20.49 90 34.62Z" fill="#0066CC"/>
+                <path d="M75.52 96.45C72.15 98.08 68.37 99 64.38 99H25.63C11.5 99 0 87.5 0 73.37V34.62C0 30.63 0.92 26.85 2.56 23.48L16.88 37.81V73.37C16.88 78.21 20.8 82.12 25.63 82.12H61.2L75.52 96.45Z" fill="#FF6611"/>
+            </svg>
+        </a>
+        
+        <button class="navbar-toggler d-flex d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+            </svg>
+        </button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">WIKI Nav</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+        
+            <div class="offcanvas-body d-lg-flex justify-content-lg-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ site.url }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="https://ifpr.edu.br/umuarama/laboratorios/laboratorio-de-informatica/">Documentação &#8599;</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/gpo">GPO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/suporte">Suporte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/veyon">Veyon</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/win">Win</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</header>
+
+<div class="container margin-top mt-5 pt-5">
+
+    <div class="row">
+
+        <aside class="sidebar-container col-lg-4 z-3">
+            <div class="sidebar">
+        
+                {% include nav-sidebar.html %}
+          
+            </div>
+        </aside>
+
+        <main class="col-12 col-lg-8 mb-5">
+
+            <!-- Setup and SO -->
+                <h1>Criação de Imagem</h1>
+
+                <p class="lead">
+                    Configuração inicial para o Hardware e Sistema Operacional Windows 7/10.
+                </p>
+
+                <h2 id="configsetup">Configurações</h2>
+                <ul>
+                    <li class="mb-2">Armazenamento no modo AHCI;</li>
+                    <li class="mb-2">Habilitar virtualização;</li>
+                    <li class="mb-2">Desativar Fast Boot;</li>
+                    <li class="mb-2">Desativar Secure Boot;</li>
+                    <li class="mb-2">Ativar PXE no modo Legacy ou UEFI;</li>
+                    <li class="mb-2">Ativar Wake On LAN (WOL).</li>
+                </ul>
+
+                <h2 id="uefi">Modo UEFI</h2>
+                <p>Quando possível instalar o Windows no modo UEFI.</p>
+
+                <h2 id="admin">Usuário Administrador</h2>
+                <p>Criar usuário Administrador <strong>IFPR</strong> e definir senha padrão disponível na <a href="https://docs.google.com/spreadsheets/d/1K7BrCy4tWE0I9W5_Dc5zm_tXNyYtj4ZYFQJLmiljGAE/edit?usp=sharing">planilha &#8599;</a>.</p>
+
+                <div class="alert alert-info d-flex align-items-center">
+                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                    </svg>
+                    <div>Realize as configurações para o SO com a conta de Administrador local ou de rede, a fim de evitar múltiplas autenticações.</div>
+                </div>
+
+                <h2 id="wol">Configuração de driver para ativação WOL</h2>
+                <ol>
+                    <li class="mb-2">Abra o Gerenciador de Dispositivos;</li>
+                    <li class="mb-2">Acesse Adaptadores de rede e abra a categoria;</li>
+                    <li class="mb-2">Clique com o botão direito no LAN Controller e selecione Propriedades;</li>
+                    <li class="mb-2">Abra a guia Gerenciamento de energia;</li>
+                    <li class="mb-2">Marque as caixas:</li>
+                    <ol>
+                        <li class="mb-2">Permitir que este dispositivo acorde o computador;</li>
+                        <li class="mb-2">Só permita que um pacote mágico acorde o computador.</li>
+                    </ol>
+                    <li class="mb-2">Agora, abra a guia Avançado e escolha Energy Efficient Ethernet e Defina essa opção como Desativado;</li>
+                    <li class="mb-2">Confirme as alterações clicando em OK.</li>
+                </ol>
+                
+                <h2 id="particao">Partições do SO</h2>
+                <p>Defina as partições do computador conforme tabela abaixo:</p>
+                <table class="table table-striped table-hover border">
+                    <thead>
+                        <tr>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Capacidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nuvem01</td>
+                            <td>Mínimo de 10GB</td>
+                        </tr>
+                        <tr>
+                            <td>Windows</td>
+                            <td>Restante da capacidade</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="alert alert-info d-flex align-items-center">
+                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                    </svg>
+                    <div>Caso o equipamento possua unidades extras de armazenamento, utilize todo espaço da unidade para partição nuvem01 e/ou nuvem02.</div>
+                </div>
+
+                <h2 id="windowsupdate">Windows Update</h2>
+                <p>Instale todas as atualizações do Windows.</p>
+
+                <h2 id="drivers">Atualização de drivers</h2>
+                <p>Use softwares como <a href="https://www.drivereasy.com/">EasyDriver &#8599;</a>, <a href="https://www.iobit.com/pt/driver-booster.php">Driver Booster &#8599;</a> ou <a href="https://www.drivermax.com/download.htm">DriverMax &#8599;</a> para realizar essa tarefa.</p>
+
+                <h2 id="fastboot">Fast Boot</h2>
+                <p>Execute no <code>prompt</code> como Administrador:</p>
+                <pre><code>powercfg.exe /hibernate off</code></pre>
+                <div class="alert alert-info d-flex align-items-center">
+                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                    </svg>
+                    <div>Ajuste necessário para o desligamento completo do SO. Aplicável ao Windows 8/10/11.</div>
+                </div>
+                
+                <h2 id="propriedades">Propriedades do Sistema</h2>
+
+                <h3>Aba Proteção do Sistema</h3>
+                <ol>
+                    <li>Configurar <span class="wiki-arrow">&rarr;</span> Desativar a proteção do sistema.</li>
+                </ol>      
+
+                <h2 id="reparo">Reparo automático</h2>
+                <h3>Desativar no Windows 7</h3>
+                <p>Execute o comando abaixo pelo <code>prompt</code> como Administrador:</p>
+                <pre><code>bcdedit /set {default} bootstatuspolicy ignoreallfailures</code></pre>                
+
+                <h3>Desativar no Windows 10</h3>
+                <p>Execute o comando abaixo pelo <code>prompt</code> como Administrador:</p>
+                <pre><code>bcdedit /set recoveryenabled NO</code></pre>
+
+                <div class="alert alert-info d-flex align-items-center">
+                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                    </svg>
+                    <div>
+                        Ajuste necessário para evitar o reparo automático do SO, o que pode "quebrar" o Windows.
+                    </div>
+                </div>
+                
+                <h2 id="defrag">Otimização agendada</h2>
+                <p>Desative a desfragmentação agendada para todas as unidades do computador.</p>
+                <img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/desfragmentador.jpg" alt="Desfragmentador">                   
+                <!-- End Setup and SO -->
+        
+        </main>
+    </div>
+
+</div>
+
+    <footer class="bg-body-tertiary">
+       <div class="container">
+        <p class="text-center pt-5 pb-5 m-0">
+            [Wiki Lab] &copy; 2019 - {{ site.time | date: '%Y' }}. Por <a class="autor" href="https://www.cremilton.com">@cremiltongf &#8599;</a>.
+        </p>
+       </div>
+    </footer>
+    <script src="{{ site.baseurl }}/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/app.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43172777-4"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-43172777-4');
+    </script>
+</body>
+</html>

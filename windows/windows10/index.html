@@ -1,0 +1,218 @@
+---
+title:  "Win - Wiki"
+permalink: /windows/windows10/
+---
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }}</title>
+
+    <!-- favicon -->
+    <link rel="icon" sizes="16x16" href="{{ site.baseurl }}/assets/images/icon-16.png">
+    <link rel="icon" sizes="32x32" href="{{ site.baseurl }}/assets/images/icon-32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/images/icon-180.png">
+
+    <!-- style -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/estilo.css">
+
+    <!--Open Graph Protocol-->
+    <meta property="fb:app_id" content="261341871382612"/> 
+    <meta property="og:title" content="Wiki - Laboratórios de Informática"/>
+    <meta property="og:description" content="Esse wiki orienta a criação de imagens com Windows e Ubuntu, contém informações para ajustes e correções para o Windows, possui configuração padrão para os Sistemas Operacionais após a clonagem, e outras dicas."/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://wiki.cremilton.com"/>
+    <meta property="og:site_name" content="Wiki Lab"/>
+    <meta property="og:image" content="{{ site.baseurl }}/assets/images/logo.svg"/>
+    <meta property="og:image:width" content="480">
+    <meta property="og:image:height" content="218">
+    <!--Open Graph Protocol-->
+
+    <!--Google Search Console verification-->
+    <meta name="google-site-verification" content="xh_nj4biLO3DsOkYCAnTRheF2nQT68eX1sTW5zmMWms" />
+</head>
+<body>
+
+<header class="navbar navbar-expand-lg bg-dark fixed-top shadow" data-bs-theme="dark">
+    <div class="container-fluid maxwidth">
+
+        <button class="d-lg-none sidebar-button navbar-toggler sidebar-toggler" type="button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <a class="navbar-brand" href="{{ site.url }}">
+            <svg width="296" height="108" viewBox="0 0 296 108" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="svg-letters" d="M163.51 85L146.95 31L144.79 23.71H154.87L171.79 79.51L167.02 78.79L181.6 23.71H192.13L175.39 85H163.51ZM124.27 85L107.53 23.71H118.06L132.64 78.79L127.87 79.51L144.79 23.71H154.87L152.71 31L136.15 85H124.27ZM210.907 85H200.467V23.71H210.907V85ZM224.637 85V23.71H235.077V85H224.637ZM259.107 85L231.297 55.12V53.77L259.557 23.71H272.607L241.377 56.83L242.097 51.97L272.967 85H259.107ZM288.163 85H277.723V23.71H288.163V85Z" fill="#464655"/>
+                <path d="M90 34.62V73.37C90 77.36 89.09 81.14 87.45 84.51L73.13 70.19V34.62C73.13 29.79 69.21 25.87 64.38 25.87H28.81L14.49 11.55C17.86 9.92 21.64 9 25.63 9H64.38C78.51 9 90 20.49 90 34.62Z" fill="#0066CC"/>
+                <path d="M75.52 96.45C72.15 98.08 68.37 99 64.38 99H25.63C11.5 99 0 87.5 0 73.37V34.62C0 30.63 0.92 26.85 2.56 23.48L16.88 37.81V73.37C16.88 78.21 20.8 82.12 25.63 82.12H61.2L75.52 96.45Z" fill="#FF6611"/>
+            </svg>
+        </a>
+        
+        <button class="navbar-toggler d-flex d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+            </svg>
+        </button>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">WIKI Nav</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+        
+            <div class="offcanvas-body d-lg-flex justify-content-lg-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ site.url }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="https://ifpr.edu.br/umuarama/laboratorios/laboratorio-de-informatica/">Documentação &#8599;</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/gpo">GPO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/suporte">Suporte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/veyon">Veyon</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/win">Win</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</header>
+
+<div class="container margin-top mt-5 pt-5">
+
+    <div class="row">
+
+        <aside class="sidebar-container col-lg-4 z-3">
+            <div class="sidebar">
+        
+                {% include nav-sidebar.html %}
+          
+            </div>
+        </aside>
+
+        <main class="col-12 col-lg-8 mb-5">
+                
+            <!-- Configuração do Windows 10 -->
+                <h1>Ajustes para Windows 10</h1>
+
+                <p class="lead">
+                    Ajustes necessários para o Windows 10 e 11. A fim de tornar um pouco mais performático o ambiente configurado no camputador.
+                </p>
+
+                <h2 id="sistema">Sistema</h2>
+                <h3>Notificações e ações</h3>
+                <ol>
+                    <li>Desativar <span class="wiki-arrow">&rarr;</span> <b>Tudo</b>.</li>
+                </ol>
+
+                <h3>Energia e suspensão</h3>
+                <ol>
+                    <li>Tela <span class="wiki-arrow">&rarr;</span> Quando conectado, desligar após <span class="wiki-arrow">&rarr;</span> <b>Nunca</b>;</li>
+                    <li>Suspender <span class="wiki-arrow">&rarr;</span> Quando conectado, o computador será suspenso após <span class="wiki-arrow">&rarr;</span> <b>Nunca</b>.</li>
+                </ol>
+
+                <h2 id="tema">Personalização</h2>
+                <h3>Cores</h3>
+                <ol>
+                    <li>Efeitos de transparência <span class="wiki-arrow">&rarr;</span> <b>Desativado</b>.</li>
+                </ol>
+                
+                <h3>Tela de bloqueio</h3>
+                <ol>
+                    <li>Tela de Fundo <span class="wiki-arrow">&rarr;</span> <b>Imagem</b>;</li>
+                    <li>Baixe o <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">papel da tela de bloqueio &#8599;</a> para a pasta imagem e defina para a tela;</li>
+                    <li>Receba dados interessantes... <span class="wiki-arrow">&rarr;</span> <b>Desativado</b>.</li>
+                </ol>
+
+                <h3>Iniciar</h3>
+                <ol>
+                    <li>Mostrar lista de aplicativos no menu Iniciar <span class="wiki-arrow">&rarr;</span> <b>Ativado</b>;</li>
+                    <li>Todas as outras opções <span class="wiki-arrow">&rarr;</span> <b>Desativadas</b>;</li>
+                    <li>Escolher quais pastas são exibidas em Iniciar:</li>
+                    <ol>
+                        <li>Configurações <span class="wiki-arrow">&rarr;</span> <b>Ativado</b>;</li>
+                        <li>Pasta pessoal <span class="wiki-arrow">&rarr;</span> <b>Ativado</b>;</li>
+                        <li>Todas as outras opções <span class="wiki-arrow">&rarr;</span> <b>Desativadas</b>.</li>
+                    </ol>                
+                </ol>
+
+                <h3>Barra de Tarefas</h3>
+                <ol>
+                    <li>Combinar botões da barra de tarefas <span class="wiki-arrow">&rarr;</span> <b>Quando a barra de tarefas estiver cheia</b>.</li>
+                </ol>
+
+                <h2 id="jogos">Jogos</h2>
+                <h3>Xbox Game Bar</h3>
+                <ol>
+                    <li>Habilite a Xbox Game Bar... <span class="wiki-arrow">&rarr;</span> <b>Desativado</b>.</li>
+                </ol>
+
+                <h3>Modo de Jogo</h3>
+                <ol>
+                    <li>Modo de Jogo <span class="wiki-arrow">&rarr;</span> <b>Desativado</b>.</li>
+                </ol>
+
+                <h2 id="privacidade">Privacidade</h2>
+                <h3>Geral</h3>
+                <ol>
+                    <li>Permitir que o Windows controle a abertura de aplicativos... <span class="wiki-arrow">&rarr;</span> <b>Ativado</b>;</li>
+                    <li><b>Desativar</b> as demais opções.</li>
+                </ol>
+
+                <h3>Histórico de atividades</h3>
+                <ol>
+                    <li><b>Tudo Desativado</b>.</li>
+                </ol>
+
+                <h3>Aplicativos em segundo plano</h3>
+                <ol>
+                    <li>Permitir a execução de aplicativos em segundo plano <span class="wiki-arrow">&rarr;</span> <b>Desativado</b>.</li>
+                </ol>
+
+                <h2 id="opcoespastas">Opções de pastas</h2>
+                <p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/opcoes-de-pastas.png" alt="Oções de pastas"></p>
+
+                <h2 id="edge">Configurações do Edge</h2>
+                <p>Configurar a página inicial do navegador Edge.</p>
+                <p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/configedge.png" alt="Configuração do navegador Edge"></p>
+        
+                <!-- End Configuração do Windows 10 -->        
+        </main>
+    </div>
+
+</div>
+
+    <footer class="bg-body-tertiary">
+       <div class="container">
+        <p class="text-center pt-5 pb-5 m-0">
+            [Wiki Lab] &copy; 2019 - {{ site.time | date: '%Y' }}. Por <a class="autor" href="https://www.cremilton.com">@cremiltongf &#8599;</a>.
+        </p>
+       </div>
+    </footer>
+    <script src="{{ site.baseurl }}/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/app.js"></script>
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43172777-4"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
+    gtag('config', 'UA-43172777-4');
+    </script>
+</body>
+</html>

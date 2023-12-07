@@ -1,6 +1,6 @@
 ---
-title:  "Win - Wiki"
-permalink: /win/
+title:  "Windows - Wiki"
+permalink: /windows/softwares/
 ---
 
 <!DOCTYPE html>
@@ -70,7 +70,7 @@ permalink: /win/
                         <a class="nav-link" href="{{ site.url }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="https://umuarama.ifpr.edu.br/laboratorios/laboratorio-de-informatica/">Documentação &#8599;</a>
+                        <a class="nav-link " href="https://ifpr.edu.br/umuarama/laboratorios/laboratorio-de-informatica/">Documentação &#8599;</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/gpo">GPO</a>
@@ -98,367 +98,17 @@ permalink: /win/
         <aside class="sidebar-container col-lg-4 z-3">
             <div class="sidebar">
         
-                {% include win-sidebar.html %}
+                {% include nav-sidebar.html %}
           
             </div>
         </aside>
 
         <main class="col-12 col-lg-8 mb-5">
-                <h1>Criação de Imagem</h1>
-
-                <!-- Start Instalação -->
+                <h1>Softwares</h1>
 
                 <p class="lead">
-                    Configuração inicial para o Hardware e Sistema Operacional Windows.
+                    Instalação de softwares, links para download, configurações e ajustes necessários para o bom funcionamento do ambiente.
                 </p>
-
-                <h2 id="configsetup">Configurações</h2>
-                <ul>
-                    <li class="mb-2">Armazenamento no modo AHCI;</li>
-                    <li class="mb-2">Habilitar virtualização;</li>
-                    <li class="mb-2">Desativar Fast Boot;</li>
-                    <li class="mb-2">Desativar Secure Boot;</li>
-                    <li class="mb-2">Ativar PXE no modo Legacy ou UEFI;</li>
-                    <li class="mb-2">Ativar Wake On LAN (WOL).</li>
-                </ul>
-
-                <h2 id="uefi">Modo UEFI</h2>
-                <p>Quando possível instalar o Windows no modo UEFI.</p>
-
-                <h2 id="admin">Usuário Administrador</h2>
-                <p>Criar usuário Administrador <strong>IFPR</strong> e definir senha padrão disponível na <a href="https://docs.google.com/spreadsheets/d/1K7BrCy4tWE0I9W5_Dc5zm_tXNyYtj4ZYFQJLmiljGAE/edit?usp=sharing">planilha &#8599;</a>.</p>
-
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Realize as configurações para o SO com a conta de Administrador local ou de rede, a fim de evitar múltiplas autenticações.</div>
-                </div>
-
-                <h2 id="wol">Configuração de driver para ativação WOL</h2>
-                <ol>
-                    <li class="mb-2">Abra o Gerenciador de Dispositivos;</li>
-                    <li class="mb-2">Acesse Adaptadores de rede e abra a categoria;</li>
-                    <li class="mb-2">Clique com o botão direito no LAN Controller e selecione Propriedades;</li>
-                    <li class="mb-2">Abra a guia Gerenciamento de energia;</li>
-                    <li class="mb-2">Marque as caixas:</li>
-                    <ol>
-                        <li class="mb-2">Permitir que este dispositivo acorde o computador;</li>
-                        <li class="mb-2">Só permita que um pacote mágico acorde o computador.</li>
-                    </ol>
-                    <li class="mb-2">Agora, abra a guia Avançado e escolha Energy Efficient Ethernet e Defina essa opção como Desativado;</li>
-                    <li class="mb-2">Confirme as alterações clicando em OK.</li>
-                </ol>
-                
-                <h2 id="particao">Partições do SO</h2>
-                <p>Defina as partições do computador conforme tabela abaixo:</p>
-                <table class="table table-striped table-hover border">
-                    <thead>
-                        <tr>
-                            <th scope="col">Descrição</th>
-                            <th scope="col">Capacidade</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Nuvem01</td>
-                            <td>Mínimo de 10GB</td>
-                        </tr>
-                        <tr>
-                            <td>Windows</td>
-                            <td>Restante da capacidade</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Caso o equipamento possua unidades extras de armazenamento, utilize todo espaço da unidade para partição nuvem01 e/ou nuvem02.</div>
-                </div>
-
-                <h2 id="windowsupdate">Windows Update</h2>
-                <p>Instale todas as atualizações do Windows.</p>
-
-                <h2 id="drivers">Atualização de drivers</h2>
-                <p>Use softwares como <a href="https://www.drivereasy.com/">EasyDriver &#8599;</a>, <a href="https://www.iobit.com/pt/driver-booster.php">Driver Booster &#8599;</a> ou <a href="https://www.drivermax.com/download.htm">DriverMax &#8599;</a> para realizar essa tarefa.</p>
-
-                <h2 id="fastboot">Fast Boot</h2>
-                <p>Execute no <code>prompt</code> como Administrador:</p>
-                <pre><code>powercfg.exe /hibernate off</code></pre>
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Ajuste necessário para o desligamento completo do SO. Aplicável ao Windows 8/10/11.</div>
-                </div>
-                
-                <h2 id="propriedades">Propriedades do Sistema</h2>
-
-                <h3>Aba Proteção do Sistema</h3>
-                <ol>
-                    <li>Configurar <span class="wiki-arrow">&rarr;</span> Desativar a proteção do sistema.</li>
-                </ol>      
-
-                <h2 id="reparo">Reparo automático</h2>
-                <h3>Desativar no Windows 7</h3>
-                <p>Execute o comando abaixo pelo <code>prompt</code> como Administrador:</p>
-                <pre><code>bcdedit /set {default} bootstatuspolicy ignoreallfailures</code></pre>                
-
-                <h3>Desativar no Windows 10</h3>
-                <p>Execute o comando abaixo pelo <code>prompt</code> como Administrador:</p>
-                <pre><code>bcdedit /set recoveryenabled NO</code></pre>
-
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>
-                        Ajuste necessário para evitar o reparo automático do SO, o que pode "quebrar" o Windows.
-                    </div>
-                </div>
-                
-                <h2 id="defrag">Otimização agendada</h2>
-                <p>Desative a desfragmentação agendada para todas as unidades do computador.</p>
-                <img class="img-fluid" src="../assets/images/pages/desfragmentador.jpg" alt="Desfragmentador">            
-
-                <!-- End Instalação -->
-
-                <!-- Start Configuração Inicial -->
-
-                <h2 id="nome">Nome e Grupo</h2>
-                <p>Imgresse o computador ao domínio conforme informações abaixo:</p>
-                <table class="table table-striped table-hover border">
-                    <thead>
-                        <tr>
-                            <th>LAB</th>
-                            <th>Nome</th>
-                            <th>Domínio</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>LAB01</td>
-                            <td>lab1m01</td>
-                            <td>ensino.umuarama.local</td>
-                        </tr>
-                        <tr>
-                            <td>LAB02</td>
-                            <td>lab2m01</td>
-                            <td>ensino.umuarama.local</td>
-                        </tr>
-                        <tr>
-                            <td>LAB03</td>
-                            <td>lab3m01</td>
-                            <td>ensino.umuarama.local</td>
-                        </tr>
-                        <tr>
-                            <td>LAB04</td>
-                            <td>lab4m01</td>
-                            <td>ensino.umuarama.local</td>
-                        </tr>
-                        <tr>
-                            <td>LAB05</td>
-                            <td>lab5m01</td>
-                            <td>ensino.umuarama.local</td>
-                        </tr>
-                    </tbody>
-                </table>         
-
-                <h2 id="estudante">Usuário Aluno</h2>        
-                <pre><code>Usuário: aluno
-Senha: aluno123
-</code></pre>
-
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Usuário e senha definida pelo Active Directory.</div>
-                </div>                
-
-                <h2 id="wallpaper">Tema</h2>
-                <p>Baixe o <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">papel de parede &#8599;</a>.</p>
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Configuração definida para o perfil do aluno pelo Active Directory.</div>
-                </div>
-
-                <h2 id="proxy">Configuração de proxy</h2>
-                <pre><code>192.168.0.6:3128</code></pre>
-
-                <p><img class="img-fluid" src="../assets/images/pages/proxy.png" alt="Proxy"></p>
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Configuração definida pelo Active Directory.</div>
-                </div>
-                
-                <h2 id="gerenciador">Gerenciador de Tarefas</h2>
-                <p>Desative pelo <code>gpedit.msc</code> quando a regra for local. Necessário conta de Administrador.</p>
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Configuração definida pelo Active Directory.</div>
-                </div>
-                
-                <h2 id="senhas">Senhas</h2>
-                <p>Coloque a lista de senhas na área de trabalho do aluno, caso alguma aplicação necessite e tenha sido configurado.</p>
-
-                <h2 id="servicos">Serviços</h2>
-
-                <table class="table table-striped table-hover border">
-                    <thead>
-                        <tr>
-                            <th>Serviço</th>
-                            <th>Configuração</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Windows Defender ou Windows Defender Firewall</td>
-                            <td>Automático via GPO</td>
-                        </tr>
-                        <tr>
-                            <td>Windows Update</td>
-                            <td>Desativado via GPO</td>
-                        </tr>
-                        <tr>
-                            <td>Backup do Windows</td>
-                            <td>Desativado via GPO</td>
-                        </tr>
-                        <tr>
-                            <td>Notícias e Interesses</td>
-                            <td>Desativado via GPO</td>
-                        </tr>
-                        <tr>
-                            <td>Desfragmentador ou Otimizador de Discos/Unidades</td>
-                            <td>Manual via GPO</td>
-                        </tr>
-                        <tr>
-                            <td>SuperFetch ou SysMain</td>
-                            <td>Desativado via GPO</td>
-                        </tr>
-                        <tr>
-                            <td>Windows Search</td>
-                            <td>Desativado via GPO</td>
-                        </tr>
-                        <tr>
-                            <td>OCS Iventory</td>
-                            <td>Defina como = Atraso na inicialização</td>
-                        </tr>
-                        <tr>
-                            <td>Flexnet Licensing Service</td>
-                            <td>Defina como = Atraso na inicialização</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Configurações definidas pelo Active Directory.</div>
-                </div>
-
-                <h3>Gerenciando serviços de forma automatizada</h3>
-                <p>Os comandos devem ser executados no <code>prompt</code> como Administrador:</p>
-                <pre><code>wuauserv => servico a ser desativado
-sc config "wuauserv" start= disabled
-</code></pre>
-
-                <h2 id="sistema">Sistema</h2>
-                <h3>Notificações e ações</h3>
-                <ol>
-                    <li>Desativar <span class="wiki-arrow">&rarr;</span> <b>Tudo</b>.</li>
-                </ol>
-
-                <h3>Energia e suspensão</h3>
-                <ol>
-                    <li>Tela <span class="wiki-arrow">&rarr;</span> Quando conectado, desligar após <span class="wiki-arrow">&rarr;</span> <b>Nunca</b>;</li>
-                    <li>Suspender <span class="wiki-arrow">&rarr;</span> Quando conectado, o computador será suspenso após <span class="wiki-arrow">&rarr;</span> <b>Nunca</b>.</li>
-                </ol>
-
-                <h2 id="tema">Personalização</h2>
-                <h3>Cores</h3>
-                <ol>
-                    <li>Efeitos de transparência <span class="wiki-arrow">&rarr;</span> <b>Desativado</b>.</li>
-                </ol>
-                
-                <h3>Tela de bloqueio</h3>
-                <ol>
-                    <li>Tela de Fundo <span class="wiki-arrow">&rarr;</span> <b>Imagem</b>;</li>
-                    <li>Baixe o <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">papel da tela de bloqueio &#8599;</a> para a pasta imagem e defina para a tela;</li>
-                    <li>Receba dados interessantes... <span class="wiki-arrow">&rarr;</span> <b>Desativado</b>.</li>
-                </ol>
-
-                <h3>Iniciar</h3>
-                <ol>
-                    <li>Mostrar lista de aplicativos no menu Iniciar <span class="wiki-arrow">&rarr;</span> <b>Ativado</b>;</li>
-                    <li>Todas as outras opções <span class="wiki-arrow">&rarr;</span> <b>Desativadas</b>;</li>
-                    <li>Escolher quais pastas são exibidas em Iniciar:</li>
-                    <ol>
-                        <li>Configurações <span class="wiki-arrow">&rarr;</span> <b>Ativado</b>;</li>
-                        <li>Pasta pessoal <span class="wiki-arrow">&rarr;</span> <b>Ativado</b>;</li>
-                        <li>Todas as outras opções <span class="wiki-arrow">&rarr;</span> <b>Desativadas</b>.</li>
-                    </ol>                
-                </ol>
-
-                <h3>Barra de Tarefas</h3>
-                <ol>
-                    <li>Combinar botões da barra de tarefas <span class="wiki-arrow">&rarr;</span> <b>Quando a barra de tarefas estiver cheia</b>.</li>
-                </ol>
-
-                <h2 id="jogos">Jogos</h2>
-                <h3>Xbox Game Bar</h3>
-                <ol>
-                    <li>Habilite a Xbox Game Bar... <span class="wiki-arrow">&rarr;</span> <b>Desativado</b>.</li>
-                </ol>
-
-                <h3>Modo de Jogo</h3>
-                <ol>
-                    <li>Modo de Jogo <span class="wiki-arrow">&rarr;</span> <b>Desativado</b>.</li>
-                </ol>
-
-                <h2 id="privacidade">Privacidade</h2>
-                <h3>Geral</h3>
-                <ol>
-                    <li>Permitir que o Windows controle a abertura de aplicativos... <span class="wiki-arrow">&rarr;</span> <b>Ativado</b>;</li>
-                    <li><b>Desativar</b> as demais opções.</li>
-                </ol>
-
-                <h3>Histórico de atividades</h3>
-                <ol>
-                    <li><b>Tudo Desativado</b>.</li>
-                </ol>
-
-                <h3>Aplicativos em segundo plano</h3>
-                <ol>
-                    <li>Permitir a execução de aplicativos em segundo plano <span class="wiki-arrow">&rarr;</span> <b>Desativado</b>.</li>
-                </ol>
-
-                <h2 id="opcoespastas">Opções de pastas</h2>
-                <p><img class="img-fluid" src="../assets/images/pages/opcoes-de-pastas.png" alt="Oções de pastas"></p>
-
-                <h2 id="edge">Configurações do Edge</h2>
-                <p>Configurar a página inicial do navegador Edge.</p>
-                <p><img class="img-fluid" src="../assets/images/pages/configedge.png" alt="Configuração do navegador Edge"></p>
-        
-                <!-- End Configuração Inicial -->
 
                 <!-- Start Aplicacoes -->
 
@@ -797,7 +447,7 @@ start /wait msiexec /x {26A24AE4-039D-4CA4-87B4-2F06417079FF} /qn /norestart
 
                 <h2 id="javavar">Java - Variáveis de ambiente</h2>
                 <p>Acesse as Propriedades do Sistema para configurar as variáveis. No exemplo abaixo a configuração se aplica ao <b>JDK 17</b>.</p>
-                <p><img class="img-fluid" src="../assets/images/pages/variavel-java.png" alt="Propriedades do Sistema"></p>
+                <p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/variavel-java.png" alt="Propriedades do Sistema"></p>
                 <p>Para o <strong>Windows 7/10</strong> crie a variável <code>JAVA_HOME</code> e adicione o valor:</p>
                 <pre><code>C:\Program Files\Java\jdk-17.0.2</code></pre>
 
@@ -998,61 +648,6 @@ rd "%SystemDrive%\xampp" /s /q
                 <pre><code>cacls "%SystemDrive%\xampp\xampp-control.ini" /E /P Todos:F</code></pre>
 
                 <!-- End Aplicacoes -->
-
-
-                <!-- Start Configuração final -->
-                
-                <h2 id="recursos">Aplicativos e recursos</h2>
-
-                <h3>Aplicativos padrão</h3>
-                    <ol>
-                        <li>Definir aplicativo padrão</b></li>
-                    </ol>
-
-                <h3>Inicialização</h3>
-                    <ol>
-                        <li>Desativar inicializações <b>desnecessárias</b></li>
-                    </ol>
-                
-                <h2 id="historico">Histórico de Navegação</h2>
-                <p>Remover histórico do Edge, Chrome, Firefox e Internet Explorer.</p>
-
-                <h2 id="startwin">Otimize a inicialização</h2>
-                <p><img class="img-fluid" src="../assets/images/pages/msconfig.png" alt="msconfig"></p>
-                <p>Tecle <kbd>Windows</kbd> + <kbd>R</kbd> e digite <code>msconfig</code> como Administrador.</p>
-
-                <h2 id="tarefas">Agendador de Tarefas</h2>
-                <p>Desative as tarefas agendadas relacionadas a atualizações, juntamente com backup de app localizado em Microsoft->Windows->AppListBackup.</p>
-
-                <!-- End Configuração final -->
-
-
-                <!-- Start Clone -->
-
-                <h2 id="dominio">Computador no domínio</h2>
-                <p>Adicione o computador no domínio conforme <a href="#nome">orientações &rarr;</a> para cada laboratório.</p>
-
-                <h2 id="gpos">Atualizar as GPOs</h2>
-                <p>Atualize as GPOs para que todas as diretivas sejam atualizadas e aplicadas.</p>
-                <pre><code>gpupdate /force</code></pre>
-
-                <h2 id="atautocad">Ativar AutoCAD</h2>
-                <p>Execute o AutoCAD (necessário internet) e siga os passos que aparecer na tela e, informe a <a href="https://docs.google.com/spreadsheets/d/1RaX8ubdo7RuoA8qhwZAWh6ZgoTQsC_E37R8E-21wkHQ/edit#gid=0">chave de ativação &#8599;</a> caso solicitado.</p>
-                
-                <h2 id="atrevit">Ativar Revit</h2>
-                <p>Execute o Revit (necessário internet) e siga os passos que aparecer na tela e, informe a <a href="https://docs.google.com/spreadsheets/d/1RaX8ubdo7RuoA8qhwZAWh6ZgoTQsC_E37R8E-21wkHQ/edit#gid=0">chave de ativação &#8599;</a> caso solicitado.</p>
-                
-                <h2 id="timefreeze">Habilitar Toolwiz Time Freeze</h2>
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Após todas as configurações, reinicie o computador antes de ativar o congelamento.</div>
-                </div>
-                <p>Por último, ative o <a href="https://labumuarama.com.br/veyon/#habilitando">Toolwiz Time Freeze &rarr;</a>.</p>
-
-                <!-- End Clone-->
         
         </main>
     </div>
