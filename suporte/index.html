@@ -1,35 +1,30 @@
 ---
 title:  "Suporte - Wiki"
 permalink: /suporte/
-load_js: load_assets_js
 ---
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ page.title }}</title>
-    {% include head.html %}
-</head>
-<body id="topo" class="menu-mobile">
-    {% include header.html %}
-    <p class="btn-container show-btn"><a href="#" class="toggle-menu btn-menu">Sumário</a></p>
-    <main class="conteudo-container">
-        <aside class="sidebar">
-            <menu class="menu">
-                <p class="hidden-btn"><a href="#" class="toggle-menu btn-menu">Fechar Sumário</a></p>
-                {% include menu-suporte.html %}
-            </menu>
+{% include header.html %}
+
+<div class="container margin-top mt-5 pt-5">
+
+    <div class="row">
+
+        <aside class="sidebar-container col-lg-4 z-3">
+            <div class="sidebar">
+        
+                {% include nav-suporte.html %}
+          
+            </div>
         </aside>
-        <article class="conteudo">
+
+        <main class="col-12 col-lg-8 mb-5">
+
             <h1 id="windows">Tutoriais de suporte</h1>
+            <p class="lead">Roteiro de alguns problemas mais comuns para rápida consulta e auxílio.</p>
 
             <!--Conteudo windows-->
-            <h2 id="windows">Windows</h2>
 
-            <h3 id="usertemp">Usuário temporário</h3>
+            <h2 id="usertemp">Usuário temporário</h2>
             <p>Com uma conta de Administrador, faça os procedimentos a seguir.</p>
             <p>1 - Abra o regedit e navegue até:</p>
             <div class="highlight">
@@ -67,7 +62,7 @@ load_js: load_assets_js
             </div>
             <p>6 - Depois desses passos, reinicie o Windows e crie uma nova conta para usuário e copie os arquivos da pasta do usuário antigo para a nova.</p>
 
-            <h3 id="pen">Removendo vírus de Pen Drive</h3>
+            <h2 id="pen">Removendo vírus de Pen Drive</h2>
             <p>Abra o prompt de comandos do Windows com permissões de Administrador e acesse o Pen Drive digitando a letra da unidade e dois pontos como <code class="inline">f:</code> e tecle enter, e visualizará algo como:</p>
             <div class="highlight">
                 <pre>
@@ -94,7 +89,7 @@ load_js: load_assets_js
                 </pre>
             </div>
 
-            <h3 id="servicos">Gerenciando serviços em massa</h3>
+            <h2 id="servicos">Gerenciando serviços em massa</h2>
             <p>Alguns exemplos de uso:</p>
             <div class="highlight">
                 <pre>
@@ -109,7 +104,7 @@ load_js: load_assets_js
                 </pre>
             </div>
 
-            <h3 id="label">Alterando nome do SO</h3>
+            <h2 id="label">Alterando nome do SO</h2>
             <div class="highlight">
                 <pre>
                     <code>
@@ -122,9 +117,8 @@ load_js: load_assets_js
             <!--Fim conteudo windows-->
 
             <!--Conteudo Ubuntu-->
-            <h2>Ubuntu</h2>
 
-            <h3 id="errordpkg">Sub-process /usr/bin/dpkg returned an error code (1)</h3>
+            <h2 id="errordpkg">Sub-process /usr/bin/dpkg returned an error code (1)</h2>
             <p>Ocorre quando há interrupção no processo de instalação de um pacote.</p>
             <p>O solução abaixo se aplica ao Java.</p>
             <div class="highlight">
@@ -139,7 +133,7 @@ load_js: load_assets_js
             O mesmo procedimento se aplica a outros pacotes, quando o problema é semelhante!
             </blockquote>
 
-            <h3 id="boot-repair">Boot Repair</h3>
+            <h2 id="boot-repair">Boot Repair</h2>
             <p>Usado para reparar o grub.</p>
             <div class="highlight">
                 <pre>
@@ -159,9 +153,11 @@ load_js: load_assets_js
                 </pre>
             </div>
             <p>Reinicie!</p>
-            <!--Fim conteudo Ubuntu-->             
-        </article>
-    </main>
-    {% include footer.html %}
-</body>
-</html>
+            <!--Fim conteudo Ubuntu-->                         
+        
+        </main>
+    </div>
+
+</div>
+
+{% include footer.html %}

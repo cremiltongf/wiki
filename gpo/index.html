@@ -1,30 +1,24 @@
 ---
 title:  "GPO - Wiki"
 permalink: /gpo/
-load_js: load_assets_js
 ---
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ page.title }}</title>
-    {% include head.html %}
-</head>
-<body id="topo" class="menu-mobile">
-    {% include header.html %}
-    <p class="btn-container show-btn"><a href="#" class="toggle-menu btn-menu">Sumário</a></p>
-    <main class="conteudo-container">
-        <aside class="sidebar">
-            <menu class="menu">
-                <p class="hidden-btn"><a href="#" class="toggle-menu btn-menu">Fechar Sumário</a></p>
-                {% include menu-gpo.html %}
-            </menu>
+{% include header.html %}
+
+<div class="container margin-top mt-5 pt-5">
+
+    <div class="row">
+
+        <aside class="sidebar-container col-lg-4 z-3">
+            <div class="sidebar">
+        
+                {% include nav-gpo.html %}
+          
+            </div>
         </aside>
-        <article class="conteudo">
-            <!--Conteudo Geral-->
+
+        <main class="col-12 col-lg-8 mb-5">
+
             <h1>Políticas para Active Directory</h1>
             <h2 id="adm-local">Administrator Local</h2>
             <ol>
@@ -40,7 +34,7 @@ load_js: load_assets_js
                 <li>
                 Caminho da GPO:
                 </li>
-                <img src="../assets/images/pages/adm-local.png" alt="ADM Local">
+                <img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/adm-local.png" alt="ADM Local">
                 <li>
                 Na coluna adicione o grupo criado anteriormente;
                 </li>
@@ -55,12 +49,12 @@ load_js: load_assets_js
 
             <h2 id="remoto">Acesso remoto</h2>
             <p>Configurando o acesso remoto:</p>
-            <img src="../assets/images/pages/remoto.png" alt="Acesso remoto">
+            <img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/remoto.png" alt="Acesso remoto">
 
             <h2 id="login">Login automático</h2>
             <blockquote class="info">Atualize as informações conforme usuário definido.</blockquote>
             <p>Login automático do Windows:</p>
-            <img src="../assets/images/pages/login.png" alt="Login automático">
+            <img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/login.png" alt="Login automático">
             <p>Detalhes de <code class="inline">AutoAdminLogon</code>:</p>
             <div class="highlight">
                 <pre>
@@ -116,7 +110,7 @@ load_js: load_assets_js
 
             <h2 id="proxy">Proxy</h2>
             <p>Configurando proxy nos computadores clientes:</p>
-            <img src="../assets/images/pages/proxy.png" alt="Configuração de proxy">
+            <img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/proxy.png" alt="Configuração de proxy">
             <p>Detalhes de <code class="inline">ProxyEnable</code>:</p>
             <div class="highlight">
                 <pre>
@@ -171,15 +165,15 @@ load_js: load_assets_js
             <!-- Data e Hora -->
             <h2 id="datetime">Alteração de horas</h2>
             <p>Essa regra libera a correção de data e horário para qualquer perfil de usuário.</p>
-            <img src="../assets/images/pages/alterar-horas.png" alt="Permissão de alteração de data e horas">
+            <img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/alterar-horas.png" alt="Permissão de alteração de data e horas">
             <!-- End Data e Hora -->
 
             <!-- Relacao confianca -->
             <h2 id="time">Tolerância de sincronização</h2>
-            <img src="../assets/images/pages/diferenca-de-horas.png" alt="Tela de Configuração">
+            <img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/diferenca-de-horas.png" alt="Tela de Configuração">
 
             <h2 id="passtime">Tempo de senha de computador</h2>
-            <img src="../assets/images/pages/relacao-confianca.png" alt="Tela de Configuração">
+            <img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/relacao-confianca.png" alt="Tela de Configuração">
 
             <blockquote class="info">
             Essas regras garantem que o computador não perca a relação de confiança 
@@ -189,10 +183,10 @@ load_js: load_assets_js
 
             <!-- Tema -->
             <h2 id="wallpaper">Papel de parede</h2>
-            <img src="../assets/images/pages/wallpaper.png" alt="Tela de configuração de Papel de Parede">
+            <img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/wallpaper.png" alt="Tela de configuração de Papel de Parede">
 
             <h2 id="script">Script de papel de parede</h2>
-            <img src="../assets/images/pages/script-wallpaper.png" alt="Tela de configurção de script de wallpaper">
+            <img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/script-wallpaper.png" alt="Tela de configurção de script de wallpaper">
 
             <h3>Conteúdo do Script</h3>
             <div class="highlight">
@@ -241,7 +235,7 @@ load_js: load_assets_js
             <h2 id="services">Services via BAT</h2>
 
             <h3>Local de configuração</h3>
-            <img src="../assets/images/pages/script-de-servicos.png" alt="Tela de configuraçao do script">
+            <img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/script-de-servicos.png" alt="Tela de configuraçao do script">
 
             <h3>Conteúdo do script</h3>
             <div class="highlight">
@@ -279,10 +273,11 @@ load_js: load_assets_js
                 </pre>
             </div>
 
-            <!-- End Opcoes de Seguranca -->
+            <!-- End Opcoes de Seguranca -->      
+        
+        </main>
+    </div>
 
-        </article>
-    </main>
-    {% include footer.html %}
-</body>
-</html>
+</div>
+
+{% include footer.html %}

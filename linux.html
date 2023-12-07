@@ -4,25 +4,8 @@ permalink: /linux/
 load_js: load_assets_js
 ---
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ page.title }}</title>
-    {% include head.html %}
-</head>
-<body id="topo" class="menu-mobile">
-    {% include header.html %}
-    <p class="btn-container show-btn"><a href="#" class="toggle-menu btn-menu">Sumário</a></p>
-    <main class="conteudo-container">
-        <aside class="sidebar">
-            <menu class="menu">
-                <p class="hidden-btn"><a href="#" class="toggle-menu btn-menu">Fechar Sumário</a></p>
-                {% include menu-linux.html %}
-            </menu>
-        </aside>
+{% include header.html %}
+
         <article class="conteudo">
 
             <blockquote class="info">A fim de otimizar a criação de imagem, o Linux será disponibilizado através do Oracle VirtualBox. Os labs deixarão de ser dual-boot.</blockquote>
@@ -613,5 +596,3 @@ load_js: load_assets_js
         </article>
     </main>
     {% include footer.html %}
-</body>
-</html>

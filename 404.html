@@ -3,16 +3,8 @@ title:  "A página foi para o espaço"
 permalink: /404.html
 ---
 
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ page.title }}</title>
-    {% include head.html %}
-</head>
-<body>
+{% include header.html %}
+
     <main class="conteudo-404">
         <div class="ilustracao-404">
             <img src="{{ site.baseurl }}/assets/images/erro-404.svg" alt="Astronauta perdido no espaço">
@@ -23,6 +15,5 @@ permalink: /404.html
             <p>Volte para a <a href="{{ site.url }}">página inicial</a>.</p>
         </section>
     </main>
-    {% include footer.html %}
-</body>
-</html>
+    
+{% include footer.html %}
