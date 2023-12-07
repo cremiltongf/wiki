@@ -111,91 +111,105 @@ permalink: /win/
 
                 <!-- Start Instalação -->
 
-                <h2>Setup</h2>
-                <h3 id="configsetup">Configurações</h3>
+                <p class="lead">
+                    Configuração inicial para o Hardware e Sistema Operacional Windows.
+                </p>
+
+                <h2 id="configsetup">Configurações</h2>
                 <ul>
-                    <li>Armazenamento no modo AHCI;</li>
-                    <li>Habilitar virtualização;</li>
-                    <li>Desativar Fast Boot;</li>
-                    <li>Desativar Secure Boot;</li>
-                    <li>Ativar PXE no modo Legacy.</li>
-                    <li>Ativar Wake On LAN (WOL).</li>
+                    <li class="mb-2">Armazenamento no modo AHCI;</li>
+                    <li class="mb-2">Habilitar virtualização;</li>
+                    <li class="mb-2">Desativar Fast Boot;</li>
+                    <li class="mb-2">Desativar Secure Boot;</li>
+                    <li class="mb-2">Ativar PXE no modo Legacy ou UEFI;</li>
+                    <li class="mb-2">Ativar Wake On LAN (WOL).</li>
                 </ul>
 
-                <h2>Instalação</h2>
-                <h3 id="uefi">Modo UEFI</h3>
-                <p>Instalar o Windows no modo UEFI, sempre que possível.</p>
+                <h2 id="uefi">Modo UEFI</h2>
+                <p>Quando possível instalar o Windows no modo UEFI.</p>
 
-                <h3 id="admin">Usuário administrador</h3>
-                <p>Criar usuário administrador <b>IFPR</b> e definir senha padrão disponível na <a href="https://docs.google.com/spreadsheets/d/1K7BrCy4tWE0I9W5_Dc5zm_tXNyYtj4ZYFQJLmiljGAE/edit?usp=sharing">planilha</a>.</p>
+                <h2 id="admin">Usuário administrador</h2>
+                <p>Criar usuário administrador <strong>IFPR</strong> e definir senha padrão disponível na <a href="https://docs.google.com/spreadsheets/d/1K7BrCy4tWE0I9W5_Dc5zm_tXNyYtj4ZYFQJLmiljGAE/edit?usp=sharing">planilha &#8599;</a>.</p>
 
-                <blockquote class="info">
-                Realize as configurações com a conta de administrador local, antes de ingressar ao domínio.
-                </blockquote>
+                <div class="alert alert-info d-flex align-items-center">
+                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                    </svg>
+                    <div>Realize as configurações para o SO com a conta de administrador local ou de rede, a fim de evitar múltiplas autenticações.</div>
+                </div>
 
-                <h3 id="wol">Configuração de driver para ativação WOL</h3>
+                <h2 id="wol">Configuração de driver para ativação WOL</h2>
                 <ol>
-                    <li>Abra o Gerenciador de Dispositivos</li>
-                    <li>Acesse Adaptadores de rede e abra a categoria.</li>
-                    <li>Clique com o botão direito no LAN Controller e selecione Propriedades.</li>
-                    <li>Abra a guia Gerenciamento de energia.</li>
-                    <li>Marque as caixas: Permitir que este dispositivo acorde o computador, só permita que um pacote mágico acorde o computador.</li>
-                    <li>Agora, abra a guia Avançado e escolha Energy Efficient Ethernet &rarr; Defina essa opção como Desativado.</li>
-                    <li>Clique em OK e feche o Gerenciador de dispositivos.</li>
+                    <li class="mb-2">Abra o Gerenciador de Dispositivos</li>
+                    <li class="mb-2">Acesse Adaptadores de rede e abra a categoria.</li>
+                    <li class="mb-2">Clique com o botão direito no LAN Controller e selecione Propriedades.</li>
+                    <li class="mb-2">Abra a guia Gerenciamento de energia.</li>
+                    <li class="mb-2">Marque as caixas: Permitir que este dispositivo acorde o computador, só permita que um pacote mágico acorde o computador.</li>
+                    <li class="mb-2">Agora, abra a guia Avançado e escolha Energy Efficient Ethernet &rarr; Defina essa opção como Desativado.</li>
+                    <li class="mb-2">Clique em OK e feche o Gerenciador de dispositivos.</li>
                 </ol>
                 
-                <h3 id="particao">Partições do SO</h3>
+                <h2 id="particao">Partições do SO</h2>
                 <p>Definir partições do computador, conforme tabela abaixo:</p>
-                <table>
-                    <tr>
-                        <th>Descrição</th>
-                        <th>Capacidade</th>
-                    </tr>
-                    <tr>
-                        <td>Nuvem01</td>
-                        <td>Mínimo de 10GB</td>
-                    </tr>
-                    <tr>
-                        <td>Windows</td>
-                        <td>Restante da capacidade</td>
-                    </tr>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Capacidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Nuvem01</td>
+                            <td>Mínimo de 10GB</td>
+                        </tr>
+                        <tr>
+                            <td>Windows</td>
+                            <td>Restante da capacidade</td>
+                        </tr>
+                    </tbody>
                 </table>
+                
+                <div class="alert alert-info d-flex align-items-center">
+                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                    </svg>
+                    <div>Caso o equipamento possua unidades extras de armazenamento, utilize todo espaço da unidade para partição nuvem01 e/ou nuvem02.</div>
+                </div>
 
-                <blockquote class="info">
-                Caso o equipamento possua unidades extras de armazenamento, utilize todo espaço da unidade para partição nuvem01 e/ou nuvem02.
-                </blockquote>
-
-                <h3 id="windowsupdate">Windows Update</h3>
+                <h2 id="windowsupdate">Windows Update</h2>
                 <p>Instalar todas as atualizações do Windows.</p>
 
-                <h3 id="drivers">Atualização de drivers</h3>
-                <p>Use softwares como <a href="https://www.drivereasy.com/">EasyDriver</a>, <a href="https://www.iobit.com/pt/driver-booster.php">Driver Booster</a> ou <a href="https://www.drivermax.com/download.htm">DriverMax</a> para realizar essa tarefa.</p>
+                <h2 id="drivers">Atualização de drivers</h2>
+                <p>Use softwares como <a href="https://www.drivereasy.com/">EasyDriver &#8599;</a>, <a href="https://www.iobit.com/pt/driver-booster.php">Driver Booster &#8599;</a> ou <a href="https://www.drivermax.com/download.htm">DriverMax &#8599;</a> para realizar essa tarefa.</p>
 
-                <h3 id="fastboot">Fast Boot</h3>
-                <blockquote class="info">
-                Ajuste necessário para o desligamento completo do SO. Aplicável ao Windows 10.
-                </blockquote>
-                <div class="highlight">
-                    <pre>
-                        <code>
-                        powercfg.exe /hibernate off
-                        </code>
-                    </pre>                                
+                <h2 id="fastboot">Fast Boot</h2>
+                <div class="alert alert-info d-flex align-items-center">
+                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                    </svg>
+                    <div>Ajuste necessário para o desligamento completo do SO. Aplicável ao Windows 8/10/11.</div>
                 </div>
-                
-                <h3 id="propriedades">Propriedades do Sistema</h3>
 
-                <h4>Aba Proteção do Sistema</h4>
+                <p>Execute no <code>prompt</code> como administrador:</p>
+                <pre><code>powercfg.exe /hibernate off</code></pre>
+                
+                <h2 id="propriedades">Propriedades do Sistema</h2>
+
+                <h3>Aba Proteção do Sistema</h3>
                 <ol>
                     <li>Configurar &rarr; <b>Desativar a proteção do sistema</b></li>
                 </ol>      
 
-                <h3 id="reparo">Reparo automático</h3>
+                <h2 id="reparo">Reparo automático</h2>
                 <blockquote class="info">
                     Ajuste necessário para evitar o reparo automático do SO, o que pode "quebrar" o Windows.
                 </blockquote>
 
-                <h4>Desativar no Windows 7</h4>
+                <h3>Desativar no Windows 7</h3>
                 <p>Execute o comando abaixo pelo <code class="inline">prompt</code> como admin:</p>
                 <div class="highlight">
                     <pre>
@@ -205,7 +219,7 @@ permalink: /win/
                     </pre>                
                 </div>
 
-                <h4>Desativar no Windows 10</h4>
+                <h3>Desativar no Windows 10</h3>
                 <p>Execute o comando abaixo pelo <code class="inline">prompt</code> como admin:</p>
                 <div class="highlight">
                     <pre>
@@ -215,7 +229,7 @@ permalink: /win/
                     </pre>                
                 </div>            
                 
-                <h3 id="defrag">Otimização agendada</h3>
+                <h2 id="defrag">Otimização agendada</h2>
                 <p>Desativar a desfragmentação agendada para todas as unidades do computador.</p>
                 <img src="../assets/images/pages/desfragmentador.jpg" alt="Desfragmentador">            
 
@@ -223,9 +237,7 @@ permalink: /win/
 
                 <!-- Start Configuração Inicial -->
 
-                <h2>Configuração inicial</h2>
-
-                <h3 id="nome">Nome e Grupo</h3>
+                <h2 id="nome">Nome e Grupo</h2>
                 <p>Incluir o computador ao domínio, conforme informações abaixo:</p>
                 <div class="highlight">
                     <pre>
@@ -252,7 +264,7 @@ permalink: /win/
                 Realize as configurações abaixo com a conta do aluno, após ingressar ao domínio.
                 </blockquote>            
 
-                <h3 id="estudante">Usuário Aluno</h3>        
+                <h2 id="estudante">Usuário Aluno</h2>        
                 <blockquote class="info">
                     Usuário e senha definida pelo Active Directory.
                 </blockquote>
@@ -266,13 +278,13 @@ permalink: /win/
                     </pre>
                 </div>
 
-                <h3 id="wallpaper">Papel de parede</h3>
+                <h2 id="wallpaper">Papel de parede</h2>
                 <blockquote class="info">
                     Configuração definida para o perfil do aluno pelo Active Directory.
                 </blockquote>
                 <p>Baixe o <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">papel de parede</a>.</p>
 
-                <h3 id="proxy">Configuração de proxy</h3>
+                <h2 id="proxy">Configuração de proxy</h2>
                 <blockquote class="info">
                     Configuração definida pelo Active Directory.
                 </blockquote>
@@ -285,16 +297,16 @@ permalink: /win/
                 </div>
                 <img src="../assets/images/pages/proxy.png" alt="Proxy">
                 
-                <h3 id="gerenciador">Gerenciador de Tarefas</h3>
+                <h2 id="gerenciador">Gerenciador de Tarefas</h2>
                 <blockquote class="info">
                 Configuração definida pelo Active Directory.
                 </blockquote>
                 <p>Desative pelo <code class="inline">gpedit.msc</code>, quando a regra for local.</p>
                 
-                <h3 id="senhas">Senhas</h3>
+                <h2 id="senhas">Senhas</h2>
                 <p>Coloque um <b>txt</b> na área de trabalho com as senhas, caso alguma aplicação necessite.</p>
 
-                <h3 id="servicos">Serviços</h3>
+                <h2 id="servicos">Serviços</h2>
                 <blockquote class="info">
                 Configurações definidas pelo Active Directory.
                 </blockquote>
@@ -342,42 +354,38 @@ permalink: /win/
                     </tr>
                 </table>
 
-                <h4>Gerenciando serviços pelo prompt de comando</h4>
-                <div class="highlight">
-                    <pre>
-                        <code>
-                        wuauserv => servico a ser desativado
-                        sc config "wuauserv" start= disabled
-                        </code>
-                    </pre>
-                </div>
-                        
-                <h2>Configurações do Windows 10</h2>
+                <h3>Gerenciando serviços pelo <code>prompt</code> de comando</h3>
+                <pre>
+                <code>
+                wuauserv => servico a ser desativado
+                sc config "wuauserv" start= disabled
+                </code>
+                </pre>              
 
-                <h3 id="sistema">Sistema</h3>
-                <h4>Notificações e ações</h4>
+                <h2 id="sistema">Sistema</h2>
+                <h3>Notificações e ações</h3>
                     <ol>
                         <li><b>Desativar</b> tudo</li>
                     </ol>
 
-                <h4>Energia e suspensão</h4>
+                <h3>Energia e suspensão</h3>
                     <ol>
                         <li>Tela &rarr; Quando conectado, desligar após &rarr; <b>Nunca</b></li>
                         <li>Suspender &rarr; Quando conectado, o computador será suspenso após &rarr; <b>Nunca</b></li>
                     </ol>
 
-                <h3 id="tema">Personalização</h3>
-                <h4>Cores</h4>
+                <h2 id="tema">Personalização</h2>
+                <h3>Cores</h3>
                     <ol>
                         <li>Efeitos de transparência &rarr; <b>Desativado</b></li>
                     </ol>
-                <h4>Tela de bloqueio</h4>
+                <h3>Tela de bloqueio</h3>
                     <ol>
                         <li>Tela de Fundo &rarr; <b>Imagem</b></li>
                         <li>Baixe o <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">papel da tela de bloqueio</a> para a pasta imagem.</li>
                         <li>Receba dados interessantes... &rarr; <b>Desativado</b></li>
                     </ol>
-                <h4>Iniciar</h4>
+                <h3>Iniciar</h3>
                     <ol>
                         <li>Mostrar lista de aplicativos no menu Iniciar &rarr; <b>Ativado</b></li>
                         <li>Todas as outras opções &rarr; <b>Desativadas</b></li>
@@ -388,55 +396,54 @@ permalink: /win/
                             <li>Todas as outras opções &rarr; <b>Desativadas</b></li>
                         </ol>                
                     </ol>
-                <h4>Barra de Tarefas</h4>
+                <h3>Barra de Tarefas</h3>
                     <ol>
                         <li>Combinar botões da barra de tarefas &rarr; <b>Quando a barra de tarefas estiver cheia</b></li>
                     </ol>
 
-                <h3 id="jogos">Jogos</h3>
-                <h4>Xbox Game Bar</h4>
+                <h2 id="jogos">Jogos</h2>
+                <h3>Xbox Game Bar</h3>
                     <ol>
                         <li>Habilite a Xbox Game Bar... &rarr; <b>Desativado</b></li>
                     </ol>
-                <h4>Modo de Jogo</h4>
+                <h3>Modo de Jogo</h3>
                     <ol>
                         <li>Modo de Jogo &rarr; <b>Desativado</b></li>
                     </ol>
 
-                <h3 id="privacidade">Privacidade</h3>
-                <h4>Geral</h4>
+                <h2 id="privacidade">Privacidade</h2>
+                <h3>Geral</h3>
                     <ol>
                         <li>Permitir que o Windows controle a abertura de aplicativos... &rarr; <b>Ativado</b></li>
                         <li><b>Desativar</b> as demais opções</li>
                     </ol>
-                <h4>Histórico de atividades</h4>
+                <h3>Histórico de atividades</h3>
                     <ol>
                         <li><b>Tudo Desativado</b></li>
                     </ol>
-                <h4>Aplicativos em segundo plano</h4>
+                <h3>Aplicativos em segundo plano</h3>
                     <ol>
                         <li>Permitir a execução de aplicativos em segundo plano &rarr; <b>Desativado</b></li>
                     </ol>
 
-                <h3 id="opcoespastas">Opções de pastas</h3>
+                <h2 id="opcoespastas">Opções de pastas</h2>
                 <img src="../assets/images/pages/opcoes-de-pastas.png" alt="Oções de pastas">
 
-                <h3 id="edge">Configurações do Edge</h3>
+                <h2 id="edge">Configurações do Edge</h2>
                 <p>Configurar a página inicial do navegador Edge.</p>
                 <img src="../assets/images/pages/configedge.png" alt="Configuração do navegador Edge">
         
                 <!-- End Configuração Inicial -->
 
                 <!-- Start Aplicacoes -->
-                <h2>Aplicações</h2>
 
                 <blockquote class="info">
                 Execute os softwares ao menos uma vez na conta do usuário Aluno, para que seja criado as configurações de ambiente. Faça a instalação dos programas com o usuário Kenobi.
                 </blockquote>            
 
-                <h3 id="zip">7-zip</h3>
+                <h2 id="zip">7-zip</h2>
                 <p>Faça o download do <a href="https://www.7-zip.org/download.html">7-zip</a>.</p>
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -445,17 +452,17 @@ permalink: /win/
                     </pre>                   
                 </div>
                 
-                <h3 id="android">Android Studio</h3>
+                <h2 id="android">Android Studio</h2>
                 <p>Faça o download do <a href="https://developer.android.com/studio">Android Studio</a>.</p>
 
                 <blockquote class="info">Executar o programa no perfil do aluno, para terminar de adicionar os recursos extras.</blockquote>
 
-                <h3 id="netbeans">Apache NetBeans</h3>
+                <h2 id="netbeans">Apache NetBeans</h2>
                 <blockquote class="info">Esse programa precisa do Java JDK.</blockquote>
 
                 <p>Faça o download do <a href="https://netbeans.org/downloads/">NetBeans</a>.</p>
                 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -466,7 +473,7 @@ permalink: /win/
                 <p>Baixe o <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">state.xml</a></p>
                 <blockquote class="info">Necessário gerar um state.xml para cada versão do NetBeans.</blockquote>
 
-                <h4>Silent Uninstall</h4>
+                <h3>Silent Uninstall</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -495,7 +502,7 @@ permalink: /win/
                     </pre>
                 </div>
                                     
-                <h3 id="astah">Astah Community</h3>
+                <h2 id="astah">Astah Community</h2>
                 <blockquote class="info">
                 Esse programa precisa do Java JRE.
                 </blockquote>
@@ -503,7 +510,7 @@ permalink: /win/
                 <p>A versão community foi oficialmente descontinuado.</p>
                 <p>Faça o download da <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">última versão</a> disponibilizada.</p>
                 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -512,16 +519,16 @@ permalink: /win/
                     </pre>                   
                 </div>             
                 
-                <h3 id="autocad">AutoCAD</h3>
+                <h2 id="autocad">AutoCAD</h2>
                 <p>Faça o download do <a href="https://www.autodesk.com/education/free-software/">AutoCAD</a>.</p>
 
-                <h3 id="avogadro">Avogadro</h3>
+                <h2 id="avogadro">Avogadro</h2>
                 <p>Faça o download do <a href="https://avogadro.cc/">Avogadro</a>.</p>
                 
-                <h3 id="blender">Blender</h3>
+                <h2 id="blender">Blender</h2>
                 <p>Faça o download do  <a href="https://www.blender.org/download/">Blender</a>.</p>
                 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -530,10 +537,10 @@ permalink: /win/
                     </pre>
                 </div>
 
-                <h4>Configuração</h4>
+                <h3>Configuração</h3>
                 <img src="../assets/images/pages/config-blender.png" alt="Imagem de configuração do Blender">
 
-                <h4>Diretório de Configuração</h4>
+                <h3>Diretório de Configuração</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -542,15 +549,15 @@ permalink: /win/
                     </pre>                
                 </div>
 
-                <h3 id="localdns">Bonjour ou mDNS</h3>
+                <h2 id="localdns">Bonjour ou mDNS</h2>
                 <blockquote class="info">
                 Instale apenas no Windows 7 Professional. Para o Windows 10, ative mDNS.
                 </blockquote>
                 
-                <h4>Bonjour</h4>
+                <h3>Bonjour</h3>
                 <p>Faça o download do <a href="https://developer.apple.com/bonjour/">Bonjour</a>.</p>
                 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -559,7 +566,7 @@ permalink: /win/
                     </pre>
                 </div>
 
-                <h4>mDNS - Resolve .local para Windows 10</h4>
+                <h3>mDNS - Resolve .local para Windows 10</h3>
                 <p>Para o Windows 10, ative o recurso mDNS:</p>
                 <div class="highlight">
                     <pre>
@@ -569,22 +576,22 @@ permalink: /win/
                     </pre>
                 </div>
 
-                <h3 id="bricx">BricxCC +(Driver NXT)</h3>
+                <h2 id="bricx">BricxCC +(Driver NXT)</h2>
                 <p>Faça o download dos arquivos disponibilizado na <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">pasta</a>, mova a pasta BricxCC para <code class="inline">C:\Portable</code> e instale o driver.
 
-                <h3 id="brmodelo">brModelo</h3>
+                <h2 id="brmodelo">brModelo</h2>
                 <p>Faça o download do <a href="http://www.sis4.com/brModelo/download.html">brModelo</a> e mova para <code class="inline">C:\Portable</code>, dentro da pasta <b>brModelo</b>.
 
-                <h3 id="chem">ChemSketch</h3>
+                <h2 id="chem">ChemSketch</h2>
                 <p>Faça o download do <a href="https://www.acdlabs.com/resources/free-chemistry-software-apps/chemsketch-freeware/">ChemSketch</a>.
 
-                <h3 id="chrome">Chrome</h3>
+                <h2 id="chrome">Chrome</h2>
                 <blockquote class="info">
                     Se os serviços do navegador estiverem desativados, ative antes de prosseguir com a atualização.
                 </blockquote>
                 <p>Faça o download do <a href="https://www.google.com/intl/pt-BR/chrome/?standalone=1">Chrome</a>.</p>
 
-                <h4>Ativando os serviços</h4>
+                <h3>Ativando os serviços</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -598,7 +605,7 @@ permalink: /win/
                     </pre>
                 </div>            
 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -607,12 +614,12 @@ permalink: /win/
                     </pre>                
                 </div>                
 
-                <h3 id="tracer">Cisco Packet Tracer</h3>
+                <h2 id="tracer">Cisco Packet Tracer</h2>
                 <blockquote class="info">É necessário que os alunos façam <a href="https://www.netacad.com/pt-br">cadastro</a> para usar o simulador.</blockquote>
 
                 <p>Faça o download do <a href="https://www.netacad.com/pt-br">Cisco Packet Tracer</a>.</p>
                 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -621,7 +628,7 @@ permalink: /win/
                     </pre>                
                 </div>
                 
-                <h4>Silent Uninstall</h4>
+                <h3>Silent Uninstall</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -630,11 +637,11 @@ permalink: /win/
                     </pre>                  
                 </div>              
 
-                <h3 id="composer">Composer</h3>
+                <h2 id="composer">Composer</h2>
                 <blockquote class="info">Esse programa precisa do XAMPP.</blockquote>
                 <p>Faça o download do <a href="https://getcomposer.org/Composer-Setup.exe">Composer</a>.</p>
                 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -643,7 +650,7 @@ permalink: /win/
                     </pre>
                 </div>
 
-                <h4>Silent Uninstall</h4>
+                <h3>Silent Uninstall</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -655,7 +662,7 @@ permalink: /win/
                     </pre>
                 </div>
                 
-                <h4>Setando proxy</h4>
+                <h3>Setando proxy</h3>
                 <p>Execute os comandos no <code class="inline">prompt</code> como administrador.</p>
                 <div class="highlight">
                     <pre>
@@ -666,14 +673,14 @@ permalink: /win/
                     </pre>                
                 </div>
 
-                <h3 id="dbbrowser">DB Browser for SQLite</h3>
+                <h2 id="dbbrowser">DB Browser for SQLite</h2>
                 <p>Faça o download do <a href="https://sqlitebrowser.org/">DB Browser for SQLite</a>.</p>
                 
-                <h3 id="dbdesigner">DBDesigner</h3>
+                <h2 id="dbdesigner">DBDesigner</h2>
                 <p>Faça o download do <a href="http://fabforce.eu/dbdesigner4/">DBDesigner</a>.</p>
                 <p>Após a instalação, mova os atalhos do programa para o diretório correto.</p>
                 
-                <h4>Origem</h4>
+                <h3>Origem</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -682,7 +689,7 @@ permalink: /win/
                     </pre>                
                 </div>
 
-                <h4>Destino</h4>
+                <h3>Destino</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -691,17 +698,17 @@ permalink: /win/
                     </pre>
                 </div>
 
-                <h3 id="dbeaver">DBeaver Community</h3>
+                <h2 id="dbeaver">DBeaver Community</h2>
                 <p>Faça o download do <a href="https://dbeaver.io/download/">DBeaver Community</a>.</p>
 
-                <h3 id="eclipse">Eclipse</h3>
+                <h2 id="eclipse">Eclipse</h2>
                 <p>Faça o download do <a href="https://www.eclipse.org/downloads/packages/">Eclipse</a> e disponibilize em <code class="inline">C:\Portable</code>.
 
-                <h3 id="firefox">Firefox</h3>
+                <h2 id="firefox">Firefox</h2>
                 <blockquote class="info">Se os serviços do navegador estiverem desativados, ative antes de prosseguir com a atualização.</blockquote>
                 <p>Faça o download do <a href="https://www.mozilla.org/pt-BR/firefox/all/">Firefox</a>.</p>
                 
-                <h4>Ativando os serviços</h4>
+                <h3>Ativando os serviços</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -711,7 +718,7 @@ permalink: /win/
                     </pre>
                 </div>
 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -720,7 +727,7 @@ permalink: /win/
                     </pre>                
                 </div>
                 
-                <h4>Silent Uninstall</h4>
+                <h3>Silent Uninstall</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -730,10 +737,10 @@ permalink: /win/
                     </pre>
                 </div>
                 
-                <h3 id="fluxovento">Fluxovento</h3>
+                <h2 id="fluxovento">Fluxovento</h2>
                 <p>Faça o download do <a href="http://webserver2.tecgraf.puc-rio.br/etools/fluxovento/">Fluxovento</a>.</p>
                 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -742,18 +749,18 @@ permalink: /win/
                     </pre>                  
                 </div>              
 
-                <h3 id="ftool">Ftool</h3>
+                <h2 id="ftool">Ftool</h2>
                 <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Ftool</a>.</p>
                 <p>Disponibilize o arquivo em <code class="inline">C:\Portable\Ftool</code> e adicione um atalho na área de trabalho do aluno.</p>
                 
-                <h3 id="geogebra">Geogebra</h3>
+                <h2 id="geogebra">Geogebra</h2>
                 <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Geogebra</a>.</p>
                 <p>Extraia os arquivos na pasta <code class="inline">C:\Portable</code>.</p>
                             
-                <h3 id="gimp">Gimp</h3>
+                <h2 id="gimp">Gimp</h2>
                 <p>Faça o download do <a href="https://www.gimp.org/">Gimp</a>.</p>
                 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -762,7 +769,7 @@ permalink: /win/
                     </pre>                
                 </div>
 
-                <h4>Silent Uninstall</h4>
+                <h3>Silent Uninstall</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -771,10 +778,10 @@ permalink: /win/
                     </pre>                 
                 </div>
                 
-                <h3 id="git">Git</h3>
+                <h2 id="git">Git</h2>
                 <p>Faça o download do <a href="https://git-scm.com/">Git</a>.</p>
                 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -783,7 +790,7 @@ permalink: /win/
                     </pre>                
                 </div>
 
-                <h4>Silent Uninstall</h4>
+                <h3>Silent Uninstall</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -793,7 +800,7 @@ permalink: /win/
                     </pre>
                 </div>
                 
-                <h4>Setando proxy</h4>
+                <h3>Setando proxy</h3>
                 <p>Execute os comandos abaixo no <code class="inline">prompt</code>, não precisa ser admin.</p>
                 <div class="highlight">
                     <pre>
@@ -804,10 +811,10 @@ permalink: /win/
                     </pre>                
                 </div>
                 
-                <h3 id="greenfoot">Greenfoot</h3>
+                <h2 id="greenfoot">Greenfoot</h2>
                 <p>Faça o download do <a href="https://www.greenfoot.org/door">Greenfoot</a>.</p>
                 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -816,10 +823,10 @@ permalink: /win/
                     </pre>                   
                 </div>              
                 
-                <h3 id="idle">IDLE Python</h3>
+                <h2 id="idle">IDLE Python</h2>
                 <p>Faça o download do <a href="https://www.python.org/downloads/">IDLE Python</a>.</p>
                 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -828,7 +835,7 @@ permalink: /win/
                     </pre>                 
                 </div>               
 
-                <h4>Silent Uninstall</h4>
+                <h3>Silent Uninstall</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -839,10 +846,10 @@ permalink: /win/
                     </pre>                 
                 </div>               
                 
-                <h3 id="inkscape">Inkscape</h3>
+                <h2 id="inkscape">Inkscape</h2>
                 <p>Faça o download do <a href="https://inkscape.org/pt-br/">Inkscape</a>.</p>
                 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -851,7 +858,7 @@ permalink: /win/
                     </pre>                
                 </div>
                 
-                <h4>Silent Uninstall</h4>
+                <h3>Silent Uninstall</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -860,17 +867,17 @@ permalink: /win/
                     </pre>                 
                 </div>               
                 
-                <h3 id="jasperlibrary">JasperReports Library</h3>
+                <h2 id="jasperlibrary">JasperReports Library</h2>
                 <p>Faça o download do  <a href="https://community.jaspersoft.com/project/jasperreports-library">JasperReports Library</a>.</p>
                 <p>Extraia o arquivo no diretório <code class="inline">C:\Portable</code>.</p>
 
-                <h3 id="jaspersoft">Jaspersoft Studio</h3>
+                <h2 id="jaspersoft">Jaspersoft Studio</h2>
                 <p>Faça o download do  <a href="https://community.jaspersoft.com/project/jaspersoft-studio">Jaspersoft Studio</a>.</p>
 
-                <h3 id="jdk17">Java JDK 17</h3>
+                <h2 id="jdk17">Java JDK 17</h2>
                 <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Java JDK 17</a>.</p>
 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -879,7 +886,7 @@ permalink: /win/
                     </pre>
                 </div>
 
-                <h4>Silent Uninstall</h4>
+                <h3>Silent Uninstall</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -892,12 +899,12 @@ permalink: /win/
                     </pre>                
                 </div>            
 
-                <h3 id="jre">Java JRE 8 321</h3>
+                <h2 id="jre">Java JRE 8 321</h2>
                 <p>Faça o download do <a href="https://www.java.com/pt-BR/download/manual.jsp">Java JRE</a>.</p>
 
                 <blockquote class="info">Desative a verificação de atualizações.</blockquote>
                 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                 <pre>
                     <code>
@@ -906,12 +913,12 @@ permalink: /win/
                 </pre>                
                 </div>
 
-                <h3 id="javavar">Java - Variáveis de ambiente</h3>
+                <h2 id="javavar">Java - Variáveis de ambiente</h2>
                 <blockquote class="info">
                 Crie as variáveis para a última versão do Java JDK instalado.
                 </blockquote>
 
-                <h4>Variáveis via Propriedades do Sistema</h4>
+                <h3>Variáveis via Propriedades do Sistema</h3>
                 <p>Acesse as <b>Propriedades do Sistema</b> para configurar as variáveis. Neste exemplo, estou configurando o <b>JDK 17</b>:</p>
                 <img src="../assets/images/pages/variavel-java.png" alt="Propriedades do Sistema">
                 <div class="highlight">
@@ -943,13 +950,13 @@ permalink: /win/
                     </pre>
                 </div>
                 
-                <h3 id="kerkythea">Kerkythea 2008</h3>
+                <h2 id="kerkythea">Kerkythea 2008</h2>
                 <p>Faça o download do <a href="https://www.kerkythearender.net/instalacao">Kerkythea 2008</a>.</p>
 
-                <h3 id="libre">LibreOffice</h3>
+                <h2 id="libre">LibreOffice</h2>
                 <p>Faça o download do <a href="https://pt-br.libreoffice.org/baixe-ja/libreoffice-stable/">LibreOffice</a>.
                 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -958,7 +965,7 @@ permalink: /win/
                     </pre>
                 </div>
 
-                <h4>Silent Uninstall</h4>
+                <h3>Silent Uninstall</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -967,16 +974,16 @@ permalink: /win/
                     </pre>
                 </div>
 
-                <h3 id="vcredist">Microsoft Visual C++ Redistributable Runtimes</h3>
+                <h2 id="vcredist">Microsoft Visual C++ Redistributable Runtimes</h2>
                 <p>Faça o download do <a href="https://github.com/abbodi1406/vcredist">Microsoft Visual C++ Redistributable Runtimes</a>.</p>
 
-                <h3 id="mopac">MOPAC</h3>
+                <h2 id="mopac">MOPAC</h2>
                 <p>Faça o download do <a href="http://openmopac.net/Download_MOPAC_Executable_Step2.html">MOPAC</a>.</p>
 
-                <h3 id="workbench">MySQL Workbench</h3>
+                <h2 id="workbench">MySQL Workbench</h2>
                 <p>Faça o download do <a href="https://dev.mysql.com/downloads/windows/installer/8.0.html">MySQL Workbench</a>.</p>
                 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -985,10 +992,10 @@ permalink: /win/
                     </pre>                 
                 </div>
 
-                <h3 id="nodejs">Node.js</h3>
+                <h2 id="nodejs">Node.js</h2>
                 <p>Faça o download do <a href="https://nodejs.org/en/">Node.js</a>.</p>
                 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -997,7 +1004,7 @@ permalink: /win/
                     </pre>                   
                 </div>
 
-                <h4>Setando Proxy</h4>
+                <h3>Setando Proxy</h3>
                 <p>Execute os comandos abaixo no <code class="inline">prompt</code>, não precisa ser <b>admin</b>.</p>
                 <div class="highlight">
                     <pre>
@@ -1008,18 +1015,18 @@ permalink: /win/
                     </pre>                  
                 </div>
                 
-                <h3 id="ocs">OCS Iventory Agent</h3>
+                <h2 id="ocs">OCS Iventory Agent</h2>
                 <p>Faça o download do servidor interno do laboratório.</p>
 
-                <h3 id="vmubuntu">Oracle VM Ubuntu</h3>
+                <h2 id="vmubuntu">Oracle VM Ubuntu</h2>
                 <p>VM do Ubuntu 20.04.3 64bits LTS, rodando no Oracle VM VirtualBox.</p>
 
-                <h3 id="virtualbox">Oracle VM VirtualBox +(Extension Pack)</h3>
+                <h2 id="virtualbox">Oracle VM VirtualBox +(Extension Pack)</h2>
                 <p>Faça o download do <a href="https://www.virtualbox.org/wiki/Downloads">Oracle VirtualBox</a>.</p>
 
                 <blockquote class="info">Desative a verificação de atualizações.</blockquote>
 
-                <h4>Silent Install</h4>            
+                <h3>Silent Install</h3>            
                 <div class="highlight">
                     <pre>
                         <code>
@@ -1033,10 +1040,10 @@ permalink: /win/
                 </div>
                 <blockquote class="info">A código de licença muda conforme a versão do instalador.</blockquote>            
                 
-                <h3 id="portugol">Portugol Stúdio</h3>
+                <h2 id="portugol">Portugol Stúdio</h2>
                 <p>Faça o download do <a href="http://lite.acad.univali.br/portugol/">Portugol Stúdio</a>.</p>
                 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -1045,7 +1052,7 @@ permalink: /win/
                     </pre>   
                 </div>                   
 
-                <h4>Silent Uninstall</h4>
+                <h3>Silent Uninstall</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -1054,13 +1061,13 @@ permalink: /win/
                     </pre>                
                 </div>
 
-                <h3 id="revit">Revit</h3>
+                <h2 id="revit">Revit</h2>
                 <p>Faça o download do <a href="https://www.autodesk.com/education/free-software/">Revit</a>.</p>
 
-                <h3 id="scratch">Scratch</h3>
+                <h2 id="scratch">Scratch</h2>
                 <p>Faça o download do <a href="https://scratch.mit.edu/download">Scratch</a>.</p>
                 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -1069,10 +1076,10 @@ permalink: /win/
                     </pre>    
                 </div>                   
 
-                <h3 id="sketchup">SketchUp Make 2016</h3>
+                <h2 id="sketchup">SketchUp Make 2016</h2>
                 <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">SketchUp Make 2016</a>.</p>
                 
-                <h4>Plugin</h4>
+                <h3>Plugin</h3>
                 <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">exportador para Sketchup</a>.</p>
                 <p>Diretório de instalação\extração do plugin:</p>
                 <div class="highlight">
@@ -1083,10 +1090,10 @@ permalink: /win/
                     </pre>                
                 </div>
                 
-                <h3 id="sumatrapdf">SumatraPDF</h3>
+                <h2 id="sumatrapdf">SumatraPDF</h2>
                 <p>Faça o download do <a href="https://www.sumatrapdfreader.org/free-pdf-reader.html">SumatraPDF</a>.</p>
                 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -1095,13 +1102,13 @@ permalink: /win/
                     </pre>                  
                 </div>
                 
-                <h3 id="freeze">Toolwiz Time Freeze</h3>
+                <h2 id="freeze">Toolwiz Time Freeze</h2>
                 <p>Faça o download do  <a href="http://www.toolwiz.com/lead/toolwiz_time_freeze.php">Toolwiz Time Freeze</a>.</p>
 
-                <h3 id="ultimaker">Ultimaker Cura</h3>
+                <h2 id="ultimaker">Ultimaker Cura</h2>
                 <p>Faça o download do <a href="https://ultimaker.com/software/ultimaker-cura">Ultimaker Cura</a>.</p>
 
-                <h3 id="veyon">Veyon</h3>
+                <h2 id="veyon">Veyon</h2>
                 
                 <blockquote class="info">
                 Para o computador do professor será necessário instalar o Veyon Master, com as devidas configurações para acessar as máquinas clientes.
@@ -1109,7 +1116,7 @@ permalink: /win/
 
                 <p>Faça o download do <a href="https://veyon.io/download/">Veyon</a>.</p>
                 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <p>Instalação para o cliente.</p>
                 <div class="highlight">
                     <pre>
@@ -1119,7 +1126,7 @@ permalink: /win/
                     </pre>
                 </div>
 
-                <h4>Silent Uninstall</h4>
+                <h3>Silent Uninstall</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -1128,7 +1135,7 @@ permalink: /win/
                     </pre>
                 </div>
                 
-                <h4>Importando configurações</h4>
+                <h3>Importando configurações</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -1137,16 +1144,16 @@ permalink: /win/
                     </pre>
                 </div>            
 
-                <h3 id="vscode">Visual Studio Code</h3>
+                <h2 id="vscode">Visual Studio Code</h2>
                 <p>Faça o download do <a href="https://code.visualstudio.com/">Visual Studio Code</a> na versão de sistema.</p>
 
                 <blockquote class="info">Instale a tradução do programa pela interface de plugins.</blockquote>
 
-                <h3 id="visualg">VisuAlG</h3>
+                <h2 id="visualg">VisuAlG</h2>
                 <p>Faça o download do <a href="https://visualg3.com.br/">Visual G</a>.</p>
                 <p>Extraia os arquivos para a pasta <code class="inline">C:\Portable</code> e crie um link para a Área de trabalho do aluno.</p>
                 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -1155,7 +1162,7 @@ permalink: /win/
                     </pre>
                 </div>
 
-                <h4>Silent Uninstall</h4>
+                <h3>Silent Uninstall</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -1165,13 +1172,13 @@ permalink: /win/
                     </pre>
                 </div>
                 
-                <h3 id="ventos">Visualventos</h3>
+                <h2 id="ventos">Visualventos</h2>
                 <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Visualventos</a>.</p>
 
-                <h3 id="vlc">VLC Media Player</h3>
+                <h2 id="vlc">VLC Media Player</h2>
                 <p>Faça o download do <a href="https://www.videolan.org/vlc/index.pt-BR.html">VLC Media Player</a>.</p>
                 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -1180,10 +1187,10 @@ permalink: /win/
                     </pre>
                 </div>
 
-                <h3 id="xampp">XAMPP</h3>
+                <h2 id="xampp">XAMPP</h2>
                 <p>Faça o download do  <a href="https://www.apachefriends.org/pt_br/index.html">XAMPP</a>.</p>
                 
-                <h4>Silent Install</h4>
+                <h3>Silent Install</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -1192,7 +1199,7 @@ permalink: /win/
                     </pre>                
                 </div>
 
-                <h4>Silent Uninstall</h4>
+                <h3>Silent Uninstall</h3>
                 <div class="highlight">
                     <pre>
                         <code>
@@ -1202,7 +1209,7 @@ permalink: /win/
                     </pre>
                 </div> 
 
-                <h4>Permissões para iniciar e encerrar os serviços XAMPP</h4>
+                <h3>Permissões para iniciar e encerrar os serviços XAMPP</h3>
                 <p>Execute o comando abaixo pelo <code class="inline">prompt</code> como admin:</p>
                 <div class="highlight">
                     <pre>
@@ -1216,29 +1223,27 @@ permalink: /win/
 
 
                 <!-- Start Configuração final -->
-
-                <h2>Configuração Final</h2>
                 
-                <h3 id="recursos">Aplicativos e recursos</h3>
+                <h2 id="recursos">Aplicativos e recursos</h2>
 
-                <h4>Aplicativos padrão</h4>
+                <h3>Aplicativos padrão</h3>
                     <ol>
                         <li>Definir aplicativo padrão</b></li>
                     </ol>
 
-                <h4>Inicialização</h4>
+                <h3>Inicialização</h3>
                     <ol>
                         <li>Desativar inicializações <b>desnecessárias</b></li>
                     </ol>
                 
-                <h3 id="historico">Histórico de Navegação</h3>
+                <h2 id="historico">Histórico de Navegação</h2>
                 <p>Remover histórico do Edge, Chrome, Firefox e Internet Explorer.</p>
 
-                <h3 id="startwin">Otimize a inicialização</h3>
+                <h2 id="startwin">Otimize a inicialização</h2>
                 <img src="../assets/images/pages/msconfig.png" alt="msconfig">
                 <p>Acesse através do <code class="inline">msconfig</code>.</p>
 
-                <h3 id="tarefas">Agendador de Tarefas</h3>
+                <h2 id="tarefas">Agendador de Tarefas</h2>
                 <p>Desative as tarefas agendadas relacionadas a atualizações, juntamente com backup de app localizado em Microsoft->Windows->AppListBackup.</p>
 
                 <!-- End Configuração final -->
@@ -1246,12 +1251,10 @@ permalink: /win/
 
                 <!-- Start Clone -->
 
-                <h2>Clone Windows</h2>
-
-                <h3 id="dominio">Computador no domínio</h3>
+                <h2 id="dominio">Computador no domínio</h2>
                 <p>Adicione o computador no domínio conforme <a href="#nome">orientações</a> para cada laboratório.</p>
 
-                <h3 id="gpos">Atualizar as GPOs</h3>
+                <h2 id="gpos">Atualizar as GPOs</h2>
                 <p>Atualize as GPOs para que todas as diretivas sejam atualizadas e aplicadas.</p>
                 <div class="highlight">
                     <pre>
@@ -1261,13 +1264,13 @@ permalink: /win/
                     </pre>
                 </div>
 
-                <h3 id="atautocad">Ativar AutoCAD</h3>
+                <h2 id="atautocad">Ativar AutoCAD</h2>
                 <p>Execute o <code class="inline">AutoCAD</code> (necessário internet) e siga os passos que aparecer na tela e, informe a <a href="https://docs.google.com/spreadsheets/d/1RaX8ubdo7RuoA8qhwZAWh6ZgoTQsC_E37R8E-21wkHQ/edit#gid=0">chave de ativação</a> caso solicitado.</p>
                 
-                <h3 id="atrevit">Ativar Revit</h3>
+                <h2 id="atrevit">Ativar Revit</h2>
                 <p>Execute o <code class="inline">Revit</code> (necessário internet) e siga os passos que aparecer na tela e, informe a <a href="https://docs.google.com/spreadsheets/d/1RaX8ubdo7RuoA8qhwZAWh6ZgoTQsC_E37R8E-21wkHQ/edit#gid=0">chave de ativação</a> caso solicitado.</p>
                 
-                <h3 id="timefreeze">Habilitar Toolwiz Time Freeze</h3>
+                <h2 id="timefreeze">Habilitar Toolwiz Time Freeze</h2>
                 <blockquote class="info">
                 Após todas as configurações, reinicia a máquinas antes de ativar o congelamento.
                 </blockquote>
