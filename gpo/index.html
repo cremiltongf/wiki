@@ -24,13 +24,13 @@ permalink: /gpo/
 
             <h2 id="adm-local">Administrator Local</h2>
             <ol>
-                <li class="mb-2">Criar um grupo global;</li>
-                <li class="mb-2">Adicionar usuários que serão administradores;</li>
-                <li class="mb-2">Criar uma gpo com nome <b>adm_local</b>. Use o nome que achar conveniente;</li>
-                <li class="mb-2">Na coluna adicione o grupo criado anteriormente;</li>
+                <li class="mb-2">Crie um grupo global;</li>
+                <li class="mb-2">Adicione os usuários que serão administradores ao grupo;</li>
+                <li class="mb-2">Crie uma GPO com o nome que achar conveniente. Exemplo: <b>adm_local</b>;</li>
+                <li class="mb-2">Na coluna de <b>Grupos Restritos</b> adicione o grupo criado;</li>
                 <li class="mb-2">Em propriedades, em "Este grupo é um membro de:" Clique em Adicionar... e no campo grupo preencha com "administradores".</li>
             </ol>
-            <p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/adm-local.png" alt="ADM Local"></p>
+            <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/adm-local.png" alt="ADM Local"></p>
 
             <div class="alert alert-info d-flex align-items-center">
                 <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
@@ -42,11 +42,12 @@ permalink: /gpo/
 
             <h2 id="remoto">Acesso remoto</h2>
             <p>Configurando o acesso remoto:</p>
-            <p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/remoto.png" alt="Acesso remoto"></p>
+            <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/remoto.png" alt="Acesso remoto"></p>
 
             <h2 id="login">Login automático</h2>
             <p>Login automático do Windows:</p>
-            <p>Detalhes de <code class="inline">AutoAdminLogon</code>:</p>
+
+            <p>Detalhes de <code>AutoAdminLogon</code>:</p>
             <pre><code>Ação: Atualizar
 Hive: HKEY_LOCAL_MACHINE
 caminho da Chave: SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
@@ -63,6 +64,7 @@ Nome do valor: DefaultDomainName
 Tipo de valor: REG_SZ
 Dados de valor: ensino.umuarama.local
 </code></pre>
+
             <p>Detalhes de <code>DefaultPassword</code>:</p>
             <pre><code>Ação: Atualizar
 Hive: HKEY_LOCAL_MACHINE
@@ -79,23 +81,24 @@ caminho da Chave: SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
 Nome do valor: DefaultUserName
 Tipo de valor: REG_SZ
 Dados de valor: aluno
-            </code></pre>
+</code></pre>
 
-            <p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/login.png" alt="Login automático"></p>
+            <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/login.png" alt="Login automático"></p>
 
             <div class="alert alert-info d-flex align-items-center">
                 <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
                     <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
                     <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                 </svg>
-                <div>Altere as informações conforme usuário a ser definido.</div>
+                <div>Altere as informações conforme usuário que será definido.</div>
             </div>
 
             <h2 id="proxy">Proxy</h2>
             <p>Configurando proxy nos computadores clientes:</p>
-            <p><img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/proxy.png" alt="Configuração de proxy"></p>
-            <p>Detalhes de <code class="inline">ProxyEnable</code>:</p>
+
+            <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/proxy.png" alt="Configuração de proxy"></p>
             
+            <p>Detalhes de <code>ProxyEnable</code>:</p>
             <pre><code>Ação: Substituir
 Caminho da Chave: Software\Microsoft\Windows\CurrentVersion\Internet Settings
 Nome do valor: ProxyEnable
@@ -105,7 +108,7 @@ Base: Hexadecimal
 </code></pre>
             
             <p>Detalhes de <code>ProxyOverride</code>:</p>
-                        <pre><code>Ação: Substituir
+            <pre><code>Ação: Substituir
 Caminho da Chave: Software\Microsoft\Windows\CurrentVersion\Internet Settings
 Nome do valor: ProxyOverride
 Tipo de valor: REG_SZ
@@ -119,58 +122,47 @@ Nome do valor: ProxyServer
 Tipo de valor: REG_SZ
 Dados de valor: 192.168.0.6:3128
 </code></pre>
-
-            <p>Essa regra é para a página inicial do Internet Explorer. Detalhes de <code>Start Page</code>:</p>
-            <pre><code>Ação: Substituir
-Caminho da Chave: Software\Microsoft\Internet Explorer\Main
-Nome do valor: Start Page
-Tipo de valor: REG_SZ
-Dados de valor: https://umuarama.ifpr.edu.br
-</code></pre>
             <!--Fim conteudo Geral-->
 
             <!-- Data e Hora -->
             <h2 id="datetime">Alteração de horas</h2>
             <p>Essa regra libera a correção de data e horário para qualquer perfil de usuário.</p>
-            <img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/alterar-horas.png" alt="Permissão de alteração de data e horas">
+            <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/alterar-horas.png" alt="Permissão de alteração de data e horas"></p>
             <!-- End Data e Hora -->
 
             <!-- Relacao confianca -->
             <h2 id="time">Tolerância de sincronização</h2>
-            <img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/diferenca-de-horas.png" alt="Tela de Configuração">
+            <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/diferenca-de-horas.png" alt="Tela de Configuração"></p>
 
             <h2 id="passtime">Tempo de senha de computador</h2>
-            <img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/relacao-confianca.png" alt="Tela de Configuração">
+            <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/relacao-confianca.png" alt="Tela de Configuração"></p>
 
-            <blockquote class="info">
-            Essas regras garantem que o computador não perca a relação de confiança 
-            em ambientes com alguma ferramenta de congelamento de SO.
-            </blockquote>
+            <div class="alert alert-info d-flex align-items-center">
+                <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                </svg>
+                <div>Essas regras garantem que o computador não perca a relação de confiança em ambientes com alguma ferramenta de congelamento de SO.</div>
+            </div>
             <!-- End Relacao confianca -->
 
             <!-- Tema -->
             <h2 id="wallpaper">Papel de parede</h2>
-            <img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/wallpaper.png" alt="Tela de configuração de Papel de Parede">
+            <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/wallpaper.png" alt="Tela de configuração de Papel de Parede"></p>
 
             <h2 id="script">Script de papel de parede</h2>
-            <img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/script-wallpaper.png" alt="Tela de configurção de script de wallpaper">
+            <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/script-wallpaper.png" alt="Tela de configurção de script de wallpaper"></p>
 
             <h3>Conteúdo do Script</h3>
-            <div class="highlight">
-                <pre>
-                    <code>
-                        @echo off
+            <pre><code>@echo off
 
-                        if not exist "c:\temp\background.jpg" (
-                            del c:\temp\*.jpg
-                            mkdir c:\temp
-                            xcopy /y \\ensino.umuarama.local\sysvol\ensino.umuarama.local\scripts\wallpaper\background.jpg c:\temp
-                        )
-                        
-                        exit                  
-                    </code>
-                </pre>
-            </div>
+if not exist "c:\temp\background.jpg" (
+    mkdir c:\temp
+    xcopy /y \\ensino.umuarama.local\sysvol\ensino.umuarama.local\scripts\wallpaper\background.jpg c:\temp
+)
+
+exit
+</code></pre>
 
             <!-- End Tema -->
 
@@ -178,67 +170,62 @@ Dados de valor: https://umuarama.ifpr.edu.br
             <h2 id="tarefas">Gerenciador de Tarefas</h2>
             <ol>
                 <li>
-                    Configuração do usuário &rarr; Modelos Administrativos &rarr; Sistema &rarr; Opções de Ctrl+Alt+Del 
-                    &rarr; Remover Gerenciador de tarefas &rarr; Habilitado
+                    Configuração do usuário <span class="wiki-arrow">&rarr;</span> Modelos Administrativos <span class="wiki-arrow">&rarr;</span> Sistema <span class="wiki-arrow">&rarr;</span> Opções de Ctrl+Alt+Del 
+                    <span class="wiki-arrow">&rarr;</span> Remover Gerenciador de tarefas <span class="wiki-arrow">&rarr;</span> <b>Habilitado</b>
                 </li>
             </ol>
 
             <h2 id="bloqueio">Bloquear Computador</h2>
             <ol>
                 <li>
-                    Configuração do usuário &rarr; Modelos Administrativos &rarr; Sistema &rarr; Opções de Ctrl+Alt+Del 
-                    &rarr; Remover Bloquear Computador &rarr; Habilitado
+                    Configuração do usuário <span class="wiki-arrow">&rarr;</span> Modelos Administrativos <span class="wiki-arrow">&rarr;</span> Sistema <span class="wiki-arrow">&rarr;</span> Opções de Ctrl+Alt+Del 
+                    <span class="wiki-arrow">&rarr;</span> Remover Bloquear Computador <span class="wiki-arrow">&rarr;</span> <b>Habilitado</b>
                 </li>
             </ol>
 
             <h2 id="logoff">Logoff</h2>
             <ol>
                 <li>
-                    Configuração do usuário &rarr; Modelos Administrativos &rarr; Sistema &rarr; Opções de Ctrl+Alt+Del 
-                    &rarr; Remover Logoff &rarr; Habilitado
+                    Configuração do usuário <span class="wiki-arrow">&rarr;</span> Modelos Administrativos <span class="wiki-arrow">&rarr;</span> Sistema <span class="wiki-arrow">&rarr;</span> Opções de Ctrl+Alt+Del 
+                    <span class="wiki-arrow">&rarr;</span> Remover Logoff <span class="wiki-arrow">&rarr;</span> <b>Habilitado</b>
                 </li>
             </ol>
 
-            <h2 id="services">Services via BAT</h2>
+            <h2 id="services">Gerenciando serviços com .bat</h2>
 
             <h3>Local de configuração</h3>
-            <img class="img-fluid" src="{{ site.baseurl }}/assets/images/pages/script-de-servicos.png" alt="Tela de configuraçao do script">
+            <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/script-de-servicos.png" alt="Tela de configuraçao do script"></p>
 
             <h3>Conteúdo do script</h3>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    @echo off
+                <pre><code>@echo off
 
-                    rem HELP
-                    rem start= {auto(automatico) - demand(manual) - disabled(desativado) - delayed-auto(atraso-na-inicializacao)}
-                    rem END HELP
+rem HELP
+rem start= {auto(automatico) - demand(manual) - disabled(desativado) - delayed-auto(atraso-na-inicializacao)}
+rem END HELP
 
-                    rem Windows Update
-                        sc config "wuauserv" start= disabled
+rem Windows Update
+    sc config "wuauserv" start= disabled
 
-                    rem Backup do Windows
-                        sc config "SDRSVC" start= disabled        
+rem Backup do Windows
+    sc config "SDRSVC" start= disabled        
 
-                    rem Superfetch ou SysMain
-                        sc config "SysMain" start= disabled
+rem Superfetch ou SysMain
+    sc config "SysMain" start= disabled
 
-                    rem Windows Search
-                        sc config "WSearch" start= disabled
+rem Windows Search
+    sc config "WSearch" start= disabled
 
-                    rem Desfragmentador Otimizador de Unidades/Discos
-                        sc config "defragsvc" start= disabled
+rem Desfragmentador Otimizador de Unidades/Discos
+    sc config "defragsvc" start= disabled
 
-                    rem Windows Defender ou Serviço Microsoft Defender Antivírus
-                        sc config "WinDefend" start= disabled
+rem Windows Defender ou Serviço Microsoft Defender Antivírus
+    sc config "WinDefend" start= disabled
 
-                    rem OCS Iventory
-                            sc config "OCS Inventory Service" start= delayed-auto
+rem OCS Iventory
+        sc config "OCS Inventory Service" start= delayed-auto
 
-                    exit
-                    </code>
-                </pre>
-            </div>
+exit
+</code></pre>
 
             <!-- End Opcoes de Seguranca -->      
         
