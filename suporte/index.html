@@ -27,24 +27,24 @@ permalink: /suporte/
             <h2 id="usertemp">Usuário temporário</h2>
             <p>Com uma conta de Administrador faça os procedimentos a seguir:</p>
             <ol>
-                <li>Abra o Regedit e navegue até:</li>
+                <li class="mb-2">Abra o Regedit e navegue até:</li>
                 <code>HKEY_LOCAL_MACHINE -&gt;SOFTWARE-&gt;Microsoft-&gt;Windows NT-&gt;CurrentVersion-&gt;ProfileList</code>
-                <li>Selecione as que tem o nome bem extenso. Por exemplo:</li>
+                <li class="mb-2">Selecione as que tem o nome bem extenso. Por exemplo:</li>
                 <code>S-1-5-21-3402367454-1173906501-2481948151-1226</code>
-                <li>Encontre a pasta que pertence ao usuário problemático e exclua;</li>
-                <li>Acesse o diretório de usuários:</li>
+                <li class="mb-2">Encontre a pasta que pertence ao usuário problemático e exclua;</li>
+                <li class="mb-2">Acesse o diretório de usuários:</li>
                 <code> C:\Users</code>
-                <li>Renomeie a pasta do usuário problemático. Por exemplo:</li>
+                <li class="mb-2">Renomeie a pasta do usuário problemático. Por exemplo:</li>
                 <code> atual: fulano <b>virou</b> renomeado: fulano.old</code>
-                <li>Reinicie o Windows e crie uma nova conta para usuário. Copie os arquivos da pasta do usuário antigo para a nova.</li>
+                <li class="mb-2">Reinicie o Windows e crie uma nova conta para usuário. Copie os arquivos da pasta do usuário antigo para a nova.</li>
             </ol>
 
             <h2 id="pen">Removendo vírus de Pen Drive</h2>
             <ol>
-                <li>Abra o <code>prompt</code> como Administrador e acesse a unidade do Pen Drive. Exemplo: <code>f:</code></li>
-                <li>Com o acesso a unidade do Pen Drive estabelecido, execute:</li>
+                <li class="mb-2">Abra o <code>prompt</code> como Administrador e acesse a unidade do Pen Drive. Exemplo: <code>f:</code></li>
+                <li class="mb-2">Com o acesso a unidade do Pen Drive estabelecido, execute:</li>
                 <code>attrib -r -a -s -h /s /d *.*</code>            
-                <li>Após o fim do processo, vamos excluir os atalhos:</li>
+                <li class="mb-2">Após o fim do processo, vamos excluir os atalhos:</li>
                 <code>del *.lnk</code>
             </ol>
 
