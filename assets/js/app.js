@@ -1,4 +1,4 @@
-//button top
+//return top
 function returnTop(){
     let buttonTop = document.querySelector(".return-top");
     if (buttonTop !== null){
@@ -10,7 +10,7 @@ function returnTop(){
     }
 }
 
-// show and hidden nav-sidebar, show and hidden scroll
+// nav-sidebar e hidden-scroll
 function menuSidebar(){
     let navbarTrue = document.querySelector(".navbar-true");
     if(navbarTrue !== null){
