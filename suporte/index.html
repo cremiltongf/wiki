@@ -25,134 +25,71 @@ permalink: /suporte/
             <!--Conteudo windows-->
 
             <h2 id="usertemp">Usuário temporário</h2>
-            <p>Com uma conta de Administrador, faça os procedimentos a seguir.</p>
-            <p>1 - Abra o regedit e navegue até:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    HKEY_LOCAL_MACHINE -&gt;SOFTWARE-&gt;Microsoft-&gt;Windows NT-&gt;CurrentVersion-&gt;ProfileList
-                    </code>
-                </pre>
-            </div>
-            <p>2 - Selecione as que tem o nome bem extenso, por exemplo:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    S-1-5-21-3402367454-1173906501-2481948151-1226
-                    </code>
-                </pre>                
-            </div>
-            <p>3 - Encontre a pasta que pertence ao usuário problemático e exclua.</p>
-            <p>4 - Agora, acesse o diretório de usuários:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    C:\Users
-                    </code>
-                </pre>
-            </div>
-            <p>5 - E renomeie a pasta do usuário problemático, por exemplo:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    atual: fulano		
-                    renomeado: fulano.old
-                    </code>
-                </pre>                
-            </div>
-            <p>6 - Depois desses passos, reinicie o Windows e crie uma nova conta para usuário e copie os arquivos da pasta do usuário antigo para a nova.</p>
+            <p>Com uma conta de Administrador faça os procedimentos a seguir:</p>
+            <ol>
+                <li>Abra o Regedit e navegue até:</li>
+                <code>HKEY_LOCAL_MACHINE -&gt;SOFTWARE-&gt;Microsoft-&gt;Windows NT-&gt;CurrentVersion-&gt;ProfileList</code>
+                <li>Selecione as que tem o nome bem extenso. Por exemplo:</li>
+                <code>S-1-5-21-3402367454-1173906501-2481948151-1226</code>
+                <li>Encontre a pasta que pertence ao usuário problemático e exclua;</li>
+                <li>Acesse o diretório de usuários:</li>
+                <code> C:\Users</code>
+                <li>Renomeie a pasta do usuário problemático. Por exemplo:</li>
+                <code> atual: fulano <b>virou</b> renomeado: fulano.old</code>
+                <li>Reinicie o Windows e crie uma nova conta para usuário. Copie os arquivos da pasta do usuário antigo para a nova.</li>
+            </ol>
 
             <h2 id="pen">Removendo vírus de Pen Drive</h2>
-            <p>Abra o prompt de comandos do Windows com permissões de Administrador e acesse o Pen Drive digitando a letra da unidade e dois pontos como <code class="inline">f:</code> e tecle enter, e visualizará algo como:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    f:\&gt;
-                    </code>
-                </pre>                
-            </div>
-            <p>Depois de acessado o Pen Drive, execute o comando abaixo:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    attrib -r -a -s -h /s /d *.*
-                    </code>
-                </pre>
-            </div>
-            <p>Entenda melhor o <a href="https://technet.microsoft.com/pt-br/library/bb490868.aspx">Attrib</a>.</p>
-            <p>Depois que o processo terminar, execute o comando abaixo para excluir os atalhos:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    del *.lnk
-                    </code>
-                </pre>
-            </div>
+            <ol>
+                <li>Abra o <code>prompt</code> como Administrador e acesse a unidade do Pen Drive. Exemplo: <code>f:</code></li>
+                <li>Com o acesso a unidade do Pen Drive estabelecido, execute:</li>
+                <code>attrib -r -a -s -h /s /d *.*</code>            
+                <li>Após o fim do processo, vamos excluir os atalhos:</li>
+                <code>del *.lnk</code>
+            </ol>
+
+            <p>Entenda o funcionamento de <a href="https://technet.microsoft.com/pt-br/library/bb490868.aspx">Attrib&#8599;</a>.</p>
 
             <h2 id="servicos">Gerenciando serviços em massa</h2>
-            <p>Alguns exemplos de uso:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    auto: Automatico
-                    disabled: Desativado
-                    delayed-auto: Automatico com atraso na inicializacao
-        
-                    rem OCS Iventory = OCS Inventory Service
-                    sc config "OCS Inventory Service" start= delayed-auto
-                    </code>
-                </pre>
-            </div>
+            <p>Exemplo de uso:</p>
+            <pre><code>auto: Automatico
+disabled: Desativado
+delayed-auto: Automatico com atraso na inicializacao
 
-            <h2 id="label">Alterando nome do SO</h2>
-            <div class="highlight">
-                <pre>
-                    <code>
-                        bcdedit /set Description "Windows 10"
-
-                        bcdedit /set Description "Informatica"
-                    </code>
-                </pre>
-            </div>
+rem OCS Iventory = OCS Inventory Service
+sc config "OCS Inventory Service" start= delayed-auto
+</code></pre>
             <!--Fim conteudo windows-->
 
             <!--Conteudo Ubuntu-->
 
             <h2 id="errordpkg">Sub-process /usr/bin/dpkg returned an error code (1)</h2>
             <p>Ocorre quando há interrupção no processo de instalação de um pacote.</p>
-            <p>O solução abaixo se aplica ao Java.</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo rm -r /var/lib/dpkg/info/oracle*
-                    sudo rm -r /var/cache/apt/archives/oracle*
-                    </code>
-                </pre>
+            <p>a solução abaixo se aplica ao Java.</p>
+
+            <pre><code>sudo rm -r /var/lib/dpkg/info/oracle*
+sudo rm -r /var/cache/apt/archives/oracle*
+</code></pre>
+
+            <div class="alert alert-info d-flex align-items-center">
+                <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
+                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                </svg>
+            <div>O mesmo procedimento se aplica a outros pacotes quando o problema for semelhante.</div>
             </div>
-            <blockquote class="info">
-            O mesmo procedimento se aplica a outros pacotes, quando o problema é semelhante!
-            </blockquote>
 
             <h2 id="boot-repair">Boot Repair</h2>
             <p>Usado para reparar o grub.</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    sudo add-apt-repository ppa:yannubuntu/boot-repair
-                    sudo apt-get update
-                    sudo apt-get install boot-repair
-                    </code>
-                </pre>
-            </div>
+            <pre><code>sudo add-apt-repository ppa:yannubuntu/boot-repair
+sudo apt-get update
+sudo apt-get install boot-repair
+</code></pre>
+
             <p>Se após o processo do Boot Repair o problema persistir, execute o comando abaixo no Windows 10:</p>
-            <div class="highlight">
-                <pre>
-                    <code>
-                    bcdedit /set {bootmgr} path \EFI\ubuntu\grubx64.efi
-                    </code>
-                </pre>
-            </div>
-            <p>Reinicie!</p>
+            <pre><code>bcdedit /set {bootmgr} path \EFI\ubuntu\grubx64.efi</code></pre>
+
+            <p>Reinicie para testar.</p>
             <!--Fim conteudo Ubuntu-->                         
         
         </main>
