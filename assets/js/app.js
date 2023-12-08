@@ -21,7 +21,6 @@ function menuSidebar(){
         for (var i = 0; i < togglerSidebar.length; i++){
             togglerSidebar[i].addEventListener('click', actionSidebar);
         }
-        console.log("Não estou na home");
         function actionSidebar(){
             containerSidebar.classList.toggle("sidebar-show");
             hiddenOverflow.classList.toggle("hidden-scroll");
