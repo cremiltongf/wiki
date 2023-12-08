@@ -1,20 +1,15 @@
-window.addEventListener("load", menuSidebar);
-
 //button top
-// function buttonTop(){
-//     window.onscroll = function() {
-//         if (document.body.scrollTop > 120 || document.documentElement.scrollTop > 120) {
-//             var element = document.getElementById("btn-topo");
-//             element.classList.add("btn-topo-show");
-//         } else {
-//             var element = document.getElementById("btn-topo");
-//             element.classList.remove("btn-topo-show");
-//         }
-//     }
-// }
+function returnTop(){
+    let buttonTop = document.querySelector(".return-top");
+    if (document.body.scrollTop > 640 || document.documentElement.scrollTop > 640) {
+        buttonTop.classList.add("show-arrow");
+    } else {
+        buttonTop.classList.remove("show-arrow");
+    }
+}
 
-// show and hidden sidebar menu in mobile
-function menuSidebar() {
+// show and hidden nav-sidebar, show and hidden scroll
+function menuSidebar(){
     let hiddenOverflow = document.querySelector("body");
     let togglerSidebar = document.querySelectorAll(".sidebar-toggler");
     let containerSidebar = document.querySelector(".sidebar-container");
@@ -28,3 +23,6 @@ function menuSidebar() {
         hiddenOverflow.classList.toggle("hidden-scroll");
     }
 }
+
+window.addEventListener("load", menuSidebar);
+window.addEventListener("scroll", returnTop);
