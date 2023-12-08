@@ -2,6 +2,4 @@
 
 # Wiki - Laboratório de Informática
 
-Este wiki orienta a criação de imagens com Windows e Ubuntu, contém informações de ajustes/correções do Windows (7 e 10), possui configuração padrão dos Sistemas Operacionais após a clonagem e muito mais.
-
-O wiki continua em construção.
+Esse wiki orienta a criação de imagem com Windows para Laboratório de Informática, contém informações de ajustes e otimizações para o Windows.
