@@ -35,9 +35,11 @@
 <header class="navbar navbar-expand-lg bg-dark fixed-top shadow" data-bs-theme="dark">
     <div class="container-fluid maxwidth">
 
+        {% if page.url != '/' %}
         <button class="d-lg-none sidebar-button navbar-toggler sidebar-toggler" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
+        {% endif %}
 
         <a class="navbar-brand" href="{{ site.url }}">
             <svg width="296" height="108" viewBox="0 0 296 108" fill="none" xmlns="http://www.w3.org/2000/svg">
