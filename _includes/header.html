@@ -34,8 +34,8 @@
 <header class="navbar navbar-expand-lg bg-dark fixed-top shadow" data-bs-theme="dark">
     <div class="container-fluid maxwidth">
 
-        {% if page.url != '/' %}
-        <button class="d-lg-none sidebar-button navbar-toggler sidebar-toggler" type="button">
+        {% if page.url != '/' || page.url != '/404.html' %}
+        <button class="d-lg-none sidebar-button navbar-toggler sidebar-toggler navbar-true" type="button">
             <span class="navbar-toggler-icon"></span>
         </button>
         {% endif %}
