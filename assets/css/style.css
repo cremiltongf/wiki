@@ -12,7 +12,7 @@
     fill: rgba(255, 255, 255, 0.75);
 }
 
-/* sidebar menu*/
+/* sidebars*/
 .sidebar-ul ul{
     margin-left: 6px;
 }
@@ -35,6 +35,13 @@
     color: rgb(248, 249, 250);
     background-color: #06c;
 }
+.on-page{
+    padding: 0 12px;
+    position: sticky;
+    top: 88px;
+    height: calc(100vh - 100px);
+}
+
 @media (min-width: 992px){
     .sidebar{
         padding: 0 12px;
