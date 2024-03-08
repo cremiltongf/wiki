@@ -387,13 +387,39 @@ git config --global http.https://domain.com.sslVerify false
                 
                 <h2 id="inkscape">Inkscape</h2>
                 <p>Faça o download do <a href="https://inkscape.org/pt-br/">Inkscape&#8599;</a>.</p>
-                
+              
                 <h3>Silent Install</h3>
                 <pre><code>"inkscape-0.92.3-x64.exe" /S</code></pre>
                 
                 <h3>Silent Uninstall</h3>
-                <pre><code>"C:\Program Files\Inkscape\Uninstall.exe" /S</code></pre>             
+<pre><code>"C:\Program Files\Inkscape\Uninstall.exe" /S</code></pre>
                 
+                <h2 id="intellij">IntelliJ IDEA Community</h2>
+                <p>Faça o download do <a href="https://www.jetbrains.com/idea/download/?section=windows">IntelliJ IDEA Community&#8599;</a>.</p>
+                
+                <h3>Silent Install</h3>
+<pre><code>"ideaIC-2023.3.4.exe" /S /CONFIG="silent.config"</code></pre>
+
+                <p>Conteúdo de <code>silent.config</code>:</p>
+                <pre><code>; Installation mode. It can be user or admin.
+; NOTE: for admin mode please use "Run as Administrator" for command prompt to avoid UAC dialog.
+mode=admin
+
+; Desktop shortcut for launchers
+launcher64=1
+
+; Add launchers path to PATH env variable
+updatePATH=0
+
+; Add "Open Folder as Project" to context menu
+updateContextMenu=0
+
+; List of associations. To create an association change value to 1.
+.java=0
+.groovy=0
+.kt=0
+</code></pre>
+                <p>Referência: <a href="https://www.jetbrains.com/help/idea/installation-guide.html#silent">Silent installation on Windows</a>.</p>
                 <h2 id="jasperlibrary">JasperReports Library</h2>
                 <p>Faça o download do  <a href="https://community.jaspersoft.com/project/jasperreports-library">JasperReports Library&#8599;</a> e extraia o arquivo no diretório <code>C:\Portable</code>.</p>
 
