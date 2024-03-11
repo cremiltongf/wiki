@@ -448,12 +448,13 @@ updateContextMenu=0
 #Remocao
 start /wait msiexec /x {26A24AE4-039D-4CA4-87B4-2F06417079FF} /qn /norestart             
 </code></pre>
-                <h3>Path e JAVA_HOME</h3>
-                <p>Acesse as Propriedades do Sistema para configurar as variáveis. No exemplo abaixo a configuração se aplica ao <b>JDK 17</b>.</p>
+                <h3>JAVA_HOME</h3>
+                <p>Acesse as <b>Propriedades do Sistema</b> e configure as variáveis de acordo com a versão instalada. O exemplo a seguir se aplica ao <b>JDK 17</b>.</p>
                 <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/variavel-java.png" alt="Propriedades do Sistema"></p>
-                <p>Para o <strong>Windows 7/10</strong> crie a variável <code>JAVA_HOME</code> e adicione o valor:</p>
+                <p>Para o <strong>Windows 7/10</strong> crie a variável <code>JAVA_HOME</code> com o seguinte valor:</p>
                 <pre><code>C:\Program Files\Java\jdk-17.0.2</code></pre>
 
+                <h3>Path</h3>
                 <div class="alert alert-info d-flex align-items-center">
                     <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
@@ -462,10 +463,10 @@ start /wait msiexec /x {26A24AE4-039D-4CA4-87B4-2F06417079FF} /qn /norestart
                     <div>A variável <code>Path</code> já existe no sistema.</div>
                 </div>
 
-                <h4>Para Windows 7 em Path</h4>
+                <h4>Path no Windows 7</h4>
                 <pre><code>;%JAVA_HOME%\bin</code></pre>
 
-                <h4>Para Windows 10 em Path:</h4>
+                <h4>Path no Windows 10</h4>
                 <pre><code>%JAVA_HOME%\bin</code></pre>
 
                 <h2 id="jre">Java JRE 8 321</h2>
