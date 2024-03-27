@@ -79,7 +79,7 @@ Senha: aluno123
                     <div>Usuário e senha definida pelo Active Directory.</div>
                 </div>                
 
-                <h2 id="wallpaper">Tema</h2>
+                <h2 id="wallpaper">Papel de Parede</h2>
                 <p>Baixe o <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">papel de parede&#8599;</a>.</p>
                 <div class="alert alert-info d-flex align-items-center">
                     <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
@@ -88,6 +88,16 @@ Senha: aluno123
                     </svg>
                     <div>Configuração definida para o perfil do aluno pelo Active Directory.</div>
                 </div>
+
+                <h3>Via script</h3>
+                <pre><code>@echo off
+    reg add "HKCU\control panel\desktop" /v wallpaper /t REG_SZ /d "" /f
+    reg add "HKCU\control panel\desktop" /v wallpaper /t REG_SZ /d "C:\Users\USERNAME\Pictures\background.png" /f
+    reg delete "HKCU\Software\Microsoft\Internet Explorer\Desktop\General" /v WallpaperStyle /f
+    reg add "HKCU\control panel\desktop" /v WallpaperStyle /t REG_SZ /d 2 /f
+    RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
+exit
+</code></pre>
 
                 <h2 id="proxy">Configuração de proxy</h2>
                 <pre><code>192.168.0.6:3128</code></pre>
