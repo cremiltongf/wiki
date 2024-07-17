@@ -21,33 +21,41 @@ permalink: /windows/
 
             <!-- Setup and SO -->
                 <h1>Criação de Imagem</h1>
-
                 <p class="lead">
                     Configuração inicial para o Hardware e Sistema Operacional Windows 7/10.
                 </p>
 
                 <h2 id="configsetup">Configurações</h2>
-                <ul>
-                    <li class="mb-2">Armazenamento no modo AHCI;</li>
-                    <li class="mb-2">Habilitar virtualização;</li>
-                    <li class="mb-2">Desativar Fast Boot;</li>
-                    <li class="mb-2">Desativar Secure Boot;</li>
-                    <li class="mb-2">Ativar PXE no modo Legacy ou UEFI;</li>
-                    <li class="mb-2">Ativar Wake On LAN (WOL).</li>
-                </ul>
-
-                <h2 id="uefi">Modo UEFI</h2>
-                <p>Quando possível instalar o Windows no modo UEFI.</p>
-
-                <h2 id="admin">Usuário Administrador</h2>
-                <p>Criar usuário Administrador <strong>IFPR</strong> e definir senha padrão disponível na <a href="https://docs.google.com/spreadsheets/d/1K7BrCy4tWE0I9W5_Dc5zm_tXNyYtj4ZYFQJLmiljGAE/edit?usp=sharing">planilha&#8599;</a>.</p>
-
                 <div class="alert alert-info d-flex align-items-center">
                     <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
                         <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                     </svg>
-                    <div>Realize as configurações para o SO com a conta de Administrador local ou de rede, a fim de evitar múltiplas autenticações.</div>
+                    <div>Configuração recomendável para equipamentos novos.</div>
+                </div>
+                <ul>
+                    <li class="mb-2">Armazenamento no modo AHCI;</li>
+                    <li class="mb-2">Habilitar Virtualização;</li>
+                    <li class="mb-2">Desativar Fast Boot;</li>
+                    <li class="mb-2">Desativar Secure Boot;</li>
+                    <li class="mb-2">Ativar Preboot Execution Environment (PXE);</li>
+                    <li class="mb-2">Ativar Wake On LAN (WOL).</li>
+                </ul>
+
+                <h2 id="admin">Usuário Administrador</h2>
+                <p>Criar usuário Administrador <strong>IFPR</strong> e definir senha padrão disponível na <a href="https://docs.google.com/spreadsheets/d/1K7BrCy4tWE0I9W5_Dc5zm_tXNyYtj4ZYFQJLmiljGAE/edit?usp=sharing">planilha&#8599;</a>.</p>
+
+                <h2 id="windowsupdate">Windows Update</h2>
+                <p>Instale todas as atualizações do Windows.</p>
+
+                <h2 id="drivers">Atualização de drivers</h2>
+                <p>Use softwares como <a href="https://www.drivereasy.com/">EasyDriver&#8599;</a>, <a href="https://www.iobit.com/pt/driver-booster.php">Driver Booster&#8599;</a> ou <a href="https://www.drivermax.com/download.htm">DriverMax&#8599;</a> para realizar essa tarefa.</p>
+                <div class="alert alert-info d-flex align-items-center">
+                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                    </svg>
+                    <div>Utilize o instalador oficial do fabricante para o driver de vídeo.</div>
                 </div>
 
                 <h2 id="wol">Configuração de driver para ativação WOL</h2>
@@ -64,8 +72,15 @@ permalink: /windows/
                     <li class="mb-2">Agora, abra a guia Avançado e escolha Energy Efficient Ethernet e Defina essa opção como Desativado;</li>
                     <li class="mb-2">Confirme as alterações clicando em OK.</li>
                 </ol>
-                
+
                 <h2 id="particao">Partições do SO</h2>
+                <div class="alert alert-info d-flex align-items-center">
+                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                    </svg>
+                    <div>Caso o equipamento possua unidades extras de armazenamento, utilize todo espaço da unidade para partição nuvem01 e/ou nuvem02.</div>
+                </div>
                 <p>Defina as partições do computador conforme tabela abaixo:</p>
                 <table class="table table-striped table-hover border">
                     <thead>
@@ -84,49 +99,20 @@ permalink: /windows/
                             <td>Restante da capacidade</td>
                         </tr>
                     </tbody>
-                </table>
-                
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Caso o equipamento possua unidades extras de armazenamento, utilize todo espaço da unidade para partição nuvem01 e/ou nuvem02.</div>
-                </div>
-
-                <h2 id="windowsupdate">Windows Update</h2>
-                <p>Instale todas as atualizações do Windows.</p>
-
-                <h2 id="drivers">Atualização de drivers</h2>
-                <p>Use softwares como <a href="https://www.drivereasy.com/">EasyDriver&#8599;</a>, <a href="https://www.iobit.com/pt/driver-booster.php">Driver Booster&#8599;</a> ou <a href="https://www.drivermax.com/download.htm">DriverMax&#8599;</a> para realizar essa tarefa.</p>
+                </table>                
 
                 <h2 id="fastboot">Fast Boot</h2>
-                <p>Execute no <code>prompt</code> como Administrador:</p>
-                <pre><code>powercfg.exe /hibernate off</code></pre>
                 <div class="alert alert-info d-flex align-items-center">
                     <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
                         <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                     </svg>
-                    <div>Ajuste necessário para o desligamento completo do SO. Aplicável ao Windows 8/10/11.</div>
+                    <div>Ajuste necessário para o desligamento completo do SO.</div>
                 </div>
+                <p>Execute no <code>prompt</code> como Administrador:</p>
+                <pre><code>powercfg.exe /hibernate off</code></pre>
                 
-                <h2 id="propriedades">Propriedades do Sistema</h2>
-
-                <h3>Aba Proteção do Sistema</h3>
-                <ol>
-                    <li>Configurar <span class="wiki-arrow">&rarr;</span> Desativar a proteção do sistema.</li>
-                </ol>      
-
                 <h2 id="reparo">Reparo automático</h2>
-                <h3>Desativar no Windows 7</h3>
-                <p>Execute o comando abaixo pelo <code>prompt</code> como Administrador:</p>
-                <pre><code>bcdedit /set {default} bootstatuspolicy ignoreallfailures</code></pre>                
-
-                <h3>Desativar no Windows 10</h3>
-                <p>Execute o comando abaixo pelo <code>prompt</code> como Administrador:</p>
-                <pre><code>bcdedit /set recoveryenabled NO</code></pre>
-
                 <div class="alert alert-info d-flex align-items-center">
                     <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
@@ -136,20 +122,31 @@ permalink: /windows/
                         Ajuste necessário para evitar o reparo automático do SO, o que pode "quebrar" o Windows.
                     </div>
                 </div>
+                <h3>Desativar no Windows 7</h3>
+                <p>Execute o comando abaixo pelo <code>prompt</code> como Administrador:</p>
+                <pre><code>bcdedit /set {default} bootstatuspolicy ignoreallfailures</code></pre>                
+                <h3>Desativar no Windows 10</h3>
+                <p>Execute o comando abaixo pelo <code>prompt</code> como Administrador:</p>
+                <pre><code>bcdedit /set recoveryenabled NO</code></pre>
+
+                <h2 id="propriedades">Propriedades do Sistema</h2>
+                <h3>Aba Proteção do Sistema</h3>
+                <ol>
+                    <li>Configurar <span class="wiki-arrow">&rarr;</span> Desativar a proteção do sistema.</li>
+                </ol>
                 
                 <h2 id="defrag">Otimização agendada</h2>
                 <p>Desative a desfragmentação agendada para todas as unidades do computador.</p>
                 <img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/desfragmentador.png" alt="Desfragmentador">
 
                 <h2 id="psexec">PsExec</h2>
-
                 <div class="alert alert-info d-flex align-items-center">
                     <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
                         <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                     </svg>
                     <div>
-                        Ajuste para o funcionamento correto do <b>PsExec</b> na rede sem domínio.
+                        Ajuste para o funcionamento correto do <b>PsExec</b> na rede.
                     </div>
                 </div>
 
@@ -160,18 +157,6 @@ netsh advfirewall firewall add rule name="PSExec TCP" dir=in action=allow protoc
 
 netsh advfirewall firewall add rule name="PSExec UDP" dir=in action=allow protocol=UDP localport=137
 </code></pre>
-
-                <h2 id="proxy">Configuração de proxy</h2>
-<pre><code>192.168.0.6:3128</code></pre>
-
-                <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/proxy.png" alt="Proxy"></p>
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Configuração definida pelo Active Directory. Necessário configurar para usuário <b>Administrador</b> e <b>padrão</b>.</div>
-                </div>
 
                 <h2 id="gerenciador">Gerenciador de Tarefas</h2>
                 <p>Desative pelo <code>gpedit.msc</code> quando a regra for local. Necessário conta de Administrador.</p>
@@ -184,7 +169,6 @@ netsh advfirewall firewall add rule name="PSExec UDP" dir=in action=allow protoc
                 </div>
 
                 <h2 id="servicos">Serviços</h2>
-
                 <table class="table table-striped table-hover border">
                     <thead>
                         <tr>
@@ -193,10 +177,6 @@ netsh advfirewall firewall add rule name="PSExec UDP" dir=in action=allow protoc
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Windows Defender ou Windows Defender Firewall</td>
-                            <td>Automático via GPO</td>
-                        </tr>
                         <tr>
                             <td>Windows Update</td>
                             <td>Desativado via GPO</td>
@@ -221,10 +201,6 @@ netsh advfirewall firewall add rule name="PSExec UDP" dir=in action=allow protoc
                             <td>Windows Search</td>
                             <td>Desativado via GPO</td>
                         </tr>
-                        <tr>
-                            <td>OCS Iventory</td>
-                            <td>Defina como = Atraso na inicialização</td>
-                        </tr>
                     </tbody>
                 </table>
 
@@ -233,7 +209,7 @@ netsh advfirewall firewall add rule name="PSExec UDP" dir=in action=allow protoc
                         <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
                         <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                     </svg>
-                    <div>Configurações definidas pelo Active Directory.</div>
+                    <div>Possível definir pelo Active Directory.</div>
                 </div>
 
                 <h3>Gerenciando serviços de forma automatizada</h3>
@@ -241,6 +217,104 @@ netsh advfirewall firewall add rule name="PSExec UDP" dir=in action=allow protoc
 <pre><code>wuauserv => servico a ser desativado
 sc config "wuauserv" start= disabled
 </code></pre>
+
+                <h2 id="proxy">Configuração de proxy</h2>
+                <div class="alert alert-info d-flex align-items-center">
+                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                    </svg>
+                    <div>Possível definir pelo Active Directory. Configure para usuário <b>Administrador</b> e <b>padrão</b>.</div>
+                </div>
+                <p>Dados do proxy:</p>
+<pre><code>192.168.0.6:3128</code></pre>
+                <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/proxy.png" alt="Proxy"></p>
+
+                <h2 id="opcoespastas">Opções de pastas</h2>
+                <div class="alert alert-info d-flex align-items-center">
+                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                    </svg>
+                    <div>Configure para usuário <b>Administrador</b> e <b>padrão</b>.</div>
+                </div>                
+                <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/opcoes-de-pastas.png" alt="Oções de pastas"></p>                
+
+                <h2 id="nome">Nome e Grupo</h2>
+                <p>Renomeie o computador conforme dados abaixo:</p>
+                <table class="table table-striped table-hover border">
+                    <thead>
+                        <tr>
+                            <th>LAB</th>
+                            <th>Nome</th>
+                            <th>Domínio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>LAB01</td>
+                            <td>lab1m01</td>
+                            <td>ensino.umuarama.local</td>
+                        </tr>
+                        <tr>
+                            <td>LAB02</td>
+                            <td>lab2m01</td>
+                            <td>ensino.umuarama.local</td>
+                        </tr>
+                        <tr>
+                            <td>LAB03</td>
+                            <td>lab3m01</td>
+                            <td>ensino.umuarama.local</td>
+                        </tr>
+                        <tr>
+                            <td>LAB04</td>
+                            <td>lab4m01</td>
+                            <td>ensino.umuarama.local</td>
+                        </tr>
+                        <tr>
+                            <td>LAB05</td>
+                            <td>lab5m01</td>
+                            <td>ensino.umuarama.local</td>
+                        </tr>
+                    </tbody>
+                </table>         
+
+                <h2 id="estudante">Usuário Aluno</h2>
+                <p>Crie o usuário abaixo para o login automático:</p>    
+                <pre><code>Usuário: aluno
+Senha: aluno123
+</code></pre>
+
+                <div class="alert alert-info d-flex align-items-center">
+                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                    </svg>
+                    <div>Possível definir pelo Active Directory.</div>
+                </div>
+
+                <h2 id="wallpaper">Papel de Parede</h2>
+                <p>Baixe o <a href="https://drive.google.com/drive/folders/1y65TzKSDIcYNamYzGYjvLgfvEtLYOfp6?usp=sharing">papel de parede&#8599;</a>.</p>
+                <div class="alert alert-info d-flex align-items-center">
+                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                    </svg>
+                    <div>Possível definir para o perfil do aluno pelo Active Directory.</div>
+                </div>
+
+                <h3>Via script</h3>
+                <pre><code>@echo off
+    reg add "HKCU\control panel\desktop" /v wallpaper /t REG_SZ /d "" /f
+    reg add "HKCU\control panel\desktop" /v wallpaper /t REG_SZ /d "C:\Users\USERNAME\Pictures\background.png" /f
+    reg delete "HKCU\Software\Microsoft\Internet Explorer\Desktop\General" /v WallpaperStyle /f
+    reg add "HKCU\control panel\desktop" /v WallpaperStyle /t REG_SZ /d 2 /f
+    RUNDLL32.EXE user32.dll,UpdatePerUserSystemParameters
+exit
+</code></pre>                
+                <h2 id="senhas">Senhas</h2>
+                <p>Coloque a lista de senhas na área de trabalho do aluno em um arquivo <code>TXT</code>, caso necessário.</p>                
+
                 <!-- End Setup and SO -->
         
         </main>
