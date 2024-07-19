@@ -168,42 +168,6 @@ netsh advfirewall firewall add rule name="PSExec UDP" dir=in action=allow protoc
                     <div>Possível definir pelo Active Directory.</div>
                 </div>
 
-                <h2 id="servicos">Serviços</h2>
-                <table class="table table-striped table-hover border">
-                    <thead>
-                        <tr>
-                            <th>Serviço</th>
-                            <th>Configuração</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Windows Update</td>
-                            <td>Desativado via GPO</td>
-                        </tr>
-                        <tr>
-                            <td>Backup do Windows</td>
-                            <td>Desativado via GPO</td>
-                        </tr>
-                        <tr>
-                            <td>Notícias e Interesses</td>
-                            <td>Desativado via GPO</td>
-                        </tr>
-                        <tr>
-                            <td>Desfragmentador ou Otimizador de Discos/Unidades</td>
-                            <td>Manual via GPO</td>
-                        </tr>
-                        <tr>
-                            <td>SuperFetch ou SysMain</td>
-                            <td>Desativado via GPO</td>
-                        </tr>
-                        <tr>
-                            <td>Windows Search</td>
-                            <td>Desativado via GPO</td>
-                        </tr>
-                    </tbody>
-                </table>
-
                 <div class="alert alert-info d-flex align-items-center">
                     <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
@@ -313,7 +277,43 @@ Senha: aluno123
 exit
 </code></pre>                
                 <h2 id="senhas">Senhas</h2>
-                <p>Coloque a lista de senhas na área de trabalho do aluno em um arquivo <code>TXT</code>, caso necessário.</p>                
+                <p>Coloque a lista de senhas na área de trabalho do aluno em um arquivo <code>TXT</code>, caso necessário.</p>
+
+                <h2 id="servicos">Serviços</h2>
+                <table class="table table-striped table-hover border">
+                    <thead>
+                        <tr>
+                            <th>Serviço</th>
+                            <th>Configuração</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Windows Update</td>
+                            <td>Desativado via GPO ou StopUpdates10</td>
+                        </tr>
+                        <tr>
+                            <td>Backup do Windows</td>
+                            <td>Desativado via GPO ou <code>services.msc</code></td>
+                        </tr>
+                        <tr>
+                            <td>Notícias e Interesses</td>
+                            <td>Desativado via GPO ou através da barra de tarefas</td>
+                        </tr>
+                        <tr>
+                            <td>Desfragmentador ou Otimizador de Discos/Unidades</td>
+                            <td>Manual via GPO ou <code>services.msc</code></td>
+                        </tr>
+                        <tr>
+                            <td>SuperFetch ou SysMain</td>
+                            <td>Desativado via GPO ou <code>services.msc</code></td>
+                        </tr>
+                        <tr>
+                            <td>Windows Search</td>
+                            <td>Desativado via GPO ou <code>services.msc</code></td>
+                        </tr>
+                    </tbody>
+                </table>                
 
                 <!-- End Setup and SO -->
         
