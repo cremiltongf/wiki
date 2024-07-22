@@ -87,6 +87,24 @@ permalink: /windows/windows10/
                     <li>Modo de Jogo <span class="wiki-arrow">&#11106;</span> <b>Desativado</b>.</li>
                 </ol>
 
+                <h2 id="pesquisar">Pesquisar</h2>
+                <h3>Pesquisa de conteúdo na nuvem</h3>
+                <ol>
+                    <li>Conta Microsoft <span class="wiki-arrow">&#11106;</span> <b>Desativado</b>;</li>
+                    <li>Conta corporativa ou de estudante <span class="wiki-arrow">&#11106;</span> <b>Desativado</b>;</li>
+                </ol>
+                <h3>Histórico</h3>
+                <ol>
+                    <li>Histórico de pesquisa neste dispositivo <span class="wiki-arrow">&#11106;</span> <b>Desativado</b>;</li>
+                </ol>
+                <h3>Pesquisa na internet</h3>
+                <p>Para desativar este recurso crie a chave <code>Explorer</code> em:</p>
+<pre><code>
+Computador\HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows
+</code>
+</pre>
+                <p>Dentro de <code>Explorer</code> crie um <b>Valor DWORD (32 bits)</b> com o nome <b>DisableSearchBoxSuggestions</b> e atribua em <b>Dados do valor: <code>1</code></b>. Reinicie para aplicar as alterações.</p>
+
                 <h2 id="privacidade">Privacidade</h2>
                 <h3>Geral</h3>
                 <ol>
