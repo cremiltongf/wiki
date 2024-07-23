@@ -43,9 +43,14 @@ permalink: /windows/softwares/
                 <p>Faça o download do <a href="https://www.anaconda.com/download/success">Anaconda&#11111;</a>.</p>
                 <h3>Configuração de proxy</h3>
                 <p>Edite o arquivo <code>.condarc</code> adiconando o seguinte:</p>
-<pre><code>proxy_servers:
-    http: http://192.168.0.6:3128
-    https: https://192.168.0.6:3128
+<pre><code>show_channel_urls: true
+    allow_other_channels: true
+
+proxy_servers:
+    http: 192.168.0.6:3128
+    https: 192.168.0.6:3128
+
+ssl_verify: false
 </code></pre>
                 <p>Referência: <a href="https://docs.anaconda.com/working-with-conda/reference/security/#update-the-condarc-file">Update the .condarc file</a>.</p>
                 <h3>Pacotes</h3>
