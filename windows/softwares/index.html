@@ -31,7 +31,7 @@ permalink: /windows/softwares/
                         <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
                         <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                     </svg>
-                    <div>Execute os softwares ao menos uma vez na conta do usuário Aluno para que sejam criadas as configurações de ambiente.</div>
+                    <div>Execute os softwares ao menos uma vez na conta do usuário <b>Aluno</b> para que sejam criadas as configurações de ambiente.</div>
                 </div>            
 
                 <h2 id="zip">7-zip</h2>
@@ -49,7 +49,7 @@ permalink: /windows/softwares/
                 </div>
                 <p>Faça o download do <a href="https://www.anaconda.com/download/success">Anaconda&rarr;</a>.</p>
                 <h3>Configuração de proxy</h3>
-                <p>Edite o arquivo <code>.condarc</code> e adicione:</p>
+                <p>Edite o arquivo <code>c:\users\aluno\.condarc</code> e adicione:</p>
 <pre><code>show_channel_urls: true
 allow_other_channels: true
 
@@ -79,7 +79,7 @@ ssl_verify: false
                         <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
                         <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                     </svg>
-                    <div>Execute o programa no perfil do Aluno para finalizar a instalação de recursos extras.</div>
+                    <div>Execute o programa na conta do <b>Aluno</b> para finalizar a instalação de recursos extras.</div>
                 </div>
                 
                 <h3>Configuração de proxy</h3>
@@ -97,32 +97,8 @@ ssl_verify: false
                         <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
                         <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                     </svg>
-                    <div>Esse programa precisa do Java JDK.</div>
+                    <div>Esse programa depende do <b>Java JDK</b>.</div>
                 </div>
-
-                <h3>Silent Install</h3>
-                <pre><code>"Apache-NetBeans-12.5-bin-windows-x64.exe" --silent --state "state.xml"</code></pre>
-
-                <p>Baixe o <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">state.xml&rarr;</a></p>
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Necessário gerar um state.xml para cada versão do NetBeans.</div>
-                </div>
-
-                <h3>Silent Uninstall</h3>
-                <pre><code>"%ProgramFiles(x86)%\NetBeans 8.2\uninstall.exe" --silent
-"%ProgramFiles%\NetBeans 8.2\uninstall.exe" --silent
-rd "C:\Users\aluno\AppData\Roaming\NetBeans" /s /q
-</code></pre>
-
-                <p>Em caso de alteração do Java JDK, alterar a configuração:</p>
-                <pre><code>"C:\Program Files\NetBeans 8.2\etc\netbeans.conf"</code></pre>
-
-                <p>Diretório de configuração do usuário Aluno:</p>
-                <pre><code>"C:\Users\aluno\AppData\Roaming\NetBeans"</code></pre>
                 
                 <h2 id="arduino">Arduino IDE</h2>
                 <p>Faça o download do <a href="https://www.arduino.cc/en/software">Arduino IDE&rarr;</a>.</p>
@@ -203,7 +179,7 @@ rd "C:\Users\aluno\AppData\Roaming\NetBeans" /s /q
                 <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">BricxCC&rarr;</a> e <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Driver para NXT&rarr;</a> do Google Drive. Extraia o <b>BricxCC.zip</b> para <code>C:\Portable</code> e instale o Driver para NXT.</p>
 
                 <h2 id="brmodelo">brModelo</h2>
-                <p>Faça o download do <a href="http://www.sis4.com/brModelo/download.html">brModelo&rarr;</a> e extraia o <b>zip</b> para <code>C:\Portable</code>. Crie um atalho do programa na Área de Trabalho no perfil do Aluno.</p>.
+                <p>Faça o download do <a href="http://www.sis4.com/brModelo/download.html">brModelo&rarr;</a> e extraia o <b>zip</b> para <code>C:\Portable</code>. Crie um atalho do programa na Área de Trabalho do usuário <b>Aluno</b>.</p>.
 
                 <h2 id="chem">ChemSketch</h2>
                 <p>Faça o download do <a href="https://www.acdlabs.com/resources/free-chemistry-software-apps/chemsketch-freeware/">ChemSketch&rarr;</a>.
@@ -215,7 +191,7 @@ rd "C:\Users\aluno\AppData\Roaming\NetBeans" /s /q
                         <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
                         <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                     </svg>
-                    <div>Se os serviços do navegador estiverem desativados, ative antes de prosseguir com a atualização. Execute os comandos como Adminstrador.</div>
+                    <div>Se os serviços do navegador estiverem desativados, ative antes de prosseguir com a atualização. Execute os comandos como <b>Administrador</b>.</div>
                 </div>
                 <h3>Ativando os serviços</h3>
                 <pre><code>rem Google Update = gupdate
@@ -408,7 +384,7 @@ sc config "MozillaMaintenance" start= auto
 
                 <h2 id="ftool">Ftool</h2>
                 <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Ftool&rarr;</a>.</p>
-                <p>Disponibilize o arquivo em <code>C:\Portable\Ftool</code> e adicione um atalho na área de trabalho do aluno.</p>
+                <p>Disponibilize o arquivo em <code>C:\Portable\Ftool</code> e adicione um atalho na Área de Trabalho do usuário <b>Aluno</b>.</p>
                 
                 <h2 id="geogebra">Geogebra</h2>
                 <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Geogebra&rarr;</a>.</p>
@@ -437,7 +413,7 @@ sc config "MozillaMaintenance" start= auto
 </code></pre>
                 
                 <h3>Setando proxy</h3>
-                <p>Execute os comandos abaixo no <code>prompt</code> como usuário padrão.</p>
+                <p>Execute os comandos abaixo no <code>prompt</code> como <b>Usuário Padrão</b>.</p>
                 <pre><code>git config --global http.proxy http://192.168.0.6:3128
 git config --global http.https://domain.com.sslVerify false
 </code></pre>                
@@ -503,7 +479,7 @@ updateContextMenu=0
                 <h3>Proxy para o Maven</h3>
                 <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/proxy-maven.png" alt="Proxy para o Maven"></p>
 
-                <p>Crie o arquivo <b>settings.xml</b> em <code>C:\Users\aluno\.m2</code> com o seguinte conteúdo:</p>
+                <p>Crie o arquivo <code>settings.xml</code> em <code>C:\Users\aluno\.m2</code> com o seguinte conteúdo:</p>
                 <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd"&gt;
@@ -547,10 +523,10 @@ c:\users\aluno\ideaprojects
 </code></pre>                
 
                 <h2 id="jasperlibrary">JasperReports Library</h2>
-                <p>Faça o download do  <a href="https://community.jaspersoft.com/project/jasperreports-library">JasperReports Library&rarr;</a> e extraia o arquivo no diretório <code>C:\Portable</code>.</p>
+                <p>Faça o download do  <a href="https://community.jaspersoft.com/project/jasperreports-library">JasperReports Library&rarr;</a> e extraia o <b>zip</b> para <code>C:\Portable</code>.</p>
 
                 <h2 id="jaspersoft">Jaspersoft community edition</h2>
-                <p>Faça o download do  <a href="https://community.jaspersoft.com/project/jaspersoft-studio">Jaspersoft community edition&rarr;</a> e extraia o <b>zip</b> para <code>C:\Portable</code>. Crie um atalho do programa na Área de Trabalho no perfil do Aluno.</p>
+                <p>Faça o download do  <a href="https://community.jaspersoft.com/project/jaspersoft-studio">Jaspersoft community edition&rarr;</a> e extraia o <b>zip</b> para <code>C:\Portable</code>. Crie um atalho do programa na Área de Trabalho do usuário <b>Aluno</b>.</p>
                 <div class="alert alert-info d-flex align-items-center">
                     <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
@@ -639,7 +615,7 @@ start /wait msiexec /x {26A24AE4-039D-4CA4-87B4-2F06417079FF} /qn /norestart
                 <pre><code>msiexec /i "node-v10.15.3-x64.msi" /qn</code></pre>
 
                 <h3>Setando Proxy</h3>
-                <p>Execute os comandos abaixo no <code>prompt</code> como usuário padrão.</p>
+                <p>Execute os comandos abaixo no <code>prompt</code> como <b>Usuário Padrão</b>.</p>
                 <pre><code>npm config set proxy http://192.168.0.6:3128
 npm config set https-proxy http://192.168.0.6:3128
 </code></pre>
@@ -660,22 +636,6 @@ npm config set https-proxy http://192.168.0.6:3128
                     </svg>
                     <div>Desative a verificação de atualizações.</div>
                 </div>
-
-                <h3>Silent Install</h3>            
-                <pre><code>#Instala
-"VirtualBox-6.1.2-135663-Win.exe" --silent
-#Atualiza/Instala Extension Pack
-cd "C:\Program Files\Oracle\VirtualBox"
-VBoxManage extpack install --replace "C:\users\aluno\Oracle_VM_VirtualBox_Extension_Pack-6.1.2.vbox-extpack" --accept-license=56be48f923303c8cababb0bb4c478284b688ed23f16d775d729b89a2e8e5f9eb                    
-</code></pre>
-
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>A código de licença muda conforme a versão do instalador.</div>
-                </div>            
                 
                 <h2 id="portugol">Portugol Stúdio</h2>
                 <p>Faça o download do <a href="https://univali-lite.github.io/Portugol-Studio/">Portugol Stúdio&rarr;</a>.</p>
@@ -740,7 +700,6 @@ VBoxManage extpack install --replace "C:\users\aluno\Oracle_VM_VirtualBox_Extens
 
                 <h2 id="vscode">Visual Studio Code</h2>
                 <p>Faça o download do <a href="https://code.visualstudio.com/">Visual Studio Code&rarr;</a> na versão de sistema.</p>
-
                 <h3>Plugins</h3>
                 <p>Disponibilize os seguintes plugins no software:</p>
                 <ol>
@@ -754,33 +713,21 @@ VBoxManage extpack install --replace "C:\users\aluno\Oracle_VM_VirtualBox_Extens
                     <li>Trailing Spaces</li>
                     <li>Night Owl</li>
                 </ol>
-
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Como são ambientes imutáveis, não faz sentido deixar habilitado as atualizações automáticas do software e plugins.</div>
-                </div>
-
                 <h3>Desabilitando atualizações do software</h3>
                 <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/update-vscode.png" alt="Atualização do programa"></p>
-                
                 <h3>Desabilitando atualizações dos plugins</h3>
                 <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/update-vscode-plugins.png" alt="Atualização de plugins"></p>
-
-                <h2 id="visualg">Visual G</h2>
-                <p>Faça o download do <a href="https://sourceforge.net/projects/visualg30/">Visual G&rarr;</a>.</p>
-                <p>Extraia os arquivos para a pasta <code>C:\Portable\visualg</code> e crie um link para a Área de trabalho do aluno.</p>
-                
                 <h3>Silent Install</h3>
                 <pre><code>"VSCodeSetup-x64-1.64.2.exe" /SILENT /NORESTART /MERGETASKS=!runcode</code></pre>
-
                 <h3>Silent Uninstall</h3>
                 <pre><code>"%ProgramFiles(x86)%\Microsoft VS Code\unins000.exe" /VERYSILENT /NORESTART
 "%ProgramFiles%\Microsoft VS Code\unins000.exe" /VERYSILENT /NORESTART
 </code></pre>
-                
+
+                <h2 id="visualg">Visual G</h2>
+                <p>Faça o download do <a href="https://sourceforge.net/projects/visualg30/">Visual G&rarr;</a>.</p>
+                <p>Extraia os arquivos para a pasta <code>C:\Portable\visualg</code> e crie um link para a Área de trabalho do <b>Aluno</b>.</p>
+               
                 <h2 id="ventos">Visualventos</h2>
                 <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Visualventos&rarr;</a>.</p>
 
