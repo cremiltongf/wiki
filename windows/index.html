@@ -215,11 +215,13 @@ netsh advfirewall firewall add rule name="PSExec UDP" dir=in action=allow protoc
 </code></pre>
 
                 <h2 id="secwindows">Segurança do Windows</h2>
-                <p>Desative o <b>Gerenciador de Tarefas</b> pelo Editor de política de grupo <span class="wiki-arrow">&harr;</span> <code>gpedit.msc</code>.</p>
+                <p>Desative as opções pelo Editor de política de grupo <span class="wiki-arrow">&harr;</span> <code>gpedit.msc</code>.</p>
                 <ol>
                     <li class="mb-2">Configuração do Usuário <span class="wiki-arrow">&harr;</span> Políticas <span class="wiki-arrow">&harr;</span> Modelos Administrativos <span class="wiki-arrow">&harr;</span> Sistema <span class="wiki-arrow">&harr;</span> Opções de Ctrl+Alt+Del</li>
                     <ol>
-                       <li class="mb-2">Remover Gerenciador de tarefas <span class="wiki-arrow">&harr;</span> <b>Habilitado</b></li>
+                        <li class="mb-2">Remover Bloquear Computador <span class="wiki-arrow">&harr;</span> <b>Habilitado</b></li>
+                        <li class="mb-2">Remover Gerenciador de tarefas <span class="wiki-arrow">&harr;</span> <b>Habilitado</b></li>
+                        <li class="mb-2">Remover Logoff <span class="wiki-arrow">&harr;</span> <b>Habilitado</b></li>
                     </ol>
                 </ol>
                 <div class="alert alert-info d-flex align-items-center">
