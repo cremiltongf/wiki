@@ -31,13 +31,13 @@
     <!--Google Search Console verification-->
     <meta name="google-site-verification" content="xh_nj4biLO3DsOkYCAnTRheF2nQT68eX1sTW5zmMWms" />
 </head>
-<body>
+<body data-js="overflowOnOff">
 
 <header class="navbar navbar-expand-lg bg-dark fixed-top shadow" data-bs-theme="dark">
     <div class="container-fluid maxwidth">
 
         {% if page.url != '/' || page.url != '/404.html' %}
-        <button class="d-lg-none sidebar-button navbar-toggler sidebar-toggler navbar-true" type="button">
+        <button class="d-lg-none sidebar-button navbar-toggler sidebar-toggler navbar-true" type="button" data-js="navbar-true" data-toggler="sidebar-toggler">
             <span class="navbar-toggler-icon"></span>
         </button>
         {% endif %}
