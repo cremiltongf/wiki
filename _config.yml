@@ -21,7 +21,7 @@
 title: Wiki - Laboratório de Informática
 email: cremilton@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Este wiki possui detalhes sobre configuração e instalação de softwares para a criação de ambientes com Windows (7 e 10) para os Laboratórios de Informática do IFPR Campus Umuarama.
+  Este wiki possui detalhes sobre configuração do Sistema Operacional Windows (7 e 10) e instalação/cofiguração de softwares para utilização nos Laboratórios de Informática do IFPR Campus Umuarama
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://labs.cremilton.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: cremiltongf
