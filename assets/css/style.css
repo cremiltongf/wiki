@@ -169,8 +169,8 @@ pre{
     visibility: hidden;
     opacity: 0;
     position: fixed;
-    right: 12px;
-    bottom: 12px;
+    right: 16px;
+    bottom: 16px;
     transition: all .4s ease-in-out;
 }
 .return-top.show-arrow{
