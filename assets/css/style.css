@@ -112,13 +112,6 @@ h4{
     color: #f61;
     font-weight: bold;
 }
-pre{
-    color: #f61;
-    padding: 16px;
-    background-color: rgb(33, 37, 41, .9);
-    border-radius: 4px;
-    border: 1px solid rgb(33, 37, 41, .1);
-}
 
 /*
  * 404
@@ -176,4 +169,16 @@ pre{
 .return-top.show-arrow{
     visibility: visible;
     opacity: 1;
+}
+
+/* code */
+pre{
+    color: #f61;
+    padding: 16px;
+    background-color: rgb(33, 37, 41, .9);
+    border-radius: 4px;
+    border: 1px solid rgb(33, 37, 41, .1);
+}
+code{
+    font-size: 16px;
 }
