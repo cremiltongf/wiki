@@ -837,6 +837,10 @@ npm config set https-proxy http://192.168.0.6:3128</code></pre>
                   <li>PHP</li>
                   <li>PhpMyAdmin</li>
                 </ul>
+
+                <h3>Permissões para iniciar e encerrar os serviços</h3>
+                <p>Execute o comando abaixo pelo <code>prompt</code> como <b>Administrador</b>.</p>
+                <pre><code>cacls "%SystemDrive%\xampp\xampp-control.ini" /E /P Todos:F</code></pre>                
                 
                 <h3>Silent Install</h3>
                 <pre><code>"xampp-windows-x64-8.1.2-0-VS16-installer.exe" --mode unattended --installer-language pt_BR --launchapps 0 --disable-components xampp_filezilla,xampp_mercury,xampp_tomcat,xampp_perl,xampp_webalizer,xampp_sendmail</code></pre>
@@ -845,10 +849,6 @@ npm config set https-proxy http://192.168.0.6:3128</code></pre>
                 <pre><code>"%SystemDrive%\xampp\uninstall.exe" --mode unattended
 rd "%SystemDrive%\xampp" /s /q
 </code></pre>
-
-                <h3>Permissões para iniciar e encerrar os serviços</h3>
-                <p>Execute o comando abaixo pelo <code>prompt</code> como <b>Administrador</b>.</p>
-                <pre><code>cacls "%SystemDrive%\xampp\xampp-control.ini" /E /P Todos:F</code></pre>
 
                 <!-- End Aplicacoes -->
         
