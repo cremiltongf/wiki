@@ -179,9 +179,12 @@ Dados de valor: 192.168.0.6:3128
             <h3>Conteúdo do Script</h3>
             <pre><code>@echo off
 
-if not exist "c:\temp\background.jpg" (
-    mkdir c:\temp
-    xcopy /y \\ensino.umuarama.local\sysvol\ensino.umuarama.local\scripts\wallpaper\background.jpg c:\temp
+SET "SERVERIF=\\192.168.X.XX\wallpaper.png"
+SET "USERIF=aluno"
+
+if not exist "c:\wallpaper" (
+    md "c:\wallpaper"
+    xcopy /y "%SERVERIF%" "C:\Users\%USERIF%\Pictures"
 )
 
 exit
