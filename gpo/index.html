@@ -11,9 +11,9 @@ permalink: /gpo/
 
         <aside class="sidebar-container col-lg-4 z-3" data-js="sidebar-container">
             <div class="sidebar">
-        
+
                 {% include nav-gpo.html %}
-          
+
             </div>
         </aside>
 
@@ -51,7 +51,6 @@ permalink: /gpo/
             <h2 id="login">Login automático <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
                   </svg></h2>
-            <p>Login automático do Windows:</p>
 
             <p>Detalhes de <code>AutoAdminLogon</code>:</p>
             <pre><code>Ação: Atualizar
@@ -96,7 +95,7 @@ Dados de valor: aluno
                     <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
                     <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                 </svg>
-                <div>Altere as informações conforme usuário que será definido.</div>
+                <div>Altere as informações conforme para seu usuário.</div>
             </div>
 
             <h2 id="proxy">Proxy <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
@@ -105,7 +104,7 @@ Dados de valor: aluno
             <p>Configurando proxy nos computadores clientes:</p>
 
             <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/proxy.png" alt="Configuração de proxy"></p>
-            
+            <h3>Proxy pelo Registro</h3>
             <p>Detalhes de <code>ProxyEnable</code>:</p>
             <pre><code>Ação: Substituir
 Caminho da Chave: Software\Microsoft\Windows\CurrentVersion\Internet Settings
@@ -114,7 +113,7 @@ Tipo de valor: REG_DWORD
 Dados de valor: 00000001
 Base: Hexadecimal
 </code></pre>
-            
+
             <p>Detalhes de <code>ProxyOverride</code>:</p>
             <pre><code>Ação: Substituir
 Caminho da Chave: Software\Microsoft\Windows\CurrentVersion\Internet Settings
@@ -122,7 +121,7 @@ Nome do valor: ProxyOverride
 Tipo de valor: REG_SZ
 Dados de valor: 192.168.*;&lt;local&gt;
 </code></pre>
-            
+
             <p>Detalhes de <code>ProxyServer</code>:</p>
             <pre><code>Ação: Substituir
 Caminho da Chave: Software\Microsoft\Windows\CurrentVersion\Internet Settings
