@@ -1,7 +1,7 @@
 (function( win, doc ){
-    
+
     'use strict';
-    
+
     function returnTopSite(){
         let $buttonTop = doc.querySelector( '[data-js="top-site"]' );
         if ( $buttonTop !== null ){
@@ -13,7 +13,7 @@
     }
     win.addEventListener( 'scroll', returnTopSite, false );
 
-    function openCloneSidebarMenu(){
+    function openCloseSidebarMenu(){
         let $navbarTrue = doc.querySelector( '[data-js="navbar-true"]' );
         let $hiddenOverflow = doc.querySelector( '[data-js="overflowOnOff"]' );
         let $containerSidebar = doc.querySelector( '[data-js="sidebar-container"]' );
@@ -21,14 +21,14 @@
 
         if( $navbarTrue !== null ){
             for ( let i = 0; i < $togglerSidebar.length; i++ ){
-                $togglerSidebar[i].addEventListener( 'click', actionSidebar, false );
+                $togglerSidebar[i].addEventListener( 'click', addRemoveClass, false );
             }
-            function actionSidebar(){
+            function addRemoveClass(){
                 $hiddenOverflow.classList.toggle( 'hidden-scroll' );
                 $containerSidebar.classList.toggle( 'sidebar-show' );
             }
         }
     }
-    win.addEventListener( 'load', openCloneSidebarMenu, false );
+    win.addEventListener( 'load', openCloseSidebarMenu, false );
 
 })( window, document );
