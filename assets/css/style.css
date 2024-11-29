@@ -16,7 +16,7 @@
 .sidebar-ul ul{
     margin-left: 6px;
 }
-.sidebar-ul a{
+.sidebar-toggler a{
     display: inline-block;
     text-decoration: none;
     margin: 1px 0;
@@ -31,10 +31,19 @@
     -o-transition: background-color .4s ease-out;
     transition: background-color .4s ease-out;
 }
-.sidebar-ul a:hover{
+.sidebar-toggler a:hover{
     color: rgb(248, 249, 250);
     background-color: #06c;
 }
+.sidebar-ul > li > a{
+    display: inline-block;
+    padding: 3px 0;
+    text-decoration: none;
+}
+.sidebar-ul > li > a:hover{
+    text-decoration: underline;
+}
+
 .on-page{
     padding: 0 12px;
     position: sticky;
