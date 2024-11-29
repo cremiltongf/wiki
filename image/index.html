@@ -1,6 +1,6 @@
 ---
 title:  "Configuração do Setup e Sistema Operacional Windows - Wiki"
-permalink: /so/
+permalink: /image/
 ---
 
 {% include header.html %}
@@ -11,9 +11,9 @@ permalink: /so/
 
         <aside class="sidebar-container col-lg-3 z-3" data-js="sidebar-container">
             <div class="sidebar">
-        
-                {% include nav-so.html %}
-          
+
+                {% include nav-image.html %}
+
             </div>
         </aside>
 
@@ -146,7 +146,7 @@ Senha: aluno123
                             <td>Restante da capacidade</td>
                         </tr>
                     </tbody>
-                </table>                
+                </table>
 
                 <h2 id="windowsupdate">Windows Update <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
@@ -204,7 +204,7 @@ Senha: aluno123
                 </div>
                 <p>Execute no <code>prompt</code> como Administrador:</p>
                 <pre><code>powercfg.exe /hibernate off</code></pre>
-                
+
                 <h2 id="reparo">Reparo automático <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
                   </svg></h2>
@@ -219,11 +219,11 @@ Senha: aluno123
                 </div>
                 <h3>Desativar no Windows 7</h3>
                 <p>Execute o comando abaixo pelo <code>prompt</code> como Administrador:</p>
-                <pre><code>bcdedit /set {default} bootstatuspolicy ignoreallfailures</code></pre>                
+                <pre><code>bcdedit /set {default} bootstatuspolicy ignoreallfailures</code></pre>
                 <h3>Desativar no Windows 10/11</h3>
                 <p>Execute o comando abaixo pelo <code>prompt</code> como Administrador:</p>
                 <pre><code>bcdedit /set recoveryenabled NO</code></pre>
-               
+
                 <h2 id="defrag">Otimização agendada <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
                   </svg></h2>
@@ -236,7 +236,7 @@ Senha: aluno123
                 <p>Permita que o usuário <b>Aluno</b> altere data e hora do SO. Abra o editor de política de grupo <span class="wiki-arrow">&harr;</span> <code>gpedit.msc</code>.</p>
                 <ol>
                     <li class="mb-2">Configuração do Computador <span class="wiki-arrow">&harr;</span> Configurações do Windows <span class="wiki-arrow">&harr;</span> Configurações de Segurança <span class="wiki-arrow">&harr;</span> Políticas locais <span class="wiki-arrow">&harr;</span> Atribuição de direitos de usuário <span class="wiki-arrow">&harr;</span> Alterar a hora do sistema <span class="wiki-arrow">&harr;</span> Adicione o usuário <b>Aluno</b> a lista.</li>
-                </ol>                   
+                </ol>
 
                 <h2 id="secwindows">Segurança do Windows <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
@@ -320,8 +320,8 @@ Senha: aluno123
                         <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                     </svg>
                     <div>Configure para o usuário <b>IFPR</b> e <b>Aluno</b>.</div>
-                </div>                
-                <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/opcoes-de-pastas.png" alt="Oções de pastas"></p>                
+                </div>
+                <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/opcoes-de-pastas.png" alt="Oções de pastas"></p>
 
                 <h2 id="wallpaper">Papel de Parede <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
@@ -338,10 +338,10 @@ Senha: aluno123
                 <h2 id="senhas">Senhas <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
                   </svg></h2>
-                <p>Coloque a lista de senhas na área de trabalho do <b>Aluno</b> em um arquivo <code>Senhas.txt</code>, caso necessário.</p>           
+                <p>Coloque a lista de senhas na área de trabalho do <b>Aluno</b> em um arquivo <code>Senhas.txt</code>, caso necessário.</p>
 
                 <!-- End Setup and SO -->
-        
+
         </main>
 
         <div class="col-lg-3 d-md-none d-lg-block">
@@ -350,11 +350,11 @@ Senha: aluno123
                 <strong class="h5">Na página</strong>
             </div>
             <ul class="list-unstyled sidebar-ul">
-                {% include links-so.html %}
+                {% include links-image.html %}
             </ul>
            </div>
         </div>
-        
+
     </div>
 
 </div>
