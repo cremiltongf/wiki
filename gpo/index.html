@@ -1,59 +1,130 @@
 ---
-title:  "Políticas para Active Directory"
+title: "Políticas para Active Directory"
 permalink: /gpo/
 ---
 
 {% include header.html %}
 
 <div class="container margin-top mt-5 pt-5">
+  <div class="row">
+    <aside class="sidebar-container col-lg-4 z-3" data-js="sidebar-container">
+      <div class="sidebar">{% include links-gpo.html %}</div>
+    </aside>
 
-    <div class="row">
+    <main class="col-12 col-lg-8 mb-5">
+      <h1>{{ page.title }}</h1>
+      <p class="lead">
+        Detalhes de configurações de Objeto de Política de Grupo realizados no
+        Active Directory.
+      </p>
 
-        <aside class="sidebar-container col-lg-4 z-3" data-js="sidebar-container">
-            <div class="sidebar">
+      <h2 id="adm-local">
+        Administrator Local
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <ol>
+        <li class="mb-2">Crie um grupo global;</li>
+        <li class="mb-2">
+          Adicione os usuários que serão administradores ao grupo;
+        </li>
+        <li class="mb-2">
+          Crie uma GPO com o nome que achar conveniente. Exemplo:
+          <b>adm_local</b>;
+        </li>
+        <li class="mb-2">
+          Na coluna de <b>Grupos Restritos</b> adicione o grupo criado;
+        </li>
+        <li class="mb-2">
+          Em propriedades, em "Este grupo é um membro de:" Clique em
+          Adicionar... e no campo grupo preencha com "administradores".
+        </li>
+      </ol>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/adm-local.png"
+          alt="ADM Local"
+        />
+      </p>
 
-                {% include links-gpo.html %}
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>
+          O usuário que for incluído neste grupo, terá poderes administrativos
+          na máquina local.
+        </div>
+      </div>
 
-            </div>
-        </aside>
+      <h2 id="remoto">
+        Acesso remoto
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>Configurando o acesso remoto:</p>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/remoto.png"
+          alt="Acesso remoto"
+        />
+      </p>
 
-        <main class="col-12 col-lg-8 mb-5">
+      <h2 id="login">
+        Login automático
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
 
-            <h1>{{ page.title }}</h1>
-            <p class="lead">Detalhes de configurações de Objeto de Política de Grupo realizados no Active Directory.</p>
-
-            <h2 id="adm-local">Administrator Local <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-            <ol>
-                <li class="mb-2">Crie um grupo global;</li>
-                <li class="mb-2">Adicione os usuários que serão administradores ao grupo;</li>
-                <li class="mb-2">Crie uma GPO com o nome que achar conveniente. Exemplo: <b>adm_local</b>;</li>
-                <li class="mb-2">Na coluna de <b>Grupos Restritos</b> adicione o grupo criado;</li>
-                <li class="mb-2">Em propriedades, em "Este grupo é um membro de:" Clique em Adicionar... e no campo grupo preencha com "administradores".</li>
-            </ol>
-            <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/adm-local.png" alt="ADM Local"></p>
-
-            <div class="alert alert-info d-flex align-items-center">
-                <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                </svg>
-                <div>O usuário que for incluído neste grupo, terá poderes administrativos na máquina local.</div>
-            </div>
-
-            <h2 id="remoto">Acesso remoto <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-            <p>Configurando o acesso remoto:</p>
-            <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/remoto.png" alt="Acesso remoto"></p>
-
-            <h2 id="login">Login automático <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-
-            <p>Detalhes de <code>AutoAdminLogon</code>:</p>
-            <pre><code>Ação: Atualizar
+      <p>Detalhes de <code>AutoAdminLogon</code>:</p>
+      <pre><code>Ação: Atualizar
 Hive: HKEY_LOCAL_MACHINE
 caminho da Chave: SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
 Nome do valor: AutoAdminLogon
@@ -61,8 +132,8 @@ Tipo de valor: REG_SZ
 Dados de valor: 1
 </code></pre>
 
-            <p>Detalhes de <code>DefaultDomainName</code>:</p>
-            <pre><code>Ação: Atualizar
+      <p>Detalhes de <code>DefaultDomainName</code>:</p>
+      <pre><code>Ação: Atualizar
 Hive: HKEY_LOCAL_MACHINE
 caminho da Chave: SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
 Nome do valor: DefaultDomainName
@@ -70,8 +141,8 @@ Tipo de valor: REG_SZ
 Dados de valor: ensino.umuarama.local
 </code></pre>
 
-            <p>Detalhes de <code>DefaultPassword</code>:</p>
-            <pre><code>Ação: Atualizar
+      <p>Detalhes de <code>DefaultPassword</code>:</p>
+      <pre><code>Ação: Atualizar
 Hive: HKEY_LOCAL_MACHINE
 caminho da Chave: SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
 Nome do valor: DefaultPassword
@@ -79,8 +150,8 @@ Tipo de valor: REG_SZ
 Dados de valor: aluno123
 </code></pre>
 
-            <p>Detalhes de <code>DefaultUserName</code>:</p>
-            <pre><code>Ação: Atualizar
+      <p>Detalhes de <code>DefaultUserName</code>:</p>
+      <pre><code>Ação: Atualizar
 Hive: HKEY_LOCAL_MACHINE
 caminho da Chave: SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
 Nome do valor: DefaultUserName
@@ -88,25 +159,61 @@ Tipo de valor: REG_SZ
 Dados de valor: aluno
 </code></pre>
 
-            <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/login.png" alt="Login automático"></p>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/login.png"
+          alt="Login automático"
+        />
+      </p>
 
-            <div class="alert alert-info d-flex align-items-center">
-                <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                </svg>
-                <div>Altere as informações para seu usuário de preferência.</div>
-            </div>
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>Altere as informações para seu usuário de preferência.</div>
+      </div>
 
-            <h2 id="proxy">Proxy <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-            <p>Configurando proxy nos computadores clientes:</p>
+      <h2 id="proxy">
+        Proxy
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>Configurando proxy nos computadores clientes:</p>
 
-            <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/proxy.png" alt="Configuração de proxy"></p>
-            <h3>Proxy pelo Registro</h3>
-            <p>Detalhes de <code>ProxyEnable</code>:</p>
-            <pre><code>Ação: Substituir
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/proxy.png"
+          alt="Configuração de proxy"
+        />
+      </p>
+      <h3>Proxy pelo Registro</h3>
+      <p>Detalhes de <code>ProxyEnable</code>:</p>
+      <pre><code>Ação: Substituir
 Caminho da Chave: Software\Microsoft\Windows\CurrentVersion\Internet Settings
 Nome do valor: ProxyEnable
 Tipo de valor: REG_DWORD
@@ -114,70 +221,196 @@ Dados de valor: 00000001
 Base: Hexadecimal
 </code></pre>
 
-            <p>Detalhes de <code>ProxyOverride</code>:</p>
-            <pre><code>Ação: Substituir
+      <p>Detalhes de <code>ProxyOverride</code>:</p>
+      <pre><code>Ação: Substituir
 Caminho da Chave: Software\Microsoft\Windows\CurrentVersion\Internet Settings
 Nome do valor: ProxyOverride
 Tipo de valor: REG_SZ
 Dados de valor: 192.168.*;&lt;local&gt;
 </code></pre>
 
-            <p>Detalhes de <code>ProxyServer</code>:</p>
-            <pre><code>Ação: Substituir
+      <p>Detalhes de <code>ProxyServer</code>:</p>
+      <pre><code>Ação: Substituir
 Caminho da Chave: Software\Microsoft\Windows\CurrentVersion\Internet Settings
 Nome do valor: ProxyServer
 Tipo de valor: REG_SZ
 Dados de valor: 192.168.0.6:3128
 </code></pre>
-            <!--Fim conteudo Geral-->
+      <!--Fim conteudo Geral-->
 
-            <!-- Data e Hora -->
-            <h2 id="datetime">Alteração de horas <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-            <p>Essa regra libera a correção de data e horário para qualquer perfil de usuário.</p>
-            <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/alterar-horas.png" alt="Permissão de alteração de data e horas"></p>
-            <!-- End Data e Hora -->
+      <!-- Data e Hora -->
+      <h2 id="datetime">
+        Alteração de horas
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Essa regra libera a correção de data e horário para qualquer perfil de
+        usuário.
+      </p>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/alterar-horas.png"
+          alt="Permissão de alteração de data e horas"
+        />
+      </p>
+      <!-- End Data e Hora -->
 
-            <!-- Relacao confianca -->
-            <h2 id="sync">Tolerância de sincronização <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-            <div class="alert alert-info d-flex align-items-center">
-                <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                </svg>
-                <div>Evita a falha na relação de confiança em computadores que usam Deep Freeze, etc.</div>
-            </div>
-            <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/diferenca-de-horas.png" alt="Tela de Configuração"></p>
+      <!-- Relacao confianca -->
+      <h2 id="sync">
+        Tolerância de sincronização
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>
+          Evita a falha na relação de confiança em computadores que usam Deep
+          Freeze, etc.
+        </div>
+      </div>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/diferenca-de-horas.png"
+          alt="Tela de Configuração"
+        />
+      </p>
 
-            <h2 id="passtime">Tempo de senha de computador <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-            <div class="alert alert-info d-flex align-items-center">
-                <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                </svg>
-                <div>Evita a falha na relação de confiança em computadores que usam Deep Freeze, etc.</div>
-            </div>
-            <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/relacao-confianca.png" alt="Tela de Configuração"></p>
-            <!-- End Relacao confianca -->
+      <h2 id="passtime">
+        Tempo de senha de computador
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>
+          Evita a falha na relação de confiança em computadores que usam Deep
+          Freeze, etc.
+        </div>
+      </div>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/relacao-confianca.png"
+          alt="Tela de Configuração"
+        />
+      </p>
+      <!-- End Relacao confianca -->
 
-            <!-- Tema -->
-            <h2 id="wallpaper">Papel de parede <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-            <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/wallpaper.png" alt="Tela de configuração de Papel de Parede"></p>
+      <!-- Tema -->
+      <h2 id="wallpaper">
+        Papel de parede
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/wallpaper.png"
+          alt="Tela de configuração de Papel de Parede"
+        />
+      </p>
 
-            <h2 id="script">Script de papel de parede <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-            <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/script-wallpaper.png" alt="Tela de configurção de script de wallpaper"></p>
+      <h2 id="script">
+        Script de papel de parede
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/script-wallpaper.png"
+          alt="Tela de configurção de script de wallpaper"
+        />
+      </p>
 
-            <h3>Conteúdo do Script</h3>
-            <pre><code>@echo off
+      <h3>Conteúdo do Script</h3>
+      <pre><code>@echo off
 
 SET "IMGIF=\\192.168.X.XX\wallpaper.png"
 SET "USERIF=aluno"
@@ -189,43 +422,90 @@ if not exist "C:\Users\%USERIF%\Pictures\wallpaper.png" (
 exit
 </code></pre>
 
-            <!-- End Tema -->
+      <!-- End Tema -->
 
-            <!-- Opcoes de Seguranca -->
-            <h2 id="tarefas">Gerenciador de Tarefas <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-            <ol>
-                <li>
-                    Configuração do usuário <span class="wiki-arrow">&harr;</span> Modelos Administrativos <span class="wiki-arrow">&harr;</span> Sistema <span class="wiki-arrow">&harr;</span> Opções de Ctrl+Alt+Del
-                    <span class="wiki-arrow">&harr;</span> Remover Gerenciador de tarefas <span class="wiki-arrow">&harr;</span> <b>Habilitado</b>
-                </li>
-            </ol>
+      <!-- Opcoes de Seguranca -->
+      <h2 id="tarefas">
+        Gerenciador de Tarefas
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <ol>
+        <li>
+          Configuração do usuário <span class="wiki-arrow">&harr;</span> Modelos
+          Administrativos <span class="wiki-arrow">&harr;</span> Sistema
+          <span class="wiki-arrow">&harr;</span> Opções de Ctrl+Alt+Del
+          <span class="wiki-arrow">&harr;</span> Remover Gerenciador de tarefas
+          <span class="wiki-arrow">&harr;</span> <b>Habilitado</b>
+        </li>
+      </ol>
 
-            <h2 id="bloqueio">Bloquear Computador <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-            <ol>
-                <li>
-                    Configuração do usuário <span class="wiki-arrow">&harr;</span> Modelos Administrativos <span class="wiki-arrow">&harr;</span> Sistema <span class="wiki-arrow">&harr;</span> Opções de Ctrl+Alt+Del
-                    <span class="wiki-arrow">&harr;</span> Remover Bloquear Computador <span class="wiki-arrow">&harr;</span> <b>Habilitado</b>
-                </li>
-            </ol>
+      <h2 id="bloqueio">
+        Bloquear Computador
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <ol>
+        <li>
+          Configuração do usuário <span class="wiki-arrow">&harr;</span> Modelos
+          Administrativos <span class="wiki-arrow">&harr;</span> Sistema
+          <span class="wiki-arrow">&harr;</span> Opções de Ctrl+Alt+Del
+          <span class="wiki-arrow">&harr;</span> Remover Bloquear Computador
+          <span class="wiki-arrow">&harr;</span> <b>Habilitado</b>
+        </li>
+      </ol>
 
-            <h2 id="logoff">Logoff <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-            <ol>
-                <li>
-                    Configuração do usuário <span class="wiki-arrow">&harr;</span> Modelos Administrativos <span class="wiki-arrow">&harr;</span> Sistema <span class="wiki-arrow">&harr;</span> Opções de Ctrl+Alt+Del
-                    <span class="wiki-arrow">&harr;</span> Remover Logoff <span class="wiki-arrow">&harr;</span> <b>Habilitado</b>
-                </li>
-            </ol>
+      <h2 id="logoff">
+        Logoff
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <ol>
+        <li>
+          Configuração do usuário <span class="wiki-arrow">&harr;</span> Modelos
+          Administrativos <span class="wiki-arrow">&harr;</span> Sistema
+          <span class="wiki-arrow">&harr;</span> Opções de Ctrl+Alt+Del
+          <span class="wiki-arrow">&harr;</span> Remover Logoff
+          <span class="wiki-arrow">&harr;</span> <b>Habilitado</b>
+        </li>
+      </ol>
 
-            <!-- End Opcoes de Seguranca -->
-        </main>
-    </div>
-
+      <!-- End Opcoes de Seguranca -->
+    </main>
+  </div>
 </div>
 
 {% include footer.html %}

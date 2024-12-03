@@ -1,58 +1,112 @@
 ---
-title:  "Softwares"
+title: "Softwares"
 permalink: /image/softwares/
 ---
 
 {% include header.html %}
 
 <div class="container margin-top mt-5 pt-5">
+  <div class="row">
+    <aside class="sidebar-container col-lg-3 z-3" data-js="sidebar-container">
+      <div class="sidebar">{% include links-softwares.html %}</div>
+    </aside>
 
-    <div class="row">
+    <main class="col-12 col-lg-8 mb-5">
+      <h1>{{ page.title }}</h1>
 
-        <aside class="sidebar-container col-lg-3 z-3" data-js="sidebar-container">
-            <div class="sidebar">
+      <p class="lead">
+        Instalação de softwares, links para downloads, configurações e ajustes
+        dos programas utilizados nos laboratórios de informática.
+      </p>
 
-                {% include links-softwares.html %}
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>
+          Execute os softwares ao menos uma vez na conta do usuário
+          <b>Aluno</b> para que sejam criadas as configurações de ambiente.
+        </div>
+      </div>
 
-            </div>
-        </aside>
+      <h2 id="zip">
+        7-zip
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://www.7-zip.org/download.html">7-zip&rarr;</a>.
+      </p>
+      <h3>Silent Install</h3>
+      <pre><code>"7z1805-x64.exe" /S</code></pre>
 
-        <main class="col-12 col-lg-8 mb-5">
-                <h1>{{ page.title }}</h1>
-
-                <p class="lead">
-                    Instalação de softwares, links para downloads, configurações e ajustes dos programas utilizados nos laboratórios de informática.
-                </p>
-
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Execute os softwares ao menos uma vez na conta do usuário <b>Aluno</b> para que sejam criadas as configurações de ambiente.</div>
-                </div>
-
-                <h2 id="zip">7-zip <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://www.7-zip.org/download.html">7-zip&rarr;</a>.</p>
-                <h3>Silent Install</h3>
-                <pre><code>"7z1805-x64.exe" /S</code></pre>
-
-                <h2 id="anaconda">Anaconda <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Instale este software apenas para o usuário <b>Aluno</b>.</div>
-                </div>
-                <p>Faça o download do <a href="https://www.anaconda.com/download/success">Anaconda&rarr;</a>.</p>
-                <h3>Configuração de proxy</h3>
-                <p><b>Edite</b> o arquivo <code>c:\users\aluno\.condarc</code> e adicione:</p>
-<pre><code>show_channel_urls: true
+      <h2 id="anaconda">
+        Anaconda
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>Instale este software apenas para o usuário <b>Aluno</b>.</div>
+      </div>
+      <p>
+        Faça o download do
+        <a href="https://www.anaconda.com/download/success">Anaconda&rarr;</a>.
+      </p>
+      <h3>Configuração de proxy</h3>
+      <p>
+        <b>Edite</b> o arquivo <code>c:\users\aluno\.condarc</code> e adicione:
+      </p>
+      <pre><code>show_channel_urls: true
 allow_other_channels: true
 
 proxy_servers:
@@ -61,278 +115,817 @@ proxy_servers:
 
 ssl_verify: false
 </code></pre>
-                <p>Referência: <a href="https://docs.anaconda.com/working-with-conda/reference/security/#update-the-condarc-file">Update the .condarc file&rarr;</a>.</p>
-                <h3>Pacotes</h3>
-                <p>Execute os comandos no <b>Anaconda Prompt</b> para instalar os seguintes pacotes:</p>
-                <ol>
-                    <li>Python <span class="wiki-arrow">&harr;</span> <code>conda install anaconda::python</code></li>
-                    <li>Pandas <span class="wiki-arrow">&harr;</span> <code>conda install anaconda::pandas</code></li>
-                    <li>Jupyter <span class="wiki-arrow">&harr;</span> <code>conda install anaconda::jupyter</code></li>
-                    <li>Scikit-Learn <span class="wiki-arrow">&harr;</span> <code>conda install conda-forge::scikit-learn</code></li>
-                    <li>Matplotlib <span class="wiki-arrow">&harr;</span> <code>conda install conda-forge::matplotlib</code></li>
-                    <li>Pytorch <span class="wiki-arrow">&harr;</span> <code>conda install pytorch::pytorch</code></li>
-                </ol>
+      <p>
+        Referência:
+        <a
+          href="https://docs.anaconda.com/working-with-conda/reference/security/#update-the-condarc-file"
+          >Update the .condarc file&rarr;</a
+        >.
+      </p>
+      <h3>Pacotes</h3>
+      <p>
+        Execute os comandos no <b>Anaconda Prompt</b> para instalar os seguintes
+        pacotes:
+      </p>
+      <ol>
+        <li>
+          Python <span class="wiki-arrow">&harr;</span>
+          <code>conda install anaconda::python</code>
+        </li>
+        <li>
+          Pandas <span class="wiki-arrow">&harr;</span>
+          <code>conda install anaconda::pandas</code>
+        </li>
+        <li>
+          Jupyter <span class="wiki-arrow">&harr;</span>
+          <code>conda install anaconda::jupyter</code>
+        </li>
+        <li>
+          Scikit-Learn <span class="wiki-arrow">&harr;</span>
+          <code>conda install conda-forge::scikit-learn</code>
+        </li>
+        <li>
+          Matplotlib <span class="wiki-arrow">&harr;</span>
+          <code>conda install conda-forge::matplotlib</code>
+        </li>
+        <li>
+          Pytorch <span class="wiki-arrow">&harr;</span>
+          <code>conda install pytorch::pytorch</code>
+        </li>
+      </ol>
 
-                <h2 id="android">Android Studio <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://developer.android.com/studio">Android Studio&rarr;</a>.</p>
+      <h2 id="android">
+        Android Studio
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://developer.android.com/studio">Android Studio&rarr;</a>.
+      </p>
 
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Execute o programa na conta do <b>Aluno</b> para finalizar a instalação de recursos extras.</div>
-                </div>
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>
+          Execute o programa na conta do <b>Aluno</b> para finalizar a
+          instalação de recursos extras.
+        </div>
+      </div>
 
-                <h3>Configuração de proxy</h3>
-                <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/android-studio-proxy.png" alt="Configuração de proxy"></p>
+      <h3>Configuração de proxy</h3>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/android-studio-proxy.png"
+          alt="Configuração de proxy"
+        />
+      </p>
 
-                <h3>Desativar verificação de atualização</h3>
-                <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/android-studio-updates.png" alt="Desativar verificação de atualização"></p>
+      <h3>Desativar verificação de atualização</h3>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/android-studio-updates.png"
+          alt="Desativar verificação de atualização"
+        />
+      </p>
 
-                <h2 id="netbeans">Apache NetBeans <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://netbeans.org/downloads/">NetBeans&rarr;</a>.</p>
-                <h3>Desativar verificação de atualização</h3>
-                <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/apache-netbeans-update.png" alt="Desativar verificação de atualização"></p>
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Esse programa depende do <b>Java JDK</b>.</div>
-                </div>
+      <h2 id="netbeans">
+        Apache NetBeans
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://netbeans.org/downloads/">NetBeans&rarr;</a>.
+      </p>
+      <h3>Desativar verificação de atualização</h3>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/apache-netbeans-update.png"
+          alt="Desativar verificação de atualização"
+        />
+      </p>
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>Esse programa depende do <b>Java JDK</b>.</div>
+      </div>
 
-                <h2 id="arduino">Arduino IDE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://www.arduino.cc/en/software">Arduino IDE&rarr;</a>.</p>
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Altere o idioma para português.</div>
-                </div>
-                <h3>Configuração de proxy</h3>
-                <p>Edite o arquivo <code>C:\Users\aluno\.arduinoIDE\arduino-cli.yaml</code> e adicione:</p>
-                <pre><code>network:
+      <h2 id="arduino">
+        Arduino IDE
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://www.arduino.cc/en/software">Arduino IDE&rarr;</a>.
+      </p>
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>Altere o idioma para português.</div>
+      </div>
+      <h3>Configuração de proxy</h3>
+      <p>
+        Edite o arquivo
+        <code>C:\Users\aluno\.arduinoIDE\arduino-cli.yaml</code> e adicione:
+      </p>
+      <pre><code>network:
     proxy: http://192.168.0.6:3128
     user_agent_ext: daemon
 </code></pre>
-                <h3>Desativando verificação de atualização</h3>
-                <p><b>Edite</b> o arquivo <code>C:\Users\aluno\.arduinoIDE\arduino-cli.yaml</code> e adicione:</p>
-                <pre><code>updater:
+      <h3>Desativando verificação de atualização</h3>
+      <p>
+        <b>Edite</b> o arquivo
+        <code>C:\Users\aluno\.arduinoIDE\arduino-cli.yaml</code> e adicione:
+      </p>
+      <pre><code>updater:
     enable_notification: false
 </code></pre>
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Execute o programa para finalizar as configurações de drivers. A configuração de <a href="{{ site.baseurl }}/windows/softwares/#composer">proxy para o composer&larr;</a> causa problemas para o funcionamento deste software.</div>
-                </div>
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>
+          Execute o programa para finalizar as configurações de drivers. A
+          configuração de
+          <a href="{{ site.baseurl }}/windows/softwares/#composer"
+            >proxy para o composer&larr;</a
+          >
+          causa problemas para o funcionamento deste software.
+        </div>
+      </div>
 
-                <h2 id="astah">Astah Community <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Astah Community&rarr;</a>. Última versão disponibilizada pela desenvolvedora.</p>
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Esse programa precisa do Java JRE.</div>
-                </div>
+      <h2 id="astah">
+        Astah Community
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a
+          href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing"
+          >Astah Community&rarr;</a
+        >. Última versão disponibilizada pela desenvolvedora.
+      </p>
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>Esse programa precisa do Java JRE.</div>
+      </div>
 
-                <h3>Silent Install</h3>
-                <pre><code>"astah-community-7_2_0-1ff236-jre-64bit-setup.exe" /verysilent</code></pre>
+      <h3>Silent Install</h3>
+      <pre><code>"astah-community-7_2_0-1ff236-jre-64bit-setup.exe" /verysilent</code></pre>
 
-                <h2 id="autocad">AutoCAD <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://www.autodesk.com/education/free-software/">AutoCAD&rarr;</a>.</p>
+      <h2 id="autocad">
+        AutoCAD
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://www.autodesk.com/education/free-software/"
+          >AutoCAD&rarr;</a
+        >.
+      </p>
 
-                <h2 id="avogadro">Avogadro <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://avogadro.cc/">Avogadro&rarr;</a>.</p>
+      <h2 id="avogadro">
+        Avogadro
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do <a href="https://avogadro.cc/">Avogadro&rarr;</a>.
+      </p>
 
-                <h2 id="blender">Blender <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do  <a href="https://www.blender.org/download/">Blender&rarr;</a>.</p>
+      <h2 id="blender">
+        Blender
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://www.blender.org/download/">Blender&rarr;</a>.
+      </p>
 
-                <div class="alert alert-info d-flex align-items-center">
-                  <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                      <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                      <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                  </svg>
-                  <div>Altere o idioma do programa para Português.</div>
-              </div>
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>Altere o idioma do programa para Português.</div>
+      </div>
 
-                <h3>Silent Install</h3>
-                <pre><code>msiexec /i "blender-2.79b-windows64.msi" /qb</code></pre>
+      <h3>Silent Install</h3>
+      <pre><code>msiexec /i "blender-2.79b-windows64.msi" /qb</code></pre>
 
-                <h2 id="localdns">Bonjour ou mDNS <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Instale o Bonjour apenas para o Windows 7. Para o Windows 10 ative o mDNS.</div>
-                </div>
-                <h3>Bonjour</h3>
-                <p>Faça o download do <a href="https://developer.apple.com/bonjour/">Bonjour&rarr;</a>.</p>
-                <h3>Silent Install</h3>
-                <pre><code>msiexec /i "Bonjour64.msi" /qb</code></pre>
-                <h3>mDNS</h3>
-                <p>Para o Windows 10, ative o recurso mDNS:</p>
-                <pre><code>reg add "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /v EnableMulticast /t REG_DWORD /d 1 /f</code></pre>
+      <h2 id="localdns">
+        Bonjour ou mDNS
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>
+          Instale o Bonjour apenas para o Windows 7. Para o Windows 10 ative o
+          mDNS.
+        </div>
+      </div>
+      <h3>Bonjour</h3>
+      <p>
+        Faça o download do
+        <a href="https://developer.apple.com/bonjour/">Bonjour&rarr;</a>.
+      </p>
+      <h3>Silent Install</h3>
+      <pre><code>msiexec /i "Bonjour64.msi" /qb</code></pre>
+      <h3>mDNS</h3>
+      <p>Para o Windows 10, ative o recurso mDNS:</p>
+      <pre><code>reg add "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /v EnableMulticast /t REG_DWORD /d 1 /f</code></pre>
 
-                <h2 id="bricx">BricxCC <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">BricxCC&rarr;</a> e extraia o <b>BricxCC.zip</b> para <code>C:\Portable</code>.</p>
-                <h3>Driver NXT</h3>
-                <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Driver para NXT&rarr;</a> do Google Drive e faça a instalação.</p>
+      <h2 id="bricx">
+        BricxCC
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a
+          href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing"
+          >BricxCC&rarr;</a
+        >
+        e extraia o <b>BricxCC.zip</b> para <code>C:\Portable</code>.
+      </p>
+      <h3>Driver NXT</h3>
+      <p>
+        Faça o download do
+        <a
+          href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing"
+          >Driver para NXT&rarr;</a
+        >
+        do Google Drive e faça a instalação.
+      </p>
 
-                <h2 id="brmodelo">brModelo <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="http://www.sis4.com/brModelo/download.html">brModelo&rarr;</a> e extraia o <b>zip</b> para <code>C:\Portable</code>. Crie um atalho do programa na Área de Trabalho do usuário <b>Aluno</b>.</p>.
+      <h2 id="brmodelo">
+        brModelo
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="http://www.sis4.com/brModelo/download.html">brModelo&rarr;</a>
+        e extraia o <b>zip</b> para <code>C:\Portable</code>. Crie um atalho do
+        programa na Área de Trabalho do usuário <b>Aluno</b>.
+      </p>
+      .
 
-                <h2 id="chem">ChemSketch <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://www.acdlabs.com/resources/free-chemistry-software-apps/chemsketch-freeware/">ChemSketch&rarr;</a>.
+      <h2 id="chem">
+        ChemSketch
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a
+          href="https://www.acdlabs.com/resources/free-chemistry-software-apps/chemsketch-freeware/"
+          >ChemSketch&rarr;</a
+        >.
+      </p>
 
-                <h2 id="chrome">Chrome <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://www.google.com/intl/pt-BR/chrome/?standalone=1">Chrome&rarr;</a>.</p>
+      <h2 id="chrome">
+        Chrome
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://www.google.com/intl/pt-BR/chrome/?standalone=1"
+          >Chrome&rarr;</a
+        >.
+      </p>
 
-                <h3>Silent Install</h3>
-                <pre><code>"ChromeStandaloneSetup64.exe" /silent /install</code></pre>
+      <h3>Silent Install</h3>
+      <pre><code>"ChromeStandaloneSetup64.exe" /silent /install</code></pre>
 
-                <h3>Silent Uninstall</h3>
-                <pre><code>"C:\Program Files (x86)\Google\Chrome\Application\99.0.4844.74\Installer\setup.exe" --uninstall --multi-install --chrome --msi --system-level --force-uninstall</code></pre>
+      <h3>Silent Uninstall</h3>
+      <pre><code>"C:\Program Files (x86)\Google\Chrome\Application\99.0.4844.74\Installer\setup.exe" --uninstall --multi-install --chrome --msi --system-level --force-uninstall</code></pre>
 
-                <h2 id="tracer">Cisco Packet Tracer <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://www.netacad.com/pt-br">Cisco Packet Tracer&rarr;</a>.</p>
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>É necessário um login da <a href="https://www.netacad.com/pt-br">Cisco Academy&rarr;</a> para usar o simulador.</div>
-                </div>
+      <h2 id="tracer">
+        Cisco Packet Tracer
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://www.netacad.com/pt-br">Cisco Packet Tracer&rarr;</a>.
+      </p>
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>
+          É necessário um login da
+          <a href="https://www.netacad.com/pt-br">Cisco Academy&rarr;</a> para
+          usar o simulador.
+        </div>
+      </div>
 
-                <h3>Silent Install</h3>
-                <pre><code>"Packet Tracer 7.1.1 for Windows 64 bit.exe" /verysilent</code></pre>
+      <h3>Silent Install</h3>
+      <pre><code>"Packet Tracer 7.1.1 for Windows 64 bit.exe" /verysilent</code></pre>
 
-                <h3>Silent Uninstall</h3>
-                <pre><code>"C:\Program Files\Cisco Packet Tracer 7.1.1\unins000" /verysilent</code></pre>
+      <h3>Silent Uninstall</h3>
+      <pre><code>"C:\Program Files\Cisco Packet Tracer 7.1.1\unins000" /verysilent</code></pre>
 
-                <h2 id="composer">Composer <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://getcomposer.org/Composer-Setup.exe">Composer&rarr;</a>.</p>
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Esse programa precisa do XAMPP.</div>
-                </div>
-                <h3>Setando proxy</h3>
-                <p>Execute os comandos no <code>prompt</code> como <b>Administrador</b>:</p>
-                <pre><code>setx http_proxy "http://192.168.0.6:3128" /m
+      <h2 id="composer">
+        Composer
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://getcomposer.org/Composer-Setup.exe">Composer&rarr;</a>.
+      </p>
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>Esse programa precisa do XAMPP.</div>
+      </div>
+      <h3>Setando proxy</h3>
+      <p>
+        Execute os comandos no <code>prompt</code> como <b>Administrador</b>:
+      </p>
+      <pre><code>setx http_proxy "http://192.168.0.6:3128" /m
 setx https_proxy "http://192.168.0.6:3128" /m
 </code></pre>
-                <h3>Silent Install</h3>
-                <pre><code>"Composer-Setup.exe" /VERYSILENT /SUPPRESSMSGBOXES /ALLUSERS /PHP="C:\xampp\php\php.exe"</code></pre>
+      <h3>Silent Install</h3>
+      <pre><code>"Composer-Setup.exe" /VERYSILENT /SUPPRESSMSGBOXES /ALLUSERS /PHP="C:\xampp\php\php.exe"</code></pre>
 
-                <h3>Silent Uninstall</h3>
-                <pre><code>"%ProgramFiles%\ComposerSetup\unins000.exe" /VERYSILENT
+      <h3>Silent Uninstall</h3>
+      <pre><code>"%ProgramFiles%\ComposerSetup\unins000.exe" /VERYSILENT
 rd "%ProgramFiles%\ComposerSetup" /s /q</code></pre>
 
-                <h2 id="dbbrowser">DB Browser for SQLite <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://sqlitebrowser.org/">DB Browser for SQLite&rarr;</a>.</p>
-                <h3>Desativar verificação de atualização</h3>
-                <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/dbbrowser-update.png" alt="Desativar verificação de atualização"></p>
+      <h2 id="dbbrowser">
+        DB Browser for SQLite
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://sqlitebrowser.org/">DB Browser for SQLite&rarr;</a>.
+      </p>
+      <h3>Desativar verificação de atualização</h3>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/dbbrowser-update.png"
+          alt="Desativar verificação de atualização"
+        />
+      </p>
 
-                <h2 id="dbdesigner">DBDesigner 4 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="http://fabforce.eu/dbdesigner4/">DBDesigner&rarr;</a>.</p>
+      <h2 id="dbdesigner">
+        DBDesigner 4
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="http://fabforce.eu/dbdesigner4/">DBDesigner&rarr;</a>.
+      </p>
 
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Após a instalação, mova os atalhos do programa para o diretório correto.</div>
-                </div>
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>
+          Após a instalação, mova os atalhos do programa para o diretório
+          correto.
+        </div>
+      </div>
 
-                <h3>Origem</h3>
-                <pre><code>C:\Users\USERADMIN\AppData\Roaming\Microsoft\Windows\Start Menu\Programs</code></pre>
+      <h3>Origem</h3>
+      <pre><code>C:\Users\USERADMIN\AppData\Roaming\Microsoft\Windows\Start Menu\Programs</code></pre>
 
-                <h3>Destino</h3>
-                <pre><code>C:\ProgramData\Microsoft\Windows\Start Menu\Programs</code></pre>
+      <h3>Destino</h3>
+      <pre><code>C:\ProgramData\Microsoft\Windows\Start Menu\Programs</code></pre>
 
-                <h2 id="dbeaver">DBeaver Community <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://dbeaver.io/download/">DBeaver Community&rarr;</a>.</p>
-                <h3>Desativar verificação de atualização</h3>
-                <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/dbeaver-update.png" alt="Desativar verificação de atualização"></p>
-                <h3>Desativar envio de estatísticas</h3>
-                <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/dbeaver-data.png" alt="Desativar verificação envio de estatísticas"></p>
+      <h2 id="dbeaver">
+        DBeaver Community
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://dbeaver.io/download/">DBeaver Community&rarr;</a>.
+      </p>
+      <h3>Desativar verificação de atualização</h3>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/dbeaver-update.png"
+          alt="Desativar verificação de atualização"
+        />
+      </p>
+      <h3>Desativar envio de estatísticas</h3>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/dbeaver-data.png"
+          alt="Desativar verificação envio de estatísticas"
+        />
+      </p>
 
-                <h2 id="docker">Docker <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Ative o suporte a <b>Virtualização na BIOS</b>.</div>
-                </div>
+      <h2 id="docker">
+        Docker
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>Ative o suporte a <b>Virtualização na BIOS</b>.</div>
+      </div>
 
-                <h3>Instalando o WSL</h3>
-                <p>Execute no <code>prompt</code> como <b>Administrador</b>:</p>
-                <pre><code>wsl --install</code></pre>
+      <h3>Instalando o WSL</h3>
+      <p>Execute no <code>prompt</code> como <b>Administrador</b>:</p>
+      <pre><code>wsl --install</code></pre>
 
-                <h3>Atualizando o Kernel</h3>
-                <p>Faça o download e instale a <a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">Atualização do Kernel&rarr;</a>.</p>
+      <h3>Atualizando o Kernel</h3>
+      <p>
+        Faça o download e instale a
+        <a
+          href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi"
+          >Atualização do Kernel&rarr;</a
+        >.
+      </p>
 
-                <h3>Configurando WSL2</h3>
-                <p>Garantindo que o WSL seja executado na versão 2. Execute no <code>prompt</code> como <b>Administrador</b>:</p>
-                <pre><code>wsl.exe --set-default-version 2</code></pre>
+      <h3>Configurando WSL2</h3>
+      <p>
+        Garantindo que o WSL seja executado na versão 2. Execute no
+        <code>prompt</code> como <b>Administrador</b>:
+      </p>
+      <pre><code>wsl.exe --set-default-version 2</code></pre>
 
-                <h3>Instalando o Docker</h3>
-                <p>Faça o download e instale o <a href="https://www.docker.com/products/docker-desktop/">Docker Desktop&rarr;</a>.</p>
-                <h3>Silent Install</h3>
-                <pre><code>start /w "" "Docker Desktop Installer.exe" install</code></pre>
+      <h3>Instalando o Docker</h3>
+      <p>
+        Faça o download e instale o
+        <a href="https://www.docker.com/products/docker-desktop/"
+          >Docker Desktop&rarr;</a
+        >.
+      </p>
+      <h3>Silent Install</h3>
+      <pre><code>start /w "" "Docker Desktop Installer.exe" install</code></pre>
 
-                <h3>Permissão para criar container</h3>
-                <p>Adicione o usuário <b>Aluno</b> ao grupo <b>docker-users</b>. Execute no <code>prompt</code> como <b>Administrador</b>:</p>
-                <pre><code>net localgroup docker-users aluno /add</code></pre>
+      <h3>Permissão para criar container</h3>
+      <p>
+        Adicione o usuário <b>Aluno</b> ao grupo <b>docker-users</b>. Execute no
+        <code>prompt</code> como <b>Administrador</b>:
+      </p>
+      <pre><code>net localgroup docker-users aluno /add</code></pre>
 
-                <h3>Configurando proxy</h3>
-                <p><b>Edite</b> o arquivo <code>C:\Users\aluno\.docker\config.json</code>:</p>
-                <pre><code>"proxies": {
+      <h3>Configurando proxy</h3>
+      <p>
+        <b>Edite</b> o arquivo <code>C:\Users\aluno\.docker\config.json</code>:
+      </p>
+      <pre><code>"proxies": {
     "default": {
         "httpProxy": "http://192.168.0.6:3128",
         "httpsProxy": "https://192.168.0.6:3128",
@@ -340,37 +933,91 @@ rd "%ProgramFiles%\ComposerSetup" /s /q</code></pre>
     }
 }
 </code></pre>
-                <h3>Configurações pelo Dashboard</h3>
-                <ol>
-                    <li><b>General</b></li>
-                    <ol>
-                        <li>Start Docker Desktop when you sign in to your computer <span class="wiki-arrow">&harr;</span> <b>Desativado</b></li>
-                        <li>Open Docker Dashboard when Docker Desktop starts <span class="wiki-arrow">&harr;</span> <b>Desativado</b></li>
-                        <li>Send usage statistics <span class="wiki-arrow">&harr;</span> <b>Desativado</b></li>
-                    </ol>
-                    <li><b>Software updates</b></li>
-                    <ol>
-                        <li>Automatically check for updates <span class="wiki-arrow">&harr;</span> <b>Desativado</b></li>
-                    </ol>
-                </ol>
+      <h3>Configurações pelo Dashboard</h3>
+      <ol>
+        <li><b>General</b></li>
+        <ol>
+          <li>
+            Start Docker Desktop when you sign in to your computer
+            <span class="wiki-arrow">&harr;</span> <b>Desativado</b>
+          </li>
+          <li>
+            Open Docker Dashboard when Docker Desktop starts
+            <span class="wiki-arrow">&harr;</span> <b>Desativado</b>
+          </li>
+          <li>
+            Send usage statistics <span class="wiki-arrow">&harr;</span>
+            <b>Desativado</b>
+          </li>
+        </ol>
+        <li><b>Software updates</b></li>
+        <ol>
+          <li>
+            Automatically check for updates
+            <span class="wiki-arrow">&harr;</span> <b>Desativado</b>
+          </li>
+        </ol>
+      </ol>
 
-                <h3>Disponibilize Imagens</h3>
-                <p>Imagens a serem baixados:</p>
-                <ol>
-                    <li>alpine <span class="wiki-arrow">&harr;</span> <code>docker pull alpine</code></li>
-                    <li>node <span class="wiki-arrow">&harr;</span> <code>docker pull node</code></li>
-                    <li>nginx <span class="wiki-arrow">&harr;</span> <code>docker pull nginx</code></li>
-                    <li>mysql <span class="wiki-arrow">&harr;</span> <code>docker pull mysql</code></li>
-                </ol>
-                <p>Referências: <a href="https://docs.docker.com/desktop/install/windows-install/">Instalação&rarr;</a>, <a href="https://docs.docker.com/desktop/windows/permission-requirements/">Permissões&rarr;</a> e <a href="https://docs.docker.com/network/proxy/">Proxy&rarr;</a>.</p>
+      <h3>Disponibilize Imagens</h3>
+      <p>Imagens a serem baixados:</p>
+      <ol>
+        <li>
+          alpine <span class="wiki-arrow">&harr;</span>
+          <code>docker pull alpine</code>
+        </li>
+        <li>
+          node <span class="wiki-arrow">&harr;</span>
+          <code>docker pull node</code>
+        </li>
+        <li>
+          nginx <span class="wiki-arrow">&harr;</span>
+          <code>docker pull nginx</code>
+        </li>
+        <li>
+          mysql <span class="wiki-arrow">&harr;</span>
+          <code>docker pull mysql</code>
+        </li>
+      </ol>
+      <p>
+        Referências:
+        <a href="https://docs.docker.com/desktop/install/windows-install/"
+          >Instalação&rarr;</a
+        >,
+        <a
+          href="https://docs.docker.com/desktop/windows/permission-requirements/"
+          >Permissões&rarr;</a
+        >
+        e <a href="https://docs.docker.com/network/proxy/">Proxy&rarr;</a>.
+      </p>
 
-                <h2 id="firefox">Firefox <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://www.mozilla.org/pt-BR/firefox/all/">Firefox&rarr;</a>.</p>
-                <h3>Configurando preferências</h3>
-                <p><b>Crie</b> o arquivo <code>policies.json</code> dentro de pasta <code>distribution</code> na raíz de instalação do programa com o seguinte conteúdo:</p>
-<pre><code>{
+      <h2 id="firefox">
+        Firefox
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://www.mozilla.org/pt-BR/firefox/all/">Firefox&rarr;</a>.
+      </p>
+      <h3>Configurando preferências</h3>
+      <p>
+        <b>Crie</b> o arquivo <code>policies.json</code> dentro de pasta
+        <code>distribution</code> na raíz de instalação do programa com o
+        seguinte conteúdo:
+      </p>
+      <pre><code>{
     "policies": {
         "AppAutoUpdate": false,
         "BackgroundAppUpdate": false,
@@ -379,108 +1026,299 @@ rd "%ProgramFiles%\ComposerSetup" /s /q</code></pre>
         "DontCheckDefaultBrowser": true
     }
 }</code></pre>
-                <p>Referência: <a href="https://support.mozilla.org/pt-BR/kb/personalizando-o-firefox-usando-policies">Como personalizar o Firefox usando policies.json&rarr;</a> e <a href="https://mozilla.github.io/policy-templates/">policy-templates&rarr;</a>.</p>
+      <p>
+        Referência:
+        <a
+          href="https://support.mozilla.org/pt-BR/kb/personalizando-o-firefox-usando-policies"
+          >Como personalizar o Firefox usando policies.json&rarr;</a
+        >
+        e
+        <a href="https://mozilla.github.io/policy-templates/"
+          >policy-templates&rarr;</a
+        >.
+      </p>
 
-                <h3>Silent Install</h3>
-                <pre><code>"Firefox Setup 97.0.exe" /s</code></pre>
+      <h3>Silent Install</h3>
+      <pre><code>"Firefox Setup 97.0.exe" /s</code></pre>
 
-                <h3>Silent Uninstall</h3>
-                <pre><code>"%ProgramFiles%\Mozilla Firefox\uninstall\helper.exe" /S</code></pre>
+      <h3>Silent Uninstall</h3>
+      <pre><code>"%ProgramFiles%\Mozilla Firefox\uninstall\helper.exe" /S</code></pre>
 
-                <h2 id="fluxovento">Fluxovento <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://www.tecgraf.puc-rio.br/etools/fluxovento/">Fluxovento&rarr;</a>.</p>
+      <h2 id="fluxovento">
+        Fluxovento
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://www.tecgraf.puc-rio.br/etools/fluxovento/"
+          >Fluxovento&rarr;</a
+        >.
+      </p>
 
-                <h3>Silent Install</h3>
-                <pre><code>"fluxoventosetup.exe" /v/qn</code></pre>
+      <h3>Silent Install</h3>
+      <pre><code>"fluxoventosetup.exe" /v/qn</code></pre>
 
-                <h2 id="ftool">Ftool <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Ftool&rarr;</a>.</p>
-                <p>Disponibilize o arquivo em <code>C:\Portable\Ftool</code> e adicione um atalho na Área de Trabalho do usuário <b>Aluno</b>.</p>
+      <h2 id="ftool">
+        Ftool
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a
+          href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing"
+          >Ftool&rarr;</a
+        >.
+      </p>
+      <p>
+        Disponibilize o arquivo em <code>C:\Portable\Ftool</code> e adicione um
+        atalho na Área de Trabalho do usuário <b>Aluno</b>.
+      </p>
 
-                <h2 id="geogebra">Geogebra <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Geogebra&rarr;</a>.</p>
-                <p>Extraia os arquivos na pasta <code>C:\Portable\GeoGebra</code>.</p>
+      <h2 id="geogebra">
+        Geogebra
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a
+          href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing"
+          >Geogebra&rarr;</a
+        >.
+      </p>
+      <p>Extraia os arquivos na pasta <code>C:\Portable\GeoGebra</code>.</p>
 
-                <h2 id="gimp">Gimp <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://www.gimp.org/">Gimp&rarr;</a>.</p>
-                <h3>Desativar verificação de atualização</h3>
-                <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/gimp-update.png" alt="Desativar verificação de atualização"></p>
+      <h2 id="gimp">
+        Gimp
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>Faça o download do <a href="https://www.gimp.org/">Gimp&rarr;</a>.</p>
+      <h3>Desativar verificação de atualização</h3>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/gimp-update.png"
+          alt="Desativar verificação de atualização"
+        />
+      </p>
 
-                <h3>Silent Install</h3>
-                <pre><code>"gimp-2.10.6-setup.exe" /SILENT /NORESTART</code></pre>
+      <h3>Silent Install</h3>
+      <pre><code>"gimp-2.10.6-setup.exe" /SILENT /NORESTART</code></pre>
 
-                <h3>Silent Uninstall</h3>
-                <pre><code>"C:\Program Files\Inkscape\Uninstall.exe" /S</code></pre>
+      <h3>Silent Uninstall</h3>
+      <pre><code>"C:\Program Files\Inkscape\Uninstall.exe" /S</code></pre>
 
-                <h2 id="git">Git <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://git-scm.com/">Git&rarr;</a>.</p>
+      <h2 id="git">
+        Git
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>Faça o download do <a href="https://git-scm.com/">Git&rarr;</a>.</p>
 
-                <h3>Setando proxy</h3>
-                <p>Execute os comandos abaixo no <code>prompt</code> como <b>Usuário Padrão</b>.</p>
-                <pre><code>git config --global http.proxy http://192.168.0.6:3128
+      <h3>Setando proxy</h3>
+      <p>
+        Execute os comandos abaixo no <code>prompt</code> como
+        <b>Usuário Padrão</b>.
+      </p>
+      <pre><code>git config --global http.proxy http://192.168.0.6:3128
 git config --global http.https://domain.com.sslVerify false</code></pre>
 
-                <h3>Silent Install</h3>
-                <pre><code>"Git-2.35.1.2-64-bit.exe" /VERYSILENT /NORESTART /COMPONENTS="icons,icons\desktop,ext,ext\shellhere,ext\guihere,gitlfs,assoc,assoc_sh"</code></pre>
+      <h3>Silent Install</h3>
+      <pre><code>"Git-2.35.1.2-64-bit.exe" /VERYSILENT /NORESTART /COMPONENTS="icons,icons\desktop,ext,ext\shellhere,ext\guihere,gitlfs,assoc,assoc_sh"</code></pre>
 
-                <h3>Silent Uninstall</h3>
-                <pre><code>"%ProgramFiles%\Git\unins000.exe" /VERYSILENT /NORESTART</code></pre>
+      <h3>Silent Uninstall</h3>
+      <pre><code>"%ProgramFiles%\Git\unins000.exe" /VERYSILENT /NORESTART</code></pre>
 
-                <h2 id="greenfoot">Greenfoot <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://www.greenfoot.org/door">Greenfoot&rarr;</a>.</p>
-                <h3>Idioma</h3>
-                <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/greenfoot-language.png" alt="Desativar verificação de atualização"></p>
+      <h2 id="greenfoot">
+        Greenfoot
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://www.greenfoot.org/door">Greenfoot&rarr;</a>.
+      </p>
+      <h3>Idioma</h3>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/greenfoot-language.png"
+          alt="Desativar verificação de atualização"
+        />
+      </p>
 
-                <h3>Silent Install</h3>
-                <pre><code>msiexec /i "Greenfoot-windows-351.msi" /qn</code></pre>
+      <h3>Silent Install</h3>
+      <pre><code>msiexec /i "Greenfoot-windows-351.msi" /qn</code></pre>
 
-                <h2 id="idle">IDLE Python <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://www.python.org/downloads/">IDLE Python&rarr;</a>.</p>
+      <h2 id="idle">
+        IDLE Python
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://www.python.org/downloads/">IDLE Python&rarr;</a>.
+      </p>
 
-                <h3>Silent Install</h3>
-                <pre><code>"python-3.10.6-amd64.exe" /quiet InstallAllUsers=1 PrependPath=1 Include_test=0 DefaultAllUsersTargetDir</code></pre>
+      <h3>Silent Install</h3>
+      <pre><code>"python-3.10.6-amd64.exe" /quiet InstallAllUsers=1 PrependPath=1 Include_test=0 DefaultAllUsersTargetDir</code></pre>
 
-                <h3>Silent Uninstall</h3>
-                <pre><code>start /wait msiexec /x {691AAAA1-FE86-4973-8DA2-6AA2B3327562} /qn /norestart</code></pre>
+      <h3>Silent Uninstall</h3>
+      <pre><code>start /wait msiexec /x {691AAAA1-FE86-4973-8DA2-6AA2B3327562} /qn /norestart</code></pre>
 
-                <h2 id="inkscape">Inkscape <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://inkscape.org/pt-br/">Inkscape&rarr;</a>.</p>
+      <h2 id="inkscape">
+        Inkscape
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://inkscape.org/pt-br/">Inkscape&rarr;</a>.
+      </p>
 
-                <h3>Silent Install</h3>
-                <pre><code>"inkscape-0.92.3-x64.exe" /S</code></pre>
+      <h3>Silent Install</h3>
+      <pre><code>"inkscape-0.92.3-x64.exe" /S</code></pre>
 
-                <h3>Silent Uninstall</h3>
-<pre><code>"C:\Program Files\Inkscape\Uninstall.exe" /S</code></pre>
+      <h3>Silent Uninstall</h3>
+      <pre><code>"C:\Program Files\Inkscape\Uninstall.exe" /S</code></pre>
 
-                <h2 id="intellij">IntelliJ IDEA Community <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://www.jetbrains.com/idea/download/?section=windows">IntelliJ IDEA Community&rarr;</a>.</p>
+      <h2 id="intellij">
+        IntelliJ IDEA Community
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://www.jetbrains.com/idea/download/?section=windows"
+          >IntelliJ IDEA Community&rarr;</a
+        >.
+      </p>
 
-                <h3>Proxy para o IntelliJ</h3>
-                <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/proxy-intellij.png" alt="Proxy para o IntelliJ"></p>
+      <h3>Proxy para o IntelliJ</h3>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/proxy-intellij.png"
+          alt="Proxy para o IntelliJ"
+        />
+      </p>
 
-                <h3>Proxy para o Maven</h3>
-                <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/proxy-maven.png" alt="Proxy para o Maven"></p>
+      <h3>Proxy para o Maven</h3>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/proxy-maven.png"
+          alt="Proxy para o Maven"
+        />
+      </p>
 
-                <p><b>Crie</b> o arquivo <code>settings.xml</code> em <code>C:\Users\aluno\.m2</code> com o seguinte conteúdo:</p>
-                <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+      <p>
+        <b>Crie</b> o arquivo <code>settings.xml</code> em
+        <code>C:\Users\aluno\.m2</code> com o seguinte conteúdo:
+      </p>
+      <pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd"&gt;
     &lt;proxies&gt;
@@ -511,22 +1349,39 @@ git config --global http.https://domain.com.sslVerify false</code></pre>
 
 &lt;/settings&gt;
 </code></pre>
-                <p>Referência: <a href="https://maven.apache.org/settings.html#proxies">Proxies&rarr;</a>.</p>
-                <h3>Desativar verificação de atualização</h3>
-                <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/intellij-update.png" alt="Desativar verificação de atualização"></p>
+      <p>
+        Referência:
+        <a href="https://maven.apache.org/settings.html#proxies"
+          >Proxies&rarr;</a
+        >.
+      </p>
+      <h3>Desativar verificação de atualização</h3>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/intellij-update.png"
+          alt="Desativar verificação de atualização"
+        />
+      </p>
 
-                <h3>Não monitorar arquivos no Windows Defender</h3>
-                <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/intellij-security.png" alt="Não monitorar arquivos no Windows Defender"></p>
-                <p>Diretórios para exclusão:</p>
-<pre><code>c:\users\aluno\appdata\local\jetbrains
+      <h3>Não monitorar arquivos no Windows Defender</h3>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/intellij-security.png"
+          alt="Não monitorar arquivos no Windows Defender"
+        />
+      </p>
+      <p>Diretórios para exclusão:</p>
+      <pre><code>c:\users\aluno\appdata\local\jetbrains
 c:\users\aluno\ideaprojects
 </code></pre>
 
-<h3>Silent Install</h3>
-<pre><code>"ideaIC-2023.3.4.exe" /S /CONFIG="silent.config"</code></pre>
+      <h3>Silent Install</h3>
+      <pre><code>"ideaIC-2023.3.4.exe" /S /CONFIG="silent.config"</code></pre>
 
-                <p>Conteúdo de <code>silent.config</code>:</p>
-                <pre><code>; Installation mode. It can be user or admin.
+      <p>Conteúdo de <code>silent.config</code>:</p>
+      <pre><code>; Installation mode. It can be user or admin.
 ; NOTE: for admin mode please use "Run as Administrator" for command prompt to avoid UAC dialog.
 mode=admin
 
@@ -544,311 +1399,911 @@ updateContextMenu=0
 .groovy=0
 .kt=0
 </code></pre>
-                <p>Referência: <a href="https://www.jetbrains.com/help/idea/installation-guide.html#silent">Silent installation on Windows&rarr;</a>.</p>
+      <p>
+        Referência:
+        <a
+          href="https://www.jetbrains.com/help/idea/installation-guide.html#silent"
+          >Silent installation on Windows&rarr;</a
+        >.
+      </p>
 
-                <h2 id="jasperlibrary">JasperReports Library <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do  <a href="https://community.jaspersoft.com/project/jasperreports-library">JasperReports Library&rarr;</a> e extraia o <b>zip</b> para <code>C:\Portable</code>.</p>
+      <h2 id="jasperlibrary">
+        JasperReports Library
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://community.jaspersoft.com/project/jasperreports-library"
+          >JasperReports Library&rarr;</a
+        >
+        e extraia o <b>zip</b> para <code>C:\Portable</code>.
+      </p>
 
-                <h2 id="jaspersoft">Jaspersoft Community Edition <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do  <a href="https://community.jaspersoft.com/project/jaspersoft-studio">Jaspersoft Community Edition&rarr;</a> e extraia o <b>zip</b> para <code>C:\Portable</code>. Crie um atalho do programa na Área de Trabalho do usuário <b>Aluno</b>.</p>
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>O software precisa de um login para ser utilizado. Cadastre-se no <a href="https://community.jaspersoft.com/register/">portal do software&rarr;</a>.</div>
-                </div>
+      <h2 id="jaspersoft">
+        Jaspersoft Community Edition
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://community.jaspersoft.com/project/jaspersoft-studio"
+          >Jaspersoft Community Edition&rarr;</a
+        >
+        e extraia o <b>zip</b> para <code>C:\Portable</code>. Crie um atalho do
+        programa na Área de Trabalho do usuário <b>Aluno</b>.
+      </p>
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>
+          O software precisa de um login para ser utilizado. Cadastre-se no
+          <a href="https://community.jaspersoft.com/register/"
+            >portal do software&rarr;</a
+          >.
+        </div>
+      </div>
 
-                <h2 id="jdk17">Java JDK 17 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Java JDK 17&rarr;</a>.</p>
+      <h2 id="jdk17">
+        Java JDK 17
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a
+          href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing"
+          >Java JDK 17&rarr;</a
+        >.
+      </p>
 
-                <h3>JAVA_HOME</h3>
-                <p>Acesse as <b>Propriedades do Sistema</b> e configure as variáveis de acordo com a versão instalada. O exemplo a seguir se aplica ao <b>JDK 17</b>.</p>
-                <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/variavel-java.png" alt="Propriedades do Sistema"></p>
-                <p>Para o <strong>Windows 7/10</strong> crie a variável <code>JAVA_HOME</code> com o seguinte valor:</p>
-                <pre><code>C:\Program Files\Java\jdk-17.0.2</code></pre>
+      <h3>JAVA_HOME</h3>
+      <p>
+        Acesse as <b>Propriedades do Sistema</b> e configure as variáveis de
+        acordo com a versão instalada. O exemplo a seguir se aplica ao
+        <b>JDK 17</b>.
+      </p>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/variavel-java.png"
+          alt="Propriedades do Sistema"
+        />
+      </p>
+      <p>
+        Para o <strong>Windows 7/10</strong> crie a variável
+        <code>JAVA_HOME</code> com o seguinte valor:
+      </p>
+      <pre><code>C:\Program Files\Java\jdk-17.0.2</code></pre>
 
-                <h3>Path</h3>
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>A variável <code>Path</code> já existe no sistema.</div>
-                </div>
+      <h3>Path</h3>
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>A variável <code>Path</code> já existe no sistema.</div>
+      </div>
 
-                <h4>Path no Windows 7</h4>
-                <pre><code>;%JAVA_HOME%\bin</code></pre>
+      <h4>Path no Windows 7</h4>
+      <pre><code>;%JAVA_HOME%\bin</code></pre>
 
-                <h4>Path no Windows 10</h4>
-                <pre><code>%JAVA_HOME%\bin</code></pre>
+      <h4>Path no Windows 10</h4>
+      <pre><code>%JAVA_HOME%\bin</code></pre>
 
-                <h3>Silent Install</h3>
-                <pre><code>start /wait msiexec /i "jdk-17_windows-x64_bin.msi" /qn /norestart</code></pre>
+      <h3>Silent Install</h3>
+      <pre><code>start /wait msiexec /i "jdk-17_windows-x64_bin.msi" /qn /norestart</code></pre>
 
-                <h3>Silent Uninstall</h3>
-                <pre><code>#Obtendo registro ID
+      <h3>Silent Uninstall</h3>
+      <pre><code>#Obtendo registro ID
 64x - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
 #Remocao
 start /wait msiexec /x {26A24AE4-039D-4CA4-87B4-2F06417079FF} /qn /norestart
 </code></pre>
 
-                <h2 id="jre">Java JRE <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://www.java.com/pt-BR/download/manual.jsp">Java JRE&rarr;</a>.</p>
+      <h2 id="jre">
+        Java JRE
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://www.java.com/pt-BR/download/manual.jsp"
+          >Java JRE&rarr;</a
+        >.
+      </p>
 
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Desative a verificação de atualizações.</div>
-                </div>
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>Desative a verificação de atualizações.</div>
+      </div>
 
-                <h3>Silent Install</h3>
-                <pre><code>"jre-8u321-windows-x64.exe" /s AUTO_UPDATE=Disable</code></pre>
+      <h3>Silent Install</h3>
+      <pre><code>"jre-8u321-windows-x64.exe" /s AUTO_UPDATE=Disable</code></pre>
 
-                <h2 id="kerkythea">Kerkythea 2008 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://www.kerkythearender.net/instalacao">Kerkythea 2008&rarr;</a>.</p>
+      <h2 id="kerkythea">
+        Kerkythea 2008
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://www.kerkythearender.net/instalacao"
+          >Kerkythea 2008&rarr;</a
+        >.
+      </p>
 
-                <h2 id="libre">LibreOffice <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://pt-br.libreoffice.org/baixe-ja/libreoffice-stable/">LibreOffice&rarr;</a>.
-                <h3>Desativar verificação de atualização</h3>
-                <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/libreoffice-update.png" alt="Desativar verificação de atualização"></p>
+      <h2 id="libre">
+        LibreOffice
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://pt-br.libreoffice.org/baixe-ja/libreoffice-stable/"
+          >LibreOffice&rarr;</a
+        >.
+      </p>
+      <h3>Desativar verificação de atualização</h3>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/libreoffice-update.png"
+          alt="Desativar verificação de atualização"
+        />
+      </p>
 
-                <h3>Silent Install</h3>
-                <pre><code>start /wait msiexec /i "%SOFTWARES%\LibreOffice_7.2.5_Win_x64.msi" /qn /norestart</code></pre>
+      <h3>Silent Install</h3>
+      <pre><code>start /wait msiexec /i "%SOFTWARES%\LibreOffice_7.2.5_Win_x64.msi" /qn /norestart</code></pre>
 
-                <h3>Silent Uninstall</h3>
-                <pre><code>start /wait msiexec /x "%SOFTWARES%\LibreOffice_6.3.6.2_Win_x64.msi" /qn /norestart</code></pre>
+      <h3>Silent Uninstall</h3>
+      <pre><code>start /wait msiexec /x "%SOFTWARES%\LibreOffice_6.3.6.2_Win_x64.msi" /qn /norestart</code></pre>
 
-                <h2 id="vcredist">Microsoft Visual C++ Redistributable Runtimes <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://github.com/abbodi1406/vcredist">Microsoft Visual C++ Redistributable Runtimes&rarr;</a>.</p>
+      <h2 id="vcredist">
+        Microsoft Visual C++ Redistributable Runtimes
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://github.com/abbodi1406/vcredist"
+          >Microsoft Visual C++ Redistributable Runtimes&rarr;</a
+        >.
+      </p>
 
-                <h2 id="mopac">MOPAC <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="http://openmopac.net/Download_MOPAC_Executable_Step2.html">MOPAC&rarr;</a>.</p>
+      <h2 id="mopac">
+        MOPAC
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="http://openmopac.net/Download_MOPAC_Executable_Step2.html"
+          >MOPAC&rarr;</a
+        >.
+      </p>
 
-                <h2 id="workbench">MySQL Workbench <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://dev.mysql.com/downloads/windows/installer/8.0.html">MySQL Workbench&rarr;</a>.</p>
+      <h2 id="workbench">
+        MySQL Workbench
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://dev.mysql.com/downloads/windows/installer/8.0.html"
+          >MySQL Workbench&rarr;</a
+        >.
+      </p>
 
-                <h3>Silent Install</h3>
-                <pre><code>msiexec /i "mysql-installer-community-8.0.13.0.msi" /qb</code></pre>
+      <h3>Silent Install</h3>
+      <pre><code>msiexec /i "mysql-installer-community-8.0.13.0.msi" /qb</code></pre>
 
-                <h2 id="nodejs">Node.js <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://nodejs.org/en/">Node.js&rarr;</a>.</p>
+      <h2 id="nodejs">
+        Node.js
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do <a href="https://nodejs.org/en/">Node.js&rarr;</a>.
+      </p>
 
-                <h3>Setando Proxy</h3>
-                <p>Execute os comandos abaixo no <code>prompt</code> como <b>Usuário Padrão</b>.</p>
-                <pre><code>npm config set proxy http://192.168.0.6:3128
+      <h3>Setando Proxy</h3>
+      <p>
+        Execute os comandos abaixo no <code>prompt</code> como
+        <b>Usuário Padrão</b>.
+      </p>
+      <pre><code>npm config set proxy http://192.168.0.6:3128
 npm config set https-proxy http://192.168.0.6:3128</code></pre>
 
-                <h3>Silent Install</h3>
-                <pre><code>msiexec /i "node-v10.15.3-x64.msi" /qn</code></pre>
+      <h3>Silent Install</h3>
+      <pre><code>msiexec /i "node-v10.15.3-x64.msi" /qn</code></pre>
 
-                <h2 id="virtualbox">Oracle VirtualBox <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://www.virtualbox.org/wiki/Downloads">Oracle VirtualBox&rarr;</a>.</p>
-                <h3>Extension Pack</h3>
-                <p>Faça o download do <a href="https://www.virtualbox.org/wiki/Downloads">Extension Pack&rarr;</a> e adicione ao Oracle VirtualBox.</p>
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Desative a verificação de atualizações.</div>
-                </div>
+      <h2 id="virtualbox">
+        Oracle VirtualBox
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://www.virtualbox.org/wiki/Downloads"
+          >Oracle VirtualBox&rarr;</a
+        >.
+      </p>
+      <h3>Extension Pack</h3>
+      <p>
+        Faça o download do
+        <a href="https://www.virtualbox.org/wiki/Downloads"
+          >Extension Pack&rarr;</a
+        >
+        e adicione ao Oracle VirtualBox.
+      </p>
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>Desative a verificação de atualizações.</div>
+      </div>
 
-                <h2 id="vmubuntu">Oracle Virtual Machine Ubuntu <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>VM do Ubuntu 20.04.3 64bits LTS, rodando no Oracle VM VirtualBox.</p>
+      <h2 id="vmubuntu">
+        Oracle Virtual Machine Ubuntu
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>VM do Ubuntu 20.04.3 64bits LTS, rodando no Oracle VM VirtualBox.</p>
 
-                <h2 id="portugol">Portugol Stúdio <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://univali-lite.github.io/Portugol-Studio/">Portugol Stúdio&rarr;</a>.</p>
+      <h2 id="portugol">
+        Portugol Stúdio
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://univali-lite.github.io/Portugol-Studio/"
+          >Portugol Stúdio&rarr;</a
+        >.
+      </p>
 
-                <h3>Silent Install</h3>
-                <pre><code>"portugol-studio-2.7.5-windows.exe" --mode unattended</code></pre>
-                <h3>Silent Uninstall</h3>
-                <pre><code>"%ProgramData%\UNIVALI\Portugol Studio\desinstalar.exe" --mode unattended</code></pre>
+      <h3>Silent Install</h3>
+      <pre><code>"portugol-studio-2.7.5-windows.exe" --mode unattended</code></pre>
+      <h3>Silent Uninstall</h3>
+      <pre><code>"%ProgramData%\UNIVALI\Portugol Studio\desinstalar.exe" --mode unattended</code></pre>
 
-                <h2 id="reboot">Reboot Restore RX <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://horizondatasys.com/reboot-restore-rx-freeware/">Reboot Restore RX&rarr;</a>.</p>
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Não suporta Windows 11.</div>
-                </div>
+      <h2 id="reboot">
+        Reboot Restore RX
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://horizondatasys.com/reboot-restore-rx-freeware/"
+          >Reboot Restore RX&rarr;</a
+        >.
+      </p>
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>Não suporta Windows 11.</div>
+      </div>
 
-                <h2 id="revit">Revit <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://www.autodesk.com/education/free-software/">Revit&rarr;</a>.</p>
+      <h2 id="revit">
+        Revit
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://www.autodesk.com/education/free-software/"
+          >Revit&rarr;</a
+        >.
+      </p>
 
-                <h2 id="scratch">Scratch <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://scratch.mit.edu/download">Scratch&rarr;</a>.</p>
+      <h2 id="scratch">
+        Scratch
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://scratch.mit.edu/download">Scratch&rarr;</a>.
+      </p>
 
-                <h3>Silent Install</h3>
-                <pre><code>"Scratch-461.exe" -silent</code></pre>
+      <h3>Silent Install</h3>
+      <pre><code>"Scratch-461.exe" -silent</code></pre>
 
-                <h2 id="sketchup">SketchUp Make 2016 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">SketchUp Make 2016&rarr;</a>.</p>
+      <h2 id="sketchup">
+        SketchUp Make 2016
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a
+          href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing"
+          >SketchUp Make 2016&rarr;</a
+        >.
+      </p>
 
-                <h3>Plugin</h3>
-                <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">exportador para Sketchup&rarr;</a> e adicione ao SketchUp.</p>
-                <p>Diretório de instalação\extração do plugin:</p>
-                <pre><code>C:\Users\Aluno\AppData\Roaming\SketchUp\SketchUp 2016\SketchUp\Plugins</code></pre>
+      <h3>Plugin</h3>
+      <p>
+        Faça o download do
+        <a
+          href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing"
+          >exportador para Sketchup&rarr;</a
+        >
+        e adicione ao SketchUp.
+      </p>
+      <p>Diretório de instalação\extração do plugin:</p>
+      <pre><code>C:\Users\Aluno\AppData\Roaming\SketchUp\SketchUp 2016\SketchUp\Plugins</code></pre>
 
-                <h2 id="sumatrapdf">SumatraPDF <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://www.sumatrapdfreader.org/free-pdf-reader.html">SumatraPDF&rarr;</a>.</p>
+      <h2 id="sumatrapdf">
+        SumatraPDF
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://www.sumatrapdfreader.org/free-pdf-reader.html"
+          >SumatraPDF&rarr;</a
+        >.
+      </p>
 
-                <h3>Silent Install</h3>
-                <pre><code>"SumatraPDF-3.1.2-64-install.exe" /S</code></pre>
+      <h3>Silent Install</h3>
+      <pre><code>"SumatraPDF-3.1.2-64-install.exe" /S</code></pre>
 
-                <h2 id="freeze">Toolwiz Time Freeze <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do  <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Toolwiz Time Freeze&rarr;</a>.</p>
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Não suporta Windows 11.</div>
-                </div>
+      <h2 id="freeze">
+        Toolwiz Time Freeze
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a
+          href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing"
+          >Toolwiz Time Freeze&rarr;</a
+        >.
+      </p>
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>Não suporta Windows 11.</div>
+      </div>
 
-                <h2 id="ultimaker">Ultimaker Cura <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://ultimaker.com/software/ultimaker-cura">Ultimaker Cura&rarr;</a>.</p>
+      <h2 id="ultimaker">
+        Ultimaker Cura
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://ultimaker.com/software/ultimaker-cura"
+          >Ultimaker Cura&rarr;</a
+        >.
+      </p>
 
-                <h2 id="veyon">Veyon <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://veyon.io/download/">Veyon&rarr;</a>.</p>
+      <h2 id="veyon">
+        Veyon
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do <a href="https://veyon.io/download/">Veyon&rarr;</a>.
+      </p>
 
-                <h3>Silent Install</h3>
-                <p>Instalação para o cliente.</p>
-                <pre><code>"veyon-4.7.1.3-win64-setup.exe" /S /NoMaster</code></pre>
+      <h3>Silent Install</h3>
+      <p>Instalação para o cliente.</p>
+      <pre><code>"veyon-4.7.1.3-win64-setup.exe" /S /NoMaster</code></pre>
 
-                <h3>Silent Uninstall</h3>
-                <pre><code>"%ProgramFiles%\Veyon\uninstall.exe" /S</code></pre>
+      <h3>Silent Uninstall</h3>
+      <pre><code>"%ProgramFiles%\Veyon\uninstall.exe" /S</code></pre>
 
-                <h3>Importando configurações</h3>
-                <pre><code>"%ProgramFiles%\Veyon\veyon-cli" config import %PASTAORIGEM%\veyon-cliente.json</code></pre>
+      <h3>Importando configurações</h3>
+      <pre><code>"%ProgramFiles%\Veyon\veyon-cli" config import %PASTAORIGEM%\veyon-cliente.json</code></pre>
 
-                <div class="alert alert-info d-flex align-items-center">
-                    <svg class="bi flex-shrink-0 me-2" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-                        <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
-                    </svg>
-                    <div>Para o computador do professor será necessário instalar o Veyon Master, com as devidas configurações para acessar as máquinas clientes.</div>
-                </div>
+      <div class="alert alert-info d-flex align-items-center">
+        <svg
+          class="bi flex-shrink-0 me-2"
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          fill="currentColor"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"
+          />
+          <path
+            d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"
+          />
+        </svg>
+        <div>
+          Para o computador do professor será necessário instalar o Veyon
+          Master, com as devidas configurações para acessar as máquinas
+          clientes.
+        </div>
+      </div>
 
-                <h2 id="vscode">Visual Studio Code <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://code.visualstudio.com/">Visual Studio Code&rarr;</a> na versão de sistema.</p>
-                <h3>Plugins</h3>
-                <p>Disponibilize os seguintes plugins no software:</p>
-                <ol>
-                    <li>Portuguese Brazil Language</li>
-                    <li>Python</li>
-                    <li>IntelliCode</li>
-                    <li>Indent-rainbow</li>
-                    <li>Material Icon Theme</li>
-                    <li>Preview</li>
-                    <li>Code Runner</li>
-                    <li>Trailing Spaces</li>
-                    <li>Night Owl</li>
-                </ol>
-                <h3>Desabilitando atualizações do software</h3>
-                <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/update-vscode.png" alt="Atualização do programa"></p>
-                <h3>Desabilitando atualizações dos plugins</h3>
-                <p><img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/update-vscode-plugins.png" alt="Atualização de plugins"></p>
-                <h3>Silent Install</h3>
-                <pre><code>"VSCodeSetup-x64-1.64.2.exe" /SILENT /NORESTART /MERGETASKS=!runcode</code></pre>
-                <h3>Silent Uninstall</h3>
-                <pre><code>"%ProgramFiles%\Microsoft VS Code\unins000.exe" /VERYSILENT /NORESTART</code></pre>
+      <h2 id="vscode">
+        Visual Studio Code
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://code.visualstudio.com/">Visual Studio Code&rarr;</a> na
+        versão de sistema.
+      </p>
+      <h3>Plugins</h3>
+      <p>Disponibilize os seguintes plugins no software:</p>
+      <ol>
+        <li>Portuguese Brazil Language</li>
+        <li>Python</li>
+        <li>IntelliCode</li>
+        <li>Indent-rainbow</li>
+        <li>Material Icon Theme</li>
+        <li>Preview</li>
+        <li>Code Runner</li>
+        <li>Trailing Spaces</li>
+        <li>Night Owl</li>
+      </ol>
+      <h3>Desabilitando atualizações do software</h3>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/update-vscode.png"
+          alt="Atualização do programa"
+        />
+      </p>
+      <h3>Desabilitando atualizações dos plugins</h3>
+      <p>
+        <img
+          class="img-fluid border rounded-1"
+          src="{{ site.baseurl }}/assets/images/pages/update-vscode-plugins.png"
+          alt="Atualização de plugins"
+        />
+      </p>
+      <h3>Silent Install</h3>
+      <pre><code>"VSCodeSetup-x64-1.64.2.exe" /SILENT /NORESTART /MERGETASKS=!runcode</code></pre>
+      <h3>Silent Uninstall</h3>
+      <pre><code>"%ProgramFiles%\Microsoft VS Code\unins000.exe" /VERYSILENT /NORESTART</code></pre>
 
-                <h2 id="visualg">VisuAlg <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://sourceforge.net/projects/visualg30/">VisuAlg&rarr;</a>.</p>
-                <p>Extraia os arquivos para a pasta <code>C:\Portable\visualg</code> e crie um link para a Área de trabalho do <b>Aluno</b>.</p>
+      <h2 id="visualg">
+        VisuAlg
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://sourceforge.net/projects/visualg30/">VisuAlg&rarr;</a>.
+      </p>
+      <p>
+        Extraia os arquivos para a pasta <code>C:\Portable\visualg</code> e crie
+        um link para a Área de trabalho do <b>Aluno</b>.
+      </p>
 
-                <h2 id="ventos">Visualventos <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Visualventos&rarr;</a>.</p>
+      <h2 id="ventos">
+        Visualventos
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a
+          href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing"
+          >Visualventos&rarr;</a
+        >.
+      </p>
 
-                <h2 id="vlc">VLC Media Player <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do <a href="https://www.videolan.org/vlc/index.pt-BR.html">VLC Media Player&rarr;</a>.</p>
+      <h2 id="vlc">
+        VLC Media Player
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://www.videolan.org/vlc/index.pt-BR.html"
+          >VLC Media Player&rarr;</a
+        >.
+      </p>
 
-                <h3>Silent Install</h3>
-                <pre><code>"vlc-3.0.4-win64.exe" /S</code></pre>
+      <h3>Silent Install</h3>
+      <pre><code>"vlc-3.0.4-win64.exe" /S</code></pre>
 
-                <h2 id="xampp">XAMPP <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0066cc" class="bi bi-box-fill" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"/>
-                  </svg></h2>
-                <p>Faça o download do  <a href="https://www.apachefriends.org/pt_br/index.html">XAMPP&rarr;</a>.</p>
-                <p>Instale os seguintes componentes:</p>
-                <ul>
-                  <li>Apache</li>
-                  <li>MySQL</li>
-                  <li>PHP</li>
-                  <li>PhpMyAdmin</li>
-                </ul>
+      <h2 id="xampp">
+        XAMPP
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="#0066cc"
+          class="bi bi-box-fill"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.004-.001.274-.11a.75.75 0 0 1 .558 0l.274.11.004.001zm-1.374.527L8 5.962 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339Z"
+          />
+        </svg>
+      </h2>
+      <p>
+        Faça o download do
+        <a href="https://www.apachefriends.org/pt_br/index.html">XAMPP&rarr;</a
+        >.
+      </p>
+      <p>Instale os seguintes componentes:</p>
+      <ul>
+        <li>Apache</li>
+        <li>MySQL</li>
+        <li>PHP</li>
+        <li>PhpMyAdmin</li>
+      </ul>
 
-                <h3>Permissões para iniciar e encerrar os serviços</h3>
-                <p>Execute o comando abaixo pelo <code>prompt</code> como <b>Administrador</b>.</p>
-                <pre><code>cacls "%SystemDrive%\xampp\xampp-control.ini" /E /P Todos:F</code></pre>
+      <h3>Permissões para iniciar e encerrar os serviços</h3>
+      <p>
+        Execute o comando abaixo pelo <code>prompt</code> como
+        <b>Administrador</b>.
+      </p>
+      <pre><code>cacls "%SystemDrive%\xampp\xampp-control.ini" /E /P Todos:F</code></pre>
 
-                <h3>Silent Install</h3>
-                <pre><code>"xampp-windows-x64-8.1.2-0-VS16-installer.exe" --mode unattended --installer-language pt_BR --launchapps 0 --disable-components xampp_filezilla,xampp_mercury,xampp_tomcat,xampp_perl,xampp_webalizer,xampp_sendmail</code></pre>
+      <h3>Silent Install</h3>
+      <pre><code>"xampp-windows-x64-8.1.2-0-VS16-installer.exe" --mode unattended --installer-language pt_BR --launchapps 0 --disable-components xampp_filezilla,xampp_mercury,xampp_tomcat,xampp_perl,xampp_webalizer,xampp_sendmail</code></pre>
 
-                <h3>Silent Uninstall</h3>
-                <pre><code>"%SystemDrive%\xampp\uninstall.exe" --mode unattended
+      <h3>Silent Uninstall</h3>
+      <pre><code>"%SystemDrive%\xampp\uninstall.exe" --mode unattended
 rd "%SystemDrive%\xampp" /s /q
 </code></pre>
-
-        </main>
-
-    </div>
-
+    </main>
+  </div>
 </div>
 
 {% include footer.html %}
