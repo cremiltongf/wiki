@@ -1,9 +1,13 @@
-/* layout */
+/*
+ * layout
+ */
 .maxwidth{
     max-width: 1296px;
 }
 
-/* header */
+/*
+ * header
+ */
 .navbar-brand svg{
     max-width: 109px;
     max-height: 40px;
@@ -12,7 +16,9 @@
     fill: rgba(255, 255, 255, 0.75);
 }
 
-/* sidebars*/
+/*
+ *sidebars
+ */
 .sidebar-ul ul{
     margin-left: 6px;
 }
@@ -43,15 +49,6 @@
 .sidebar-ul > li > a:hover{
     text-decoration: underline;
 }
-
-.on-page{
-    padding: 0 12px;
-    position: sticky;
-    top: 88px;
-    max-height: calc(100vh - 100px);
-    overflow-y: auto;
-}
-
 @media (min-width: 992px){
     .sidebar{
         padding: 0 12px;
@@ -68,18 +65,16 @@
     .sidebar{
         visibility: hidden;
         background-color: rgb(248, 249, 250);
-    }
-    .sidebar-show .sidebar{
-        visibility: visible;
-        animation: animationSidebar .4s ease-in;
-    }
-    .sidebar{
         position: fixed;
         top: 66px;
         left: 0;
         width: 100%;
         height: calc(100vh - 56px);
         overflow-y: scroll;
+    }
+    .sidebar-show .sidebar{
+        visibility: visible;
+        animation: animationSidebar .4s ease-in;
     }
     .sidebar-ul{
         padding: 1.6rem 2.6rem;
@@ -94,7 +89,9 @@
     }
 }
 
-/* anchor */
+/*
+ * anchor
+ */
 h2::before {
     content: "";
     display: block;
@@ -102,7 +99,9 @@ h2::before {
     margin-top: -80px;
 }
 
-/* title */
+/*
+ * title
+ */
 h1, h2{
     font-weight: bold;
 }
@@ -116,7 +115,9 @@ h4{
     margin-top: 1rem;
 }
 
-/* arrow */
+/*
+ * arrow
+ */
 .wiki-arrow{
     color: #f61;
     font-weight: bold;
@@ -166,7 +167,9 @@ h4{
     }
 }
 
-/* return top */
+/*
+ * return top
+ */
 .return-top{
     visibility: hidden;
     opacity: 0;
@@ -180,7 +183,9 @@ h4{
     opacity: 1;
 }
 
-/* code */
+/*
+ * code
+ */
 pre{
     color: #f61;
     padding: 16px;
