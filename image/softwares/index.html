@@ -1284,19 +1284,6 @@ npm config set https-proxy http://192.168.0.6:3128</code></pre>
         <a href="https://www.virtualbox.org/wiki/Downloads">Extension Pack&rarr;</a>
         e adicione ao Oracle VirtualBox.
       </p>
-      <h3>Atualizando Kernel na VM</h3>
-      <p>Para reinstalar:</p>
-      <pre>
-        <code>sudo apt-get autoremove virtualbox-dkms
-sudo apt-get install build-essential linux-headers-`uname -r` dkms virtualbox-dkms
-        </code>
-      </pre>
-      <p>Para ativar:</p>
-      <pre>
-        <code>sudo modprobe vboxdrv
-        sudo modprobe vboxnetflt
-        </code>
-      </pre>
       <h3>Dependência win32api</h3>
       <p>Execute no <code>PowerShell</code> como <b>Administrador</b>, o seguinte comando:</p>
       <pre><code>py -m pip install pywin32</code></pre>
@@ -1320,6 +1307,17 @@ sudo apt-get install build-essential linux-headers-`uname -r` dkms virtualbox-dk
         </svg>
       </h2>
       <p>VM do Ubuntu 20.04.3 64bits LTS, rodando no Oracle VM VirtualBox.</p>
+      <h3>Atualizando Kernel na VM</h3>
+      <p>Para reinstalar:</p>
+      <pre><code>sudo apt-get autoremove virtualbox-dkms
+sudo apt-get install build-essential linux-headers-`uname -r` dkms virtualbox-dkms
+</code>
+      </pre>
+      <p>Para ativar:</p>
+      <pre><code>sudo modprobe vboxdrv
+sudo modprobe vboxnetflt
+</code>
+      </pre>
 
       <h2 id="portugol">
         Portugol Stúdio
