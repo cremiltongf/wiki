@@ -121,6 +121,16 @@ permalink: /image/clone/
           fim mantê-lo intacto.
         </div>
       </div>
+      <h3 id="desabilitar">Descongelando o SO</h3>
+      <pre><code>cmd /k "C:\Windows\SysWOW64\DFC.exe" password /BOOTTHAWED</code></pre>
+
+      <h3 id="habilitando">Congelando o SO</h3>
+      <pre><code>cmd /k "C:\Windows\SysWOW64\DFC.exe" password /FREEZENEXTBOOT</code></pre>
+
+      <h3 id="status">Checar o status</h3>
+      <pre><code>cmd /k "C:\Windows\SysWOW64\DFC.exe" get /ISFROZEN</code></pre>
+      <p>Este comando <b>retorna 0</b> (descongelando) ou <b>retorna 1</b> (congelado).</p>
+
 
       <h2 id="restore">
         Habilitar Reboot Restore RX
