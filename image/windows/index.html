@@ -339,10 +339,6 @@ Senha: aluno123
             <td>Desativado via GPO ou <code>services.msc</code></td>
           </tr>
           <tr>
-            <td>Notícias e Interesses</td>
-            <td>Desativado via GPO ou através da barra de tarefas</td>
-          </tr>
-          <tr>
             <td>Desfragmentador ou Otimizador de Discos/Unidades</td>
             <td>Manual via GPO ou <code>services.msc</code></td>
           </tr>
@@ -351,11 +347,32 @@ Senha: aluno123
             <td>Desativado via GPO ou <code>services.msc</code></td>
           </tr>
           <tr>
+            <td>Spooler de Impressão</td>
+            <td>Desativado via GPO ou <code>services.msc</code></td>
+          </tr>
+          <tr>
             <td>Windows Search</td>
+            <td>Desativado via GPO ou <code>services.msc</code></td>
+          </tr>
+          <tr>
+            <td>Edge Update</td>
             <td>Desativado via GPO ou <code>services.msc</code></td>
           </tr>
         </tbody>
       </table>
+      <h3>Gerenciando com arquivos em lote</h3>
+      <pre><code>@echo off
+
+rem HELP
+rem start= {auto(automatico) - demand(manual) - disabled(desativado) - delayed-auto(atraso-na-inicializacao)}
+rem END HELP
+
+rem Backup do Windows
+  sc config "SDRSVC" start= disabled
+
+pause
+
+exit</code></pre>
 
     </main>
   </div>
