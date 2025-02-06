@@ -124,6 +124,16 @@ h4{
 }
 
 /*
+ * ico title
+ */
+ h2 span{
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: transparent bottom center url("../images/ico-title.svg") no-repeat;
+ }
+
+/*
  * 404
  */
  .container-404{
