@@ -133,6 +133,17 @@ h4{
     background: transparent bottom center url("../images/ico-title.svg") no-repeat;
  }
 
+ /*
+  * ico info
+  */
+.alert span{
+    display: inline-block;
+    width: 2.8rem;
+    height: 2.8rem;
+    background: transparent center center url("../images/ico-info.svg") no-repeat;
+}
+
+
 /*
  * 404
  */
