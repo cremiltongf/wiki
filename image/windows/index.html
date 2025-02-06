@@ -17,10 +17,7 @@ permalink: /image/windows
         Configuração padrão do Sistema Operacional Windows 7, 10 e 11.
       </p>
 
-      <h2 id="admin">
-        Usuário Administrador
-        <span></span>
-      </h2>
+      <h2 id="admin">Usuário Administrador<span></span></h2>
       <p>
         Criar usuário Administrador <strong>IFPR</strong> e definir senha padrão
         disponível na
@@ -28,10 +25,7 @@ permalink: /image/windows
           href="https://docs.google.com/spreadsheets/d/1K7BrCy4tWE0I9W5_Dc5zm_tXNyYtj4ZYFQJLmiljGAE/edit?usp=sharing">planilha&rarr;</a>.
       </p>
 
-      <h2 id="estudante">
-        Usuário Padrão
-        <span></span>
-      </h2>
+      <h2 id="estudante">Usuário Padrão<span></span></h2>
       <p>Criar o usuário <strong>Aluno</strong> para o login automático:</p>
       <pre><code>Usuário: aluno
 Senha: aluno123
@@ -46,10 +40,7 @@ Senha: aluno123
         </div>
       </div>
 
-      <h2 id="particao">
-        Partições do SO
-        <span></span>
-      </h2>
+      <h2 id="particao">Partições do SO<span></span></h2>
       <p>Defina as partições do computador conforme tabela abaixo:</p>
       <table class="table table-striped table-hover border">
         <thead>
@@ -77,16 +68,10 @@ Senha: aluno123
         </div>
       </div>
 
-      <h2 id="windowsupdate">
-        Windows Update
-        <span></span>
-      </h2>
+      <h2 id="windowsupdate">Windows Update<span></span></h2>
       <p>Instale todas as atualizações do Windows.</p>
 
-      <h2 id="drivers">
-        Atualização de drivers
-        <span></span>
-      </h2>
+      <h2 id="drivers">Atualização de drivers<span></span></h2>
       <p>
         Baixe os drivers do site do fabricante ou utilize softwares como
         <a href="https://www.drivereasy.com/">EasyDriver&rarr;</a> ou
@@ -99,10 +84,7 @@ Senha: aluno123
         </div>
       </div>
 
-      <h2 id="wol">
-        Configuração de WOL
-        <span></span>
-      </h2>
+      <h2 id="wol">Configuração de WOL<span></span></h2>
       <ol>
         <li class="mb-2">Abra o Gerenciador de Dispositivos;</li>
         <li class="mb-2">Acesse Adaptadores de rede e abra a categoria;</li>
@@ -126,10 +108,7 @@ Senha: aluno123
         <li class="mb-2">Confirme as alterações clicando em OK.</li>
       </ol>
 
-      <h2 id="fastboot">
-        Fast Boot
-        <span></span>
-      </h2>
+      <h2 id="fastboot">Fast Boot<span></span></h2>
       <div class="alert alert-info d-flex align-items-center">
         <span class="bi flex-shrink-0"></span>
         <div>Ajuste necessário para o desligamento completo do SO.</div>
@@ -137,10 +116,7 @@ Senha: aluno123
       <p>Execute no <code>prompt</code> como Administrador:</p>
       <pre><code>powercfg.exe /hibernate off</code></pre>
 
-      <h2 id="reparo">
-        Reparo automático
-        <span></span>
-      </h2>
+      <h2 id="reparo">Reparo automático<span></span></h2>
       <div class="alert alert-info d-flex align-items-center">
         <span class="bi flex-shrink-0"></span>
         <div>
@@ -159,18 +135,12 @@ Senha: aluno123
       </p>
       <pre><code>bcdedit /set recoveryenabled NO</code></pre>
 
-      <h2 id="defrag">
-        Otimização agendada
-        <span></span>
-      </h2>
+      <h2 id="defrag">Otimização agendada<span></span></h2>
       <p>Desative este serviço para todas as unidades.</p>
       <img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/desfragmentador.png"
         alt="Desfragmentador" />
 
-      <h2 id="secwindows">
-        Segurança do Windows
-        <span></span>
-      </h2>
+      <h2 id="secwindows">Segurança do Windows<span></span></h2>
       <p>
         Desative as opções pelo Editor de política de grupo
         <span class="wiki-arrow">&harr;</span> <code>gpedit.msc</code>.
@@ -199,10 +169,7 @@ Senha: aluno123
         <div>Possível definir pelo Active Directory.</div>
       </div>
 
-      <h2 id="pesquisar">
-        Pesquisa na internet
-        <span></span>
-      </h2>
+      <h2 id="pesquisar">Pesquisa na internet<span></span></h2>
       <p>
         Para desativar este recurso, execute no <code>prompt</code> como
         <b>Administrador</b>:
@@ -217,16 +184,11 @@ Senha: aluno123
         </div>
       </div>
 
-      <h2 id="psremote">Comunicação remota do PowerShell
-        <span></span>
-      </h2>
+      <h2 id="psremote">Comunicação remota do PowerShell<span></span></h2>
       <p>Execute no <code>PowerShell</code> como <b>Administrador</b>:</p>
       <pre><code>Enable-PSRemoting</code></pre>
 
-      <h2 id="servicos">
-        Serviços
-        <span></span>
-      </h2>
+      <h2 id="servicos">Serviços<span></span></h2>
       <p>Lista de serviços a serem desativados:</p>
       <table class="table table-striped table-hover border">
         <thead>
