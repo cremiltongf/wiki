@@ -2,4 +2,4 @@
 
 # Wiki - Laboratórios de Informática
 
-Este wiki contém detalhes sobre configuração do Sistema Operacional Windows (7, 10 e 11) e instalação/configuração de softwares para utilização nos Laboratórios de Informática do IFPR Campus Umuarama.
+Este wiki contém detalhes sobre configuração do Sistema Operacional Windows (7, 10 e 11) e instalação/configuração de softwares para utilização nos Laboratórios de Informática do IFPR Campus Umuarama
