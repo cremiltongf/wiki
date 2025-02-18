@@ -67,9 +67,7 @@ permalink: /image/clone/
           Todas as máquinas possuem licença OEM.
         </div>
       </div>
-      <p>Para ver a key via <code>prompt</code> como <b>Administrador:</b></p>
-      <pre><code>wmic path SoftwareLicensingService get OA3xOriginalProductKey</code></pre>
-      <p>Para ver a key via <code>powerShell</code> como <b>Administrador:</b></p>
+      <p>Para acessar a key pelo <code>prompt</code>:</p>
       <pre><code>powershell "(Get-WmiObject -query 'select * from SoftwareLicensingService').OA3xOriginalProductKey"</code></pre>
       <p>Referência: <a href="https://github.com/dporkka/windows-product-key">How to find your Windows Product Key using
           the Command Prompt or Powershell&rarr;</a>
