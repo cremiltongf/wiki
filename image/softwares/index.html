@@ -986,6 +986,38 @@ sudo modprobe vboxnetflt</code></pre>
         <img class="img-fluid border rounded-1" src="{{ site.baseurl }}/assets/images/pages/pycharm-update.png"
           alt="Desabilitando atualizações" />
       </p>
+      <h3>Silent Install</h3>
+      <pre><code>"pycharm-community-2024.3.2.exe" /S /CONFIG="silent.config"</code></pre>
+
+      <p>Conteúdo de <code>silent.config</code>:</p>
+      <pre><code>; Installation mode. It can be user or admin.
+; NOTE: for admin mode please use "Run as Administrator" for command prompt to avoid UAC dialog.
+mode=admin
+
+; Desktop shortcut for launchers
+launcher32=0
+launcher64=1
+
+; Add launchers path to PATH env variable
+updatePATH=0
+
+; Add "Open Folder as Project" to context menu
+updateContextMenu=0
+
+; Download and install jre32
+jre32=0
+
+; Regenerating the Shared Archive
+; https://docs.oracle.com/en/java/javase/11/vm/class-data-sharing.html
+regenerationSharedArchive=1
+
+; List of associations. To create an association change value to 1.
+.py=0</code></pre>
+      <p>
+        Referência:
+        <a href="https://www.jetbrains.com/help/pycharm/installation-guide.html#silent">Silent installation on
+          Windows&rarr;</a>.
+      </p>
 
       <h2 id="reboot">Reboot Restore RX<span></span></h2>
       <p>
