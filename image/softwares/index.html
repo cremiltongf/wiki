@@ -201,12 +201,11 @@ ssl_verify: false
       <h3>Silent Install</h3>
       <pre><code>msiexec /i "blender-2.79b-windows64.msi" /qb</code></pre>
 
-      <h2 id="localdns">Bonjour ou mDNS<span></span></h2>
+      <h2 id="bonjour">Bonjour<span></span></h2>
       <div class="alert alert-info d-flex align-items-center">
         <span class="bi flex-shrink-0"></span>
         <div>
-          Instale o Bonjour apenas para o Windows 7. Para o Windows 10 ative o
-          mDNS.
+          Instale o Bonjour apenas no Windows 7.
         </div>
       </div>
       <h3>Bonjour</h3>
@@ -216,9 +215,6 @@ ssl_verify: false
       </p>
       <h3>Silent Install</h3>
       <pre><code>msiexec /i "Bonjour64.msi" /qb</code></pre>
-      <h3>mDNS</h3>
-      <p>Para o Windows 10, ative o recurso mDNS:</p>
-      <pre><code>reg add "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /v EnableMulticast /t REG_DWORD /d 1 /f</code></pre>
 
       <h2 id="bricx">BricxCC<span></span></h2>
       <p>
