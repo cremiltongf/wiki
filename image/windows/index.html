@@ -130,18 +130,17 @@ Senha: aluno123
       <div class="alert alert-info d-flex align-items-center">
         <span class="bi flex-shrink-0"></span>
         <div>
-          Ajuste necessário para evitar o reparo automático do SO, o que pode
-          "quebrar" o Windows.
+          Ajuste necessário para evitar o reparo automático do SO em caso de queda de energia.
         </div>
       </div>
       <h3>Desativar no Windows 7</h3>
       <p>
-        Execute o comando abaixo pelo <code>prompt</code> como Administrador:
+        Execute no <code>prompt</code> como <b>Administrador</b>:
       </p>
       <pre><code>bcdedit /set {default} bootstatuspolicy ignoreallfailures</code></pre>
       <h3>Desativar no Windows 10/11</h3>
       <p>
-        Execute o comando abaixo pelo <code>prompt</code> como Administrador:
+        Execute no <code>prompt</code> como <b>Administrador</b>:
       </p>
       <pre><code>bcdedit /set recoveryenabled NO</code></pre>
 
