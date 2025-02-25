@@ -116,6 +116,16 @@ Senha: aluno123
       <p>Execute no <code>prompt</code> como Administrador:</p>
       <pre><code>powercfg.exe /hibernate off</code></pre>
 
+      <h2 id="mdns">mDNS</h2>
+      <div class="alert alert-info d-flex align-items-center">
+        <span class="bi flex-shrink-0"></span>
+        <div>
+          Aplica-se ao Windows 10/11 apenas. Serve para o <b>Veyon</b> enxergar as outras máquinas na rede local.
+        </div>
+      </div>
+      <p>Execute no <code>prompt</code> como <b>Administrador</b>:</p>
+      <pre><code>reg add "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /v EnableMulticast /t REG_DWORD /d 1 /f</code></pre>
+
       <h2 id="reparo">Reparo automático<span></span></h2>
       <div class="alert alert-info d-flex align-items-center">
         <span class="bi flex-shrink-0"></span>
