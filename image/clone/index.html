@@ -19,8 +19,6 @@ permalink: /image/clone/
         congelamento do SO.
       </p>
 
-      <!-- Start Clone -->
-
       <h2 id="nome">Nome e Grupo<span></span></h2>
       <p>Renomeie o computador conforme dados abaixo:</p>
       <table class="table table-striped table-hover border">
@@ -108,10 +106,10 @@ permalink: /image/clone/
       </div>
 
       <h3 id="desabilitar">Descongelando o SO</h3>
-      <pre><code>cmd /k "C:\Windows\SysWOW64\DFC.exe" password /BOOTTHAWED</code></pre>
+      <pre><code>cmd /k "C:\Windows\SysWOW64\DFC.exe" PWD /BOOTTHAWED</code></pre>
 
       <h3 id="habilitando">Congelando o SO</h3>
-      <pre><code>cmd /k "C:\Windows\SysWOW64\DFC.exe" password /FREEZENEXTBOOT</code></pre>
+      <pre><code>cmd /k "C:\Windows\SysWOW64\DFC.exe" PWD /FREEZENEXTBOOT</code></pre>
 
       <h3 id="status">Checar o status</h3>
       <pre><code>cmd /k "C:\Windows\SysWOW64\DFC.exe" get /ISFROZEN</code></pre>
@@ -135,15 +133,11 @@ permalink: /image/clone/
       </div>
 
       <h3 id="desabilitar">Descongelando o SO</h3>
-      <pre><code>cmd /k "C:\Program Files\Toolwiz Time Freeze 2017\ToolwizTimeFreeze.exe" /unfreeze /usepass=password</code></pre>
+      <pre><code>cmd /k "C:\Program Files\Toolwiz Time Freeze 2017\ToolwizTimeFreeze.exe" /unfreeze /usepass=PWD</code></pre>
 
       <h3 id="habilitando">Congelando o SO</h3>
-      <pre><code>cmd /k "C:\Program Files\Toolwiz Time Freeze 2017\ToolwizTimeFreeze.exe" /freezealways /usepass=password</code></pre>
+      <pre><code>cmd /k "C:\Program Files\Toolwiz Time Freeze 2017\ToolwizTimeFreeze.exe" /freezealways /usepass=PWD</code></pre>
 
-      <h3 id="status">Checar o status</h3>
-      <pre><code>cmd /k "C:\Program Files\Toolwiz Time Freeze 2017\ToolwizTimeFreeze.exe" /check /usepass=password</code></pre>
-
-      <!-- End Clone-->
     </main>
   </div>
 </div>
