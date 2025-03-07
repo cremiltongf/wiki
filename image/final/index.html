@@ -18,8 +18,6 @@ permalink: /image/final/
         Otimização de inicialização do SO, configuração de tarefas, configuração de proxy e generalização do Windows.
       </p>
 
-      <!-- Start Configuração final -->
-
       <h2 id="recursos">Aplicativos e recursos<span></span></h2>
 
       <h3>Inicialização</h3>
@@ -114,10 +112,7 @@ permalink: /image/final/
         </div>
       </div>
 
-      <p>Use o <a
-          href="https://learn.microsoft.com/pt-br/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation?view=windows-11">Sysprep&rarr;</a>
-        para esse processo:</p>
-      <pre><code>sysprep.exe /generalize /oobe /unattend:%WINDIR%\Panther\noautounattend.xml /shutdown</code></pre>
+      <pre><code>sysprep.exe /generalize /oobe /unattend:C:\MYCONF.xml /shutdown</code></pre>
 
       <h3>Erro no Sysprep</h3>
       <p>Se ocorrerem erros no processo, examine o arquivo
@@ -126,7 +121,10 @@ permalink: /image/final/
       </p>
       <pre><code>Get-AppxPackage -AllUsers | Where-Object {$_.PackageFullName -eq "NomeDoPackage"} | Remove-AppxPackage -AllUsers</code></pre>
 
-      <!-- End Configuração final -->
+      <p>Referência: <a
+          href="https://learn.microsoft.com/pt-br/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation?view=windows-11">Sysprep&rarr;</a>
+      </p>
+
     </main>
   </div>
 </div>
