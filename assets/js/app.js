@@ -1,34 +1,33 @@
-(function( win, doc ){
+(function (win, doc) {
+  "use strict";
 
-    'use strict';
-
-    function returnTopSite(){
-        let $buttonTop = doc.querySelector( '[data-js="top-site"]' );
-        if ( $buttonTop !== null ){
-            if ( doc.body.scrollTop > 640 || doc.documentElement.scrollTop > 640 )
-                $buttonTop.classList.add( 'show-arrow' );
-            else
-                $buttonTop.classList.remove( 'show-arrow' );
-        }
+  function returnTopSite() {
+    let $buttonTop = doc.querySelector('[data-js="top-site"]');
+    if ($buttonTop) {
+      if (doc.body.scrollTop > 640 || doc.documentElement.scrollTop > 640)
+        $buttonTop.classList.add("show-arrow");
+      else $buttonTop.classList.remove("show-arrow");
     }
-    win.addEventListener( 'scroll', returnTopSite, false );
+  }
+  win.addEventListener("scroll", returnTopSite, false);
 
-    function openCloseSidebarMenu(){
-        let $navbarTrue = doc.querySelector( '[data-js="navbar-true"]' );
-        let $hiddenOverflow = doc.querySelector( '[data-js="overflowOnOff"]' );
-        let $containerSidebar = doc.querySelector( '[data-js="sidebar-container"]' );
-        let $togglerSidebar = doc.querySelectorAll( '[data-toggler="sidebar-toggler"]' );
+  function openCloseSidebarMenu() {
+    let $navbarTrue = doc.querySelector('[data-js="navbar-true"]');
+    let $hiddenOverflow = doc.querySelector('[data-js="overflowOnOff"]');
+    let $containerSidebar = doc.querySelector('[data-js="sidebar-container"]');
+    let $togglerSidebar = doc.querySelectorAll(
+      '[data-toggler="sidebar-toggler"]'
+    );
 
-        if( $navbarTrue !== null ){
-            for ( let i = 0; i < $togglerSidebar.length; i++ ){
-                $togglerSidebar[i].addEventListener( 'click', addRemoveClass, false );
-            }
-            function addRemoveClass(){
-                $hiddenOverflow.classList.toggle( 'hidden-scroll' );
-                $containerSidebar.classList.toggle( 'sidebar-show' );
-            }
-        }
+    if ($navbarTrue) {
+      for (let i = 0; i < $togglerSidebar.length; i++) {
+        $togglerSidebar[i].addEventListener("click", addRemoveClass, false);
+      }
+      function addRemoveClass() {
+        $hiddenOverflow.classList.toggle("hidden-scroll");
+        $containerSidebar.classList.toggle("sidebar-show");
+      }
     }
-    win.addEventListener( 'load', openCloseSidebarMenu, false );
-
-})( window, document );
+  }
+  win.addEventListener("load", openCloseSidebarMenu, false);
+})(window, document);
