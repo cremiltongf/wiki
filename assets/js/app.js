@@ -4,7 +4,7 @@
   function returnTopSite() {
     let $buttonTop = doc.querySelector('[data-js="top-site"]');
     if ($buttonTop) {
-      if (doc.body.scrollTop > 640 || doc.documentElement.scrollTop > 640)
+      if (doc.documentElement.scrollTop > 640)
         $buttonTop.classList.add("show-arrow");
       else $buttonTop.classList.remove("show-arrow");
     }
