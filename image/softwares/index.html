@@ -972,6 +972,16 @@ sudo apt-get install build-essential linux-headers-`uname -r` dkms virtualbox-dk
       <pre><code>sudo modprobe vboxdrv
 sudo modprobe vboxnetflt</code></pre>
 
+      <h2 id="cdevkit">Portable C, C++, and Fortran Development Kit<span></span></h2>
+      <p>Faça o download do <a href="https://github.com/skeeto/w64devkit/releases">Portable C, C++, and Fortran
+          Development Kit</a> e instale em: <code>C:\Portable</code>.</p>
+      <h3>Alterando o Path</h3>
+      <p>Adicione ao <code>Path</code>:</p>
+      <pre><code>C:\Portable\w64devkit\bin</code></pre>
+
+      <h3>Alterando o Path com PowerShell</h3>
+      <pre><code>[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Portable\w64devkit\bin", "Machine")</code></pre>
+
       <h2 id="portugol">Portugol Stúdio<span></span></h2>
       <p>
         Faça o download do
