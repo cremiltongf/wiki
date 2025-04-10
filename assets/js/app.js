@@ -25,7 +25,7 @@
       }
       function addRemoveClass() {
         $hiddenOverflow.classList.toggle("hidden-scroll");
-        $containerSidebar.classList.toggle("sidebar-show");
+        $containerSidebar.classList.toggle("open-sidebar");
       }
     }
   }
