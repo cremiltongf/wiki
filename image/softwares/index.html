@@ -617,10 +617,10 @@ git config --global http.https://domain.com.sslVerify false</code></pre>
       </p>
 
       <h3>Silent Install</h3>
-      <pre><code>"python-3.10.6-amd64.exe" /quiet InstallAllUsers=1 PrependPath=1 Include_test=0 DefaultAllUsersTargetDir</code></pre>
+      <pre><code>"python-3.10.6-amd64.exe" /quiet InstallAllUsers=1 PrependPath=1 AppendPath=1</code></pre>
 
       <h3>Silent Uninstall</h3>
-      <pre><code>start /wait msiexec /x {691AAAA1-FE86-4973-8DA2-6AA2B3327562} /qn /norestart</code></pre>
+      <pre><code>"python-3.10.6-amd64.exe" /uninstall PrependPath=0 AppendPath=0</code></pre>
 
       <h2 id="inkscape">Inkscape<span></span></h2>
       <p>
