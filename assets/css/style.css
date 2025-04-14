@@ -19,6 +19,13 @@
 /*
  *sidebars
  */
+ .sidebar{
+    padding: 0 12px;
+    position: sticky;
+    top: 88px;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+}
 .sidebar-ul ul{
     margin-left: 6px;
 }
@@ -49,21 +56,13 @@
 .sidebar-ul > li > a:hover{
     text-decoration: underline;
 }
-@media (min-width: 992px){
-    .sidebar{
-        padding: 0 12px;
-        position: sticky;
-        top: 88px;
-        height: calc(100vh - 100px);
-        overflow-y: auto;
-    }
-}
 @media (max-width: 991px){
     .hidden-scroll{
         overflow: hidden;
     }
     .sidebar{
-        background-color: rgb(248, 249, 250);
+        color: #BFBFBF;
+        background-color: #212529;
         position: fixed;
         top: 66px;
         left: 0;
@@ -136,7 +135,6 @@ h4{
     height: 2.8rem;
     background: transparent center center url("../images/ico-info.svg") no-repeat;
 }
-
 
 /*
  * 404
