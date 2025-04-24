@@ -1265,11 +1265,7 @@ regenerationSharedArchive=1
       </ul>
 
       <h3>Permissões para iniciar e encerrar os serviços</h3>
-      <h4>Para Windows 7</h4>
       <pre><code>cacls "%SystemDrive%\xampp\xampp-control.ini" /E /P Todos:F</code></pre>
-
-      <h4>Para Windows 10/11</h4>
-      <pre><code>icacls "%SystemDrive%\xampp\xampp-control.ini" /grant Todos:(D,WDAC)</code></pre>
 
       <h3>Silent Install</h3>
       <pre><code>"xampp-windows-x64-8.1.2-0-VS16-installer.exe" --mode unattended --installer-language pt_BR --launchapps 0 --disable-components xampp_filezilla,xampp_mercury,xampp_tomcat,xampp_perl,xampp_webalizer,xampp_sendmail</code></pre>
