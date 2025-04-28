@@ -1146,14 +1146,17 @@ regenerationSharedArchive=1
       </p>
 
       <h3>Silent Install</h3>
-      <p>Instalação para o cliente.</p>
+      <p>Instalação como cliente:</p>
       <pre><code>"veyon-4.7.1.3-win64-setup.exe" /S /NoMaster</code></pre>
 
       <h3>Silent Uninstall</h3>
       <pre><code>"%ProgramFiles%\Veyon\uninstall.exe" /S</code></pre>
 
       <h3>Importando configurações</h3>
-      <pre><code>"%ProgramFiles%\Veyon\veyon-cli" config import %PASTAORIGEM%\veyon-cliente.json</code></pre>
+      <pre><code>"%ProgramFiles%\Veyon\veyon-cli" config import "veyon-cliente.json"</code></pre>
+
+      <h3>Importando chave pública</h3>
+      <pre><code>"%ProgramFiles%\Veyon\veyon-cli" authkeys import teacher/public "teacher_public_key.pem"</code></pre>
 
       <div class="alert alert-info d-flex align-items-center">
         <span class="bi flex-shrink-0"></span>
