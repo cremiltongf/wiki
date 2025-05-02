@@ -1,0 +1,187 @@
+---
+title: "Linux"
+permalink: /linux/
+---
+
+{% include header.html %}
+
+<div class="container margin-top mt-5 pt-5">
+      <div class="row">
+            <aside class="sidebar-container col-lg-4 z-3" data-js="sidebar-container">
+                  <div class="sidebar">{% include links-linux.html %}</div>
+            </aside>
+
+            <main class="col-12 col-lg-8 mb-5">
+                  <h1>{{ page.title }}</h1>
+                  <p class="lead">
+                        Configuração padrão do Sistema Operacional Ubuntu 24.04.2. <b>Em construção!</b>
+                  </p>
+
+                  <h2 id="particao">Partições do SO<span></span></h2>
+                  <p>Utilize todo espaço da unidade para instalação da distribuição.</p>
+
+                  <h2 id="user-root">Usuário Root<span></span></h2>
+                  <p>
+                        Criar usuário root <strong>IFPR</strong> e definir senha padrão
+                        disponível na
+                        <a
+                              href="https://docs.google.com/spreadsheets/d/1K7BrCy4tWE0I9W5_Dc5zm_tXNyYtj4ZYFQJLmiljGAE/edit?usp=sharing">planilha&rarr;</a>.
+                  </p>
+
+                  <h2 id="user-default">Usuário Padrão<span></span></h2>
+                  <p>Crie o usuário <strong>Aluno</strong> e configure o login automático.</p>
+                  <pre><code>Usuário: aluno
+Senha: aluno123
+</code></pre>
+
+
+                  <h2 id="linux-login">Login Automático<span></span></h2>
+                  <p>Se o login automático não funcionar, adicione ou altere o <code>/etc/lightdm/lightdm.conf</code>:
+                  </p>
+                  <pre><code>autologin-user=aluno
+autologin-user-timeout=0</code></pre>
+
+                  <h2 id="linux-update">Linux Update<span></span></h2>
+                  <p>Instale todas as atualizações do Windows.</p>
+                  <pre><code>sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt-get dist-upgrade -y</code></pre>
+
+                  <h2 id="sistema">Configurações<span></span></h2>
+                  <h3>Energia</h3>
+                  <ol>
+                        <li>Economia de energia <span class="wiki-arrow">&harr;</span> Apagar a tela <span
+                                    class="wiki-arrow">&harr;</span> <b>Nunca</b>.</li>
+                  </ol>
+
+                  <h2 id="linux-proxy">Proxy<span></span></h2>
+                  <h3>Para os perfis:</h3>
+                  <p>Crie o arquivo <code>proxy_var.sh</code> em <code>/etc/profile.d</code> e adicione:</p>
+                  <pre><code>#all user
+export all_proxy="socks://192.168.0.6:3128/"
+export http_proxy="http://192.168.0.6:3128/"
+export https_proxy="http://192.168.0.6:3128/"
+export ftp_proxy="http://192.168.0.6:3128/"
+export no_proxy="localhost,127.0.0.1"
+
+#for curl
+export ALL_PROXY="socks://192.168.0.6:3128/"
+export HTTP_PROXY="http://192.168.0.6:3128/"
+export HTTPS_PROXY="http://192.168.0.6:3128/"
+export FTP_PROXY="http://192.168.0.6:3128/"
+export NO_PROXY="localhost,127.0.0.1"
+      </code></pre>
+
+                  <h3>Para o apt-get</h3>
+                  <p>Crie o arquivo <code>apt.conf</code> em <code>/etc/apt/apt.conf.d</code> e adicione:</p>
+                  <pre><code>Acquire::http::proxy "http://192.168.0.6:3128/";
+Acquire::https::proxy "https://192.168.0.6:3128/";
+Acquire::ftp::proxy "ftp://192.168.0.6:3128/";
+</code>
+</pre>
+
+                  <h2>7-zip<span></span></h2>
+                  <pre><code>sudo apt-get install p7zip p7zip-full p7zip-rar lzma lzma-dev</code></pre>
+
+                  <h2>Unity Tweak Tool<span></span></h2>
+                  <pre><code>sudo apt-get install gnome-tweak-tool</code></pre>
+
+                  <h2>Samba Cliente<span></span></h2>
+                  <pre><code>sudo apt-get install smbclient</code></pre>
+
+                  <h2>Google Chrome<span></span></h2>
+                  <p>Faça o download do <a href="https://www.google.com/chrome/?platform=linux">Google Chrome&rarr;</a>.
+                  </p>
+                  <div class="alert alert-info d-flex align-items-center">
+                        <span class="bi flex-shrink-0"></span>
+                        <div>Acesse <b>Senhas e chaves</b> para remover a mensagem incômoda de pedido de senha ao abrir
+                              o navegador.
+                        </div>
+                  </div>
+
+                  <h2>Vim<span></span></h2>
+                  <pre><code>sudo apt-get install vim</code></pre>
+
+                  <h2>Java JDK 17<span></span></h2>
+                  <p>Faça o download do <a
+                              href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">Java
+                              JDK 17&rarr;</a>.</p>
+                  <p>Pasta de instalação:</p>
+                  <pre><code>sudo mkdir /usr/lib/jvm</code></pre>
+                  <p>Extração de arquivos:</p>
+                  <pre><code>sudo tar zxvf jdk-8u191-linux-x64.tar.gz -C /usr/lib/jvm</code></pre>
+                  <p>Criação de link simbólico:</p>
+                  <pre><code>sudo ln -s /usr/lib/jvm/jdk1.8.0_191 /usr/lib/jvm/java-oracle</code></pre>
+                  <h3>Variáveis de Ambiente</h3>
+                  <p>Crie o arquivo <code>java_var.sh</code> em <code>/etc/profile.d</code> e adicione:</p>
+                  <pre><code>JAVA_HOME=/usr/lib/jvm/java-oracle
+PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
+export JRE_HOME
+export PATH</code></pre>
+
+                  <h2>Netbeans 14<span></span></h2>
+                  <p>Faça o download do <a href="https://netbeans.apache.org/front/main/download/nb14/">Netbeans
+                              14&rarr;</a>.</p>
+                  <p>Instale com o perfil do Aluno no diretório <b>/home/portable</b>.</p>
+
+                  <h2>Ubuntu Restricted Extras<span></span></h2>
+                  <pre><code>sudo apt-get install ubuntu-restricted-extras</code></pre>
+
+                  <h2>Open SSH Server<span></span></h2>
+                  <pre><code>sudo apt-get install openssh-server</code></pre>
+
+                  <h2>Scratch<span></span></h2>
+                  <pre><code>sudo apt-get install scratch</code></pre>
+
+                  <h2>LAMPP<span></span></h2>
+                  <pre><code>sudo apt-get install apache2
+sudo apt-get install mysql-server
+sudo apt install php libapache2-mod-php php-mysql</code></pre>
+                  <h3>Definindo uma senha</h3>
+                  <p>Acesse o MySQL:</p>
+                  <pre><code>sudo mysql -u root</code></pre>
+                  <p>No MySQL:</p>
+                  <pre><code>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'SenhaAqui';
+flush privileges;
+exit</code></pre>
+                  <h3>Habilitando escrita de url</h3>
+                  <pre><code>sudo a2enmod rewrite</code></pre>
+                  <h3>Permissão de html</h3>
+                  <pre><code>sudo chmod -R 777 /var/www/html</code></pre>
+                  <div class="alert alert-info d-flex align-items-center">
+                        <span class="bi flex-shrink-0"></span>
+                        <div>Não use essa permissão em produção.
+                        </div>
+                  </div>
+
+                  <h2>Veyon<span></span></h2>
+                  <h3>Dependências</h3>
+                  <pre><code>sudo add-apt-repository ppa:veyon/stable
+sudo apt update</code></pre>
+
+                  <pre><code>sudo apt install veyon-master
+sudo apt install veyon-configurator</code></pre>
+
+                  <h2>Visual Studio Code<span></span></h2>
+
+                  <h2>Restore User</h2>
+                  <div class="alert alert-info d-flex align-items-center">
+                        <span class="bi flex-shrink-0"></span>
+                        <div>Após finalizado todas as configurações do perfil, prossiga com o roteiro abaixo.
+                        </div>
+                  </div>
+                  <p>Fazendo uma cópia do perfil escolhido:</p>
+                  <pre><code>sudo mkdir /home/resetuser
+sudo cp -R /home/aluno/. /home/resetuser</code></pre>
+                  <p></p>
+
+                  <h2>Clone</h2>
+                  <h3>Alterar Hostname</h3>
+                  <pre><code>sudo vi /etc/hostname
+sudo vi /etc/hosts</code></pre>
+
+            </main>
+      </div>
+</div>
+
+{% include footer.html %}
