@@ -14,7 +14,7 @@ permalink: /linux/
             <main class="col-12 col-lg-8 mb-5">
                   <h1>{{ page.title }}</h1>
                   <p class="lead">
-                        Configuração padrão do Sistema Operacional Ubuntu 24.04.2. <b>Em construção!</b>
+                        Configuração padrão do Sistema Operacional Linux Mint 22.1. <b>Em construção!</b>
                   </p>
 
                   <h2 id="particao">Partições do SO<span></span></h2>
@@ -22,7 +22,7 @@ permalink: /linux/
 
                   <h2 id="user-root">Usuário Root<span></span></h2>
                   <p>
-                        Criar usuário root <strong>IFPR</strong> e definir senha padrão
+                        Criar usuário root <strong>IFPR</strong> e defina a senha padrão
                         disponível na
                         <a
                               href="https://docs.google.com/spreadsheets/d/1K7BrCy4tWE0I9W5_Dc5zm_tXNyYtj4ZYFQJLmiljGAE/edit?usp=sharing">planilha&rarr;</a>.
@@ -42,10 +42,8 @@ Senha: aluno123
 autologin-user-timeout=0</code></pre>
 
                   <h2 id="linux-update">Linux Update<span></span></h2>
-                  <p>Instale todas as atualizações do Windows.</p>
-                  <pre><code>sudo apt-get update
-sudo apt-get upgrade -y
-sudo apt-get dist-upgrade -y</code></pre>
+                  <p>Instale todas as atualizações disponíveis.</p>
+                  <pre><code>sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y</code></pre>
 
                   <h2 id="sistema">Configurações<span></span></h2>
                   <h3>Energia</h3>
@@ -53,32 +51,22 @@ sudo apt-get dist-upgrade -y</code></pre>
                         <li>Economia de energia <span class="wiki-arrow">&harr;</span> Apagar a tela <span
                                     class="wiki-arrow">&harr;</span> <b>Nunca</b>.</li>
                   </ol>
+                  <!-- Tema -->
+                  <h2 id="tema">Tema like Windows<span></span></h2>
+                  <h2 id="tema">Papel de Parede<span></span></h2>
+                  <h3>Tela de fundo</h3>
+                  <ol>
+                        <li>Tela de fundo <span class="wiki-arrow">&harr;</span>
+                              <b>Imagem</b>;
+                        </li>
+                        <li>Escolher sua imagem <span class="wiki-arrow">&harr;</span>
+                              Baixe o arquivo <a
+                                    href="https://drive.google.com/drive/folders/1y65TzKSDIcYNamYzGYjvLgfvEtLYOfp6?usp=sharing">
+                                    background.png&rarr;</a> e selecione-o.
+                        </li>
+                  </ol>
 
-                  <h2 id="linux-proxy">Proxy<span></span></h2>
-                  <h3>Para os perfis:</h3>
-                  <p>Crie o arquivo <code>proxy_var.sh</code> em <code>/etc/profile.d</code> e adicione:</p>
-                  <pre><code>#all user
-export all_proxy="socks://192.168.0.6:3128/"
-export http_proxy="http://192.168.0.6:3128/"
-export https_proxy="http://192.168.0.6:3128/"
-export ftp_proxy="http://192.168.0.6:3128/"
-export no_proxy="localhost,127.0.0.1"
-
-#for curl
-export ALL_PROXY="socks://192.168.0.6:3128/"
-export HTTP_PROXY="http://192.168.0.6:3128/"
-export HTTPS_PROXY="http://192.168.0.6:3128/"
-export FTP_PROXY="http://192.168.0.6:3128/"
-export NO_PROXY="localhost,127.0.0.1"
-      </code></pre>
-
-                  <h3>Para o apt-get</h3>
-                  <p>Crie o arquivo <code>apt.conf</code> em <code>/etc/apt/apt.conf.d</code> e adicione:</p>
-                  <pre><code>Acquire::http::proxy "http://192.168.0.6:3128/";
-Acquire::https::proxy "https://192.168.0.6:3128/";
-Acquire::ftp::proxy "ftp://192.168.0.6:3128/";
-</code>
-</pre>
+                  <!-- Softwares -->
 
                   <h2>7-zip<span></span></h2>
                   <pre><code>sudo apt-get install p7zip p7zip-full p7zip-rar lzma lzma-dev</code></pre>
@@ -164,22 +152,75 @@ sudo apt install veyon-configurator</code></pre>
 
                   <h2>Visual Studio Code<span></span></h2>
 
+                  <!-- Final -->
+                  <h2 id="historico">Histórico de Navegação<span></span></h2>
+                  <p>Remover histórico do Googl Chrome e Firefox.</p>
+
+                  <h2 id="linux-proxy">Proxy<span></span></h2>
+                  <h3>Para os perfis:</h3>
+                  <p>Crie o arquivo <code>proxy_var.sh</code> em <code>/etc/profile.d</code> e adicione:</p>
+                  <pre><code>#all user
+export all_proxy="socks://192.168.0.6:3128/"
+export http_proxy="http://192.168.0.6:3128/"
+export https_proxy="http://192.168.0.6:3128/"
+export ftp_proxy="http://192.168.0.6:3128/"
+export no_proxy="localhost,127.0.0.1"
+
+#for curl
+export ALL_PROXY="socks://192.168.0.6:3128/"
+export HTTP_PROXY="http://192.168.0.6:3128/"
+export HTTPS_PROXY="http://192.168.0.6:3128/"
+export FTP_PROXY="http://192.168.0.6:3128/"
+export NO_PROXY="localhost,127.0.0.1"
+      </code></pre>
+
+                  <h3>Para o apt-get</h3>
+                  <p>Crie o arquivo <code>apt.conf</code> em <code>/etc/apt/apt.conf.d</code> e adicione:</p>
+                  <pre><code>Acquire::http::proxy "http://192.168.0.6:3128/";
+Acquire::https::proxy "https://192.168.0.6:3128/";
+Acquire::ftp::proxy "ftp://192.168.0.6:3128/";</code></pre>
+
                   <h2>Restore User</h2>
                   <div class="alert alert-info d-flex align-items-center">
                         <span class="bi flex-shrink-0"></span>
-                        <div>Após finalizado todas as configurações do perfil, prossiga com o roteiro abaixo.
+                        <div>Finalizado todas as personalizações do perfil, prossiga com as configurações.
                         </div>
                   </div>
-                  <p>Fazendo uma cópia do perfil escolhido:</p>
+                  <h3>Criando backup do perfil</h3>
+                  <p>Fazendo a cópia do perfil para ser o padrão:</p>
                   <pre><code>sudo mkdir /home/resetuser
 sudo cp -R /home/aluno/. /home/resetuser</code></pre>
-                  <p></p>
+                  <h3>Criando o Script</h3>
+                  <p>Crie o arquivo <code>reset-user</code> em <code>/sbin</code> e adicione:</p>
+                  <pre><code>#!/bin/sh
+rm -rf /home/aluno
+mkdir /home/aluno
+cp -R /home/resetuser/. /home/aluno
+chown -R aluno /home/aluno</code></pre>
+                  <p>Permissão de execução</p>
+                  <pre><code>sudo chmod +x /sbin/reset-user</code></pre>
+                  <h3>Script como serviço</h3>
+                  <p>Crie o arquivo <code>reset-user.service</code> em <code>/etc/systemmd/system</code> e adicione:</p>
+                  <pre><code>[Unit]
+Description=Restore user Aluno
+DefaultDependencies=no
+Before=shutdown.target reboot.target halt.target
+[Service]
+Type=oneshot
+ExecStart=/sbin/reset-user
+[Install]
+WantedBy=halt.target reboot.target shutdown.target</code></pre>
 
-                  <h2>Clone</h2>
+                  <!-- Clone -->
+                  <h2>Clone<span></span></h2>
                   <h3>Alterar Hostname</h3>
-                  <pre><code>sudo vi /etc/hostname
-sudo vi /etc/hosts</code></pre>
-
+                  <pre><code>sudo vim /etc/hostname
+sudo vim /etc/hosts</code></pre>
+                  <h3>Restore Profile</h3>
+                  <h4>Habilitando o serviço</h4>
+                  <pre><code>sudo systemctl enable reset-user.service</code></pre>
+                  <h4>Desabilitando o serviço</h4>
+                  <pre><code>sudo systemctl disable reset-user.service</code></pre>
             </main>
       </div>
 </div>
