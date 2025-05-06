@@ -156,6 +156,16 @@ Senha: aluno123
                   <h2>7-zip<span></span></h2>
                   <pre><code>sudo apt-get install p7zip p7zip-full p7zip-rar lzma lzma-dev</code></pre>
 
+                  <h2 id="l-composer">Composer</h2>
+                  <h3>Preparação</h3>
+                  <pre><code>sudo apt-get install curl php-cli php-mbstring git unzip</code></pre>
+                  <h3>Download</h3>
+                  <pre><code>curl -sS https://getcomposer.org/installer -o composer-setup.php</code></pre>
+                  <h3>Verificação do instalador</h3>
+                  <pre><code>php composer-setup.php --check</code></pre>
+                  <h3>Instalação</h3>
+                  <p>sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer</p>
+
                   <h2>Samba<span></span></h2>
                   <pre><code>sudo apt-get install samba</code></pre>
 
@@ -289,16 +299,6 @@ wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo gpg --dearmor -o /
 
                   <p>Referência: <a href="https://gitlab.winehq.org/wine/wine/-/wikis/Debian-Ubuntu">Wiki
                               Wine&rarr;</a>.</p>
-
-                  <h2 id="l-composer">Composer</h2>
-                  <h3>Preparação</h3>
-                  <pre><code>sudo apt-get install curl php-cli php-mbstring git unzip</code></pre>
-                  <h3>Download</h3>
-                  <pre><code>curl -sS https://getcomposer.org/installer -o composer-setup.php</code></pre>
-                  <h3>Verificação do instalador</h3>
-                  <pre><code>php composer-setup.php --check</code></pre>
-                  <h3>Instalação</h3>
-                  <p>sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer</p>
 
                   <!-- Final -->
                   <h2 id="historico">Histórico de Navegação<span></span></h2>
