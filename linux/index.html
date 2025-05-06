@@ -203,14 +203,14 @@ Senha: aluno123
                         seguinte conteúdo:
                   </p>
                   <pre><code>{
-                "policies": {
-                    "AppAutoUpdate": false,
-                    "BackgroundAppUpdate": false,
-                    "DisableAppUpdate": true,
-                    "DisableDefaultBrowserAgent": true,
-                    "DontCheckDefaultBrowser": true
-                }
-            }</code></pre>
+      "policies": {
+            "AppAutoUpdate": false,
+            "BackgroundAppUpdate": false,
+            "DisableAppUpdate": true,
+            "DisableDefaultBrowserAgent": true,
+            "DontCheckDefaultBrowser": true
+      }
+}</code></pre>
                   <p>
                         Referência:
                         <a href="https://support.mozilla.org/pt-BR/kb/personalizando-o-firefox-usando-policies">Como
@@ -246,17 +246,18 @@ Senha: aluno123
                               href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">Java
                               JDK 17&rarr;</a>.</p>
                   <p>Pasta de instalação:</p>
-                  <pre><code>sudo mkdir /usr/lib/jvm</code></pre>
+                  <pre><code>sudo mkdir /usr/lib/jdk</code></pre>
                   <p>Extração de arquivos:</p>
-                  <pre><code>sudo tar zxvf jdk-8u191-linux-x64.tar.gz -C /usr/lib/jvm</code></pre>
+                  <pre><code>sudo tar zxvf jdk-8u191-linux-x64.tar.gz -C /usr/lib/jdk</code></pre>
                   <p>Criação de link simbólico:</p>
-                  <pre><code>sudo ln -s /usr/lib/jvm/jdk1.8.0_191 /usr/lib/jvm/java-oracle</code></pre>
+                  <pre><code>sudo ln -s /usr/lib/jdk/jdk1.8.0_191 /usr/lib/jdk/java-oracle</code></pre>
                   <h3>Variáveis de Ambiente</h3>
                   <p>Crie o arquivo <code>java_var.sh</code> em <code>/etc/profile.d</code> e adicione:</p>
-                  <pre><code>JAVA_HOME=/usr/lib/jvm/java-oracle
+                  <pre><code>JAVA_HOME=/usr/lib/jdk/java-oracle
 PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
-export JRE_HOME
 export PATH</code></pre>
+                  <p>Permissão para execução:</p>
+                  <pre><code>sudo chmod +x /etc/profile.d/java_var.sh</code></pre>
 
                   <h2 id="l-netbeans">Netbeans 14<span></span></h2>
                   <p>Faça o download do <a href="https://netbeans.apache.org/front/main/download/nb14/">Netbeans
@@ -382,8 +383,7 @@ export ALL_PROXY="socks://192.168.0.6:3128/"
 export HTTP_PROXY="http://192.168.0.6:3128/"
 export HTTPS_PROXY="http://192.168.0.6:3128/"
 export FTP_PROXY="http://192.168.0.6:3128/"
-export NO_PROXY="localhost,127.0.0.1"
-      </code></pre>
+export NO_PROXY="localhost,127.0.0.1"</code></pre>
 
                   <h3>Para o apt-get</h3>
                   <p>Crie o arquivo <code>apt.conf</code> em <code>/etc/apt/apt.conf.d</code> e adicione:</p>
