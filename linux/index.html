@@ -34,7 +34,6 @@ permalink: /linux/
 Senha: aluno123
 </code></pre>
 
-
                   <h2 id="l-login">Login Automático<span></span></h2>
                   <ol>
                         <li class="mb-2">Janela de Início de Sessão <span class="wiki-arrow">&harr;</span> Aba Usuários
@@ -156,6 +155,32 @@ Senha: aluno123
                   <h2 id="l-zip">7-zip<span></span></h2>
                   <pre><code>sudo apt-get install p7zip p7zip-full p7zip-rar lzma lzma-dev</code></pre>
 
+                  <h2 id="l-astah">Astah Community<span></span></h2>
+                  <p>
+                        Faça o download do
+                        <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Astah
+                              Community&rarr;</a>. Última versão disponibilizada pela desenvolvedora.
+                  </p>
+                  <div class="alert alert-info d-flex align-items-center">
+                        <span class="bi flex-shrink-0"></span>
+                        <div>Esse programa precisa do Java JRE.</div>
+                  </div>
+
+                  <h3>Desativando atualização e envio de dados</h3>
+                  <p>
+                        <img class="img-fluid rounded-2"
+                              src="{{ site.baseurl }}/assets/images/pages/astah-data-and-update.png"
+                              alt="Desativar verificação de atualização" />
+                  </p>
+
+                  <h2 id="brmodelo">brModelo<span></span></h2>
+                  <p>
+                        Faça o download do
+                        <a href="http://www.sis4.com/brModelo/download.html">brModelo&rarr;</a>
+                        e extraia o <b>zip</b> para <code>C:\Portable</code>. Crie um atalho do
+                        programa na Área de Trabalho do usuário <b>Aluno</b>.
+                  </p>
+
                   <h2 id="l-composer">Composer</h2>
                   <h3>Preparação</h3>
                   <pre><code>sudo apt-get install curl php-cli php-mbstring git unzip</code></pre>
@@ -165,6 +190,38 @@ Senha: aluno123
                   <pre><code>php composer-setup.php --check</code></pre>
                   <h3>Instalação</h3>
                   <p>sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer</p>
+
+                  <h2 id="l-firefox">Firefox<span></span></h2>
+                  <p>
+                        Faça o download do
+                        <a href="https://www.mozilla.org/pt-BR/firefox/all/">Firefox&rarr;</a>.
+                  </p>
+                  <h3>Configurando preferências</h3>
+                  <p>
+                        <b>Crie</b> o arquivo <code>policies.json</code> dentro de pasta
+                        <code>distribution</code> na raíz de instalação do programa com o
+                        seguinte conteúdo:
+                  </p>
+                  <pre><code>{
+                "policies": {
+                    "AppAutoUpdate": false,
+                    "BackgroundAppUpdate": false,
+                    "DisableAppUpdate": true,
+                    "DisableDefaultBrowserAgent": true,
+                    "DontCheckDefaultBrowser": true
+                }
+            }</code></pre>
+                  <p>
+                        Referência:
+                        <a href="https://support.mozilla.org/pt-BR/kb/personalizando-o-firefox-usando-policies">Como
+                              personalizar o
+                              Firefox usando policies.json&rarr;</a>
+                        e
+                        <a href="https://mozilla.github.io/policy-templates/">policy-templates&rarr;</a>.
+                  </p>
+
+                  <h2 id="l-git">Git<span></span></h2>
+                  <pre><code>sudo apt-get install git</code></pre>
 
                   <h2 id="l-chrome">Google Chrome<span></span></h2>
                   <p>Faça o download do <a href="https://www.google.com/chrome/?platform=linux">Google Chrome&rarr;</a>.
@@ -178,8 +235,11 @@ Senha: aluno123
                         </div>
                   </div>
 
-                  <h2 id="l-vim">Vim<span></span></h2>
-                  <pre><code>sudo apt-get install vim</code></pre>
+                  <h2 id="l-greenfoot">Greenfoot<span></span></h2>
+                  <p>Faça o download do <a href="https://www.greenfoot.org/download">Greenfoot&rarr;</a>.
+                  </p>
+                  <h3>Instalação</h3>
+                  <pre><code>sudo dpkg -i "pacote.deb"</code></pre>
 
                   <h2 id="l-jdk">Java JDK 17<span></span></h2>
                   <p>Faça o download do <a
@@ -259,6 +319,9 @@ libsasl2-dev ninja-build</code></pre>
                               máquinas clientes.
                         </div>
                   </div>
+
+                  <h2 id="l-vim">Vim<span></span></h2>
+                  <pre><code>sudo apt-get install vim</code></pre>
 
                   <h2 id="l-vscode">Visual Studio Code<span></span></h2>
                   <p>
