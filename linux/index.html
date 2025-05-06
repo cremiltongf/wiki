@@ -17,6 +17,7 @@ permalink: /linux/
                         Configuração padrão do Sistema Operacional Linux Mint 22.1. <b>Em construção!</b>
                   </p>
 
+                  <h2>Configuração<span></span></h2>
                   <h2 id="l-partition">Partições do SO<span></span></h2>
                   <p>Utilize todo espaço da unidade para instalação da distribuição.</p>
 
@@ -61,6 +62,8 @@ Senha: aluno123
                         </li>
                   </ol>
 
+                  <!-- Profile -->
+                  <h2>Profile<span></span></h2>
                   <h2 id="l-configuration">Configurações do sistema<span></span></h2>
                   <div class="alert alert-info d-flex align-items-center">
                         <span class="bi flex-shrink-0"></span>
@@ -151,7 +154,7 @@ Senha: aluno123
                   </ol>
 
                   <!-- Softwares -->
-
+                  <h2>Softwares<span></span></h2>
                   <h2 id="l-zip">7-zip<span></span></h2>
                   <pre><code>sudo apt-get install p7zip p7zip-full p7zip-rar lzma lzma-dev</code></pre>
 
@@ -173,7 +176,7 @@ Senha: aluno123
                               alt="Desativar verificação de atualização" />
                   </p>
 
-                  <h2 id="brmodelo">brModelo<span></span></h2>
+                  <h2 id="l-modelo">brModelo<span></span></h2>
                   <p>
                         Faça o download do
                         <a href="http://www.sis4.com/brModelo/download.html">brModelo&rarr;</a>
@@ -259,43 +262,33 @@ export PATH</code></pre>
                   <p>Permissão para execução:</p>
                   <pre><code>sudo chmod +x /etc/profile.d/java_var.sh</code></pre>
 
+                  <h2 id="l-jre">Java JRE<span></span></h2>
+
+                  <h2 id="l-office">Libre Office<span></span></h2>
+                  <div class="alert alert-info d-flex align-items-center">
+                        <span class="bi flex-shrink-0"></span>
+                        <div>Instalado junto ao SO.
+                        </div>
+                  </div>
+
                   <h2 id="l-netbeans">Netbeans 14<span></span></h2>
                   <p>Faça o download do <a href="https://netbeans.apache.org/front/main/download/nb14/">Netbeans
                               14&rarr;</a>.</p>
                   <p>Instale com o perfil do Aluno no diretório <code>/home/portable</code>.</p>
 
-                  <h2 id="l-restricted">Ubuntu Restricted Extras<span></span></h2>
-                  <pre><code>sudo apt-get install ubuntu-restricted-extras</code></pre>
-
                   <h2 id="l-ssh">Open SSH Server<span></span></h2>
                   <pre><code>sudo apt-get install openssh-server</code></pre>
-
-                  <h2 id="l-samba">Samba<span></span></h2>
-                  <pre><code>sudo apt-get install samba</code></pre>
 
                   <h2 id="l-scratch">Scratch<span></span></h2>
                   <pre><code>sudo apt-get install scratch</code></pre>
 
-                  <h2 id="l-lamp">LAMPP<span></span></h2>
-                  <pre><code>sudo apt-get install apache2
-sudo apt-get install mysql-server
-sudo apt install php libapache2-mod-php php-mysql</code></pre>
-                  <h3>Definindo uma senha</h3>
-                  <p>Acesse o MySQL:</p>
-                  <pre><code>sudo mysql -u root</code></pre>
-                  <p>No MySQL:</p>
-                  <pre><code>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'mypassword';
-flush privileges;
-exit</code></pre>
-                  <h3>Habilitando escrita de url</h3>
-                  <pre><code>sudo a2enmod rewrite</code></pre>
-                  <h3>Permissão ao html</h3>
-                  <pre><code>sudo chmod -R 777 /var/www/html</code></pre>
-                  <div class="alert alert-info d-flex align-items-center">
-                        <span class="bi flex-shrink-0"></span>
-                        <div>Não use essa permissão em produção.
-                        </div>
-                  </div>
+                  <h2 id="l-portugol">Portugol Stúdio<span></span></h2>
+
+                  <h2 id="l-samba">Samba<span></span></h2>
+                  <pre><code>sudo apt-get install samba</code></pre>
+
+                  <h2 id="l-restricted">Ubuntu Restricted Extras<span></span></h2>
+                  <pre><code>sudo apt-get install ubuntu-restricted-extras</code></pre>
 
                   <h2 id="l-veyon">Veyon<span></span></h2>
                   <h3>Dependências</h3>
@@ -349,6 +342,10 @@ libsasl2-dev ninja-build</code></pre>
                         <li class="mb-2"><code>C/C++ Extension Pack</code></li>
                   </ol>
 
+                  <h2 id="l-visual">VisuAlg<span></span></h2>
+
+                  <h2 id="l-vlc">VLC Media Player<span></span></h2>
+
                   <h2 id="l-wine">Wine</h2>
                   <h3>Preparação</h3>
                   <pre><code>sudo dpkg --add-architecture i386</code></pre>
@@ -364,11 +361,33 @@ wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo gpg --dearmor -o /
                   <p>Referência: <a href="https://gitlab.winehq.org/wine/wine/-/wikis/Debian-Ubuntu">Wiki
                               Wine&rarr;</a>.</p>
 
+                  <h2 id="l-lampp">LAMPP<span></span></h2>
+                  <pre><code>sudo apt-get install apache2
+            sudo apt-get install mysql-server
+            sudo apt install php libapache2-mod-php php-mysql</code></pre>
+                  <h3>Definindo uma senha</h3>
+                  <p>Acesse o MySQL:</p>
+                  <pre><code>sudo mysql -u root</code></pre>
+                  <p>No MySQL:</p>
+                  <pre><code>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'mypassword';
+            flush privileges;
+            exit</code></pre>
+                  <h3>Habilitando escrita de url</h3>
+                  <pre><code>sudo a2enmod rewrite</code></pre>
+                  <h3>Permissão ao html</h3>
+                  <pre><code>sudo chmod -R 777 /var/www/html</code></pre>
+                  <div class="alert alert-info d-flex align-items-center">
+                        <span class="bi flex-shrink-0"></span>
+                        <div>Não use essa permissão em produção.
+                        </div>
+                  </div>
+
                   <!-- Final -->
-                  <h2 id="historico">Histórico de Navegação<span></span></h2>
+                  <h2>Final<span></span></h2>
+                  <h2 id="l-history">Histórico de Navegação<span></span></h2>
                   <p>Remover histórico do Google Chrome e Firefox.</p>
 
-                  <h2 id="linux-proxy">Proxy<span></span></h2>
+                  <h2 id="l-proxy">Proxy<span></span></h2>
                   <h3>Para os perfis:</h3>
                   <p>Crie o arquivo <code>proxy_var.sh</code> em <code>/etc/profile.d</code> e adicione:</p>
                   <pre><code>#all user
@@ -391,7 +410,7 @@ export NO_PROXY="localhost,127.0.0.1"</code></pre>
 Acquire::https::proxy "https://192.168.0.6:3128/";
 Acquire::ftp::proxy "ftp://192.168.0.6:3128/";</code></pre>
 
-                  <h2>Restore User</h2>
+                  <h2 id="l-restore">Restore User</h2>
                   <div class="alert alert-info d-flex align-items-center">
                         <span class="bi flex-shrink-0"></span>
                         <div>Finalizado todas as personalizações do perfil, prossiga com as configurações.
@@ -424,13 +443,13 @@ WantedBy=halt.target reboot.target shutdown.target</code></pre>
 
                   <!-- Clone -->
                   <h2>Clone<span></span></h2>
-                  <h3>Alterar Hostname</h3>
+                  <h2 id="l-hostname">Alterar Hostname<span></span></h2>
                   <pre><code>sudo vim /etc/hostname
 sudo vim /etc/hosts</code></pre>
-                  <h3>Restore Profile</h3>
-                  <h4>Habilitando o serviço</h4>
+                  <h2 id="l-activerestore">Restore Profile<span></span></h2>
+                  <h3>Habilitando o serviço</h3>
                   <pre><code>sudo systemctl enable reset-user.service</code></pre>
-                  <h4>Desabilitando o serviço</h4>
+                  <h3>Desabilitando o serviço</h3>
                   <pre><code>sudo systemctl disable reset-user.service</code></pre>
             </main>
       </div>
