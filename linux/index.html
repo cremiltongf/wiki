@@ -275,6 +275,31 @@ libsasl2-dev ninja-build</code></pre>
                         <li class="mb-2"><code>C/C++ Extension Pack</code></li>
                   </ol>
 
+                  <h2 id="l-wine">Wine</h2>
+                  <h3>Preparação</h3>
+                  <pre><code>sudo dpkg --add-architecture i386</code></pre>
+                  <h3>Repositório</h3>
+                  <p>Baixe e adicione a chave do repositório:</p>
+                  <pre><code>sudo mkdir -pm755 /etc/apt/keyrings
+wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo gpg --dearmor -o /etc/apt/keyrings/winehq-archive.key -</code></pre>
+                  <p>Adicione o repositório:</p>
+                  <pre><code>sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/noble/winehq-noble.sources</code></pre>
+                  <h3>Instalação</h3>
+                  <pre><code>sudo apt update -y && sudo apt install --install-recommends winehq-stable -y</code></pre>
+
+                  <p>Referência: <a href="https://gitlab.winehq.org/wine/wine/-/wikis/Debian-Ubuntu">Wiki
+                              Wine&rarr;</a>.</p>
+
+                  <h2 id="l-composer">Composer</h2>
+                  <h3>Preparação</h3>
+                  <pre><code>sudo apt-get install curl php-cli php-mbstring git unzip</code></pre>
+                  <h3>Download</h3>
+                  <pre><code>curl -sS https://getcomposer.org/installer -o composer-setup.php</code></pre>
+                  <h3>Verificação do instalador</h3>
+                  <pre><code>php composer-setup.php --check</code></pre>
+                  <h3>Instalação</h3>
+                  <p>sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer</p>
+
                   <!-- Final -->
                   <h2 id="historico">Histórico de Navegação<span></span></h2>
                   <p>Remover histórico do Google Chrome e Firefox.</p>
