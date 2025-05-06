@@ -176,15 +176,9 @@ Senha: aluno123
                               alt="Desativar verificação de atualização" />
                   </p>
 
-                  <h2 id="l-modelo">brModelo<span></span></h2>
-                  <p>
-                        Faça o download do
-                        <a href="http://www.sis4.com/brModelo/download.html">brModelo&rarr;</a>
-                        e extraia o <b>zip</b> para <code>C:\Portable</code>. Crie um atalho do
-                        programa na Área de Trabalho do usuário <b>Aluno</b>.
-                  </p>
+                  <h2 id="l-brmodelo">brModelo<span></span></h2>
 
-                  <h2 id="l-composer">Composer</h2>
+                  <h2 id="l-composer">Composer<span></span></h2>
                   <h3>Preparação</h3>
                   <pre><code>sudo apt-get install curl php-cli php-mbstring git unzip</code></pre>
                   <h3>Download</h3>
@@ -192,13 +186,14 @@ Senha: aluno123
                   <h3>Verificação do instalador</h3>
                   <pre><code>php composer-setup.php --check</code></pre>
                   <h3>Instalação</h3>
-                  <p>sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer</p>
+                  <pre><code>sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer</code></pre>
 
                   <h2 id="l-firefox">Firefox<span></span></h2>
                   <p>
                         Faça o download do
                         <a href="https://www.mozilla.org/pt-BR/firefox/all/">Firefox&rarr;</a>.
                   </p>
+
                   <h3>Configurando preferências</h3>
                   <p>
                         <b>Crie</b> o arquivo <code>policies.json</code> dentro de pasta
@@ -241,6 +236,7 @@ Senha: aluno123
                   <h2 id="l-greenfoot">Greenfoot<span></span></h2>
                   <p>Faça o download do <a href="https://www.greenfoot.org/download">Greenfoot&rarr;</a>.
                   </p>
+
                   <h3>Instalação</h3>
                   <pre><code>sudo dpkg -i "pacote.deb"</code></pre>
 
@@ -298,8 +294,10 @@ qtdeclarative5-dev qtquickcontrols2-5-dev libfakekey-dev \
 xorg-dev libxtst-dev libjpeg-dev zlib1g-dev libssl-dev libpam0g-dev \
 libprocps-dev liblzo2-dev libqca-qt5-2-dev libldap2-dev \
 libsasl2-dev ninja-build</code></pre>
+
                   <h3>Instalação</h3>
                   <pre><code>sudo add-apt-repository ppa:veyon/stable -y && sudo apt-get update -y && sudo apt-get install veyon -y</code></pre>
+
                   <h3>Configuração</h3>
                   <ol>
                         <li class="mb-2">Importar configurações;</li>
@@ -346,15 +344,17 @@ libsasl2-dev ninja-build</code></pre>
 
                   <h2 id="l-vlc">VLC Media Player<span></span></h2>
 
-                  <h2 id="l-wine">Wine</h2>
+                  <h2 id="l-wine">Wine<span></span></h2>
                   <h3>Preparação</h3>
                   <pre><code>sudo dpkg --add-architecture i386</code></pre>
+
                   <h3>Repositório</h3>
                   <p>Baixe e adicione a chave do repositório:</p>
                   <pre><code>sudo mkdir -pm755 /etc/apt/keyrings
 wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo gpg --dearmor -o /etc/apt/keyrings/winehq-archive.key -</code></pre>
                   <p>Adicione o repositório:</p>
                   <pre><code>sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/noble/winehq-noble.sources</code></pre>
+
                   <h3>Instalação</h3>
                   <pre><code>sudo apt update -y && sudo apt install --install-recommends winehq-stable -y</code></pre>
 
@@ -363,19 +363,23 @@ wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo gpg --dearmor -o /
 
                   <h2 id="l-lampp">LAMPP<span></span></h2>
                   <pre><code>sudo apt-get install apache2
-            sudo apt-get install mysql-server
-            sudo apt install php libapache2-mod-php php-mysql</code></pre>
+sudo apt-get install mysql-server
+sudo apt install php libapache2-mod-php php-mysql</code></pre>
+
                   <h3>Definindo uma senha</h3>
                   <p>Acesse o MySQL:</p>
                   <pre><code>sudo mysql -u root</code></pre>
                   <p>No MySQL:</p>
                   <pre><code>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'mypassword';
-            flush privileges;
-            exit</code></pre>
+flush privileges;
+exit</code></pre>
+
                   <h3>Habilitando escrita de url</h3>
                   <pre><code>sudo a2enmod rewrite</code></pre>
+
                   <h3>Permissão ao html</h3>
                   <pre><code>sudo chmod -R 777 /var/www/html</code></pre>
+
                   <div class="alert alert-info d-flex align-items-center">
                         <span class="bi flex-shrink-0"></span>
                         <div>Não use essa permissão em produção.
@@ -410,16 +414,18 @@ export NO_PROXY="localhost,127.0.0.1"</code></pre>
 Acquire::https::proxy "https://192.168.0.6:3128/";
 Acquire::ftp::proxy "ftp://192.168.0.6:3128/";</code></pre>
 
-                  <h2 id="l-restore">Restore User</h2>
+                  <h2 id="l-restore">Restore User<span></span></h2>
                   <div class="alert alert-info d-flex align-items-center">
                         <span class="bi flex-shrink-0"></span>
                         <div>Finalizado todas as personalizações do perfil, prossiga com as configurações.
                         </div>
                   </div>
+
                   <h3>Criando backup do perfil</h3>
                   <p>Fazendo a cópia do perfil para ser o padrão:</p>
                   <pre><code>sudo mkdir /home/resetuser
 sudo cp -R /home/aluno/. /home/resetuser</code></pre>
+
                   <h3>Criando o Script</h3>
                   <p>Crie o arquivo <code>reset-user</code> em <code>/sbin</code> e adicione:</p>
                   <pre><code>#!/bin/sh
@@ -427,8 +433,10 @@ rm -rf /home/aluno
 mkdir /home/aluno
 cp -R /home/resetuser/. /home/aluno
 chown -R aluno /home/aluno</code></pre>
-                  <p>Permissão de execução</p>
+
+                  <h3>Permissão de execução</h3>
                   <pre><code>sudo chmod +x /sbin/reset-user</code></pre>
+
                   <h3>Script como serviço</h3>
                   <p>Crie o arquivo <code>reset-user.service</code> em <code>/etc/systemmd/system</code> e adicione:</p>
                   <pre><code>[Unit]
@@ -446,9 +454,11 @@ WantedBy=halt.target reboot.target shutdown.target</code></pre>
                   <h2 id="l-hostname">Alterar Hostname<span></span></h2>
                   <pre><code>sudo vim /etc/hostname
 sudo vim /etc/hosts</code></pre>
+
                   <h2 id="l-activerestore">Restore Profile<span></span></h2>
                   <h3>Habilitando o serviço</h3>
                   <pre><code>sudo systemctl enable reset-user.service</code></pre>
+
                   <h3>Desabilitando o serviço</h3>
                   <pre><code>sudo systemctl disable reset-user.service</code></pre>
             </main>
