@@ -194,7 +194,7 @@ export PATH</code></pre>
                   <h2>Netbeans 14<span></span></h2>
                   <p>Faça o download do <a href="https://netbeans.apache.org/front/main/download/nb14/">Netbeans
                               14&rarr;</a>.</p>
-                  <p>Instale com o perfil do Aluno no diretório <b>/home/portable</b>.</p>
+                  <p>Instale com o perfil do Aluno no diretório <code>/home/portable</code>.</p>
 
                   <h2>Ubuntu Restricted Extras<span></span></h2>
                   <pre><code>sudo apt-get install ubuntu-restricted-extras</code></pre>
@@ -213,12 +213,12 @@ sudo apt install php libapache2-mod-php php-mysql</code></pre>
                   <p>Acesse o MySQL:</p>
                   <pre><code>sudo mysql -u root</code></pre>
                   <p>No MySQL:</p>
-                  <pre><code>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'SenhaAqui';
+                  <pre><code>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'mypassword';
 flush privileges;
 exit</code></pre>
                   <h3>Habilitando escrita de url</h3>
                   <pre><code>sudo a2enmod rewrite</code></pre>
-                  <h3>Permissão de html</h3>
+                  <h3>Permissão ao html</h3>
                   <pre><code>sudo chmod -R 777 /var/www/html</code></pre>
                   <div class="alert alert-info d-flex align-items-center">
                         <span class="bi flex-shrink-0"></span>
@@ -236,16 +236,16 @@ libprocps-dev liblzo2-dev libqca-qt5-2-dev libldap2-dev \
 libsasl2-dev ninja-build</code></pre>
                   <h3>Instalação</h3>
                   <pre><code>sudo add-apt-repository ppa:veyon/stable -y && sudo apt-get update -y && sudo apt-get install veyon -y</code></pre>
-                  <h3>Configurações</h3>
+                  <h3>Configuração</h3>
                   <ol>
-                        <li>Importar configurações.</li>
-                        <li>Importar chave pública.</li>
+                        <li class="mb-2">Importar configurações;</li>
+                        <li class="mb-2">Importar chave pública.</li>
                   </ol>
                   <div class="alert alert-info d-flex align-items-center">
                         <span class="bi flex-shrink-0"></span>
                         <div>
-                              Instale o <b>Veyon Master</b> no computador do professor, com as devidas configurações
-                              para acessar as
+                              Configure o <b>Veyon Master</b> no computador do professor, com os devidos ajustes para
+                              acessar as
                               máquinas clientes.
                         </div>
                   </div>
@@ -263,21 +263,21 @@ libsasl2-dev ninja-build</code></pre>
                   <h3>Plugins</h3>
                   <p>Instale os seguintes plugins:</p>
                   <ol>
-                        <li><code>Portuguese Brazil Language</code></li>
-                        <li><code>Python</code></li>
-                        <li><code>IntelliCode</code></li>
-                        <li><code>Indent-rainbow</code></li>
-                        <li><code>Material Icon Theme</code></li>
-                        <li><code>Preview</code></li>
-                        <li><code>Code Runner</code></li>
-                        <li><code>Trailing Spaces</code></li>
-                        <li><code>Night Owl</code></li>
-                        <li><code>C/C++ Extension Pack</code></li>
+                        <li class="mb-2"><code>Portuguese Brazil Language</code></li>
+                        <li class="mb-2"><code>Python</code></li>
+                        <li class="mb-2"><code>IntelliCode</code></li>
+                        <li class="mb-2"><code>Indent-rainbow</code></li>
+                        <li class="mb-2"><code>Material Icon Theme</code></li>
+                        <li class="mb-2"><code>Preview</code></li>
+                        <li class="mb-2"><code>Code Runner</code></li>
+                        <li class="mb-2"><code>Trailing Spaces</code></li>
+                        <li class="mb-2"><code>Night Owl</code></li>
+                        <li class="mb-2"><code>C/C++ Extension Pack</code></li>
                   </ol>
 
                   <!-- Final -->
                   <h2 id="historico">Histórico de Navegação<span></span></h2>
-                  <p>Remover histórico do Googl Chrome e Firefox.</p>
+                  <p>Remover histórico do Google Chrome e Firefox.</p>
 
                   <h2 id="linux-proxy">Proxy<span></span></h2>
                   <h3>Para os perfis:</h3>
