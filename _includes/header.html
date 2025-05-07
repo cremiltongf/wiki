@@ -80,9 +80,25 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/gpo">GPOs</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/linux">Linux</a>
-                        </li>
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-link nav-link dropdown-toggle d-flex align-items-center"
+                                type="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                aria-label="Abrir submenu">
+                                Linux
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="{{ site.baseurl }}/linux/start/">Settings Linux</a>
+                                </li>
+                                <li><a class="dropdown-item" href="{{ site.baseurl }}/linux/profile/">Settings
+                                        Profile</a></li>
+                                <li><a class="dropdown-item" href="{{ site.baseurl }}/linux/softwares/">Settings
+                                        Softwares</a>
+                                </li>
+                                <li><a class="dropdown-item" href="{{ site.baseurl }}/linux/final/">Settings Final</a>
+                                </li>
+                                <li><a class="dropdown-item" href="{{ site.baseurl }}/linux/clone/">Settings Clone</a>
+                                </li>
+                            </ul>
                         <li class="nav-item dropdown">
                             <button class="btn btn-link nav-link dropdown-toggle d-flex align-items-center"
                                 type="button" data-bs-toggle="dropdown" aria-expanded="false"
@@ -90,10 +106,13 @@
                                 Windows
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="{{ site.baseurl }}/windows/start">Config Windows</a>
+                                <li><a class="dropdown-item" href="{{ site.baseurl }}/windows/start">Settings Windows
+                                        10/11</a>
                                 </li>
-                                <li><a class="dropdown-item" href="{{ site.baseurl }}/windows/profile/">Profile</a></li>
-                                <li><a class="dropdown-item" href="{{ site.baseurl }}/windows/softwares/">Softwares</a>
+                                <li><a class="dropdown-item" href="{{ site.baseurl }}/windows/profile/">Settings
+                                        Profile</a></li>
+                                <li><a class="dropdown-item" href="{{ site.baseurl }}/windows/softwares/">Settings
+                                        Softwares</a>
                                 </li>
                                 <li><a class="dropdown-item" href="{{ site.baseurl }}/windows/final/">Settings Final</a>
                                 </li>
