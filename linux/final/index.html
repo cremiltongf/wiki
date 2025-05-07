@@ -21,24 +21,15 @@ permalink: /linux/final/
                   <p>Remover histórico do Google Chrome e Firefox.</p>
 
                   <h2 id="l-proxy">Proxy<span></span></h2>
-                  <h3>Para os perfis:</h3>
-                  <p>Crie o arquivo <code>proxy_var.sh</code> em <code>/etc/profile.d</code> e adicione:</p>
-                  <pre><code>#all user
-export all_proxy="socks://192.168.0.6:3128/"
-export http_proxy="http://192.168.0.6:3128/"
-export https_proxy="http://192.168.0.6:3128/"
+                  <h3>Para o SO</h3>
+                  <p>Acesse o arquivo <code>/etc/environment</code> e adicione:</p>
+                  <pre><code>export http_proxy="http://192.168.0.6:3128"
+export https_proxy="https://192.168.0.6:3128"
 export ftp_proxy="http://192.168.0.6:3128/"
-export no_proxy="localhost,127.0.0.1"
-
-#for curl
-export ALL_PROXY="socks://192.168.0.6:3128/"
-export HTTP_PROXY="http://192.168.0.6:3128/"
-export HTTPS_PROXY="http://192.168.0.6:3128/"
-export FTP_PROXY="http://192.168.0.6:3128/"
-export NO_PROXY="localhost,127.0.0.1"</code></pre>
+export no_proxy="localhost,127.0.0.1,::1"</code></pre>
 
                   <h3>Para o apt-get</h3>
-                  <p>Crie o arquivo <code>apt.conf</code> em <code>/etc/apt/apt.conf.d</code> e adicione:</p>
+                  <p>Crie o arquivo <code>proxy.conf</code> em <code>/etc/apt/apt.conf.d</code> e adicione:</p>
                   <pre><code>Acquire::http::proxy "http://192.168.0.6:3128/";
 Acquire::https::proxy "https://192.168.0.6:3128/";
 Acquire::ftp::proxy "ftp://192.168.0.6:3128/";</code></pre>
