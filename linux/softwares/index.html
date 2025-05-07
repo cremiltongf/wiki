@@ -64,9 +64,8 @@ permalink: /linux/softwares
 
                   <h3>Configurando preferências</h3>
                   <p>
-                        <b>Crie</b> o arquivo <code>policies.json</code> dentro de pasta
-                        <code>distribution</code> na raíz de instalação do programa com o
-                        seguinte conteúdo:
+                        <b>Altere</b> o arquivo <code>policies.json</code> em <code>/usr/lib/firefox/distribution</code>
+                        adicionando o seguinte conteúdo:
                   </p>
                   <pre><code>{
       "policies": {
@@ -88,6 +87,9 @@ permalink: /linux/softwares
 
                   <h2 id="l-git">Git<span></span></h2>
                   <pre><code>sudo apt-get install git</code></pre>
+                  <h3>Configuração de Proxy</h3>
+                  <pre><code>git config --global http.proxy http://192.168.0.6:3128
+git config --global http.https://domain.com.sslVerify false</code></pre>
 
                   <h2 id="l-chrome">Google Chrome<span></span></h2>
                   <p>Faça o download do <a href="https://www.google.com/chrome/?platform=linux">Google Chrome&rarr;</a>.
