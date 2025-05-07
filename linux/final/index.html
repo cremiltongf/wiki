@@ -1,0 +1,84 @@
+---
+title: "Settings Final"
+permalink: /linux/final/
+---
+
+{% include header.html %}
+
+<div class="container margin-top mt-5 pt-5">
+      <div class="row">
+            <aside class="sidebar-container col-lg-4 z-3" data-js="sidebar-container">
+                  <div class="sidebar">{% include linux-final.html %}</div>
+            </aside>
+
+            <main class="col-12 col-lg-8 mb-5">
+                  <h1>{{ page.title }}</h1>
+                  <p class="lead">
+                        Remoção de histórico, configuração de serviços e configuração de proxy.
+                  </p>
+
+                  <h2 id="l-history">Histórico de Navegação<span></span></h2>
+                  <p>Remover histórico do Google Chrome e Firefox.</p>
+
+                  <h2 id="l-proxy">Proxy<span></span></h2>
+                  <h3>Para os perfis:</h3>
+                  <p>Crie o arquivo <code>proxy_var.sh</code> em <code>/etc/profile.d</code> e adicione:</p>
+                  <pre><code>#all user
+export all_proxy="socks://192.168.0.6:3128/"
+export http_proxy="http://192.168.0.6:3128/"
+export https_proxy="http://192.168.0.6:3128/"
+export ftp_proxy="http://192.168.0.6:3128/"
+export no_proxy="localhost,127.0.0.1"
+
+#for curl
+export ALL_PROXY="socks://192.168.0.6:3128/"
+export HTTP_PROXY="http://192.168.0.6:3128/"
+export HTTPS_PROXY="http://192.168.0.6:3128/"
+export FTP_PROXY="http://192.168.0.6:3128/"
+export NO_PROXY="localhost,127.0.0.1"</code></pre>
+
+                  <h3>Para o apt-get</h3>
+                  <p>Crie o arquivo <code>apt.conf</code> em <code>/etc/apt/apt.conf.d</code> e adicione:</p>
+                  <pre><code>Acquire::http::proxy "http://192.168.0.6:3128/";
+Acquire::https::proxy "https://192.168.0.6:3128/";
+Acquire::ftp::proxy "ftp://192.168.0.6:3128/";</code></pre>
+
+                  <h2 id="l-restore">Restore User<span></span></h2>
+                  <div class="alert alert-info d-flex align-items-center">
+                        <span class="bi flex-shrink-0"></span>
+                        <div>Finalizado todas as personalizações do perfil, prossiga com as configurações.
+                        </div>
+                  </div>
+
+                  <h3>Criando backup do perfil</h3>
+                  <p>Fazendo a cópia do perfil para ser o padrão:</p>
+                  <pre><code>sudo mkdir /home/resetuser
+sudo cp -R /home/aluno/. /home/resetuser</code></pre>
+
+                  <h3>Criando o Script</h3>
+                  <p>Crie o arquivo <code>reset-user</code> em <code>/sbin</code> e adicione:</p>
+                  <pre><code>#!/bin/sh
+rm -rf /home/aluno
+mkdir /home/aluno
+cp -R /home/resetuser/. /home/aluno
+chown -R aluno /home/aluno</code></pre>
+
+                  <h3>Permissão de execução</h3>
+                  <pre><code>sudo chmod +x /sbin/reset-user</code></pre>
+
+                  <h3>Script como serviço</h3>
+                  <p>Crie o arquivo <code>reset-user.service</code> em <code>/etc/systemmd/system</code> e adicione:</p>
+                  <pre><code>[Unit]
+Description=Restore user Aluno
+DefaultDependencies=no
+Before=shutdown.target reboot.target halt.target
+[Service]
+Type=oneshot
+ExecStart=/sbin/reset-user
+[Install]
+WantedBy=halt.target reboot.target shutdown.target</code></pre>
+            </main>
+      </div>
+</div>
+
+{% include footer.html %}

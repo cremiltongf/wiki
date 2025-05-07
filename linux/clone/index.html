@@ -1,0 +1,71 @@
+---
+title: "Settings Clone"
+permalink: /linux/clone/
+---
+
+{% include header.html %}
+
+<div class="container margin-top mt-5 pt-5">
+      <div class="row">
+            <aside class="sidebar-container col-lg-4 z-3" data-js="sidebar-container">
+                  <div class="sidebar">{% include linux-clone.html %}</div>
+            </aside>
+
+            <main class="col-12 col-lg-8 mb-5">
+                  <h1>{{ page.title }}</h1>
+                  <p class="lead">
+                        Padrão de nome de computadores e Ativação de serviços para manter a integridade do SO.
+                  </p>
+
+                  <h2 id="l-hostname">Alterar Hostname<span></span></h2>
+                  <pre><code>sudo vim /etc/hostname
+sudo vim /etc/hosts</code></pre>
+                  <p>Renomeie o computador conforme dados abaixo:</p>
+                  <table class="table table-striped table-hover border">
+                        <thead>
+                              <tr>
+                                    <th>LAB</th>
+                                    <th>Nome</th>
+                                    <th>Grupo</th>
+                              </tr>
+                        </thead>
+                        <tbody>
+                              <tr>
+                                    <td>LAB01</td>
+                                    <td>lab1m01</td>
+                                    <td>WORKGROUP</td>
+                              </tr>
+                              <tr>
+                                    <td>LAB02</td>
+                                    <td>lab2m01</td>
+                                    <td>WORKGROUP</td>
+                              </tr>
+                              <tr>
+                                    <td>LAB03</td>
+                                    <td>lab3m01</td>
+                                    <td>WORKGROUP</td>
+                              </tr>
+                              <tr>
+                                    <td>LAB04</td>
+                                    <td>lab4m01</td>
+                                    <td>WORKGROUP</td>
+                              </tr>
+                              <tr>
+                                    <td>LAB05</td>
+                                    <td>lab5m01</td>
+                                    <td>WORKGROUP</td>
+                              </tr>
+                        </tbody>
+                  </table>
+
+                  <h2 id="l-activerestore">Restore Profile<span></span></h2>
+                  <h3>Habilitando o serviço</h3>
+                  <pre><code>sudo systemctl enable reset-user.service</code></pre>
+
+                  <h3>Desabilitando o serviço</h3>
+                  <pre><code>sudo systemctl disable reset-user.service</code></pre>
+            </main>
+      </div>
+</div>
+
+{% include footer.html %}

@@ -1,0 +1,55 @@
+---
+title: "Settings Linux"
+permalink: /linux/start/
+---
+
+{% include header.html %}
+
+<div class="container margin-top mt-5 pt-5">
+      <div class="row">
+            <aside class="sidebar-container col-lg-4 z-3" data-js="sidebar-container">
+                  <div class="sidebar">{% include linux-start.html %}</div>
+            </aside>
+
+            <main class="col-12 col-lg-8 mb-5">
+                  <h1>{{ page.title }}</h1>
+                  <p class="lead">
+                        Configuração padrão do Sistema Operacional Linux Mint 22.1.
+                  </p>
+
+                  <h2 id="l-partition">Partição do SO<span></span></h2>
+                  <p>Utilize todo espaço da unidade para instalação da distribuição.</p>
+
+                  <h2 id="l-root">Usuário Root<span></span></h2>
+                  <p>
+                        Criar usuário root <strong>IFPR</strong> e defina a senha padrão
+                        disponível na
+                        <a
+                              href="https://docs.google.com/spreadsheets/d/1K7BrCy4tWE0I9W5_Dc5zm_tXNyYtj4ZYFQJLmiljGAE/edit?usp=sharing">planilha&rarr;</a>.
+                  </p>
+
+                  <h2 id="l-default">Usuário Padrão<span></span></h2>
+                  <p>Crie o usuário <strong>Aluno</strong> e configure o login automático.</p>
+                  <pre><code>Usuário: aluno
+Senha: aluno123
+</code></pre>
+
+                  <h2 id="l-login">Login Automático<span></span></h2>
+                  <ol>
+                        <li class="mb-2">Janela de Início de Sessão <span class="wiki-arrow">&harr;</span> Aba Usuários
+                              <span class="wiki-arrow">&harr;</span> configure o usuário Aluno:
+                              <ol class="pt-2">
+                                    <li class="mb-2">Nome do usuário: <code>aluno</code></li>
+                                    <li class="mb-2">Atraso antes da conexão (em segundos): <code>0</code></li>
+                              </ol>
+                        </li>
+                  </ol>
+
+                  <h2 id="l-update">Linux Update<span></span></h2>
+                  <p>Instale todas as atualizações disponíveis.</p>
+                  <pre><code>sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y</code></pre>
+            </main>
+      </div>
+</div>
+
+{% include footer.html %}
