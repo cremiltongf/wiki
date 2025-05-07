@@ -49,12 +49,21 @@ permalink: /linux/softwares
                   <h2 id="l-composer">Composer<span></span></h2>
                   <h3>Preparação</h3>
                   <pre><code>sudo apt-get install curl php-cli php-mbstring git unzip</code></pre>
+
                   <h3>Download</h3>
                   <pre><code>curl -sS https://getcomposer.org/installer -o composer-setup.php</code></pre>
+
                   <h3>Verificação do instalador</h3>
                   <pre><code>php composer-setup.php --check</code></pre>
+
                   <h3>Instalação</h3>
                   <pre><code>sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer</code></pre>
+
+                  <h3>Configuração de Proxy</h3>
+                  <p>Acesse o arquivo <code>/etc/environment</code> e adicione:</p>
+                  <pre><code>export http_proxy="http://192.168.0.6:3128"
+export https_proxy="https://192.168.0.6:3128"
+export no_proxy="localhost,127.0.0.1,::1"</code></pre>
 
                   <h2 id="l-firefox">Firefox<span></span></h2>
                   <p>
