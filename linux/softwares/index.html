@@ -120,24 +120,34 @@ git config --global http.https://domain.com.sslVerify false</code></pre>
                   <pre><code>sudo dpkg -i "pacote.deb"</code></pre>
 
                   <h2 id="l-jdk">Java JDK 17<span></span></h2>
+                  <h3>Preparação</h3>
+                  <p>Removendo openjdk</p>
+                  <pre><code>sudo apt-get update -y && apt-get remove openjdk-6-jre -y && sudo apt-get autoremove && apt-get clean</code></pre>
+
                   <p>Faça o download do <a
                               href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">Java
                               JDK 17&rarr;</a>.</p>
                   <p>Pasta de instalação:</p>
                   <pre><code>sudo mkdir /usr/lib/jdk</code></pre>
                   <p>Extração de arquivos:</p>
-                  <pre><code>sudo tar zxvf jdk-8u191-linux-x64.tar.gz -C /usr/lib/jdk</code></pre>
+                  <pre><code>sudo tar zxvf jdk-17.0.12_linux-x64_bin.tar -C /usr/lib/jdk</code></pre>
                   <p>Criação de link simbólico:</p>
-                  <pre><code>sudo ln -s /usr/lib/jdk/jdk1.8.0_191 /usr/lib/jdk/java-oracle</code></pre>
+                  <pre><code>sudo ln -s /usr/lib/jdk/jdk-17.0.12 /usr/lib/jdk/java-oracle</code></pre>
+
                   <h3>Variáveis de Ambiente</h3>
-                  <p>Crie o arquivo <code>java_var.sh</code> em <code>/etc/profile.d</code> e adicione:</p>
+                  <p>Crie o arquivo <code>jdk_var.sh</code> em <code>/etc/profile.d</code> e adicione:</p>
                   <pre><code>JAVA_HOME=/usr/lib/jdk/java-oracle
-PATH=$PATH:$HOME/bin:$JAVA_HOME/bin
-export PATH</code></pre>
+export PATH=$PATH:$JAVA_HOME/bin</code></pre>
                   <p>Permissão para execução:</p>
-                  <pre><code>sudo chmod +x /etc/profile.d/java_var.sh</code></pre>
+                  <pre><code>sudo chmod +x /etc/profile.d/jdk_var.sh</code></pre>
 
                   <h2 id="l-jre">Java JRE<span></span></h2>
+                  <p>Faça o download do <a href="https://www.java.com/pt-BR/download/linux_manual.jsp">Java
+                              JRE&rarr;</a>.</p>
+                  <p>Pasta de instalação:</p>
+                  <pre><code>sudo mkdir /usr/lib/jre</code></pre>
+                  <p>Extração de arquivos:</p>
+                  <pre><code>sudo tar zxvf jre-8u451-linux-x64.tar -C /usr/lib/jre</code></pre>
 
                   <h2 id="l-office">Libre Office<span></span></h2>
                   <div class="alert alert-info d-flex align-items-center">
@@ -149,7 +159,9 @@ export PATH</code></pre>
                   <h2 id="l-netbeans">Netbeans 14<span></span></h2>
                   <p>Faça o download do <a href="https://netbeans.apache.org/front/main/download/nb14/">Netbeans
                               14&rarr;</a>.</p>
-                  <p>Instale com o perfil do Aluno no diretório <code>/home/portable</code>.</p>
+                  <p>Instale o <code>Apache-NetBeans-14.sh</code> com o perfil do Aluno no diretório
+                        <code>/home/portable</code>.
+                  </p>
 
                   <h2 id="l-ssh">Open SSH Server<span></span></h2>
                   <pre><code>sudo apt-get install openssh-server</code></pre>
@@ -158,6 +170,10 @@ export PATH</code></pre>
                   <pre><code>sudo apt-get install scratch</code></pre>
 
                   <h2 id="l-portugol">Portugol Stúdio<span></span></h2>
+                  <p>
+                        Faça o download do
+                        <a href="https://univali-lite.github.io/Portugol-Studio/">Portugol Stúdio&rarr;</a>.
+                  </p>
 
                   <h2 id="l-samba">Samba<span></span></h2>
                   <pre><code>sudo apt-get install samba</code></pre>
@@ -197,8 +213,7 @@ libsasl2-dev ninja-build</code></pre>
                   <h2 id="l-vscode">Visual Studio Code<span></span></h2>
                   <p>
                         Faça o download do
-                        <a href="https://code.visualstudio.com/Download">Visual Studio Code&rarr;</a> na
-                        versão de sistema.
+                        <a href="https://code.visualstudio.com/Download">Visual Studio Code&rarr;</a>.
                   </p>
 
                   <h3>Instalação</h3>
@@ -220,8 +235,13 @@ libsasl2-dev ninja-build</code></pre>
                   </ol>
 
                   <h2 id="l-visual">VisuAlg<span></span></h2>
+                  <p>
+                        Faça o download do
+                        <a href="https://sourceforge.net/projects/visualg30/">VisuAlg&rarr;</a>.
+                  </p>
 
                   <h2 id="l-vlc">VLC Media Player<span></span></h2>
+                  <pre><code>sudo apt-get install vlc -y</code></pre>
 
                   <h2 id="l-wine">Wine<span></span></h2>
                   <h3>Preparação</h3>
