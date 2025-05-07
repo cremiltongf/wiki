@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
+  <loc>https://labs.cremilton.com/start/</loc>
+  <lastmod>2025-05-06</lastmod>
+</url>
+
+<url>
   <loc>https://labs.cremilton.com/gpo/</loc>
   <lastmod>2020-12-15</lastmod>
 </url>
@@ -12,33 +17,28 @@
 </url>
 
 <url>
-  <loc>https://labs.cremilton.com/image/setup-so</loc>
-  <lastmod>2025-02-11</lastmod>
+  <loc>https://labs.cremilton.com/windows/start</loc>
+  <lastmod>2025-05-06</lastmod>
 </url>
 
 <url>
-  <loc>https://labs.cremilton.com/image/windows</loc>
-  <lastmod>2025-02-11</lastmod>
+  <loc>https://labs.cremilton.com/windows/profile/</loc>
+  <lastmod>2025-05-06</lastmod>
 </url>
 
 <url>
-  <loc>https://labs.cremilton.com/image/profile/</loc>
-  <lastmod>2025-02-11</lastmod>
+  <loc>https://labs.cremilton.com/windows/softwares/</loc>
+  <lastmod>2025-05-06</lastmod>
 </url>
 
 <url>
-  <loc>https://labs.cremilton.com/image/softwares/</loc>
-  <lastmod>2025-02-11</lastmod>
+  <loc>https://labs.cremilton.com/windows/final/</loc>
+  <lastmod>2025-05-06</lastmod>
 </url>
 
 <url>
-  <loc>https://labs.cremilton.com/image/final/</loc>
-  <lastmod>2025-02-11</lastmod>
-</url>
-
-<url>
-  <loc>https://labs.cremilton.com/image/clone/</loc>
-  <lastmod>2025-02-11</lastmod>
+  <loc>https://labs.cremilton.com/windows/clone/</loc>
+  <lastmod>2025-05-06</lastmod>
 </url>
 
 </urlset>
