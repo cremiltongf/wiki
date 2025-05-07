@@ -1,39 +1,45 @@
 {% if page.url != '/404.html' %}
 <footer class="border-top bg-body-tertiary pt-5 pb-5">
-<div class="container">
-    <p class="text-center mb-0">
-        &copy; 2019 - {{ site.time | date: '%Y' }} [Wiki Lab].
-        Acesse a <a class="text-decoration-none" href="https://ifpr.edu.br/umuarama/laboratorios/laboratorio-de-informatica/">Documentação do Laboratório de Informática&rarr;</a>.
-    </p>
-    <p class="text-center">
-        Ver no <a class="text-decoration-none" href="https://github.com/cremiltongf/wiki">GitHub&rarr;</a> | Por <a class="text-decoration-none" href="https://www.cremilton.com">@cremiltongf&rarr;</a>.
-    </p>
-</div>
+    <div class="container">
+        <p class="text-center mb-0">
+            &copy; 2019 - {{ site.time | date: '%Y' }} [Wiki Lab].
+            Acesse a <a class="text-decoration-none"
+                href="https://ifpr.edu.br/umuarama/laboratorios/laboratorio-de-informatica/">Documentação do Laboratório
+                de Informática&rarr;</a>.
+        </p>
+        <p class="text-center">
+            Ver no <a class="text-decoration-none" href="https://github.com/cremiltongf/wiki">GitHub&rarr;</a> | Por <a
+                class="text-decoration-none" href="https://www.cremilton.com">@cremiltongf&rarr;</a>.
+        </p>
+    </div>
 </footer>
-{% endif %}
 
 {% if page.url != '/' %}
-    <a class="return-top" href="#top" data-js="top-site">
-        <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="currentColor" class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
-            <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z"/>
-        </svg>
-    </a>
+<a class="return-top" href="#top" data-js="top-site">
+    <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" fill="currentColor"
+        class="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
+        <path
+            d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z" />
+    </svg>
+</a>
 {% endif %}
 
 <script src="{{ site.baseurl }}/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-{% if page.url != '/' || page.url != '/404.html' %}
+{% if page.url != '/' %}
 <script src="{{ site.baseurl }}/assets/js/app.js"></script>
+{% endif %}
 {% endif %}
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-6FPZDGL662"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6FPZDGL662');
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-6FPZDGL662');
 </script>
 
 </body>
+
 </html>

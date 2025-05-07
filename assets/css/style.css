@@ -140,9 +140,9 @@ h4{
  * 404
  */
  .container-404{
-    margin-top: 64px;
+    padding: 3.2rem 0;
     background-color: #272f42;
-    min-height: calc(100vh - 64px);
+    min-height: 100vh;
     color: #fff;
  }
  .conteudo-404{
@@ -169,6 +169,9 @@ h4{
     font-size: 3.052rem;
     line-height: 1;
     margin-bottom: 2rem;
+}
+.btn-404:hover{
+    color:#f61;
 }
 @media (max-width: 768px){
     .conteudo-404{
