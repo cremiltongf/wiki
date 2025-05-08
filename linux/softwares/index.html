@@ -57,8 +57,7 @@ permalink: /linux/softwares
                   </div>
 
                   <h3>Criando Atalho</h3>
-                  <p>Crie o arquivo <code>brModelo.desktop</code> na Área de Trabalho do <b>Aluno</b> com o seguinte
-                        conteúdo:</p>
+                  <p>Crie um lançador na Área de Trabalho do <b>Aluno</b> e altere seu conteúdo para:</p>
                   <pre><code>[Desktop Entry]
 Name=brModelo
 Exec=java -jar "/home/portable/brmodelo/brModelo.jar"
@@ -67,7 +66,7 @@ Terminal=false
 PrefersNonDefaultGPU=false
 Icon=brmodelo
 Type=Application</code></pre>
-                  <h3>Criando Atalho</h3>
+                  <h3>Imagem do Atalho</h3>
                   <p>Copie a imagem/ícone para <code>~/.icons</code>. Exemplo: <b>brmodelo.png</b>.</p>
 
                   <h2 id="l-composer">Composer<span></span></h2>
@@ -266,8 +265,28 @@ libsasl2-dev ninja-build</code></pre>
                   <h2 id="l-visual">VisuAlg<span></span></h2>
                   <p>
                         Faça o download do
-                        <a href="https://sourceforge.net/projects/visualg30/">VisuAlg&rarr;</a>.
+                        <a href="https://sourceforge.net/projects/visualg30/">VisuAlg&rarr;</a>
+                        e extraia para <code>/home/portable/visualg3.0.7</code>.
                   </p>
+                  <h3>Dependências</h3>
+                  <div class="alert alert-info d-flex align-items-center">
+                        <span class="bi flex-shrink-0"></span>
+                        <div>Roda com o <a href="/linux/softwares/#l-wine">Wine&larr;</a>.
+                        </div>
+                  </div>
+
+                  <h3>Criando Atalho</h3>
+                  <p>Crie um lançador na Área de Trabalho do <b>Aluno</b> e altere seu conteúdo para:</p>
+                  <pre><code>[Desktop Entry]
+Name=visualg30
+Exec=wine "/home/portable/visualg3.0.7/visualg30.exe"
+Comment=Start VisuAlg
+Terminal=false
+PrefersNonDefaultGPU=false
+Icon=visualg
+Type=Application</code></pre>
+                  <h3>Imagem do Atalho</h3>
+                  <p>Copie a imagem/ícone para <code>~/.icons</code>. Exemplo: <b>visualg.png</b>.</p>
 
                   <h2 id="l-vlc">VLC Media Player<span></span></h2>
                   <pre><code>sudo apt-get install vlc -y</code></pre>
