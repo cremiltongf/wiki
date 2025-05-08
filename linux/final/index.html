@@ -52,10 +52,10 @@ sudo cp -r /home/aluno /home/resetuser</code></pre>
 rm -rf /home/aluno
 mkdir /home/aluno
 cp -r /home/resetuser /home/aluno
-chown -r aluno /home/aluno</code></pre>
+chown -R aluno /home/aluno</code></pre>
 
                   <h3>Permissão de execução</h3>
-                  <pre><code>sudo chmod +x /sbin/reset-user</code></pre>
+                  <pre><code>sudo chmod u+x /sbin/reset-user</code></pre>
 
                   <h3>Script como serviço</h3>
                   <p>Crie o arquivo <code>reset-user.service</code> em <code>/etc/systemd/system</code> e adicione:</p>
@@ -63,11 +63,17 @@ chown -r aluno /home/aluno</code></pre>
 Description=Restore user Aluno
 DefaultDependencies=no
 Before=shutdown.target reboot.target halt.target
+
 [Service]
 Type=oneshot
 ExecStart=/sbin/reset-user
+TimeoutStartSec=0
+
 [Install]
-WantedBy=halt.target reboot.target shutdown.target</code></pre>
+WantedBy=shutdown.target reboot.target halt.target</code></pre>
+
+                  <h3>Atualizando systemd</h3>
+                  <pre><code>sudo systemctl daemon-reload</code></pre>
             </main>
       </div>
 </div>
