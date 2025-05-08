@@ -44,14 +44,14 @@ Acquire::ftp::proxy "ftp://192.168.0.6:3128/";</code></pre>
                   <h3>Criando backup do perfil</h3>
                   <p>Fazendo a cópia do perfil para ser o padrão:</p>
                   <pre><code>sudo mkdir /home/resetuser
-sudo cp -r /home/aluno /home/resetuser</code></pre>
+sudo cp -r /home/aluno/. /home/resetuser</code></pre>
 
                   <h3>Criando o Script</h3>
                   <p>Crie o arquivo <code>reset-user.sh</code> em <code>/sbin</code> e adicione:</p>
                   <pre><code>#!/bin/sh
 rm -rf /home/aluno
 mkdir /home/aluno
-cp -r /home/resetuser /home/aluno
+cp -r /home/resetuser/. /home/aluno
 chown -R aluno /home/aluno</code></pre>
 
                   <h3>Permissão de execução</h3>
@@ -62,7 +62,7 @@ chown -R aluno /home/aluno</code></pre>
                   <pre><code>[Unit]
 Description=Restore user Aluno
 DefaultDependencies=no
-Before=shutdown.target reboot.target halt.target
+Before=shutdown.target halt.target
 
 [Service]
 Type=oneshot
@@ -70,7 +70,7 @@ ExecStart=/sbin/reset-user.sh
 TimeoutStartSec=0
 
 [Install]
-WantedBy=shutdown.target reboot.target halt.target</code></pre>
+WantedBy=shutdown.target halt.target</code></pre>
 
                   <h3>Atualizando systemd</h3>
                   <pre><code>sudo systemctl daemon-reload</code></pre>
