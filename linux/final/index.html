@@ -47,7 +47,7 @@ Acquire::ftp::proxy "ftp://192.168.0.6:3128/";</code></pre>
 sudo cp -r /home/aluno /home/resetuser</code></pre>
 
                   <h3>Criando o Script</h3>
-                  <p>Crie o arquivo <code>reset-user</code> em <code>/sbin</code> e adicione:</p>
+                  <p>Crie o arquivo <code>reset-user.sh</code> em <code>/sbin</code> e adicione:</p>
                   <pre><code>#!/bin/sh
 rm -rf /home/aluno
 mkdir /home/aluno
@@ -55,7 +55,7 @@ cp -r /home/resetuser /home/aluno
 chown -R aluno /home/aluno</code></pre>
 
                   <h3>Permissão de execução</h3>
-                  <pre><code>sudo chmod u+x /sbin/reset-user</code></pre>
+                  <pre><code>sudo chmod u+x /sbin/reset-user.sh</code></pre>
 
                   <h3>Script como serviço</h3>
                   <p>Crie o arquivo <code>reset-user.service</code> em <code>/etc/systemd/system</code> e adicione:</p>
@@ -66,7 +66,7 @@ Before=shutdown.target reboot.target halt.target
 
 [Service]
 Type=oneshot
-ExecStart=/sbin/reset-user
+ExecStart=/sbin/reset-user.sh
 TimeoutStartSec=0
 
 [Install]
