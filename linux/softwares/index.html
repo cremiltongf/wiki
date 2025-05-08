@@ -30,7 +30,8 @@ permalink: /linux/softwares
                   <h3>Dependências</h3>
                   <div class="alert alert-info d-flex align-items-center">
                         <span class="bi flex-shrink-0"></span>
-                        <div>Roda com o <a href="/linux/softwares/#l-wine">Wine</a> e <b>Java JDK</b> (selecione todas
+                        <div>Roda com o <a href="/linux/softwares/#l-wine">Wine&larr;</a> e <b>Java JDK</b> (selecione
+                              todas
                               as opções do Astah no momento da instalação).
                         </div>
                   </div>
@@ -46,9 +47,28 @@ permalink: /linux/softwares
                   <p>
                         Faça o download do
                         <a href="http://www.sis4.com/brModelo/download.html">brModelo&rarr;</a>
-                        e extraia o <b>zip</b> para <code>/home/portable</code>. Crie um atalho do
-                        programa na Área de Trabalho do usuário <b>Aluno</b>.
+                        e extraia para <code>/home/portable/brmodelo</code>.
                   </p>
+                  <h3>Dependências</h3>
+                  <div class="alert alert-info d-flex align-items-center">
+                        <span class="bi flex-shrink-0"></span>
+                        <div>Precisa de <a href="/linux/softwares/#l-jdk">Java JDK&larr;</a>.
+                        </div>
+                  </div>
+
+                  <h3>Criando Atalho</h3>
+                  <p>Crie o arquivo <code>brModelo.desktop</code> na Área de Trabalho do <b>Aluno</b> com o seguinte
+                        conteúdo:</p>
+                  <pre><code>[Desktop Entry]
+Name=brModelo
+Exec=java -jar "/home/portable/brmodelo/brModelo.jar"
+Comment=Start brModelo
+Terminal=false
+PrefersNonDefaultGPU=false
+Icon=brmodelo
+Type=Application</code></pre>
+                  <h3>Criando Atalho</h3>
+                  <p>Copie a imagem/ícone para <code>~/.icons</code>. Exemplo: <b>brmodelo.png</b>.</p>
 
                   <h2 id="l-composer">Composer<span></span></h2>
                   <h3>Preparação</h3>
