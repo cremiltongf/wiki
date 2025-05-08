@@ -267,8 +267,12 @@ wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo gpg --dearmor -o /
                               Creator&rarr;</a>.</p>
                   <h3>Dependências</h3>
                   <ol>
-                        <li class="mb-2">PyQt4 (or python-qt4), e</li>
-                        <li class="mb-2">xdg-tools.</li>
+                        <li class="mb-2">PyQt4 (or python-qt4) <span class="wiki-arrow">&harr;</span>
+                              <code>sudo apt install python3-pyqt5 -y</code>
+                        </li>
+                        <li class="mb-2">xdg-tools <span class="wiki-arrow">&harr;</span>
+                              <code>sudo apt install xdg-utils -y</code>
+                        </li>
                   </ol>
                   <h3>Instalação</h3>
                   <pre><code>sudo dpkg -i "pacote.deb"</code></pre>
