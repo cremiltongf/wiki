@@ -44,15 +44,15 @@ Acquire::ftp::proxy "ftp://192.168.0.6:3128/";</code></pre>
                   <h3>Criando backup do perfil</h3>
                   <p>Fazendo a cópia do perfil para ser o padrão:</p>
                   <pre><code>sudo mkdir /home/resetuser
-sudo cp -R /home/aluno/. /home/resetuser</code></pre>
+sudo cp -r /home/aluno/ /home/resetuser</code></pre>
 
                   <h3>Criando o Script</h3>
                   <p>Crie o arquivo <code>reset-user</code> em <code>/sbin</code> e adicione:</p>
                   <pre><code>#!/bin/sh
 rm -rf /home/aluno
 mkdir /home/aluno
-cp -R /home/resetuser/. /home/aluno
-chown -R aluno /home/aluno</code></pre>
+cp -r /home/resetuser/ /home/aluno
+chown -r aluno /home/aluno</code></pre>
 
                   <h3>Permissão de execução</h3>
                   <pre><code>sudo chmod +x /sbin/reset-user</code></pre>
