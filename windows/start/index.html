@@ -40,10 +40,10 @@ permalink: /windows/start/
         <li class="mb-2"><a href="https://schneegans.de/windows/unattend-generator/">Unattend Generator&rarr;</a></li>
         <li class="mb-2"><a href="https://www.anyburn.com/download.php">AnyBurn&rarr;</a></li>
         <li class="mb-2"><a href="https://www.ventoy.net/en/download.html">Ventoy&rarr;</a></li>
+        <li><a href="https://clonezilla.org/downloads.php">Clonezilla&rarr;</a></li>
         <li class="mb-2"><a
             href="https://learn.microsoft.com/pt-br/windows-hardware/manufacture/desktop/sysprep--generalize--a-windows-installation?view=windows-11">Sysprep&rarr;</a>
         </li>
-        <li><a href="https://clonezilla.org/downloads.php">Clonezilla&rarr;</a></li>
       </ul>
 
       <h2 id="admin">Usuário Administrador<span></span></h2>
@@ -149,7 +149,7 @@ Senha: aluno123
       <div class="alert alert-info d-flex align-items-center">
         <span class="bi flex-shrink-0"></span>
         <div>
-          Aplica-se ao Windows 10/11 apenas. Serve para o <b>Veyon</b> enxergar as outras máquinas na rede local.
+          Serve para o <b>Veyon</b> enxergar as outras máquinas na rede local.
         </div>
       </div>
       <p>Execute no <code>prompt</code> como <b>Administrador</b>:</p>
@@ -162,12 +162,7 @@ Senha: aluno123
           Ajuste necessário para evitar o reparo automático do SO em caso de queda de energia.
         </div>
       </div>
-      <h3>Desativar no Windows 7</h3>
-      <p>
-        Execute no <code>prompt</code> como <b>Administrador</b>:
-      </p>
-      <pre><code>bcdedit /set {default} bootstatuspolicy ignoreallfailures</code></pre>
-      <h3>Desativar no Windows 10/11</h3>
+      <h3>Para desativar</h3>
       <p>
         Execute no <code>prompt</code> como <b>Administrador</b>:
       </p>
@@ -230,7 +225,7 @@ Senha: aluno123
       <div class="alert alert-info d-flex align-items-center">
         <span class="bi flex-shrink-0"></span>
         <div>
-          Aplica-se ao Windows 10/11 apenas. Possível definir pelo Active Directory.
+          Possível definir pelo Active Directory.
         </div>
       </div>
 
@@ -240,12 +235,6 @@ Senha: aluno123
         <b>Administrador</b>:
       </p>
       <pre><code>reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v DisableSearchBoxSuggestions /t REG_DWORD /d 1 /f /reg:32</code></pre>
-      <div class="alert alert-info d-flex align-items-center">
-        <span class="bi flex-shrink-0"></span>
-        <div>
-          Aplica-se ao Windows 10/11 apenas.
-        </div>
-      </div>
 
       <h2 id="psremote">Comunicação remota do PowerShell<span></span></h2>
       <p>Execute no <code>PowerShell</code> como <b>Administrador</b>:</p>
