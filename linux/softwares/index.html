@@ -171,6 +171,26 @@ export PATH=$PATH:$JAVA_HOME/bin</code></pre>
                               14&rarr;</a>.</p>
                   <p>Instale o <code>Apache-NetBeans-14.sh</code> com o perfil do Aluno.
                   </p>
+                  <h3>Proxy para o Maven</h3>
+                  <p>
+                        <b>Altere</b> o arquivo <code>settings.xml</code> na seção de
+                        <b>proxies</b> localizado em
+                        <code>~/netbeans-14/netbeans/java/maven/conf</code>
+                        com o seguinte conteúdo:
+                  </p>
+                  <pre><code>&lt;id>proxyifpr&lt;/id&gt;
+&lt;active>true&lt;/active&gt;
+&lt;protocol>http&lt;/protocol&gt;
+&lt;host>192.168.0.6&lt;/host&gt;
+&lt;port>3128&lt;/port&gt;
+&lt;username>&lt;/username&gt;
+&lt;password>&lt;/password&gt;
+&lt;nonProxyHosts>localhost&lt;/nonProxyHosts&gt;
+</code></pre>
+                  <p>
+                        Referência:
+                        <a href="https://maven.apache.org/settings.html#Proxies">Proxies&rarr;</a>.
+                  </p>
 
                   <h2 id="l-nodejs">Node.js<span></span></h2>
                   <pre><code># Download and install nvm:
