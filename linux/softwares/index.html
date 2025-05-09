@@ -379,6 +379,21 @@ wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo gpg --dearmor -o /
                   <p>Referência: <a href="https://gitlab.winehq.org/wine/wine/-/wikis/Debian-Ubuntu">Wiki
                               Wine&rarr;</a>.</p>
 
+                  <h3>Movendo a instalação</h3>
+                  <p>Movendo a instalação atual <code>/home/aluno/.wine</code> para <code>/home/portable</code>
+                  </p>
+                  <pre><code>sudo mv /home/aluno/.wine/ /home/portable/</code></pre>
+                  <h3>Link simbólico</h3>
+                  <p>Criando link no diretório anterior:</p>
+                  <pre><code>sudo ln -s /home/portable/.wine/ /home/aluno/.wine/</code></pre>
+
+                  <div class="alert alert-info d-flex align-items-center">
+                        <span class="bi flex-shrink-0"></span>
+                        <div>Configuração útil para otimizar a performace do <a href="/linux/final/#l-restore">Restore
+                                    User&larr;</a>. Neste caso, é como se o Wine nunca tivesse sido movido.
+                        </div>
+                  </div>
+
                   <h2 id="l-lampp">LAMPP<span></span></h2>
                   <pre><code>sudo apt-get install apache2 -y && sudo apt-get install mysql-server -y && sudo apt install php libapache2-mod-php php-mysql -y && sudo apt-get install phpmyadmin -y</code></pre>
 
