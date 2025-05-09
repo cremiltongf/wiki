@@ -196,6 +196,21 @@ export PATH=$PATH:$JAVA_HOME/bin</code></pre>
                         <a href="https://maven.apache.org/settings.html#Proxies">Proxies&rarr;</a>.
                   </p>
 
+                  <h3>Movendo a instalação</h3>
+                  <p>Movendo a instalação atual <code>/home/aluno/netbeans-14</code> para <code>/home/portable</code>
+                  </p>
+                  <pre><code>sudo mv /home/aluno/netbeans-14/ /home/portable/</code></pre>
+                  <h3>Link simbólico</h3>
+                  <p>Criando link no diretório anterior:</p>
+                  <pre><code>sudo ln -s /home/portable/netbeans-14/ /home/aluno/netbeans-14/</code></pre>
+
+                  <div class="alert alert-info d-flex align-items-center">
+                        <span class="bi flex-shrink-0"></span>
+                        <div>Configuração útil para otimizar a performace do <a href="/linux/final/#l-restore">Restore
+                                    User&larr;</a>. Para este caso, e como se o NetBeans nunca tivesse sido movido.
+                        </div>
+                  </div>
+
                   <h2 id="l-nodejs">Node.js<span></span></h2>
                   <pre><code># Download and install nvm:
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
