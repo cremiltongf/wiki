@@ -62,7 +62,7 @@ chown -R aluno /home/aluno</code></pre>
                   <pre><code>[Unit]
 Description=Restore user Aluno
 DefaultDependencies=no
-Before=shutdown.target halt.target
+Before=shutdown.target
 
 [Service]
 Type=oneshot
@@ -70,7 +70,7 @@ ExecStart=/sbin/reset-user.sh
 TimeoutStartSec=0
 
 [Install]
-WantedBy=shutdown.target halt.target</code></pre>
+WantedBy=shutdown.target</code></pre>
 
                   <h3>Atualizando systemd</h3>
                   <pre><code>sudo systemctl daemon-reload</code></pre>
