@@ -82,10 +82,10 @@
     }
 }
 
-/* 
+/*
  * img
  */
- .img-fluid {
+ p > .img-fluid {
     border: 1px solid #ccc;
  }
 
