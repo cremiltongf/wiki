@@ -82,6 +82,13 @@
     }
 }
 
+/* 
+ * img
+ */
+ .img-fluid {
+    border: 1px solid #ccc;
+ }
+
 /*
  * anchor
  */
