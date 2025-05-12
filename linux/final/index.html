@@ -21,12 +21,15 @@ permalink: /linux/final/
                   <p>Remover histórico do Google Chrome e Firefox.</p>
 
                   <h2 id="l-proxy">Proxy<span></span></h2>
-                  <h3>Para o SO</h3>
-                  <p>Acesse o arquivo <code>/etc/environment</code> e adicione:</p>
-                  <pre><code>export http_proxy="http://192.168.0.6:3128"
-export https_proxy="https://192.168.0.6:3128"
-export ftp_proxy="http://192.168.0.6:3128/"
-export no_proxy="localhost,127.0.0.1,::1"</code></pre>
+                  <div class="alert alert-info d-flex align-items-center">
+                        <span class="bi flex-shrink-0"></span>
+                        <div>Defina para o perfil do <b>Aluno</b> e do <b>IFPR</b>.
+                        </div>
+                  </div>
+                  <p>
+                        <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/linux-proxy.png"
+                              alt="Configuração de proxy" />
+                  </p>
 
                   <h3>Para o apt-get</h3>
                   <p>Crie o arquivo <code>proxy.conf</code> em <code>/etc/apt/apt.conf.d</code> e adicione:</p>
