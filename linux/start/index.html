@@ -50,8 +50,11 @@ Senha: aluno123
                   <p>Instale todas as atualizações disponíveis.</p>
                   <pre><code>sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y</code></pre>
 
-                  <h2 id="l-timezone">Timezone<span></span></h2>
-                  <pre><code>sudo timedatectl set-timezone America/Sao_Paulo</code></pre>
+                  <h2 id="l-datetime">Data e Horas<span></span></h2>
+                  <pre><code>#set timezone
+sudo timedatectl set-timezone America/Sao_Paulo
+#update time and date
+systemctl restart systemd-timedated</code></pre>
 
                   <div class="container">
                         <div class="row">
