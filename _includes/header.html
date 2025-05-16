@@ -31,6 +31,14 @@
     <!-- Search Console -->
     <meta name="google-site-verification" content="UBWJFgFYcLOgToFsoGIDjqg3aC6CHsqbr9Txf2Dx1Fs" />
 
+    {% if page.url != '/404.html' %}
+    {% if page.url != '/' %}
+    <!-- highlight -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/highlight/styles/github-dark-dimmed.min.css">
+    <script src="{{ site.baseurl }}/assets/highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    {% endif %}
+    {% endif %}
 </head>
 
 <body data-js="overflowOnOff">

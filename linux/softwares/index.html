@@ -18,7 +18,9 @@ permalink: /linux/softwares
                   </p>
 
                   <h2 id="l-zip">7-zip<span></span></h2>
-                  <pre><code>sudo apt-get install p7zip p7zip-full p7zip-rar lzma lzma-dev</code></pre>
+                  <pre><code>
+sudo apt-get install p7zip p7zip-full p7zip-rar lzma lzma-dev
+                  </code></pre>
 
                   <h2 id="l-astah">Astah Community<span></span></h2>
                   <p>
@@ -58,34 +60,45 @@ permalink: /linux/softwares
 
                   <h3>Criando Atalho</h3>
                   <p>Crie um lançador na Área de Trabalho do <b>Aluno</b> e altere seu conteúdo para:</p>
-                  <pre><code>[Desktop Entry]
+                  <pre><code>
+[Desktop Entry]
 Name=brModelo
 Exec=java -jar "/home/portable/brmodelo/brModelo.jar"
 Comment=Start brModelo
 Terminal=false
 PrefersNonDefaultGPU=false
 Icon=brmodelo
-Type=Application</code></pre>
+Type=Application
+                  </code></pre>
                   <h3>Imagem do Atalho</h3>
                   <p>Copie a imagem/ícone para <code>~/.icons</code>. Exemplo: <b>brmodelo.png</b>.</p>
 
                   <h2 id="l-composer">Composer<span></span></h2>
                   <h3>Preparação</h3>
-                  <pre><code>sudo apt-get install curl php-cli php-mbstring git unzip</code></pre>
+                  <pre><code>
+sudo apt-get install curl php-cli php-mbstring git unzip
+                  </code></pre>
 
                   <h3>Download</h3>
-                  <pre><code>sudo curl -sS https://getcomposer.org/installer -o composer-setup.php</code></pre>
+                  <pre><code>
+sudo curl -sS https://getcomposer.org/installer -o composer-setup.php
+                  </code></pre>
 
-                  <h3>Verificação do instalador</h3>
-                  <pre><code>sudo php composer-setup.php --check</code></pre>
+                  <h3>Verificando instalador</h3>
+                  <pre><code>
+sudo php composer-setup.php --check
+                  </code></pre>
 
                   <h3>Instalação</h3>
-                  <pre><code>sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer</code></pre>
+                  <pre><code>
+sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+                  </code></pre>
 
                   <h3>Configuração de Proxy</h3>
                   <div class="alert alert-info d-flex align-items-center">
                         <span class="bi flex-shrink-0"></span>
-                        <div>Configuração realizada em <a href="/linux/final/#l-proxy">Settings Final&larr;</a>.
+                        <div>Utiliza o proxy definido para o SO. Configuração realizada em <a
+                                    href="/linux/final/#l-proxy">Settings Final&larr;</a>.
                         </div>
                   </div>
 
@@ -98,9 +111,10 @@ Type=Application</code></pre>
                   <h3>Configurando preferências</h3>
                   <p>
                         <b>Altere</b> o arquivo <code>policies.json</code> em <code>/usr/lib/firefox/distribution</code>
-                        adicionando o seguinte conteúdo:
+                        com o seguinte conteúdo:
                   </p>
-                  <pre><code>{
+                  <pre><code>
+{
       "policies": {
             "AppAutoUpdate": false,
             "BackgroundAppUpdate": false,
@@ -108,7 +122,8 @@ Type=Application</code></pre>
             "DisableDefaultBrowserAgent": true,
             "DontCheckDefaultBrowser": true
       }
-}</code></pre>
+}
+                  </code></pre>
                   <p>
                         Referência:
                         <a href="https://support.mozilla.org/pt-BR/kb/personalizando-o-firefox-usando-policies">Como
@@ -125,14 +140,17 @@ Type=Application</code></pre>
                         Execute os comandos no <code>terminal</code> como
                         <b>Usuário Padrão</b>:
                   </p>
-                  <pre><code>git config --global http.proxy http://192.168.0.6:3128
-git config --global http.https://domain.com.sslVerify false</code></pre>
+                  <pre><code>
+git config --global http.proxy http://192.168.0.6:3128 && git config --global http.https://domain.com.sslVerify false
+                  </code></pre>
 
                   <h2 id="l-chrome">Google Chrome<span></span></h2>
                   <p>Faça o download do <a href="https://www.google.com/chrome/?platform=linux">Google Chrome&rarr;</a>.
                   </p>
                   <h3>Instalação</h3>
-                  <pre><code>sudo dpkg -i "pacote.deb"</code></pre>
+                  <pre><code>
+sudo dpkg -i "pacote.deb"
+                  </code></pre>
                   <h3>Remover pedido de senha</h3>
                   <p>Para remover o pedido de senha ao acessar o navegador.</p>
                   <ol>
@@ -146,29 +164,43 @@ git config --global http.https://domain.com.sslVerify false</code></pre>
                   </p>
 
                   <h3>Instalação</h3>
-                  <pre><code>sudo dpkg -i "pacote.deb"</code></pre>
+                  <pre><code>
+sudo dpkg -i "pacote.deb"
+                  </code></pre>
 
                   <h2 id="l-jdk">Java JDK 17<span></span></h2>
                   <h3>Preparação</h3>
                   <p>Removendo openjdk</p>
-                  <pre><code>sudo apt-get update -y && apt-get remove openjdk-6-jre -y && sudo apt-get autoremove && apt-get clean</code></pre>
+                  <pre><code>
+sudo apt-get update -y && sudo apt-get remove openjdk* -y && sudo apt-get autoremove && sudo apt-get clean
+                  </code></pre>
 
                   <p>Faça o download do <a
                               href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">Java
                               JDK 17&rarr;</a>.</p>
                   <p>Pasta de instalação:</p>
-                  <pre><code>sudo mkdir /usr/lib/jdk</code></pre>
+                  <pre><code>
+sudo mkdir /usr/lib/jdk
+                  </code></pre>
                   <p>Extração de arquivos:</p>
-                  <pre><code>sudo tar zxvf jdk-17.0.12_linux-x64_bin.tar.gz -C /usr/lib/jdk</code></pre>
+                  <pre><code>
+sudo tar zxvf jdk-17.0.12_linux-x64_bin.tar.gz -C /usr/lib/jdk
+                  </code></pre>
                   <p>Criação de link simbólico:</p>
-                  <pre><code>sudo ln -s /usr/lib/jdk/jdk-17.0.12 /usr/lib/jdk/java-oracle</code></pre>
+                  <pre><code>
+sudo ln -s /usr/lib/jdk/jdk-17.0.12 /usr/lib/jdk/java-oracle
+                  </code></pre>
 
                   <h3>Variáveis de Ambiente</h3>
                   <p>Crie o arquivo <code>jdk_var.sh</code> em <code>/etc/profile.d</code> e adicione:</p>
-                  <pre><code>JAVA_HOME=/usr/lib/jdk/java-oracle
-export PATH=$PATH:$JAVA_HOME/bin</code></pre>
+                  <pre><code>
+JAVA_HOME=/usr/lib/jdk/java-oracle
+export PATH=$PATH:$JAVA_HOME/bin
+                  </code></pre>
                   <p>Permissão para execução:</p>
-                  <pre><code>sudo chmod +x /etc/profile.d/jdk_var.sh</code></pre>
+                  <pre><code>
+sudo chmod +x /etc/profile.d/jdk_var.sh
+                  </code></pre>
 
                   <h2 id="l-netbeans">Netbeans 14<span></span></h2>
                   <p>Faça o download do <a href="https://netbeans.apache.org/front/main/download/nb14/">Netbeans
@@ -182,7 +214,8 @@ export PATH=$PATH:$JAVA_HOME/bin</code></pre>
                         <code>~/netbeans-14/netbeans/java/maven/conf</code>
                         com o seguinte conteúdo:
                   </p>
-                  <pre><code>&lt;id>proxyifpr&lt;/id&gt;
+                  <pre><code>
+&lt;id>proxyifpr&lt;/id&gt;
 &lt;active>true&lt;/active&gt;
 &lt;protocol>http&lt;/protocol&gt;
 &lt;host>192.168.0.6&lt;/host&gt;
@@ -190,7 +223,7 @@ export PATH=$PATH:$JAVA_HOME/bin</code></pre>
 &lt;username>&lt;/username&gt;
 &lt;password>&lt;/password&gt;
 &lt;nonProxyHosts>localhost&lt;/nonProxyHosts&gt;
-</code></pre>
+                  </code></pre>
                   <p>
                         Referência:
                         <a href="https://maven.apache.org/settings.html#Proxies">Proxies&rarr;</a>.
@@ -199,10 +232,14 @@ export PATH=$PATH:$JAVA_HOME/bin</code></pre>
                   <h3>Movendo a instalação</h3>
                   <p>Movendo a instalação atual <code>/home/aluno/netbeans-14</code> para <code>/home/portable</code>
                   </p>
-                  <pre><code>sudo mv /home/aluno/netbeans-14/ /home/portable/</code></pre>
+                  <pre><code>
+sudo mv /home/aluno/netbeans-14/ /home/portable/
+                  </code></pre>
                   <h3>Link simbólico</h3>
                   <p>Criando link no diretório anterior:</p>
-                  <pre><code>sudo ln -s /home/portable/netbeans-14/ /home/aluno/netbeans-14/</code></pre>
+                  <pre><code>
+sudo ln -s /home/portable/netbeans-14/ /home/aluno/netbeans-14/
+                  </code></pre>
 
                   <div class="alert alert-info d-flex align-items-center">
                         <span class="bi flex-shrink-0"></span>
@@ -212,7 +249,8 @@ export PATH=$PATH:$JAVA_HOME/bin</code></pre>
                   </div>
 
                   <h2 id="l-nodejs">Node.js<span></span></h2>
-                  <pre><code># Download and install nvm:
+                  <pre><code>
+# Download and install nvm:
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 
 # in lieu of restarting the shell
@@ -226,7 +264,8 @@ node -v # Should print "v22.15.0".
 nvm current # Should print "v22.15.0".
 
 # Verify npm version:
-npm -v # Should print "10.9.2".</code></pre>
+npm -v # Should print "10.9.2".
+                  </code></pre>
                   <p>Referência: <a href="https://nodejs.org/en/download">Download Node.js&rarr;</a></p>
 
                   <h3>Configuração de proxy</h3>
@@ -234,11 +273,14 @@ npm -v # Should print "10.9.2".</code></pre>
                         Execute os comandos no <code>terminal</code> como
                         <b>Usuário Padrão</b>:
                   </p>
-                  <pre><code>npm config set proxy http://192.168.0.6:3128
-npm config set https-proxy http://192.168.0.6:3128</code></pre>
+                  <pre><code>
+npm config set proxy http://192.168.0.6:3128 && npm config set https-proxy http://192.168.0.6:3128
+                  </code></pre>
 
                   <h2 id="l-ssh">Open SSH Server<span></span></h2>
-                  <pre><code>sudo apt-get install openssh-server</code></pre>
+                  <pre><code>
+sudo apt-get install openssh-server
+                  </code></pre>
 
                   <h2 id="l-portugol">Portugol Stúdio<span></span></h2>
                   <p>
@@ -247,35 +289,49 @@ npm config set https-proxy http://192.168.0.6:3128</code></pre>
                   </p>
                   <h3>Instalação</h3>
                   <p>Conforme instruções do arquivo de instalação:</p>
-                  <pre><code>#permissão de execução
+                  <pre><code>
+# Permissão de execução
 chmod 755 portugol-studio-2.7.5-x64.run
 
-#instalação
-sudo ./portugol-studio-2.7.5-x64.run</code></pre>
+# Instalação
+sudo ./portugol-studio-2.7.5-x64.run
+                  </code></pre>
 
                   <h2 id="l-python">Python<span></span></h2>
-                  <pre><code>sudo apt-get update -y && sudo apt-get install python3.12 -y</code></pre>
+                  <pre><code>
+sudo apt-get install python3.12
+                  </code></pre>
 
                   <h2 id="l-samba">Samba<span></span></h2>
-                  <pre><code>sudo apt-get install samba</code></pre>
+                  <pre><code>
+sudo apt-get install samba
+                  </code></pre>
 
                   <h2 id="l-scratch">Scratch<span></span></h2>
-                  <pre><code>sudo apt-get install scratch</code></pre>
+                  <pre><code>
+sudo apt-get install scratch
+                  </code></pre>
 
                   <h2 id="l-restricted">Ubuntu Restricted Extras<span></span></h2>
-                  <pre><code>sudo apt-get install ubuntu-restricted-extras</code></pre>
+                  <pre><code>
+sudo apt-get install ubuntu-restricted-extras
+                  </code></pre>
 
                   <h2 id="l-veyon">Veyon<span></span></h2>
-                  <h3>Dependências</h3>
-                  <pre><code>apt install g++ libc6-dev make cmake qtbase5-dev qtbase5-private-dev \
+                  <h3>Preparação</h3>
+                  <pre><code>
+sudo apt-get install g++ libc6-dev make cmake qtbase5-dev qtbase5-private-dev \
 qtbase5-dev-tools qttools5-dev qttools5-dev-tools \
 qtdeclarative5-dev qtquickcontrols2-5-dev libfakekey-dev \
 xorg-dev libxtst-dev libjpeg-dev zlib1g-dev libssl-dev libpam0g-dev \
 liblzo2-dev libqca-qt5-2-dev libldap2-dev \
-libsasl2-dev ninja-build</code></pre>
+libsasl2-dev ninja-build
+                  </code></pre>
 
                   <h3>Instalação</h3>
-                  <pre><code>sudo add-apt-repository ppa:veyon/stable -y && sudo apt-get update -y && sudo apt-get install veyon -y</code></pre>
+                  <pre><code>
+sudo add-apt-repository ppa:veyon/stable -y && sudo apt-get update -y && sudo apt-get install veyon -y
+                  </code></pre>
 
                   <h3>Configuração</h3>
                   <ol>
@@ -293,7 +349,9 @@ libsasl2-dev ninja-build</code></pre>
                   <p>Referência: <a href="https://github.com/veyon/veyon">Veyon&rarr;</a></p>
 
                   <h2 id="l-vim">Vim<span></span></h2>
-                  <pre><code>sudo apt-get install vim</code></pre>
+                  <pre><code>
+sudo apt-get install vim -y
+                  </code></pre>
 
                   <h2 id="l-vscode">Visual Studio Code<span></span></h2>
                   <p>
@@ -302,7 +360,9 @@ libsasl2-dev ninja-build</code></pre>
                   </p>
 
                   <h3>Instalação</h3>
-                  <pre><code>sudo dpkg -i "pacote.deb"</code></pre>
+                  <pre><code>
+sudo dpkg -i "pacote.deb"
+                  </code></pre>
 
                   <h3>Plugins</h3>
                   <p>Instale os seguintes plugins:</p>
@@ -321,10 +381,14 @@ libsasl2-dev ninja-build</code></pre>
                   <h3>Movendo os Plugins</h3>
                   <p>Movendo os plugins de <code>/home/aluno/.vscode</code> para <code>/home/portable</code>
                   </p>
-                  <pre><code>sudo mv /home/aluno/.vscode/ /home/portable/</code></pre>
+                  <pre><code>
+sudo mv /home/aluno/.vscode/ /home/portable/
+                  </code></pre>
                   <h3>Link simbólico</h3>
                   <p>Criando link no diretório anterior:</p>
-                  <pre><code>sudo ln -s /home/portable/.vscode/ /home/aluno/.vscode/</code></pre>
+                  <pre><code>
+sudo ln -s /home/portable/.vscode/ /home/aluno/.vscode/
+                  </code></pre>
 
                   <div class="alert alert-info d-flex align-items-center">
                         <span class="bi flex-shrink-0"></span>
@@ -348,33 +412,45 @@ libsasl2-dev ninja-build</code></pre>
 
                   <h3>Criando Atalho</h3>
                   <p>Crie um lançador na Área de Trabalho do <b>Aluno</b> e altere seu conteúdo para:</p>
-                  <pre><code>[Desktop Entry]
+                  <pre><code>
+[Desktop Entry]
 Name=visualg30
 Exec=wine "/home/portable/visualg3.0.7/visualg30.exe"
 Comment=Start VisuAlg
 Terminal=false
 PrefersNonDefaultGPU=false
 Icon=visualg
-Type=Application</code></pre>
+Type=Application
+                  </code></pre>
                   <h3>Imagem do Atalho</h3>
                   <p>Copie a imagem/ícone para <code>~/.icons</code>. Exemplo: <b>visualg.png</b>.</p>
 
                   <h2 id="l-vlc">VLC Media Player<span></span></h2>
-                  <pre><code>sudo apt-get install vlc -y</code></pre>
+                  <pre><code>
+sudo apt-get install vlc -y
+                  </code></pre>
 
                   <h2 id="l-wine">Wine<span></span></h2>
                   <h3>Preparação</h3>
-                  <pre><code>sudo dpkg --add-architecture i386</code></pre>
+                  <pre><code>
+sudo dpkg --add-architecture i386
+                  </code></pre>
 
                   <h3>Repositório</h3>
                   <p>Baixe e adicione a chave do repositório:</p>
-                  <pre><code>sudo mkdir -pm755 /etc/apt/keyrings
-wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo gpg --dearmor -o /etc/apt/keyrings/winehq-archive.key -</code></pre>
+                  <pre><code>
+sudo mkdir -pm755 /etc/apt/keyrings
+wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo gpg --dearmor -o /etc/apt/keyrings/winehq-archive.key -
+                  </code></pre>
                   <p>Adicione o repositório:</p>
-                  <pre><code>sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/noble/winehq-noble.sources</code></pre>
+                  <pre><code>
+sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/noble/winehq-noble.sources
+                  </code></pre>
 
                   <h3>Instalação</h3>
-                  <pre><code>sudo apt update -y && sudo apt install --install-recommends winehq-stable -y</code></pre>
+                  <pre><code>
+sudo apt update -y && sudo apt install --install-recommends winehq-stable -y
+                  </code></pre>
 
                   <p>Referência: <a href="https://gitlab.winehq.org/wine/wine/-/wikis/Debian-Ubuntu">Wiki
                               Wine&rarr;</a>.</p>
@@ -382,10 +458,14 @@ wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo gpg --dearmor -o /
                   <h3>Movendo a instalação</h3>
                   <p>Movendo a instalação atual <code>/home/aluno/.wine</code> para <code>/home/portable</code>
                   </p>
-                  <pre><code>sudo mv /home/aluno/.wine/ /home/portable/</code></pre>
+                  <pre><code>
+sudo mv /home/aluno/.wine/ /home/portable/
+                  </code></pre>
                   <h3>Link simbólico</h3>
                   <p>Criando link no diretório anterior:</p>
-                  <pre><code>sudo ln -s /home/portable/.wine/ /home/aluno/.wine/</code></pre>
+                  <pre><code>
+sudo ln -s /home/portable/.wine/ /home/aluno/.wine/
+                  </code></pre>
 
                   <div class="alert alert-info d-flex align-items-center">
                         <span class="bi flex-shrink-0"></span>
@@ -395,21 +475,34 @@ wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo gpg --dearmor -o /
                   </div>
 
                   <h2 id="l-lampp">LAMPP<span></span></h2>
-                  <pre><code>sudo apt-get install apache2 -y && sudo apt-get install mysql-server -y && sudo apt install php libapache2-mod-php php-mysql -y && sudo apt-get install phpmyadmin -y</code></pre>
+                  <pre><code>
+sudo apt-get install apache2 -y && sudo apt-get install mysql-server -y && sudo apt install php libapache2-mod-php php-mysql -y
+                  </code></pre>
 
                   <h3>Definindo uma senha</h3>
                   <p>Acesse o MySQL:</p>
                   <pre><code>sudo mysql -u root</code></pre>
                   <p>No MySQL:</p>
-                  <pre><code>ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'mypassword';
+                  <pre><code>
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'mypassword';
 flush privileges;
-exit</code></pre>
+exit
+                  </code></pre>
+
+                  <h3>Instalando PhpMyAdmin</h3>
+                  <pre><code>
+sudo apt-get install phpmyadmin -y
+                  </code></pre>
 
                   <h3>Habilitando escrita de url</h3>
-                  <pre><code>sudo a2enmod rewrite</code></pre>
+                  <pre><code>
+sudo a2enmod rewrite
+                  </code></pre>
 
                   <h3>Permissão ao html</h3>
-                  <pre><code>sudo chmod -R 777 /var/www/html</code></pre>
+                  <pre><code>
+sudo chmod -R 777 /var/www/html
+                  </code></pre>
 
                   <div class="alert alert-info d-flex align-items-center">
                         <span class="bi flex-shrink-0"></span>

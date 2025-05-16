@@ -210,12 +210,5 @@ h4{
  * code
  */
 pre{
-    color: #f61;
-    padding: 16px;
-    background-color: rgb(33, 37, 41, .9);
     border-radius: 4px;
-    border: 1px solid rgb(33, 37, 41, .1);
-}
-code{
-    font-size: 16px;
 }

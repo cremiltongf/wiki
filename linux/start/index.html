@@ -30,9 +30,12 @@ permalink: /linux/start/
 
                   <h2 id="l-padrao">Usuário Padrão<span></span></h2>
                   <p>Crie o usuário <strong>Aluno</strong> e configure o login automático.</p>
-                  <pre><code>Usuário: aluno
-Senha: aluno123
-</code></pre>
+                  <pre><code>
+# User
+aluno
+# Password
+aluno123
+                  </code></pre>
 
                   <h2 id="l-login">Login Automático<span></span></h2>
                   <h3>Administração</h3>
@@ -48,13 +51,19 @@ Senha: aluno123
 
                   <h2 id="l-update">Linux Update<span></span></h2>
                   <p>Instale todas as atualizações disponíveis.</p>
-                  <pre><code>sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y</code></pre>
+                  <pre><code>
+# Update all
+sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y
+                  </code></pre>
 
                   <h2 id="l-datetime">Data e Horas<span></span></h2>
-                  <pre><code>#set timezone
+                  <pre><code>
+# Timezone
 sudo timedatectl set-timezone America/Sao_Paulo
-#update time and date
-systemctl restart systemd-timedated</code></pre>
+
+# Resync date and time
+sudo systemctl restart systemd-timedated
+                  </code></pre>
 
                   <div class="container">
                         <div class="row">
