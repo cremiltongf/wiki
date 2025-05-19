@@ -306,7 +306,7 @@ sudo apt-get install python3.12
 
                   <h2 id="l-scratch">Scratch<span></span></h2>
                   <pre><code>
-sudo apt-get install scratch
+sudo flatpak install scratch
                   </code></pre>
 
                   <h2 id="l-restricted">Ubuntu Restricted Extras<span></span></h2>
@@ -424,7 +424,7 @@ Type=Application
 
                   <h2 id="l-vlc">VLC Media Player<span></span></h2>
                   <pre><code>
-sudo apt-get install vlc -y
+sudo flatpak install vlc
                   </code></pre>
 
                   <h2 id="l-wine">Wine<span></span></h2>
@@ -503,12 +503,64 @@ sudo a2enmod rewrite
                   <pre><code>
 sudo chmod -R 777 /var/www/html
                   </code></pre>
-
                   <div class="alert alert-info d-flex align-items-center">
                         <span class="bi flex-shrink-0"></span>
                         <div>Não use essa permissão em produção.
                         </div>
                   </div>
+
+                  <h3>Atraso na inicialização</h3>
+                  <div class="alert alert-info d-flex align-items-center">
+                        <span class="bi flex-shrink-0"></span>
+                        <div>Essa configuração e para deixar a inicialização do Linux um pouco mais performática. Se for
+                              um
+                              equipamento mais robusto, talvez nao seja necessário.
+                        </div>
+                  </div>
+                  <h4>Desativando serviços</h4>
+                  <pre><code>
+# Desativando inicialização automática
+sudo systemctl disable apache2 && sudo systemctl disable mysql
+                  </code></pre>
+
+                  <h4>Script para iniciar serviços</h4>
+                  <p>Crie o <code>/sbin/delay-lampp.sh</code> com o seguinte conteúdo:</p>
+                  <pre><code>
+#!/bin/sh
+sleep 120 && systemctl start apache2
+sleep 10 && systemctl start mysql
+                  </code></pre>
+
+                  <h4>Permissão de execução</h4>
+                  <pre><code>
+sudo chmod +x /sbin/delay-lampp.sh
+                  </code></pre>
+
+                  <h4>Serviço para executar script</h4>
+                  <p>Crie o <code>/etc/systemd/system/delay-lampp.service</code> com o seguinte conteúdo:</p>
+                  <pre><code>
+[Unit]
+Description=Delay LAMPP startup
+DefaultDependencies=no
+Afeter=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/delay-lampp.sh
+TimeoutStartSec=0
+
+[Install]
+WantedBy=network.target
+                  </code></pre>
+
+                  <h4>Habilitando o serviço</h4>
+                  <pre><code>
+sudo systemctl enable delay-lampp.service
+                  </code></pre>
+                  <p>Referência: <a
+                              href="https://docs.redhat.com/pt-br/documentation/red_hat_enterprise_linux/8/html/configuring_basic_system_settings/unit-file-structure_working-with-systemd-unit-files#unit-file-structure_working-with-systemd-unit-files">3.5.2.
+                              Estrutura do arquivo da unidade</a>
+                  </p>
 
                   <div class="container">
                         <div class="row">
