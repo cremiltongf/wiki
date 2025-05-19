@@ -56,9 +56,12 @@ permalink: /windows/start/
 
       <h2 id="estudante">Usuário Padrão<span></span></h2>
       <p>Criar o usuário <strong>Aluno</strong> para o login automático:</p>
-      <pre><code>Usuário: aluno
-Senha: aluno123
-</code></pre>
+      <pre><code>
+# User
+aluno
+# Password
+aluno123
+      </code></pre>
       <div class="alert alert-info d-flex align-items-center">
         <span class="bi flex-shrink-0"></span>
         <div>
@@ -143,7 +146,9 @@ Senha: aluno123
         <div>Ajuste necessário para o desligamento completo do SO.</div>
       </div>
       <p>Execute no <code>prompt</code> como Administrador:</p>
-      <pre><code>powercfg.exe /hibernate off</code></pre>
+      <pre><code>
+powercfg.exe /hibernate off
+      </code></pre>
 
       <h2 id="mdns">mDNS</h2>
       <div class="alert alert-info d-flex align-items-center">
@@ -153,7 +158,9 @@ Senha: aluno123
         </div>
       </div>
       <p>Execute no <code>prompt</code> como <b>Administrador</b>:</p>
-      <pre><code>reg add "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /v EnableMulticast /t REG_DWORD /d 1 /f</code></pre>
+      <pre><code>
+reg add "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /v EnableMulticast /t REG_DWORD /d 1 /f
+      </code></pre>
 
       <h2 id="reparo">Reparo automático<span></span></h2>
       <div class="alert alert-info d-flex align-items-center">
@@ -166,7 +173,9 @@ Senha: aluno123
       <p>
         Execute no <code>prompt</code> como <b>Administrador</b>:
       </p>
-      <pre><code>bcdedit /set recoveryenabled NO</code></pre>
+      <pre><code>
+bcdedit /set recoveryenabled NO
+    </code></pre>
 
       <h2 id="defrag">Otimização agendada<span></span></h2>
       <p>Desative este serviço para todas as unidades.</p>
@@ -234,15 +243,21 @@ Senha: aluno123
         Para desativar este recurso, execute no <code>prompt</code> como
         <b>Administrador</b>:
       </p>
-      <pre><code>reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v DisableSearchBoxSuggestions /t REG_DWORD /d 1 /f /reg:32</code></pre>
+      <pre><code>
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v DisableSearchBoxSuggestions /t REG_DWORD /d 1 /f /reg:32
+      </code></pre>
 
       <h2 id="psremote">Comunicação remota do PowerShell<span></span></h2>
       <p>Execute no <code>PowerShell</code> como <b>Administrador</b>:</p>
-      <pre><code>Enable-PSRemoting</code></pre>
+      <pre><code>
+Enable-PSRemoting
+      </code></pre>
 
       <h2 id="ps1">Permitindo a execução de scripts<span></span></h2>
       <p>Execute no <code>PowerShell</code> como <b>Administrador</b>:</p>
-      <pre><code>Set-ExecutionPolicy -ExecutionPolicy Unrestricted</code></pre>
+      <pre><code>
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+      </code></pre>
 
       <h2 id="servicos">Serviços<span></span></h2>
       <p>Lista de serviços a serem desativados:</p>
@@ -285,7 +300,8 @@ Senha: aluno123
         </tbody>
       </table>
       <h3>Gerenciando com arquivos em lote</h3>
-      <pre><code>@echo off
+      <pre><code>
+@echo off
 
 rem HELP
 rem start= {auto(automatico) - demand(manual) - disabled(desativado) - delayed-auto(atraso-na-inicializacao)}
@@ -296,7 +312,8 @@ rem Backup do Windows
 
 pause
 
-exit</code></pre>
+exit
+      </code></pre>
 
       <div class="container">
         <div class="row">

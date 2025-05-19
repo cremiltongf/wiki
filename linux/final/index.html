@@ -33,9 +33,11 @@ permalink: /linux/final/
 
                   <h3>Para o apt-get</h3>
                   <p>Crie o arquivo <code>proxy.conf</code> em <code>/etc/apt/apt.conf.d</code> e adicione:</p>
-                  <pre><code>Acquire::http::proxy "http://192.168.0.6:3128/";
+                  <pre><code>
+Acquire::http::proxy "http://192.168.0.6:3128/";
 Acquire::https::proxy "https://192.168.0.6:3128/";
-Acquire::ftp::proxy "ftp://192.168.0.6:3128/";</code></pre>
+Acquire::ftp::proxy "ftp://192.168.0.6:3128/";
+                  </code></pre>
 
                   <h2 id="l-restore">Restore User<span></span></h2>
                   <div class="alert alert-info d-flex align-items-center">
@@ -46,23 +48,30 @@ Acquire::ftp::proxy "ftp://192.168.0.6:3128/";</code></pre>
 
                   <h3>Criando backup do perfil</h3>
                   <p>Fazendo a cópia do perfil para ser o padrão:</p>
-                  <pre><code>sudo mkdir /home/resetuser
-sudo cp -r /home/aluno/. /home/resetuser</code></pre>
+                  <pre><code>
+sudo mkdir /home/resetuser
+sudo cp -r /home/aluno/. /home/resetuser
+                  </code></pre>
 
                   <h3>Criando o Script</h3>
                   <p>Crie o arquivo <code>reset-user.sh</code> em <code>/sbin</code> e adicione:</p>
-                  <pre><code>#!/bin/sh
+                  <pre><code>
+#!/bin/sh
 rm -rf /home/aluno
 mkdir /home/aluno
 cp -r /home/resetuser/. /home/aluno
-chown -R aluno /home/aluno</code></pre>
+chown -R aluno /home/aluno
+                  </code></pre>
 
                   <h3>Permissão de execução</h3>
-                  <pre><code>sudo chmod u+x /sbin/reset-user.sh</code></pre>
+                  <pre><code>
+sudo chmod +x /sbin/reset-user.sh
+                  </code></pre>
 
                   <h3>Script como serviço</h3>
                   <p>Crie o arquivo <code>reset-user.service</code> em <code>/etc/systemd/system</code> e adicione:</p>
-                  <pre><code>[Unit]
+                  <pre><code>
+[Unit]
 Description=Restore user Aluno
 DefaultDependencies=no
 Before=shutdown.target
@@ -73,10 +82,12 @@ ExecStart=/sbin/reset-user.sh
 TimeoutStartSec=0
 
 [Install]
-WantedBy=shutdown.target</code></pre>
-
+WantedBy=shutdown.target
+                  </code></pre>
                   <h3>Atualizando systemd</h3>
-                  <pre><code>sudo systemctl daemon-reload</code></pre>
+                  <pre><code>
+sudo systemctl daemon-reload
+                  </code></pre>
 
                   <div class="container">
                         <div class="row">
