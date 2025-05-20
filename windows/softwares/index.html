@@ -33,7 +33,9 @@ permalink: /windows/softwares/
         <a href="https://www.7-zip.org/download.html">7-zip&rarr;</a>.
       </p>
       <h3>Silent Install</h3>
-      <pre><code>"7z1805-x64.exe" /S</code></pre>
+      <pre><code>
+"7z1805-x64.exe" /S
+      </code></pre>
 
       <h2 id="anaconda">Anaconda<span></span></h2>
       <div class="alert alert-info d-flex align-items-center">
@@ -48,7 +50,8 @@ permalink: /windows/softwares/
       <p>
         <b>Edite</b> o arquivo <code>c:\users\aluno\.condarc</code> e adicione:
       </p>
-      <pre><code>show_channel_urls: true
+      <pre><code>
+show_channel_urls: true
 allow_other_channels: true
 
 proxy_servers:
@@ -56,7 +59,7 @@ proxy_servers:
     https: 192.168.0.6:3128
 
 ssl_verify: false
-</code></pre>
+      </code></pre>
       <p>
         Referência:
         <a href="https://docs.anaconda.com/working-with-conda/reference/security/#update-the-condarc-file">Update the
@@ -140,16 +143,18 @@ ssl_verify: false
         Edite o arquivo
         <code>C:\Users\aluno\.arduinoIDE\arduino-cli.yaml</code> e adicione:
       </p>
-      <pre><code>network:
+      <pre><code>
+network:
     proxy: http://192.168.0.6:3128
     user_agent_ext: daemon
-</code></pre>
+      </code></pre>
       <h3>Desativando verificação de atualização</h3>
       <p>
         <b>Edite</b> o arquivo
         <code>C:\Users\aluno\.arduinoIDE\arduino-cli.yaml</code> e adicione:
       </p>
-      <pre><code>updater:
+      <pre><code>
+updater:
     enable_notification: false
 </code></pre>
       <div class="alert alert-info d-flex align-items-center">
@@ -180,7 +185,9 @@ ssl_verify: false
       </p>
 
       <h3>Silent Install</h3>
-      <pre><code>"astah-community-7_2_0-1ff236-jre-64bit-setup.exe" /verysilent</code></pre>
+      <pre><code>
+"astah-community-7_2_0-1ff236-jre-64bit-setup.exe" /verysilent
+      </code></pre>
 
       <h2 id="autocad">AutoCAD<span></span></h2>
       <p>
@@ -205,7 +212,9 @@ ssl_verify: false
       </div>
 
       <h3>Silent Install</h3>
-      <pre><code>msiexec /i "blender-2.79b-windows64.msi" /qb</code></pre>
+      <pre><code>
+msiexec /i "blender-2.79b-windows64.msi" /qn
+      </code></pre>
 
       <h2 id="bricx">BricxCC<span></span></h2>
       <p>
@@ -845,7 +854,9 @@ start /wait msiexec /x {26A24AE4-039D-4CA4-87B4-2F06417079FF} /qn /norestart
       </p>
 
       <h3>Silent Install</h3>
-      <pre><code>msiexec /i "mysql-installer-community-8.0.13.0.msi" /qb</code></pre>
+      <pre><code>
+msiexec /i "mysql-installer-community-8.0.13.0.msi" /qn
+      </code></pre>
 
       <h2 id="netbeans14">NetBeans 14<span></span></h2>
       <p>
@@ -868,7 +879,8 @@ start /wait msiexec /x {26A24AE4-039D-4CA4-87B4-2F06417079FF} /qn /norestart
         <code>C:\Program Files\NetBeans-14\netbeans\java\maven\conf</code>
         com o seguinte conteúdo:
       </p>
-      <pre><code>&lt;id>proxyifpr&lt;/id&gt;
+      <pre><code>
+&lt;id>proxyifpr&lt;/id&gt;
 &lt;active>true&lt;/active&gt;
 &lt;protocol>http&lt;/protocol&gt;
 &lt;host>192.168.0.6&lt;/host&gt;
@@ -876,7 +888,7 @@ start /wait msiexec /x {26A24AE4-039D-4CA4-87B4-2F06417079FF} /qn /norestart
 &lt;username>&lt;/username&gt;
 &lt;password>&lt;/password&gt;
 &lt;nonProxyHosts>localhost&lt;/nonProxyHosts&gt;
-</code></pre>
+      </code></pre>
 
       <p>
         Referência:
@@ -908,11 +920,14 @@ start /wait msiexec /x {26A24AE4-039D-4CA4-87B4-2F06417079FF} /qn /norestart
         Execute os comandos abaixo no <code>prompt</code> como
         <b>Usuário Padrão</b>.
       </p>
-      <pre><code>npm config set proxy http://192.168.0.6:3128
-npm config set https-proxy http://192.168.0.6:3128</code></pre>
+      <pre><code>
+npm config set proxy http://192.168.0.6:3128 && npm config set https-proxy http://192.168.0.6:3128
+      </code></pre>
 
       <h3>Silent Install</h3>
-      <pre><code>msiexec /i "node-v10.15.3-x64.msi" /qn</code></pre>
+      <pre><code>
+msiexec /i "node-v10.15.3-x64.msi" /qn
+      </code></pre>
 
       <h2 id="virtualbox">Oracle VirtualBox<span></span></h2>
       <p>
@@ -940,11 +955,14 @@ npm config set https-proxy http://192.168.0.6:3128</code></pre>
       <p>VM do Ubuntu 20.04.3 64bits LTS, rodando no Oracle VM VirtualBox.</p>
       <h3>Atualizando Kernel na VM</h3>
       <p>Para reinstalar pelo <code>terminal</code>:</p>
-      <pre><code>sudo apt-get autoremove virtualbox-dkms
-sudo apt-get install build-essential linux-headers-`uname -r` dkms virtualbox-dkms</code></pre>
+      <pre><code>
+sudo apt-get autoremove virtualbox-dkms
+sudo apt-get install build-essential linux-headers-`uname -r` dkms virtualbox-dkms
+      </code></pre>
       <p>Para ativar pelo <code>terminal</code>:</p>
-      <pre><code>sudo modprobe vboxdrv
-sudo modprobe vboxnetflt</code></pre>
+      <pre><code>
+sudo modprobe vboxdrv && sudo modprobe vboxnetflt
+      </code></pre>
 
       <h2 id="cdevkit">
         Portable C, C++, and Fortran Development Kit<span></span>
@@ -956,10 +974,14 @@ sudo modprobe vboxnetflt</code></pre>
       </p>
       <h3>Alterando o Path</h3>
       <p>Adicione ao <code>Path</code>:</p>
-      <pre><code>C:\Portable\w64devkit\bin</code></pre>
+      <pre><code>
+C:\Portable\w64devkit\bin
+      </code></pre>
 
       <h3>Alterando o Path com PowerShell</h3>
-      <pre><code>[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Portable\w64devkit\bin", "Machine")</code></pre>
+      <pre><code>
+[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Portable\w64devkit\bin", "Machine")
+      </code></pre>
 
       <h2 id="portugol">Portugol Stúdio<span></span></h2>
       <p>
@@ -968,9 +990,13 @@ sudo modprobe vboxnetflt</code></pre>
       </p>
 
       <h3>Silent Install</h3>
-      <pre><code>"portugol-studio-2.7.5-windows.exe" --mode unattended</code></pre>
+      <pre><code>
+"portugol-studio-2.7.5-windows.exe" --mode unattended
+      </code></pre>
       <h3>Silent Uninstall</h3>
-      <pre><code>"%ProgramData%\UNIVALI\Portugol Studio\desinstalar.exe" --mode unattended</code></pre>
+      <pre><code>
+"%ProgramData%\UNIVALI\Portugol Studio\desinstalar.exe" --mode unattended
+      </code></pre>
 
       <h2 id="project">ProjectLibre<span></span></h2>
       <p>
@@ -978,7 +1004,9 @@ sudo modprobe vboxnetflt</code></pre>
         <a href="https://www.projectlibre.com/projectlibre-desktop/">ProjectLibre&rarr;</a>.
       </p>
       <h3>Silent Install</h3>
-      <pre><code>"projectlibre-1.9.3.exe" /VERYSILENT /NORESTART</code></pre>
+      <pre><code>
+"projectlibre-1.9.3.exe" /VERYSILENT /NORESTART
+      </code></pre>
 
       <h2 id="pycharm">PyCharm Community Edition<span></span></h2>
       <p>
@@ -1001,10 +1029,13 @@ sudo modprobe vboxnetflt</code></pre>
           alt="Desabilitando atualizações" />
       </p>
       <h3>Silent Install</h3>
-      <pre><code>"pycharm-community-2024.3.2.exe" /S /CONFIG="silent.config"</code></pre>
+      <pre><code>
+"pycharm-community-2024.3.2.exe" /S /CONFIG="silent.config"
+      </code></pre>
 
       <p>Conteúdo de <code>silent.config</code>:</p>
-      <pre><code>; Installation mode. It can be user or admin.
+      <pre><code>
+; Installation mode. It can be user or admin.
 ; NOTE: for admin mode please use "Run as Administrator" for command prompt to avoid UAC dialog.
 mode=admin
 
@@ -1026,7 +1057,8 @@ jre32=0
 regenerationSharedArchive=1
 
 ; List of associations. To create an association change value to 1.
-.py=0</code></pre>
+.py=0
+    </code></pre>
       <p>
         Referência:
         <a href="https://www.jetbrains.com/help/pycharm/installation-guide.html#silent">Silent installation on
@@ -1046,7 +1078,9 @@ regenerationSharedArchive=1
       </p>
 
       <h3>Silent Install</h3>
-      <pre><code>"Scratch-461.exe" -silent</code></pre>
+      <pre><code>
+"Scratch-461.exe" -silent
+      </code></pre>
 
       <h2 id="sketchup">SketchUp Make 2016<span></span></h2>
       <p>
