@@ -35,8 +35,8 @@ permalink: /linux/final/
                   <p>Crie o arquivo <code>proxy.conf</code> em <code>/etc/apt/apt.conf.d</code> e adicione:</p>
                   <pre><code>
 Acquire::http::proxy "http://192.168.0.6:3128/";
-Acquire::https::proxy "https://192.168.0.6:3128/";
-Acquire::ftp::proxy "ftp://192.168.0.6:3128/";
+Acquire::https::proxy "http://192.168.0.6:3128/";
+Acquire::ftp::proxy "http://192.168.0.6:3128/";
                   </code></pre>
 
                   <h2 id="l-restore">Restore User<span></span></h2>
