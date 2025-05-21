@@ -116,30 +116,22 @@ h4{
 }
 
 /*
- * Link
- */
-main [href^="http"]::after,
-main [href^="/"]::after,
-footer [href^="http"]::after {
-    content: "";
-    display: inline;
-    padding-left: 1.2rem;
-}
-main [href^="/"]::after{
-    background: url(../images/arrow-down-left.svg) no-repeat right bottom;
-}
-main [href^="http"]::after,
-footer [href^="http"]::after {
-    background: url(../images/arrow-up-right.svg) no-repeat right bottom;
-}
-
-/*
  * arrow
  */
 .wiki-arrow{
     color: #f61;
     font-weight: bold;
 }
+
+/*
+ * ico title
+ */
+ h2 span{
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: transparent bottom center url("../images/ico-title.svg") no-repeat;
+ }
 
  /*
   * ico info
