@@ -524,7 +524,7 @@ sudo systemctl disable apache2 && sudo systemctl disable mysql
                   </code></pre>
 
                   <h4>Script para iniciar serviços</h4>
-                  <p>Crie o <code>/sbin/delay-lampp.sh</code> com o seguinte conteúdo:</p>
+                  <p>Crie o arquivo <code>/sbin/delay-lampp.sh</code> com o seguinte conteúdo:</p>
                   <pre><code>
 #!/bin/sh
 sleep 120 && systemctl start apache2
@@ -537,7 +537,7 @@ sudo chmod +x /sbin/delay-lampp.sh
                   </code></pre>
 
                   <h4>Serviço para executar script</h4>
-                  <p>Crie o <code>/etc/systemd/system/delay-lampp.service</code> com o seguinte conteúdo:</p>
+                  <p>Crie o arquivo <code>/etc/systemd/system/delay-lampp.service</code> com o seguinte conteúdo:</p>
                   <pre><code>
 [Unit]
 Description=Delay LAMPP startup
