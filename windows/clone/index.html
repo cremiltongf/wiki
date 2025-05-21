@@ -66,7 +66,10 @@ permalink: /windows/clone/
         </div>
       </div>
       <p>Para acessar a key pelo <code>prompt</code>:</p>
-      <pre><code>powershell "(Get-WmiObject -query 'select * from SoftwareLicensingService').OA3xOriginalProductKey"</code></pre>
+      <pre><code>
+powershell "(Get-WmiObject -query 'select * from SoftwareLicensingService').OA3xOriginalProductKey"
+      </code></pre>
+
       <p>Referência: <a href="https://github.com/dporkka/windows-product-key">How to find your Windows Product Key using
           the Command Prompt or Powershell&rarr;</a>
       </p>
@@ -113,13 +116,19 @@ permalink: /windows/clone/
       </div>
 
       <h3 id="desabilitar">Descongelando o SO</h3>
-      <pre><code>cmd /k "C:\Windows\SysWOW64\DFC.exe" PWD /BOOTTHAWED</code></pre>
+      <pre><code>
+cmd /k "C:\Windows\SysWOW64\DFC.exe" PWD /BOOTTHAWED
+      </code></pre>
 
       <h3 id="habilitando">Congelando o SO</h3>
-      <pre><code>cmd /k "C:\Windows\SysWOW64\DFC.exe" PWD /FREEZENEXTBOOT</code></pre>
+      <pre><code>
+cmd /k "C:\Windows\SysWOW64\DFC.exe" PWD /FREEZENEXTBOOT
+      </code></pre>
 
       <h3 id="status">Checar o status</h3>
-      <pre><code>cmd /k "C:\Windows\SysWOW64\DFC.exe" get /ISFROZEN</code></pre>
+      <pre><code>
+cmd /k "C:\Windows\SysWOW64\DFC.exe" get /ISFROZEN
+      </code></pre>
 
       <h2 id="timefreeze">Habilitar Toolwiz Time Freeze<span></span></h2>
       <div class="alert alert-info d-flex align-items-center">
@@ -131,10 +140,14 @@ permalink: /windows/clone/
       </div>
 
       <h3 id="desabilitar">Descongelando o SO</h3>
-      <pre><code>cmd /k "C:\Program Files\Toolwiz Time Freeze 2017\ToolwizTimeFreeze.exe" /unfreeze /usepass=PWD</code></pre>
+      <pre><code>
+cmd /k "C:\Program Files\Toolwiz Time Freeze 2017\ToolwizTimeFreeze.exe" /unfreeze /usepass=PWD
+      </code></pre>
 
       <h3 id="habilitando">Congelando o SO</h3>
-      <pre><code>cmd /k "C:\Program Files\Toolwiz Time Freeze 2017\ToolwizTimeFreeze.exe" /freezealways /usepass=PWD</code></pre>
+      <pre><code>
+cmd /k "C:\Program Files\Toolwiz Time Freeze 2017\ToolwizTimeFreeze.exe" /freezealways /usepass=PWD
+      </code></pre>
 
       <div class="container">
         <div class="row">

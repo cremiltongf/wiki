@@ -81,7 +81,9 @@ permalink: /windows/final/
         </div>
       </div>
       <p>Dados do proxy:</p>
-      <pre><code>192.168.0.6:3128</code></pre>
+      <pre><code>
+192.168.0.6:3128
+      </code></pre>
       <p>
         <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/proxy.png" alt="Proxy" />
       </p>
@@ -94,7 +96,10 @@ permalink: /windows/final/
           usando um <b>xml</b> para automatizar as configurações iniciais após a clonagem da imagem generalizada.
         </div>
       </div>
-      <pre><code>sysprep.exe /generalize /oobe /unattend:C:\MYCONF.xml /shutdown</code></pre>
+      <pre><code>
+sysprep.exe /generalize /oobe /unattend:C:\MYCONF.xml /shutdown
+      </code></pre>
+
       <p>Referências: <a
           href="https://learn.microsoft.com/en-us/windows-hardware/customize/desktop/unattend/microsoft-windows-shell-setup-autologon">Microsoft-Windows-Shell-Setup&rarr;</a>
         e <a
@@ -102,11 +107,14 @@ permalink: /windows/final/
       </p>
 
       <h3>Erro no Sysprep</h3>
-      <p>Se ocorrerem erros no processo, examine o arquivo
-        <code>%WINDIR%\system32\Sysprep\panther\setupact.log</code> e remova o <b>App</b> que estiver causando a falha
+      <p>Se ocorrerem erros, examine o arquivo
+        <code>
+          %WINDIR%\system32\Sysprep\panther\setupact.log</code> e remova o <b>App</b> que estiver causando a falha
         através do <code>PowerShell</code>:
       </p>
-      <pre><code>Get-AppxPackage -AllUsers | Where-Object {$_.PackageFullName -eq "NomeDoPackage"} | Remove-AppxPackage -AllUsers</code></pre>
+      <pre><code>
+Get-AppxPackage -AllUsers | Where-Object {$_.PackageFullName -eq "NomeDoPackage"} | Remove-AppxPackage -AllUsers
+      </code></pre>
 
       <p>Referência: <a
           href="https://learn.microsoft.com/en-us/powershell/module/appx/get-appxpackage?view=windowsserver2025-ps">Get-AppxPackage&rarr;</a>
