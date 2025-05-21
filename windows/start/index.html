@@ -18,7 +18,7 @@ permalink: /windows/start/
         Windows 10/11.
       </p>
 
-      <h2 id="isowindows">ISO Windows<span></span></h2>
+      <h2 id="isowindows">ISO Windows</h2>
       <p>
         Através do <a href="https://schneegans.de/windows/unattend-generator/">Generate autounattend.xml files for
           Windows 10/11&rarr;</a>
@@ -35,7 +35,7 @@ permalink: /windows/start/
         </div>
       </div>
 
-      <h2 id="tools">Tools<span></span></h2>
+      <h2 id="tools">Tools</h2>
       <ul>
         <li class="mb-2"><a href="https://schneegans.de/windows/unattend-generator/">Unattend Generator&rarr;</a></li>
         <li class="mb-2"><a href="https://www.anyburn.com/download.php">AnyBurn&rarr;</a></li>
@@ -46,7 +46,7 @@ permalink: /windows/start/
         </li>
       </ul>
 
-      <h2 id="admin">Usuário Administrador<span></span></h2>
+      <h2 id="admin">Usuário Administrador</h2>
       <p>
         Criar usuário Administrador <strong>IFPR</strong> e definir senha padrão
         disponível na
@@ -54,7 +54,7 @@ permalink: /windows/start/
           href="https://docs.google.com/spreadsheets/d/1K7BrCy4tWE0I9W5_Dc5zm_tXNyYtj4ZYFQJLmiljGAE/edit?usp=sharing">planilha&rarr;</a>.
       </p>
 
-      <h2 id="estudante">Usuário Padrão<span></span></h2>
+      <h2 id="estudante">Usuário Padrão</h2>
       <p>Criar o usuário <strong>Aluno</strong> para o login automático:</p>
       <pre><code>
 # User
@@ -72,7 +72,7 @@ aluno123
         </div>
       </div>
 
-      <h2 id="particao">Partições do SO<span></span></h2>
+      <h2 id="particao">Partições do SO</h2>
       <p>Defina as partições do computador conforme tabela abaixo:</p>
       <table class="table table-striped table-hover border">
         <thead>
@@ -100,10 +100,10 @@ aluno123
         </div>
       </div>
 
-      <h2 id="windowsupdate">Windows Update<span></span></h2>
+      <h2 id="windowsupdate">Windows Update</h2>
       <p>Instale todas as atualizações do Windows.</p>
 
-      <h2 id="drivers">Atualização de drivers<span></span></h2>
+      <h2 id="drivers">Atualização de drivers</h2>
       <p>
         Baixe os drivers do site do fabricante ou utilize softwares como
         <a href="https://www.drivereasy.com/">EasyDriver&rarr;</a> ou
@@ -116,7 +116,7 @@ aluno123
         </div>
       </div>
 
-      <h2 id="wol">Configuração de WOL<span></span></h2>
+      <h2 id="wol">Configuração de WOL</h2>
       <ol>
         <li class="mb-2">Abra o Gerenciador de Dispositivos;</li>
         <li class="mb-2">Acesse Adaptadores de rede e abra a categoria;</li>
@@ -140,7 +140,7 @@ aluno123
         <li class="mb-2">Confirme as alterações clicando em OK.</li>
       </ol>
 
-      <h2 id="fastboot">Fast Boot<span></span></h2>
+      <h2 id="fastboot">Fast Boot</h2>
       <div class="alert alert-info d-flex align-items-center">
         <span class="bi flex-shrink-0"></span>
         <div>Ajuste necessário para o desligamento completo do SO.</div>
@@ -162,7 +162,7 @@ powercfg.exe /hibernate off
 reg add "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /v EnableMulticast /t REG_DWORD /d 1 /f
       </code></pre>
 
-      <h2 id="reparo">Reparo automático<span></span></h2>
+      <h2 id="reparo">Reparo automático</h2>
       <div class="alert alert-info d-flex align-items-center">
         <span class="bi flex-shrink-0"></span>
         <div>
@@ -177,12 +177,12 @@ reg add "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /v EnableMultica
 bcdedit /set recoveryenabled NO
     </code></pre>
 
-      <h2 id="defrag">Otimização agendada<span></span></h2>
+      <h2 id="defrag">Otimização agendada</h2>
       <p>Desative este serviço para todas as unidades.</p>
       <p><img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/desfragmentador.png"
           alt="Desfragmentador" /></p>
 
-      <h2 id="secwindows">Segurança do Windows<span></span></h2>
+      <h2 id="secwindows">Segurança do Windows</h2>
       <p>
         Desative as opções pelo Editor de política de grupo
         <span class="wiki-arrow">&harr;</span> <code>gpedit.msc</code>.
@@ -210,7 +210,7 @@ bcdedit /set recoveryenabled NO
         <div>Possível definir pelo Active Directory.</div>
       </div>
 
-      <h2 id="news">Notícias e Interesses<span></span></h2>
+      <h2 id="news">Notícias e Interesses</h2>
       <p>
         Desative as opções pelo Editor de política de grupo
         <span class="wiki-arrow">&harr;</span> <code>gpedit.msc</code>.
@@ -238,7 +238,7 @@ bcdedit /set recoveryenabled NO
         </div>
       </div>
 
-      <h2 id="pesquisar">Pesquisa na internet<span></span></h2>
+      <h2 id="pesquisar">Pesquisa na internet</h2>
       <p>
         Para desativar este recurso, execute no <code>prompt</code> como
         <b>Administrador</b>:
@@ -247,19 +247,19 @@ bcdedit /set recoveryenabled NO
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v DisableSearchBoxSuggestions /t REG_DWORD /d 1 /f /reg:32
       </code></pre>
 
-      <h2 id="psremote">Comunicação remota do PowerShell<span></span></h2>
+      <h2 id="psremote">Comunicação remota do PowerShell</h2>
       <p>Execute no <code>PowerShell</code> como <b>Administrador</b>:</p>
       <pre><code>
 Enable-PSRemoting
       </code></pre>
 
-      <h2 id="ps1">Permitindo a execução de scripts<span></span></h2>
+      <h2 id="ps1">Permitindo a execução de scripts</h2>
       <p>Execute no <code>PowerShell</code> como <b>Administrador</b>:</p>
       <pre><code>
 Set-ExecutionPolicy -ExecutionPolicy Unrestricted
       </code></pre>
 
-      <h2 id="servicos">Serviços<span></span></h2>
+      <h2 id="servicos">Serviços</h2>
       <p>Lista de serviços a serem desativados:</p>
       <table class="table table-striped table-hover border">
         <thead>

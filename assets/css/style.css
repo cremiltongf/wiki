@@ -98,6 +98,13 @@ h2::before {
     height: 80px;
     margin-top: -80px;
 }
+h2::after{
+    content: "";
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    background: url("../images/ico-title.svg") no-repeat bottom center;
+}
 
 /*
  * title
@@ -122,16 +129,6 @@ h4{
     color: #f61;
     font-weight: bold;
 }
-
-/*
- * ico title
- */
- h2 span{
-    display: inline-block;
-    width: 1.6rem;
-    height: 1.6rem;
-    background: transparent bottom center url("../images/ico-title.svg") no-repeat;
- }
 
  /*
   * ico info
