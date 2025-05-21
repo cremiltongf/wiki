@@ -42,7 +42,7 @@ Acquire::ftp::proxy "http://192.168.0.6:3128/";
                   <h2 id="l-restore">Restore User<span></span></h2>
                   <div class="alert alert-info d-flex align-items-center">
                         <span class="bi flex-shrink-0"></span>
-                        <div>Finalizado todas as personalizações do perfil, prossiga com as configurações.
+                        <div>Finalizado as personalizações do perfil, prossiga com as configurações.
                         </div>
                   </div>
 
@@ -53,8 +53,8 @@ sudo mkdir /home/resetuser
 sudo cp -r /home/aluno/. /home/resetuser
                   </code></pre>
 
-                  <h3>Criando o Script</h3>
-                  <p>Crie o arquivo <code>reset-user.sh</code> em <code>/sbin</code> e adicione:</p>
+                  <h3>Script de restauração do perfil</h3>
+                  <p>Crie o arquivo <code>/sbin/reset-user.sh</code> e adicione:</p>
                   <pre><code>
 #!/bin/sh
 rm -rf /home/aluno
@@ -68,8 +68,8 @@ chown -R aluno /home/aluno
 sudo chmod +x /sbin/reset-user.sh
                   </code></pre>
 
-                  <h3>Script como serviço</h3>
-                  <p>Crie o arquivo <code>reset-user.service</code> em <code>/etc/systemd/system</code> e adicione:</p>
+                  <h3>Serviço para executar script</h3>
+                  <p>Crie o arquivo <code>/etc/systemd/system/reset-user.service</code> e adicione:</p>
                   <pre><code>
 [Unit]
 Description=Restore user Aluno
@@ -83,6 +83,11 @@ TimeoutStartSec=0
 
 [Install]
 WantedBy=shutdown.target
+                  </code></pre>
+
+                  <h3>Habilitando o serviço</h3>
+                  <pre><code>
+sudo systemctl enable reset-user.service
                   </code></pre>
 
                   <p>Referência: <a
