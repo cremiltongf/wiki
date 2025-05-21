@@ -123,6 +123,29 @@ h4{
 }
 
 /*
+ * Link
+ */
+main [href^="http"]::after,
+main [href^="/"]::after,
+.home [href^="http"]::after,
+.home [href^="/"]::after,
+footer [href^="http"]::after {
+    display: inline;
+    width: 1.4rem;
+    height: 1.6rem;
+    padding-left: .2rem;
+}
+.home [href^="/"]::after,
+main [href^="/"]::after{
+    content: "\002B69";
+}
+.home [href^="http"]::after,
+main [href^="http"]::after,
+footer [href^="http"]::after {
+    content: "\002B67";
+}
+
+/*
  * arrow
  */
 .wiki-arrow{
