@@ -116,31 +116,31 @@ h4{
 }
 
 /*
- * arrow
+ * Link
  */
-.wiki-arrow{
-    color: #f61;
-    font-weight: bold;
+main [href^="http"]::after,
+main [href^="/"]::after,
+footer [href^="http"]::after {
+    content: "";
+    display: inline;
+    padding-left: 1.2rem;
+}
+main [href^="/"]::after{
+    background: url(../images/arrow-down-left.svg) no-repeat right bottom;
+}
+main [href^="http"]::after,
+footer [href^="http"]::after {
+    background: url(../images/arrow-up-right.svg) no-repeat right bottom;
 }
 
 /*
- * ico title
+ * ico info
  */
- h2 span{
-    display: inline-block;
-    width: 1.6rem;
-    height: 1.6rem;
-    background: transparent bottom center url("../images/ico-title.svg") no-repeat;
- }
-
- /*
-  * ico info
-  */
 .alert span{
     display: inline-block;
     width: 2.8rem;
     height: 2.8rem;
-    background: transparent center center url("../images/ico-info.svg") no-repeat;
+    background: url("../images/ico-info.svg") no-repeat center center;
 }
 
 /*
