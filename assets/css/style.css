@@ -35,13 +35,7 @@
     margin: 1px 0;
     padding: 3px 8px;
     border-radius: 4px;
-    -webkit-transition: color .4s ease-out;
-    -moz-transition: color .4s ease-out;
-    -o-transition: color .4s ease-out;
     transition: color .4s ease-out;
-    -webkit-transition: background-color .4s ease-out;
-    -moz-transition: background-color .4s ease-out;
-    -o-transition: background-color .4s ease-out;
     transition: background-color .4s ease-out;
 }
 .sidebar-toggler a:hover{
@@ -68,7 +62,6 @@
         left: 0;
         width: 100%;
         height: calc(100vh - 56px);
-        overflow-y: scroll;
         opacity: 0;
         transform: translate3d(-100%, 0, 0);
         transition: .4s ease all;
@@ -127,22 +120,17 @@ h4{
  */
 main [href^="http"]::after,
 main [href^="/"]::after,
-.home [href^="http"]::after,
-.home [href^="/"]::after,
 footer [href^="http"]::after {
+    content: "";
     display: inline;
-    width: 1.4rem;
-    height: 1.6rem;
-    padding-left: .2rem;
+    padding-left: 1.2rem;
 }
-.home [href^="/"]::after,
 main [href^="/"]::after{
-    content: "\002B69";
+    background: url(../images/arrow-down-left.svg) no-repeat right bottom;
 }
-.home [href^="http"]::after,
 main [href^="http"]::after,
 footer [href^="http"]::after {
-    content: "\002B67";
+    background: url(../images/arrow-up-right.svg) no-repeat right bottom;
 }
 
 /*
