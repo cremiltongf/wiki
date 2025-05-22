@@ -28,6 +28,24 @@
     <meta property="og:image" content="{{ site.url }}/assets/images/wiki.png" />
     <!--Open Graph Protocol-->
 
+    <!-- Canonical -->
+    {% if page.url == '/' %}
+    <link rel="canonical" href="{{ site.url }}/" />
+    {% endif %}
+    {% if page.url == '/start/' %}
+    <link rel="canonical" href="{{ site.url }}/start/" />
+    {% endif %}
+    {% if page.url == '/linux/' %}
+    <link rel="canonical" href="{{ site.url }}/linux/" />
+    {% endif %}
+    {% if page.url == '/windows/' %}
+    <link rel="canonical" href="{{ site.url }}/windows/" />
+    {% endif %}
+    {% if page.url == '/gpo/' %}
+    <link rel="canonical" href="{{ site.url }}/gpo/" />
+    {% endif %}
+    <!-- Canonical -->
+
     <!-- Search Console -->
     <meta name="google-site-verification" content="UBWJFgFYcLOgToFsoGIDjqg3aC6CHsqbr9Txf2Dx1Fs" />
 
@@ -99,7 +117,7 @@
                                 Linux
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="{{ site.baseurl }}/linux/start/">Settings Linux</a>
+                                <li><a class="dropdown-item" href="{{ site.baseurl }}/linux/">Settings Linux</a>
                                 </li>
                                 <li><a class="dropdown-item" href="{{ site.baseurl }}/linux/profile/">Settings
                                         Profile</a></li>
@@ -118,7 +136,7 @@
                                 Windows
                             </button>
                             <ul class="dropdown-menu dropdown-menu-end">
-                                <li><a class="dropdown-item" href="{{ site.baseurl }}/windows/start">Settings
+                                <li><a class="dropdown-item" href="{{ site.baseurl }}/windows/">Settings
                                         Windows</a>
                                 </li>
                                 <li><a class="dropdown-item" href="{{ site.baseurl }}/windows/profile/">Settings
