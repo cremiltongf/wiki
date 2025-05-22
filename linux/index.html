@@ -1,19 +1,84 @@
 ---
-title: "Linux"
+title: "Settings Linux"
 permalink: /linux/
 ---
 
-<!DOCTYPE html>
-<html lang="pt-br">
+{% include header.html %}
 
-<head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Redirecionando para {{ page.title }}</title>
-      <meta http-equiv="refresh" content="0; URL='{{ site.url }}/linux/start/'" />
-</head>
+<div class="container margin-top mt-5 pt-5">
+      <div class="row">
+            <aside class="sidebar-container col-lg-4 z-3" data-js="sidebar-container">
+                  <div class="sidebar">{% include linux-start.html %}</div>
+            </aside>
 
-<body>
-</body>
+            <main class="col-12 col-lg-8 mb-5">
+                  <h1>{{ page.title }}</h1>
+                  <p class="lead">
+                        Configuração padrão do Sistema Operacional Linux Mint 22.1.
+                  </p>
 
-</html>
+                  <h2 id="l-particoes">Partição do SO</h2>
+                  <p>Utilize todo espaço da unidade para instalação da distribuição.</p>
+
+                  <h2 id="l-root">Usuário Root</h2>
+                  <p>
+                        Criar usuário root <strong>IFPR</strong> e defina a senha padrão
+                        disponível na
+                        <a
+                              href="https://docs.google.com/spreadsheets/d/1K7BrCy4tWE0I9W5_Dc5zm_tXNyYtj4ZYFQJLmiljGAE/edit?usp=sharing">planilha</a>.
+                  </p>
+
+                  <h2 id="l-padrao">Usuário Padrão</h2>
+                  <p>Crie o usuário <strong>Aluno</strong> e configure o login automático.</p>
+                  <pre><code>
+# User
+aluno
+# Password
+aluno123
+                  </code></pre>
+
+                  <h2 id="l-login">Login Automático</h2>
+                  <h3>Administração</h3>
+                  <ol>
+                        <li class="mb-2">Janela de Início de Sessão &harr; Aba Usuários
+                              &harr; configure o usuário <b>Aluno</b>:
+                              <ol class="pt-2">
+                                    <li class="mb-2">Nome do usuário: <code>aluno</code></li>
+                                    <li class="mb-2">Atraso antes da conexão (em segundos): <code>0</code></li>
+                              </ol>
+                        </li>
+                  </ol>
+
+                  <h2 id="l-update">Linux Update</h2>
+                  <p>Instale todas as atualizações disponíveis.</p>
+                  <pre><code>
+# Update all
+sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y
+                  </code></pre>
+
+                  <h2 id="l-datetime">Data e Horas</h2>
+                  <pre><code>
+# Timezone
+sudo timedatectl set-timezone America/Sao_Paulo
+
+# Resync date and time
+sudo systemctl restart systemd-timedated
+                  </code></pre>
+
+                  <div class="container">
+                        <div class="row">
+                              <div class="col text-start">
+                                    Voltar para <a href="/start/">Start</a>
+                              </div>
+                              <div class="col text-end">
+                                    Ir para <a href="/linux/profile/">Settings Profile</a>
+                              </div>
+                        </div>
+                  </div>
+
+
+            </main>
+      </div>
+</div>
+
+{% include footer.html %}
