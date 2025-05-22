@@ -6,3 +6,4 @@ _posts
 vendor
 .bundle
 bin
+.vscode
