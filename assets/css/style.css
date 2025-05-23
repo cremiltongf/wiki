@@ -228,7 +228,10 @@ pre code{
     right: 6px;
     width: 28px;
     height: 28px;
-    padding: 2px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .cp img{
     width: 22px;
