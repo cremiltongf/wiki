@@ -145,11 +145,15 @@ aluno123
         <div>Ajuste necessário para o desligamento completo do SO.</div>
       </div>
       <p>Execute no <code>prompt</code> como Administrador:</p>
-      <pre><code>
-powercfg.exe /hibernate off
-      </code></pre>
 
-      <h2 id="mdns">mDNS</h2>
+      <div class="code">
+        <button class="cp" data-clipboard-target="#hiber">
+          <img src="/assets/images/copy.svg" alt="Copiar código">
+        </button>
+        <pre><code id="hiber">powercfg.exe /hibernate off</code></pre>
+      </div>
+
+      <h2 id="w-mdns">mDNS</h2>
       <div class="alert alert-info d-flex align-items-center">
         <span class="bi flex-shrink-0"></span>
         <div>
@@ -157,9 +161,13 @@ powercfg.exe /hibernate off
         </div>
       </div>
       <p>Execute no <code>prompt</code> como <b>Administrador</b>:</p>
-      <pre><code>
-reg add "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /v EnableMulticast /t REG_DWORD /d 1 /f
-      </code></pre>
+
+      <div class="code">
+        <button class="cp" data-clipboard-target="#mdns">
+          <img src="/assets/images/copy.svg" alt="Copiar código">
+        </button>
+        <pre><code id="mdns">reg add "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /v EnableMulticast /t REG_DWORD /d 1 /f</code></pre>
+      </div>
 
       <h2 id="reparo">Reparo automático</h2>
       <div class="alert alert-info d-flex align-items-center">

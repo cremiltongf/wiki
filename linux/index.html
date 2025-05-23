@@ -30,12 +30,10 @@ permalink: /linux/
 
                   <h2 id="l-padrao">Usuário Padrão</h2>
                   <p>Crie o usuário <strong>Aluno</strong> e configure o login automático.</p>
-                  <pre><code>
-# User
+                  <pre><code># User
 aluno
 # Password
-aluno123
-                  </code></pre>
+aluno123</code></pre>
 
                   <h2 id="l-login">Login Automático</h2>
                   <h3>Administração</h3>
@@ -50,11 +48,13 @@ aluno123
                   </ol>
 
                   <h2 id="l-update">Linux Update</h2>
-                  <p>Instale todas as atualizações disponíveis.</p>
-                  <pre><code>
-# Update all
-sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y
-                  </code></pre>
+                  <p>Instale todas as atualizações.</p>
+                  <div class="code">
+                        <button class="cp" data-clipboard-target="#update">
+                              <img src="/assets/images/copy.svg" alt="Copiar código">
+                        </button>
+                        <pre><code id="update">sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y</code></pre>
+                  </div>
 
                   <h2 id="l-datetime">Data e Horas</h2>
                   <pre><code>

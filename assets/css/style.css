@@ -209,6 +209,25 @@ footer [href^="http"]::after {
 /*
  * code
  */
-pre{
+.code{
+    position: relative;
+}
+pre code{
     border-radius: 4px;
+}
+
+/*
+ * clipboard
+ */
+.cp{
+    background-color: transparent;
+}
+.cp,
+.cp img{
+    border: 0;
+    position: absolute;
+    top: .4rem;
+    right: .4rem;
+    width: 1.4rem;
+    height: 1.4rem;
 }
