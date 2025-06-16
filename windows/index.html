@@ -276,7 +276,7 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
         <tbody>
           <tr>
             <td>Windows Update</td>
-            <td>Desativado via GPO ou Windows Update Disabler</td>
+            <td>Desativado via GPO ou <a href="/windows/softwares/#winupdate">Windows Update Disabler</a></td>
           </tr>
           <tr>
             <td>Backup do Windows</td>
@@ -304,9 +304,11 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
           </tr>
         </tbody>
       </table>
-      <h3>Gerenciando com arquivos em lote</h3>
+      <h3>Gerenciando com Batch Script</h3>
       <pre><code>
 @echo off
+
+title Desativando serviços do Windows
 
 rem HELP
 rem start= {auto(automatico) - demand(manual) - disabled(desativado) - delayed-auto(atraso-na-inicializacao)}
