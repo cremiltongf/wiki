@@ -1,0 +1,87 @@
+---
+title: "My Fedora"
+permalink: /fedora/
+---
+
+{% include header.html %}
+
+<div class="container margin-top mt-5 pt-5">
+  <div class="row">
+    <aside class="sidebar-container col-lg-4 z-3" data-js="sidebar-container">
+      <div class="sidebar">{% include links-fedora.html %}</div>
+    </aside>
+
+    <main class="col-12 col-lg-8 mb-5">
+      <h1>{{ page.title }}</h1>
+      <p class="lead">
+        Configuração do meu Fedora Linux 42 (Workstation Edition).
+      </p>
+
+      <h2 id="m-gerenciador">Gerenciador de Extensões</h2>
+      <pre><code>
+sudo flatpak install flathub com.mattjakeman.ExtensionManager
+      </code></pre>
+
+      <h2 id="m-tweaks">Ajustes do Gnome</h2>
+      <pre><code>
+sudo dnf install gnome-tweaks
+      </code></pre>
+
+      <div class="alert alert-info d-flex align-items-center">
+        <span class="bi flex-shrink-0"></span>
+        <div>
+          Instale as extensões através do Gerenciador de Extensões.
+        </div>
+      </div>
+
+      <h2 id="m-indicator">AppIndicator and KStatusNotifierItem Support</h2>
+      <p>Exibe ícones indicadores no painel (uso para o Dropbox). Não é necessário nenhuma configuração, mas é possível
+        mudar o local de
+        exibição por exemplo, que por padrão é a direita.</p>
+      <p>Mais detalhes: <a href="https://extensions.gnome.org/extension/615/appindicator-support/">AppIndicator and
+          KStatusNotifierItem Support</a>.</p>
+
+      <h2 id="m-blur">Blur my Shell</h2>
+      <p>Adiciona uma aparência desfocada a diferentes partes do GNOME Shell, incluindo o painel superior, o painel e a
+        visão geral.</p>
+
+      <h2 id="m-lamp">Compiz alike magic lamp effect</h2>
+      <p>Adiciona efeito de lâmpada mágica às janelas.</p>
+
+      <h2 id="m-windows">Compiz windows effect</h2>
+      <p>Adiciona efeito de janelas instáveis.</p>
+
+      <h2 id="m-dash">Dash to Dock</h2>
+      <p>Um dock para o Gnome Shell.</p>
+
+      <h2 id="m-light">Search Light</h2>
+      <p>Abre a pesquisa de aplicativos da visão geral.</p>
+
+      <h2 id="m-tiling">Tiling Shell</h2>
+      <p>Adiciona o gerenciamento avançado de janelas.</p>
+
+      <h2 id="m-icon">Ícones</h2>
+      <p>Kora é um tema de ícones SVG para sistemas operacionais GNU/Linux.
+      </p>
+
+      <h2 id="m-wallpapers">Wallpapers</h2>
+      <p>Papéis de parede.</p>
+
+      <h2 id="m-git">Git</h2>
+      <h2 id="m-kvm">Gerenciador de máquinas virtuais</h2>
+      <h2 id="m-git">Docker</h2>
+      <h2 id="m-git">Visual Studio Code</h2>
+      <h2 id="m-git">PowerIso</h2>
+      <h2 id="m-git">Dropbox</h2>
+      <h2 id="m-git">qBittorrent</h2>
+
+      <h2 id="m-git">Atalhos personalizados</h2>
+      <h2 id="m-git">Driver para webcam</h2>
+      <h2 id="m-git">Proton</h2>
+      <h2 id="m-smb">Samba</h2>
+
+    </main>
+  </div>
+</div>
+
+{% include footer.html %}
