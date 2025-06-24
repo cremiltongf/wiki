@@ -79,7 +79,7 @@ sudo dnf install git
       <p>Há um ótimo material no site <a href="https://sysguides.com/install-kvm-on-linux">SysGuides</a> para instalação
         e configuração.</p>
 
-      <h2 id="m-git">Docker</h2>
+      <h2 id="m-docker">Docker</h2>
       <p>Siga o guia do <a href="https://docs.docker.com/desktop/setup/install/linux/fedora/">Docker Docs</a> que é
         sucesso.</p>
 
@@ -91,20 +91,20 @@ sudo dnf install git
         </div>
       </div>
 
-      <h2 id="m-git">Visual Studio Code</h2>
+      <h2 id="m-vscode">Visual Studio Code</h2>
       <p>Façao download do <a href="https://code.visualstudio.com/Download">Visual Studio Code</a>.</p>
       <h3>Instalação</h3>
       <pre><code>
 sudo dnf install "code-1.101.1-1750254783.el8.x86_64.rpm"
       </code></pre>
 
-      <h2 id="m-git">PowerIso</h2>
+      <h2 id="m-iso">PowerIso</h2>
       <h3>Instalação</h3>
       <pre><code>
 sudo flatpak install flathub com.poweriso.PowerISO
       </code></pre>
 
-      <h2 id="m-git">Dropbox</h2>
+      <h2 id="m-dropbox">Dropbox</h2>
       <p>Faça o download do <a href="https://www.dropbox.com/install-linux">Dropbox</a>.</p>
       <h3>Instalação</h3>
       <pre><code>
@@ -118,7 +118,7 @@ sudo dnf install "nautilus-dropbox-2025.05.20-1.fc42.x86_64.rpm"
         </div>
       </div>
 
-      <h2 id="m-git">qBittorrent</h2>
+      <h2 id="m-torrent">qBittorrent</h2>
       <h3>Instalação</h3>
       <pre><code>
 sudo flatpak install flathub org.qbittorrent.qBittorrent
@@ -131,18 +131,40 @@ sudo flatpak install flathub org.qbittorrent.qBittorrent
         </div>
       </div>
 
-      <h2 id="m-git">Atalhos personalizados</h2>
+      <h2 id="m-keys">Atalhos personalizados</h2>
       <ol>
-        <li>Em <b>Configurações</b> &#11177; Teclado &#11177; Atalhos de teclado &#11177; Veja e personalize atalhos
-          &#11177; Atalhos personalizados</li>
+        <li class="mb-2">Em <b>Configurações</b> &rarr; Teclado &rarr; Atalhos de teclado &rarr; Veja e
+          personalize atalhos
+          &rarr; Atalhos personalizados</li>
         <ol>
-          <li><kbd>Ctrl + Alt + T</kbd> &#11177; <code>ptyxis</code> &rarr; para abrir o Terminal</li>
-          <li><kbd>Ctrl + Alt + E</kbd> &#8627; <code>nautilus</code> &#8627; para abrir o Nautilus</li>
+          <li class="mb-2"><kbd>Ctrl + Alt + T</kbd> &rarr; <code>ptyxis</code> &rarr; para abrir o Terminal</li>
+          <li class="mb-2"><kbd>Ctrl + Alt + E</kbd> &rarr; <code>nautilus</code> &rarr; para abrir o Nautilus</li>
         </ol>
       </ol>
-      <h2 id="m-git">Driver para webcam</h2>
-      <h2 id="m-git">Proton</h2>
+
+      <h2 id="m-webcam">Webcam</h2>
+      <pre><code>
+sudo dnf install v4l-utils
+      </code></pre>
+      <div class="alert alert-info d-flex align-items-center">
+        <span class="bi flex-shrink-0"></span>
+        <div>
+          Isso funcionou muito bem para minha webcam usb.
+        </div>
+      </div>
+      <p>Referência: <a
+          href="https://knowledgebase.frame.work/en_us/fedora-webcam-troubleshooting-guide-rkScsKB0s">Fedora Webcam
+          Troubleshooting Guide</a>
+      </p>
+
+      <h2 id="m-proton">Proton</h2>
+      <p>Compatibilidade para games baseado no Wine e outros componentes. Consulte todos os detalhes no <a
+          href="https://github.com/GloriousEggroll/proton-ge-custom">proton-ge-custom</a> no GitHub.
+      </p>
+
       <h2 id="m-smb">Samba</h2>
+      <p>No <a href="https://idroot.us/install-samba-fedora-42/">idroot</a> há um super material explicando cada detalhe
+        de uma configuração.</p>
 
     </main>
   </div>
