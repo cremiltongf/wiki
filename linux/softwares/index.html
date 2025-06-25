@@ -514,7 +514,7 @@ sudo chmod -R 777 /var/www/html
                         <span class="bi flex-shrink-0"></span>
                         <div>Essa configuração e para deixar a inicialização do Linux um pouco mais performática. Se for
                               um
-                              equipamento mais robusto, talvez nao seja necessário.
+                              equipamento novo/atual, possivelmente não será necessário essa otimização.
                         </div>
                   </div>
                   <h4>Desativando serviços</h4>
@@ -542,7 +542,7 @@ sudo chmod +x /sbin/delay-lampp.sh
 [Unit]
 Description=Delay LAMPP startup
 DefaultDependencies=no
-Afeter=network.target
+After=network.target
 
 [Service]
 Type=oneshot
