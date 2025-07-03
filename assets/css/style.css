@@ -197,7 +197,7 @@ footer [href^="http"]::after {
     visibility: hidden;
     opacity: 0;
     position: fixed;
-    right: 16px;
+    right: 22px;
     bottom: 16px;
     transition: all .4s ease-in-out;
 }
