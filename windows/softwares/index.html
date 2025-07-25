@@ -362,16 +362,8 @@ rd "%ProgramFiles%\ComposerSetup" /s /q
 wsl --install
       </code></pre>
 
-      <h3>Atualizando o Kernel</h3>
-      <p>
-        Faça o download e instale a
-        <a href="https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi">Atualização do
-          Kernel</a>.
-      </p>
-
-      <h3>Configurando WSL2</h3>
-      <p>
-        Garantindo que o WSL seja executado na versão 2. Execute no
+      <h3>Mudando para WSL2</h3>
+      <p>Execute no
         <code>prompt</code> como <b>Administrador</b>:
       </p>
       <pre><code>
@@ -395,20 +387,6 @@ start /w "Docker Desktop Installer.exe" install
       </p>
       <pre><code>
 net localgroup docker-users aluno /add
-      </code></pre>
-
-      <h3>Configuração de proxy</h3>
-      <p>
-        <b>Edite</b> o arquivo <code>C:\Users\aluno\.docker\config.json</code>:
-      </p>
-      <pre><code>
-"proxies": {
-    "default": {
-        "httpProxy": "http://192.168.0.6:3128",
-        "httpsProxy": "https://192.168.0.6:3128",
-        "noProxy": "127.0.0.0/8,localhost"
-    }
-}
       </code></pre>
 
       <h3>Configurações do Dashboard</h3>
@@ -466,6 +444,20 @@ net localgroup docker-users aluno /add
         <span class="bi flex-shrink-0"></span>
         <div>Se aplica apenas ao perfil do <b>Aluno</b>.</div>
       </div>
+
+      <h3>Configuração de proxy</h3>
+      <p>
+        <b>Edite</b> o arquivo <code>C:\Users\aluno\.docker\config.json</code>:
+      </p>
+      <pre><code>
+"proxies": {
+    "default": {
+        "httpProxy": "http://192.168.0.6:3128",
+        "httpsProxy": "https://192.168.0.6:3128",
+        "noProxy": "127.0.0.0/8,localhost"
+    }
+}
+      </code></pre>
 
       <p>
         Referências:
