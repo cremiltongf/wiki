@@ -38,34 +38,16 @@ permalink: /windows/softwares/
       </code></pre>
 
       <h2 id="anaconda">Anaconda</h2>
-      <div class="alert alert-info d-flex align-items-center">
-        <span class="bi flex-shrink-0"></span>
-        <div>Instale este software apenas para o usuário <b>Aluno</b>.</div>
-      </div>
       <p>
         Faça o download do
         <a href="https://www.anaconda.com/download/success">Anaconda</a>.
       </p>
-      <h3>Configuração de proxy</h3>
-      <p>
-        <b>Edite</b> o arquivo <code>c:\users\aluno\.condarc</code> e adicione:
-      </p>
-      <pre><code>
-show_channel_urls: true
-allow_other_channels: true
 
-proxy_servers:
-    http: 192.168.0.6:3128
-    https: 192.168.0.6:3128
-
-ssl_verify: false
-      </code></pre>
-      <p>
-        Referência:
-        <a href="https://docs.anaconda.com/working-with-conda/reference/security/#update-the-condarc-file">Update the
-          .condarc file</a>.
-      </p>
       <h3>Pacotes</h3>
+      <div class="alert alert-info d-flex align-items-center">
+        <span class="bi flex-shrink-0"></span>
+        <div>Instale esses pacotes no perfil do usuário <b>Aluno</b>.</div>
+      </div>
       <p>
         Execute os comandos no <b>Anaconda Prompt</b> para instalar os seguintes
         pacotes:
@@ -96,6 +78,26 @@ ssl_verify: false
           <code>conda install conda-forge::matplotlib</code>
         </li>
       </ol>
+
+      <h3>Configuração de proxy</h3>
+      <p>
+        <b>Edite</b> o arquivo <code>c:\users\aluno\.condarc</code> e adicione:
+      </p>
+      <pre><code>
+show_channel_urls: true
+allow_other_channels: true
+
+proxy_servers:
+    http: 192.168.0.6:3128
+    https: 192.168.0.6:3128
+
+ssl_verify: false
+      </code></pre>
+      <p>
+        Referência:
+        <a href="https://docs.anaconda.com/working-with-conda/reference/security/#update-the-condarc-file">Update the
+          .condarc file</a>.
+      </p>
 
       <h2 id="android">Android Studio</h2>
       <p>
