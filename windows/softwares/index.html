@@ -600,12 +600,6 @@ C:\Program Files\Python313\Scripts
         </div>
       </div>
 
-      <h3>Proxy para o IntelliJ</h3>
-      <p>
-        <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/intellij-proxy.png"
-          alt="Proxy para o IntelliJ" />
-      </p>
-
       <h3>Desativar envio de dados</h3>
       <p>
         <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/intellij-data.png"
@@ -616,39 +610,6 @@ C:\Program Files\Python313\Scripts
       <p>
         <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/intellij-update.png"
           alt="Desativar verificação de atualização" />
-      </p>
-
-      <h3>Proxy para o Maven</h3>
-      <p>
-        <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/intellij-maven-proxy.png"
-          alt="Proxy para o Maven" />
-      </p>
-
-      <p>
-        <b>Crie</b> o arquivo <code>settings.xml</code> em
-        <code>C:\Users\aluno\.m2</code> com o seguinte conteúdo:
-      </p>
-      <pre><code>
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd"&gt;
-  &lt;proxies&gt;
-    &lt;proxy&gt;
-      &lt;id>proxyifpr&lt;/id&gt;
-      &lt;active>true&lt;/active&gt;
-      &lt;protocol>http&lt;/protocol&gt;
-        &lt;host>192.168.0.6&lt;/host&gt;
-        &lt;port>3128&lt;/port&gt;
-        &lt;username>&lt;/username&gt;
-        &lt;password>&lt;/password&gt;
-      &lt;nonProxyHosts>localhost&lt;/nonProxyHosts&gt;
-    &lt;/proxy&gt;
-  &lt;/proxies&gt;
-&lt;/settings&gt;
-      </code></pre>
-      <p>
-        Referência:
-        <a href="https://maven.apache.org/settings.html#Proxies">Proxies</a>.
       </p>
 
       <h3>Exclusão de arquivos no Windows Defender</h3>
