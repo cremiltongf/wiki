@@ -820,28 +820,6 @@ msiexec /i "mysql-installer-community-8.0.13.0.msi" /qn
         <span class="bi flex-shrink-0"></span>
         <div>Esse programa depende do <b>Java JDK 17</b>.</div>
       </div>
-      <h3>Proxy para o Maven</h3>
-      <p>
-        <b>Altere</b> o arquivo <code>settings.xml</code> na seção de
-        <b>proxies</b> localizado em
-        <code>C:\Program Files\NetBeans-15\netbeans\java\maven\conf</code>
-        com o seguinte conteúdo:
-      </p>
-      <pre><code>
-&lt;id>proxyifpr&lt;/id&gt;
-&lt;active>true&lt;/active&gt;
-&lt;protocol>http&lt;/protocol&gt;
-&lt;host>192.168.0.6&lt;/host&gt;
-&lt;port>3128&lt;/port&gt;
-&lt;username>&lt;/username&gt;
-&lt;password>&lt;/password&gt;
-&lt;nonProxyHosts>localhost&lt;/nonProxyHosts&gt;
-      </code></pre>
-
-      <p>
-        Referência:
-        <a href="https://maven.apache.org/settings.html#Proxies">Proxies</a>.
-      </p>
 
       <h2 id="netbeans8">NetBeans 8</h2>
       <p>
