@@ -677,32 +677,35 @@ updateContextMenu=0
         </div>
       </div>
 
-      <h2 id="jdk17">Java JDK 17</h2>
+      <h2 id="jdk21">Java JDK 21</h2>
       <p>
         Faça o download do
-        <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Java JDK
-          17</a>.
+        <a href="https://www.oracle.com/java/technologies/downloads/#jdk21-windows">Java JDK
+          21</a>.
       </p>
 
-      <h3>JAVA_HOME</h3>
-      <p>
-        Em <b>Propriedades do Sistema</b>, configure as variáveis de acordo com
-        a sua versão.
-      </p>
-      <p>
-        <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/variavel-java.png"
-          alt="Propriedades do Sistema" />
-      </p>
-      <p>
-        Crie a variável
-        <code>JAVA_HOME</code> com o seguinte valor:
+      <h3>Variáveis do Sistema</h3>
+
+      <div class="alert alert-info d-flex align-items-center">
+        <span class="bi flex-shrink-0"></span>
+        <div>
+          Configure os valores das variáveis de
+          acordo com a sua versão do JDK.
+        </div>
+      </div>
+
+      <h4>JAVA_HOME</h4>
+      <p>Em <b>Propriedades do Sistema</b> &rarr; <b>Variáveis de Ambiente</b> &rarr; <b>Variáveis do Sistema</b>, crie
+        a variável
+        <code>JAVA_HOME</code> com o valor:
       </p>
       <pre><code>
-C:\Program Files\Java\jdk-17.0.2
+C:\Program Files\Java\jdk-21
       </code></pre>
 
-      <h3>Path</h3>
-      <p>Adicione a variável ao <code>Path</code>:</p>
+      <h4>Path</h4>
+      <p>Em <b>Propriedades do Sistema</b> &rarr; <b>Variáveis de Ambiente</b> &rarr; <b>Variáveis do Sistema</b>,
+        adicione ao <code>Path</code>:</p>
       <pre><code>
 %JAVA_HOME%\bin
       </code></pre>
