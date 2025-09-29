@@ -104,38 +104,6 @@ Dados de valor: aluno
         <div>Altere as informações para seu usuário de preferência.</div>
       </div>
 
-      <h2 id="proxy">Proxy</h2>
-      <p>Configurando proxy nos computadores clientes:</p>
-
-      <p>
-        <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/proxy.png"
-          alt="Configuração de proxy" />
-      </p>
-      <h3>Proxy pelo Registro</h3>
-      <p>Detalhes de <code>ProxyEnable</code>:</p>
-      <pre><code>Ação: Substituir
-Caminho da Chave: Software\Microsoft\Windows\CurrentVersion\Internet Settings
-Nome do valor: ProxyEnable
-Tipo de valor: REG_DWORD
-Dados de valor: 00000001
-Base: Hexadecimal
-</code></pre>
-
-      <p>Detalhes de <code>ProxyOverride</code>:</p>
-      <pre><code>Ação: Substituir
-Caminho da Chave: Software\Microsoft\Windows\CurrentVersion\Internet Settings
-Nome do valor: ProxyOverride
-Tipo de valor: REG_SZ
-Dados de valor: 192.168.*;&lt;local&gt;
-</code></pre>
-
-      <p>Detalhes de <code>ProxyServer</code>:</p>
-      <pre><code>Ação: Substituir
-Caminho da Chave: Software\Microsoft\Windows\CurrentVersion\Internet Settings
-Nome do valor: ProxyServer
-Tipo de valor: REG_SZ
-Dados de valor: 192.168.0.6:3128
-</code></pre>
       <!--Fim conteudo Geral-->
 
       <!-- Relacao confianca -->
