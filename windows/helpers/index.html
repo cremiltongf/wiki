@@ -20,27 +20,27 @@ permalink: /windows/helpers/
 
       <h2 id="psexec">PsExec</h2>
       <pre><code>
-cmd /c psexec -u USER -p PASSWORD -accepteula cmd /c APP
+cmd /c psexec -u "USER" -p "PASS" -accepteula cmd /c "APP"
       </code></pre>
 
       <h2 id="copy">Copy</h2>
       <pre><code>
-cmd /c copy /y \\labXm41.local\datapublic\FILE" "c:\Softs"
+cmd /c copy /y "\\labXm41.local\datapublic\FILE" "c:\Softs"
       </code></pre>
 
       <h2 id="del">Del</h2>
       <pre><code>
-cmd /c del "c:\Softs\APP"
+cmd /c del /q "c:\Softs\APP"
       </code></pre>
 
       <h2 id="gpedit">Gpedit</h2>
       <pre><code>
-cmd /c psexec -u USER -p PASSWORD -accepteula cmd /c "C:\Windows\System32\gpedit.msc"
+cmd /c psexec -u "USER" -p "PASS" -accepteula cmd /c "C:\Windows\System32\gpedit.msc"
       </code></pre>
 
       <h2 id="sysdm">Sysdm</h2>
       <pre><code>
-cmd /c psexec -u USER -p PASSWORD -accepteula cmd /c "C:\Windows\System32\sysdm.cpl"
+cmd /c psexec -u "USER" -p "PASS" -accepteula cmd /c "C:\Windows\System32\sysdm.cpl"
       </code></pre>
 
       <h2 id="ms-settings">Configurações do Windows</h2>
@@ -50,6 +50,18 @@ cmd /c start ms-settings:windowsupdate
       <pre><code>
 cmd /c start ms-settings:activation
       </code></pre>
+
+      <p>Referências:</p>
+      <ul>
+        <li><a href="https://learn.microsoft.com/pt-br/sysinternals/downloads/psexec">psexec</a></li>
+        <li><a href="https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/copy">copy</a>
+        </li>
+        <li><a href="https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/del">del</a></li>
+        <li><a href="https://learn.microsoft.com/pt-br/sysinternals/downloads/psexec">gpedit.msc</a></li>
+        <li><a href="https://learn.microsoft.com/pt-br/sysinternals/downloads/psexec">sysdm.cpl</a></li>
+        <li><a href="https://learn.microsoft.com/pt-br/windows/apps/develop/launch/launch-settings">Configurações do
+            Windows</a></li>
+      </ul>
 
       <div class="container">
         <div class="row">
