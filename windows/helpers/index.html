@@ -1,0 +1,69 @@
+---
+title: "Helpers"
+permalink: /windows/helpers/
+---
+
+{% include header.html %}
+
+<div class="container mt-5 pt-5">
+  <div class="row">
+    <aside class="sidebar-container col-lg-3 z-3" data-js="sidebar-container">
+      <div class="sidebar">{% include windows-helpers.html %}</div>
+    </aside>
+
+    <main class="col-12 col-lg-8 mb-5">
+      <h1>{{ page.title }}</h1>
+
+      <p class="lead">
+        Informações auxiliares para suporte.
+      </p>
+
+      <h2 id="psexec">PsExec</h2>
+      <pre><code>
+cmd /c psexec -u USER -p PASSWORD -accepteula cmd /c APP
+      </code></pre>
+
+      <h2 id="copy">Copy</h2>
+      <pre><code>
+cmd /c copy /y \\labXm41.local\datapublic\FILE" "c:\Softs"
+      </code></pre>
+
+      <h2 id="del">Del</h2>
+      <pre><code>
+cmd /c del "c:\Softs\APP"
+      </code></pre>
+
+      <h2 id="gpedit">Gpedit</h2>
+      <pre><code>
+cmd /c psexec -u USER -p PASSWORD -accepteula cmd /c "C:\Windows\System32\gpedit.msc"
+      </code></pre>
+
+      <h2 id="sysdm">Sysdm</h2>
+      <pre><code>
+cmd /c psexec -u USER -p PASSWORD -accepteula cmd /c "C:\Windows\System32\sysdm.cpl"
+      </code></pre>
+
+      <h2 id="ms-settings">Configurações do Windows</h2>
+      <pre><code>
+cmd /c start ms-settings:windowsupdate
+      </code></pre>
+      <pre><code>
+cmd /c start ms-settings:activation
+      </code></pre>
+
+      <div class="container">
+        <div class="row">
+          <div class="col text-start">
+            Voltar para <a href="/windows/clone/">Settings Clone</a>
+          </div>
+          <div class="col text-end">
+            Ir para <a href="/start/">Setup Default</a>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+{% include footer.html %}
