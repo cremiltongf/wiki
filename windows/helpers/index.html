@@ -46,9 +46,24 @@ cmd /c psexec -u "USER" -p "PASS" -accepteula cmd /c "C:\Windows\System32\sysdm.
       <h2 id="ms-settings">Configurações do Windows</h2>
       <pre><code>
 cmd /c start ms-settings:windowsupdate
-      </code></pre>
-      <pre><code>
 cmd /c start ms-settings:activation
+      </code></pre>
+
+      <h2 id="lgpo">LGPO</h2>
+      <pre><code>
+LGPO.exe command [...]
+
+# Import settings from one or more GPO backups under "path"
+LGPO.exe /g path
+
+# Import settings from registry.pol into machine config
+LGPO.exe /m path\registry.pol
+
+# Import settings from registry.pol into user config
+LGPO.exe /u path\registry.pol
+
+# To create a GPO backup from local policy:
+LGPO.exe /b path [/n GPO-name]
       </code></pre>
 
       <p>Referências:</p>
@@ -61,6 +76,10 @@ cmd /c start ms-settings:activation
         <li><a href="https://learn.microsoft.com/pt-br/sysinternals/downloads/psexec">sysdm.cpl</a></li>
         <li><a href="https://learn.microsoft.com/pt-br/windows/apps/develop/launch/launch-settings">Configurações do
             Windows</a></li>
+        <li><a
+            href="https://techcommunity.microsoft.com/blog/microsoft-security-baselines/lgpo-exe---local-group-policy-object-utility-v1-0/701045">LGPO.exe
+            - Local Group Policy Object Utility, v1.0</a>
+        </li>
       </ul>
 
       <div class="container">
