@@ -49,7 +49,7 @@ cmd /c start ms-settings:windowsupdate
 cmd /c start ms-settings:activation
       </code></pre>
 
-      <h2 id="lgpo">LGPO</h2>
+      <h2 id="lgpo">Lgpo</h2>
       <pre><code>
 LGPO.exe command [...]
 
@@ -66,6 +66,18 @@ LGPO.exe /u path\registry.pol
 LGPO.exe /b path [/n GPO-name]
       </code></pre>
 
+
+      <h2 id="wget">Wget</h2>
+      <pre><code>
+wget.exe [OPTION]... [URL]...
+
+# Basic Example
+"C:\Portable\wget\wget.exe" "https://download.sysinternals.com/files/PSTools.zip"
+
+# Specific Directory
+cd "C:\Users\aluno\desktop" && "C:\Portable\wget\wget.exe" "https://download.sysinternals.com/files/PSTools.zip"
+      </code></pre>
+
       <p>Referências:</p>
       <ul>
         <li><a href="https://learn.microsoft.com/pt-br/sysinternals/downloads/psexec">psexec</a></li>
@@ -80,6 +92,7 @@ LGPO.exe /b path [/n GPO-name]
             href="https://techcommunity.microsoft.com/blog/microsoft-security-baselines/lgpo-exe---local-group-policy-object-utility-v1-0/701045">LGPO.exe
             - Local Group Policy Object Utility, v1.0</a>
         </li>
+        <li><a href="https://www.gnu.org/software/wget/manual/wget.html">Wget 1.25.0</a></li>
       </ul>
 
       <div class="container">
