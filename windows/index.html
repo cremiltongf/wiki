@@ -192,7 +192,7 @@ bcdedit /set recoveryenabled NO
       </p>
       <ol>
         <li class="mb-2">
-          Configuração do Computador
+          <b>Configuração do Computador</b>
           &rarr; Modelos Administrativos
           &rarr; Componentes do Windows
           &rarr; Explorador de Arquivos
@@ -202,9 +202,20 @@ bcdedit /set recoveryenabled NO
             Configurar o Windows Defender SmartScreen &rarr;
             <b>Desabilitado</b>
           </li>
+          <li class="mb-2">
+            Configurar o Windows Update &rarr; Gerenciar a experiência do usuário final
+            <ul>
+              <li class="mb-2">Configurar Atualizações Automáticas &rarr;
+                <b>Desativado</b>
+              </li>
+              <li class="mb-2">Remover acesso ao uso de todos os recursos do Windows Update &rarr;
+                <b>Habilitado</b>
+              </li>
+            </ul>
+          </li>
         </ol>
         <li class="mb-2">
-          Configuração do Usuário
+          <b>Configuração do Usuário</b>
           &rarr; Modelos Administrativos
           &rarr; Sistema
           &rarr; Opções de Ctrl+Alt+Del
@@ -217,6 +228,19 @@ bcdedit /set recoveryenabled NO
           <li class="mb-2">
             Remover Gerenciador de tarefas
             &rarr; <b>Habilitado</b>
+          </li>
+        </ol>
+        <li class="mb-2">
+          <b>Configuração do Usuário</b>
+          &rarr; Modelos Administrativos
+          &rarr; Componentes do Windows
+          &rarr; Windows Update
+          &rarr; Gerenciar atualizações oferecidas pelo Windows Server Update Service
+        </li>
+        <ol>
+          <li class="mb-2">
+            Remover acesso ao uso de todos os recursos Windows Update &rarr;
+            <b>Habilitado</b>
           </li>
         </ol>
       </ol>
