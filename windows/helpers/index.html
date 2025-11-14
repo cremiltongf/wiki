@@ -35,12 +35,17 @@ cmd /c del /q "c:\Softs\APP"
 
       <h2 id="gpedit">Gpedit</h2>
       <pre><code>
-cmd /c psexec -u "USER" -p "PASS" -accepteula cmd /c "C:\Windows\System32\gpedit.msc"
+cmd /c psexec -u USER -p PASS -accepteula cmd /c "gpedit.msc"
       </code></pre>
 
       <h2 id="sysdm">Sysdm</h2>
       <pre><code>
-cmd /c psexec -u "USER" -p "PASS" -accepteula cmd /c "C:\Windows\System32\sysdm.cpl"
+cmd /c psexec -u USER -p PASS -accepteula cmd /c "sysdm.cpl"
+      </code></pre>
+
+      <h2 id="compmgmt">Compmgmt</h2>
+      <pre><code>
+cmd /c psexec -u USER -p PASS -accepteula cmd /c "compmgmt.msc"
       </code></pre>
 
       <h2 id="ms-settings">Configurações do Windows</h2>
