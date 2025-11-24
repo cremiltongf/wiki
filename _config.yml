@@ -21,7 +21,7 @@ title: Wiki - Laboratórios de Informática do IFPR Campus Umuarama
 email: cremilton@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
   Este wiki contém informações sobre a configuração dos Sistemas Operacionais Windows 11 e Linux, também há detalhes sobre instalação e configuração de softwares que são utilizados nos Laboratórios de Informática do IFPR Campus Umuarama.
-baseurl: "" # the subpath of your site, e.g. /blog
+#baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://labs.cremilton.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: cremiltongf
 github_username:  cremiltongf
@@ -30,6 +30,9 @@ github_username:  cremiltongf
 theme: minima
 plugins:
   - jekyll-feed
+
+sass:
+  quiet_deps: true
 
 # Exclude from processing.
 # The following items will not be processed, by default.
