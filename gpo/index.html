@@ -18,41 +18,8 @@ permalink: /gpo/
         Active Directory.
       </p>
 
-      <h2 id="adm-local">Administrator Local</h2>
-      <ol>
-        <li class="mb-2">Crie um grupo global;</li>
-        <li class="mb-2">
-          Adicione os usuários que serão administradores ao grupo;
-        </li>
-        <li class="mb-2">
-          Crie uma GPO com o nome que achar conveniente. Exemplo:
-          <b>adm_local</b>;
-        </li>
-        <li class="mb-2">
-          Na coluna de <b>Grupos Restritos</b> adicione o grupo criado;
-        </li>
-        <li class="mb-2">
-          Em propriedades, em "Este grupo é um membro de:" Clique em
-          Adicionar... e no campo grupo preencha com "administradores".
-        </li>
-      </ol>
-      <p>
-        <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/adm-local.png" alt="ADM Local" />
-      </p>
-
-      <div class="alert alert-info d-flex align-items-center">
-        <span class="bi flex-shrink-0"></span>
-        <div>
-          O usuário que for incluído neste grupo, terá poderes administrativos
-          na máquina local.
-        </div>
-      </div>
-
       <h2 id="remoto">Acesso remoto</h2>
       <p>Configurando o acesso remoto:</p>
-      <p>
-        <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/remoto.png" alt="Acesso remoto" />
-      </p>
 
       <h2 id="login">
         Login automático
@@ -94,19 +61,11 @@ Tipo de valor: REG_SZ
 Dados de valor: aluno
 </code></pre>
 
-      <p>
-        <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/login.png"
-          alt="Login automático" />
-      </p>
-
       <div class="alert alert-info d-flex align-items-center">
         <span class="bi flex-shrink-0"></span>
         <div>Altere as informações para seu usuário de preferência.</div>
       </div>
 
-      <!--Fim conteudo Geral-->
-
-      <!-- Relacao confianca -->
       <h2 id="sync">Tolerância de sincronização</h2>
       <div class="alert alert-info d-flex align-items-center">
         <span class="bi flex-shrink-0"></span>
@@ -132,20 +91,10 @@ Dados de valor: aluno
         <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/relacao-confianca.png"
           alt="Tela de Configuração" />
       </p>
-      <!-- End Relacao confianca -->
 
-      <!-- Tema -->
       <h2 id="wallpaper">Papel de parede</h2>
-      <p>
-        <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/wallpaper.png"
-          alt="Tela de configuração de Papel de Parede" />
-      </p>
 
       <h2 id="script">Script de papel de parede</h2>
-      <p>
-        <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/script-wallpaper.png"
-          alt="Tela de configurção de script de wallpaper" />
-      </p>
 
       <h3>Conteúdo do Script</h3>
       <pre><code>@echo off
@@ -160,9 +109,6 @@ if not exist "C:\Users\%USERIF%\Pictures\wallpaper.png" (
 exit
 </code></pre>
 
-      <!-- End Tema -->
-
-      <!-- Opcoes de Seguranca -->
       <h2 id="tarefas">Gerenciador de Tarefas</h2>
       <ol>
         <li>
@@ -196,7 +142,6 @@ exit
         </li>
       </ol>
 
-      <!-- End Opcoes de Seguranca -->
     </main>
   </div>
 </div>
