@@ -18,7 +18,8 @@ permalink: /gpo/
         Active Directory.
       </p>
 
-      <h2>Em Configuração de Computador</h2>
+      <h2>Configuração de Computador</h2>
+      <h3>Em Políticas</h3>
       <h3>Configurações do Windows</h3>
       <ul>
         <li class="mb-2"><b>Configurações de Segurança</b></li>
@@ -47,6 +48,10 @@ permalink: /gpo/
           <ol>
             <li class="mb-2">Configurar o Windows Defender SmartScreen &rarr; Desativado</li>
           </ol>
+          <li class="mb-2">Serviços de Área de Trabalho Remota</li>
+          <ol>
+            <li class="mb-2"> Host de Sessão da... - Conexões - Permitir que os usuário se conectem... - Habilitado</li>
+          </ol>
         </ol>
         <li class="mb-2"><b>Menu Iniciar e Barra de Tarefas</b></li>
         <ol>
@@ -54,7 +59,55 @@ permalink: /gpo/
         </ol>
       </ul>
 
-      <h2>Em Configuração do Usuário</h2>
+      <h3>Em Preferências</h3>
+      <h3>Configurações do Windows</h3>
+      <ul>
+        <li class="mb-2"><b>Registro</b></li>
+        <ol>
+          <li class="mb-2">
+            Adicione o Item do Registro <code>AutoAdminLogon</code>:
+          </li>
+          <pre><code>Ação: Atualizar
+Hive: HKEY_LOCAL_MACHINE
+caminho da Chave: SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
+Nome do valor: AutoAdminLogon
+Tipo de valor: REG_SZ
+Dados de valor: 1
+</code></pre>
+          <li class="mb-2">
+            Adicione o Item do Registro <code>DefaultDomainName</code>:
+          </li>
+          <pre><code>Ação: Atualizar
+Hive: HKEY_LOCAL_MACHINE
+caminho da Chave: SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
+Nome do valor: DefaultDomainName
+Tipo de valor: REG_SZ
+Dados de valor: ensino.umuarama.local
+</code></pre>
+          <li class="mb-2">
+            Adicione o Item do Registro <code>DefaultPassword</code>:
+          </li>
+          <pre><code>Ação: Atualizar
+Hive: HKEY_LOCAL_MACHINE
+caminho da Chave: SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
+Nome do valor: DefaultPassword
+Tipo de valor: REG_SZ
+Dados de valor: Estudant3
+</code></pre>
+          <li class="mb-2">
+            Adicione o Item do Registro <code> DefaultUserName</code>:
+          </li>
+          <pre><code>Ação: Atualizar
+Hive: HKEY_LOCAL_MACHINE
+caminho da Chave: SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
+Nome do valor: DefaultUserName
+Tipo de valor: REG_SZ
+Dados de valor: estudante
+</code></pre>
+        </ol>
+      </ul>
+
+      <h2>Configuração do Usuário</h2>
       <h3>Modelos Administrativos</h3>
       <ul>
         <li class="mb-2"><b>Área de Trabalho</b></li>
@@ -92,59 +145,11 @@ permalink: /gpo/
         <ol>
           <li class="mb-2">Opções de Ctrl + Alt + Del</li>
           <ol>
-            <li>Remover Bloquear Computador - Habilitado</li>
-            <li>Remover Gerenciador de Tarefas - Habilitado</li>
+            <li class="mb-2">Remover Bloquear Computador - Habilitado</li>
+            <li class="mb-2">Remover Gerenciador de Tarefas - Habilitado</li>
           </ol>
         </ol>
       </ul>
-
-      <h2 id="remoto">Acesso remoto</h2>
-      <p>Configurando o acesso remoto:</p>
-
-      <h2 id="login">
-        Login automático
-      </h2>
-
-      <p>Detalhes de <code>AutoAdminLogon</code>:</p>
-      <pre><code>Ação: Atualizar
-Hive: HKEY_LOCAL_MACHINE
-caminho da Chave: SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
-Nome do valor: AutoAdminLogon
-Tipo de valor: REG_SZ
-Dados de valor: 1
-</code></pre>
-
-      <p>Detalhes de <code>DefaultDomainName</code>:</p>
-      <pre><code>Ação: Atualizar
-Hive: HKEY_LOCAL_MACHINE
-caminho da Chave: SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
-Nome do valor: DefaultDomainName
-Tipo de valor: REG_SZ
-Dados de valor: ensino.umuarama.local
-</code></pre>
-
-      <p>Detalhes de <code>DefaultPassword</code>:</p>
-      <pre><code>Ação: Atualizar
-Hive: HKEY_LOCAL_MACHINE
-caminho da Chave: SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
-Nome do valor: DefaultPassword
-Tipo de valor: REG_SZ
-Dados de valor: aluno123
-</code></pre>
-
-      <p>Detalhes de <code>DefaultUserName</code>:</p>
-      <pre><code>Ação: Atualizar
-Hive: HKEY_LOCAL_MACHINE
-caminho da Chave: SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
-Nome do valor: DefaultUserName
-Tipo de valor: REG_SZ
-Dados de valor: aluno
-</code></pre>
-
-      <div class="alert alert-info d-flex align-items-center">
-        <span class="bi flex-shrink-0"></span>
-        <div>Altere as informações para seu usuário de preferência.</div>
-      </div>
 
       <h2 id="sync">Tolerância de sincronização</h2>
       <div class="alert alert-info d-flex align-items-center">
@@ -188,39 +193,6 @@ if not exist "C:\Users\%USERIF%\Pictures\wallpaper.png" (
 
 exit
 </code></pre>
-
-      <h2 id="tarefas">Gerenciador de Tarefas</h2>
-      <ol>
-        <li class="mb-2">
-          Configuração do usuário &rarr; Modelos
-          Administrativos &rarr; Sistema
-          &rarr; Opções de Ctrl+Alt+Del
-          &rarr; Remover Gerenciador de tarefas
-          &rarr; <b>Habilitado</b>
-        </li>
-      </ol>
-
-      <h2 id="bloqueio">Bloquear Computador</h2>
-      <ol>
-        <li class="mb-2">
-          Configuração do usuário &rarr; Modelos
-          Administrativos &rarr; Sistema
-          &rarr; Opções de Ctrl+Alt+Del
-          &rarr; Remover Bloquear Computador
-          &rarr; <b>Habilitado</b>
-        </li>
-      </ol>
-
-      <h2 id="logoff">Logoff</h2>
-      <ol>
-        <li class="mb-2">
-          Configuração do usuário &rarr; Modelos
-          Administrativos &rarr; Sistema
-          &rarr; Opções de Ctrl+Alt+Del
-          &rarr; Remover Logoff
-          &rarr; <b>Habilitado</b>
-        </li>
-      </ol>
 
     </main>
   </div>
