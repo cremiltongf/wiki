@@ -20,19 +20,26 @@ permalink: /gpo/
 
       <h2>Configuração de Computador</h2>
       <h3>Em Políticas</h3>
-      <h3>Configurações do Windows</h3>
+      <h4>Configurações do Windows</h4>
       <ul>
         <li class="mb-2"><b>Configurações de Segurança</b></li>
         <ol>
+          <li class="mb-2">Políticas de Contas &rarr; Políticas do Kerberos</li>
+          <ol>
+            <li class="mb-2">Tolerância máxima para a... &rarr; 60
+            </li>
+          </ol>
           <li class="mb-2">Políticas Locais &rarr; Opções de Segurança</li>
           <ol>
             <li class="mb-2">Contas: bloquear contas da Microsoft &rarr; Os usuários não podem adicionar ou fazer...
+            </li>
+            <li class="mb-2">Membro de domínio: duração máxima de senha... &rarr; 30
             </li>
           </ol>
         </ol>
       </ul>
 
-      <h3>Modelos Administrativos</h3>
+      <h4>Modelos Administrativos</h4>
       <ul>
         <li class="mb-2"><b>Componentes do Windows</b></li>
         <ol>
@@ -60,7 +67,7 @@ permalink: /gpo/
       </ul>
 
       <h3>Em Preferências</h3>
-      <h3>Configurações do Windows</h3>
+      <h4>Configurações do Windows</h4>
       <ul>
         <li class="mb-2"><b>Registro</b></li>
         <ol>
@@ -108,7 +115,8 @@ Dados de valor: estudante
       </ul>
 
       <h2>Configuração do Usuário</h2>
-      <h3>Modelos Administrativos</h3>
+      <h3>Em Políticas</h3>
+      <h4>Modelos Administrativos</h4>
       <ul>
         <li class="mb-2"><b>Área de Trabalho</b></li>
         <ol>
@@ -150,32 +158,6 @@ Dados de valor: estudante
           </ol>
         </ol>
       </ul>
-
-      <h2 id="sync">Tolerância de sincronização</h2>
-      <div class="alert alert-info d-flex align-items-center">
-        <span class="bi flex-shrink-0"></span>
-        <div>
-          Evita a falha na relação de confiança em computadores que usam Deep
-          Freeze, etc.
-        </div>
-      </div>
-      <p>
-        <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/diferenca-de-horas.png"
-          alt="Tela de Configuração" />
-      </p>
-
-      <h2 id="passtime">Tempo de senha de computador</h2>
-      <div class="alert alert-info d-flex align-items-center">
-        <span class="bi flex-shrink-0"></span>
-        <div>
-          Evita a falha na relação de confiança em computadores que usam Deep
-          Freeze, etc.
-        </div>
-      </div>
-      <p>
-        <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/relacao-confianca.png"
-          alt="Tela de Configuração" />
-      </p>
 
       <h2 id="wallpaper">Papel de parede</h2>
 
