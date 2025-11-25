@@ -18,10 +18,33 @@ permalink: /gpo/
         Active Directory.
       </p>
 
+      <!-- Configuração do Usuário -->
+
       <h2>Configuração de Computador</h2>
       <h3>Em Políticas</h3>
       <h4>Configurações do Windows</h4>
       <ul>
+        <li class="mb-2"><b>Scripts (Inicialização ou Encerramento)</b></li>
+        <ol>
+          <li class="mb-2">Em Inicialização adicione <code>wallpaper.bat</code>:</li>
+          <pre><code>@echo off
+
+:: Author: cremiltongf
+:: Copy background image
+
+setlocal
+
+set "SERVER=\\192.168.x.xx\datapublic\0\Background\background.png"
+set "DIRIMAGE=C:\Background"
+
+if not exist "%DIRIMAGE%\background.png" (
+    md "%DIRIMAGE%"
+    copy /y "%SERVER%" "%DIRIMAGE%"
+)
+
+exit
+</code></pre>
+        </ol>
         <li class="mb-2"><b>Configurações de Segurança</b></li>
         <ol>
           <li class="mb-2">Políticas de Contas &rarr; Políticas do Kerberos</li>
@@ -114,14 +137,19 @@ Dados de valor: estudante
         </ol>
       </ul>
 
+      <!-- Configuração do Usuário -->
+
       <h2>Configuração do Usuário</h2>
       <h3>Em Políticas</h3>
       <h4>Modelos Administrativos</h4>
       <ul>
         <li class="mb-2"><b>Área de Trabalho</b></li>
         <ol>
-          <li class="mb-2">
-            Impedir opções de adicionar, arrastar...&rarr;Habilitado</li>
+          <li class="mb-2">Active Desktop</li>
+          <ol>
+            <li class="mb-2">Papel de Parede da Área de Trabalho - Habilitado</li>
+          </ol>
+          <li class="mb-2">Impedir opções de adicionar, arrastar...&rarr;Habilitado</li>
           <li class="mb-2">Proibir o ajustes de barras de ferramentas da área... Habilitado</li>
         </ol>
         <li class="mb-2"><b>Menu iniciar e Barra de Tarefas</b></li>
@@ -158,24 +186,6 @@ Dados de valor: estudante
           </ol>
         </ol>
       </ul>
-
-      <h2 id="wallpaper">Papel de parede</h2>
-
-      <h2 id="script">Script de papel de parede</h2>
-
-      <h3>Conteúdo do Script</h3>
-      <pre><code>@echo off
-
-SET "IMGIF=\\192.168.X.XX\wallpaper.png"
-SET "USERIF=aluno"
-
-if not exist "C:\Users\%USERIF%\Pictures\wallpaper.png" (
-    xcopy /y "%IMGIF%" "C:\Users\%USERIF%\Pictures"
-)
-
-exit
-</code></pre>
-
     </main>
   </div>
 </div>
