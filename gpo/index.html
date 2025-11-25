@@ -29,17 +29,15 @@ permalink: /gpo/
           <li class="mb-2">Em Inicialização adicione <code>wallpaper.bat</code>:</li>
           <pre><code>@echo off
 
-:: Author: cremiltongf
-:: Copy background image
-
 setlocal
 
-set "SERVER=\\192.168.x.xx\datapublic\0\Background\background.png"
+set "IMAGE=background.png"
+set "SERVER=\\192.168.x.xx\datapublic\0\Background\%IMAGE%"
 set "DIRIMAGE=C:\Background"
 
-if not exist "%DIRIMAGE%\background.png" (
-    md "%DIRIMAGE%"
-    copy /y "%SERVER%" "%DIRIMAGE%"
+if not exist "%DIRIMAGE%\%IMAGE%" (
+  md "%DIRIMAGE%"
+  copy /y "%SERVER%" "%DIRIMAGE%"
 )
 
 exit
