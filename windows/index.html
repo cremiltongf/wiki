@@ -289,15 +289,11 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
             <td>Desativado via GPO ou <code>services.msc</code></td>
           </tr>
           <tr>
-            <td>Desfragmentador ou Otimizador de Discos/Unidades</td>
+            <td>Otimizador de unidades</td>
             <td>Manual via GPO ou <code>services.msc</code></td>
           </tr>
           <tr>
-            <td>SuperFetch ou SysMain</td>
-            <td>Desativado via GPO ou <code>services.msc</code></td>
-          </tr>
-          <tr>
-            <td>Spooler de Impressão</td>
+            <td>SysMain</td>
             <td>Desativado via GPO ou <code>services.msc</code></td>
           </tr>
           <tr>
@@ -305,7 +301,15 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
             <td>Manual via GPO ou <code>services.msc</code></td>
           </tr>
           <tr>
-            <td>Microsoft Edge Update</td>
+            <td>Microsoft Edge Elevation Service</td>
+            <td>Desativado via GPO ou <code>services.msc</code></td>
+          </tr>
+          <tr>
+            <td>Microsoft Edge Update Service (edgeupdate)</td>
+            <td>Desativado via GPO ou <code>services.msc</code></td>
+          </tr>
+          <tr>
+            <td>Microsoft Edge Update Service (edgeupdatem)</td>
             <td>Desativado via GPO ou <code>services.msc</code></td>
           </tr>
         </tbody>
@@ -332,10 +336,10 @@ exit
       <div class="alert alert-info d-flex align-items-center">
         <span class="bi flex-shrink-0"></span>
         <div>
-          Recomendável apenas caso esteja usando Deep Freeze Cloud em ambiente controlado.
+          Recomendável apenas caso esteja usando Deep Freeze Cloud.
         </div>
       </div>
-      <p>Em Proteção contra vírus e ameaças &rarr; Em configurações... &rarr; Gerenciar configuraçoes:</p>
+      <p>Em <b>Proteção contra vírus e ameaças</b> &rarr; Em configurações... &rarr; Gerenciar configuraçoes:</p>
       <ol>
         <li>Proteção fornecida da Nuvem &rarr; <b>Desativado</b></li>
         <li>Envio automático de amostra &rarr; <b>Desativado</b></li>
@@ -344,10 +348,11 @@ exit
       <div class="alert alert-info d-flex align-items-center">
         <span class="bi flex-shrink-0"></span>
         <div>
-          Recomendável apenas caso esteja usando drivers mais antigos, dessa forma, sendo necessário.
+          Recomendável apenas caso esteja usando dispositivos mais antigos, dessa forma, sendo necessário instalar
+          drivers mais antigos.
         </div>
       </div>
-      <p>Em Segurança do dispositivo &rarr; Isolamento de núcleo &rarr; Detalhes do isolamento de núcleo:</p>
+      <p>Em <b>Segurança do dispositivo</b> &rarr; Isolamento de núcleo &rarr; Detalhes do isolamento de núcleo:</p>
       <ol>
         <li>Proteção da autoridade de segurança local &rarr; <b>Desativado</b></li>
         <li>Lista de bloqueios de driver vulnerável da Microsoft &rarr; <b>Desativado</b></li>
