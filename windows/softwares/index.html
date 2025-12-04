@@ -248,6 +248,12 @@ msiexec /i "blender-2.79b-windows64.msi" /qn
         <span class="bi flex-shrink-0"></span>
         <div>Esse programa precisa do XAMPP.</div>
       </div>
+      <h3>Configurando certificado</h3>
+      <p>Alterar <code>C:\xampp\php\php.ini</code>:</p>
+      <pre><code>
+curl.cainfo="C:\CA_SSL.crt"
+openssl.cafile="C:\CA_SSL.crt"
+      </code></pre>
       <h3>Silent Install</h3>
       <pre><code>
 "Composer-Setup.exe" /VERYSILENT /NOCANCEL /NORESTART /ALLUSERS /PHP="C:\xampp\php\php.exe"
@@ -865,7 +871,10 @@ msiexec /i "mysql-installer-community-8.0.13.0.msi" /qn
         Faça o download do
         <a href="https://nodejs.org/en/download">Node.js</a>.
       </p>
-
+      <h3>Configurando certificado</h3>
+      <pre><code>
+npm config set cafile "C:\CA_SSL.crt"
+      </code></pre>
       <h3>Silent Install</h3>
       <pre><code>
 msiexec /i "node-v10.15.3-x64.msi" /qn
