@@ -26,22 +26,7 @@ permalink: /gpo/
       <ul>
         <li class="mb-2"><b>Scripts (Inicialização ou Encerramento)</b></li>
         <ol>
-          <li class="mb-2">Em Inicialização adicione <code>wallpaper.bat</code>:</li>
-          <pre><code>@echo off
-
-setlocal
-
-set "IMAGE=background.png"
-set "SERVER=\\192.168.x.xx\datapublic\0\Background\%IMAGE%"
-set "DIRIMAGE=C:\Background"
-
-if not exist "%DIRIMAGE%\%IMAGE%" (
-  md "%DIRIMAGE%"
-  copy /y "%SERVER%" "%DIRIMAGE%"
-)
-
-exit
-</code></pre>
+          <li class="mb-2">Em Encerramento adicione <code>clear-profile.bat</code>.</li>
         </ol>
         <li class="mb-2"><b>Configurações de Segurança</b></li>
         <ol>
