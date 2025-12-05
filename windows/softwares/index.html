@@ -248,12 +248,6 @@ msiexec /i "blender-2.79b-windows64.msi" /qn
         <span class="bi flex-shrink-0"></span>
         <div>Esse programa precisa do XAMPP.</div>
       </div>
-      <h3>Configurando certificado</h3>
-      <p>Alterar <code>C:\xampp\php\php.ini</code>:</p>
-      <pre><code>
-curl.cainfo="C:\CA_SSL.crt"
-openssl.cafile="C:\CA_SSL.crt"
-      </code></pre>
       <h3>Silent Install</h3>
       <pre><code>
 "Composer-Setup.exe" /VERYSILENT /NOCANCEL /NORESTART /ALLUSERS /PHP="C:\xampp\php\php.exe"
@@ -730,6 +724,11 @@ C:\Program Files\Java\jdk-21
         adicione ao <code>Path</code>:</p>
       <pre><code>
 %JAVA_HOME%\bin
+      </code></pre>
+
+      <h3>Configurando certificado</h3>
+      <pre><code>
+"C:\Program Files\Java\jdk-21\bin\keytool.exe" -importcert -alias fortigateCA -file "C:\CA_SSL.crt" -keystore "C:\Program Files\Java\jdk-21\lib\security\cacerts" -storepass changeit -noprompt
       </code></pre>
 
       <h3>Silent Install</h3>
@@ -1222,7 +1221,14 @@ C:\Users\Aluno\AppData\Roaming\SketchUp\SketchUp 2016\SketchUp\Plugins
 
       <h3>Permissões para iniciar e encerrar os serviços</h3>
       <pre><code>
-cacls "%SystemDrive%\xampp\xampp-control.ini" /E /P Todos:F
+icacls "C:\xampp\xampp-control.ini" /grant:r Todos:F
+      </code></pre>
+
+      <h3>Configurando certificado</h3>
+      <p>Alterar <code>C:\xampp\php\php.ini</code>:</p>
+      <pre><code>
+curl.cainfo="C:\CA_SSL.crt"
+openssl.cafile="C:\CA_SSL.crt"
       </code></pre>
 
       <h3>Silent Install</h3>
