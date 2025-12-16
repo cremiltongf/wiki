@@ -850,7 +850,7 @@ start /wait msiexec /x "%SOFTWARES%\LibreOffice_6.3.6.2_Win_x64.msi" /qn /norest
 msiexec /i "mysql-installer-community-8.0.13.0.msi" /qn
       </code></pre>
 
-      <h2 id="netbeans">NetBeans 15</h2>
+      <h2 id="netbeans">NetBeans 28</h2>
       <p>
         Faça o download do
         <a href="https://netbeans.org/downloads/">NetBeans</a>.
@@ -860,10 +860,11 @@ msiexec /i "mysql-installer-community-8.0.13.0.msi" /qn
         <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/apache-netbeans-update.png"
           alt="Desativar verificação de atualização" />
       </p>
-      <div class="alert alert-info d-flex align-items-center">
-        <span class="bi flex-shrink-0"></span>
-        <div>Esse programa depende do <b>Java JDK</b>.</div>
-      </div>
+      <h3>Configurando certificado</h3>
+      <pre><code>
+set "PATHNETBEANS=C:\Program Files\Apache NetBeans\jdk"
+"%PATHNETBEANS%\bin\keytool.exe" -importcert -noprompt -alias fortigateCA -file "C:\CA_SSL.cer" -keystore "%PATHNETBEANS%\lib\security\cacerts" -storepass changeit -v
+      </code></pre>
 
       <h2 id="netbeans8">NetBeans 8</h2>
       <p>
