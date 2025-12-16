@@ -693,11 +693,11 @@ updateContextMenu=0
         </div>
       </div>
 
-      <h2 id="jdk21">Java JDK 21</h2>
+      <h2 id="jdk25">Java JDK 25</h2>
       <p>
         Faça o download do
-        <a href="https://www.oracle.com/java/technologies/downloads/#jdk21-windows">Java JDK
-          21</a>.
+        <a href="https://www.oracle.com/java/technologies/downloads/#jdk25-windows">Java JDK
+          25</a>.
       </p>
 
       <h3>Variáveis do Sistema</h3>
@@ -705,8 +705,8 @@ updateContextMenu=0
       <div class="alert alert-info d-flex align-items-center">
         <span class="bi flex-shrink-0"></span>
         <div>
-          Configure os valores das variáveis de
-          acordo com a sua versão do JDK.
+          Ajuste os valores das variáveis de
+          acordo com a versão do JDK.
         </div>
       </div>
 
@@ -716,7 +716,8 @@ updateContextMenu=0
         <code>JAVA_HOME</code> com o valor:
       </p>
       <pre><code>
-C:\Program Files\Java\jdk-21
+# JAVA_HOME
+C:\Program Files\Java\jdk-25
       </code></pre>
 
       <h4>Path</h4>
@@ -726,23 +727,31 @@ C:\Program Files\Java\jdk-21
 %JAVA_HOME%\bin
       </code></pre>
 
+      <h4>Variáveis com PowerShell</h4>
+      <pre><code>
+# JAVA_HOME
+powershell -NoProfile -Command "[System.Environment]::SetEnvironmentVariable('JAVA_HOME', 'C:\Program Files\Java\jdk-25', 'Machine')"
+
+# Path
+powershell -NoProfile -Command "[Environment]::SetEnvironmentVariable('Path', $env:Path + ';C:\Program Files\Java\jdk-25\bin', 'Machine')"
+      </code></pre>
+
       <h3>Configurando certificado</h3>
       <pre><code>
-"C:\Program Files\Java\jdk-21\bin\keytool.exe" -importcert -alias fortigateCA -file "C:\CA_SSL.crt" -keystore "C:\Program Files\Java\jdk-21\lib\security\cacerts" -storepass changeit -noprompt
+set "PATHJDK=C:\Program Files\Java\jdk-25"
+"%PATHJDK%\bin\keytool.exe" -importcert -noprompt -alias fortigateCA -file "C:\CA_SSL.cer" -keystore "%PATHJDK%\lib\security\cacerts" -storepass changeit -v
       </code></pre>
 
       <h3>Silent Install</h3>
       <pre><code>
-start /wait msiexec /i "jdk-17_windows-x64_bin.msi" /qn /norestart
+start /wait msiexec /i "jdk-25_windows-x64_bin.msi" /qn /norestart
       </code></pre>
 
       <h3>Silent Uninstall</h3>
       <pre><code>
-# Verify ID for uninstall
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
-
-# Remove
-start /wait msiexec /x {26A24AE4-039D-4CA4-87B4-2F06417079FF} /qn /norestart
+# Finding the JDK Registry Key and Uninstall String Value
+# HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
+start /wait msiexec /x {58B96B13-1F94-5431-BEB9-2952C3D7D747} /qn /norestart
       </code></pre>
 
       <h2 id="jdk8">Java JDK 8</h2>
