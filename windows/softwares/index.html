@@ -774,8 +774,14 @@ start /wait msiexec /x {58B96B13-1F94-5431-BEB9-2952C3D7D747} /qn /norestart
 
       <div class="alert alert-info d-flex align-items-center">
         <span class="bi flex-shrink-0"></span>
-        <div>Desative a verificação de atualizações.</div>
+        <div>Desative a verificação de atualização.</div>
       </div>
+
+      <h3>Configurando certificado</h3>
+      <pre><code>
+set "PATHJRE=C:\Program Files\Java\jre1.8.0_451"
+"%PATHJRE%\bin\keytool.exe" -importcert -noprompt -alias fortigateCA -file "C:\CA_SSL.cer" -keystore "%PATHJRE%\lib\security\cacerts" -storepass changeit -v
+      </code></pre>
 
       <h3>Silent Install</h3>
       <pre><code>
