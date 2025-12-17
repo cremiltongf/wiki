@@ -94,14 +94,6 @@ sudo php composer-setup.php --check
 sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
                   </code></pre>
 
-                  <h3>Configuração de Proxy</h3>
-                  <div class="alert alert-info d-flex align-items-center">
-                        <span class="bi flex-shrink-0"></span>
-                        <div>Utiliza o proxy definido para o SO. Configuração realizada em <a
-                                    href="/linux/final/#l-proxy">Settings Final</a>.
-                        </div>
-                  </div>
-
                   <h2 id="l-firefox">Firefox</h2>
                   <p>
                         Faça o download do
@@ -136,14 +128,6 @@ sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
                   <h2 id="l-git">Git</h2>
                   <pre><code>
 sudo apt-get install git
-                  </code></pre>
-                  <h3>Configuração de Proxy</h3>
-                  <p>
-                        Execute os comandos no <code>terminal</code> como
-                        <b>Usuário Padrão</b>:
-                  </p>
-                  <pre><code>
-git config --global http.proxy http://192.168.0.6:3128 && git config --global http.https://domain.com.sslVerify false
                   </code></pre>
 
                   <h2 id="l-chrome">Google Chrome</h2>
@@ -209,27 +193,6 @@ sudo chmod +x /etc/profile.d/jdk_var.sh
                               14</a>.</p>
                   <p>Instale o <code>Apache-NetBeans-14.sh</code> com o perfil do Aluno.
                   </p>
-                  <h3>Proxy para o Maven</h3>
-                  <p>
-                        <b>Altere</b> o arquivo <code>settings.xml</code> na seção de
-                        <b>proxies</b> localizado em
-                        <code>~/netbeans-14/netbeans/java/maven/conf</code>
-                        com o seguinte conteúdo:
-                  </p>
-                  <pre><code>
-&lt;id>proxyifpr&lt;/id&gt;
-&lt;active>true&lt;/active&gt;
-&lt;protocol>http&lt;/protocol&gt;
-&lt;host>192.168.0.6&lt;/host&gt;
-&lt;port>3128&lt;/port&gt;
-&lt;username>&lt;/username&gt;
-&lt;password>&lt;/password&gt;
-&lt;nonProxyHosts>localhost&lt;/nonProxyHosts&gt;
-                  </code></pre>
-                  <p>
-                        Referência:
-                        <a href="https://maven.apache.org/settings.html#Proxies">Proxies</a>.
-                  </p>
 
                   <h3>Movendo a instalação</h3>
                   <p>Movendo a instalação atual <code>/home/aluno/netbeans-14</code> para <code>/home/portable</code>
@@ -269,15 +232,6 @@ nvm current # Should print "v22.15.0".
 npm -v # Should print "10.9.2".
                   </code></pre>
                   <p>Referência: <a href="https://nodejs.org/en/download">Download Node.js</a></p>
-
-                  <h3>Configuração de proxy</h3>
-                  <p>
-                        Execute os comandos no <code>terminal</code> como
-                        <b>Usuário Padrão</b>:
-                  </p>
-                  <pre><code>
-npm config set proxy http://192.168.0.6:3128 && npm config set https-proxy http://192.168.0.6:3128
-                  </code></pre>
 
                   <h2 id="l-ssh">Open SSH Server</h2>
                   <pre><code>
