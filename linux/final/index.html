@@ -38,9 +38,28 @@ sudo cp -r /home/aluno/. /home/resetuser
                   <p>Crie o arquivo <code>/sbin/reset-user.sh</code> e adicione:</p>
                   <pre><code>
 #!/bin/sh
-rm -rf /home/aluno
-mkdir /home/aluno
-cp -r /home/resetuser/. /home/aluno
+# Remove Profile Folders
+rm -rf /home/aluno/Área\ de\ trabalho /home/aluno/Documentos /home/aluno/Downloads /home/aluno/Imagens /home/aluno/Modelos /home/aluno/Músicas /home/aluno/Público /home/aluno/Vídeos /home/aluno/.config /home/aluno/.icons /home/aluno/.themes /home/aluno/.local
+
+# Create Profile Folders
+mkdir /home/aluno/Área\ de\ trabalho /home/aluno/Documentos /home/aluno/Downloads /home/aluno/Imagens /home/aluno/Modelos /home/aluno/Músicas /home/aluno/Público /home/aluno/Vídeos /home/aluno/.config /home/aluno/.icons /home/aluno/.themes /home/aluno/.local
+
+# Remove and Create Apps Folders
+rm -rf /home/aluno/.var/app/org.mozilla.firefox /home/aluno/.var/app/com.google.Chrome
+mkdir /home/aluno/.var/app/org.mozilla.firefox /home/aluno/.var/app/com.google.Chrome
+
+# Restore Files Defaults
+echo "Olá, pequeno gafanhoto!" > /home/aluno/.bash_history
+cp -r /home/resetuser/Imagens/. /home/aluno/Imagens
+cp -r /home/resetuser/Área\ de\ trabalho/. /home/aluno/Área\ de\ trabalho
+cp -r /home/resetuser/.config/. /home/aluno/.config
+cp -r /home/resetuser/.icons/. /home/aluno/.icons
+cp -r /home/resetuser/.themes/. /home/aluno/.themes
+cp -r /home/resetuser/.local/. /home/aluno/.local
+cp -r /home/resetuser/.var/app/org.mozilla.firefox/. /home/aluno/.var/app/org.mozilla.firefox
+cp -r /home/resetuser/.var/app/com.google.Chrome/. /home/aluno/.var/app/com.google.Chrome
+
+# Restore Permissions
 chown -R aluno /home/aluno
                   </code></pre>
 
