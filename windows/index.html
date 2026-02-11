@@ -25,8 +25,10 @@ permalink: /windows/
         é possível criar um <b>xml</b> para automatizar o processo de instalação
         do Windows. Para edição da <b>iso</b>, utilize o <a href="https://www.anyburn.com/download.php">AnyBurn</a>.
       </p>
-      <div class="alert alert-info d-flex align-items-center">
-        <span class="bi flex-shrink-0"></span>
+      <div class="alert alert-info d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+          <use xlink:href="#info-fill" />
+        </svg>
         <div>
           Através dessa ferramenta é possível remover os
           <i>bloatwares</i> (OneDrive, Office 365, Cortana e etc.) da
@@ -65,13 +67,24 @@ aluno ou estudante
 # Password
 aluno123 ou Estudant3
       </code></pre>
-      <div class="alert alert-info d-flex align-items-center">
-        <span class="bi flex-shrink-0"></span>
+      <div class="alert alert-info d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+          <use xlink:href="#info-fill" />
+        </svg>
         <div>
           Configure o
-          <a href="{{ site.baseurl }}/gpo/#login">login automático</a>
-          para esse usuário alterando o registro do Windows. Caso utilize o SysPrep, configure o autologon após a
+          <a href="{{ site.baseurl }}/gpo/">login automático</a>
+          para este usuário. Caso utilize o SysPrep, configure o autologon após a
           clonagem.
+        </div>
+      </div>
+
+      <div class="alert alert-warning d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Warning:">
+          <use xlink:href="#exclamation-triangle-fill" />
+        </svg>
+        <div>
+          Pode ser configurado via Samba/GPO.
         </div>
       </div>
 
@@ -95,8 +108,10 @@ aluno123 ou Estudant3
           </tr>
         </tbody>
       </table>
-      <div class="alert alert-info d-flex align-items-center">
-        <span class="bi flex-shrink-0"></span>
+      <div class="alert alert-info d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+          <use xlink:href="#info-fill" />
+        </svg>
         <div>
           Caso o equipamento possua unidades extras de armazenamento, utilize
           todo espaço da unidade para partição nuvem01 e/ou nuvem02.
@@ -108,6 +123,14 @@ aluno123 ou Estudant3
 #firewall
 certutil -addstore -f Root "CA_SSL.cer"
       </code></pre>
+      <div class="alert alert-warning d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Warning:">
+          <use xlink:href="#exclamation-triangle-fill" />
+        </svg>
+        <div>
+          Pode ser configurado via Samba/GPO.
+        </div>
+      </div>
 
       <h2 id="windowsupdate">Windows Update</h2>
       <p>Instale todas as atualizações do Windows.</p>
@@ -117,8 +140,10 @@ certutil -addstore -f Root "CA_SSL.cer"
         Baixe os drivers do site do fabricante ou utilize o
         <a href="https://sdi-tool.org/">Snappy</a>.
       </p>
-      <div class="alert alert-info d-flex align-items-center">
-        <span class="bi flex-shrink-0"></span>
+      <div class="alert alert-info d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+          <use xlink:href="#info-fill" />
+        </svg>
         <div>
           Utilize o instalador oficial do fabricante para o driver de vídeo (principalmente se for offboard).
         </div>
@@ -149,8 +174,10 @@ certutil -addstore -f Root "CA_SSL.cer"
       </ol>
 
       <h2 id="fastboot">Fast Boot</h2>
-      <div class="alert alert-info d-flex align-items-center">
-        <span class="bi flex-shrink-0"></span>
+      <div class="alert alert-info d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+          <use xlink:href="#info-fill" />
+        </svg>
         <div>Ajuste necessário para o desligamento completo do SO.</div>
       </div>
       <p>Execute no <code>prompt</code> como Administrador:</p>
@@ -160,8 +187,10 @@ powercfg.exe /hibernate off
       </code></pre>
 
       <h2 id="w-mdns">mDNS</h2>
-      <div class="alert alert-info d-flex align-items-center">
-        <span class="bi flex-shrink-0"></span>
+      <div class="alert alert-info d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+          <use xlink:href="#info-fill" />
+        </svg>
         <div>
           Serve para o <b>Veyon</b> enxergar as outras máquinas na rede local.
         </div>
@@ -173,8 +202,10 @@ reg add "HKLM\Software\Policies\Microsoft\Windows NT\DNSClient" /v EnableMultica
       </code></pre>
 
       <h2 id="reparo">Reparo automático</h2>
-      <div class="alert alert-info d-flex align-items-center">
-        <span class="bi flex-shrink-0"></span>
+      <div class="alert alert-info d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+          <use xlink:href="#info-fill" />
+        </svg>
         <div>
           Ajuste necessário para evitar o reparo automático do SO em caso de queda de energia.
         </div>
@@ -253,9 +284,13 @@ bcdedit /set recoveryenabled NO
           </ul>
         </ol>
       </ol>
-      <div class="alert alert-info d-flex align-items-center">
-        <span class="bi flex-shrink-0"></span>
-        <div>Possível definir pelo Active Directory.</div>
+      <div class="alert alert-warning d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Warning:">
+          <use xlink:href="#exclamation-triangle-fill" />
+        </svg>
+        <div>
+          Pode ser configurado via Samba/GPO.
+        </div>
       </div>
 
       <h2 id="pesquisar">Pesquisa na internet</h2>
@@ -281,12 +316,6 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
       </code></pre>
 
       <h2 id="servicos">Serviços</h2>
-      <div class="alert alert-info d-flex align-items-center">
-        <span class="bi flex-shrink-0"></span>
-        <div>
-          Os serviços também podem ser gerenciados pela GPO.
-        </div>
-      </div>
       <table class="table table-striped table-hover border">
         <thead>
           <tr>
@@ -325,6 +354,15 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted
           </tr>
         </tbody>
       </table>
+      <div class="alert alert-warning d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Warning:">
+          <use xlink:href="#exclamation-triangle-fill" />
+        </svg>
+        <div>
+          Pode ser configurado via Samba/GPO.
+        </div>
+      </div>
+
       <h3>Serviço com Batch Script</h3>
       <pre><code>
 @echo off
@@ -344,8 +382,10 @@ exit
       </code></pre>
 
       <h2 id="seguranca">Segurança do Windows</h2>
-      <div class="alert alert-info d-flex align-items-center">
-        <span class="bi flex-shrink-0"></span>
+      <div class="alert alert-info d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+          <use xlink:href="#info-fill" />
+        </svg>
         <div>
           Recomendável apenas caso esteja usando Deep Freeze Cloud.
         </div>
@@ -356,11 +396,12 @@ exit
         <li>Envio automático de amostra &rarr; <b>Desativado</b></li>
       </ol>
 
-      <div class="alert alert-info d-flex align-items-center">
-        <span class="bi flex-shrink-0"></span>
+      <div class="alert alert-info d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+          <use xlink:href="#info-fill" />
+        </svg>
         <div>
-          Recomendável para usar dispositivos mais antigos, dessa forma, sendo necessário instalar
-          drivers já sem suporte.
+          Recomendável para usar drivers de dispositivos mais antigos.
         </div>
       </div>
       <p>Em <b>Segurança do dispositivo</b> &rarr; Isolamento de núcleo &rarr; Detalhes do isolamento de núcleo:</p>
