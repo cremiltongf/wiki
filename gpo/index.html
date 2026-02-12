@@ -18,8 +18,6 @@ permalink: /gpo/
         Active Directory.
       </p>
 
-      <!-- Configuração do Usuário -->
-
       <h2>Configuração de Computador</h2>
       <h3>Em Políticas</h3>
       <h4>Configurações do Windows</h4>
@@ -28,6 +26,7 @@ permalink: /gpo/
         <ol>
           <li class="mb-2">Em Encerramento adicione <code>clear-profile.bat</code>.</li>
         </ol>
+
         <li class="mb-2"><b>Configurações de Segurança</b></li>
         <ol>
           <li class="mb-2">Políticas de Conta &rarr; Políticas do Kerberos</li>
@@ -35,6 +34,7 @@ permalink: /gpo/
             <li class="mb-2">Tolerância máxima para a... &rarr; <b>30</b>
             </li>
           </ol>
+
           <li class="mb-2">Políticas Locais &rarr; Opções de Segurança</li>
           <ol>
             <li class="mb-2">Contas: bloquear contas da Microsoft &rarr; <b>Os usuários não podem adicionar ou
@@ -55,8 +55,13 @@ permalink: /gpo/
             <li class="mb-2">Microsoft Edge Update Service (edgeupdate) &rarr; <b>Desabilitado</b></li>
             <li class="mb-2">Microsoft Edge Update Service (edgeupdatem) &rarr; <b>Desabilitado</b></li>
           </ol>
-        </ol>
 
+          <li class="mb-2">Serviços do sistema &rarr; Políticas de Chave Pública</li>
+          <ol>
+            <li class="mb-2">Autoridades de Certificação Raiz Confiáveis &rarr; clique em <b>Importar</b> (para instalar
+              certificado do firewall)</li>
+          </ol>
+        </ol>
         </ol>
       </ul>
 
