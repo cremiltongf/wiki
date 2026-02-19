@@ -27,9 +27,7 @@ twitter_username: cremiltongf
 github_username:  cremiltongf
 
 # Build settings
-theme: minima
-plugins:
-  - jekyll-feed
+theme: jekyll-theme-chirpy
 
 # Exclude from processing.
 # The following items will not be processed, by default.
