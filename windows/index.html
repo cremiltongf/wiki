@@ -302,19 +302,6 @@ bcdedit /set recoveryenabled NO
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v DisableSearchBoxSuggestions /t REG_DWORD /d 1 /f /reg:32
       </code></pre>
 
-      <h2 id="powershell">PowerShell</h2>
-      <h3>Comunicação Remota</h3>
-      <p>Execute no <code>PowerShell</code> como <b>Administrador</b>:</p>
-      <pre><code>
-Enable-PSRemoting
-      </code></pre>
-
-      <h3>Permissão para execução de scripts</h3>
-      <p>Execute no <code>PowerShell</code> como <b>Administrador</b>:</p>
-      <pre><code>
-Set-ExecutionPolicy -ExecutionPolicy Unrestricted
-      </code></pre>
-
       <h2 id="servicos">Serviços</h2>
       <table class="table table-striped table-hover border">
         <thead>
