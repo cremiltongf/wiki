@@ -2,4 +2,4 @@
 
 # Wiki - Laboratórios de Informática
 
-Este wiki contém informações sobre a configuração dos Sistemas Operacionais Windows 11 e Linux, também há detalhes sobre instalação e configuração de softwares que são utilizados nos Laboratórios de Informática do IFPR Campus Umuarama.
+Neste wiki, você encontra informações sobre a configuração dos sistemas operacionais Windows 11 e Linux, bem como detalhes sobre a instalação e configuração dos softwares utilizados nos Laboratórios de Informática do IFPR Campus Umuarama.
