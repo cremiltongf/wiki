@@ -18,19 +18,19 @@ permalink: /windows/helpers/
         Informações auxiliares para suporte.
       </p>
 
+      <h2 id="copy">Copy</h2>
+      <pre><code>
+cmd /c copy /y "FILE" "C:\Softs"
+      </code></pre>
+
       <h2 id="psexec">PsExec</h2>
       <pre><code>
 cmd /c psexec -u USER -p PASS -accepteula "APP"
       </code></pre>
 
-      <h2 id="copy">Copy</h2>
-      <pre><code>
-cmd /c copy /y "\\SERVER\datapublic\FILE" "c:\Softs"
-      </code></pre>
-
       <h2 id="del">Del</h2>
       <pre><code>
-cmd /c del /q "c:\Users\Aluno\Desktop\FILE"
+cmd /c del /q "FILE"
       </code></pre>
 
       <h2 id="gpedit">Gpedit</h2>
@@ -58,19 +58,12 @@ cmd /c start ms-settings:activation
       <pre><code>
 LGPO.exe command [...]
 
-# Import settings from one or more GPO backups under "path"
-LGPO.exe /g path
-
-# Import settings from registry.pol into machine config
-LGPO.exe /m path\registry.pol
-
-# Import settings from registry.pol into user config
-LGPO.exe /u path\registry.pol
-
 # To create a GPO backup from local policy:
 LGPO.exe /b path [/n GPO-name]
-      </code></pre>
 
+# Import settings from one or more GPO backups under "path"
+LGPO.exe /g path
+      </code></pre>
 
       <h2 id="wget">Wget</h2>
       <pre><code>
@@ -85,12 +78,18 @@ cd "C:\Users\aluno\desktop" && "C:\Portable\wget\wget.exe" "https://download.sys
 
       <p>Referências:</p>
       <ul>
-        <li><a href="https://learn.microsoft.com/pt-br/sysinternals/downloads/psexec">psexec</a></li>
         <li><a href="https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/copy">copy</a>
+        <li><a href="https://learn.microsoft.com/pt-br/sysinternals/downloads/psexec">psexec</a></li>
         </li>
         <li><a href="https://learn.microsoft.com/pt-br/windows-server/administration/windows-commands/del">del</a></li>
-        <li><a href="https://learn.microsoft.com/pt-br/sysinternals/downloads/psexec">gpedit.msc</a></li>
-        <li><a href="https://learn.microsoft.com/pt-br/sysinternals/downloads/psexec">sysdm.cpl</a></li>
+        <li><a
+            href="https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn789185(v=ws.11)">gpedit.msc</a>
+        </li>
+        <li><a
+            href=https://support.microsoft.com/pt-br/topic/como-executar-as-ferramentas-do-painel-de-controle-digitando-um-comando-bce95b4d-e8c2-1cd0-ee0d-027679d520a6>sysdm.cpl</a>
+        </li>
+        <li><a href=https://learn.microsoft.com/pt-br/answers/questions/3781948/comandos-no-executar>compmgmt.cpl</a>
+        </li>
         <li><a href="https://learn.microsoft.com/pt-br/windows/apps/develop/launch/launch-settings">Configurações do
             Windows</a></li>
         <li><a
