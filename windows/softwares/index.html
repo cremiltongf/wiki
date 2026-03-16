@@ -921,8 +921,8 @@ msiexec /i "mysql-installer-community-8.0.13.0.msi" /qn
       </p>
       <h3>Configurando certificado</h3>
       <pre><code>
-set "PATHNETBEANS=C:\Program Files\Apache NetBeans\jdk"
-"%PATHNETBEANS%\bin\keytool.exe" -importcert -noprompt -alias fortigateCA -file "C:\CA_SSL.cer" -keystore "%PATHNETBEANS%\lib\security\cacerts" -storepass changeit -v
+:: MAVEN_OPTS="-Djavax.net.ssl.trustStoreType=Windows-ROOT"
+powershell -NoProfile -Command "[System.Environment]::SetEnvironmentVariable('MAVEN_OPTS', '-Djavax.net.ssl.trustStoreType=Windows-ROOT', 'Machine')"
       </code></pre>
 
       <h2 id="netbeans8">NetBeans 8</h2>
