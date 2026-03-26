@@ -900,6 +900,15 @@ msiexec /i "mysql-installer-community-8.0.13.0.msi" /qn
       </p>
       <h3>Configurando certificado</h3>
       <pre><code>
+set "NETBEANS=C:\Program Files\Apache NetBeans\jdk"
+set "CERT=C:\CA_SSL.cer"
+
+:: to Java
+if exist "%NETBEANS%" (
+    "%NETBEANS%\bin\keytool.exe" -importcert -noprompt -alias fortigateCA -file "%CERT%" -keystore "%NETBEANS%\lib\security\cacerts" -storepass changeit -v
+)
+
+:: to Maven
 :: MAVEN_OPTS="-Djavax.net.ssl.trustStoreType=Windows-ROOT"
 powershell -NoProfile -Command "[System.Environment]::SetEnvironmentVariable('MAVEN_OPTS', '-Djavax.net.ssl.trustStoreType=Windows-ROOT', 'Machine')"
       </code></pre>
