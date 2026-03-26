@@ -1000,7 +1000,7 @@ C:\Portable\w64devkit\bin
 
       <h3>Alterando o Path com PowerShell</h3>
       <pre><code>
-[Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\Portable\w64devkit\bin", "Machine")
+powershell -NoProfile -Command "[Environment]::SetEnvironmentVariable('Path', $env:Path + ';C:\Portable\w64devkit\bin', 'Machine')"
       </code></pre>
 
       <h2 id="portugol">Portugol Stúdio</h2>
