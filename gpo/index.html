@@ -205,6 +205,26 @@ Dados de valor: estudante
           </ol>
         </ol>
       </ul>
+
+      <h3>Em Preferências</h3>
+      <h4>Configurações do Windows</h4>
+      <ul>
+        <li class="mb-2"><b>Registro</b></li>
+        <ol>
+          <li class="mb-2">
+            Adicione o Item do Registro <code></code>:
+          </li>
+          <pre><code>Ação: Atualizar
+Hive: HKEY_CURRENT_USER
+caminho da Chave: Software\Microsoft\Windows\CurrentVersion\Themes\Personalize
+Nome do valor: EnableTransparency
+Tipo de valor: REG_DWORD
+Dados de valor: 0
+</code></pre>
+        </ol>
+      </ul>
+
+
       <!-- Outras Configurações -->
       <h2>Segurança do Samba</h2>
       <h3>Configuração do Computador</h3>
@@ -212,7 +232,8 @@ Dados de valor: estudante
       <ul>
         <li class="mb-2"><strong>Configurações do Windows</strong></li>
         <ol>
-          <li class="mb-2">Configurações de segurança &rarr; Políticas Locais &rarr; Opções de segurança &rarr; Cliente
+          <li class="mb-2">Configurações de segurança &rarr; Políticas Locais &rarr; Opções de segurança &rarr;
+            Cliente
             de rede Microsoft: assinar digitalmente a comunicação (sempre) &rarr; <b>Desabilitado</b></li>
         </ol>
         <li class="mb-2"><strong>Modelos Administrativos</strong></li>
