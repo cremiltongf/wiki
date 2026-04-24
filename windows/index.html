@@ -59,13 +59,13 @@ permalink: /windows/
       </p>
 
       <h2 id="estudante">Usuário Padrão</h2>
-      <p>Criar o usuário <strong>Aluno/Estudante</strong> para o login automático:</p>
+      <p>Criar o usuário <b>Estudante</b> ou <b>Padawan</b>para o login automático:</p>
       <pre><code>
 # User
-aluno ou estudante
+estudante ou padawan
 
 # Password
-aluno123 ou Estudant3
+Estudant3 ou Padaw4n
       </code></pre>
       <div class="alert alert-info d-flex align-items-center" role="alert">
         <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
@@ -74,7 +74,7 @@ aluno123 ou Estudant3
         <div>
           Configure o
           <a href="{{ site.baseurl }}/gpo/">login automático</a>
-          para este usuário. Caso utilize o SysPrep, configure o autologon após a
+          para este usuário. Configure o autologon após a
           clonagem.
         </div>
       </div>
@@ -84,7 +84,7 @@ aluno123 ou Estudant3
           <use xlink:href="#exclamation-triangle-fill" />
         </svg>
         <div>
-          Pode ser configurado via Samba/GPO.
+          Os usuários e o autologon pode ser configurado via Samba/GPO.
         </div>
       </div>
 
@@ -232,6 +232,20 @@ bcdedit /set recoveryenabled NO
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v DisableSearchBoxSuggestions /t REG_DWORD /d 1 /f /reg:32
       </code></pre>
 
+      <h2 id="sistema">Sistema</h2>
+      <h3>Energia</h3>
+      <ol>
+        <li class="mb-2">
+          Desativar minha tela após &rarr; <b>Nunca</b>
+        </li>
+        <li class="mb-2">
+          Fazer com que meu dispositivo... &rarr; <b>Nunca</b>
+        </li>
+        <li class="mb-2">
+          Fazer meu dispositivo hibernar... &rarr; <b>Nunca</b>
+        </li>
+      </ol>
+
       <h2 id="servicos">Serviços</h2>
       <table class="table table-striped table-hover border">
         <thead>
@@ -299,20 +313,6 @@ exit
       </code></pre>
 
       <h2 id="seguranca">Segurança do Windows</h2>
-      <div class="alert alert-info d-flex align-items-center" role="alert">
-        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
-          <use xlink:href="#info-fill" />
-        </svg>
-        <div>
-          Recomendável apenas caso esteja usando Deep Freeze Cloud.
-        </div>
-      </div>
-      <p>Em <b>Proteção contra vírus e ameaças</b> &rarr; Em configurações... &rarr; Gerenciar configuraçoes:</p>
-      <ol>
-        <li>Proteção fornecida da Nuvem &rarr; <b>Desativado</b></li>
-        <li>Envio automático de amostra &rarr; <b>Desativado</b></li>
-      </ol>
-
       <div class="alert alert-info d-flex align-items-center" role="alert">
         <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
           <use xlink:href="#info-fill" />

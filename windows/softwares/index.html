@@ -23,7 +23,8 @@ permalink: /windows/softwares/
           <use xlink:href="#info-fill" />
         </svg>
         <div>
-          Execute os softwares na conta do <b>Aluno/Estudante</b> para que sejam criadas as configurações de ambiente.
+          Execute os softwares na conta do <b>Estudante</b> ou <b>Padawan</b> para que sejam criadas as configurações de
+          ambiente.
         </div>
       </div>
 
@@ -58,17 +59,16 @@ msiexec /i "Affinity.msi" /qn
       </code></pre>
 
       <h2 id="anaconda">Anaconda</h2>
-      <div class="alert alert-info d-flex align-items-center" role="alert">
-        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
-          <use xlink:href="#info-fill" />
-        </svg>
-        <div>Instale este software e os pacotes somente para o perfil do <b>Aluno</b>.</div>
-      </div>
       <p>
         Faça o download do
         <a href="https://www.anaconda.com/download/success">Anaconda</a>.
       </p>
-
+      <div class="alert alert-info d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+          <use xlink:href="#info-fill" />
+        </svg>
+        <div>Instale este software e os pacotes somente para o perfil do <b>Estudante</b> ou <b>Padawan</b>.</div>
+      </div>
       <h3>Pacotes</h3>
       <p>
         Execute os comandos no <b>Anaconda Prompt</b> para instalar os seguintes
@@ -102,20 +102,19 @@ msiexec /i "Affinity.msi" /qn
       </ol>
 
       <h2 id="android">Android Studio</h2>
+      <p>
+        Faça o download do
+        <a href="https://developer.android.com/studio">Android Studio</a>.
+      </p>
       <div class="alert alert-info d-flex align-items-center" role="alert">
         <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
           <use xlink:href="#info-fill" />
         </svg>
         <div>
-          Execute o programa na conta do <b>Aluno</b> para finalizar a
-          instalação de recursos extras, caso necessário.
+          Execute o programa na conta do <b>Estudante</b> ou <b>Padawan</b> para finalizar a
+          instalação dos drivers e realize as configurações abaixo.
         </div>
       </div>
-      <p>
-        Faça o download do
-        <a href="https://developer.android.com/studio">Android Studio</a>.
-      </p>
-
       <h3>Desativar envio de dados</h3>
       <p>
         <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/android-studio-data.png"
@@ -148,7 +147,14 @@ msiexec /i "Affinity.msi" /qn
         <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Astah
           Community</a>. Última versão disponibilizada pela desenvolvedora.
       </p>
-
+      <div class="alert alert-info d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+          <use xlink:href="#info-fill" />
+        </svg>
+        <div>
+          Realize as configurações de interface pelo perfil do <b>Estudante</b> ou <b>Padawan</b>.
+        </div>
+      </div>
       <h3>Tipo de dado</h3>
       <p>Defina o tipo de dado para <code>char</code>:</p>
       <p>
@@ -224,7 +230,7 @@ msiexec /i "blender-2.79b-windows64.msi" /qn
         Faça o download do
         <a href="https://sourceforge.net/projects/brmodelo/">brModelo</a>
         e extraia o <b>zip</b> para <code>C:\Portable</code>. Crie um atalho do
-        programa na Área de Trabalho do usuário <b>Aluno</b>.
+        programa na Área de Trabalho do usuário <b>Estudante</b> ou <b>Padawan</b>.
       </p>
 
       <h2 id="chem">ChemSketch</h2>
@@ -286,6 +292,14 @@ rd "%ProgramFiles%\ComposerSetup" /s /q
         Faça o download do
         <a href="https://sqlitebrowser.org/">DB Browser for SQLite</a>.
       </p>
+      <div class="alert alert-info d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+          <use xlink:href="#info-fill" />
+        </svg>
+        <div>
+          Realize as configurações de interface pelo perfil do <b>Estudante</b> ou <b>Padawan</b>.
+        </div>
+      </div>
       <h3>Desativar verificação de atualização</h3>
       <p>
         <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/dbbrowser-update.png"
@@ -297,6 +311,15 @@ rd "%ProgramFiles%\ComposerSetup" /s /q
         Faça o download do
         <a href="https://dbeaver.io/download/">DBeaver Community</a>.
       </p>
+
+      <div class="alert alert-info d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+          <use xlink:href="#info-fill" />
+        </svg>
+        <div>
+          Realize as configurações de interface pelo perfil do <b>Estudante</b> ou <b>Padawan</b>.
+        </div>
+      </div>
       <h3>Desativar envio de estatísticas</h3>
       <p>
         <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/dbeaver-data.png"
@@ -353,11 +376,15 @@ start /w "Docker Desktop Installer.exe" install
 
       <h3>Permissão para criar container</h3>
       <p>
-        Adicione o usuário <b>Aluno</b> ao grupo <b>docker-users</b>. Execute no
+        Adicione o usuário <b>Estudante</b> ou <b>Padawan</b> ao grupo <b>docker-users</b>. Execute no
         <code>prompt</code> como <b>Administrador</b>:
       </p>
       <pre><code>
-net localgroup docker-users aluno /add
+# Estudante
+net localgroup docker-users estudante /add
+
+# Padawan
+net localgroup docker-users padawan /add
       </code></pre>
 
       <h3>Configurações do Dashboard</h3>
@@ -389,7 +416,7 @@ net localgroup docker-users aluno /add
         <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
           <use xlink:href="#info-fill" />
         </svg>
-        <div>Se aplica apenas ao perfil do <b>Aluno</b>.</div>
+        <div>Se aplica apenas ao perfil do <b>Estudante</b> ou <b>Padawan</b>.</div>
       </div>
 
       <h3>Baixando Imagens</h3>
@@ -417,7 +444,7 @@ net localgroup docker-users aluno /add
         <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
           <use xlink:href="#info-fill" />
         </svg>
-        <div>Se aplica apenas ao perfil do <b>Aluno</b>.</div>
+        <div>Se aplica apenas ao perfil do <b>Estudante</b> ou <b>Padawan</b>.</div>
       </div>
 
       <p>
@@ -484,7 +511,7 @@ net localgroup docker-users aluno /add
       </p>
       <p>
         Disponibilize o arquivo em <code>C:\Portable\Ftool</code> e adicione um
-        atalho na Área de Trabalho do usuário <b>Aluno</b>.
+        atalho na Área de Trabalho do usuário <b>Estudante</b> ou <b>Padawan</b>.
       </p>
 
       <h2 id="git">Git</h2>
@@ -505,7 +532,7 @@ net localgroup docker-users aluno /add
         <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
           <use xlink:href="#info-fill" />
         </svg>
-        <div>Instale este software somente para o perfil do <b>Aluno</b>.</div>
+        <div>Instale este software somente para o perfil do <b>Estudante</b> ou <b>Padawan</b>.</div>
       </div>
       <p>Faça o download do <a href="https://desktop.github.com/download/">GitHub Desktop</a>.</p>
 
@@ -536,6 +563,14 @@ REG add "HKLM\SOFTWARE\Policies\Google\Update" /v UpdateDefault /t REG_DWORD /d 
         Faça o download do
         <a href="https://www.greenfoot.org/door">Greenfoot</a>.
       </p>
+      <div class="alert alert-info d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+          <use xlink:href="#info-fill" />
+        </svg>
+        <div>
+          Realize as configurações de interface pelo perfil do <b>Estudante</b> ou <b>Padawan</b>.
+        </div>
+      </div>
       <h3>Idioma</h3>
       <p>
         <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/greenfoot-language.png"
@@ -595,7 +630,7 @@ C:\Program Files\Python313\Scripts
           <use xlink:href="#info-fill" />
         </svg>
         <div>
-          Realize as configurações de interface pelo perfil do <b>Aluno</b>.
+          Realize as configurações de interface pelo perfil do <b>Estudante</b> ou <b>Padawan</b>.
         </div>
       </div>
 
@@ -666,7 +701,7 @@ updateContextMenu=0
         Faça o download do
         <a href="https://community.jaspersoft.com/project/jaspersoft-studio">Jaspersoft Community Edition</a>
         e extraia o <b>zip</b> para <code>C:\Portable</code>. Crie um atalho do
-        programa na Área de Trabalho do usuário <b>Aluno</b>.
+        programa na Área de Trabalho do usuário <b>Estudante</b> ou <b>Padawan</b>.
       </p>
       <div class="alert alert-info d-flex align-items-center" role="alert">
         <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
@@ -741,20 +776,6 @@ start /wait msiexec /i "jdk-25_windows-x64_bin.msi" /qn /norestart
 start /wait msiexec /x {58B96B13-1F94-5431-BEB9-2952C3D7D747} /qn /norestart
       </code></pre>
 
-      <h2 id="jdk8">Java JDK 8</h2>
-      <p>
-        Faça o download do
-        <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Java JDK
-          8</a>.
-      </p>
-
-      <div class="alert alert-info d-flex align-items-center" role="alert">
-        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
-          <use xlink:href="#info-fill" />
-        </svg>
-        <div>Dependência do NetBeans 8.</div>
-      </div>
-
       <h2 id="jre">Java JRE</h2>
       <p>
         Faça o download do
@@ -815,6 +836,14 @@ msiexec /i "mysql-installer-community-8.0.13.0.msi" /qn
         Faça o download do
         <a href="https://netbeans.org/downloads/">NetBeans</a>.
       </p>
+      <div class="alert alert-info d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+          <use xlink:href="#info-fill" />
+        </svg>
+        <div>
+          Realize as configurações de interface pelo perfil do <b>Estudante</b> ou <b>Padawan</b>.
+        </div>
+      </div>
       <h3>Desativar verificação de atualização</h3>
       <p>
         <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/apache-netbeans-update.png"
@@ -834,23 +863,6 @@ if exist "%NETBEANS%" (
 :: MAVEN_OPTS="-Djavax.net.ssl.trustStoreType=Windows-ROOT"
 powershell -NoProfile -Command "[System.Environment]::SetEnvironmentVariable('MAVEN_OPTS', '-Djavax.net.ssl.trustStoreType=Windows-ROOT', 'Machine')"
       </code></pre>
-
-      <h2 id="netbeans8">NetBeans 8</h2>
-      <p>
-        Faça o download do
-        <a href="https://dlc-cdn.sun.com/netbeans/8.0.2/final/">NetBeans</a>.
-      </p>
-      <h3>Desativar verificação de atualização</h3>
-      <p>
-        <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/apache-netbeans-update.png"
-          alt="Desativar verificação de atualização" />
-      </p>
-      <div class="alert alert-info d-flex align-items-center" role="alert">
-        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
-          <use xlink:href="#info-fill" />
-        </svg>
-        <div>Esse programa depende do <b>Java JDK 8</b>.</div>
-      </div>
 
       <h2 id="nodejs">Node.js</h2>
       <p>
@@ -964,6 +976,14 @@ powershell -NoProfile -Command "[Environment]::SetEnvironmentVariable('Path', $e
         Faça o download do
         <a href="https://www.jetbrains.com/pt-br/pycharm/">PyCharm Community Edition</a>.
       </p>
+      <div class="alert alert-info d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+          <use xlink:href="#info-fill" />
+        </svg>
+        <div>
+          Realize as configurações de interface pelo perfil do <b>Estudante</b> ou <b>Padawan</b>.
+        </div>
+      </div>
       <h3>Desabilitando envio de dados</h3>
       <p>
         <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/pycharm-data.png"
@@ -1052,9 +1072,9 @@ regenerationSharedArchive=1
           Sketchup</a>
         e adicione ao SketchUp.
       </p>
-      <p>Diretório de instalação\extração do plugin:</p>
+      <p>Diretório de instalação do plugin:</p>
       <pre><code>
-C:\Users\Aluno\AppData\Roaming\SketchUp\SketchUp 2016\SketchUp\Plugins
+C:\Users\%USERPROFILE%\AppData\Roaming\SketchUp\SketchUp 2016\SketchUp\Plugins
       </code></pre>
 
       <h2 id="ultimaker">Ultimaker Cura</h2>
@@ -1126,10 +1146,9 @@ C:\Users\Aluno\AppData\Roaming\SketchUp\SketchUp 2016\SketchUp\Plugins
           <use xlink:href="#info-fill" />
         </svg>
         <div>
-          Realize as configurações no perfil do <b>Aluno</b>.
+          Realize as configurações de interface pelo perfil do <b>Estudante</b> ou <b>Padawan</b>.
         </div>
       </div>
-
       <h3>Desabilitando atualizações dos plugins</h3>
       <p>
         <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/vscode-plugins-update.png"
@@ -1159,7 +1178,7 @@ C:\Users\Aluno\AppData\Roaming\SketchUp\SketchUp 2016\SketchUp\Plugins
       </p>
       <p>
         Extraia o arquivo para <code>C:\Portable\visualg</code> e crie
-        um link para a Área de trabalho do <b>Aluno</b>.
+        um link para a Área de trabalho do <b>Estudante</b> ou <b>Padawan</b>.
       </p>
 
       <h2 id="ventos">Visualventos</h2>
