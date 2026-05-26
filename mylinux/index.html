@@ -14,7 +14,7 @@ permalink: /mylinux/
     <main class="col-12 col-lg-8 mb-5">
       <h1>{{ page.title }}</h1>
       <p class="lead">
-        Softwares e configurações do meu Fedora e Ubuntu.
+        Softwares e configurações do meu Fedora Workstation 44.
       </p>
 
       <h2 id="m-config">Configurações</h2>
@@ -35,12 +35,6 @@ permalink: /mylinux/
         </ol>
       </ol>
 
-      <h2 id="m-gerenciador">Gerenciador de Extensões</h2>
-      <h3>Instalação</h3>
-      <pre><code>
-sudo flatpak install flathub com.mattjakeman.ExtensionManager
-      </code></pre>
-
       <h2 id="m-tweaks">Ajustes do Gnome</h2>
       <h3>Instalação</h3>
       <pre><code>
@@ -50,7 +44,8 @@ sudo dnf install gnome-tweaks
       <ol>
         <li class="mb-2">Aparência</li>
         <ol>
-          <li class="mb-2">Estilos &rarr; Ícones &rarr; <a href="#m-icon">Kora</a>.</li>
+          <li class="mb-2">Estilos &rarr; Ícones &rarr; <a href="https://github.com/bikass/kora">Kora</a>.
+          </li>
         </ol>
         <li class="mb-2">Janelas</li>
         <ol>
@@ -67,23 +62,21 @@ sudo dnf install gnome-tweaks
         </ol>
       </ol>
 
+      <h2 id="m-gerenciador">Gerenciador de Extensões</h2>
+      <h3>Instalação</h3>
+      <pre><code>
+sudo flatpak install flathub com.mattjakeman.ExtensionManager
+      </code></pre>
+
       <div class="alert alert-info d-flex align-items-center" role="alert">
         <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
           <use xlink:href="#info-fill" />
         </svg>
         <div>
-          Instale as extensões abaixo através do Gerenciador de Extensões.
+          Instale as extensões através do Gerenciador de Extensões.
         </div>
       </div>
       <h2 id="m-indicator">AppIndicator</h2>
-      <div class="alert alert-info d-flex align-items-center" role="alert">
-        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
-          <use xlink:href="#info-fill" />
-        </svg>
-        <div>
-          O Ubuntu traz esse recurso de forma nativa.
-        </div>
-      </div>
       <p>O <b>AppIndicator and KStatusNotifierItem Support</b> adiciona uma área ao painel para exibir ícones
         indicadores. Essão extensão não requer nenhuma
         configuração, mas é possível mudar o local de exibição por exemplo, que por padrão é a direita.</p>
@@ -161,14 +154,6 @@ sudo dnf install gnome-tweaks
       </ol>
 
       <h2 id="m-dash">Dash to Dock</h2>
-      <div class="alert alert-info d-flex align-items-center" role="alert">
-        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
-          <use xlink:href="#info-fill" />
-        </svg>
-        <div>
-          O Ubuntu traz esse recurso de forma nativa.
-        </div>
-      </div>
       <p>Um dock para o Gnome Shell.</p>
       <p>Mais detalhes: <a href="https://extensions.gnome.org/extension/307/dash-to-dock/">Dash to Dock</a>.</p>
 
@@ -234,33 +219,21 @@ sudo dnf install gnome-tweaks
       <p>Mostra informações da midia em execução no painel.</p>
       <p>Mais detalhes: <a href="https://extensions.gnome.org/extension/4470/media-controls/">Media Controls</a>.</p>
 
-      <h2 id="m-icon">Ícones</h2>
-      <p>Kora é um tema de ícones SVG para sistemas operacionais GNU/Linux.
-      </p>
-      <p>Mais detalhes: <a href="https://github.com/bikass/kora">Kora</a>.</p>
-
-      <h2 id="m-wallpapers">Wallpapers</h2>
-      <p>Wallpapers abstratos <a href="https://github.com/vinceliuice/WhiteSur-wallpapers">WhiteSur</a>.</p>
-
       <h2 id="m-git">Git</h2>
       <h3>Instalação</h3>
       <pre><code>
 sudo dnf install git
       </code></pre>
 
+      <h2 id="m-vim">Vim</h2>
+      <h3>Instalação</h3>
+      <pre><code>
+sudo dnf install vim
+      </code></pre>
+
       <h2 id="m-docker">Docker</h2>
       <p>Siga o guia do <a href="https://docs.docker.com/desktop/setup/install/linux/fedora/">Docker Docs</a> que é
         sucesso.</p>
-
-      <div class="alert alert-info d-flex align-items-center" role="alert">
-        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
-          <use xlink:href="#info-fill" />
-        </svg>
-        <div>
-          Utiliza o <b>AppIndicator and
-            KStatusNotifierItem Support</b> para exibir as notificações.
-        </div>
-      </div>
 
       <h2 id="m-vscode">Visual Studio Code</h2>
       <p>Façao download do <a href="https://code.visualstudio.com/Download">Visual Studio Code</a>.</p>
@@ -275,36 +248,38 @@ sudo dnf install "code-1.101.1-1750254783.el8.x86_64.rpm"
       <pre><code>
 sudo dnf install "nautilus-dropbox-2025.05.20-1.fc42.x86_64.rpm"
       </code></pre>
-      <div class="alert alert-info d-flex align-items-center" role="alert">
-        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
-          <use xlink:href="#info-fill" />
-        </svg>
-        <div>
-          Utiliza o <b>AppIndicator and
-            KStatusNotifierItem Support</b> para exibir as notificações.
-        </div>
-      </div>
 
       <h2 id="m-torrent">qBittorrent</h2>
       <h3>Instalação</h3>
       <pre><code>
 sudo flatpak install flathub org.qbittorrent.qBittorrent
       </code></pre>
-      <div class="alert alert-info d-flex align-items-center" role="alert">
-        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
-          <use xlink:href="#info-fill" />
-        </svg>
-        <div>
-          Utiliza o <b>AppIndicator and
-            KStatusNotifierItem Support</b> para exibir as notificações.
-        </div>
-      </div>
 
       <h2 id="m-filesync">FreeFileSync</h2>
       <h3>Instalação</h3>
       <pre><code>
-flatpak install flathub org.freefilesync.FreeFileSync
+sudo flatpak install flathub org.freefilesync.FreeFileSync
       </code></pre>
+
+      <h2 id="davinci">DaVinci Resolve
+      </h2>
+      <p>Baixe o <a href="https://www.blackmagicdesign.com/br/products/davinciresolve">DaVinci Resolve</a></p>
+
+      <h2 id="obs">OBS Studio
+      </h2>
+      <p>Baixe o <a href="https://obsproject.com/pt-br/download">OBS Studio</a></p>
+
+      <h2 id="hand">HandBrake
+      </h2>
+      <p>Baixe o <a href="https://handbrake.fr/downloads.php">HandBrake</a></p>
+
+      <h2 id="oracle">Oracle VirtualBox
+      </h2>
+      <p>Baixe o <a href="https://virtualbox.org/">Oracle VirtualBox</a></p>
+
+      <h2 id="m-smb">Samba</h2>
+      <p>No <a href="https://idroot.us/install-samba-fedora-42/">idroot</a> há um super material explicando cada detalhe
+        de uma configuração.</p>
 
       <h2 id="m-keys">Atalhos personalizados</h2>
       <ol>
@@ -316,15 +291,6 @@ flatpak install flathub org.freefilesync.FreeFileSync
           <li class="mb-2"><kbd>Ctrl + Alt + E</kbd> &rarr; <code>nautilus</code> &rarr; para abrir o Nautilus</li>
         </ol>
       </ol>
-
-      <div class="alert alert-info d-flex align-items-center" role="alert">
-        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
-          <use xlink:href="#info-fill" />
-        </svg>
-        <div>
-          O Ubuntu usa o <code>gnome-terminal</code>.
-        </div>
-      </div>
 
       <h2 id="m-webcam">Webcam</h2>
       <h3>Instalação</h3>
@@ -345,13 +311,11 @@ sudo dnf install v4l-utils
       </p>
 
       <h2 id="m-proton">Proton</h2>
-      <p>Compatibilidade para games baseado no Wine e outros componentes. Consulte todos os detalhes do <a
-          href="https://github.com/GloriousEggroll/proton-ge-custom">proton-ge-custom</a> no GitHub.
+      <p>Compatibilidade para games baseado no Wine e outros componentes.
       </p>
-
-      <h2 id="m-smb">Samba</h2>
-      <p>No <a href="https://idroot.us/install-samba-fedora-42/">idroot</a> há um super material explicando cada detalhe
-        de uma configuração.</p>
+      <pre><code>
+sudo flatpak install flathub com.vysp3r.ProtonPlus
+      </code></pre>
 
       <h2 id="m-xpadneo">xpadneo</h2>
       <p>Driver para <a href="https://github.com/atar-axis/xpadneo">Xbox One Wireless Controller</a>.</p>
