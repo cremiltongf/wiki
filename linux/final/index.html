@@ -32,8 +32,9 @@ permalink: /linux/final/
                   <h3>Criando backup do perfil</h3>
                   <p>Fazendo a cópia do perfil para ser o padrão:</p>
                   <pre><code>
+sudo rm -rf /home/resetuser
 sudo mkdir /home/resetuser
-sudo cp -r /home/aluno/. /home/resetuser
+sudo cp -r /home/padawan/. /home/resetuser
                   </code></pre>
 
                   <h3>Script de restauração do perfil</h3>
@@ -41,28 +42,28 @@ sudo cp -r /home/aluno/. /home/resetuser
                   <pre><code>
 #!/bin/sh
 # Remove Profile Folders
-rm -rf /home/aluno/Área\ de\ trabalho /home/aluno/Documentos /home/aluno/Downloads /home/aluno/Imagens /home/aluno/Modelos /home/aluno/Músicas /home/aluno/Público /home/aluno/Vídeos /home/aluno/.config /home/aluno/.icons /home/aluno/.themes /home/aluno/.local
+rm -rf /home/padawan/Área\ de\ trabalho /home/padawan/Documentos /home/padawan/Downloads /home/padawan/Imagens /home/padawan/Modelos /home/padawan/Músicas /home/padawan/Público /home/padawan/Vídeos /home/padawan/.config /home/padawan/.local /home/padawan/.themes /home/padawan/.pki
 
 # Create Profile Folders
-mkdir /home/aluno/Área\ de\ trabalho /home/aluno/Documentos /home/aluno/Downloads /home/aluno/Imagens /home/aluno/Modelos /home/aluno/Músicas /home/aluno/Público /home/aluno/Vídeos /home/aluno/.config /home/aluno/.icons /home/aluno/.themes /home/aluno/.local
+mkdir /home/padawan/Área\ de\ trabalho /home/padawan/Documentos /home/padawan/Downloads /home/padawan/Imagens /home/padawan/Modelos /home/padawan/Músicas /home/padawan/Público /home/padawan/Vídeos /home/padawan/.config /home/padawan/.local /home/padawan/.themes /home/padawan/.pki
 
 # Remove and Create Apps Folders
-rm -rf /home/aluno/.var/app/org.mozilla.firefox /home/aluno/.var/app/com.google.Chrome
-mkdir /home/aluno/.var/app/org.mozilla.firefox /home/aluno/.var/app/com.google.Chrome
+rm -rf /home/padawan/.var/app/com.microsoft.Edge /home/padawan/.var/app/com.google.Chrome
+mkdir /home/padawan/.var/app/com.microsoft.Edge /home/padawan/.var/app/com.google.Chrome
 
 # Restore Files Defaults
-echo "Olá, pequeno gafanhoto!" > /home/aluno/.bash_history
-cp -r /home/resetuser/Imagens/. /home/aluno/Imagens
-cp -r /home/resetuser/Área\ de\ trabalho/. /home/aluno/Área\ de\ trabalho
-cp -r /home/resetuser/.config/. /home/aluno/.config
-cp -r /home/resetuser/.icons/. /home/aluno/.icons
-cp -r /home/resetuser/.themes/. /home/aluno/.themes
-cp -r /home/resetuser/.local/. /home/aluno/.local
-cp -r /home/resetuser/.var/app/org.mozilla.firefox/. /home/aluno/.var/app/org.mozilla.firefox
-cp -r /home/resetuser/.var/app/com.google.Chrome/. /home/aluno/.var/app/com.google.Chrome
+echo "Rellou guys!" > /home/padawan/.bash_history
+cp -r /home/resetuser/Área\ de\ trabalho/. /home/padawan/Área\ de\ trabalho
+cp -r /home/resetuser/Imagens/. /home/padawan/Imagens
+cp -r /home/resetuser/.config/. /home/padawan/.config
+cp -r /home/resetuser/.local/. /home/padawan/.local
+cp -r /home/resetuser/.themes/. /home/padawan/.themes
+cp -r /home/resetuser/.pki/. /home/padawan/.pki
+cp -r /home/resetuser/.var/app/com.microsoft.Edge/. /home/padawan/.var/app/com.microsoft.Edge
+cp -r /home/resetuser/.var/app/com.google.Chrome/. /home/padawan/.var/app/com.google.Chrome
 
 # Restore Permissions
-chown -R aluno /home/aluno
+chown -R padawan /home/padawan
                   </code></pre>
 
                   <h3>Permissão de execução</h3>
@@ -74,7 +75,7 @@ sudo chmod +x /sbin/reset-user.sh
                   <p>Crie o arquivo <code>/etc/systemd/system/reset-user.service</code> e adicione:</p>
                   <pre><code>
 [Unit]
-Description=Restore user Aluno
+Description=Restore user Padawan
 DefaultDependencies=no
 Before=shutdown.target
 
