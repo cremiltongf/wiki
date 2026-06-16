@@ -17,114 +17,118 @@ permalink: /linux/profile
                         Configurações para o perfil do usuário Aluno.
                   </p>
 
-                  <h2 id="l-aparencia">Aparência</h2>
-                  <h3>Efeitos</h3>
-                  <ol>
-                        <li class="mb-2">Efeitos da área de trabalho e janela &rarr;
-                              <b>Desabilitado</b>.
-                        </li>
-                  </ol>
-                  <h3>Planos de Fundo</h3>
-                  <ol>
-                        <li class="mb-2">Imagens &rarr; Baixe o arquivo <a
-                                    href="https://drive.google.com/drive/folders/1y65TzKSDIcYNamYzGYjvLgfvEtLYOfp6?usp=sharing">
-                                    background.png</a> para a pasta <code>~/.imagens</code> do <b>Aluno</b> e
-                              <b>selecione-o</b>.
-                        </li>
-                  </ol>
-                  <h3>Temas</h3>
-                  <ol>
-                        <li class="mb-2">Cursor do Mouse &rarr; Baixe e extraia <a
-                                    href="https://github.com/birbkeks/windows-cursors">
-                                    Windows-cursors</a> para <code>~/.icons</code> do <b>Aluno</b> e
-                              <b>selecione-o</b>.
-                        </li>
-                        <li class="mb-2">Aplicativos &rarr; Baixe e extraia o tema <a
-                                    href="https://github.com/B00merang-Project/Windows-10">
-                                    Windows-10</a> para <code>~/.themes</code> do <b>Aluno</b> e
-                              <b>selecione-o</b>.
-                        </li>
-                        <li class="mb-2">Ícones &rarr; Baixe e extraia <a
-                                    href="https://github.com/B00merang-Artwork/Windows-10">
-                                    Windows 10 icon theme</a> para <code>~/.icons</code> do <b>Aluno</b> e
-                              <b>selecione-o</b>.
-                        </li>
-                        <li class="mb-2">Área de Trabalho &rarr; Selecione
-                              <b>cinnamon</b>.
-                        </li>
-                  </ol>
-                  <p>
-                        <img class="img-fluid rounded-2" src="{{ site.baseurl }}/assets/images/pages/linux-temas.png"
-                              alt="Configuração de tema" />
+                  <h2 id="l-background">Plano de fundo</h2>
+                  <p>Baixe o <a
+                              href="https://drive.google.com/drive/folders/1y65TzKSDIcYNamYzGYjvLgfvEtLYOfp6?usp=sharing">background.png</a>
+                        para a pasta <b>Imagens</b> e defina como plano de fundo.
                   </p>
 
-                  <h2 id="l-preferencias">Preferências</h2>
-                  <h3>Applets</h3>
+                  <h2 id="l-config">Configurações</h2>
+                  <h3>Energia</h3>
+                  <h4>Economia de energia</h4>
                   <ol>
-                        <li class="mb-2">Na aba Download &rarr; instale o
-                              <b>CinnVIIStarkMenu</b>.
+                        <li class="mb-2">
+                              Apagar a tela &rarr; Nunca
+                        </li>
+                        <li class="mb-2">
+                              Suspensão automática &rarr; Desligada
                         </li>
                   </ol>
+
+                  <h2 id="l-personalizacao">Personalização</h2>
+                  <p>Ferramentas que serão utilizados para personalização.</p>
+                  <pre><code>
+# install git                        
+sudo apt install git
+
+# install gnome-tweaks
+sudo apt install gnome-tweaks
+
+# install extension-manager
+sudo flatpak install flathub com.mattjakeman.ExtensionManager
+                  </code></pre>
+                  <h3>Instalando ícones</h3>
+                  <pre><code>
+git clone https://github.com/yeyushengfan258/Win11-icon-theme && cd Win11-icon-theme && ./install.sh
+                  </code></pre>
+
+                  <h3>Instalando fonte</h3>
+                  <pre><code>
+git clone https://github.com/mrbvrz/segoe-ui-linux && cd Win11-icon-theme && ./install.sh && fc-cache -f -v
+                  </code></pre>
+
+                  <h2>Ajustes</h2>
+                  <p>Abra o Gnome-Tweaks:</p>
+                  <ol>
+                        <li>Na aba Fontes selecione <b>Segoe UI Light</b>;</li>
+                        <li>Na aba Aparência selecione <b>Win11</b>.</li>
+                  </ol>
+
+                  <h2 id="l-extensoes">Extensões</h2>
+                  <p>Instale as extensões abaixo pelo Gerenciador de Extensões.</p>
+
                   <div class="alert alert-info d-flex align-items-center" role="alert">
                         <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
                               <use xlink:href="#info-fill" />
                         </svg>
-                        <div>Substitua o menu padrão do <b>Linux Mint</b> pelo <b>CinnVIIStarkMenu</b> e faça as devidas
-                              configurações.
+                        <div>Desative <b>Zorin Menu</b> e <b>Zorin Taskbar</b>.
                         </div>
                   </div>
 
+                  <h3>ArcMenu</h3>
+                  <p>Menu de aplicativos para o GNOME Shell.</p>
+                  <p>Baixe o <a
+                              href="https://drive.google.com/drive/folders/10jDcEuIcIC21Ig9n1_k1jMzCne9WIJlv?usp=sharing">icon-menu-win11.png
+                              (ícone do menu)</a> para a pasta <b>Imagens</b> e o <a
+                              href="https://drive.google.com/drive/folders/10jDcEuIcIC21Ig9n1_k1jMzCne9WIJlv?usp=sharing">
+                              arquivo de configuração (config-arc-menu)</a> para restaurar no ArcMenu.</p>
+
+                  <h3>Dash to Panel</h3>
+                  <p>Uma barra de tarefas com ícones para o Gnome Shell.</p>
+                  <p>Baixe o <a
+                              href="https://drive.google.com/drive/folders/10jDcEuIcIC21Ig9n1_k1jMzCne9WIJlv?usp=sharing">arquivo
+                              de configuração (config-dash-to-panel)</a> para restaurar no Dash to Panel.</p>
+                  <h4>Organização da barra</h4>
+                  <p><img class="img-fluid rounded-2" src="/assets/images/pages/dash-to-panel.png"
+                              alt="Distribuição das áreas na barra"></p>
+                  <h3>Date Menu Formatter</h3>
+                  <p>Permite personalizar a exibição da data no painel.</p>
+                  <p>Configuração: </p>
+                  <pre><code>
+# Align Text
+Right
+
+# Pattern
+HH:mm\ndd/MM/yyyy
+                  </code></pre>
+
+                  <h3>Disable extension updates</h3>
+                  <p>Desativa as atualizações automáticas de extensões no GNOME.</p>
+
+                  <h2 id="l-appearance">Zorin Appearance</h2>
                   <h3>Área de Trabalho</h3>
+                  <h4>ícones</h4>
                   <ol>
-                        <li class="mb-2">Ícones da Área de Trabalho &rarr; Lixeira <span
-                                    class="wiki-arrow">&rarr;</span> <b>Habilitado</b>.
+                        <li class="mb-2">
+                              Ícones da área de trabalho &rarr; Ativo
+                        </li>
+                        <li class="mb-2">
+                              Tamanho do ícone &rarr; Pequeno
+                        </li>
+                        <li class="mb-2">
+                              Deixar ativo &rarr; Somente a Lixeira
                         </li>
                   </ol>
 
-                  <h3>Notificações</h3>
-                  <ol>
-                        <li class="mb-2">Habilitar notificações &rarr;
-                              <b>Desabilitado</b>.
-                        </li>
-                  </ol>
+                  <h2 id="l-animacoes">Animações</h2>
+                  <p>Desative as animações da interface:</p>
+                  <pre><code>
+gsettings set org.gnome.desktop.interface enable-animations false
+                  </code></pre>
 
-                  <h3>Proteção de Tela</h3>
-                  <ol>
-                        <li class="mb-2">Atraso antes de iniciar a proteção de tela <span
-                                    class="wiki-arrow">&rarr;</span> <b>Nunca</b>.
-                        </li>
-                        <li class="mb-2">Bloquear o computador quando entrar em suspensão <span
-                                    class="wiki-arrow">&rarr;</span> <b>Desabilitado</b>.
-                        </li>
-                        <li class="mb-2">Bloquear o computador após a proteção de tela iniciar <span
-                                    class="wiki-arrow">&rarr;</span> <b>Desabilitado</b>.
-                        </li>
-                  </ol>
-
-                  <h2 id="l-hardware">Hardware</h2>
-                  <h3>Gerenciamento de energia</h3>
-                  <ol>
-                        <li class="mb-2">Desligar a tela quando inativo por &rarr;
-                              <b>Nunca</b>.
-                        </li>
-                        <li class="mb-2">Suspender quando inativo por &rarr;
-                              <b>Nunca</b>.
-                        </li>
-                  </ol>
-
-                  <h2 id="l-gerenciador">Gerenciador de Atualizações</h2>
-                  <div class="alert alert-info d-flex align-items-center" role="alert">
-                        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
-                              <use xlink:href="#info-fill" />
-                        </svg>
-                        <div>Aplica-se ao usuário <b>IFPR</b> e <b>Aluno</b>.
-                        </div>
-                  </div>
-                  <ol>
-                        <li class="mb-2">Editar &rarr; Preferências <span class="wiki-arrow">&rarr;</span>
-                              <b>Desabilitar tudo</b>.
-                        </li>
-                  </ol>
+                  <h2 id="l-result">Resultado da personalização</h2>
+                  <p><img class="img-fluid rounded-2" src="/assets/images/pages/desktop.png"
+                              alt="Resultado da personalização"></p>
 
                   <div class="container mt-5">
                         <div class="row">

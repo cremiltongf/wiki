@@ -18,106 +18,47 @@ permalink: /linux/softwares
                   </p>
 
                   <h2 id="l-zip">7-zip</h2>
-                  <pre><code id="zip">
-sudo apt-get install p7zip p7zip-full p7zip-rar lzma lzma-dev
-                        </code></pre>
-
-                  <h2 id="l-astah">Astah Community</h2>
-                  <p>
-                        Faça o download do
-                        <a href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Astah
-                              Community</a>. Última versão disponibilizada pela desenvolvedora.
-                  </p>
-
-                  <h3>Dependências</h3>
-                  <div class="alert alert-info d-flex align-items-center" role="alert">
-                        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
-                              <use xlink:href="#info-fill" />
-                        </svg>
-                        <div>Roda com o <a href="/linux/softwares/#l-wine">Wine</a> e <b>Java JDK</b> (selecione
-                              todas
-                              as opções do Astah no momento da instalação).
-                        </div>
-                  </div>
-
-                  <h3>Desativando atualização e envio de dados</h3>
-                  <p>
-                        <img class="img-fluid rounded-2"
-                              src="{{ site.baseurl }}/assets/images/pages/astah-data-and-update.png"
-                              alt="Desativar verificação de atualização" />
-                  </p>
-
-                  <h2 id="l-brmodelo">brModelo</h2>
-                  <p>
-                        Faça o download do
-                        <a href="http://www.sis4.com/brModelo/download.html">brModelo</a>
-                        e extraia para <code>/home/portable/brmodelo</code>.
-                  </p>
-                  <h3>Dependências</h3>
-                  <div class="alert alert-info d-flex align-items-center" role="alert">
-                        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
-                              <use xlink:href="#info-fill" />
-                        </svg>
-                        <div>Precisa do <a href="/linux/softwares/#l-jdk">Java JDK</a>.
-                        </div>
-                  </div>
-
-                  <h3>Criando Atalho</h3>
-                  <p>Crie um lançador na Área de Trabalho do <b>Aluno</b> e altere seu conteúdo para:</p>
                   <pre><code>
-[Desktop Entry]
-Name=brModelo
-Exec=java -jar "/home/portable/brmodelo/brModelo.jar"
-Comment=Start brModelo
-Terminal=false
-PrefersNonDefaultGPU=false
-Icon=brmodelo
-Type=Application
-                  </code></pre>
-                  <h3>Imagem do Atalho</h3>
-                  <p>Copie a imagem/ícone para <code>~/.icons</code>. Exemplo: <b>brmodelo.png</b>.</p>
-
-                  <h2 id="l-composer">Composer</h2>
-                  <h3>Preparação</h3>
-                  <pre><code>
-sudo apt-get install curl php-cli php-mbstring git unzip
-                  </code></pre>
-
-                  <h3>Download</h3>
-                  <pre><code>
-sudo curl -sS https://getcomposer.org/installer -o composer-setup.php
-                  </code></pre>
-
-                  <h3>Verificando instalador</h3>
-                  <pre><code>
-sudo php composer-setup.php --check
-                  </code></pre>
-
-                  <h3>Instalação</h3>
-                  <pre><code>
-sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+sudo apt-get install 7zip 7zip-rar
                   </code></pre>
 
                   <h2 id="l-firefox">Firefox</h2>
-                  <p>
-                        Faça o download do
-                        <a href="https://www.mozilla.org/pt-BR/firefox/all/">Firefox</a>.
-                  </p>
+                  <h3>Instalação</h3>
+                  <pre><code>
+sudo flatpak install flathub org.mozilla.firefox
+                  </code></pre>
 
-                  <h3>Configurando preferências</h3>
-                  <p>
-                        <b>Altere</b> o arquivo <code>policies.json</code> em <code>/usr/lib/firefox/distribution</code>
-                        com o seguinte conteúdo:
-                  </p>
+                  <h3>Configurando políticas</h3>
+
+                  <pre><code>
+# get flatpak architecture
+FLATPAK_ARCH=$(flatpak --default-arch)
+
+# create the user-specific flatpak policies directory
+mkdir -p "$HOME/.local/share/flatpak/extension/org.mozilla.firefox.systemconfig/$FLATPAK_ARCH/stable/policies"
+
+# set json file
+cp /home/padawan/Downloads/policies.json "$HOME/.local/share/flatpak/extension/org.mozilla.firefox.systemconfig/$FLATPAK_ARCH/stable/policies"
+                  </code></pre>
+
+                  <p>Conteúdo de <code>policies.json</code>
                   <pre><code>
 {
-      "policies": {
-            "AppAutoUpdate": false,
-            "BackgroundAppUpdate": false,
-            "DisableAppUpdate": true,
-            "DisableDefaultBrowserAgent": true,
-            "DontCheckDefaultBrowser": true
+   "policies": {
+    "ExtensionSettings": {
+      "*": {
+        "blocked_install_message": "Instalação bloqueada por políticas de segurança.",
+        "installation_mode": "blocked"
       }
+    },
+    "AppAutoUpdate": false,
+    "BackgroundAppUpdate": false,
+    "DisableAppUpdate": false,
+    "DisableDefaultBrowserAgent": true,
+    "DontCheckDefaultBrowser": true,
+    "SanitizeOnShutdown": true,
+    "BlockAboutAddons": true
+  }
 }
                   </code></pre>
                   <p>
@@ -129,151 +70,39 @@ sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
                         <a href="https://mozilla.github.io/policy-templates/">policy-templates</a>.
                   </p>
 
-                  <h2 id="l-git">Git</h2>
-                  <pre><code>
-sudo apt-get install git
-                  </code></pre>
-
                   <h2 id="l-chrome">Google Chrome</h2>
-                  <p>Faça o download do <a href="https://www.google.com/chrome/?platform=linux">Google Chrome</a>.
-                  </p>
                   <h3>Instalação</h3>
                   <pre><code>
-sudo dpkg -i "pacote.deb"
+sudo flatpak install flathub com.google.Chrome
                   </code></pre>
-                  <h3>Remover pedido de senha</h3>
-                  <p>Para remover o pedido de senha ao acessar o navegador.</p>
-                  <ol>
-                        <li class="mb-2">Acesse <b>Senhas e Chaves</b>;</li>
-                        <li class="mb-2">Em <b>Login</b> clique com o lado direito e <b>Alterar senha</b>;</li>
-                        <li class="mb-2">Informe a senha atual e defina uma nova (em branco).</li>
-                  </ol>
 
-                  <h2 id="l-greenfoot">Greenfoot</h2>
-                  <p>Faça o download do <a href="https://www.greenfoot.org/download">Greenfoot</a>.
-                  </p>
-
-                  <h3>Instalação</h3>
+                  <h2 id="l-libre">Libre Office</h2>
+                  <p>Substitua pelo OnlyOffice.</p>
+                  <h3>Remoção</h3>
                   <pre><code>
-sudo dpkg -i "pacote.deb"
+sudo apt-get remove libreoffice* --purge
                   </code></pre>
-
-                  <h2 id="l-jdk">Java JDK 17</h2>
-                  <h3>Preparação</h3>
-                  <p>Removendo openjdk</p>
-                  <pre><code>
-sudo apt-get update -y && sudo apt-get remove openjdk* -y && sudo apt-get autoremove && sudo apt-get clean
-                  </code></pre>
-
-                  <p>Faça o download do <a
-                              href="https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html">Java
-                              JDK 17</a>.</p>
-                  <p>Pasta de instalação:</p>
-                  <pre><code>
-sudo mkdir /usr/lib/jdk
-                  </code></pre>
-                  <p>Extração de arquivos:</p>
-                  <pre><code>
-sudo tar zxvf jdk-17.0.12_linux-x64_bin.tar.gz -C /usr/lib/jdk
-                  </code></pre>
-                  <p>Criação de link simbólico:</p>
-                  <pre><code>
-sudo ln -s /usr/lib/jdk/jdk-17.0.12 /usr/lib/jdk/java-oracle
-                  </code></pre>
-
-                  <h3>Variáveis de Ambiente</h3>
-                  <p>Crie o arquivo <code>jdk_var.sh</code> em <code>/etc/profile.d</code> e adicione:</p>
-                  <pre><code>
-JAVA_HOME=/usr/lib/jdk/java-oracle
-export PATH=$PATH:$JAVA_HOME/bin
-                  </code></pre>
-                  <p>Permissão para execução:</p>
-                  <pre><code>
-sudo chmod +x /etc/profile.d/jdk_var.sh
-                  </code></pre>
-
-                  <h2 id="l-netbeans">Netbeans 14</h2>
-                  <p>Faça o download do <a href="https://netbeans.apache.org/front/main/download/nb14/">Netbeans
-                              14</a>.</p>
-                  <p>Instale o <code>Apache-NetBeans-14.sh</code> com o perfil do Aluno.
-                  </p>
-
-                  <h3>Movendo a instalação</h3>
-                  <p>Movendo a instalação atual <code>/home/aluno/netbeans-14</code> para <code>/home/portable</code>
-                  </p>
-                  <pre><code>
-sudo mv /home/aluno/netbeans-14/ /home/portable/
-                  </code></pre>
-                  <h3>Link simbólico</h3>
-                  <p>Criando link no diretório anterior:</p>
-                  <pre><code>
-sudo ln -s /home/portable/netbeans-14/ /home/aluno/netbeans-14
-                  </code></pre>
-
-                  <h2 id="l-nodejs">Node.js</h2>
-                  <pre><code>
-# Download and install nvm:
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-
-# in lieu of restarting the shell
-\. "$HOME/.nvm/nvm.sh"
-
-# Download and install Node.js:
-nvm install 22
-
-# Verify the Node.js version:
-node -v # Should print "v22.15.0".
-nvm current # Should print "v22.15.0".
-
-# Verify npm version:
-npm -v # Should print "10.9.2".
-                  </code></pre>
-                  <p>Referência: <a href="https://nodejs.org/en/download">Download Node.js</a></p>
 
                   <h2 id="l-ssh">Open SSH Server</h2>
+                  <h3>Instalação</h3>
                   <pre><code>
 sudo apt-get install openssh-server
                   </code></pre>
 
-                  <h2 id="l-portugol">Portugol Stúdio</h2>
-                  <p>
-                        Faça o download do
-                        <a href="https://univali-lite.github.io/Portugol-Studio/">Portugol Stúdio</a>.
-                  </p>
-                  <h3>Instalação</h3>
-                  <p>Conforme instruções do arquivo de instalação:</p>
-                  <pre><code>
-# Permissão de execução
-chmod 755 portugol-studio-2.7.5-x64.run
-
-# Instalação
-sudo ./portugol-studio-2.7.5-x64.run
-                  </code></pre>
-
-                  <h2 id="l-python">Python</h2>
-                  <pre><code>
-sudo apt-get install python3.12
-                  </code></pre>
-
-                  <h2 id="l-scratch">Scratch</h2>
-                  <pre><code>
-sudo flatpak install scratch
-                  </code></pre>
-
                   <h2 id="l-restricted">Ubuntu Restricted Extras</h2>
+                  <h3>Instalação</h3>
                   <pre><code>
 sudo apt-get install ubuntu-restricted-extras
                   </code></pre>
 
                   <h2 id="l-veyon">Veyon</h2>
-                  <h3>Preparação</h3>
+                  <h3>Dependências</h3>
                   <pre><code>
 sudo apt-get install g++ libc6-dev make cmake qtbase5-dev qtbase5-private-dev \
-qtbase5-dev-tools qttools5-dev qttools5-dev-tools \
-qtdeclarative5-dev qtquickcontrols2-5-dev libfakekey-dev \
-xorg-dev libxtst-dev libjpeg-dev zlib1g-dev libssl-dev libpam0g-dev \
-liblzo2-dev libqca-qt5-2-dev libldap2-dev \
-libsasl2-dev ninja-build
+            qtbase5-dev-tools qttools5-dev qttools5-dev-tools \
+            xorg-dev libxtst-dev libfakekey-dev libjpeg-dev zlib1g-dev libssl-dev libpam0g-dev \
+            liblzo2-dev libqca-qt5-2-dev libldap2-dev \
+            libsasl2-dev
                   </code></pre>
 
                   <h3>Instalação</h3>
@@ -291,8 +120,7 @@ sudo add-apt-repository ppa:veyon/stable -y && sudo apt-get update -y && sudo ap
                               <use xlink:href="#info-fill" />
                         </svg>
                         <div>
-                              Configure o <b>Veyon Master</b> no computador do professor, com os devidos ajustes para
-                              controlar as máquinas clientes.
+                              Configure o <b>Veyon Master</b> no computador do professor.
                         </div>
                   </div>
                   <p>Referência: <a href="https://github.com/veyon/veyon">Veyon</a></p>
@@ -303,208 +131,15 @@ sudo apt-get install vim -y
                   </code></pre>
 
                   <h2 id="l-vscode">Visual Studio Code</h2>
-                  <p>
-                        Faça o download do
-                        <a href="https://code.visualstudio.com/Download">Visual Studio Code</a>.
-                  </p>
-
                   <h3>Instalação</h3>
                   <pre><code>
-sudo dpkg -i "pacote.deb"
+sudo flatpak install flathub com.visualstudio.code
                   </code></pre>
-
-                  <h3>Plugins</h3>
-                  <p>Instale os seguintes plugins:</p>
-                  <ol>
-                        <li class="mb-2"><code>Portuguese Brazil Language</code></li>
-                        <li class="mb-2"><code>Python</code></li>
-                        <li class="mb-2"><code>IntelliCode</code></li>
-                        <li class="mb-2"><code>Indent-rainbow</code></li>
-                        <li class="mb-2"><code>Material Icon Theme</code></li>
-                        <li class="mb-2"><code>Preview</code></li>
-                        <li class="mb-2"><code>Code Runner</code></li>
-                        <li class="mb-2"><code>Trailing Spaces</code></li>
-                        <li class="mb-2"><code>Night Owl</code></li>
-                  </ol>
-
-                  <h3>Movendo os Plugins</h3>
-                  <p>Movendo os plugins de <code>/home/aluno/.vscode</code> para <code>/home/portable</code>
-                  </p>
-                  <pre><code>
-sudo mv /home/aluno/.vscode/ /home/portable/
-                  </code></pre>
-                  <h3>Link simbólico</h3>
-                  <p>Criando link no diretório anterior:</p>
-                  <pre><code>
-sudo ln -s /home/portable/.vscode/ /home/aluno/.vscode
-                  </code></pre>
-
-                  <h2 id="l-visual">VisuAlg</h2>
-                  <p>
-                        Faça o download do
-                        <a href="https://sourceforge.net/projects/visualg30/">VisuAlg</a>
-                        e extraia para <code>/home/portable/visualg3.0.7</code>.
-                  </p>
-                  <h3>Dependências</h3>
-                  <div class="alert alert-info d-flex align-items-center" role="alert">
-                        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
-                              <use xlink:href="#info-fill" />
-                        </svg>
-                        <div>Roda com o <a href="/linux/softwares/#l-wine">Wine</a>.
-                        </div>
-                  </div>
-
-                  <h3>Criando Atalho</h3>
-                  <p>Crie um lançador na Área de Trabalho do <b>Aluno</b> e altere seu conteúdo para:</p>
-                  <pre><code>
-[Desktop Entry]
-Name=visualg30
-Exec=wine "/home/portable/visualg3.0.7/visualg30.exe"
-Comment=Start VisuAlg
-Terminal=false
-PrefersNonDefaultGPU=false
-Icon=visualg
-Type=Application
-                  </code></pre>
-                  <h3>Imagem do Atalho</h3>
-                  <p>Copie a imagem/ícone para <code>~/.icons</code>. Exemplo: <b>visualg.png</b>.</p>
 
                   <h2 id="l-vlc">VLC Media Player</h2>
                   <pre><code>
-sudo flatpak install vlc
+sudo flatpak install flathub org.videolan.VLC
                   </code></pre>
-
-                  <h2 id="l-wine">Wine</h2>
-                  <h3>Preparação</h3>
-                  <pre><code>
-sudo dpkg --add-architecture i386
-                  </code></pre>
-
-                  <h3>Repositório</h3>
-                  <p>Baixe e adicione a chave do repositório:</p>
-                  <pre><code>
-sudo mkdir -pm755 /etc/apt/keyrings
-wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo gpg --dearmor -o /etc/apt/keyrings/winehq-archive.key -
-                  </code></pre>
-                  <p>Adicione o repositório:</p>
-                  <pre><code>
-sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/noble/winehq-noble.sources
-                  </code></pre>
-
-                  <h3>Instalação</h3>
-                  <pre><code>
-sudo apt update -y && sudo apt install --install-recommends winehq-stable -y
-                  </code></pre>
-
-                  <p>Referência: <a href="https://gitlab.winehq.org/wine/wine/-/wikis/Debian-Ubuntu">Wiki
-                              Wine</a>.</p>
-
-                  <h3>Movendo a instalação</h3>
-                  <p>Movendo a instalação atual <code>/home/aluno/.wine</code> para <code>/home/portable</code>
-                  </p>
-                  <pre><code>
-sudo mv /home/aluno/.wine/ /home/portable/
-                  </code></pre>
-                  <h3>Link simbólico</h3>
-                  <p>Criando link no diretório anterior:</p>
-                  <pre><code>
-sudo ln -s /home/portable/.wine/ /home/aluno/.wine
-                  </code></pre>
-
-                  <h2 id="l-lampp">LAMPP</h2>
-                  <pre><code>
-sudo apt-get install apache2 -y && sudo apt-get install mysql-server -y && sudo apt install php libapache2-mod-php php-mysql -y
-                  </code></pre>
-
-                  <h3>Definindo uma senha</h3>
-                  <p>Acesse o MySQL:</p>
-                  <pre><code>
-sudo mysql -u root -h localhost
-                  </code></pre>
-                  <p>No MySQL:</p>
-                  <pre><code>
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'mypassword';
-flush privileges;
-                  </code></pre>
-                  <p>Referência: <a href="https://dev.mysql.com/doc/refman/8.4/en/alter-user.html">ALTER USER Statement
-                        </a></p>
-
-                  <h3>Instalando PhpMyAdmin</h3>
-                  <pre><code>
-sudo apt-get install phpmyadmin -y
-                  </code></pre>
-
-                  <h3>Habilitando escrita de url</h3>
-                  <pre><code>
-sudo a2enmod rewrite
-                  </code></pre>
-
-                  <h3>Permissão ao html</h3>
-                  <pre><code>
-sudo chmod -R 777 /var/www/html
-                  </code></pre>
-                  <div class="alert alert-info d-flex align-items-center" role="alert">
-                        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
-                              <use xlink:href="#info-fill" />
-                        </svg>
-                        <div>Não use essa permissão em produção.
-                        </div>
-                  </div>
-
-                  <h3>Atraso na inicialização</h3>
-                  <div class="alert alert-info d-flex align-items-center" role="alert">
-                        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
-                              <use xlink:href="#info-fill" />
-                        </svg>
-                        <div>Essa configuração e para deixar a inicialização do Linux um pouco mais performática. Se for
-                              um
-                              equipamento novo/atual, possivelmente não será necessário essa otimização.
-                        </div>
-                  </div>
-                  <h4>Desativando serviços</h4>
-                  <pre><code>
-# Desativando inicialização automática
-sudo systemctl disable apache2 && sudo systemctl disable mysql
-                  </code></pre>
-
-                  <h4>Script para iniciar serviços</h4>
-                  <p>Crie o arquivo <code>/sbin/delay-lampp.sh</code> com o seguinte conteúdo:</p>
-                  <pre><code>
-#!/bin/sh
-sleep 120 && systemctl start apache2
-sleep 10 && systemctl start mysql
-                  </code></pre>
-
-                  <h4>Permissão de execução</h4>
-                  <pre><code>
-sudo chmod +x /sbin/delay-lampp.sh
-                  </code></pre>
-
-                  <h4>Serviço para executar script</h4>
-                  <p>Crie o arquivo <code>/etc/systemd/system/delay-lampp.service</code> com o seguinte conteúdo:</p>
-                  <pre><code>
-[Unit]
-Description=Delay LAMPP startup
-DefaultDependencies=no
-After=network.target
-
-[Service]
-Type=oneshot
-ExecStart=/sbin/delay-lampp.sh
-TimeoutStartSec=0
-
-[Install]
-WantedBy=network.target
-                  </code></pre>
-
-                  <h4>Habilitando o serviço</h4>
-                  <pre><code>
-sudo systemctl enable delay-lampp.service
-                  </code></pre>
-                  <p>Referência: <a
-                              href="https://docs.redhat.com/pt-br/documentation/red_hat_enterprise_linux/8/html/configuring_basic_system_settings/unit-file-structure_working-with-systemd-unit-files#unit-file-structure_working-with-systemd-unit-files">3.5.2.
-                              Estrutura do arquivo da unidade</a>
-                  </p>
 
                   <div class="container mt-5">
                         <div class="row">

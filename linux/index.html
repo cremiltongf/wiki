@@ -14,16 +14,15 @@ permalink: /linux/
             <main class="col-12 col-lg-8 mb-5">
                   <h1>{{ page.title }}</h1>
                   <p class="lead">
-                        Configuração padrão do Sistema Operacional Linux Mint.
+                        Configuração padrão do Sistema Operacional Linux Zorin OS.
                   </p>
 
-                  <h2 id="l-isowindows">ISO Linux</h2>
-                  <p>Faça o download do <a href="https://linuxmint.com/">Linux Mint</a>.</p>
+                  <h2 id="l-isolinux">ISO Linux</h2>
+                  <p>Faça o download do <a href="https://zorin.com/os/download/">Zorin OS 18.1 Core</a>.</p>
 
                   <h2 id="l-tools">Tools</h2>
                   <ul>
-                        <li class="mb-2"><a href="https://www.anyburn.com/download.php">AnyBurn</a> ou <a
-                                    href="https://www.poweriso.com/download.htm">PowerISO</a></li>
+                        <li class="mb-2"><a href="https://www.anyburn.com/download.php">AnyBurn</a></li>
                         <li class="mb-2"><a href="https://www.ventoy.net/en/download.html">Ventoy</a></li>
                         <li class="mb-2"><a href="https://clonezilla.org/downloads.php">Clonezilla</a></li>
                   </ul>
@@ -39,25 +38,21 @@ permalink: /linux/
                               href="https://docs.google.com/spreadsheets/d/1K7BrCy4tWE0I9W5_Dc5zm_tXNyYtj4ZYFQJLmiljGAE/edit?usp=sharing">planilha</a>.
                   </p>
 
-                  <h2 id="l-padrao">Usuário Padrão</h2>
-                  <p>Crie o usuário <strong>Aluno</strong> e configure o login automático.</p>
+                  <h2 id="l-user">Usuário Padrão</h2>
+                  <p>Crie o usuário <strong>Padawan</strong> e configure o login automático.</p>
                   <pre><code>
 # User
-aluno
+padawan
 
 # Password
-aluno123
+Padaw4n
                   </code></pre>
 
                   <h2 id="l-login">Login Automático</h2>
-                  <h3>Administração</h3>
+                  <h3>Configurações</h3>
                   <ol>
-                        <li class="mb-2">Janela de Início de Sessão &rarr; Aba Usuários
-                              &rarr; configure o usuário <b>Aluno</b>:
-                              <ol class="pt-2">
-                                    <li class="mb-2">Nome do usuário: <code>aluno</code></li>
-                                    <li class="mb-2">Atraso antes da conexão (em segundos): <code>0</code></li>
-                              </ol>
+                        <li class="mb-2">Sistema &rarr; Usuários &rarr; Início automático de sessão &rarr; <b>Ativo</b>
+                              para <b>Padawan</b>.
                         </li>
                   </ol>
 
@@ -69,7 +64,7 @@ sudo mv /home/aluno/Downloads/CA_SSL.crt /usr/local/share/ca-certificates && sud
                   <h2 id="l-update">Linux Update</h2>
                   <p>Instale todas as atualizações.</p>
                   <pre><code>
-sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y
+sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo flatpak update -y
                   </code></pre>
 
                   <div class="container mt-5">
