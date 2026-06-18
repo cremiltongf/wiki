@@ -14,10 +14,11 @@ permalink: /linux/softwares
             <main class="col-12 col-lg-8 mb-5">
                   <h1>{{ page.title }}</h1>
                   <p class="lead">
-                        Links para downloads, instalação e configuração de softwares.
+                        Instalação e configuração de softwares.
                   </p>
 
                   <h2 id="l-zip">7-zip</h2>
+                  <h3>Instalação</h3>
                   <pre><code>
 sudo apt-get install 7zip 7zip-rar
                   </code></pre>
@@ -75,12 +76,48 @@ cp /home/padawan/Downloads/policies.json "$HOME/.local/share/flatpak/extension/o
                   <pre><code>
 sudo flatpak install flathub com.google.Chrome
                   </code></pre>
+                  <div class="alert alert-info d-flex align-items-center" role="alert">
+                        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+                              <use xlink:href="#info-fill" />
+                        </svg>
+                        <div>
+                              Desative a aceleração de hardware.
+                        </div>
+                  </div>
+
+
+                  <h2 id="l-edge">Microsoft Edge</h2>
+                  <h3>Instalação</h3>
+                  <pre><code>
+sudo flatpak install flathub com.microsoft.Edge
+                  </code></pre>
+                  <div class="alert alert-info d-flex align-items-center" role="alert">
+                        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+                              <use xlink:href="#info-fill" />
+                        </svg>
+                        <div>
+                              Desative a aceleração de hardware.
+                        </div>
+                  </div>
 
                   <h2 id="l-libre">Libre Office</h2>
-                  <p>Substitua pelo OnlyOffice.</p>
+                  <div class="alert alert-info d-flex align-items-center" role="alert">
+                        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+                              <use xlink:href="#info-fill" />
+                        </svg>
+                        <div>
+                              Substitua pelo <b>OnlyOffice</b>.
+                        </div>
+                  </div>
                   <h3>Remoção</h3>
                   <pre><code>
 sudo apt-get remove libreoffice* --purge
+                  </code></pre>
+
+                  <h2 id="l-onlyoffice">OnlyOffice</h2>
+                  <h3>Instalação</h3>
+                  <pre><code>
+sudo flatpak install flathub org.onlyoffice.desktopeditors
                   </code></pre>
 
                   <h2 id="l-ssh">Open SSH Server</h2>
@@ -126,6 +163,7 @@ sudo add-apt-repository ppa:veyon/stable -y && sudo apt-get update -y && sudo ap
                   <p>Referência: <a href="https://github.com/veyon/veyon">Veyon</a></p>
 
                   <h2 id="l-vim">Vim</h2>
+                  <h3>Instalação</h3>
                   <pre><code>
 sudo apt-get install vim -y
                   </code></pre>
@@ -135,8 +173,20 @@ sudo apt-get install vim -y
                   <pre><code>
 sudo flatpak install flathub com.visualstudio.code
                   </code></pre>
+                  <div class="alert alert-info d-flex align-items-center" role="alert">
+                        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+                              <use xlink:href="#info-fill" />
+                        </svg>
+                        <div>
+                              Desative a aceleração de hardware: <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>p</kbd>
+                              &rarr;
+                              Configure Runtime Arguments &rarr;
+                              altere/adicione <code>"disable-hardware-acceleration": true</code>.
+                        </div>
+                  </div>
 
                   <h2 id="l-vlc">VLC Media Player</h2>
+                  <h3>Instalação</h3>
                   <pre><code>
 sudo flatpak install flathub org.videolan.VLC
                   </code></pre>
