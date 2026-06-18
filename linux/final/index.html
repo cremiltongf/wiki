@@ -25,8 +25,33 @@ permalink: /linux/final/
                         <li class="mb-2">Informe a senha atual e defina uma nova (em branco).</li>
                   </ol>
 
+                  <h2 id="l-update">Atualização</h2>
+                  <div class="alert alert-info d-flex align-items-center" role="alert">
+                        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+                              <use xlink:href="#info-fill" />
+                        </svg>
+                        <div>Desabilite as atualizações somente em ambientes controlados, pois não é uma boa prática.
+                        </div>
+                  </div>
+                  <h3>20auto-upgrades</h3>
+                  <p>Altere os valores de 1 para 0 no arquivo <code>20auto-upgrades</code> nas linhas:</p>
+                  <pre><code>
+# Open                        
+sudo vim /etc/apt/apt.conf.d/20auto-upgrades
+
+# Edit
+APT::Periodic::Update-Package-Lists "0";
+APT::Periodic::Unattended-Upgrade "0";                        
+                  </code></pre>
+
+                  <h3>Atualizações autônomas</h3>
+                  <p>Desative o serviço de atualizações autônomas permanentemente:</p>
+                  <pre><code>
+sudo systemctl disable --now unattended-upgrade.service
+                  </code></pre>
+
                   <h2 id="l-history">Histórico de Navegação</h2>
-                  <p>Remover histórico do Google Chrome, Firefox e Edge.</p>
+                  <p>Remova históricos do Google Chrome, Firefox e Microsoft Edge.</p>
 
                   <h2 id="l-restore">Restore User</h2>
                   <div class="alert alert-info d-flex align-items-center" role="alert">
