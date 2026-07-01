@@ -67,6 +67,26 @@ sudo mv /home/padawan/Downloads/CA_SSL.crt /usr/local/share/ca-certificates && s
 sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y && sudo flatpak update -y
                   </code></pre>
 
+                  <h2 id="l-shutdown">Desligamento automático</h2>
+                  <div>
+                        <p>Através do <code>crontab</code>:</p>
+                        <pre><code>
+sudo crontab -e
+                        </code></pre>
+                        <p>Adicione ao final:</p>
+                        <pre><code>
+10 23 * * * /sbin/shutdown -h now
+                  </code></pre>
+                        <div class="alert alert-info d-flex align-items-center" role="alert">
+                              <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+                                    <use xlink:href="#info-fill" />
+                              </svg>
+                              <div>
+                                    Economia de energia, nunca é demais!
+                              </div>
+                        </div>
+                  </div>
+
                   <div class="container mt-5">
                         <div class="row">
                               <div class="col text-start">
