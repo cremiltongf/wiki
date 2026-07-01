@@ -191,6 +191,72 @@ sudo flatpak install flathub com.visualstudio.code
 sudo flatpak install flathub org.videolan.VLC
                   </code></pre>
 
+                  <h2 id="l-wine">Wine</h2>
+                  <div>
+                        <h3>Instalação</h3>
+                        <pre><code>
+# Download and add the repository key
+sudo mkdir -pm755 /etc/apt/keyrings
+wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo gpg --dearmor -o /etc/apt/keyrings/winehq-archive.key -
+
+# Noble
+sudo dpkg --add-architecture i386
+sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/noble/winehq-noble.sources
+
+# Update
+sudo apt update -y
+
+#Install
+sudo apt install --install-recommends winehq-stable
+
+# Reboot
+reboot
+                        </code></pre>
+                        <div class="alert alert-info d-flex align-items-center" role="alert">
+                              <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+                                    <use xlink:href="#info-fill" />
+                              </svg>
+                              <div>
+                                    Configuração específica para o Zorin OS 18.1.
+                              </div>
+                        </div>
+                        <p>Mais informações: <a href="https://gitlab.winehq.org/wine/wine/-/wikis/Debian-Ubuntu">Wine
+                                    Wiki</a>.
+                        </p>
+                  </div>
+
+                  <h2 id="l-astah">Astah Community</h2>
+                  <div>
+                        <p>
+                              Faça o download do
+                              <a
+                                    href="https://drive.google.com/drive/folders/1ep3ja3fJ-dgS9F0AtRa3LGv8XdVNDQXV?usp=sharing">Astah
+                                    Community</a>. Última versão disponibilizada pela desenvolvedora.
+                        </p>
+                        <div class="alert alert-info d-flex align-items-center" role="alert">
+                              <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+                                    <use xlink:href="#info-fill" />
+                              </svg>
+                              <div>
+                                    Esse programa depende do Wine.
+                              </div>
+                        </div>
+                        <h3>Tipo de dado</h3>
+                        <p>Defina o tipo de dado para <code>char</code>:</p>
+                        <p>
+                              <img class="img-fluid rounded-2"
+                                    src="{{ site.baseurl }}/assets/images/pages/astah-type.png"
+                                    alt="Definindo tipo de dado padrão" />
+                        </p>
+
+                        <h3>Desativando atualização e envio de dados</h3>
+                        <p>
+                              <img class="img-fluid rounded-2"
+                                    src="{{ site.baseurl }}/assets/images/pages/astah-data-and-update.png"
+                                    alt="Desativar verificação de atualização" />
+                        </p>
+                  </div>
+
                   <div class="container mt-5">
                         <div class="row">
                               <div class="col text-start">
