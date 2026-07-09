@@ -345,6 +345,23 @@ rd "%ProgramFiles%\ComposerSetup" /s /q
           alt="Conexão MySQL" />
       </p>
 
+      <h2 id="dialux">DIALux</h2>
+      <p>
+        Faça o download do
+        <a href="https://www.dialux.com/en-GB/download">DIALux</a>.
+      </p>
+      <h3>Silent Install</h3>
+      <pre><code>
+# Install
+"DIALux_evo_13_2.exe" /s:"C:\dirtemp\silentsetup.ini"
+
+# Silentsetup.ini Content
+[SetupValues]
+%AppFolder%=C:\Program Files\DIAL GmbH\DIALux evo
+%AppShortcutFolderName%=DIALux evo
+%NoRestart%=1
+      </code></pre>
+
       <h2 id="dimperfil">DimPerfil</h2>
       <p>
         Faça o download do
