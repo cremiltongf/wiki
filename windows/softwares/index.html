@@ -614,43 +614,6 @@ REG add "HKLM\SOFTWARE\Policies\Google\Update" /v UpdateDefault /t REG_DWORD /d 
 msiexec /i "Greenfoot-windows-351.msi" /qn
       </code></pre>
 
-      <h2 id="idle">IDLE Python</h2>
-      <p>
-        Faça o download do
-        <a href="https://www.python.org/downloads/">IDLE Python</a>.
-      </p>
-      <div class="alert alert-info d-flex align-items-center" role="alert">
-        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
-          <use xlink:href="#info-fill" />
-        </svg>
-        <div>
-          Instale o software para todos os usuários e adicione as variáveis ao <code>Path</code> no momento
-          da
-          instalação.
-        </div>
-      </div>
-      <h3>Path</h3>
-      <p>Adicione ao <code>Path</code>:</p>
-      <pre><code>
-C:\Program Files\Python313
-C:\Program Files\Python313\Scripts
-      </code></pre>
-
-      <h3>Silent Install</h3>
-      <pre><code>
-"python-3.10.6-amd64.exe" /quiet InstallAllUsers=1 PrependPath=1 AppendPath=1
-      </code></pre>
-
-      <h3>Silent Uninstall</h3>
-      <pre><code>
-"python-3.10.6-amd64.exe" /uninstall PrependPath=0 AppendPath=0
-      </code></pre>
-
-      <p>
-        Referência:
-        <a href="https://docs.python.org/3/using/windows.html">Using Python on Windows</a>.
-      </p>
-
       <h2 id="intellij">IntelliJ IDEA Community</h2>
       <p>
         Faça o download do
@@ -1062,6 +1025,54 @@ regenerationSharedArchive=1
         <a href="https://www.jetbrains.com/help/pycharm/installation-guide.html#silent">Silent installation on
           Windows</a>.
       </p>
+
+      <h2 id="python">Python (IDLE)</h2>
+      <p>
+        Faça o download do
+        <a href="https://www.python.org/downloads/">Python (IDLE)</a>.
+      </p>
+      <div class="alert alert-info d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:">
+          <use xlink:href="#info-fill" />
+        </svg>
+        <div>
+          Instale o software para todos os usuários e adicione as variáveis ao <code>Path</code> no momento
+          da
+          instalação.
+        </div>
+      </div>
+      <h3>Path</h3>
+      <p>Adicione ao <code>Path</code>:</p>
+      <pre><code>
+C:\Program Files\Python313
+C:\Program Files\Python313\Scripts
+      </code></pre>
+
+      <h3>Silent Install</h3>
+      <pre><code>
+"python-3.10.6-amd64.exe" /quiet InstallAllUsers=1 PrependPath=1 AppendPath=1
+      </code></pre>
+
+      <h3>Silent Uninstall</h3>
+      <pre><code>
+"python-3.10.6-amd64.exe" /uninstall PrependPath=0 AppendPath=0
+      </code></pre>
+
+      <p>
+        Referência:
+        <a href="https://docs.python.org/3/using/windows.html">Using Python on Windows</a>.
+      </p>
+
+      <h2 id="qgis">QGIS</h2>
+      <p>
+        Faça o download do
+        <a href="https://www.qgis.org/download/">QGIS</a>.
+      </p>
+
+      <h3>Silent Install</h3>
+      <pre><code>
+msiexec /i "QGIS-OSGeo4W-3.44.9-1.msi" /qn
+      </code></pre>
 
       <h2 id="revit">Revit</h2>
       <div class="alert alert-info d-flex align-items-center" role="alert">
