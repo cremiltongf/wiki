@@ -89,7 +89,7 @@ permalink: /windows/final/
         </div>
       </div>
       <pre><code>
-sysprep.exe /generalize /oobe /unattend:C:\MYCONF.xml /shutdown
+sysprep.exe /generalize /shutdown /oobe /unattend:C:\MYCONFIG.xml
       </code></pre>
 
       <p>Referências: <a
@@ -99,11 +99,12 @@ sysprep.exe /generalize /oobe /unattend:C:\MYCONF.xml /shutdown
       </p>
 
       <h3>Erro no Sysprep</h3>
-      <p>Se ocorrerem erros, examine o arquivo
+      <p>Se ocorrerem erros, examine o arquivo de log:
         <code>
           %WINDIR%\system32\Sysprep\panther\setupact.log</code> e remova o <b>App</b> que estiver causando a falha
-        através do <code>PowerShell</code>:
+        através do <code>PowerShell</code>.
       </p>
+      <p>Removendo App com <code>PowerShell</code>:</p>
       <pre><code>
 Get-AppxPackage -AllUsers | Where-Object {$_.PackageFullName -eq "NomeDoPackage"} | Remove-AppxPackage -AllUsers
       </code></pre>
