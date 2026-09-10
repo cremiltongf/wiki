@@ -39,7 +39,7 @@ permalink: /linux/
                   </p>
 
                   <h2 id="l-user">Usuário Padrão</h2>
-                  <p>Crie o usuário <strong>Padawan</strong> e configure o login automático.</p>
+                  <p>Crie o usuário <strong>Padawan</strong>.</p>
                   <pre><code>
 # User
 padawan
@@ -49,6 +49,7 @@ Padaw4n
                   </code></pre>
 
                   <h2 id="l-login">Login Automático</h2>
+                  <p>Configure o login automático para o usuário <strong>Padawan</strong>.</p>
                   <h3>Configurações</h3>
                   <ol>
                         <li class="mb-2">Sistema &rarr; Usuários &rarr; Início automático de sessão &rarr; <b>Ativo</b>
@@ -57,6 +58,7 @@ Padaw4n
                   </ol>
 
                   <h2 id="l-cert">Certificado</h2>
+                  <p>Configurando o certificado do firewall.</p>
                   <pre><code>
 sudo mv /home/padawan/Downloads/CA_SSL.crt /usr/local/share/ca-certificates && sudo update-ca-certificates
                   </code></pre>
@@ -68,6 +70,7 @@ sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -
                   </code></pre>
 
                   <h2 id="l-shutdown">Desligamento automático</h2>
+                  <p>Configurando o desligamento automático do SO (23h10).</p>
                   <div>
                         <p>Através do <code>crontab</code>:</p>
                         <pre><code>
