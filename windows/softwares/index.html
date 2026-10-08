@@ -869,10 +869,6 @@ powershell -NoProfile -Command "[System.Environment]::SetEnvironmentVariable('MA
         Faça o download do
         <a href="https://nodejs.org/en/download">Node.js</a>.
       </p>
-      <h3>Configurando certificado</h3>
-      <pre><code>
-npm config set cafile "C:\CA_SSL.crt"
-      </code></pre>
       <h3>Silent Install</h3>
       <pre><code>
 msiexec /i "node-v10.15.3-x64.msi" /qn
@@ -1283,13 +1279,6 @@ C:\Users\%USERPROFILE%\AppData\Roaming\SketchUp\SketchUp 2016\SketchUp\Plugins
       <h3>Permissões para iniciar e encerrar os serviços</h3>
       <pre><code>
 icacls "C:\xampp\xampp-control.ini" /grant:r Todos:F
-      </code></pre>
-
-      <h3>Configurando certificado</h3>
-      <p>Alterar <code>C:\xampp\php\php.ini</code>:</p>
-      <pre><code>
-curl.cainfo="C:\CA_SSL.crt"
-openssl.cafile="C:\CA_SSL.crt"
       </code></pre>
 
       <h3>Silent Install</h3>
