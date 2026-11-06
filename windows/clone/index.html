@@ -106,19 +106,15 @@ powershell "(Get-WmiObject -query 'select * from SoftwareLicensingService').OA3x
         </div>
       </div>
 
-      <h2 id="deep">Habilitar Deep Freeze Cloud</h2>
-      <h3 id="desabilitar">Descongelando o SO</h3>
+      <h2 id="deep">Gerenciando Deep Freeze Cloud</h2>
       <pre><code>
+# descongelando
 cmd /k "C:\Windows\SysWOW64\DFC.exe" PWD /BOOTTHAWED
-      </code></pre>
 
-      <h3 id="habilitando">Congelando o SO</h3>
-      <pre><code>
+# congelando
 cmd /k "C:\Windows\SysWOW64\DFC.exe" PWD /FREEZENEXTBOOT
-      </code></pre>
 
-      <h3 id="status">Checar o status</h3>
-      <pre><code>
+# estado
 cmd /k "C:\Windows\SysWOW64\DFC.exe" get /ISFROZEN
       </code></pre>
 
